@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-08-17 21:12:18",
+  "status": "COMPLETED",
+  "eval_engine": "official_ragas_library",
+  "generator_model": "Google/gemini-3.5-flash-lite",
+  "judge_model": "OpenAI/gpt-4o-mini",
+  "judge_provider": "OpenAI",
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "total_eval_samples": 1,
+  "aggregate_ragas_scores": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8171,
+    "context_precision": 0.7556,
+    "context_recall": 1.0
+  },
+  "prd_targets": {
+    "faithfulness": ">0.70",
+    "context_precision": ">0.60",
+    "context_recall": ">0.60",
+    "answer_relevancy": ">0.70"
+  },
+  "target_pass": true,
+  "per_sample_breakdown": [
+    {
+      "sample_id": "qa_001",
+      "question_type": "Architecture/Math",
+      "source_paper_id": "1706.03762",
+      "source_paper_title": "Attention Is All You Need",
+      "question": "How is Scaled Dot-Product Attention calculated mathematically in the Transformer, and why is the scaling factor 1/sqrt(d_k) applied?",
+      "ground_truth_answer": "Scaled Dot-Product Attention computes softmax(QK^T / sqrt(d_k))V. The scaling factor 1/sqrt(d_k) is applied because for large values of d_k, the dot products grow large in magnitude, pushing the softmax function into regions with extremely small gradients.",
+      "pipeline_answer": "### Mathematical Calculation of Scaled Dot-Product Attention\n\nThe input for Scaled Dot-Product Attention consists of queries and keys of dimension $d_k$, and values of dimension $d_v$ [1]. When computed on sets of queries, keys, and values packed into matrices $Q$, $K$, and $V$ respectively, the output matrix is calculated using the following formula:\n\n$$\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V$$\n\nTo compute this, the dot products of the query with all keys are calculated, each is divided by $\\sqrt{d_k}$, and a softmax function is applied to obtain the weights assigned to the values [1].\n\n---\n\n### Purpose of the Scaling Factor $1/\\sqrt{d_k}$\n\nThe scaling factor of $\\frac{1}{\\sqrt{d_k}}$ is applied because, for larger values of $d_k$, dot-product attention without scaling outperforms additive attention [1]. Without scaling, the dot products grow large in magnitude for larger dimensions, pushing the softmax function into regions with extremely small gradients. Dividing by $\\sqrt{d_k}$ counteracts this effect.",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8171,
+        "context_precision": 0.7556,
+        "context_recall": 1.0
+      }
+    }
+  ]
+}

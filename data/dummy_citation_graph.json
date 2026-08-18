@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "p1", "label": "Vaswani et al. (2017)", "group": "Transformer", "title": "Attention Is All You Need (112k citations)", "val": 35},
+    {"id": "p2", "label": "Devlin et al. (2019)", "group": "Encoder", "title": "BERT: Pre-training (98k citations)", "val": 30},
+    {"id": "p3", "label": "Lewis et al. (2020)", "group": "RAG Core", "title": "Retrieval-Augmented Generation (4.8k citations)", "val": 28},
+    {"id": "p4", "label": "Karpukhin et al. (2020)", "group": "Dense Retrieval", "title": "Dense Passage Retrieval (3.2k citations)", "val": 24},
+    {"id": "p5", "label": "Cormack et al. (2009)", "group": "Hybrid Search", "title": "Reciprocal Rank Fusion (1.4k citations)", "val": 20},
+    {"id": "p6", "label": "Es et al. (2023)", "group": "Evaluation", "title": "RAGAS Evaluation Framework (1.2k citations)", "val": 22}
+  ],
+  "edges": [
+    {"from": "p2", "to": "p1", "label": "cites", "weight": 5},
+    {"from": "p3", "to": "p1", "label": "cites", "weight": 4},
+    {"from": "p3", "to": "p2", "label": "cites", "weight": 4},
+    {"from": "p3", "to": "p4", "label": "uses retriever", "weight": 5},
+    {"from": "p4", "to": "p2", "label": "cites", "weight": 3},
+    {"from": "p6", "to": "p3", "label": "evaluates", "weight": 4}
+  ]
+}

@@ -1,0 +1,785 @@
+{
+  "timestamp": "2026-08-17 21:32:49",
+  "status": "COMPLETED",
+  "eval_engine": "official_ragas_library",
+  "generator_model": "Google/gemini-3.5-flash-lite",
+  "judge_model": "OpenAI/gpt-4o-mini",
+  "judge_provider": "OpenAI",
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "total_eval_samples": 40,
+  "aggregate_ragas_scores": {
+    "faithfulness": 0.9508,
+    "answer_relevancy": 0.722,
+    "context_precision": 0.94,
+    "context_recall": 0.8729
+  },
+  "prd_targets": {
+    "faithfulness": ">0.70",
+    "context_precision": ">0.60",
+    "context_recall": ">0.60",
+    "answer_relevancy": ">0.70"
+  },
+  "target_pass": true,
+  "per_sample_breakdown": [
+    {
+      "sample_id": "qa_001",
+      "question_type": "Architecture/Math",
+      "source_paper_id": "1706.03762",
+      "source_paper_title": "Attention Is All You Need",
+      "question": "How is Scaled Dot-Product Attention calculated mathematically in the Transformer, and why is the scaling factor 1/sqrt(d_k) applied?",
+      "ground_truth_answer": "Scaled Dot-Product Attention computes softmax(QK^T / sqrt(d_k))V. The scaling factor 1/sqrt(d_k) is applied because for large values of d_k, the dot products grow large in magnitude, pushing the softmax function into regions with extremely small gradients.",
+      "pipeline_answer": "### Mathematical Calculation of Scaled Dot-Product Attention\n\nThe input for Scaled Dot-Product Attention consists of queries and keys of dimension $d_k$, and values of dimension $d_v$ [1]. When computed on a set of queries, keys, and values packed into matrices $Q$, $K$, and $V$, the output matrix is calculated as follows [1]:\n\n$$\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V$$\n\nTo compute this, the dot products of the query with all keys are calculated, each is divided by $\\sqrt{d_k}$, and a softmax function is applied to obtain the weights assigned to the values [1].\n\n---\n\n### Purpose of the Scaling Factor $1/\\sqrt{d_k}$\n\nDot-product attention without scaling performs similarly to additive attention for small values of $d_k$; however, for larger values of $d_k$, additive attention outperforms unscaled dot-product attention [1]. The scaling factor of $\\frac{1}{\\sqrt{d_k}}$ is applied because, for large values of $d_k$, the dot products grow large in magnitude, pushing the softmax function into regions with extremely small gradients [1]. Dividing by $\\sqrt{d_k}$ helps counteract this effect.",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8145,
+        "context_precision": 0.7556,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_002",
+      "question_type": "Architecture",
+      "source_paper_id": "1512.03385",
+      "source_paper_title": "Deep Residual Learning for Image Recognition",
+      "question": "How do residual shortcut connections in ResNet handle dimension matching when input and output feature map dimensions increase?",
+      "ground_truth_answer": "When dimensions increase between residual stages, ResNet either performs zero-padding shortcuts with identity mappings, or uses 1x1 projection convolutions (W_s) in the shortcut connection to match dimensions.",
+      "pipeline_answer": "### Handling Dimension Matching in ResNet\n\nWhen input and output feature map dimensions increase (such as when changing input/output channels or going across feature maps of two sizes with a stride of 2), ResNet considers two primary options for the shortcut connections [1, 3]:\n\n* **Option (A) - Identity Mapping with Zero-Padding:** The shortcut performs an identity mapping, with extra zero entries padded to handle the increasing dimensions [1]. This introduces no extra parameters [1].\n* **Option (B) - Projection Shortcut:** A projection shortcut (using $1 \\times 1$ convolutions) is used to match the dimensions, as defined by $Wsx$ in the shortcut connection [1, 3]. \n\nAdditionally, when shortcuts go across feature maps of two different sizes, they are performed with a stride of 2 [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7097,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_003",
+      "question_type": "Methodology",
+      "source_paper_id": "1810.04805",
+      "source_paper_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "question": "What is the token replacement strategy used during BERT's Masked Language Model (MLM) pre-training when a token is chosen for masking?",
+      "ground_truth_answer": "When a token is chosen for masking, BERT replaces it with the [MASK] token 80% of the time, replaces it with a random token 10% of the time, and keeps the original token unchanged 10% of the time.",
+      "pipeline_answer": "### Token Replacement Strategy in BERT's MLM Pre-training\n\nDuring BERT's Masked Language Model (MLM) pre-training, the data generator randomly chooses 15% of the token positions in each sequence for prediction [4, 6]. When a specific token is chosen, a mixed replacement strategy is applied with the following probabilities:\n\n* **80% of the time:** The target token is replaced with the `[MASK]` symbol (e.g., `my dog is hairy` $\\rightarrow$ `my dog is [MASK]`) [1, 2, 4].\n* **10% of the time:** The target token is replaced with another random token (e.g., `my dog is hairy` $\\rightarrow$ `my dog is apple`) [1, 2, 4].\n* **10% of the time:** The target token is left unchanged, keeping the word as is (e.g., `my dog is hairy` $\\rightarrow$ `my dog is hairy`) [1, 2, 4]. \n\n### Purpose of the Strategy\nThe primary purpose of using this mixed masking strategy\u2014specifically the inclusion of random tokens and unchanged words\u2014is to reduce the mismatch between the pre-training and fine-tuning stages, given that the `[MASK]` symbol never appears during fine-tuning [3, 6]. Additionally, keeping the word unchanged 10% of the time helps bias the representation toward the actual observed word [2].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9016,
+        "context_precision": 0.9667,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_004",
+      "question_type": "Methodology",
+      "source_paper_id": "2005.11401",
+      "source_paper_title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "question": "How do RAG-Sequence and RAG-Token models differ in how they marginalize over retrieved documents during answer generation?",
+      "ground_truth_answer": "RAG-Sequence uses the same retrieved document to generate the complete sequence, marginalizing over documents per sequence, whereas RAG-Token can marginalize over different retrieved documents at each individual token step.",
+      "pipeline_answer": "### RAG-Sequence Model\n\nThe RAG-Sequence model treats the retrieved document as a single latent variable that is marginalized to obtain the sequence-to-sequence probability $p(y|x)$ using a top-$K$ approximation [2]. Specifically, it uses the **same** retrieved document to predict and generate the complete target sequence [1, 2]. \n\nIts marginalization is formulated as:\n$$p_{\\text{RAG-Sequence}}(y|x) \\approx \\sum_{z \\in \\text{top-k}(p(\\cdot|x))} p_\\eta(z|x) p_\\theta(y|x, z) = \\sum_{z \\in \\text{top-k}(p(\\cdot|x))} p_\\eta(z|x) \\prod_{i} p_\\theta(y_i|x, z, y_{1:i-1})$$\n\n---\n\n### RAG-Token Model\n\nIn contrast, the RAG-Token model can draw a **different** latent document for each target token and marginalize accordingly [1, 2]. This allows the generator to choose and combine content from several different documents when producing a single answer [2]. For each output token, the generator produces a distribution across the top-$K$ documents before marginalizing, repeating the process for subsequent tokens [2].\n\nIts marginalization is formulated as:\n$$p_{\\text{RAG-Token}}(y|x) \\approx \\prod_{i} \\sum_{z \\in \\text{top-k}(p(\\cdot|x))} p_\\eta(z|x) p_\\theta(y_i|x, z, y_{1:i-1})$$",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8093,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_005",
+      "question_type": "Results/Metrics",
+      "source_paper_id": "2004.04906",
+      "source_paper_title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "question": "On the Natural Questions benchmark, by how much does DPR's top-20 passage retrieval accuracy outperform traditional Lucene BM25?",
+      "ground_truth_answer": "On Natural Questions, DPR achieves a top-20 passage retrieval accuracy of 78.4%, outperforming BM25 (59.1%) by 19.3 absolute percentage points.",
+      "pipeline_answer": "### Natural Questions Benchmark Performance Comparison\n\nOn the test set of the Natural Questions benchmark, DPR's top-20 passage retrieval accuracy outperforms the traditional Lucene BM25 baseline by an absolute margin of 19.3 percentage points, achieving 78.4% compared to BM25's 59.1% [3, 4]. More broadly across open-domain QA datasets, DPR outperforms strong Lucene BM25 systems by 9% to 19% absolute in terms of top-20 passage retrieval accuracy [5].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.8333,
+        "answer_relevancy": 0.9234,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_006",
+      "question_type": "Architecture/Analysis",
+      "source_paper_id": "2010.11929",
+      "source_paper_title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "question": "Why does Vision Transformer (ViT) require pre-training on large datasets like JFT-300M to outperform standard ResNets?",
+      "ground_truth_answer": "ViT lacks the image-specific inductive biases inherent to CNNs (such as translation equivariance and 2D locality), requiring massive pre-training data to learn visual representations without structural priors.",
+      "pipeline_answer": "### Reasons for Pre-training on Large Datasets\n\n* **Lack of Inductive Biases:** Unlike convolutional neural networks (CNNs), Vision Transformers (ViT) lack certain inherent inductive biases\u2014such as translation equivariance and locality [1]. \n* **Generalization on Insufficient Data:** Because of these missing inductive biases, ViT models do not generalize well when they are trained on insufficient amounts of data [1]. When trained on mid-sized datasets like ImageNet without strong regularization, they yield modest accuracies that are a few percentage points below comparable ResNets [1].\n* **Overfitting Tendencies:** Vision Transformers overfit more than ResNets of comparable computational cost when trained on smaller datasets [5]. For instance, a ViT-B/32 model performs much worse than a ResNet50 on a 9M subset of data [5].\n* **Large-Scale Training Trumps Inductive Bias:** Large-scale training overcomes the lack of inductive biases [1]. When trained on massive datasets (such as 14M to 300M images, like the JFT-300M or ImageNet-21k datasets), the full benefits of larger models are realized [1, 4], allowing ViT to approach or outperform state-of-the-art ResNets [1, 2].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7579,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_007",
+      "question_type": "Architecture",
+      "source_paper_id": "2103.14030",
+      "source_paper_title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+      "question": "How does the cyclic shift with masked self-attention in Swin Transformer avoid increasing the number of window computations?",
+      "ground_truth_answer": "Swin Transformer cyclically shifts the feature map towards the top-left and applies a masked attention mechanism on the shifted sub-windows, keeping the total number of regular local window computations unchanged without extra padding overhead.",
+      "pipeline_answer": "### Cyclic-Shifting and Batch Computation Approach\n\nShifted window partitioning naturally results in an increased number of windows (growing from $\\lceil \\frac{h}{M} \\rceil \\times \\lceil \\frac{w}{M} \\rceil$ to $(\\lceil \\frac{h}{M} \\rceil + 1) \\times (\\lceil \\frac{w}{M} \\rceil + 1)$) and creates smaller-than-normal windows, which substantially increases computation when using a naive padding solution [2]. \n\nTo avoid increasing the number of window computations, the Swin Transformer uses a more efficient batch computation approach:\n\n* **Cyclic-Shifting:** The feature map is cyclic-shifted toward the top-left direction [2]. \n* **Masking Mechanism:** Because the cyclic-shift causes a batched window to be composed of several sub-windows that are not adjacent in the original feature map, a masking mechanism is employed to restrict self-attention computation strictly to within each individual sub-window [2].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7372,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_008",
+      "question_type": "Comparative",
+      "source_paper_id": "1409.1556",
+      "source_paper_title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "question": "What is the theoretical benefit of stacking two 3x3 convolution layers instead of using a single 5x5 convolution layer in VGGNet?",
+      "ground_truth_answer": "A stack of two 3x3 conv layers has an effective 5x5 receptive field but incorporates two non-linear rectification layers instead of one, and reduces parameter count from 25*C^2 to 18*C^2 (a 28% decrease in parameters).",
+      "pipeline_answer": "\u26a0\ufe0f **No Sufficiently Relevant Context Found**\n\n[WARN] No sufficiently relevant context found in the ingested paper corpus for your question (Top relevance score: 0.280 < threshold 0.35).\n\n*The system short-circuited generation to prevent ungrounded hallucinated output (FR-11).*",
+      "retrieved_chunks_count": 0,
+      "generator_model": "None (Relevance Short-Circuit)",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.3333,
+        "answer_relevancy": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      }
+    },
+    {
+      "sample_id": "qa_009",
+      "question_type": "Architecture",
+      "source_paper_id": "1703.06870",
+      "source_paper_title": "Mask R-CNN",
+      "question": "What is the RoIAlign layer in Mask R-CNN and how does it fix the spatial misalignments caused by RoIPool?",
+      "ground_truth_answer": "RoIAlign avoids quantization of RoI boundaries and spatial bins, using bilinear interpolation to extract exact feature values at four regularly sampled locations in each RoI bin without rounding coordinates.",
+      "pipeline_answer": "### What is the RoIAlign Layer in Mask R-CNN?\nRoIAlign is a simple, quantization-free layer designed to faithfully preserve exact spatial locations when extracting features from Regions of Interest (RoIs) [1]. Unlike RoIPool\u2014which performs coarse spatial quantization\u2014RoIAlign removes harsh boundary and bin quantization entirely (e.g., using continuous division like $x/16$ instead of rounded operations like $[x/16]$) [1, 2]. To compute exact feature values, it applies bilinear interpolation at four regularly sampled locations within each RoI bin, and then aggregates the results using max or average pooling [2]. \n\n---\n\n### How RoIAlign Fixes Spatial Misalignments Caused by RoIPool\nRoIPool introduces spatial misalignments through a multi-step quantization process:\n1. It first quantizes a floating-number RoI to the discrete granularity of the feature map (e.g., computing $[x/16]$ using a feature map stride of 16 and rounding $[\\cdot]$) [2].\n2. It then subdivires the quantized RoI into spatial bins that are also quantized (e.g., into a $7 \\times 7$ grid) [2].\n\nWhile classification is generally robust to small translations caused by these quantization steps, this misalignment has a severe negative effect on predicting pixel-accurate masks, which require precise spatial layouts [2]. RoIAlign fixes these misalignments by completely avoiding any quantization of the RoI boundaries or bins [2]. By using bilinear interpolation to sample exact feature locations, it properly aligns the extracted features with the input without being sensitive to the exact sampling locations or the number of points sampled [2].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8507,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_010",
+      "question_type": "Architecture/Math",
+      "source_paper_id": "1905.11946",
+      "source_paper_title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+      "question": "In EfficientNet's compound scaling method, how are depth (d), width (w), and resolution (r) constrained relative to the user-specified coefficient phi?",
+      "ground_truth_answer": "Depth, width, and resolution are scaled as d = alpha^phi, w = beta^phi, and r = gamma^phi, subject to the constraint alpha * beta^2 * gamma^2 approx 2, so that total FLOPS increase by 2^phi.",
+      "pipeline_answer": "### Compound Scaling Equations and Constraints\n\nIn EfficientNet's compound scaling method, depth ($d$), width ($w$), and resolution ($r$) are uniformly scaled relative to a user-specified compound coefficient ($\\phi$) using the following formulas and constraints [1]:\n\n* **Depth Constraint:** \n  $$d = \\alpha^\\phi$$\n* **Width Constraint:** \n  $$w = \\beta^\\phi$$\n* **Resolution Constraint:** \n  $$r = \\gamma^\\phi$$\n\n### Parameter Conditions and Resource Bounds\n\nThese scaling dimensions are further constrained by the following conditions and relationships [1]:\n* **Scaling Constants:** $\\alpha \\ge 1$, $\\beta \\ge 1$, and $\\gamma \\ge 1$ are constants determined via a small grid search [1].\n* **FLOPS Constraint:** $\\alpha \\cdot \\beta^2 \\cdot \\gamma^2 \\approx 2$ [1]. \n\nIn this framework, the user-specified coefficient $\\phi$ controls the total amount of extra resources available for model scaling, while $\\alpha$, $\\beta$, and $\\gamma$ dictate how those extra resources are distributed across network depth, width, and resolution, respectively [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7957,
+        "context_precision": 0.8167,
+        "context_recall": 0.5
+      }
+    },
+    {
+      "sample_id": "qa_011",
+      "question_type": "Mechanism/Analysis",
+      "source_paper_id": "2608.11822",
+      "source_paper_title": "Located but Not Releasable: Silent Gate Inversion and Bounded Linear Release",
+      "question": "According to the paper 'Located but Not Releasable', why does locating latent representations via probing fail to guarantee successful behavioral model intervention?",
+      "ground_truth_answer": "The paper demonstrates that locating a task-relevant latent representation through probing does not guarantee it can be converted into behavioral model execution, identifying two failure modes: silent gate inversion (where the detector is out-of-distribution inverted) and bounded linear release (where the entire family of linear release directions at that site is bounded away from sufficiency for downstream tasks).",
+      "pipeline_answer": "### Dissociation Between Decodability and Functional Role\nAccording to the paper, probe accuracy and the decodability of latent representations do not constitute evidence that the model actually uses that information [3]. Information-theoretic bounds and control tasks demonstrate that a latent variable's decodability from activations and its functional role can dissociate [3]. Language models can represent task-relevant latent structures that they fail to use, meaning that finding structure via probes does not guarantee it can be successfully converted into behavior [1].\n\n### Failure of Gating Out of Distribution\nWhen attempting to release located representations using a gated pipeline, the gating mechanism can fail under distribution shifts [1]. Specifically, a detector calibrated to trigger on zero out-of-distribution calibration worlds can undergo a \"silent gate inversion,\" triggering on a small percentage of held-out in-distribution generations while completely failing to trigger on generations that actually need it [1]. This reduces the gated pipeline back to its base model [1].\n\n### Bounded Linear Release\nWhen the gate is removed entirely and a per-instance linear direction is injected to release the structure, the intervention yields a monotone dose\u2013response that plateaus far below the preregistered release margin [1]. Furthermore, per-instance adaptivity adds minimal improvement over a fixed direction [1], demonstrating a structural representation-behavior gap [2] where linear release is strictly capped [1].",
+      "retrieved_chunks_count": 3,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6074,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_012",
+      "question_type": "Empirical/Metrics",
+      "source_paper_id": "2608.11830",
+      "source_paper_title": "Quantifying the Relationship Between Clinical Safety and Environmental Impact in Therapeutic LLMs",
+      "question": "How does paper 2608.11830 evaluate the trade-off between clinical safety scores and environmental compute cost across therapeutic LLMs?",
+      "ground_truth_answer": "The authors combine K-Bench clinical safety scores with EcoLogits life-cycle assessment estimates across 47 model configurations to quantify emissions and energy consumption relative to diagnostic safety gains.",
+      "pipeline_answer": "### Evaluation Methods and Data Sources\n\nPaper 2608.11830 evaluates the trade-off between clinical safety performance and environmental compute cost by combining two main sources across 47 therapeutic large language model (LLM) configurations [1, 2]:\n* **Clinical Safety Scores:** The authors use the public K-Bench clinical safety leaderboard, utilizing a combined risk score as the primary clinical outcome [1, 4]. K-Bench relies on a structured rubric calibrated against clinician ratings of multi-turn dialogues to assess risk domains and global response qualities [2, 4].\n* **Environmental Compute Cost:** The environmental footprint is estimated using the **EcoLogits** package (v0.11.0), which calculates life-cycle sustainability metrics by linking model metadata with underlying hardware profiles (e.g., NVIDIA H100 or A100 GPU deployments), data center efficiency (Power Usage Effectiveness), and regional carbon intensity assumptions [1, 4]. Four environmental indicators are evaluated: energy use, carbon emissions (global warming potential), water consumption, and abiotic depletion [1, 2].\n\n---\n\n### Findings on the Safety-Compute Trade-Off\n\n* **Nonlinear Trade-Off and Pareto Frontier:** The evaluation identifies a Pareto frontier where the highest clinical safety scores are associated with disproportionately larger environmental footprints [1, 2]. Specifically, a nonlinear trade-off exists at the upper end of the safety distribution: a 2.61 percentage-point increase in the clinical safety score (from 93.41 to 96.02) corresponded to an approximately 60-fold increase in estimated energy use per million output tokens [1, 6]. \n* **Model Comparisons:** For instance, the model `gpt-5.5` achieved the highest Best Risk score of 96.02 with an estimated energy use of 6.4390 kWh per million output tokens [6]. In contrast, `claude-haiku-4.5` achieved a comparable Best Risk score of 93.41 while consuming only 0.1095 kWh per million output tokens\u2014representing a 98.3% reduction in estimated energy use for a 2.61 percentage-point reduction in safety score [6]. Meanwhile, `gpt-4o-mini` exhibited the lowest energy use among the highlighted models at 0.0846 kWh per million output tokens, alongside a lower Best Risk score of 85.27 [6].\n* **Impact of Test-Time Compute:** Row-level analyses further show that additional test-time compute (such as higher reasoning levels) did not consistently improve clinical safety and, in certain configurations, was associated with lower clinical safety scores [1].\n\nUltimately, the findings suggest that relying exclusively on larger models or additional inference-time computation is an inefficient strategy for improving safety in therapeutic AI systems, and smaller, optimized models may provide more efficient deployment options for numerous use cases [1, 2].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7736,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_013",
+      "question_type": "Failure Analysis",
+      "source_paper_id": "2608.11843",
+      "source_paper_title": "When the Knowledge Base Becomes the Gold Standard: Measuring Resource-Shared Evaluation Loops in Entity-Level Machine Translation",
+      "question": "In machine translation of historical records like the Seungjeongwon Ilgi, what failure mode occurs when the knowledge base itself is used as the evaluation gold standard?",
+      "ground_truth_answer": "The study demonstrates that resource-shared evaluation loops create circular validation artifacts where translation errors propagate undetected because the knowledge base shares vocabulary and bias with the translator.",
+      "pipeline_answer": "### Consequences of Using the Knowledge Base as the Gold Standard\n\nWhen practitioners substitute a knowledge base (KB) for an expert gold standard in low-resource historical domains (such as the machine translation of the *Seungjeongwon Ilgi*), the scoring process becomes entirely self-referential [1]. \n\nThe specific failure modes and effects that occur include:\n\n* **Self-Referential Scoring and Instruction Compliance:** Because the KB used as the gold standard is the same resource injected into the translation system, the metric ends up measuring instruction compliance rather than actual translation quality [1]. \n* **Invisible Errors:** The system can be forced to emit an incorrect reading (such as rendering a surname incorrectly based on standard character library readings rather than proper historical person-name readings), and because the gold standard is built from that same library, it certifies the wrong name as correct [3]. The error remains completely invisible from inside the loop [3].\n* **Distorted Health Metrics:** The evaluation loop artificially inflates the perceived performance of the overlapping segment. In the overlapping segment, the injected reading agrees with the human translation 97.8% of the time, compared to only 70.1% in an independent human-annotated gold standard, meaning the loop actively props up and sustains the segment that merely *looks* the healthiest [1].",
+      "retrieved_chunks_count": 3,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7342,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_014",
+      "question_type": "Security/Methodology",
+      "source_paper_id": "2608.11878",
+      "source_paper_title": "ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents",
+      "question": "What security vulnerabilities in tool-augmented LLM agents does ToolHazard identify regarding indirect prompt injection in environmental states?",
+      "ground_truth_answer": "ToolHazard shows that tool-integrated LLM agents are vulnerable to indirect prompt injections hidden in environmental state representations, overcoming the limitations of manual or static injection benchmarks by scaling adversarial simulation.",
+      "pipeline_answer": "### Vulnerability Overview\nTool-augmented large language model (LLM) agents that interact with external tools are vulnerable to indirect prompt injections embedded within environmental states [1]. Specifically, these attacks manipulate LLM agents into executing unintended, unsafe, or unauthorized actions\u2014essentially hijacking the agent\u2014even when responding to completely benign user queries [2, 5]. Furthermore, these prompt injection attacks systematically impair the agent's overall task execution capabilities, consistently degrading their normal task success rate [4].\n\n### Key Findings on Attack Effectiveness\nExperiments conducted using ToolHazard identify specific factors regarding how injection timing and placement impact the success of indirect prompt injections:\n* **Injection Timing:** Attacks are significantly more effective when the injected instructions are encountered earlier in the agent's execution trajectory [1, 3].\n* **Observation Placement:** Attacks show higher effectiveness when placed near the end of the agent's observations [1, 3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7408,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_015",
+      "question_type": "Cost Modeling/Metrics",
+      "source_paper_id": "2608.11879",
+      "source_paper_title": "Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems",
+      "question": "When benchmarking agentic memory systems (Mem0, Hindsight, Mastra), what separable cost model is formulated to predict serving costs across 400-turn conversations?",
+      "ground_truth_answer": "The paper fits a separable cost model log(C + 1) = a + p*log(L + 1) + q*log(t + 1) and validates it with cross-validation across 665 LoCoMo benchmark questions.",
+      "pipeline_answer": "### Separable Cost Model Formulation\n\nTo predict and analyze serving costs across conversations of up to 400 turns, the study fits the following separable cost model [2]:\n\n$$\\log(C + 1) = a + p \\log(L + 1) + q \\log(t + 1)$$\n\nWhere:\n* $C$ represents the serving cost [2].\n* $L$ represents the message size [2].\n* $t$ represents the conversation length (or turns) [2].\n* $a$, $p$, and $q$ are fitted parameters [2].\n\n### Performance of the Cost Model\n\nWhen validated using leave-one-cell-out cross-validation, the model predicts costs well for window-based strategies (holding out below 6.5% error) [2]:\n* **Full-history strategies** exhibit parameters where $p \\approx q \\approx 1$ [2].\n* **Rolling-window strategies** exhibit parameters where $q \\approx 0$ [2].\n\nHowever, the same separable cost model does not hold out accurately for retrieval- and threshold-driven memory systems (such as Mem0, Hindsight, and Mastra OM), which suffer from 18% to 69% held-out error [2, 3]. This occurs because the costs of these agentic memory systems are driven by their internal memory states and behavior rather than solely by conversation length or message size [2, 3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7088,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_016",
+      "question_type": "System Architecture",
+      "source_paper_id": "2608.11924",
+      "source_paper_title": "Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill",
+      "question": "How does Spark-to-Paper orchestrate end-to-end academic paper generation as composable skills inside a coding assistant without external orchestration frameworks?",
+      "ground_truth_answer": "Spark-to-Paper decomposes paper generation into thirteen composable skills covering literature retrieval, experiment execution, evidence-grounded claim revision, and figure generation within the coding environment.",
+      "pipeline_answer": "### Orchestration through Composable Skills and Native Assistant Capabilities\n\nSpark-to-Paper achieves end-to-end academic paper generation by implementing thirteen composable skills directly inside an existing coding assistant (such as Claude Code) without relying on a separate agent platform, graph database, cluster scheduler, or external orchestration service [1, 2, 5, 6]. \n\nThe system relies on the following design principles for its lightweight orchestration:\n\n* **Reuse of Native Assistant Capabilities:** The system reuses the coding assistant's built-in native capabilities for file interaction, tool use, and code execution [2, 5]. \n* **Artifact-Based Communication:** All thirteen skills (which handle tasks like planning, literature retrieval, writing, review, figure generation, and experiment execution) communicate exclusively through artifacts stored within a shared project directory [4].\n* **High-Level Order vs. Autonomous Execution:** Rather than encoding the full system behavior as a fine-grained agent graph with predefined individual actions and transitions, a lightweight pipeline specifies only the simple, high-level order of tasks [4, 5]. The coding assistant dynamically determines how each skill is executed based on the current state of the project [4, 5].\n* **Skills as Execution Units:** A skill defines the objective of a research task, its constraints, the permissible tools, and the required output artifacts, but it does not dictate every single reasoning step needed to achieve it [5]. \n\n### Separation of Concerns within Skills\n\nWithin the execution of each skill, Spark-to-Paper enforces structural separations to maintain reliability and verifiability without heavy external frameworks:\n\n* **Model-Based Judgment vs. Deterministic Operations:** The system separates tasks requiring language model interpretation and reasoning from deterministic operations that can be directly executed and mechanically checked [1, 2, 5].\n* **Experiment Planning vs. Reporting:** Experiment planning is separated from reporting so that required evidence is specified before results are observed; experiments are then executed to resolve missing evidence, and claims are revised according to measured outcomes [1, 2, 4]. \n* **Integrity Checks and Bounded Self-Refutation:** The system combines deterministic integrity checks with long-horizon self-critique [1, 2, 4]. It specifically addresses a failure mode termed the *Self-Refutation Loop*\u2014where repeated experiments consistently fail to support the original hypothesis\u2014by bounding the process, recording the unsuccessful trajectory as a failure report, and restarting with a new idea rather than forcing the narrative to succeed [2, 4].\n* **Figure Pipeline Separation:** Quantitative plots are generated programmatically and directly from measured data, whereas explanatory method figures are initially designed using an image-generation model and subsequently reconstructed via code into editable vector PDFs [1, 3, 4].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.8333,
+        "answer_relevancy": 0.7538,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_017",
+      "question_type": "Empirical Finding",
+      "source_paper_id": "2608.11947",
+      "source_paper_title": "Accuracy and Order Sensitivity Diverge Under Label-Free Strategies",
+      "question": "In paper 2608.11947, why do model accuracy and prompt order sensitivity diverge when evaluating language models under permutation?",
+      "ground_truth_answer": "The paper demonstrates that aggregate accuracy metrics can mask severe order sensitivity, where permuting in-context examples or options alters predictions despite stable top-line accuracy.",
+      "pipeline_answer": "Based on the provided context, the exact reasons why model accuracy and prompt order sensitivity diverge when evaluating language models under permutation are not explicitly explained in detail. However, the text notes the following findings regarding this divergence:\n\n* **Eliminating Positional Influence Does Not Yield Accuracy Gains:** Eliminating positional influence entirely does not reliably result in accuracy gains, whereas cyclic permutation often improves them [1].\n* **Inability of Measures to Show Debiasing:** For two-stage prompting, both an aggregate measure of recall imbalance and a direct per-question measure of order sensitivity fail to show reliable debiasing [1].",
+      "retrieved_chunks_count": 1,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.0,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_018",
+      "question_type": "Benchmark/Metrics",
+      "source_paper_id": "2608.11981",
+      "source_paper_title": "Benchmarking Trustworthiness of SLMs: Pre-trained vs. Compressed",
+      "question": "How does the SLM trustworthiness benchmark compare pre-trained small language models against compressed larger models across core trustworthiness dimensions?",
+      "ground_truth_answer": "The benchmark evaluates trustworthiness across fairness, robustness, privacy, ethics, and safety, finding that compressed LLMs (via quantization) achieve higher trustworthiness (~63%) compared to natively pre-trained SLMs (~50%), while pruning degrades reliability.",
+      "pipeline_answer": "### Core Trustworthiness Dimensions\nThe evaluation framework assesses model trustworthiness across four core dimensions: **fairness, robustness, privacy, and ethics** [1, 3].\n\n### Pre-trained SLMs vs. Compressed Larger Models\nWhen comparing pre-trained small language models (SLMs with under 1B parameters) against compressed larger models, the benchmark reveals the following findings:\n\n* **Overall Trustworthiness Scores:** Pre-trained SLMs generally achieve lower trustworthiness scores, typically hovering around 50% [2]. In contrast, compressed larger models (such as a 4-bit quantized Qwen2.5-1.5B model) achieve substantially higher trustworthiness scores around 63% [2].\n* **Performance Across Dimensions:** Quantized large language models consistently outperform pre-trained SLMs across *all* core trustworthiness dimensions [3]. \n* **Underlying Drivers of Performance:** The superior trustworthiness of compressed larger models is driven by the minimal degradation introduced by quantization combined with the stronger base capabilities of larger models (e.g., the 1.5B model) compared to smaller counterparts trained from scratch (e.g., Qwen2.5-0.5B) [2].\n* **Impact of Compression Technique:** When examining compression methods, pruning can impair reliability, whereas quantization largely preserves the trustworthiness and reliability-related behaviors of original full-precision models [3]. Therefore, leveraging quantization on larger pre-trained models is established as a significantly more effective approach than training small models from scratch [1, 3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7656,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_019",
+      "question_type": "Methodology",
+      "source_paper_id": "2608.11994",
+      "source_paper_title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+      "question": "What claim-level reliability assessment framework is proposed in paper 2608.11994 for efficient factual verification?",
+      "ground_truth_answer": "The paper introduces claim-level decomposition and confidence calibration to verify individual factual claims without requiring redundant full-document re-generation.",
+      "pipeline_answer": "### Proposed Framework: Claim-Level Reliability Assessment (CLR)\n\nPaper 2608.11994 proposes **Claim-Level Reliability Assessment (CLR)** as a training-free framework for consensus-based answer aggregation and efficient test-time reasoning [1, 2]. The framework operates on the principle of claim-level falsification for test-time scaling [1, 2] and consists of the following key mechanisms and characteristics:\n\n* **Reallocation of Test-Time Compute:** CLR reallocates test-time compute away from additional solution sampling toward targeted verification [2].\n* **Claim-Level Evaluation:** Instead of evaluating whole traces\u2014which suffer from signal dilution where routine tokens obscure localized, decisive errors\u2014CLR condenses each reasoning trace into a compact set of decision-critical claims to isolate its logical anchors [1, 2].\n* **Semantic Falsification and Asymmetry Exploitation:** CLR shifts its focus to semantic falsification, exploiting the fundamental asymmetry between solution construction (which requires a flawless reasoning path) and claim refutation (which only requires identifying a single decisive flaw) [2]. \n* **Nonlinear Reliability Scoring:** By conducting a targeted search for negative evidence, the framework systematically compresses the survival space of high-confidence incorrect traces and suppresses erroneous consensus through nonlinear reliability scoring [2].",
+      "retrieved_chunks_count": 2,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.9286,
+        "answer_relevancy": 0.7817,
+        "context_precision": 1.0,
+        "context_recall": 0.0
+      }
+    },
+    {
+      "sample_id": "qa_020",
+      "question_type": "Theory/Calibration",
+      "source_paper_id": "2608.12008",
+      "source_paper_title": "Asymptotic Risk Calibration for Selective Question Answering",
+      "question": "How does A-CRC-QA use asymptotic risk calibration to improve selective question answering under non-monotone population risks?",
+      "ground_truth_answer": "A-CRC-QA reformulates selection-conditioned error control as an asymptotic linear expectation constraint, accommodating non-monotone population risks and improving answer acceptance rates without retraining model weights.",
+      "pipeline_answer": "### Framework Overview\nA-CRC-QA is a post-hoc, model-agnostic calibration framework designed for uncertainty-aware selective question answering [1, 5]. It combines the linear expectation constraint used in LEC (which formulates selection-conditioned error control involving prediction selection and correctness) with the asymptotic treatment of non-monotone losses inspired by conformal risk control (CRC) [2, 3, 5]. \n\n### Handling Non-Monotone Population Risks\nStandard finite-sample guarantees in conformal risk control require the loss to be monotone with respect to the calibration parameter [2, 6]. However, the instance-wise loss used for selective answering is generally non-monotone because accepting a correct answer and accepting an incorrect answer affect the loss in opposite directions (admitting a correct answer decreases the loss, while admitting an incorrect answer increases it) [2, 4, 6]. \n\nTo address non-monotone population risks without imposing an incorrect monotonicity assumption, A-CRC-QA targets asymptotic rather than finite-sample risk control [1, 6]. The framework proceeds through the following mechanism:\n\n1. **Empirical Linear Risk Formulation:** Using a held-out calibration set $D_{cal} = \\{(x_i, y^*_i)\\}_{n}^{i=1}$, the framework evaluates candidate uncertainty thresholds $\\lambda$ to obtain the empirical linear risk $\\widehat{g}_n(\\lambda)$ [6]:\n   $$\\widehat{g}_n(\\lambda) = \\frac{1}{n}\\sum_{i=1}^{n} S_i(\\lambda)(E_i - \\alpha)$$\n   where $S_i(\\lambda)$ is the selection indicator and $E_i$ is the error indicator [6].\n\n2. **Monotonized Empirical Risk:** Because $\\widehat{g}_n(\\lambda)$ is generally non-monotone, A-CRC-QA defines a monotonized empirical risk acting as an upper envelope of the original empirical risk [6]:\n   $$\\widehat{g}^{\\uparrow}_n(\\lambda) = \\sup_{t \\geq \\lambda} \\widehat{g}_n(t)$$\n   By construction, $\\widehat{g}^{\\uparrow}_n(\\lambda)$ is non-increasing in $\\lambda$ and satisfies $\\widehat{g}_n(\\lambda) \\le \\widehat{g}^{\\uparrow}_n(\\lambda)$ [6]. Requiring $\\widehat{g}^{\\uparrow}_n(\\lambda) \\le 0$ ensures that the empirical linear constraint is satisfied at $\\lambda$ as well as at every more conservative threshold, thereby eliminating isolated feasible thresholds caused by random fluctuations in the calibration data [6].\n\n3. **Asymptotic Control:** By utilizing this monotonized empirical-risk calibration procedure alongside a non-negative calibration correction $\\gamma_n$ (where $\\gamma_n \\to 0$ as $n \\to \\infty$), the method selects the largest admissible threshold satisfying an empirically corrected linear expectation constraint [5, 6]. Under exchangeability and standard regularity conditions, this decision rule provides asymptotic control over the error rate among accepted answers [5].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7827,
+        "context_precision": 1.0,
+        "context_recall": 0.6667
+      }
+    },
+    {
+      "sample_id": "qa_021",
+      "question_type": "Architecture",
+      "source_paper_id": "2608.12018",
+      "source_paper_title": "Poly-Dialectal Neural Machine Translation System for Bangla Regional Dialects",
+      "question": "What architectural adaptations allow poly-dialectal neural machine translation systems to handle cross-dialect lexical variation?",
+      "ground_truth_answer": "The system incorporates dialect-aware adapter layers and soft dialect embeddings to transfer syntactic structures while isolating dialect-specific vocabulary.",
+      "pipeline_answer": "Based on the provided context, the architectural adaptations and methodologies that allow the poly-dialectal neural machine translation systems to handle cross-dialect lexical variation include the following:\n\n### Unified Direct Mapping Topology\nInstead of using traditional pivot-based translation approaches that route all regional variants through Standard Colloquial Bangla (SCB) and cause cascading error accumulation, the system employs a unified direct mapping topology [2]. The model learns a direct mapping function $T_\\theta: (x, d_s, d_t) \\to y$ for a source sentence $x$ in source dialect $d_s$ and target dialect $d_t$, producing a target sentence $y$ that adopts the lexical and morphological conventions of $d_t$ while preserving semantic content [2].\n\n### Multi-Directional Translation Paradigms\nThe architecture is designed to support three distinct translation paradigms within a single model framework [2, 3]:\n1. **Dialect $\\to$ Standard Bangla** [2, 3]\n2. **Standard Bangla $\\to$ Dialect** [2, 3]\n3. **Direct Dialect $\\to$ Dialect translation** [2, 3]\n\n### Parameter-Efficient Fine-Tuning via DoRA\nTo adapt sequence-to-sequence architectures for multi-dialectal translation, the system utilizes **Weight-Decomposed Low-Rank Adaptation (DoRA)** [1, 3]. Specifically, models such as BanglaT5 are fine-tuned using parameter-efficient DoRA configurations (e.g., rank $r=64$, scaling factor $\\alpha=128$) to handle the low-resource regional variants effectively while maintaining morphological coherence [1, 3]. \n\n### Unified Multi-Dialect Corpus Integration\nArchitecturally, the model relies on training over a unified multi-dialect parallel corpus (incorporating 51,531 non-null parallel sentence pairs across 12 dialects derived from seven integrated source corpora and expert-verified pairs) [1, 3, 5, 6]. This training paradigm allows the system to exploit shared morphological and syntactic structures across related dialects, generating transferable representations that assist in handling cross-dialectal variation even for low-resource pairs [5].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8579,
+        "context_precision": 0.8333,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_022",
+      "question_type": "Scientific Methodology",
+      "source_paper_id": "2608.12036",
+      "source_paper_title": "Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence",
+      "question": "How does Mechanist utilize AI as a scientific instrument to discover interpretable mechanisms of neural network intelligence?",
+      "ground_truth_answer": "Mechanist automates hypothesis generation and causal intervention experiments across neural activations to discover mechanistic circuits and internal computational motifs.",
+      "pipeline_answer": "### Overview of Mechanist\n\nMechanist is an agentic system that uses AI as a scientific instrument for the autonomous discovery of the mechanisms underlying AI intelligence [1]. Moving mechanistic understanding from a manually engineered process into an autonomous workflow, Mechanist operates through four main stages: hypothesis generation, experiment execution, result verification, and iteration, while keeping humans in the loop to set scientific objectives and evaluation criteria [3].\n\n### Knowledge Grounding and Methodological Support\n\nTo ground its hypothesis generation, Mechanist utilizes two core knowledge resources:\n* An interpretability-focused knowledge graph containing approximately 13,000 papers [1, 2].\n* A multidisciplinary database of 43 million papers spanning 26 fields [1, 2].\n\nThese databases allow Mechanist to draw on insights from human behavior, neuroscience, and other disciplines to form hypotheses regarding AI intelligence [2]. For experiment execution, Mechanist integrates a curated library of 32 foundational methods designed for mechanistic analysis, causal intervention, and validation [1, 2].\n\n### Autonomous Discovery Workflow\n\nMechanist investigates AI models through a systematic process where users specify the scientific objective and success criteria [4]. The system then autonomously identifies relevant features, designs and executes experiments, establishes robust causal evidence, and iteratively refines mechanistic explanations [4]. \n\nThrough this framework, Mechanist demonstrates capabilities across four key areas:\n1. **Discovering new AI model behaviors:** Mechanist uncovers unrecognized risks, such as demonstrating that unsafe traits can be transmitted through training data that appear entirely safe in a multimodal setting [2, 5].\n2. **Revealing mechanism theories underlying AI behaviors:** Mechanist uncovers how models represent world knowledge, form beliefs, infer the beliefs of others, and how these mechanisms emerge during pretraining [2, 5]. For example, it identified separable personal-belief and attributed-belief heads that govern how models use learned knowledge in complex contexts [2].\n3. **Enhancing AI intelligence through mechanism intervention:** Guided by mechanism theories (such as the theory of belief), Mechanist can adaptively steer belief heads to resolve conflicting information, improve response accuracy and consistency, and reason about others' beliefs [2, 5].\n4. **Advancing interdisciplinary discovery:** Mechanist identifies target biological features in scientific foundation models and causally steers them toward desired outcomes (such as generating specific biological sequences), replacing indirect generate-and-rerank procedures with targeted, mechanism-guided control [4, 6].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8246,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_023",
+      "question_type": "Optimization/Methodology",
+      "source_paper_id": "2608.12062",
+      "source_paper_title": "Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations",
+      "question": "How does Preference Tree Optimization enhance goal-directed multi-step reasoning in language models?",
+      "ground_truth_answer": "Preference Tree Optimization evaluates tree-structured reasoning paths, using preference optimization on tree branches to steer search trajectories toward correct solutions.",
+      "pipeline_answer": "### Overview of Preference Tree Optimization (PTO)\nPreference Tree Optimization (PTO) is a framework designed to enhance language models in multi-turn, goal-oriented conversations (such as Motivational Interviewing) where data scarcity and complex interactions present significant challenges [1]. Rather than relying on pre-existing static datasets or pure likelihood estimation, PTO iteratively improves an agent's decision-making capabilities through simulated conversations and preference learning [1, 5].\n\n### Core Mechanisms of PTO\n\n* **Preference Tree with Look-Ahead:** This method systematically simulates and evaluates potential conversational paths and trajectories using virtual patients and an oracle evaluator [1, 2, 4]. By exploring look-ahead simulations, the framework generates high-quality preference datasets that capture nuanced, goal-directed behavior [1, 2].\n* **Direct Preference Optimization (DPO):** The generated preference data are combined with DPO to iteratively refine the agent model's decision-making over successive training cycles [1, 2]. \n\n### Enhancements in Goal-Directed Reasoning and Performance\nModels trained using the PTO framework exhibit several key enhancements:\n* **Improved Performance Metrics:** PTO-trained models consistently outperform baseline models in key goal-oriented metrics, such as final scores, session satisfaction, and working alliance [1, 3].\n* **Consistent and Reliable Interventions:** Deeper look-ahead simulations not only enhance overall performance but also reduce variance across evaluation metrics, resulting in more consistent and reliable interventions [3].\n* **Interaction Efficiency:** PTO-trained models tend to streamline interactions, successfully reducing the average length and duration of conversations (e.g., decreasing the average number of dialogue turns from 43.7 down to 34.4) while maintaining high conversation quality [3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7769,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_024",
+      "question_type": "Distillation/Architecture",
+      "source_paper_id": "2608.12099",
+      "source_paper_title": "RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation",
+      "question": "How does RT-SEMamba use progressive knowledge distillation to compress an 8-layer causal teacher into a 1-layer student for real-time speech enhancement?",
+      "ground_truth_answer": "RT-SEMamba replaces Transformer KV caches with Mamba state spaces and compresses an 8-layer causal teacher into a 1-layer student via progressive layer-by-layer distillation to achieve low-latency edge inference.",
+      "pipeline_answer": "### Overview of RT-SEMamba Compression\nRT-SEMamba uses a progressive knowledge distillation (KD) strategy to compress a deeper 8-layer causal Time-Frequency Mamba (cTF-Mamba) teacher model into a lightweight 1-layer student model [1, 4]. This compression aims to bypass the performance gap typically found in shallow models while maintaining strict real-time streaming constraints and low latency [1, 2, 6].\n\n### Teacher and Student Configuration\n* **Teacher Model ($T$):** An 8-layer RT-SEMamba model that achieves the highest performance (e.g., 3.32 PESQ on Voicebank-DEMAND) with 2.74M parameters, but has a higher real-time cost (RTF of 0.29) [1, 3, 6]. The teacher parameters are frozen during distillation [3].\n* **Student Model ($S$):** A shallow 1-layer RT-SEMamba model (containing 1 cTF-Mamba block initialized from the teacher) designed for edge-computing and real-time constraints [1, 2, 6]. \n* **Shared Architecture:** The encoder, decoder, and front-end components are shared between the teacher and the student [6].\n\n### Distillation Process\nThe student is trained using the standard task loss combined with knowledge distillation losses [6]. Specifically, the progressive knowledge distillation strategy jointly distills:\n1. Complex spectral outputs [1]\n2. Intermediate representations [1] (features)\n\n### Performance Outcomes\nBy utilizing this progressive knowledge distillation strategy, the distilled 1-layer student model significantly improves over a naive 1-layer baseline (raising PESQ from 3.06 to 3.18) while preserving the same steady-state real-time factor (RTF) and delivering a $2.75\\times$ speedup over the 8-layer teacher [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.9333,
+        "answer_relevancy": 0.6494,
+        "context_precision": 0.9667,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_025",
+      "question_type": "Taxonomy/NLP",
+      "source_paper_id": "2608.12113",
+      "source_paper_title": "Structuring the Space of Perspectives",
+      "question": "In 'Structuring the Space of Perspectives', what four universal dimensions do the authors use to annotate and structure perspective-related concepts in NLP?",
+      "ground_truth_answer": "The authors characterize perspective-related concepts along four universal dimensions: (1) strength of linguistic cues (how strongly the concept is associated with specific linguistic surface elements), (2) granularity/scope (the typical localization within a text), (3) entity-specificity (how strongly the concept is tied to specific entities), and (4) number of discrete classes (the granularity of classification labels used).",
+      "pipeline_answer": "Based on the provided context, the authors characterize and structure perspective-related concepts in NLP using the following four universal dimensions (scored on a Likert scale from 1 to 5):\n\n1. **Strength of linguistic cues:** Measures how strongly a concept is associated with specific linguistic elements, capturing whether it is signaled by identifiable surface features or requires holistic, document-level inference [5].\n2. **Granularity (scope):** Represents the typical scope or localization of the concept within a text, determining whether the annotation unit is very broad (document-level) or very narrow (phrase- or clause-level) [5].\n3. **Entity-specificity:** Measures how strongly the concept is tied to a specific entity (such as a politician, policy, or event), distinguishing target-generic concepts from target-specific ones [5].\n4. **Number of discrete classes:** Refers to how many classes the concept typically comprises in a classification task (ranging from few classes, like binary, to many classes) [5].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8575,
+        "context_precision": 0.3667,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_026",
+      "question_type": "System/Caching",
+      "source_paper_id": "2608.12121",
+      "source_paper_title": "QV-PIC: Query-Aware Visual Position-Independent Caching for Efficient RAG Serving",
+      "question": "How does QV-PIC achieve query-aware position-independent caching for visual tokens in multimodal RAG serving?",
+      "ground_truth_answer": "QV-PIC decouples visual token key-value representations from absolute positional indices, allowing cached image embeddings to be reused across different multi-image prompt layouts.",
+      "pipeline_answer": "### Framework Overview\nQV-PIC is a query-aware dual-resolution position-independent caching (PIC) reuse framework guided by model-native templates designed for efficient multimodal RAG serving [1]. It addresses two primary sources of degradation in rendered-image PIC: cache-state mismatch and the loss of fine-grained textual evidence [3]. The framework operates in two main phases: an offline cache preparation phase and an online cache assembly phase [3].\n\n---\n\n### Phase I: Offline Template-Conditioned Cache Preparation\n* **Dual-Resolution Rendering:** For each reusable text chunk $c_i$, QV-PIC renders both low-resolution and high-resolution images ($x^r_i = \\text{Render}(c_i; r)$) [3, 5].\n* **Model-Native Template Conditioning:** To reduce prompt-format mismatches in independently compiled caches, QV-PIC compiles each cache under the VLM's native chat-template prefix ($h$) [1, 4]. It computes the KV entries for the combined template and rendered image, and then strips the prefix KV entries before storage [3, 4]:\n  $$C^r_i = \\text{Strip}_h (\\text{KV}_M ([h; x^r_i]))$$\n  While the prefix entries are discarded, the retained rendered-image entries maintain the native template condition [4].\n* **Storage:** The cache bank stores both resolution variants, token-count metadata, source-order metadata, and a source-text embedding to be used for later routing [3, 5].\n* **Position Independence:** Because each rendered-image cache is compiled independently, keys are stored before M-RoPE rotation [4]. Values are kept position-independent [4].\n\n---\n\n### Phase II: Online Query-Aware Dual-Resolution Allocation and Assembly\n* **Query-Relevance Scoring:** At serving time, QV-PIC embeds the query ($q$) and the offline-embedded source texts of each rendered image using a frozen BGE-M3 encoder [5]. It calculates relevance scores using cosine similarity and applies a positive threshold ($\\tilde{s}_i = e_q^\\top e_i$, $s_i = [\\tilde{s}_i]^+$) [5].\n* **Dual-Resolution Selection:** QV-PIC preserves global context using low resolution while selecting a bounded set of query-relevant rendered images to promote to high resolution [1, 2, 5]. It sorts retrieved chunks by relevance and selects the smallest top-ranked set whose cumulative positive relevance reaches threshold $\\alpha$ (capped by budget $B$) [5]. If all scores are non-positive, it uses a deterministic fallback to select the highest-scoring chunk [5].\n* **Cache Assembly and Re-anchoring:** Exactly one cache version (low or high resolution) is activated for each rendered image, and the caches are assembled according to the current context order of the RAG request [3, 5]. QV-PIC applies the model-native M-RoPE operator to derive request positions $P_i(q)$ for each activated cache and re-anchors the unrotated keys [4, 5]:\n  $$K^\\ell_{\\ell,i} = R^\\ell \\left( \\bar{K}^\\ell_{\\ell,i}, P_i(q) \\right)$$\n* **Prefill Execution:** The assembled cache is supplied as past KV, requiring the VLM online to compute only the query prefill and answer generation without needing rendered-image generation, visual encoding, or context-side full prefill [2, 4, 5].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.9677,
+        "answer_relevancy": 0.5786,
+        "context_precision": 1.0,
+        "context_recall": 0.0
+      }
+    },
+    {
+      "sample_id": "qa_027",
+      "question_type": "Evaluation Bias",
+      "source_paper_id": "2608.12125",
+      "source_paper_title": "Do LLMs Take Care of Their Own? Similarity Signals Can Induce Cooperation",
+      "question": "What self-identification bias phenomenon is observed when language models evaluate peer reasoning in 'Do LLMs Take Care of Their Own?'",
+      "ground_truth_answer": "Language models exhibit a systematic self-identification bias during chain-of-thought evaluations, rating other models' reasoning as highly similar to their own even when actual behavioral patterns differ drastically.",
+      "pipeline_answer": "### Self-Identification Bias in Peer Reasoning Evaluation\n\nWhen evaluating peer reasoning in the context of similarity signals and cooperation, experiments show that large language models (LLMs) systematically self-identify as highly similar when they are asked to evaluate another model\u2019s chain-of-thought reasoning by themselves [1].",
+      "retrieved_chunks_count": 2,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.8132,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_028",
+      "question_type": "Methodology",
+      "source_paper_id": "2608.12129",
+      "source_paper_title": "SAG: SQL-Retrieval Augmented Generation with Query-Time Dynamic Hyperedges",
+      "question": "How does SAG use SQL retrieval and query-time dynamic hyperedges over event-entity indices?",
+      "ground_truth_answer": "SAG models chunks as event-entity incidence pairs stored in an append-only index, using query-time SQL entity joins over shared entities to dynamically construct local hyperedge neighborhoods without pre-materializing a global graph.",
+      "pipeline_answer": "### Event-Entity Index Construction\n\nInstead of building a global corpus-level knowledge graph, SAG organizes documents into an event-entity index [1], [3]. During an offline indexing phase, each document chunk is processed independently into a single, semantically complete event ($e$) paired with a set of indexing entities ($V(e)$) [3], [5]. \n\nBy binding all entities of a chunk within one retrieval unit, this representation forms a latent hyperedge that preserves $n$-ary relations without decomposing them into independent triples [1], [3]. The relational incidence records are stored as rows $(h, v)$ for $v \\in V(h)$, and grouping these rows by the event identifier makes the representation lossless with respect to incidence [6]. This append-only design allows new documents to be integrated simply by appending new rows without needing to recompute existing records or rebuild a global graph [3], [5], [6].\n\n---\n\n### Query-Time Dynamic Hyperedges and SQL Retrieval\n\nAt query time, SAG activates query-specific associative structures dynamically without prior materialization [3], [4]:\n\n1. **Seed Retrieval:** Given a query ($q$), SAG employs vector retrieval to find semantically relevant seed chunks, ensuring connections can be made even when the query and passage share no exact terms [5]. (Under bounded activation, operations are restricted to records associated with top-scoring chunks from a global corpus pool [6]).\n2. **SQL Exact Entity Joins:** SAG treats shared entities as join keys [1]. Using SQL queries, it performs exact entity joins over the stored event-entity incidence records [4], [5]. \n3. **Neighborhood Expansion:** A single expansion round walks from the identified seed events to their associated entities and then back to co-incident events [6]. This process dynamically yields a local, query-scoped neighborhood of events (latent hyperedges) required specifically for the current query [1], [3], [4], [6].\n\nUltimately, this structural SQL path is combined with dense retrieval, yielding a compressed candidate set from which an LLM selects final evidence. Throughout this pipeline, every piece of evidence is mapped back to and represented by its original chunk [1], [3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7137,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_029",
+      "question_type": "Benchmark/Clinical",
+      "source_paper_id": "2608.12138",
+      "source_paper_title": "A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench",
+      "question": "On the HealthBench benchmark, how does the corpus-specific clinical RAG system match or outperform frontier models like GPT-4o?",
+      "ground_truth_answer": "By indexing curated clinical guidelines with section-aware dense retrieval and cross-encoder reranking, the specialized clinical RAG achieves higher medical factual consistency than generalist frontier LLMs.",
+      "pipeline_answer": "### Overall Performance and Parity on HealthBench\nA corpus-specific clinical RAG system (referred to as VITA) matches or outperforms newer frontier LLMs on the HealthBench benchmark [1, 2]. When evaluated using a neutral judge, VITA's aggregate lead was no longer statistically distinguishable from the best frontier model, indicating performance at the level of parity rather than a clear first place [2]. VITA and newer models like GPT-5.5 were statistically indistinguishable on mean per-question scores [3]. However, VITA ranked first on points-weighted scores and won the highest-scoring response on more individual questions than any other system [3]. \n\n### Specific Advantages and Scenario Strengths\nVITA demonstrated specific advantages in clinical accuracy and completeness [2, 3]. In particular, VITA showed strong performance on LMIC-specific (low- and middle-income country) clinical scenarios [2]. For instance, on a question regarding Nipah virus exposure from raw date palm sap in Bangladesh, VITA scored 51 out of 67 possible rubric points, compared to 33 out of 67 for GPT-5.4 [2]. \n\n### Hypothesized Mechanisms\nWhile the exact mechanism cannot be established solely from benchmark performance, the findings suggest that corpus specificity is a meaningful design variable in RAG-based clinical AI [3]. Large, unfiltered corpora often introduce retrieval noise\u2014such as irrelevant or low-quality documents\u2014which can degrade model accuracy and trigger the \"lost-in-the-middle\" effect where relevant evidence is obscured [3]. In contrast, curated corpora that combine clinical guidelines with high-quality systematic reviews tend to outperform broad literature databases on clinical question-answering tasks [3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.659,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_030",
+      "question_type": "Mechanistic Analysis",
+      "source_paper_id": "2608.12149",
+      "source_paper_title": "Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus",
+      "question": "What causes pre-attention spikes and inter-spike plateaus in hybrid linear attention language models?",
+      "ground_truth_answer": "The paper identifies massive activation outliers in linear attention recurrent states that create periodic spike patterns, quantified by an Inter-Spike Retention (ISR) metric.",
+      "pipeline_answer": "Based on the provided literature, pre-attention spikes (PAS) and inter-spike plateaus (ISP) follow a shared systematic-outlier lifecycle that is fundamentally distinguished by **cancellation timing** [4]:\n\n* **Pre-attention spikes (PAS):** Prompt cancellation localizes massive activations (MAs) as they consistently intensify and spike immediately before full attention layers [1, 2, 4].\n* **Inter-spike plateaus (ISP):** Delayed cancellation sustains these massive activations, causing them to persist through intervening linear attention layers [1, 4]. \n\nAdditionally, as full attention layers become denser, successive pre-attention spikes become increasingly connected through inter-spike plateaus, eventually recovering the stable massive activation morphology seen in full attention large language models [1, 6].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7637,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_031",
+      "question_type": "Test-Time Scaling",
+      "source_paper_id": "2608.12150",
+      "source_paper_title": "Who Thinks Best Depends on How Long You Let Them: Budget-Dependent Rankings in LLM Evaluation",
+      "question": "How does test-time compute allocation impact reasoning performance across different model scales in 'Who Thinks Best Depends on How Long You Let Them Think'?",
+      "ground_truth_answer": "The study shows that with extended test-time compute (search and sampling), medium-sized models can outperform larger models that are limited to single-pass greedy decoding.",
+      "pipeline_answer": "Based on the provided context, the impact of test-time compute allocation on model performance and rankings is detailed as follows:\n\n### Impact on Model Rankings and Scaling Curves\n* **Reversal of Model Rankings:** Varying the token generation budget (inference-time compute) across different levels (64 to 4,096 tokens) demonstrates that standard assumptions of stable model rankings across inference conditions are false [3]. Model rankings reverse across different budgets on all evaluated benchmarks ($p < 0.01$, McNemar) [3].\n* **Crossing Scaling Curves:** Studies on test-time compute scaling show that allocating additional computation at inference time (such as through chain-of-thought prompting, search, extended thinking, or budget-forcing mechanisms) causes scaling curves to cross when observing multiple models simultaneously [1].\n\n### Non-Monotone Behavior and Overthinking\n* **Accuracy Degradation with Increased Budget:** Between 3% and 19% of items exhibit non-monotone behavior, where accuracy actually *decreases* when models are given a larger token budget, even after controlling for truncation [3].\n* **Model-Specific Phenomenon:** This overthinking behavior is predominantly model-specific rather than an inherent property of a specific item, with a low cross-model overlap of 6% to 14% [3].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7597,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_032",
+      "question_type": "Long-Context Analysis",
+      "source_paper_id": "2608.12218",
+      "source_paper_title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
+      "question": "What is the Information Abundance Paradox described in long-context transformer evaluations?",
+      "ground_truth_answer": "The paradox describes how increasing context length with redundant or distractor documents degrades retrieval and reasoning accuracy despite the information being present in the prompt.",
+      "pipeline_answer": "### Definition of the Information Abundance Paradox\n\nThe Information Abundance Paradox is a hypothesis stating that when task-relevant information is made available through the training context, a model can reduce its training loss by using that information directly rather than by encoding the same information into its weights (parameters) [1, 2]. \n\nConsequently, abundant relevant information in the training context reduces the incentive to encode that information parametrically, shifting the model\u2019s mode of learning away from *parametric internalization* and toward *contextualization* [1, 2]. (\"Information abundance\" specifically refers to task-relevant information available within a context rather than the overall amount of training data or corpus entropy) [2].\n\n---\n\n### Core Behavioral Manifestations\n\nThe shift caused by the Information Abundance Paradox leads to specific performance changes across training regimes:\n\n* **Pretraining:** Increasing the context window during pretraining with long documents improves language modeling, natural language understanding, and closed-book multiple-choice question answering (MCQA) only up to an intermediate optimum, after which performance consistently declines in an inverted-U performance pattern [1, 3].\n* **Supervised Fine-Tuning (SFT):** Providing more task-relevant train-time context improves model performance when supporting context is present at test time [1, 3]. However, it reduces robustness and degrades performance when the context is absent, missing, or misleading at test time [1, 3]. This behavioral manifestation is referred to as **context addiction** [5, 6].\n\n---\n\n### Mechanistic and Theoretical Underpinnings\n\n* **Reduced Solution Complexity and Parameter Storage:** Theoretical analysis shows that longer training contexts can reduce the minimum amount of task information that must be stored in the weights (parameters) to attain a specific risk threshold, providing a lower complexity solution [3, 5]. \n* **Gradient Pressure Shift:** Mechanistically, training with informative context shifts update (gradient) pressure away from feed-forward networks (which are frequently linked to parametric knowledge) and toward attention modules [1]. Causal interventions confirm that this shift increases the model's reliance on context tokens during inference [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7198,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_033",
+      "question_type": "Benchmark",
+      "source_paper_id": "2608.12246",
+      "source_paper_title": "VICBench: A Multi-Language Benchmark for Code Vulnerability Detection",
+      "question": "What benchmark dataset and evaluation scope does VICBench introduce for code vulnerability detection?",
+      "ground_truth_answer": "VICBench introduces 100 verified vulnerability-inducing commits across 100 CVEs in Python, Java, and C++ spanning 48 CWE types to evaluate vulnerability detection tools using F1 scores.",
+      "pipeline_answer": "### Benchmark Dataset Overview\n\nVICBench is a multi-language benchmark designed for code vulnerability detection, focusing specifically on vulnerability-inducing commits (VICs)\u2014the commits that initially introduce vulnerabilities into codebases [1]. Created through dual annotation by human experts and an agentic workflow, the dataset comprises 100 verified VICs corresponding to 100 CVEs across 88 projects [1]. \n\nThe dataset spans three programming languages (Python, Java, and C++) and covers 48 Common Weakness Enumeration (CWE) types [1]. It features complex real-world vulnerability fixes that average 38.6 lines changed (with a median of 22), and corresponding VICs that average 252.5 lines (with a median of 181) [4].\n\n---\n\n### Evaluation Scope and Performance\n\nVICBench enables the robust evaluation of vulnerability detection tools and approaches by providing repository context, CVE descriptions, fixing commits, and VICs [1, 5]. \n\nWhen evaluated on VICBench, state-of-the-art automated algorithms demonstrate limited performance:\n* **V-SZZ** (evaluated on its Java/C++ subset of 40 CVEs) achieves an F1 score of **33.3%** [4].\n* **LLM4SZZ** (evaluated on all 100 instances) achieves an F1 score of **40.1%** [4].\n\nThese results confirm that existing automated approaches struggle with the real-world complexities captured in VICBench, indicating that utilizing current methods still entails significant manual effort [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7756,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_034",
+      "question_type": "Robotics/Evaluation",
+      "source_paper_id": "2608.12253",
+      "source_paper_title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
+      "question": "Why is a single frozen simulator insufficient for robust robot policy evaluation according to paper 2608.12253?",
+      "ground_truth_answer": "Evaluating policies on a single frozen simulator leads to overfitted visual and physical policies that fail when exposed to simulator dynamics drift or physical hardware transfer.",
+      "pipeline_answer": "Based on the provided context from paper 2608.12253, a single frozen simulator is insufficient for robust evaluation (and training) because of the following reasons:\n\n### Simulator Collapse and Generalization Failure\n* **Systematic Failure to Generalize:** Relying on a single large language model (LLM) simulator to simulate user behavior in multi-agent reinforcement learning systematically fails to generalize to unseen simulators and real users [1]. \n* **Overfitting to Narrow Strategies:** Because the simulator LLM suffers from mode collapse, a policy trained against a single frozen simulator overfits to narrow strategies that exploit the simulator's dominant mode [1].\n* **Loss of Policy Diversity:** Training against a single simulator drives the policy's diversity (entropy) to near zero [2]. \n* **Performance Collapse:** Performance against a single frozen simulator tends to peak early and then degrade, and policies trained this way transfer poorly, sometimes dropping in performance even below an untrained baseline when tested on real users [1, 2].",
+      "retrieved_chunks_count": 2,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8164,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_035",
+      "question_type": "Pipeline/Methodology",
+      "source_paper_id": "2608.12269",
+      "source_paper_title": "A Cascaded Unsupervised-Supervised NLP Pipeline for Detecting Accusatory Language in Public Procurement",
+      "question": "How does the cascaded NLP pipeline detect accusatory language in public procurement metadata without manual labeling?",
+      "ground_truth_answer": "The pipeline combines unsupervised clustering (Gaussian Mixture Models with dense embeddings) to identify opinionated clusters and a supervised classifier to flag irregular or accusatory procurement comments without manual annotation.",
+      "pipeline_answer": "### Overview of the Hybrid Framework\n\nThe cascaded NLP pipeline integrates unsupervised clustering and supervised classification within a hybrid framework to uncover latent patterns and detect potentially irregular procurement processes, such as accusatory or whistleblowing-style comments from Ecuador\u2019s Sistema Oficial de Contrataci\u00f3n P\u00fablica (SOCE) metadata [1]. The methodology is organized into data wrangling, embedding generation, clustering, cluster identification, classification, and model testing [3].\n\n---\n\n### Step-by-Step Pipeline Mechanics\n\n1. **Data Wrangling:** \n   Public procurement metadata and participant comments from the pre-contractual phase are automatically collected using the Kapak framework and stored in the Kapak database [1, 3, 5]. The data is organized into a large unlabeled dataset and a smaller labeled dataset [5].\n\n2. **Semantic Embedding Generation:** \n   To capture semantic representations, sentence embeddings are generated from the text using three techniques: Word2Vec (domain-trained), LLaMA (specifically LLaMA 3.2-1B producing 2048-dimensional embeddings), and RoBERTa [1, 4]. \n\n3. **Unsupervised Clustering:** \n   Gaussian Mixture Models (GMMs) are applied to the generated semantic embeddings to perform unsupervised clustering [1]. This stage uncovers latent patterns and groups similar phrases within the large amounts of unstructured and noisy public procurement data.\n\n4. **Cluster Identification:** \n   Keyword-based cluster identification is utilized to analyze the resulting unsupervised clusters and identify those corresponding to accusatory content [1, 4].\n\n5. **Supervised Classification:** \n   A supervised classification stage\u2014specifically utilizing a Random Forest classifier combined with domain-trained Word2Vec embeddings and GMM-based clustering\u2014is applied to identify accusatory or whistleblowing-style comments, achieving high precision and recall even under severe class imbalance [1]. \n\nThrough this cascaded architecture, the framework detects potentially irregular or accusatory comments, supporting a semi-automated auditing workflow and providing early warning signals for procurement oversight [4].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5396,
+        "context_precision": 0.9667,
+        "context_recall": 0.75
+      }
+    },
+    {
+      "sample_id": "qa_036",
+      "question_type": "Systems/Infrastructure",
+      "source_paper_id": "2608.12278",
+      "source_paper_title": "Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages",
+      "question": "What concept of 'structural silence' is analyzed regarding AI infrastructure and model explanations?",
+      "ground_truth_answer": "Structural silence refers to the systematic omission of social, organizational, and institutional context in AI infrastructure and model explanations, obscuring systemic inequities in automated decision-making.",
+      "pipeline_answer": "### Definition and Nature of Structural Silence\nStructural silence is defined as the systematic exclusion of a language from AI infrastructure [1]. Rather than being the result of an explicit policy, this exclusion occurs through the accumulated weight of design decisions that never took that specific language into consideration [1]. \n\n### Manifestation in AI Infrastructure\nStructural silence is built into the core components of AI infrastructure, rooted in how and for whom the technology was constructed [1]. These features include:\n* **Training corpora:** The data that models learn from [1].\n* **Tokenizers:** The tools that process text in the target language (such as Bengali) [1].\n* **Benchmarks:** The standards used to evaluate model performance [1].\n* **Deployment architectures:** Systems that often incorrectly assume reliable internet connectivity [1].\n\nThese interconnected failures are structural features rather than incidental byproducts of early-stage technology, and they intensify each other's effects over time [1]. Furthermore, the underlying infrastructure encodes English-centric design assumptions that systematically disadvantage speakers of underrepresented languages before a single model is even trained [2].",
+      "retrieved_chunks_count": 2,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.7857,
+        "answer_relevancy": 0.8672,
+        "context_precision": 1.0,
+        "context_recall": 0.0
+      }
+    },
+    {
+      "sample_id": "qa_037",
+      "question_type": "Finance/Application",
+      "source_paper_id": "2608.12283",
+      "source_paper_title": "Large Language Model-Driven Small-Capitalization Trading: Integrating Financial News Sentiment, Macroeconomic Indicators, and Technical Signals",
+      "question": "How does the small-capitalization trading framework decompose stock movements into alpha and beta event legs?",
+      "ground_truth_answer": "The framework decomposes stock and macroeconomic indicator triggers into Pure Alpha (SS \\ SI), Pure Beta (SI \\ SS), and Beta Intersection (SI \u2229 SS) legs to manage spillovers and portfolio risk.",
+      "pipeline_answer": "### Stock Selection and Event Sets\n\nThe small-capitalization trading framework starts from an eligible pool of Russell 2000 stocks and defines two primary event sets:\n* **Stock Side Event Set ($S_S$):** Flagged via a stock's own abnormal move using its return z-score ($Z = \\frac{R - \\mu}{\\sigma}$) [1]. A stock trigger fires when the stock itself experiences an abnormal move [1].\n* **Indicator-Side Event Set ($S_I$):** Flagged via an indicator's abnormal move when a stock is sufficiently exposed to it [1]. A stock's relationship to a given indicator is measured via beta ($\\beta = \\frac{\\text{Cov}(R_i, R_{ind})}{\\text{Var}(R_{ind})}$) computed over a rolling window against a curated panel of macroeconomic releases, commodities, currencies, rates, volatility, world-index, and sector-ETF indicators [1]. An indicator trigger fires when the indicator experiences an abnormal move and the stock has sufficient exposure [1].\n\n---\n\n### Decomposition into Alpha and Beta Event Legs\n\nFollowing Kargarzadeh (2024), the framework decomposes the macro-beta trigger into three distinct selection legs by combining or separating the stock ($S_S$) and indicator ($S_I$) event sets [1]:\n\n* **Pure Alpha ($S_S \\setminus S_I$):** Isolates firm-specific abnormal moves that are not contemporaneously explained by macro indicators [1]. \n* **Pure Beta ($S_I \\setminus S_S$):** Serves as the anticipatory macro leg, which occurs when an indicator has moved for a levered stock, but the stock itself has not yet registered its own abnormal move [1]. This captures immediate lead-lag spillovers from liquid macro and sector indicators into exposed small-cap stocks [2].\n* **Beta ($S_I \\cap S_S$):** Serves as the confirmatory leg, where both the stock and indicator triggers fire together and agree on direction [1].",
+      "retrieved_chunks_count": 3,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 0.9167,
+        "answer_relevancy": 0.7688,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_038",
+      "question_type": "Test-Time Search",
+      "source_paper_id": "2608.12307",
+      "source_paper_title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
+      "question": "How does strong-to-weak capability transfer via harnesses enhance weaker models at test time in AI4AI?",
+      "ground_truth_answer": "A stronger builder model constructs inference-time scaffolds (harnesses) with prompt templates, task routing, deterministic solvers, and verification passes to boost weaker model accuracy without updating their weights.",
+      "pipeline_answer": "### Overview of Strong-to-Weak Scaffolding\nStrong-to-weak capability transfer via harnesses (also referred to as strong-to-weak scaffolding) is an inference-time paradigm where a stronger builder model constructs an environment to help a fixed, weaker target model solve tasks more reliably without performing any parameter updates [1, 2]. Instead of modifying model weights via training-time distillation, the capability is transferred through the harness itself\u2014shaping how the weaker target model receives, reasons through, and responds to tasks [2, 3].\n\n---\n\n### Mechanisms of Enhancement\nEmpirical evaluation shows that this form of test-time capability transfer is highly effective, nearly doubling average target-model performance from 0.49 to 0.91 [1]. The performance gains are primarily driven by:\n* **Deterministic Offloading:** Moving unstable model reasoning into deterministic code [1, 4].\n* **Benchmark-Specific Routing:** Directing tasks appropriately within the environment [1, 4].\n* **Strict Format Enforcement:** Enforcing answer formats strictly rather than encouraging the target model to reason more extensively or sample more broadly [1, 4].\n* **Task Structure Externalization:** Capturing reusable skills and task structure to reduce the cognitive load imposed on the weaker model [2, 4, 5].\n\n---\n\n### Key Factors Influencing Harness Quality\n* **Builder Reasoning Effort:** The reasoning effort of the builder model improves harness quality monotonically across effort tiers [1, 4].\n* **Platform Effects:** Platform effects are modest relative to the builder model's own capability [1, 4].\n* **Target Model Sensitivity:** Weaker target models receive the largest performance gains from scaffolding [1, 4].\n* **Refinement Process:** Using a small fraction of data (e.g., 5% as a validation set), each builder model iteratively refines its harness over multiple rounds before the finalized harness is evaluated on a full test set [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.6265,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_039",
+      "question_type": "Vision/Agent",
+      "source_paper_id": "2608.12313",
+      "source_paper_title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
+      "question": "What structured film representation does AVA-Encoder learn for agent-native video understanding?",
+      "ground_truth_answer": "AVA-Encoder transforms films into film-centric knowledge graphs comprising hierarchical state nodes with structured text descriptions linked to asset layers (images, audio, video) for agentic querying and reconstruction.",
+      "pipeline_answer": "### Overview of the Film Representation\nThe AVA-Encoder learns a film-centric **knowledge graph (KG)** representation designed to be agent-native, faithful to the original film content, and directly usable for agentic reasoning, query, editing, and video generation [1, 2, 3]. \n\n### Structure and Components of the KG Representation\nThe structured film representation consists of the following components:\n\n* **Hierarchy and State Nodes:** The graph's hierarchy and state nodes store structured text descriptions [2]. It incorporates a **Story\u2013Event\u2013Shot** hierarchy that organizes content across different temporal and narrative scales [5]. The states within this structure encompass **Character, Scene, Object, Style, Camera, and Audio** descriptions [5].\n* **Linked Asset Layer:** Connected to the textual nodes is a linked asset layer that holds generated images, audio, and video [2].\n* **Typed Edges:** Typed edges are utilized to preserve the relations, hierarchy, temporal order, and cross-shot dependencies between the text descriptions and the assets, as well as connections across cuts (such as linking recurring character, scene, and object identities) [2, 5, 6].\n\n### Multi-Level Construction Process\nTo build this structured representation and minimize information loss from dense multimodal video, the representation is generated through a coarse-to-fine, three-level hierarchical understanding governed by a policy $P = (P_{\\text{film}}, P_{\\text{shot}}, P_{\\text{kf}})$ [5, 6]:\n1. **Film-level ($P_{\\text{film}}$):** Captures global narratives and initializes character, scene, and object registries [5].\n2. **Shot-level ($P_{\\text{shot}}$):** Handles intra-shot dynamics [5].\n3. **Keyframe-level ($P_{\\text{kf}}$):** Focuses on visual composition using motion-stable keyframes ($f_i^*$) [5]. \n\nHierarchical context injection persistently passes upper-tier priors downward, while registry injection anchors identities across cuts, ultimately converting the raw video into structured text that is mapped into the final knowledge graph via a `BuildGraph(\u00b7)` operation [5].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7741,
+        "context_precision": 1.0,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "sample_id": "qa_040",
+      "question_type": "Constraint Alignment",
+      "source_paper_id": "2608.12426",
+      "source_paper_title": "Large Language Models Can Follow Instructions, But Not Many at Once: Phase Transitions in Compositional Constraint Satisfaction",
+      "question": "Under what compositional constraint conditions do language models experience performance collapse in multi-constraint instruction following?",
+      "ground_truth_answer": "Language models experience a multiplicative phase transition collapse beyond 5\u20136 simultaneous constraints (k >= 5\u20136), where structural constraints degrade twice as fast as lexical constraints due to independent failure accumulation.",
+      "pipeline_answer": "### Overview of Compositional Constraint Satisfaction\nWhen language models are deployed in settings requiring simultaneous adherence to multiple explicit constraints (such as reasoning structure, safety boundaries, and output schemas), individual constraints are handled proficiently, but performance under composition degrades [1]. Using the Constraint Saturation Evaluation (CSE) benchmark to systematically vary the number of simultaneous constraints ($k = 1$ to $12$), research reveals specific phase transitions and degradation patterns [1].\n\n### Performance Collapse and Degradation Conditions\n* **Multi-Constraint Collapse:** While the per-constraint pass rate decays gradually and predictably as constraints are added, the probability of satisfying *all* $k$ constraints simultaneously collapses [1]. For example, a model that passes individual constraints at approximately 41% when $k=8$ succeeds on all eight constraints simultaneously only 5.7% of the time [1]. \n* **Differential Degradation Across Constraint Types:** Constraints do not degrade equally [1]. Structural constraints lose baseline capability $2\\times$ faster per added constraint compared to lexical constraints [1]. This is governed by a comprehension-maintenance gap that differentiates constraints requiring sustained tracking from binary decisions that are immune to composition [1].\n* **Nature of Failures:** Failures among constraints occur nearly independently [1]. This independent failure rate causes the accumulation of errors to be multiplicative [1]. The residual coupling that does exist is driven by shared output features rather than pairwise interference (e.g., an incorrect sentence count will cause every constraint that reads it to fail) [1].",
+      "retrieved_chunks_count": 6,
+      "generator_model": "Google/gemini-3.5-flash-lite",
+      "judge_model": "OpenAI/gpt-4o-mini",
+      "judge_provider": "OpenAI",
+      "scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.7898,
+        "context_precision": 0.9267,
+        "context_recall": 1.0
+      }
+    }
+  ]
+}

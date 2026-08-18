@@ -1,0 +1,47 @@
+{
+  "total_samples": 5,
+  "baseline_metrics": {
+    "answer_relevance": 0.636,
+    "manual_factual_accuracy": 0.58,
+    "faithfulness": null,
+    "context_precision": null,
+    "context_recall": null
+  },
+  "samples": [
+    {
+      "sample_id": "qa_001",
+      "question": "How does Attention Is All You Need achieve high accuracy in open-domain question answering?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does Attention Is All You Need achieve high accuracy in open-domain question answering?\"**:\n\nVision Tr...",
+      "answer_relevance": 0.62,
+      "manual_factual_accuracy": 0.57
+    },
+    {
+      "sample_id": "qa_002",
+      "question": "What baseline comparisons are conducted in Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What baseline comparisons are conducted in Retrieval-Augmented Generation for Knowledge-Intensive NLP Task...",
+      "answer_relevance": 0.66,
+      "manual_factual_accuracy": 0.62
+    },
+    {
+      "sample_id": "qa_003",
+      "question": "What are the primary limitations of BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What are the primary limitations of BERT: Pre-training of Deep Bidirectional Transformers for Language Und...",
+      "answer_relevance": 0.7,
+      "manual_factual_accuracy": 0.52
+    },
+    {
+      "sample_id": "qa_004",
+      "question": "What are the key structural attention mechanisms in Dense Passage Retrieval for Open-Domain Question Answering?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What are the key structural attention mechanisms in Dense Passage Retrieval for Open-Domain Question Answe...",
+      "answer_relevance": 0.58,
+      "manual_factual_accuracy": 0.57
+    },
+    {
+      "sample_id": "qa_005",
+      "question": "How does Reciprocal Rank Fusion Outperforms Vector Similarity Search in Hybrid Retrieval achieve high accuracy in open-domain question answering?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does Reciprocal Rank Fusion Outperforms Vector Similarity Search in Hybrid Retrieval achieve high accu...",
+      "answer_relevance": 0.62,
+      "manual_factual_accuracy": 0.62
+    }
+  ]
+}

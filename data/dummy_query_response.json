@@ -1,0 +1,57 @@
+{
+  "query": "What is Retrieval-Augmented Generation (RAG) and why was it introduced?",
+  "mode": "qa",
+  "answer": "### Summary of Grounded Research Findings\n\n**Retrieval-Augmented Generation (RAG)** was introduced by Lewis et al. (2020) to address key limitations in parametric large language models, specifically knowledge freshness, domain specificity, and factual hallucinations [1].\n\n#### Core Architecture & Mechanics:\n1. **Dense Retrieval Engine**: DPR (Karpukhin et al., 2020) employs dual BERT encoders to map queries and document passages into a 768-dimensional dense vector space, optimizing dot-product similarity search [2].\n2. **Hybrid Fusion & Sparse BM25**: To overcome dense retrieval failures on exact technical terms or acronyms, Reciprocal Rank Fusion (RRF) merges BM25 keyword ranks with ChromaDB vector distance ranks [3].\n3. **Cross-Encoder Reranking**: Candidate passages returned by RRF are passed through a `bge-reranker-base` cross-encoder to produce fine-grained attention relevance scores before injecting context into the Gemini generator.\n4. **Attention-Conditioned Generation**: The generator conditions its output strictly on retrieved text passages, guaranteeing verifiable academic citations [4].",
+  "evidence_strength": "Strong",
+  "sources": [
+    {
+      "paper_id": "paper_002",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": ["Patrick Lewis", "Ethan Perez", "Aleksandra Piktus", "Fabio Petroni"],
+      "year": 2020,
+      "arxiv_id": "2005.11401",
+      "category": "cs.CL",
+      "venue": "NeurIPS 2020",
+      "citation_count": 4800,
+      "pdf_url": "https://arxiv.org/pdf/2005.11401.pdf"
+    },
+    {
+      "paper_id": "paper_004",
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "authors": ["Vladimir Karpukhin", "Barlas Oğuz", "Sewell Sewell", "Patrick Lewis"],
+      "year": 2020,
+      "arxiv_id": "2004.04906",
+      "category": "cs.CL",
+      "venue": "EMNLP 2020",
+      "citation_count": 3200,
+      "pdf_url": "https://arxiv.org/pdf/2004.04906.pdf"
+    }
+  ],
+  "retrieved_chunks": [
+    {
+      "chunk_id": "chk_001_m07",
+      "paper_id": "paper_002",
+      "paper_title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": "Patrick Lewis et al.",
+      "section": "Methodology & Architecture",
+      "text": "Retrieval-Augmented Generation (RAG) models combine parametric memory (a pre-trained seq2seq transformer) with non-parametric memory (a dense vector index of Wikipedia passages accessed via a neural retriever DPR). During generation, the retriever returns top-K passages that condition the autoregressive generator [1].",
+      "score": 0.94,
+      "dense_rank": 1,
+      "bm25_rank": 3,
+      "rrf_rank": 1,
+      "rerank_score": 0.96,
+      "page": 4
+    }
+  ],
+  "metrics": {
+    "retrieval_time_sec": 1.12,
+    "reranking_time_sec": 0.65,
+    "generation_time_sec": 4.10,
+    "total_time_sec": 5.87,
+    "dense_candidates_count": 20,
+    "bm25_candidates_count": 20,
+    "rrf_candidates_count": 25,
+    "reranked_candidates_count": 10,
+    "final_context_chunks_count": 4
+  }
+}

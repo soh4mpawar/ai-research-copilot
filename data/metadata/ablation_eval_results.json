@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-08-15 22:42:21",
+  "total_eval_samples": 40,
+  "corpus_papers_count": 204,
+  "chroma_chunks_count": 1094,
+  "ablation_configurations": {
+    "Config 1: Full Hybrid RAG + Reranker + GraphRAG": {
+      "faithfulness": 0.654,
+      "answer_relevance": 0.111
+    },
+    "Config 2: Dense Vector Only (No BM25, No Reranker)": {
+      "faithfulness": 0.471,
+      "answer_relevance": 0.047
+    },
+    "Config 3: Non-RAG Baseline (Direct Gemini 2.5 Flash)": {
+      "faithfulness": null,
+      "answer_relevance": 0.182
+    }
+  },
+  "baseline_sample_inspection": [
+    {
+      "sample_id": "qa_001",
+      "question": "How does 'Attention Is All You Need' handle sequence transduction without recurrent or convolutional layers?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does 'Attention Is All You Need' handle sequence transduction without recurrent or convolutional layers?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 ima...",
+      "jaccard_relevance": 0.175
+    },
+    {
+      "sample_id": "qa_002",
+      "question": "What methodology mechanism does ResNet introduce to ease the training of substantially deeper neural networks?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What methodology mechanism does ResNet introduce to ease the training of substantially deeper neural networks?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 i...",
+      "jaccard_relevance": 0.172
+    },
+    {
+      "sample_id": "qa_003",
+      "question": "What pre-training objectives are used in BERT to train deep bidirectional representations?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What pre-training objectives are used in BERT to train deep bidirectional representations?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 image patches. Dense ...",
+      "jaccard_relevance": 0.133
+    },
+    {
+      "sample_id": "qa_004",
+      "question": "How does RAG combine parametric and non-parametric memory for knowledge-intensive tasks?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does RAG combine parametric and non-parametric memory for knowledge-intensive tasks?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 image patches. Dense Pa...",
+      "jaccard_relevance": 0.153
+    },
+    {
+      "sample_id": "qa_005",
+      "question": "How does Dense Passage Retrieval (DPR) index passages compared to traditional BM25 keyword search?",
+      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does Dense Passage Retrieval (DPR) index passages compared to traditional BM25 keyword search?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 image patches...",
+      "jaccard_relevance": 0.186
+    }
+  ],
+  "key_ablation_takeaway": "Adding Sparse BM25 + RRF Fusion + Cross-Encoder Reranking improved Faithfulness by +0.183 and Answer Relevance by +0.064 over Dense Vector Search alone (FR-17)."
+}

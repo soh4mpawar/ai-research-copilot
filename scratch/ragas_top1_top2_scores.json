@@ -1,0 +1,362 @@
+[
+  {
+    "id": "qa_001",
+    "paper_id": "1706.03762",
+    "top1": 0.976,
+    "top2": 0.8196,
+    "top3": 0.7732,
+    "valid_035": 5,
+    "question": "How is Scaled Dot-Product Attention calculated mathematically in the Transformer, and why is the scaling factor 1/sqrt(d_k) applied?"
+  },
+  {
+    "id": "qa_002",
+    "paper_id": "1512.03385",
+    "top1": 0.9625,
+    "top2": 0.7453,
+    "top3": 0.7031,
+    "valid_035": 9,
+    "question": "How do residual shortcut connections in ResNet handle dimension matching when input and output feature map dimensions increase?"
+  },
+  {
+    "id": "qa_003",
+    "paper_id": "1810.04805",
+    "top1": 0.992,
+    "top2": 0.9822,
+    "top3": 0.9697,
+    "valid_035": 10,
+    "question": "What is the token replacement strategy used during BERT's Masked Language Model (MLM) pre-training when a token is chosen for masking?"
+  },
+  {
+    "id": "qa_004",
+    "paper_id": "2005.11401",
+    "top1": 0.9976,
+    "top2": 0.9956,
+    "top3": 0.9885,
+    "valid_035": 10,
+    "question": "How do RAG-Sequence and RAG-Token models differ in how they marginalize over retrieved documents during answer generation?"
+  },
+  {
+    "id": "qa_005",
+    "paper_id": "2004.04906",
+    "top1": 0.9996,
+    "top2": 0.9955,
+    "top3": 0.9903,
+    "valid_035": 10,
+    "question": "On the Natural Questions benchmark, by how much does DPR's top-20 passage retrieval accuracy outperform traditional Lucene BM25?"
+  },
+  {
+    "id": "qa_006",
+    "paper_id": "2010.11929",
+    "top1": 0.9979,
+    "top2": 0.9969,
+    "top3": 0.9956,
+    "valid_035": 10,
+    "question": "Why does Vision Transformer (ViT) require pre-training on large datasets like JFT-300M to outperform standard ResNets?"
+  },
+  {
+    "id": "qa_007",
+    "paper_id": "2103.14030",
+    "top1": 0.9225,
+    "top2": 0.7545,
+    "top3": 0.7538,
+    "valid_035": 6,
+    "question": "How does the cyclic shift with masked self-attention in Swin Transformer avoid increasing the number of window computations?"
+  },
+  {
+    "id": "qa_008",
+    "paper_id": "1409.1556",
+    "top1": 0.2799,
+    "top2": 0.1366,
+    "top3": 0.1358,
+    "valid_035": 0,
+    "question": "What is the theoretical benefit of stacking two 3x3 convolution layers instead of using a single 5x5 convolution layer in VGGNet?"
+  },
+  {
+    "id": "qa_009",
+    "paper_id": "1703.06870",
+    "top1": 0.9994,
+    "top2": 0.996,
+    "top3": 0.9952,
+    "valid_035": 10,
+    "question": "What is the RoIAlign layer in Mask R-CNN and how does it fix the spatial misalignments caused by RoIPool?"
+  },
+  {
+    "id": "qa_010",
+    "paper_id": "1905.11946",
+    "top1": 0.9978,
+    "top2": 0.9909,
+    "top3": 0.9047,
+    "valid_035": 10,
+    "question": "In EfficientNet's compound scaling method, how are depth (d), width (w), and resolution (r) constrained relative to the user-specified coefficient phi?"
+  },
+  {
+    "id": "qa_011",
+    "paper_id": "2608.11822",
+    "top1": 0.6987,
+    "top2": 0.4334,
+    "top3": 0.2729,
+    "valid_035": 2,
+    "question": "According to the paper 'Located but Not Releasable', why does locating latent representations via probing fail to guarantee successful behavioral model intervention?"
+  },
+  {
+    "id": "qa_012",
+    "paper_id": "2608.11830",
+    "top1": 0.9961,
+    "top2": 0.9102,
+    "top3": 0.6572,
+    "valid_035": 6,
+    "question": "How does paper 2608.11830 evaluate the trade-off between clinical safety scores and environmental compute cost across therapeutic LLMs?"
+  },
+  {
+    "id": "qa_013",
+    "paper_id": "2608.11843",
+    "top1": 0.9992,
+    "top2": 0.5331,
+    "top3": 0.5042,
+    "valid_035": 3,
+    "question": "In machine translation of historical records like the Seungjeongwon Ilgi, what failure mode occurs when the knowledge base itself is used as the evaluation gold standard?"
+  },
+  {
+    "id": "qa_014",
+    "paper_id": "2608.11878",
+    "top1": 0.9995,
+    "top2": 0.9975,
+    "top3": 0.9964,
+    "valid_035": 10,
+    "question": "What security vulnerabilities in tool-augmented LLM agents does ToolHazard identify regarding indirect prompt injection in environmental states?"
+  },
+  {
+    "id": "qa_015",
+    "paper_id": "2608.11879",
+    "top1": 0.9984,
+    "top2": 0.9978,
+    "top3": 0.9949,
+    "valid_035": 10,
+    "question": "When benchmarking agentic memory systems (Mem0, Hindsight, Mastra), what separable cost model is formulated to predict serving costs across 400-turn conversations?"
+  },
+  {
+    "id": "qa_016",
+    "paper_id": "2608.11924",
+    "top1": 0.9953,
+    "top2": 0.9821,
+    "top3": 0.9324,
+    "valid_035": 8,
+    "question": "How does Spark-to-Paper orchestrate end-to-end academic paper generation as composable skills inside a coding assistant without external orchestration frameworks?"
+  },
+  {
+    "id": "qa_017",
+    "paper_id": "2608.11947",
+    "top1": 0.9534,
+    "top2": 0.0862,
+    "top3": 0.068,
+    "valid_035": 1,
+    "question": "In paper 2608.11947, why do model accuracy and prompt order sensitivity diverge when evaluating language models under permutation?"
+  },
+  {
+    "id": "qa_018",
+    "paper_id": "2608.11981",
+    "top1": 0.9996,
+    "top2": 0.9962,
+    "top3": 0.9956,
+    "valid_035": 10,
+    "question": "How does the SLM trustworthiness benchmark compare pre-trained small language models against compressed larger models across core trustworthiness dimensions?"
+  },
+  {
+    "id": "qa_019",
+    "paper_id": "2608.11994",
+    "top1": 0.8901,
+    "top2": 0.3303,
+    "top3": 0.0947,
+    "valid_035": 1,
+    "question": "What claim-level reliability assessment framework is proposed in paper 2608.11994 for efficient factual verification?"
+  },
+  {
+    "id": "qa_020",
+    "paper_id": "2608.12008",
+    "top1": 0.999,
+    "top2": 0.9975,
+    "top3": 0.9975,
+    "valid_035": 10,
+    "question": "How does A-CRC-QA use asymptotic risk calibration to improve selective question answering under non-monotone population risks?"
+  },
+  {
+    "id": "qa_021",
+    "paper_id": "2608.12018",
+    "top1": 0.9865,
+    "top2": 0.9571,
+    "top3": 0.8654,
+    "valid_035": 7,
+    "question": "What architectural adaptations allow poly-dialectal neural machine translation systems to handle cross-dialect lexical variation?"
+  },
+  {
+    "id": "qa_022",
+    "paper_id": "2608.12036",
+    "top1": 0.9992,
+    "top2": 0.9947,
+    "top3": 0.9933,
+    "valid_035": 10,
+    "question": "How does Mechanist utilize AI as a scientific instrument to discover interpretable mechanisms of neural network intelligence?"
+  },
+  {
+    "id": "qa_023",
+    "paper_id": "2608.12062",
+    "top1": 0.98,
+    "top2": 0.965,
+    "top3": 0.8893,
+    "valid_035": 7,
+    "question": "How does Preference Tree Optimization enhance goal-directed multi-step reasoning in language models?"
+  },
+  {
+    "id": "qa_024",
+    "paper_id": "2608.12099",
+    "top1": 0.9998,
+    "top2": 0.9991,
+    "top3": 0.9921,
+    "valid_035": 9,
+    "question": "How does RT-SEMamba use progressive knowledge distillation to compress an 8-layer causal teacher into a 1-layer student for real-time speech enhancement?"
+  },
+  {
+    "id": "qa_025",
+    "paper_id": "2608.12113",
+    "top1": 0.9376,
+    "top2": 0.8659,
+    "top3": 0.8104,
+    "valid_035": 6,
+    "question": "In 'Structuring the Space of Perspectives', what four universal dimensions do the authors use to annotate and structure perspective-related concepts in NLP?"
+  },
+  {
+    "id": "qa_026",
+    "paper_id": "2608.12121",
+    "top1": 0.9995,
+    "top2": 0.9955,
+    "top3": 0.9871,
+    "valid_035": 10,
+    "question": "How does QV-PIC achieve query-aware position-independent caching for visual tokens in multimodal RAG serving?"
+  },
+  {
+    "id": "qa_027",
+    "paper_id": "2608.12125",
+    "top1": 0.9929,
+    "top2": 0.4218,
+    "top3": 0.1266,
+    "valid_035": 2,
+    "question": "What self-identification bias phenomenon is observed when language models evaluate peer reasoning in 'Do LLMs Take Care of Their Own?'"
+  },
+  {
+    "id": "qa_028",
+    "paper_id": "2608.12129",
+    "top1": 0.9994,
+    "top2": 0.999,
+    "top3": 0.9988,
+    "valid_035": 10,
+    "question": "How does SAG use SQL retrieval and query-time dynamic hyperedges over event-entity indices?"
+  },
+  {
+    "id": "qa_029",
+    "paper_id": "2608.12138",
+    "top1": 0.9972,
+    "top2": 0.9786,
+    "top3": 0.947,
+    "valid_035": 10,
+    "question": "On the HealthBench benchmark, how does the corpus-specific clinical RAG system match or outperform frontier models like GPT-4o?"
+  },
+  {
+    "id": "qa_030",
+    "paper_id": "2608.12149",
+    "top1": 0.991,
+    "top2": 0.914,
+    "top3": 0.8669,
+    "valid_035": 10,
+    "question": "What causes pre-attention spikes and inter-spike plateaus in hybrid linear attention language models?"
+  },
+  {
+    "id": "qa_031",
+    "paper_id": "2608.12150",
+    "top1": 0.9875,
+    "top2": 0.5903,
+    "top3": 0.5006,
+    "valid_035": 6,
+    "question": "How does test-time compute allocation impact reasoning performance across different model scales in 'Who Thinks Best Depends on How Long You Let Them Think'?"
+  },
+  {
+    "id": "qa_032",
+    "paper_id": "2608.12218",
+    "top1": 0.997,
+    "top2": 0.9561,
+    "top3": 0.9025,
+    "valid_035": 8,
+    "question": "What is the Information Abundance Paradox described in long-context transformer evaluations?"
+  },
+  {
+    "id": "qa_033",
+    "paper_id": "2608.12246",
+    "top1": 0.9998,
+    "top2": 0.9985,
+    "top3": 0.9885,
+    "valid_035": 5,
+    "question": "What benchmark dataset and evaluation scope does VICBench introduce for code vulnerability detection?"
+  },
+  {
+    "id": "qa_034",
+    "paper_id": "2608.12253",
+    "top1": 0.6726,
+    "top2": 0.5802,
+    "top3": 0.0648,
+    "valid_035": 2,
+    "question": "Why is a single frozen simulator insufficient for robust robot policy evaluation according to paper 2608.12253?"
+  },
+  {
+    "id": "qa_035",
+    "paper_id": "2608.12269",
+    "top1": 0.9964,
+    "top2": 0.9202,
+    "top3": 0.9109,
+    "valid_035": 8,
+    "question": "How does the cascaded NLP pipeline detect accusatory language in public procurement metadata without manual labeling?"
+  },
+  {
+    "id": "qa_036",
+    "paper_id": "2608.12278",
+    "top1": 0.9224,
+    "top2": 0.2998,
+    "top3": 0.0172,
+    "valid_035": 1,
+    "question": "What concept of 'structural silence' is analyzed regarding AI infrastructure and model explanations?"
+  },
+  {
+    "id": "qa_037",
+    "paper_id": "2608.12283",
+    "top1": 0.968,
+    "top2": 0.9187,
+    "top3": 0.4477,
+    "valid_035": 3,
+    "question": "How does the small-capitalization trading framework decompose stock movements into alpha and beta event legs?"
+  },
+  {
+    "id": "qa_038",
+    "paper_id": "2608.12307",
+    "top1": 0.9999,
+    "top2": 0.947,
+    "top3": 0.9364,
+    "valid_035": 6,
+    "question": "How does strong-to-weak capability transfer via harnesses enhance weaker models at test time in AI4AI?"
+  },
+  {
+    "id": "qa_039",
+    "paper_id": "2608.12313",
+    "top1": 0.9997,
+    "top2": 0.9995,
+    "top3": 0.9994,
+    "valid_035": 10,
+    "question": "What structured film representation does AVA-Encoder learn for agent-native video understanding?"
+  },
+  {
+    "id": "qa_040",
+    "paper_id": "2608.12426",
+    "top1": 0.9725,
+    "top2": 0.9638,
+    "top3": 0.8246,
+    "valid_035": 8,
+    "question": "Under what compositional constraint conditions do language models experience performance collapse in multi-constraint instruction following?"
+  }
+]

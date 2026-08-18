@@ -1,0 +1,620 @@
+{
+  "timestamp": "2026-08-15 22:42:08",
+  "total_eval_samples": 40,
+  "corpus_papers_count": 204,
+  "chroma_chunks_count": 1094,
+  "aggregate_ragas_scores": {
+    "faithfulness": 0.65,
+    "context_precision": 0.988,
+    "context_recall": 1.0,
+    "answer_relevance": 0.111
+  },
+  "prd_targets": {
+    "faithfulness_target": ">0.70",
+    "context_precision_target": ">0.60",
+    "context_recall_target": ">0.60",
+    "answer_relevance_target": ">0.70"
+  },
+  "per_sample_breakdown": [
+    {
+      "sample_id": "qa_001",
+      "source_paper_id": "1706.03762",
+      "source_paper_title": "Attention Is All You Need",
+      "question": "How does 'Attention Is All You Need' handle sequence transduction without recurrent or convolutional layers?",
+      "ground_truth_answer": "It replaces recurrent or convolutional networks with multi-head self-attention mechanisms and positional encodings to compute parallel representations directly across input sequences.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"How does 'Attention Is All You Need' handle sequence transd...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.576,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.111
+      }
+    },
+    {
+      "sample_id": "qa_002",
+      "source_paper_id": "1512.03385",
+      "source_paper_title": "Deep Residual Learning for Image Recognition",
+      "question": "What methodology mechanism does ResNet introduce to ease the training of substantially deeper neural networks?",
+      "ground_truth_answer": "ResNet introduces residual building blocks with skip shortcut connections that explicitly reformulate layers as learning residual functions F(x) + x with reference to layer inputs.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What methodology mechanism does ResNet introduce to ease th...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.583,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.101
+      }
+    },
+    {
+      "sample_id": "qa_003",
+      "source_paper_id": "1810.04805",
+      "source_paper_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "question": "What pre-training objectives are used in BERT to train deep bidirectional representations?",
+      "ground_truth_answer": "BERT pre-trains bidirectional representations using Masked Language Modeling (MLM), where random tokens are masked, and Next Sentence Prediction (NSP).",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What pre-training objectives are used in BERT to train deep...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.621,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.082
+      }
+    },
+    {
+      "sample_id": "qa_004",
+      "source_paper_id": "2005.11401",
+      "source_paper_title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "question": "How does RAG combine parametric and non-parametric memory for knowledge-intensive tasks?",
+      "ground_truth_answer": "RAG combines a pre-trained seq2seq generator with a non-parametric dense vector retriever over Wikipedia passages via marginalization over retrieved documents.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"How does RAG combine parametric and non-parametric memory f...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.621,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.101
+      }
+    },
+    {
+      "sample_id": "qa_005",
+      "source_paper_id": "2004.04906",
+      "source_paper_title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "question": "How does Dense Passage Retrieval (DPR) index passages compared to traditional BM25 keyword search?",
+      "ground_truth_answer": "DPR uses dual BERT encoders to map queries and text passages into a shared dense vector space, computing relevance via dot-product similarity instead of sparse term frequency.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"How does Dense Passage Retrieval (DPR) index passages compa...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.698,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.112
+      }
+    },
+    {
+      "sample_id": "qa_006",
+      "source_paper_id": "2010.11929",
+      "source_paper_title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "question": "How does Vision Transformer (ViT) adapt standard Transformer architectures to image classification?",
+      "ground_truth_answer": "ViT splits an image into non-overlapping 16x16 patches, flattens them into 1D linear projection vectors, adds 1D positional embeddings, and feeds them into a standard Transformer encoder.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"How does Vision Transformer (ViT) adapt standard Transforme...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.548,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.066
+      }
+    },
+    {
+      "sample_id": "qa_007",
+      "source_paper_id": "2103.14030",
+      "source_paper_title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+      "question": "What architectural innovation allows Swin Transformer to compute efficient self-attention across image resolutions?",
+      "ground_truth_answer": "Swin Transformer computes local self-attention within non-overlapping windows and introduces shifted window partitioning between consecutive layers to enable cross-window connections.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What architectural innovation allows Swin Transformer to co...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.65,
+        "context_precision": 0.667,
+        "context_recall": 1.0,
+        "answer_relevance": 0.083
+      }
+    },
+    {
+      "sample_id": "qa_008",
+      "source_paper_id": "1409.1556",
+      "source_paper_title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "question": "What design choice does VGGNet make regarding convolutional filter sizes throughout network depth?",
+      "ground_truth_answer": "VGGNet uses small 3x3 convolutional filters stacked continuously throughout the network, demonstrating that increasing depth with small filters improves classification accuracy.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What design choice does VGGNet make regarding convolutional...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.532,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.101
+      }
+    },
+    {
+      "sample_id": "qa_009",
+      "source_paper_id": "1703.06870",
+      "source_paper_title": "Mask R-CNN",
+      "question": "What branch does Mask R-CNN add to Faster R-CNN for instance segmentation?",
+      "ground_truth_answer": "Mask R-CNN adds a small fully convolutional network (FCN) branch in parallel with the classification and bounding box regression branches to predict pixel-to-pixel segmentation masks.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What branch does Mask R-CNN add to Faster R-CNN for instanc...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.437,
+        "context_precision": 0.833,
+        "context_recall": 1.0,
+        "answer_relevance": 0.083
+      }
+    },
+    {
+      "sample_id": "qa_010",
+      "source_paper_id": "1905.11946",
+      "source_paper_title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+      "question": "How does EfficientNet scale network depth, width, and image resolution simultaneously?",
+      "ground_truth_answer": "EfficientNet uses a compound scaling method with a fixed compound coefficient phi to uniformly scale network depth, width, and input resolution.",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"How does EfficientNet scale network depth, width, and image...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.462,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.09
+      }
+    },
+    {
+      "sample_id": "qa_011",
+      "source_paper_id": "2111.10011",
+      "source_paper_title": "Paper 2111.10011",
+      "question": "What is the primary contribution or objective of paper 'Paper 2111.10011'?",
+      "ground_truth_answer": "Game-environment feedback dynamics for voluntary prisoner\u2019s dilemma games\nBin-Quan Li, 1, 2 Cong Liu, 1, 2 Zhi-Xi Wu, 1, 2, \u2217 and Jian-Yue Guan 1, 2\n1Lanzhou Center for Theoretical Physics and Key Laboratory of Theoretical Physics of Gansu Province,...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Pap...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.682,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.053
+      }
+    },
+    {
+      "sample_id": "qa_012",
+      "source_paper_id": "2110.10010",
+      "source_paper_title": "Paper 2110.10010",
+      "question": "What is the primary contribution or objective of paper 'Paper 2110.10010'?",
+      "ground_truth_answer": "Temporal separation of whale vocalizations from background oceanic\nnoise using a power calculation\nJacques van Wyk\u2217, Johan du Preez\u2020 and Jaco Versfeld\u2021\nDepartment of Electrical and Electronic Engineering, University of Stellenbosch\nStellenbosch, Sout...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Pap...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.682,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.053
+      }
+    },
+    {
+      "sample_id": "qa_013",
+      "source_paper_id": "2112.10012",
+      "source_paper_title": "Paper 2112.10012",
+      "question": "What is the primary contribution or objective of paper 'Paper 2112.10012'?",
+      "ground_truth_answer": "An Exploration Tool for Retrieval of Travel Information with Personal Photos\nRisa Kitamura1)  Takayuki Itoh1)\n1) Ochanomizu University\nPhotos can be treated as life logs of photo owners.  Photos can\nbe reliable information to estimate patterns of act...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Pap...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.682,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.053
+      }
+    },
+    {
+      "sample_id": "qa_014",
+      "source_paper_id": "2608.11830",
+      "source_paper_title": "Quantifying the Relationship Between Clinical Safety and Environmental Impact in Therapeutic LLMs",
+      "question": "What is the primary contribution or objective of paper 'Quantifying the Relationship Between Clinical Safety and Environmental Impact in Therapeutic LLMs'?",
+      "ground_truth_answer": "Quantifying the Relationship Between Clinical Safety and\nEnvironmental Impact in Therapeutic LLMs\nAlireza A. Safaei\nUniversity of Isfahan\nIsfahan, Iran\nalirezaakhavansafaei@eng.ui.ac.ir\nLaura M. Vowels\nUniversity of Roehampton\nLondon, UK\nlaura.vowels...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Qua...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.554,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.141
+      }
+    },
+    {
+      "sample_id": "qa_015",
+      "source_paper_id": "2608.11843",
+      "source_paper_title": "When the Knowledge Base Becomes the Gold Standard: Measuring Resource-Shared Evaluation Loops in Entity-Level Machine Translation",
+      "question": "What is the primary contribution or objective of paper 'When the Knowledge Base Becomes the Gold Standard: Measuring Resource-Shared Evaluation Loops in Entity-Level Machine Translation'?",
+      "ground_truth_answer": "When the Knowledge Base Becomes the Gold Standard: Measuring\nResource-Shared Evaluation Loops in Entity-Level Machine Translation\nJINHYUNG BAE \u00b7 DAIN KIL \u00b7 SEONGMIN OH \u00b7 SEUNGMIN LEE\nHankuk University of Foreign Studies\nThe Seungjeongwon Ilgi, a UNES...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Whe...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.649,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.172
+      }
+    },
+    {
+      "sample_id": "qa_016",
+      "source_paper_id": "2608.11829",
+      "source_paper_title": "Towards Understanding On-Policy Distillation through the Lens of Test-Time Scaling",
+      "question": "What is the primary contribution or objective of paper 'Towards Understanding On-Policy Distillation through the Lens of Test-Time Scaling'?",
+      "ground_truth_answer": "TOWARDSUNDERSTANDINGON-POLICYDISTILLA-\nTION THROUGH THELENS OFTEST-TIMESCALING\nXinmu Ge1,2,3,\u2020 Zizhuo Zhang4,\u2020 Yu Huang1,3 Jianing Zhu5 Lin Yuan3 Wanli Gu3\nWeichang Wu3 Weiran Huang1,2 Xiaolu Zhang3 Bo Han4,\u2217 Jun Zhou3,\u2217 Jiangchao Yao1,\u2217\n1Shanghai Ji...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Tow...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.711,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.117
+      }
+    },
+    {
+      "sample_id": "qa_017",
+      "source_paper_id": "2608.11822",
+      "source_paper_title": "Located but Not Releasable: Silent Gate Inversion and Bounded Linear Release",
+      "question": "What is the primary contribution or objective of paper 'Located but Not Releasable: Silent Gate Inversion and Bounded Linear Release'?",
+      "ground_truth_answer": "Preprint 1\nLOCATED BUTNOTRELEASABLE: SILENTGATEINVER-\nSION ANDBOUNDEDLINEARRELEASE\nXining Xun\nTsingjiao Information Science (Beijing) Co., Ltd.\nA growing body of work reports that language modelsrepresenttask-relevant latent struc-\nture that they fai...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Loc...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.65,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.139
+      }
+    },
+    {
+      "sample_id": "qa_018",
+      "source_paper_id": "2608.11879",
+      "source_paper_title": "Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems",
+      "question": "What is the primary contribution or objective of paper 'Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems'?",
+      "ground_truth_answer": "Total Recall at What Cost? Benchmarking the Serving Cost of\nAgentic Memory Systems\nNatchanon Pollertlam\nnatchanon.p@brickstech.co\nBricks Technology\nThailand\nWitchayut Kornsuwannawit\nwitchayut.k@brickstech.co\nBricks Technology\nThailand\nLong-running co...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Tot...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.608,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.139
+      }
+    },
+    {
+      "sample_id": "qa_019",
+      "source_paper_id": "2608.11981",
+      "source_paper_title": "Benchmarking Trustworthiness of SLMs: Pre-trained vs. Compressed",
+      "question": "What is the primary contribution or objective of paper 'Benchmarking Trustworthiness of SLMs: Pre-trained vs. Compressed'?",
+      "ground_truth_answer": "Benchmarking Trustworthiness of SLMs:\nPre-trained vs. Compressed\n1st Haokun Lin\nInstitute of Automation, CAS\nBeijing, China\nORCID 0009-0000-1084-7115\n2nd Kaijie Zhu\nInstitute of Automation, CAS\nBeijing, China\nORCID 0009-0002-6220-1476\n3rd Haobo Xu\nTs...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Ben...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.64,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.088
+      }
+    },
+    {
+      "sample_id": "qa_020",
+      "source_paper_id": "2109.10009",
+      "source_paper_title": "Paper 2109.10009",
+      "question": "What is the primary contribution or objective of paper 'Paper 2109.10009'?",
+      "ground_truth_answer": "1\nAn AI-assisted Economic Model of Endogenous Mobility and\nInfectious Diseases: The Case of COVID-19 in the United States1\nLin William Cong, Ke Tang, Bing Wang, and Jingyuan Wang\nWe build a deep- learning-based SEIR -AIM model integrating the classic...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Pap...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.682,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.053
+      }
+    },
+    {
+      "sample_id": "qa_021",
+      "source_paper_id": "2608.11924",
+      "source_paper_title": "Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill",
+      "question": "What is the primary contribution or objective of paper 'Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill'?",
+      "ground_truth_answer": "Spark-to-Paper: End-to-End Research Paper\nGeneration as a Composable Skill\nZhuoyang Qian1,\u2217, Biao Wu2,\u2217, Yiran Wang1,\u2217, Chris D Yan1,\u2217,\nDesan Dai1,Liangwei Zheng 1,Jin Jiang 1,Jusheng Zhang 1,Wenhao Wang 1,\u2021\n1Vast Intelligence Lab 2University of Tech...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Spa...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.671,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.105
+      }
+    },
+    {
+      "sample_id": "qa_022",
+      "source_paper_id": "2608.11947",
+      "source_paper_title": "Accuracy and Order Sensitivity Diverge Under Label-Free Strategies",
+      "question": "What is the primary contribution or objective of paper 'Accuracy and Order Sensitivity Diverge Under Label-Free Strategies'?",
+      "ground_truth_answer": "Accuracy and Order Sensitivity Diverge Under Label-Free Strategies\nKarl Hanna\nQueen\u2019s University Belfast\nkhanna28@qub.ac.uk\nChen Feng\nQueen\u2019s University Belfast\nc.feng@qub.ac.uk\nMultiple-choice benchmarks are widely used\nto evaluate large language mo...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Acc...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.636,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.107
+      }
+    },
+    {
+      "sample_id": "qa_023",
+      "source_paper_id": "2608.11878",
+      "source_paper_title": "ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents",
+      "question": "What is the primary contribution or objective of paper 'ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents'?",
+      "ground_truth_answer": "ToolHazard: Scaling Adversarial Environments for Security\nLarge language model (LLM) agents inte-\ngrated with external tools are vulnerable to\nindirect prompt injections embedded in en-\nvironmental states. However, existing stud-\nies largely rely on...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Too...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.728,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.144
+      }
+    },
+    {
+      "sample_id": "qa_024",
+      "source_paper_id": "2608.11922",
+      "source_paper_title": "LODESTAR: Trustworthy Entropy Is Navigated, Not Merely Measured -- Reinforced Polarizer Keeps a Frozen LLM from Being Confidently Misled by the Wrong Evidence",
+      "question": "What is the primary contribution or objective of paper 'LODESTAR: Trustworthy Entropy Is Navigated, Not Merely Measured -- Reinforced Polarizer Keeps a Frozen LLM from Being Confidently Misled by the Wrong Evidence'?",
+      "ground_truth_answer": "L O D E S T A R :\nTRUSTWORTHYENTROPYISNAVIGATED,\nNOTMERELYMEASURED\nREINFORCEDPOLARIZERKEEPS AFROZENLLM\nFROMBEINGCONFIDENTLYMISLED BY THEWRONGEVIDENCE\nPo-Jen Ko1\u2217 Che-Cheng Wu1\u2217 Hung-Chun Hsu1\u2217\u2020\nLi-Yang Chang1 Chuan-Ju Wang1\u2021\n1Research Center for Info...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'LOD...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.676,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.198
+      }
+    },
+    {
+      "sample_id": "qa_025",
+      "source_paper_id": "2608.12062",
+      "source_paper_title": "Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations",
+      "question": "What is the primary contribution or objective of paper 'Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations'?",
+      "ground_truth_answer": "Published as a conference paper at ICLR 2025\nPREFERENCETREEOPTIMIZATION: ENHANCING\nGOAL-ORIENTEDDIALOGUE WITHLOOK-AHEAD\nSIMULATIONS\nLior Baruch\nSchool of Computer Science\nReichman University, Herzliya, Israel\nlior95bar@gmail.com\nMoshe Butman\nSchool o...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Pre...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.616,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.13
+      }
+    },
+    {
+      "sample_id": "qa_026",
+      "source_paper_id": "2608.12008",
+      "source_paper_title": "Asymptotic Risk Calibration for Selective Question Answering",
+      "question": "What is the primary contribution or objective of paper 'Asymptotic Risk Calibration for Selective Question Answering'?",
+      "ground_truth_answer": "Asymptotic Risk Calibration for Selective Question Answering\nShufan Lin\n3240103707@zju.edu.cn\nZhangjiang University\nHangzhou, Zhangjiang, China\nSijin Dong\u2217\n24nd305h@vc.ibaraki.ac.jp\nIbaraki University\nIbaraki, Japan\nLarge language models (LLMs) may g...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Asy...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.712,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.09
+      }
+    },
+    {
+      "sample_id": "qa_027",
+      "source_paper_id": "2608.11889",
+      "source_paper_title": "DexterSQL: Deep Schema Exploration and Rule-based Correction for Text-to-SQL Generation",
+      "question": "What is the primary contribution or objective of paper 'DexterSQL: Deep Schema Exploration and Rule-based Correction for Text-to-SQL Generation'?",
+      "ground_truth_answer": "DexterSQL: Deep Schema Ex ploration and Rule-based\nCorrection for Text-to-SQL Generation\nAnik Pramanik1, Murat Kantarcioglu2, Vincent Oria1, Shantanu Sharma1\n1New Jersey Institute of Technology, USA. 2Virginia Tech, USA.\nPrompting-based (i.e., non-fi...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Dex...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.682,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.14
+      }
+    },
+    {
+      "sample_id": "qa_028",
+      "source_paper_id": "2608.11847",
+      "source_paper_title": "LookBack: Where and How to Score LVLM Responses via Visual Reference Usage",
+      "question": "What is the primary contribution or objective of paper 'LookBack: Where and How to Score LVLM Responses via Visual Reference Usage'?",
+      "ground_truth_answer": "LOOKBACK: Where and How to Score\nLVLM Responses via Visual Reference Usage\nBeomsik Cho* Jinhyeong Kim* Dongseok Lee Jaehyung Kim\nYonsei University\n{bscho333, mjmps0726, jaehyungk}@yonsei.ac.kr\nLarge Vision-Language Models (LVLMs) in-\ntegrate visual p...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Loo...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.647,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.136
+      }
+    },
+    {
+      "sample_id": "qa_029",
+      "source_paper_id": "2608.12099",
+      "source_paper_title": "RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation",
+      "question": "What is the primary contribution or objective of paper 'RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation'?",
+      "ground_truth_answer": "RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive\nKnowledge Distillation\nRong Chao1,2, Sung-Feng Huang5, Moreno La Quatra3, Sabato Marco Siniscalchi4,\nWen-Huang Cheng2, Szu-Wei Fu5, Yu Tsao1\n1Academia Sinica, Taiwan 2National Taiwan Univ...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'RT-...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.746,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.11
+      }
+    },
+    {
+      "sample_id": "qa_030",
+      "source_paper_id": "2608.12138",
+      "source_paper_title": "A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench",
+      "question": "What is the primary contribution or objective of paper 'A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench'?",
+      "ground_truth_answer": "A  corpus-specific  clinical  RAG  system  matches  or  outperforms  newer  frontier\nLLMs\non\nHealthBench\nPraveen  Reddy,  Charuta  Mandke,  Suvrankar  Datta,  Sarah  Khan,  Siddharth  Reddy\nAnthireddy,\nShitij  Arora,  Vishal  Singh\nTwo  recent  landm...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'A c...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.716,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.131
+      }
+    },
+    {
+      "sample_id": "qa_031",
+      "source_paper_id": "2608.12121",
+      "source_paper_title": "QV-PIC: Query-Aware Visual Position-Independent Caching for Efficient RAG Serving",
+      "question": "What is the primary contribution or objective of paper 'QV-PIC: Query-Aware Visual Position-Independent Caching for Efficient RAG Serving'?",
+      "ground_truth_answer": "QV-PIC: Query-Aware Visual Position-Independent Caching for Efficient\nRAG Serving\nYilin Liu1, Rui Meng2, Wangze Ni1*, Jianxin Yan1,\nHeng Cao3, Libin Zheng4, Peng Cheng5, Jinfei Liu1\n1Zhejiang University\n2Department of Statistics and Data Science, Bei...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'QV-...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.669,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.126
+      }
+    },
+    {
+      "sample_id": "qa_032",
+      "source_paper_id": "2608.11994",
+      "source_paper_title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+      "question": "What is the primary contribution or objective of paper 'Claim-Level Reliability Assessment for Efficient Test-Time Reasoning'?",
+      "ground_truth_answer": "Published as a workshop paper at COLM 2026\nClaim-Level Reliability Assessment for Efficient Test-Time\nReasoning\u2217\nSen Xu Wei Wang Shixi Liu Jixin Min Yingwei Dai\nZhibin Yin Yirong Chen Junlin Zhang\nSina Weibo Inc.\n{xusen1,junlin6}@staff.weibo.com\nWe p...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Cla...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.634,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.092
+      }
+    },
+    {
+      "sample_id": "qa_033",
+      "source_paper_id": "2608.12018",
+      "source_paper_title": "Poly-Dialectal Neural Machine Translation System for Bangla Regional Dialects",
+      "question": "What is the primary contribution or objective of paper 'Poly-Dialectal Neural Machine Translation System for Bangla Regional Dialects'?",
+      "ground_truth_answer": "Poly-Dialectal Neural Machine\nTranslation System for Bangla\nRegional Dialects\nRakib Ullah 1,*, Ruhul Islam Rahul 1, Tanbir Ahmed1\n1Department of Computer Science and Engineering\nSYLHET ENGINEERING COLLEGE, SYLHET\nSylhet, Bangladesh\n*Corresponding Aut...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Pol...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.61,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.141
+      }
+    },
+    {
+      "sample_id": "qa_034",
+      "source_paper_id": "2608.12246",
+      "source_paper_title": "VICBench: A Multi-Language Benchmark for Code Vulnerability Detection",
+      "question": "What is the primary contribution or objective of paper 'VICBench: A Multi-Language Benchmark for Code Vulnerability Detection'?",
+      "ground_truth_answer": "VICBench: A Multi-Language Benchmark for Code Vulnerability\nDetection\nJin Lu1, Xuening Han1, Yang Zhong1,2, Lin Tan1,3,\nKevin Luo1,Andrew Gacek 1,Neha Rungta 1\n1Amazon Web Services 2University of Pittsburgh 3Purdue University\njinlu2@asu.edu xuenihan@...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'VIC...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.709,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.097
+      }
+    },
+    {
+      "sample_id": "qa_035",
+      "source_paper_id": "2608.12129",
+      "source_paper_title": "SAG: SQL-Retrieval Augmented Generation with Query-Time Dynamic Hyperedges",
+      "question": "What is the primary contribution or objective of paper 'SAG: SQL-Retrieval Augmented Generation with Query-Time Dynamic Hyperedges'?",
+      "ground_truth_answer": "SAG: SQL-Retrieval Augmented Generation with\nQuery -Time Dynamic Hyperedges\nYuchao Wu\u2217, Junqin Li, XingCheng Liang, Yongjie Chen, Yinghao Liang\nLinyuan Mo, Guanxian Li\nZleap AI\n{jomy,junqing,lensen,jinzhoulawen,leo}@zleap.com\n{mo-linyuan,li guanxian}...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'SAG...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.782,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.109
+      }
+    },
+    {
+      "sample_id": "qa_036",
+      "source_paper_id": "2608.12278",
+      "source_paper_title": "Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages",
+      "question": "What is the primary contribution or objective of paper 'Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages'?",
+      "ground_truth_answer": "Structural Silence: When AI Infrastructure Fails\nSpeakers of Underrepresented Languages\u2217\nA Case Study in Bengali, the Digital Divide, and the Hidden Cost of\nEnglish-Centric Design\nAvijit Roy\nJohn Jay College of Criminal Justice, CUNY\naroy@jjay.cuny.e...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Str...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.647,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.119
+      }
+    },
+    {
+      "sample_id": "qa_037",
+      "source_paper_id": "2608.11919",
+      "source_paper_title": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield Optimization in Large Language Model Training",
+      "question": "What is the primary contribution or objective of paper 'LazyTrain: Limited-resource Allocation toward Zero-waste Yield Optimization in Large Language Model Training'?",
+      "ground_truth_answer": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield\nOptimization in Large Language Model Training\nXiaojun Wu\u22171,2 , Cehao Yang\u22171,2 , Honghao Liu\u22171,2 , Xueyuan Lin\u22172 ,\nXuhui Jiang1,3, Chengjin Xu1,3, Jia Li\u20202 , Jian Guo\u20201\n1IDEA Research\n2The...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Laz...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.705,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.139
+      }
+    },
+    {
+      "sample_id": "qa_038",
+      "source_paper_id": "2608.12150",
+      "source_paper_title": "Who Thinks Best Depends on How Long You Let Them: Budget-Dependent Rankings in LLM Evaluation",
+      "question": "What is the primary contribution or objective of paper 'Who Thinks Best Depends on How Long You Let Them: Budget-Dependent Rankings in LLM Evaluation'?",
+      "ground_truth_answer": "Who Thinks Best Depends on How Long You\nLet Them:\nBudget-Dependent Rankings in LLM Evaluation\nRodrigo Guedes de Souza\nAlison R. Panisson\nFederal University of Santa Catarina (UFSC)\nBrazil\nguedes.rodrigo@grad.ufsc.br, alison.panisson@ufsc.br\nAugust 13...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Who...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.672,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.145
+      }
+    },
+    {
+      "sample_id": "qa_039",
+      "source_paper_id": "2608.12036",
+      "source_paper_title": "Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence",
+      "question": "What is the primary contribution or objective of paper 'Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence'?",
+      "ground_truth_answer": "Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence\nMengru Wang 1,2*, Junfeng Fang 2*, Shuofei Qiao 1*, Zhenqian Xu 1, Haoming Xu 1,\nHaoxiong Wang 1, Shumin Deng 1, Linyi Yang 3, Zhixiang Cui 4, Xin Xu 5,\nYunzhi Ya...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'Mec...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.754,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.113
+      }
+    },
+    {
+      "sample_id": "qa_040",
+      "source_paper_id": "2608.12269",
+      "source_paper_title": "A Cascaded Unsupervised-Supervised NLP Pipeline for Detecting Accusatory Language in Public Procurement",
+      "question": "What is the primary contribution or objective of paper 'A Cascaded Unsupervised-Supervised NLP Pipeline for Detecting Accusatory Language in Public Procurement'?",
+      "ground_truth_answer": "1\nA Cascaded Unsupervised\u2013Supervised NLP Pipeline for Detecting\nAccusatory Language in Public Procurement\nBryan Torres,Member, IEEE, Daniel Riofr\u00b4 \u0131o,Member, IEEE, Jos\u00b4 e Vega-S\u00b4 anchez,Senior Member, IEEE,\nNathaly Orozco Garz\u00b4 on,Senior Member, IEEE...",
+      "pipeline_answer": "### Grounded Literature QA Response\n\nBased on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"What is the primary contribution or objective of paper 'A C...",
+      "retrieved_chunks_count": 6,
+      "scores": {
+        "faithfulness": 0.722,
+        "context_precision": 1.0,
+        "context_recall": 1.0,
+        "answer_relevance": 0.149
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# AI Research Copilot - Locked Technology Stack Dependencies
+# PDF Parsing & OCR
+docling>=2.0.0
+pytesseract>=0.3.10
+
+# Dense Embeddings & Vector Store
+chromadb>=0.4.22
+sentence-transformers>=2.5.0
+nomic>=0.4.0
+torch>=2.0.0
+
+# Sparse Retrieval & LlamaIndex Orchestration
+bm25s>=0.1.8
+llama-index-core>=0.10.20
+llama-index-retrievers-bm25>=0.1.3
+llama-index-vector-stores-chroma>=0.1.6
+
+# Generation API
+google-genai>=0.1.0
+google-generativeai>=0.4.0
+
+# UI & Visualization
+streamlit>=1.30.0
+plotly>=5.18.0
+pyvis>=0.3.2
+networkx>=3.0
+
+# Evaluation
+ragas>=0.1.5
+openai>=1.12.0
+anthropic>=0.18.0
+
+# Utilities
+pandas>=2.0.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+tqdm>=4.66.0

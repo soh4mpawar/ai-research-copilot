@@ -1,0 +1,80 @@
+# ==============================================================================
+# SECRETS, CREDENTIALS & ENVIRONMENT
+# ==============================================================================
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.cert
+*.p12
+*.pfx
+credentials.json
+client_secret*.json
+*secret*
+*token*
+
+# ==============================================================================
+# PYTHON CACHE & ENVIRONMENTS
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==============================================================================
+# IDE, EDITORS & OS METADATA
+# ==============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==============================================================================
+# RUNTIME, STREAMLIT & LOGS
+# ==============================================================================
+.streamlit/
+*.log
+*.sqlite3-journal
+
+# ==============================================================================
+# LARGE GENERATED DATA STORES & BINARY ARTIFACTS
+# ==============================================================================
+data/chroma_db/
+data/parsed/
+data/raw_pdfs/
+data/pdfs/
+data/*.sqlite3
+data/*.bin
+data/*.pickle
+data/*.parquet
+data/*.pdf
+
