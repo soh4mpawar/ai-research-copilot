@@ -20,7 +20,7 @@ def render_answer_card(result: QueryResult):
     """Render formatted grounded answer, metadata badges, confidence bar, and rich source cards."""
     confidence_pct = 92 if result.evidence_strength == "Strong" else 76
     badge_class = "badge-strong" if result.evidence_strength == "Strong" else "badge-moderate"
-    bar_fill_color = "#2D6A4F" if result.evidence_strength == "Strong" else "#B45309"
+    bar_fill_color = "#1E5631" if result.evidence_strength == "Strong" else "#92400E"
     
     st.markdown(
         f"""
@@ -39,8 +39,8 @@ def render_answer_card(result: QueryResult):
                 </div>
             </div>
             <!-- Evidence Confidence Flat Visual Bar -->
-            <div style="width: 100%; background: #E5E7EB; border-radius: 3px; height: 5px; overflow: hidden; margin-bottom: 12px;">
-                <div style="width: {confidence_pct}%; background: {bar_fill_color}; height: 100%; border-radius: 3px;"></div>
+            <div style="width: 100%; background: #E5E7EB; border-radius: 2px; height: 4px; overflow: hidden; margin-bottom: 12px;">
+                <div style="width: {confidence_pct}%; background-color: {bar_fill_color} !important; height: 100%; border-radius: 2px;"></div>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
                 <span style="font-size: 0.76rem; color: #6B7280; font-weight: 500;">Topic Tags:</span>

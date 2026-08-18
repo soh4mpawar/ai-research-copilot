@@ -88,9 +88,10 @@ html {
 }
 
 .badge-outline {
-    background: #FFFFFF;
-    color: #4B5563;
-    border: 1px solid #D1D5DB;
+    background: #F3F4F6;
+    color: #1F2937;
+    border: 1px solid #9CA3AF;
+    font-weight: 550;
 }
 
 /* Clean Monochrome Academic Citation Chip */
