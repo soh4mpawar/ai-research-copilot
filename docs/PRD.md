@@ -213,7 +213,7 @@ v1.0-v1.1: Early drafts.
 
 | Field | Detail |
 | --- | --- |
-| Document Owner | Akanksha Jaiswal, Mohd. Uzair Qureshi, Soham Pawar |
+| Document Owner | Soham Pawar |
 | Team / Department | CSE Core, Computer Science and Engineering |
 | Minor Specialization | Artificial Intelligence / Machine Learning (Computational Intelligence) |
 | Faculty Guide | Dr. Adarsh Rag |

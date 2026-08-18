@@ -1,7 +1,5 @@
 AI Research Copilot: A Retrieval-Augmented System for Automated Scientific Literature Analysis
-Team Members:
-Akanksha Jaiswal – 230905106 – CSE Core
-Mohd. Uzair Qureshi – 220905158 – CSE Core
+Author:
 Soham Pawar – 230905312 – CSE Core
 Minor Specialization Name: Artificial Intelligence / Machine Learning (Computational Intelligence)
 Department Offering: Computer Science and Engineering

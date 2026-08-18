@@ -88,14 +88,11 @@ def main():
 
     st.sidebar.markdown(f"<div style='font-size:0.75rem; color:#94a3b8; margin-top:4px;'>Corpus Version: <code>{corpus_v}</code></div>", unsafe_allow_html=True)
 
-    st.sidebar.markdown("---")
     st.sidebar.markdown(
         """
         <div style="font-size: 0.78rem; color: #94a3b8; line-height: 1.5;">
             <b>AI Research Copilot v1.0</b><br/>
-            • <b>A</b> — RAG Engine & Backend<br/>
-            • <b>U</b> — Data & RAGAS Evaluation<br/>
-            • <b>S</b> — Frontend, Product & Graph
+            Created by <b>Soham Pawar</b>
         </div>
         """,
         unsafe_allow_html=True
