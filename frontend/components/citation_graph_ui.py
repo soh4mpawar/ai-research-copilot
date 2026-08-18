@@ -1,6 +1,7 @@
 """
 Citation Graph Visualizer Component.
 Generates an interactive PyVis / NetworkX citation network embedded directly into Streamlit.
+Academic Scientific Instrument Styling.
 """
 
 import tempfile
@@ -11,24 +12,27 @@ from backend.contract import CitationGraphData
 
 
 def render_citation_graph(graph_data: CitationGraphData, height: int = 580):
-    """Render interactive paper citation graph network."""
+    """Render interactive paper citation graph network with light academic styling."""
     try:
         net = Network(
             height=f"{height}px",
             width="100%",
-            bgcolor="#0b0f19",
-            font_color="#e2e8f0",
+            bgcolor="#FAFAF9",
+            font_color="#111827",
             directed=True,
             notebook=False
         )
 
-        # Add Nodes
+        # Add Nodes with academic color scheme
         for node in graph_data.nodes:
+            is_seed = node.get("group") == "Seed" or node.get("val", 15) > 20
+            color = "#2B4C7E" if is_seed else "#64748B"
             net.add_node(
                 n_id=node["id"],
                 label=node["label"],
                 title=node["title"],
                 group=node.get("group", "Paper"),
+                color=color,
                 value=node.get("val", 15)
             )
 
@@ -38,24 +42,28 @@ def render_citation_graph(graph_data: CitationGraphData, height: int = 580):
                 source=edge["from"],
                 to=edge["to"],
                 title=edge.get("label", "cites"),
-                value=edge.get("weight", 1)
+                value=edge.get("weight", 1),
+                color="#CBD5E1"
             )
 
         net.set_options("""
         var options = {
           "nodes": {
-            "font": {"size": 14, "face": "Inter"},
-            "shadow": true
+            "font": {"size": 13, "face": "Inter", "color": "#111827"},
+            "borderWidth": 1,
+            "borderWidthSelected": 2,
+            "shadow": false
           },
           "edges": {
-            "color": {"inherit": "from"},
-            "smooth": {"type": "continuous"}
+            "color": {"color": "#CBD5E1", "highlight": "#2B4C7E"},
+            "smooth": {"type": "continuous"},
+            "arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}
           },
           "physics": {
             "barnesHut": {
-              "gravitationalConstant": -4000,
-              "centralGravity": 0.3,
-              "springLength": 110
+              "gravitationalConstant": -3500,
+              "centralGravity": 0.25,
+              "springLength": 100
             },
             "minVelocity": 0.75
           }

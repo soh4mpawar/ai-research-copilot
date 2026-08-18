@@ -1,7 +1,8 @@
 """
-Paper Explorer & Dataset Corpus Inspector Page Layout (Day 5 Polish for S).
+Paper Explorer & Dataset Corpus Inspector Page Layout.
 Searchable dataset browser with domain filters, sorting controls,
 rich paper metadata cards, and structured AI paper summaries.
+Academic Scientific Instrument Styling.
 """
 
 import streamlit as st
@@ -11,8 +12,8 @@ from backend import research_engine
 
 def render_paper_explorer_page():
     """Render Paper Explorer UI."""
-    st.markdown("## 📄 Scientific Paper Explorer & Corpus Inspector")
-    st.markdown("Explore and inspect the 180+ indexed papers across NLP and Computer Vision domains.")
+    st.markdown("<div class='academic-title' style='font-size: 1.5rem; margin-bottom: 4px;'>📄 Scientific Paper Explorer & Corpus Inspector</div>", unsafe_allow_html=True)
+    st.markdown("<div style='color: #525252; font-size: 0.92rem; margin-bottom: 14px;'>Explore and inspect indexed scientific papers across NLP and Computer Vision domains.</div>", unsafe_allow_html=True)
 
     papers = research_engine.get_corpus_papers()
 
@@ -61,11 +62,11 @@ def render_paper_explorer_page():
 
     s1, s2, s3 = st.columns(3)
     with s1:
-        st.metric("Filtered Papers", f"{len(filtered_papers)} papers")
+        st.metric("Filtered Papers", f"{len(filtered_papers)}")
     with s2:
-        st.metric("Aggregated Citations", f"{total_citations:,} citations")
+        st.metric("Aggregated Citations", f"{total_citations:,}")
     with s3:
-        st.metric("Avg Citations / Paper", f"{avg_citations:,} citations")
+        st.metric("Avg Citations / Paper", f"{avg_citations:,}")
 
     st.markdown("---")
 
@@ -79,20 +80,20 @@ def render_paper_explorer_page():
         with st.expander(f"📄 [{idx}] {p.title} ({p.year}) — {authors_str} ({citations_fmt} citations)", expanded=(idx == 1)):
             st.markdown(
                 f"""
-                <div style="background: rgba(30,41,59,0.5); padding: 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 12px;">
-                    <div style="font-size: 1.1rem; font-weight: 700; color: #f8fafc;">
-                        <a href="{pdf_link}" target="_blank" style="color: #f8fafc; text-decoration: none;">{p.title} 🔗</a>
+                <div style="background: #FFFFFF; padding: 14px; border-radius: 6px; border: 1px solid #E5E5E3; margin-bottom: 12px;">
+                    <div class="source-title" style="font-size: 1.05rem;">
+                        <a href="{pdf_link}" target="_blank" style="color: #111827; text-decoration: none; border-bottom: 1px solid #D1D5DB;">{p.title} ↗</a>
                     </div>
-                    <div style="font-size: 0.84rem; color: #94a3b8; margin-top: 6px;">
+                    <div class="source-meta" style="margin-top: 6px;">
                         👤 <b>Authors</b>: {", ".join(p.authors)} <br/>
-                        🗓️ <b>Year</b>: {p.year} &nbsp;|&nbsp; 🏛️ <b>Venue</b>: {p.venue} &nbsp;|&nbsp; 📊 <b>Citations</b>: {citations_fmt} &nbsp;|&nbsp; 🏷️ <b>Category</b>: <span style="color:#38bdf8">{p.category}</span>
+                        🗓️ <b>Year</b>: {p.year} &nbsp;|&nbsp; 🏛️ <b>Venue</b>: {p.venue} &nbsp;|&nbsp; 📊 <b>Citations</b>: {citations_fmt} &nbsp;|&nbsp; 🏷️ <code>{p.category}</code>
                     </div>
-                    <div style="display: flex; gap: 8px; margin-top: 10px;">
-                        <a href="{arxiv_link}" target="_blank" class="badge-pill badge-cyan" style="text-decoration: none;">
-                            📄 arXiv:{p.arxiv_id if p.arxiv_id else 'PDF'}
+                    <div style="display: flex; gap: 6px; margin-top: 10px;">
+                        <a href="{arxiv_link}" target="_blank" class="badge-pill badge-outline" style="text-decoration: none;">
+                            arXiv:{p.arxiv_id if p.arxiv_id else 'PDF'}
                         </a>
-                        <a href="{pdf_link}" target="_blank" class="badge-pill badge-indigo" style="text-decoration: none;">
-                            🔗 Open PDF Document
+                        <a href="{pdf_link}" target="_blank" class="badge-pill badge-slate" style="text-decoration: none;">
+                            Open PDF ↗
                         </a>
                     </div>
                 </div>
@@ -101,10 +102,10 @@ def render_paper_explorer_page():
             )
 
             # Abstract & AI Structured Summary
-            st.markdown("#### 📝 Abstract")
+            st.markdown("<div class='academic-title' style='font-size: 1.0rem; margin-top: 8px;'>📝 Abstract</div>", unsafe_allow_html=True)
             st.markdown(f"*{p.abstract}*")
 
-            st.markdown("#### ⚡ AI Structured Summary & Layout Key Structure")
+            st.markdown("<div class='academic-title' style='font-size: 1.0rem; margin-top: 12px;'>⚡ AI Structured Summary & Section Layout</div>", unsafe_allow_html=True)
             col_sum1, col_sum2 = st.columns(2)
             
             with col_sum1:
@@ -128,6 +129,6 @@ def render_paper_explorer_page():
                 )
 
             # Action Button to test query on paper
-            if st.button(f"🔍 Run Research Query on '{p.title[:30]}...'", key=f"btn_query_{p.paper_id}"):
+            if st.button(f"Set Query on '{p.title[:25]}...'", key=f"btn_query_{p.paper_id}"):
                 st.session_state["query_input"] = f"What are the core methodology contributions of '{p.title}'?"
                 st.info("Query set! Switch to ⌂ Research QA Engine view to run.")

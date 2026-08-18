@@ -1,7 +1,8 @@
 """
-Research QA Page Layout (Day 2 Polish).
+Research QA Page Layout.
 Main interface for submitting scientific queries, selecting search modes,
 viewing grounded answers, and downloading Markdown reports.
+Academic Scientific Instrument Styling.
 """
 
 import streamlit as st
@@ -10,20 +11,20 @@ from backend.corpus import CorpusManager
 from frontend.components.answer_card import render_answer_card
 from frontend.components.evidence_viewer import render_evidence_viewer
 
-# Initialize Corpus Manager for Day 2 Corpus Stats
+# Initialize Corpus Manager for Corpus Stats
 corpus_mgr = CorpusManager()
 
 
 def render_research_page():
     """Render main Research QA interface."""
-    st.markdown("## ⌂ Scientific Query & Answer Engine")
-    st.markdown("Ask technical questions across 180+ scientific papers with full retrieval provenance.")
+    st.markdown("<div class='academic-title' style='font-size: 1.5rem; margin-bottom: 4px;'>⌂ Scientific Query & Answer Engine</div>", unsafe_allow_html=True)
+    st.markdown("<div style='color: #525252; font-size: 0.92rem; margin-bottom: 14px;'>Ask technical research questions across 184 scientific papers with grounded citation provenance.</div>", unsafe_allow_html=True)
 
-    # Day 2 Corpus Quality Control Banner (U's Corpus Data)
+    # Corpus Health Summary Bar
     health = corpus_mgr.get_corpus_health_summary()
     st.markdown(
         f"""
-        <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; font-size: 0.85rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="background: #FFFFFF; border: 1px solid #E5E5E3; border-radius: 6px; padding: 8px 14px; margin-bottom: 16px; font-size: 0.82rem; color: #4B5563; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
             <span>📚 <b>Corpus Index</b>: {health['total_papers']} papers ({health['nlp_papers_count']} NLP / {health['cv_papers_count']} CV)</span>
             <span>📑 <b>Docling Parsed</b>: {health['successfully_parsed']}/{health['total_papers']} ({health['parse_success_rate']}%)</span>
             <span>🧩 <b>Total Chunks</b>: {health['total_estimated_chunks']:,}</span>
@@ -37,17 +38,17 @@ def render_research_page():
         st.session_state["query_input"] = "What is Retrieval-Augmented Generation (RAG) and why was it introduced?"
 
     # Preset Example Query Chips
-    st.markdown("**Quick Preset Queries:**")
+    st.markdown("<span style='font-size: 0.82rem; color: #6B7280; font-weight: 500;'>Quick Preset Queries:</span>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("💡 What is RAG and why was it introduced?"):
+        if st.button("What is RAG and why was it introduced?"):
             st.session_state["query_input"] = "What is Retrieval-Augmented Generation (RAG) and why was it introduced?"
     with col2:
-        if st.button("⚡ How does RRF fuse BM25 and Vector Search?"):
+        if st.button("How does RRF fuse BM25 and Vector Search?"):
             st.session_state["query_input"] = "How does Reciprocal Rank Fusion (RRF) combine dense and sparse BM25 scores?"
     with col3:
-        if st.button("⚠️ What are transformer self-attention limits?"):
+        if st.button("What are transformer self-attention limits?"):
             st.session_state["query_input"] = "What are the key computational limitations of transformer self-attention mechanisms?"
 
     # Query Input & Mode Controls
@@ -66,7 +67,7 @@ def render_research_page():
             ["Question Answering (QA)", "Multi-Paper Summary", "Literature Review"]
         )
 
-    submit_clicked = st.button("🔍 Run Research Pipeline", type="primary")
+    submit_clicked = st.button("Run Research Pipeline", type="primary")
 
     # Process Query Execution
     if submit_clicked or query_text.strip():
@@ -76,7 +77,7 @@ def render_research_page():
         elif search_mode == "Literature Review":
             mode_key = "literature_review"
 
-        with st.spinner("Processing PDF chunks across ChromaDB dense vector & BM25 sparse indices..."):
+        with st.spinner("Executing hybrid retrieval (ChromaDB + BM25s) ➜ bge-reranker-base ➜ Gemini 3.5 Flash Lite..."):
             result = research_engine.query(query_text, mode=mode_key)
 
         st.markdown("---")

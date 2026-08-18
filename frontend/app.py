@@ -1,7 +1,8 @@
 """
 AI Research Copilot — Master Streamlit Application.
 Main router, sidebar navigation, custom theme injection, singleton model caching (FR-19), and page state management.
-Owned by S (Soham Pawar).
+Author: Soham Pawar
+Academic Scientific Instrument Design System.
 """
 
 import sys
@@ -26,7 +27,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Load Custom Glassmorphism Styling (v1.0.8 - Day 6 Phase 4 Integration)
+# Load Custom Academic Scientific Instrument Styling
 css_file = os.path.join(os.path.dirname(__file__), "styles", "custom.css")
 if os.path.exists(css_file):
     with open(css_file, "r", encoding="utf-8") as f:
@@ -86,13 +87,13 @@ def main():
     )
     os.environ["USE_MOCK_ENGINE"] = "true" if use_mock else "false"
 
-    st.sidebar.markdown(f"<div style='font-size:0.75rem; color:#94a3b8; margin-top:4px;'>Corpus Version: <code>{corpus_v}</code></div>", unsafe_allow_html=True)
+    st.sidebar.markdown(f"<div style='font-size:0.75rem; color:#6B7280; margin-top:4px;'>Corpus Version: <code>{corpus_v}</code></div>", unsafe_allow_html=True)
 
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.78rem; color: #94a3b8; line-height: 1.5;">
+        <div style="font-size: 0.78rem; color: #6B7280; line-height: 1.5; margin-top: 14px;">
             <b>AI Research Copilot v1.0</b><br/>
-            Created by <b>Soham Pawar</b>
+            Built by <b>Soham Pawar</b>
         </div>
         """,
         unsafe_allow_html=True

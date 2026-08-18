@@ -1,6 +1,7 @@
 """
 Citation Network Graph Page Layout.
 Interactive paper citation graph network visualizer and relational explorer.
+Academic Scientific Instrument Styling.
 """
 
 import streamlit as st
@@ -10,14 +11,15 @@ from frontend.components.citation_graph_ui import render_citation_graph
 
 def render_citation_graph_page():
     """Render Citation Graph UI."""
-    st.markdown("## 🕸 Interactive Scientific Citation Network Graph")
+    st.markdown("<div class='academic-title' style='font-size: 1.5rem; margin-bottom: 4px;'>🕸 Interactive Scientific Citation Network Graph</div>", unsafe_allow_html=True)
     st.markdown(
-        "Explore citation relationships, foundational paper seeds, and cross-document lineage in the indexed corpus."
+        "<div style='color: #525252; font-size: 0.92rem; margin-bottom: 14px;'>Explore citation relationships, foundational paper seeds, and cross-document lineage in the indexed corpus.</div>",
+        unsafe_allow_html=True
     )
 
     graph_data = research_engine.get_citation_graph()
 
-    # Graph Network Stats Banner (Dynamically Computed)
+    # Graph Network Stats Banner
     n_nodes = len(graph_data.nodes)
     n_edges = len(graph_data.edges)
     density = (n_edges / (n_nodes * (n_nodes - 1))) if n_nodes > 1 else 0.0
@@ -39,6 +41,6 @@ def render_citation_graph_page():
     render_citation_graph(graph_data, height=580)
 
     st.info(
-        "💡 **Network Tip**: Click and drag nodes to inspect paper clusters. "
-        "Foundational seed papers (e.g. *Attention Is All You Need*, *BERT*, *RAG*) appear as larger central hubs."
+        "💡 **Network Navigation**: Click and drag nodes to inspect paper clusters. "
+        "Foundational seed papers (e.g. *Attention Is All You Need*, *BERT*, *RAG*) appear as darker primary hubs."
     )

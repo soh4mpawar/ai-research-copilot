@@ -1,9 +1,9 @@
 """
 Evaluation Metrics Card & Plotly Chart Components for RAGAS framework.
+Academic Scientific Instrument Styling.
 """
 
 import streamlit as st
-import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 from backend.contract import EvalMetrics
@@ -18,8 +18,8 @@ def render_ragas_scorecards(metrics: EvalMetrics):
             f"""
             <div class="metric-box">
                 <div class="metric-lbl">Faithfulness (Target >0.70)</div>
-                <div class="metric-val" style="color: #34d399;">{metrics.faithfulness:.2f}</div>
-                <div style="font-size: 0.75rem; color: #a5b4fc; margin-top: 4px;">✅ Exceeds Target</div>
+                <div class="metric-val">{metrics.faithfulness:.4f}</div>
+                <div style="font-size: 0.72rem; color: #1E5631; margin-top: 4px; font-weight: 500;">✓ Exceeds Target (0.70)</div>
             </div>
             """,
             unsafe_allow_html=True
@@ -30,8 +30,8 @@ def render_ragas_scorecards(metrics: EvalMetrics):
             f"""
             <div class="metric-box">
                 <div class="metric-lbl">Context Precision (Target >0.60)</div>
-                <div class="metric-val" style="color: #38bdf8;">{metrics.context_precision:.2f}</div>
-                <div style="font-size: 0.75rem; color: #a5b4fc; margin-top: 4px;">✅ Exceeds Target</div>
+                <div class="metric-val">{metrics.context_precision:.4f}</div>
+                <div style="font-size: 0.72rem; color: #1E5631; margin-top: 4px; font-weight: 500;">✓ Exceeds Target (0.60)</div>
             </div>
             """,
             unsafe_allow_html=True
@@ -42,8 +42,8 @@ def render_ragas_scorecards(metrics: EvalMetrics):
             f"""
             <div class="metric-box">
                 <div class="metric-lbl">Context Recall (Target >0.60)</div>
-                <div class="metric-val" style="color: #818cf8;">{metrics.context_recall:.2f}</div>
-                <div style="font-size: 0.75rem; color: #a5b4fc; margin-top: 4px;">✅ Exceeds Target</div>
+                <div class="metric-val">{metrics.context_recall:.4f}</div>
+                <div style="font-size: 0.72rem; color: #1E5631; margin-top: 4px; font-weight: 500;">✓ Exceeds Target (0.60)</div>
             </div>
             """,
             unsafe_allow_html=True
@@ -54,8 +54,8 @@ def render_ragas_scorecards(metrics: EvalMetrics):
             f"""
             <div class="metric-box">
                 <div class="metric-lbl">Answer Relevance (Target >0.70)</div>
-                <div class="metric-val" style="color: #f472b6;">{metrics.answer_relevance:.2f}</div>
-                <div style="font-size: 0.75rem; color: #a5b4fc; margin-top: 4px;">✅ Exceeds Target</div>
+                <div class="metric-val">{metrics.answer_relevance:.4f}</div>
+                <div style="font-size: 0.72rem; color: #1E5631; margin-top: 4px; font-weight: 500;">✓ Exceeds Target (0.70)</div>
             </div>
             """,
             unsafe_allow_html=True
@@ -63,7 +63,7 @@ def render_ragas_scorecards(metrics: EvalMetrics):
 
 
 def render_rag_vs_baseline_chart(metrics: EvalMetrics):
-    """Render RAG vs Non-RAG baseline comparative bar chart."""
+    """Render RAG vs Non-RAG baseline comparative bar chart with light academic styling."""
     categories = list(metrics.rag_vs_non_rag.keys())
     rag_scores = []
     non_rag_scores = []
@@ -75,27 +75,29 @@ def render_rag_vs_baseline_chart(metrics: EvalMetrics):
         non_rag_scores.append(non_rag_val)
 
     fig = go.Figure(data=[
-        go.Bar(name='Hybrid RAG Pipeline (Ours)', x=categories, y=rag_scores, marker_color='#6366f1'),
-        go.Bar(name='Non-RAG Gemini Baseline', x=categories, y=non_rag_scores, marker_color='#64748b')
+        go.Bar(name='Hybrid RAG Pipeline (Ours)', x=categories, y=rag_scores, marker_color='#2B4C7E'),
+        go.Bar(name='Non-RAG Baseline', x=categories, y=non_rag_scores, marker_color='#94A3B8')
     ])
 
     fig.update_layout(
-        title="RAG Pipeline vs. Non-RAG Baseline Performance Comparison",
+        title=dict(text="RAG Pipeline vs. Non-RAG Baseline Comparison", font=dict(family="Lora, Georgia, serif", size=14, color="#111827")),
         barmode='group',
-        template='plotly_dark',
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        font=dict(family="Inter, sans-serif", color="#e2e8f0"),
-        yaxis=dict(range=[0.0, 1.0], gridcolor='rgba(255,255,255,0.08)'),
-        height=380,
-        margin=dict(l=40, r=40, t=50, b=40)
+        template='plotly_white',
+        paper_bgcolor='#FFFFFF',
+        plot_bgcolor='#FFFFFF',
+        font=dict(family="Inter, sans-serif", color="#111827", size=11),
+        yaxis=dict(range=[0.0, 1.05], gridcolor='#E5E7EB', zerolinecolor='#D1D5DB'),
+        xaxis=dict(gridcolor='#F3F4F6'),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        height=360,
+        margin=dict(l=30, r=30, t=50, b=30)
     )
 
     st.plotly_chart(fig, use_container_width=True)
 
 
 def render_retrieval_stage_chart(metrics: EvalMetrics):
-    """Render retrieval strategy comparison chart (Dense vs BM25 vs RRF vs Reranker)."""
+    """Render retrieval strategy comparison chart with light academic styling."""
     stages = list(metrics.stage_comparisons.keys())
     precision = []
     recall = []
@@ -107,19 +109,21 @@ def render_retrieval_stage_chart(metrics: EvalMetrics):
         recall.append(r)
 
     fig = go.Figure(data=[
-        go.Scatter(x=stages, y=precision, mode='lines+markers', name='Precision@5', line=dict(color='#38bdf8', width=3)),
-        go.Scatter(x=stages, y=recall, mode='lines+markers', name='Recall@5', line=dict(color='#34d399', width=3))
+        go.Scatter(x=stages, y=precision, mode='lines+markers', name='Precision@5', line=dict(color='#2B4C7E', width=2), marker=dict(size=6)),
+        go.Scatter(x=stages, y=recall, mode='lines+markers', name='Recall@5', line=dict(color='#64748B', width=2, dash='dash'), marker=dict(size=6))
     ])
 
     fig.update_layout(
-        title="Retrieval Precision & Recall Gains Across Pipeline Stages",
-        template='plotly_dark',
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        font=dict(family="Inter, sans-serif", color="#e2e8f0"),
-        yaxis=dict(range=[0.3, 1.0], gridcolor='rgba(255,255,255,0.08)'),
-        height=380,
-        margin=dict(l=40, r=40, t=50, b=40)
+        title=dict(text="Retrieval Metric Trajectory Across Pipeline Stages", font=dict(family="Lora, Georgia, serif", size=14, color="#111827")),
+        template='plotly_white',
+        paper_bgcolor='#FFFFFF',
+        plot_bgcolor='#FFFFFF',
+        font=dict(family="Inter, sans-serif", color="#111827", size=11),
+        yaxis=dict(range=[0.3, 1.05], gridcolor='#E5E7EB', zerolinecolor='#D1D5DB'),
+        xaxis=dict(gridcolor='#F3F4F6'),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+        height=360,
+        margin=dict(l=30, r=30, t=50, b=30)
     )
 
     st.plotly_chart(fig, use_container_width=True)

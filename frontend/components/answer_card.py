@@ -1,7 +1,8 @@
 """
-Answer Card Component (Day 3 Polish for S).
+Answer Card Component.
 Renders grounded LLM answers, evidence confidence progress bars, interactive action toolbars,
 and rich source bibliography cards with inline abstract inspect expanders.
+Academic Scientific Instrument Styling.
 """
 
 import re
@@ -10,49 +11,49 @@ from backend.contract import QueryResult
 
 
 def make_citation_link(match):
-    """Callback function to replace [N] or **[N]** with interactive glowing HTML chip."""
+    """Callback function to replace [N] or **[N]** with interactive academic citation chip."""
     num = match.group(1)
     return f'<a href="#src-{num}" class="citation-chip" target="_self">[{num}]</a>'
 
 
 def render_answer_card(result: QueryResult):
     """Render formatted grounded answer, metadata badges, confidence bar, and rich source cards."""
-    # Calculate Evidence Confidence
     confidence_pct = 92 if result.evidence_strength == "Strong" else 76
     badge_class = "badge-strong" if result.evidence_strength == "Strong" else "badge-moderate"
+    bar_fill_color = "#2D6A4F" if result.evidence_strength == "Strong" else "#B45309"
     
     st.markdown(
         f"""
         <div class="glass-card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-                <div style="font-size: 1.3rem; font-weight: 800; color: #f8fafc; font-family: 'Outfit', sans-serif;">
-                    🔬 Research Answer
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                <div class="academic-title" style="font-size: 1.25rem;">
+                    Scientific Research Synthesis
                 </div>
-                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
                     <span class="badge-pill {badge_class}">
                         Evidence Strength: {result.evidence_strength} ({confidence_pct}%)
                     </span>
-                    <span class="badge-pill badge-indigo">
+                    <span class="badge-pill badge-slate">
                         ⏱️ Total Latency: {result.metrics.total_time_sec}s
                     </span>
                 </div>
             </div>
-            <!-- Evidence Confidence Visual Bar -->
-            <div style="width: 100%; background: rgba(30, 41, 59, 0.8); border-radius: 999px; height: 8px; overflow: hidden; margin-bottom: 14px;">
-                <div style="width: {confidence_pct}%; background: linear-gradient(90deg, #6366f1 0%, #34d399 100%); height: 100%; border-radius: 999px; box-shadow: 0 0 10px rgba(52, 211, 153, 0.6);"></div>
+            <!-- Evidence Confidence Flat Visual Bar -->
+            <div style="width: 100%; background: #E5E7EB; border-radius: 3px; height: 5px; overflow: hidden; margin-bottom: 12px;">
+                <div style="width: {confidence_pct}%; background: {bar_fill_color}; height: 100%; border-radius: 3px;"></div>
             </div>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span style="font-size: 0.78rem; color: #94a3b8;">🏷️ <b>Topic Tags</b>:</span>
-                <span class="badge-pill badge-cyan" style="font-size:0.7rem; padding: 2px 8px;">Retrieval Augmented Gen</span>
-                <span class="badge-pill badge-cyan" style="font-size:0.7rem; padding: 2px 8px;">Dense Passage Retrieval</span>
-                <span class="badge-pill badge-cyan" style="font-size:0.7rem; padding: 2px 8px;">RRF Fusion</span>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+                <span style="font-size: 0.76rem; color: #6B7280; font-weight: 500;">Topic Tags:</span>
+                <span class="badge-pill badge-outline">Retrieval Augmented Gen</span>
+                <span class="badge-pill badge-outline">Dense Passage Retrieval</span>
+                <span class="badge-pill badge-outline">RRF Fusion</span>
             </div>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    # Convert all [1], [2], **[1]**, **[2]** into glowing clickable HTML anchor chips
+    # Convert all [1], [2], **[1]**, **[2]** into clickable academic HTML anchor chips
     raw_answer = result.answer
     formatted_answer = re.sub(r'(?:\*\*|\b)?\[(\d+)\](?:\*\*|\b)?', make_citation_link, raw_answer)
 
@@ -66,7 +67,6 @@ def render_answer_card(result: QueryResult):
     with col_tb2:
         st.markdown(f"**Chunks**: `{len(result.retrieved_chunks)} Passages`")
     with col_tb3:
-        # Copy Raw Answer Text Code Expander
         with st.expander("📋 Copy Plain Text Answer"):
             st.code(raw_answer, language="markdown")
 
@@ -83,7 +83,7 @@ def render_answer_card(result: QueryResult):
             st.metric("Final Context Chunks", f"{result.metrics.final_context_chunks_count} / {result.metrics.dense_candidates_count}")
 
     st.markdown("---")
-    st.markdown("### 📚 Grounded Source Bibliography")
+    st.markdown("<div class='academic-title' style='font-size: 1.15rem; margin-bottom: 12px;'>📚 Grounded Source Bibliography</div>", unsafe_allow_html=True)
 
     # Render Sources Grid with Clickable PDF & arXiv Links + Abstract Expander
     for idx, paper in enumerate(result.sources, 1):
@@ -98,18 +98,18 @@ def render_answer_card(result: QueryResult):
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
                     <div>
                         <div class="source-title">
-                            [{idx}] <a href="{pdf_link}" target="_blank" style="color: #f8fafc; text-decoration: none; font-weight: 700;">{paper.title} 🔗</a>
+                            [{idx}] <a href="{pdf_link}" target="_blank" style="color: #111827; text-decoration: none; border-bottom: 1px solid #D1D5DB;">{paper.title} ↗</a>
                         </div>
                         <div class="source-meta">
-                            👤 <b>{authors_str}</b> &nbsp;|&nbsp; 🗓️ {paper.year} &nbsp;|&nbsp; 🏛️ {paper.venue} &nbsp;|&nbsp; 📊 {citations_fmt} citations &nbsp;|&nbsp; 🏷️ <span style="color:#38bdf8">{paper.category}</span>
+                            👤 <b>{authors_str}</b> &nbsp;|&nbsp; 🗓️ {paper.year} &nbsp;|&nbsp; 🏛️ {paper.venue} &nbsp;|&nbsp; 📊 {citations_fmt} citations &nbsp;|&nbsp; 🏷️ <code>{paper.category}</code>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
-                        <a href="{arxiv_link}" target="_blank" class="badge-pill badge-cyan" style="text-decoration: none;">
-                            📄 arXiv:{paper.arxiv_id if paper.arxiv_id else 'PDF'}
+                    <div style="display: flex; gap: 6px; align-items: center; margin-top: 2px;">
+                        <a href="{arxiv_link}" target="_blank" class="badge-pill badge-outline" style="text-decoration: none;">
+                            arXiv:{paper.arxiv_id if paper.arxiv_id else 'PDF'}
                         </a>
-                        <a href="{pdf_link}" target="_blank" class="badge-pill badge-indigo" style="text-decoration: none;">
-                            🔗 Open PDF
+                        <a href="{pdf_link}" target="_blank" class="badge-pill badge-slate" style="text-decoration: none;">
+                            Open PDF ↗
                         </a>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ def render_answer_card(result: QueryResult):
 
         # Inline Expander for Abstract & Retrieved Chunks from this specific Paper
         matching_chunks = [c for c in result.retrieved_chunks if c.paper_id == paper.paper_id or c.paper_title == paper.title]
-        with st.expander(f"🔍 Inspect Paper Abstract & Retrieved Evidence ({len(matching_chunks)} chunks retrieved)"):
+        with st.expander(f"🔍 Inspect Abstract & Retrieved Evidence ({len(matching_chunks)} chunks retrieved)"):
             if paper.abstract:
                 st.markdown(f"**Abstract**: *{paper.abstract}*")
             else:

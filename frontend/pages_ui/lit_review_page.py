@@ -1,6 +1,7 @@
 """
 Literature Review Studio Page Layout.
 Generates multi-paper synthesis, structural markdown tables, and research gap reports.
+Academic Scientific Instrument Styling.
 """
 
 import streamlit as st
@@ -10,9 +11,10 @@ from backend import research_engine
 
 def render_lit_review_page():
     """Render Literature Review Studio UI."""
-    st.markdown("## 📚 Literature Review & Multi-Paper Synthesis Studio")
+    st.markdown("<div class='academic-title' style='font-size: 1.5rem; margin-bottom: 4px;'>📚 Literature Review & Multi-Paper Synthesis Studio</div>", unsafe_allow_html=True)
     st.markdown(
-        "Synthesize overarching paradigms, architectural evolutions, and open research gaps across multiple papers simultaneously."
+        "<div style='color: #525252; font-size: 0.92rem; margin-bottom: 14px;'>Synthesize overarching paradigms, architectural evolutions, and open research gaps across multiple papers simultaneously.</div>",
+        unsafe_allow_html=True
     )
 
     # Preset Topics
@@ -22,12 +24,12 @@ def render_lit_review_page():
         "Evaluation Protocols for Large Language Model Hallucinations in RAG"
     ]
 
-    selected_topic = st.selectbox("Select or enter a literature review topic:", preset_topics)
+    selected_topic = st.selectbox("Select literature review topic focus:", preset_topics)
     custom_topic = st.text_input("Or specify custom topic focus:", placeholder="e.g. Multi-modal document parsing and layout extraction...")
 
     topic_to_run = custom_topic.strip() if custom_topic.strip() else selected_topic
 
-    if st.button("🚀 Generate Multi-Paper Literature Review", type="primary"):
+    if st.button("Generate Multi-Paper Literature Review", type="primary"):
         with st.spinner("Synthesizing multi-paper evidence matrix & generating comparison tables..."):
             lit_res = research_engine.generate_lit_review(topic_to_run)
 
@@ -37,7 +39,7 @@ def render_lit_review_page():
         st.markdown(lit_res.introduction)
 
         # Multi-Paper Comparison Matrix Table
-        st.markdown("### 📊 Multi-Paper Comparative Summary Matrix")
+        st.markdown("<div class='academic-title' style='font-size: 1.15rem; margin-top: 14px; margin-bottom: 8px;'>📊 Multi-Paper Comparative Summary Matrix</div>", unsafe_allow_html=True)
         df_comp = pd.DataFrame(lit_res.comparison_table)
         st.dataframe(
             df_comp,
@@ -55,9 +57,16 @@ def render_lit_review_page():
         st.markdown(lit_res.methodology_synthesis)
 
         # Research Gaps Section
-        st.markdown("### 🔍 Identified Research Gaps & Open Challenges")
+        st.markdown("<div class='academic-title' style='font-size: 1.15rem; margin-top: 16px; margin-bottom: 8px;'>🔍 Identified Research Gaps & Open Challenges</div>", unsafe_allow_html=True)
         for idx, gap in enumerate(lit_res.identified_research_gaps, 1):
-            st.error(f"**Gap #{idx}**: {gap}")
+            st.markdown(
+                f"""
+                <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-left: 3px solid #D97706; border-radius: 4px; padding: 10px 14px; margin-bottom: 8px; font-size: 0.88rem; color: #92400E;">
+                    <b>Gap #{idx}</b>: {gap}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
 
         st.markdown(lit_res.conclusion)
 
