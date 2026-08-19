@@ -111,7 +111,7 @@ def inject_theme():
             }
 
             /* ====================================================================
-               2. SIDEBAR FULL DARK STYLING (Including Radio Navigation Labels)
+               2. SIDEBAR FULL DARK STYLING (Modern Nav Rows & Icon Integration)
                ==================================================================== */
             [data-testid="stSidebar"],
             [data-testid="stSidebarContent"],
@@ -122,21 +122,108 @@ def inject_theme():
                 border-right: 1px solid #2E3238 !important;
             }
 
+            /* Section Headers */
+            .sidebar-section-header {
+                color: #9CA3AF !important;
+            }
+
+            /* Info Card */
+            .sidebar-info-card {
+                background: #1E2126 !important;
+                border: 1px solid #2E3238 !important;
+                color: #E8E8E6 !important;
+            }
+
+            /* Footer */
+            .sidebar-footer {
+                border-top: 1px solid #2E3238 !important;
+            }
+
+            .sidebar-repo-link {
+                color: #7AA2DC !important;
+            }
+
             /* Universal Sidebar Text & Radio Label Colors */
             [data-testid="stSidebar"] p,
             [data-testid="stSidebar"] span,
             [data-testid="stSidebar"] label,
             [data-testid="stSidebar"] div,
             [data-testid="stSidebar"] [role="radiogroup"] *,
-            [data-testid="stSidebar"] [role="radiogroup"] p,
-            [data-testid="stSidebar"] [role="radiogroup"] label,
-            [data-testid="stSidebar"] [role="radiogroup"] span,
             [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
             [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] span,
-            [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] div,
             [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
             [data-testid="stSidebar"] [data-testid="stWidgetLabel"] span {
                 color: #E8E8E6 !important;
+            }
+
+            /* Custom Nav-List Style in Dark Mode */
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"] {
+                background: transparent !important;
+                border-left: 3px solid transparent !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"] > div,
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"] > div > div,
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"] [data-testid="stMarkdownContainer"] {
+                display: flex !important;
+                align-items: center !important;
+                width: 100% !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"][data-selected="true"] {
+                background-color: #262A30 !important;
+                border-left: 3px solid #5B7FB5 !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"][data-selected="true"] p {
+                color: #FFFFFF !important;
+                font-weight: 600 !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"]:not([data-selected="true"]):hover {
+                background-color: #1E2126 !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"] p {
+                color: #D1D5DB !important;
+                display: inline-block !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                line-height: 1 !important;
+            }
+
+            /* SVG Navigation Icons in Dark Mode (%237AA2DC stroke) */
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"] [data-testid="stMarkdownContainer"]::before {
+                content: "";
+                display: inline-block !important;
+                width: 16px !important;
+                height: 16px !important;
+                min-width: 16px !important;
+                margin-right: 9px !important;
+                flex-shrink: 0 !important;
+                background-repeat: no-repeat !important;
+                background-size: contain !important;
+                background-position: center !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"]:nth-of-type(1) [data-testid="stMarkdownContainer"]::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237AA2DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"]:nth-of-type(2) [data-testid="stMarkdownContainer"]::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237AA2DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'%3E%3C/path%3E%3Cpath d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'%3E%3C/path%3E%3C/svg%3E") !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"]:nth-of-type(3) [data-testid="stMarkdownContainer"]::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237AA2DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cline x1='16' y1='13' x2='8' y2='13'%3E%3C/line%3E%3Cline x1='16' y1='17' x2='8' y2='17'%3E%3C/line%3E%3Cpolyline points='10 9 9 9 8 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"]:nth-of-type(4) [data-testid="stMarkdownContainer"]::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237AA2DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='16' y='16' width='6' height='6' rx='1'%3E%3C/rect%3E%3Crect x='2' y='16' width='6' height='6' rx='1'%3E%3C/rect%3E%3Crect x='9' y='2' width='6' height='6' rx='1'%3E%3C/rect%3E%3Cpath d='M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3'%3E%3C/path%3E%3Cline x1='12' y1='12' x2='12' y2='8'%3E%3C/line%3E%3C/svg%3E") !important;
+            }
+
+            [data-testid="stSidebar"] [role="radiogroup"] label[data-testid="stRadioOption"]:nth-of-type(5) [data-testid="stMarkdownContainer"]::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237AA2DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='20' x2='18' y2='10'%3E%3C/line%3E%3Cline x1='12' y1='20' x2='12' y2='4'%3E%3C/line%3E%3Cline x1='6' y1='20' x2='6' y2='14'%3E%3C/line%3E%3C/svg%3E") !important;
             }
 
             [data-testid="stSidebar"] code {

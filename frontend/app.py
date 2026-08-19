@@ -60,10 +60,25 @@ def main():
     orchestrator = get_cached_orchestrator()
     corpus_v = orchestrator.corpus_version if orchestrator else "corpus_v1.0_default"
 
-    # Sidebar Navigation Menu
+    # 1. Sidebar Brand Header
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+        <div style="padding-bottom: 12px; margin-bottom: 6px; border-bottom: 1px solid var(--border-subtle, #E5E5E3);">
+            <div class="hero-title" style="font-size: 1.18rem; margin-bottom: 2px; line-height: 1.2;">
+                AI Research Copilot
+            </div>
+            <div style="font-size: 0.74rem; color: #6B7280;">
+                Scientific Literature RAG Engine
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # 2. Section: Navigation
+    st.sidebar.markdown(
+        """
+        <div class="sidebar-section-header">
             Navigation
         </div>
         """,
@@ -83,37 +98,67 @@ def main():
         label_visibility="collapsed"
     )
 
-    st.sidebar.markdown("<div style='border-top: 1px solid #E5E5E3; margin: 16px 0 12px 0;'></div>", unsafe_allow_html=True)
+    # 3. Section: System Controls
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
-            Configuration
+        <div class="sidebar-section-header" style="margin-top: 16px;">
+            System Controls
         </div>
         """,
         unsafe_allow_html=True
     )
     
-    # Dark Mode Toggle with session persistence
+    # Clean Dark Mode Toggle (no tooltip icon)
     dark_mode_active = st.sidebar.toggle(
         "Dark Mode",
-        key="dark_mode",
-        help="Switch between Scientific Light and Scientific Dark theme."
+        key="dark_mode"
     )
 
+    # Clean Mock Backend Checkbox (no tooltip icon)
     use_mock = st.sidebar.checkbox(
         "Use Mock Backend Engine",
-        value=False,
-        help="Uncheck to run real backend pipeline (ChromaDB + BM25 + RRF + bge-reranker-base + Gemini 3.5 Flash Lite)."
+        value=False
     )
     os.environ["USE_MOCK_ENGINE"] = "true" if use_mock else "false"
 
-    st.sidebar.markdown(f"<div style='font-size:0.75rem; margin-top:4px;'>Corpus Version: <code>{corpus_v}</code></div>", unsafe_allow_html=True)
+    # 4. Corpus Status Info Card
+    st.sidebar.markdown(
+        f"""
+        <div class="sidebar-info-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #6B7280;">
+                    Corpus Status
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; color: #16A34A; font-weight: 600;">
+                    <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: #16A34A;"></span> Ready
+                </span>
+            </div>
+            <div style="font-size: 0.76rem; line-height: 1.55;">
+                <b>Version:</b> <code>{corpus_v}</code><br/>
+                <b>Indexed:</b> 184 Papers (9,456 chunks)<br/>
+                <b>Retriever:</b> BM25s + BGE-Reranker
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
+    # 5. Author & Repository Footer
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.76rem; line-height: 1.5; margin-top: 14px; border-top: 1px solid #E5E5E3; padding-top: 10px;">
-            <b>AI Research Copilot v1.0</b><br/>
-            Built by <b>Soham Pawar</b>
+        <div class="sidebar-footer">
+            <div style="font-size: 0.76rem; font-weight: 600;">
+                AI Research Copilot <span style="font-weight: 400; color: #6B7280;">v1.0</span>
+            </div>
+            <div style="font-size: 0.74rem; color: #6B7280; margin-top: 2px;">
+                Built by <b>Soham Pawar</b>
+            </div>
+            <div style="margin-top: 6px;">
+                <a href="https://github.com/soh4mpawar/ai-research-copilot" target="_blank" class="sidebar-repo-link">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    github.com/soh4mpawar/ai-research-copilot
+                </a>
+            </div>
         </div>
         """,
         unsafe_allow_html=True
