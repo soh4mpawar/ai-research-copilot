@@ -184,6 +184,9 @@ def inject_theme():
                 border: 1px solid #2E3238 !important;
                 color: #E8E8E6 !important;
             }
+            .source-card {
+                scroll-margin-top: 80px;
+            }
 
             /* Evidence Cards */
             .evidence-card {

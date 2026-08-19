@@ -12,10 +12,36 @@ from frontend.components.icons import svg_icon
 from frontend.styles.theme import get_theme_colors
 
 
-def make_citation_link(match):
-    """Callback function to replace [N] or **[N]** with interactive academic citation chip."""
-    num = match.group(1)
-    return f'<a href="#src-{num}" class="citation-chip" target="_self">[{num}]</a>'
+def format_citation_links(text: str) -> str:
+    """Replace all single and multi-number citation brackets like [3], [1, 2, 6], [4, 5], [1-3]
+
+    with interactive academic citation anchor badge chips.
+    """
+    def replace_citation(match):
+        inner = match.group(1)
+        # Parse tokens separated by commas, semicolons, or whitespace
+        tokens = [t.strip() for t in re.split(r'[,;]+', inner) if t.strip()]
+        nums = []
+        for tok in tokens:
+            # Handle hyphenated ranges e.g. 1-3 or 1–3
+            if '-' in tok or '–' in tok:
+                parts = re.split(r'[-–]', tok)
+                if len(parts) == 2 and parts[0].strip().isdigit() and parts[1].strip().isdigit():
+                    start, end = int(parts[0]), int(parts[1])
+                    if 0 < end - start <= 10:
+                        nums.extend([str(i) for i in range(start, end + 1)])
+                        continue
+            if tok.isdigit():
+                nums.append(tok)
+        if not nums:
+            return match.group(0)
+        
+        # Render clean adjacent styled citation chips with anchor link targets
+        chips = [f'<a href="#src-{n}" class="citation-chip" target="_self">[{n}]</a>' for n in nums]
+        return " ".join(chips)
+
+    # Match bracketed citations containing digits, commas, spaces, dashes (e.g. [3], [1, 2, 6], **[4, 5]**)
+    return re.sub(r'(?:\*\*)?\[([\d\s,–-]+)\](?:\*\*)?', replace_citation, text)
 
 
 def render_answer_card(result: QueryResult):
@@ -60,9 +86,9 @@ def render_answer_card(result: QueryResult):
         unsafe_allow_html=True
     )
 
-    # Convert all [1], [2], **[1]**, **[2]** into clickable academic HTML anchor chips
+    # Format all citations (single [1] and multi-number [1, 2, 6], [4, 5]) into interactive anchor chips
     raw_answer = result.answer
-    formatted_answer = re.sub(r'(?:\*\*|\b)?\[(\d+)\](?:\*\*|\b)?', make_citation_link, raw_answer)
+    formatted_answer = format_citation_links(raw_answer)
 
     # Render Main Answer Markdown/HTML directly so markdown headings/lists parse natively
     st.markdown(formatted_answer, unsafe_allow_html=True)
