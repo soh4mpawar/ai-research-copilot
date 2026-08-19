@@ -96,7 +96,6 @@ def main():
     # Dark Mode Toggle with session persistence
     dark_mode_active = st.sidebar.toggle(
         "Dark Mode",
-        value=st.session_state.get("dark_mode", False),
         key="dark_mode",
         help="Switch between Scientific Light and Scientific Dark theme."
     )

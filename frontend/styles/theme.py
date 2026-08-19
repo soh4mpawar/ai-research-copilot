@@ -1,6 +1,6 @@
 """
 Dynamic Theme Engine (Light & Scientific Dark Mode).
-Provides color tokens and CSS injection based on session state.
+Provides color tokens and comprehensive CSS injection targeting live DOM structures.
 """
 
 import streamlit as st
@@ -84,98 +84,207 @@ def inject_theme():
         st.markdown(
             """
             <style>
-            /* Base Canvas & Streamlit Header */
-            .stApp {
+            /* ====================================================================
+               1. FULL-VIEWPORT DARK ROOT & CHROME OVERRIDES
+               ==================================================================== */
+            html, body, .stApp, [data-testid="stAppViewContainer"], section.main {
                 background-color: #16181C !important;
-                color: #E8E8E6 !important;
-            }
-            header[data-testid="stHeader"],
-            [data-testid="stHeader"] {
                 background: #16181C !important;
-                background-color: #16181C !important;
-            }
-            [data-testid="stToolbar"] *,
-            [data-testid="stHeader"] * {
                 color: #E8E8E6 !important;
             }
 
-            /* Sidebar All Elements */
-            [data-testid="stSidebar"] {
+            /* Top Streamlit Header / AppToolbar Strip */
+            header,
+            .stAppHeader,
+            [data-testid="stHeader"],
+            header.stAppHeader,
+            header[data-testid="stHeader"],
+            [data-testid="stAppHeader"],
+            [data-testid="stToolbar"] {
+                background-color: #16181C !important;
+                background: #16181C !important;
+                color: #E8E8E6 !important;
+            }
+
+            header *, [data-testid="stHeader"] * {
+                color: #E8E8E6 !important;
+            }
+
+            /* ====================================================================
+               2. SIDEBAR FULL DARK STYLING (Including Radio Navigation Labels)
+               ==================================================================== */
+            [data-testid="stSidebar"],
+            [data-testid="stSidebarContent"],
+            [data-testid="stSidebarUserContent"],
+            section[data-testid="stSidebar"] {
                 background-color: #1A1D21 !important;
+                background: #1A1D21 !important;
                 border-right: 1px solid #2E3238 !important;
             }
-            [data-testid="stSidebar"] div,
-            [data-testid="stSidebar"] label,
-            [data-testid="stSidebar"] span,
+
+            /* Universal Sidebar Text & Radio Label Colors */
             [data-testid="stSidebar"] p,
-            [data-testid="stSidebar"] [data-testid="stRadio"] label,
-            [data-testid="stSidebar"] [data-testid="stRadio"] label p,
-            [data-testid="stSidebar"] [data-testid="stRadio"] label span,
-            [data-testid="stSidebar"] [data-testid="stRadio"] label div,
-            [data-testid="stSidebar"] .stMarkdown p,
+            [data-testid="stSidebar"] span,
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] div,
+            [data-testid="stSidebar"] [role="radiogroup"] *,
+            [data-testid="stSidebar"] [role="radiogroup"] p,
+            [data-testid="stSidebar"] [role="radiogroup"] label,
+            [data-testid="stSidebar"] [role="radiogroup"] span,
             [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
             [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] span,
+            [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] div,
             [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
             [data-testid="stSidebar"] [data-testid="stWidgetLabel"] span {
                 color: #E8E8E6 !important;
             }
+
             [data-testid="stSidebar"] code {
                 background-color: #262A30 !important;
                 color: #E2E8F0 !important;
                 border: 1px solid #3E444E !important;
             }
 
-            /* Main Canvas Markdown & Text */
+            [data-testid="stSidebar"] hr {
+                border-color: #2E3238 !important;
+            }
+
+            /* ====================================================================
+               3. MAIN CANVAS CONTENT & TYPOGRAPHY
+               ==================================================================== */
             [data-testid="stMarkdownContainer"] p,
             [data-testid="stMarkdownContainer"] span,
-            [data-testid="stMarkdownContainer"] li {
+            [data-testid="stMarkdownContainer"] li,
+            [data-testid="stMarkdownContainer"] div {
                 color: #E8E8E6 !important;
             }
 
-            /* Cards & Panels */
-            .glass-card, .source-card, .metric-box {
-                background: #1E2126 !important;
-                border: 1px solid #2E3238 !important;
-                color: #E8E8E6 !important;
-            }
-            .hero-title, .academic-title, .source-title, h1, h2, h3, h4, h5, h6,
+            .hero-title, .academic-title, .source-title,
+            h1, h2, h3, h4, h5, h6,
             [data-testid="stMarkdownContainer"] h1,
             [data-testid="stMarkdownContainer"] h2,
             [data-testid="stMarkdownContainer"] h3,
             [data-testid="stMarkdownContainer"] h4 {
                 color: #F3F4F6 !important;
             }
+
             .hero-subtitle, .source-meta, .metric-lbl {
                 color: #9CA3AF !important;
             }
+
             .metric-val {
                 color: #F3F4F6 !important;
             }
 
-            /* Labels & Form Widgets */
-            [data-testid="stWidgetLabel"] p,
-            [data-testid="stWidgetLabel"] span,
-            [data-testid="stWidgetLabel"] div,
-            label[data-testid="stWidgetLabel"] p,
-            label[data-testid="stWidgetLabel"] span,
-            label[data-baseweb="checkbox"] p,
-            label[data-baseweb="checkbox"] span,
-            label[data-baseweb="checkbox"] div {
+            /* ====================================================================
+               4. CARDS & ELEVATED PANELS
+               ==================================================================== */
+            .glass-card, .source-card, .metric-box, .answer-box {
+                background: #1E2126 !important;
+                border: 1px solid #2E3238 !important;
                 color: #E8E8E6 !important;
             }
-            input[type="text"], textarea, [data-baseweb="input"] input {
+
+            /* Evidence Cards */
+            .evidence-card {
+                background: #1E2126 !important;
+                border: 1px solid #2E3238 !important;
+                border-left: 3px solid #5B7FB5 !important;
+            }
+
+            .evidence-text {
+                background: #16181C !important;
+                color: #E2E8F0 !important;
+                border: 1px solid #2E3238 !important;
+            }
+
+            .evidence-header {
+                color: #9CA3AF !important;
+            }
+
+            /* Expanders */
+            [data-testid="stExpander"],
+            details[data-testid="stExpander"],
+            [data-testid="stExpander"] summary,
+            details[data-testid="stExpander"] summary,
+            [data-testid="stExpander"] > details > summary {
                 background-color: #1E2126 !important;
+                background: #1E2126 !important;
+                color: #F3F4F6 !important;
+                border-color: #2E3238 !important;
+            }
+            [data-testid="stExpander"] summary:hover {
+                background-color: #262A30 !important;
+            }
+            [data-testid="stExpander"] summary p,
+            [data-testid="stExpander"] summary span,
+            [data-testid="stExpander"] summary svg {
+                color: #F3F4F6 !important;
+                fill: #F3F4F6 !important;
+            }
+
+            /* ====================================================================
+               5. INPUT CONTROLS, DROPDOWNS & BUTTONS
+               ==================================================================== */
+            [data-testid="stWidgetLabel"] p,
+            [data-testid="stWidgetLabel"] span,
+            [data-testid="stWidgetLabel"] label,
+            label[data-testid="stWidgetLabel"] p,
+            label[data-baseweb="checkbox"] p,
+            label[data-baseweb="checkbox"] span {
+                color: #E8E8E6 !important;
+            }
+
+            [data-testid="stTextInputRootElement"],
+            [data-testid="stTextInputRootElement"] input,
+            [data-baseweb="input"],
+            [data-baseweb="input"] input,
+            input[type="text"], textarea {
+                background-color: #1E2126 !important;
+                background: #1E2126 !important;
                 color: #F3F4F6 !important;
                 border: 1px solid #2E3238 !important;
             }
+
+            [data-baseweb="select"],
+            [data-baseweb="select"] > div,
             [data-baseweb="select"] div,
             [data-baseweb="select"] span {
                 background-color: #1E2126 !important;
+                background: #1E2126 !important;
                 color: #F3F4F6 !important;
                 border-color: #2E3238 !important;
             }
 
-            /* Badges */
+            /* Primary and Secondary Buttons */
+            button[kind="primary"] {
+                background-color: #3B6199 !important;
+                color: #FFFFFF !important;
+                border: 1px solid #4A73B0 !important;
+            }
+            button[kind="primary"] * {
+                color: #FFFFFF !important;
+            }
+            button[kind="primary"]:hover {
+                background-color: #4A73B0 !important;
+            }
+
+            button[kind="secondary"] {
+                background-color: #1E2126 !important;
+                background: #1E2126 !important;
+                border: 1px solid #3E444E !important;
+            }
+            button[kind="secondary"] * {
+                color: #E8E8E6 !important;
+            }
+            button[kind="secondary"]:hover {
+                background-color: #262A30 !important;
+                border-color: #4B5563 !important;
+            }
+
+            /* ====================================================================
+               6. BADGES & CITATION CHIPS
+               ==================================================================== */
             .badge-outline {
                 background: #1E2126 !important;
                 color: #E2E8F0 !important;
@@ -197,7 +306,6 @@ def inject_theme():
                 border: 1px solid #854D0E !important;
             }
 
-            /* Citation Chips */
             [data-testid="stMarkdownContainer"] a.citation-chip, a.citation-chip {
                 background: #262A30 !important;
                 color: #E2E8F0 !important;
@@ -209,68 +317,18 @@ def inject_theme():
                 border-color: #6B7280 !important;
             }
 
-            /* Evidence Cards */
-            .evidence-card {
-                background: #1E2126 !important;
-                border: 1px solid #2E3238 !important;
-                border-left: 3px solid #5B7FB5 !important;
-            }
-            .evidence-text {
-                background: #16181C !important;
-                color: #E2E8F0 !important;
-                border: 1px solid #2E3238 !important;
-            }
-            .evidence-header {
-                color: #9CA3AF !important;
-            }
-
-            /* Expanders & Tabs */
-            [data-testid="stExpander"] {
-                background: #1E2126 !important;
-                border: 1px solid #2E3238 !important;
-                color: #E8E8E6 !important;
-            }
+            /* Tabs */
             [data-testid="stTabs"] [data-baseweb="tab-list"] {
                 border-bottom: 1px solid #2E3238 !important;
             }
             [data-testid="stTabs"] [data-baseweb="tab"] p,
-            [data-testid="stTabs"] [data-baseweb="tab"] span,
-            [data-testid="stTabs"] [data-baseweb="tab"] {
+            [data-testid="stTabs"] [data-baseweb="tab"] span {
                 color: #9CA3AF !important;
             }
             [data-testid="stTabs"] [aria-selected="true"] p,
-            [data-testid="stTabs"] [aria-selected="true"] span,
-            [data-testid="stTabs"] [aria-selected="true"] {
+            [data-testid="stTabs"] [aria-selected="true"] span {
                 color: #7AA2DC !important;
                 border-bottom: 2px solid #7AA2DC !important;
-            }
-
-            /* Buttons */
-            button[kind="primary"] {
-                background-color: #3B6199 !important;
-                color: #FFFFFF !important;
-                border: 1px solid #4A73B0 !important;
-            }
-            button[kind="primary"] p,
-            button[kind="primary"] span,
-            button[kind="primary"] div {
-                color: #FFFFFF !important;
-            }
-            button[kind="primary"]:hover {
-                background-color: #4A73B0 !important;
-            }
-            button[kind="secondary"] {
-                background-color: #1E2126 !important;
-                border: 1px solid #3E444E !important;
-            }
-            button[kind="secondary"] p,
-            button[kind="secondary"] span,
-            button[kind="secondary"] div {
-                color: #E8E8E6 !important;
-            }
-            button[kind="secondary"]:hover {
-                background-color: #262A30 !important;
-                border-color: #4B5563 !important;
             }
 
             /* Dividers */

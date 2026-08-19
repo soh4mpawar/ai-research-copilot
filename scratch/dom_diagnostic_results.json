@@ -1,0 +1,1021 @@
+{
+  "containers": {
+    "body": {
+      "exists": true,
+      "className": "",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "block",
+      "boxShadow": "none"
+    },
+    ".stApp": {
+      "exists": true,
+      "className": "stApp stAppEmbeddingId-tk0g9ofev03b streamlit-wide st-emotion-cache-9zva62 e1vju3fw0",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "block",
+      "boxShadow": "none"
+    },
+    "[data-testid=\"stAppViewContainer\"]": {
+      "exists": true,
+      "className": "stAppViewContainer appview-container st-emotion-cache-1yiq2ps e15ve43o0",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "flex",
+      "boxShadow": "none"
+    },
+    "[data-testid=\"stHeader\"]": {
+      "exists": true,
+      "className": "stAppHeader st-emotion-cache-1s168c2 e1yxiy6j1",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "flex",
+      "boxShadow": "none"
+    },
+    "header": {
+      "exists": true,
+      "className": "stAppHeader st-emotion-cache-1s168c2 e1yxiy6j1",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "flex",
+      "boxShadow": "none"
+    },
+    ".stAppHeader": {
+      "exists": true,
+      "className": "stAppHeader st-emotion-cache-1s168c2 e1yxiy6j1",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "flex",
+      "boxShadow": "none"
+    },
+    "[data-testid=\"stToolbar\"]": {
+      "exists": true,
+      "className": "stAppToolbar st-emotion-cache-14vh5up e1yxiy6j2",
+      "background": "rgb(22, 24, 28)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "flex",
+      "boxShadow": "none"
+    },
+    "section.main": {
+      "exists": false
+    },
+    "[data-testid=\"stSidebar\"]": {
+      "exists": true,
+      "className": "stSidebar st-emotion-cache-1r810ct eelgd2m0",
+      "background": "rgb(26, 29, 33)",
+      "backgroundImage": "none",
+      "color": "rgb(26, 26, 26)",
+      "display": "block",
+      "boxShadow": "none"
+    },
+    "[data-testid=\"stSidebarContent\"]": {
+      "exists": true,
+      "className": "st-emotion-cache-1csi29a eelgd2m2",
+      "background": "rgb(26, 29, 33)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "block",
+      "boxShadow": "none"
+    },
+    "[data-testid=\"stSidebarUserContent\"]": {
+      "exists": true,
+      "className": "st-emotion-cache-1r1cntt eelgd2m1",
+      "background": "rgb(26, 29, 33)",
+      "backgroundImage": "none",
+      "color": "rgb(232, 232, 230)",
+      "display": "block",
+      "boxShadow": "none"
+    },
+    "[data-testid=\"stBottom\"]": {
+      "exists": false
+    },
+    "[data-testid=\"stDecoration\"]": {
+      "exists": false
+    }
+  },
+  "sidebar_radio_nodes": [
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-1qd9tq8 e1kt9bl70",
+      "innerText": "Select System View:",
+      "textContent": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "none"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "Select System View:",
+      "textContent": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "inline"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-l9rqpn etxdrby0",
+      "innerText": "Select System View:",
+      "textContent": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Select System View:",
+      "textContent": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-16482qj etak9230",
+      "innerText": "Research QA Engine\n\nLiterature Review Studio\n\nScientific Paper Explorer\n\nCitation Network Graph\n\nEvaluation & RAGAS Dashboard",
+      "textContent": "Research QA EngineLiterature Review StudioScientific Paper ExplorerCitation Network GraphEvaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Research QA Engine",
+      "textContent": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "INPUT",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "inline-block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-5fy9m etak9232",
+      "innerText": "Research QA Engine",
+      "textContent": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-19nzcwv etak9233",
+      "innerText": "Research QA Engine",
+      "textContent": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-dfj60m etak9234",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgb(43, 76, 126)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-16jqfj2 etak9235",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgb(255, 255, 255)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-l9rqpn etxdrby0",
+      "innerText": "Research QA Engine",
+      "textContent": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Research QA Engine",
+      "textContent": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Literature Review Studio",
+      "textContent": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "INPUT",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "inline-block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-5fy9m etak9232",
+      "innerText": "Literature Review Studio",
+      "textContent": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-19nzcwv etak9233",
+      "innerText": "Literature Review Studio",
+      "textContent": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-11p8r22 etak9234",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(26, 26, 26, 0.2)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgb(245, 245, 244)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-l9rqpn etxdrby0",
+      "innerText": "Literature Review Studio",
+      "textContent": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Literature Review Studio",
+      "textContent": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Scientific Paper Explorer",
+      "textContent": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "INPUT",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "inline-block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-5fy9m etak9232",
+      "innerText": "Scientific Paper Explorer",
+      "textContent": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-19nzcwv etak9233",
+      "innerText": "Scientific Paper Explorer",
+      "textContent": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-11p8r22 etak9234",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(26, 26, 26, 0.2)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgb(245, 245, 244)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-l9rqpn etxdrby0",
+      "innerText": "Scientific Paper Explorer",
+      "textContent": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Scientific Paper Explorer",
+      "textContent": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Citation Network Graph",
+      "textContent": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "INPUT",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "inline-block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-5fy9m etak9232",
+      "innerText": "Citation Network Graph",
+      "textContent": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-19nzcwv etak9233",
+      "innerText": "Citation Network Graph",
+      "textContent": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-11p8r22 etak9234",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(26, 26, 26, 0.2)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgb(245, 245, 244)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-l9rqpn etxdrby0",
+      "innerText": "Citation Network Graph",
+      "textContent": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Citation Network Graph",
+      "textContent": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "textContent": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "INPUT",
+      "className": "",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "inline-block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-5fy9m etak9232",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "textContent": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-19nzcwv etak9233",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "textContent": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-11p8r22 etak9234",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(26, 26, 26, 0.2)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "flex"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "innerText": "",
+      "textContent": "",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgb(245, 245, 244)",
+      "fontSize": "16px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-l9rqpn etxdrby0",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "textContent": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "textContent": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "14px",
+      "visibility": "visible",
+      "opacity": "1",
+      "display": "block"
+    }
+  ],
+  "sidebar_labels": [
+    {
+      "tagName": "SPAN",
+      "className": "st-emotion-cache-2x5h05 ewh6kot2",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "st-emotion-cache-cxrtzv ed4y4ls0",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-1qd9tq8 e1kt9bl70",
+      "innerText": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Select System View:",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Research QA Engine",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Literature Review Studio",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Scientific Paper Explorer",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Citation Network Graph",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-qjdvoj etak9231",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Evaluation & RAGAS Dashboard",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-1yv6p8i ew2p8o4",
+      "innerText": "Dark Mode",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Dark Mode",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "st-emotion-cache-1whk732 e1kt9bl73",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "stTooltipIcon st-emotion-cache-vxn5jv eqmt79k1",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "stTooltipHoverTarget",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "LABEL",
+      "className": "st-emotion-cache-1yv6p8i ew2p8o2",
+      "innerText": "Use Mock Backend Engine",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "P",
+      "className": "",
+      "innerText": "Use Mock Backend Engine",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "st-emotion-cache-1whk732 e1kt9bl73",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "stTooltipIcon st-emotion-cache-vxn5jv eqmt79k1",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    },
+    {
+      "tagName": "SPAN",
+      "className": "stTooltipHoverTarget",
+      "innerText": "",
+      "color": "rgb(232, 232, 230)",
+      "opacity": "1"
+    }
+  ],
+  "light_elements": [
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-16jqfj2 etak9235",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(255, 255, 255)",
+      "width": 6,
+      "height": 6,
+      "top": 113.1875,
+      "left": 45
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(245, 245, 244)",
+      "width": 14,
+      "height": 14,
+      "top": 131.578125,
+      "left": 41
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(245, 245, 244)",
+      "width": 14,
+      "height": 14,
+      "top": 153.96875,
+      "left": 41
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(245, 245, 244)",
+      "width": 14,
+      "height": 14,
+      "top": 176.359375,
+      "left": 41
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-1f7en7u etak9235",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(245, 245, 244)",
+      "width": 14,
+      "height": 14,
+      "top": 198.75,
+      "left": 41
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-pmd0l9 ew2p8o6",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(245, 245, 244)",
+      "width": 12,
+      "height": 12,
+      "top": 296.953125,
+      "left": 58
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-3fo2sq ew2p8o3",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(250, 250, 250)",
+      "width": 16,
+      "height": 16,
+      "top": 334.953125,
+      "left": 40
+    },
+    {
+      "tagName": "DIV",
+      "className": "st-emotion-cache-4g074 e1fp86qc0",
+      "id": "",
+      "testId": null,
+      "bg": "rgb(245, 245, 244)",
+      "width": 237,
+      "height": 40,
+      "top": 497.921875,
+      "left": 1123
+    }
+  ]
+}

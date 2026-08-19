@@ -5,11 +5,25 @@ rich paper metadata cards, and structured AI paper summaries.
 Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-Theme Aware).
 """
 
+import re
 import streamlit as st
 import pandas as pd
 from backend import research_engine
 from frontend.components.icons import svg_icon
 from frontend.styles.theme import get_theme_colors
+
+
+def clean_abstract_text(raw_abstract: str) -> str:
+    """Clean raw extracted PDF text artifacts (e.g. arXiv headers, emails, author lines)."""
+    if not raw_abstract:
+        return "No abstract available for this publication."
+    # Remove common PDF extraction headers like arXiv:..., Published as...
+    cleaned = re.sub(r"arXiv:\S+\s*(\[.*?\])?\s*(\d+\s+[A-Za-z]+\s+\d{4})?", "", raw_abstract, flags=re.IGNORECASE)
+    cleaned = re.sub(r"Published as a conference paper at.*?\n", "", cleaned, flags=re.IGNORECASE)
+    # Clean broken hyphenated words
+    cleaned = re.sub(r"(\w+)\s*-\s*(\w+)", r"\1-\2", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return cleaned
 
 
 def render_paper_explorer_page():
@@ -95,6 +109,7 @@ def render_paper_explorer_page():
         pdf_link = p.pdf_url if p.pdf_url else (f"https://arxiv.org/pdf/{p.arxiv_id}.pdf" if p.arxiv_id else "https://arxiv.org")
         arxiv_link = f"https://arxiv.org/abs/{p.arxiv_id}" if p.arxiv_id else pdf_link
         citations_fmt = f"{p.citation_count:,}" if p.citation_count else "1,200+"
+        cleaned_abs = clean_abstract_text(p.abstract)
 
         with st.expander(f"[{idx}] {p.title} ({p.year}) — {authors_str} ({citations_fmt} citations)", expanded=(idx == 1)):
             st.markdown(
@@ -122,7 +137,7 @@ def render_paper_explorer_page():
 
             # Abstract & AI Structured Summary
             st.markdown(f"<div class='academic-title' style='font-size: 0.95rem; margin-top: 6px; margin-bottom: 4px; color: {colors['text_primary']};'>Abstract</div>", unsafe_allow_html=True)
-            st.markdown(f"*{p.abstract}*")
+            st.markdown(f"*{cleaned_abs}*")
 
             st.markdown(f"<div class='academic-title' style='font-size: 0.95rem; margin-top: 12px; margin-bottom: 4px; color: {colors['text_primary']};'>AI Structured Summary &amp; Section Layout</div>", unsafe_allow_html=True)
             col_sum1, col_sum2 = st.columns(2)
