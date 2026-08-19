@@ -1,7 +1,7 @@
 """
 Citation Graph Visualizer Component.
 Generates an interactive PyVis / NetworkX citation network embedded directly into Streamlit.
-Academic Scientific Instrument Styling.
+Academic Scientific Instrument Styling (Dual-Theme Aware, Zero Emojis).
 """
 
 import tempfile
@@ -9,24 +9,28 @@ import streamlit as st
 import streamlit.components.v1 as components
 from pyvis.network import Network
 from backend.contract import CitationGraphData
+from frontend.styles.theme import get_theme_colors, is_dark_mode
 
 
 def render_citation_graph(graph_data: CitationGraphData, height: int = 580):
-    """Render interactive paper citation graph network with light academic styling."""
+    """Render interactive paper citation graph network with theme-aware academic styling."""
+    colors = get_theme_colors()
+    dark = is_dark_mode()
+
     try:
         net = Network(
             height=f"{height}px",
             width="100%",
-            bgcolor="#FAFAF9",
-            font_color="#111827",
+            bgcolor=colors["bg"],
+            font_color=colors["text_primary"],
             directed=True,
             notebook=False
         )
 
-        # Add Nodes with academic color scheme
+        # Add Nodes with theme-aware color scheme
         for node in graph_data.nodes:
             is_seed = node.get("group") == "Seed" or node.get("val", 15) > 20
-            color = "#2B4C7E" if is_seed else "#64748B"
+            color = colors["pyvis_node_primary"] if is_seed else colors["pyvis_node_secondary"]
             net.add_node(
                 n_id=node["id"],
                 label=node["label"],
@@ -43,31 +47,34 @@ def render_citation_graph(graph_data: CitationGraphData, height: int = 580):
                 to=edge["to"],
                 title=edge.get("label", "cites"),
                 value=edge.get("weight", 1),
-                color="#CBD5E1"
+                color=colors["pyvis_edge"]
             )
 
-        net.set_options("""
-        var options = {
-          "nodes": {
-            "font": {"size": 13, "face": "Inter", "color": "#111827"},
+        font_color = "#F3F4F6" if dark else "#111827"
+        highlight_color = "#7AA2DC" if dark else "#2B4C7E"
+
+        net.set_options(f"""
+        var options = {{
+          "nodes": {{
+            "font": {{"size": 13, "face": "Inter", "color": "{font_color}"}},
             "borderWidth": 1,
             "borderWidthSelected": 2,
             "shadow": false
-          },
-          "edges": {
-            "color": {"color": "#CBD5E1", "highlight": "#2B4C7E"},
-            "smooth": {"type": "continuous"},
-            "arrows": {"to": {"enabled": true, "scaleFactor": 0.5}}
-          },
-          "physics": {
-            "barnesHut": {
+          }},
+          "edges": {{
+            "color": {{"color": "{colors['pyvis_edge']}", "highlight": "{highlight_color}"}},
+            "smooth": {{"type": "continuous"}},
+            "arrows": {{"to": {{"enabled": true, "scaleFactor": 0.5}}}}
+          }},
+          "physics": {{
+            "barnesHut": {{
               "gravitationalConstant": -3500,
               "centralGravity": 0.25,
               "springLength": 100
-            },
+            }},
             "minVelocity": 0.75
-          }
-        }
+          }}
+        }}
         """)
 
         # Save to temp file and render via Streamlit HTML component

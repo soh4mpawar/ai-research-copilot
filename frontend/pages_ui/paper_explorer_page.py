@@ -2,25 +2,28 @@
 Paper Explorer & Dataset Corpus Inspector Page Layout.
 Searchable dataset browser with domain filters, sorting controls,
 rich paper metadata cards, and structured AI paper summaries.
-Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs).
+Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-Theme Aware).
 """
 
 import streamlit as st
 import pandas as pd
 from backend import research_engine
 from frontend.components.icons import svg_icon
+from frontend.styles.theme import get_theme_colors
 
 
 def render_paper_explorer_page():
     """Render Paper Explorer UI."""
+    colors = get_theme_colors()
+
     # Unboxed Page Header
     st.markdown(
-        """
+        f"""
         <div style="margin-bottom: 12px;">
-            <div class="academic-title" style="font-size: 1.45rem; margin-bottom: 2px;">
+            <div class="academic-title" style="font-size: 1.45rem; margin-bottom: 2px; color: {colors['text_primary']};">
                 Scientific Paper Explorer &amp; Corpus Inspector
             </div>
-            <div style="color: #525252; font-size: 0.88rem;">
+            <div style="color: {colors['text_secondary']}; font-size: 0.88rem;">
                 Browse, search, and inspect the 184 indexed scientific literature documents across NLP and Computer Vision domains.
             </div>
         </div>
@@ -75,7 +78,7 @@ def render_paper_explorer_page():
 
     st.markdown(
         f"""
-        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: #6B7280; padding-bottom: 8px; border-bottom: 1px solid #E5E5E3; margin-bottom: 16px;">
+        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: {colors['text_secondary']}; padding-bottom: 8px; border-bottom: 1px solid {colors['border']}; margin-bottom: 16px;">
             <span>Filtered: <code style="font-size:0.82rem;">{len(filtered_papers)} papers</code></span>
             <span>·</span>
             <span>Total Citations: <code style="font-size:0.82rem;">{total_citations:,}</code></span>
@@ -96,9 +99,9 @@ def render_paper_explorer_page():
         with st.expander(f"[{idx}] {p.title} ({p.year}) — {authors_str} ({citations_fmt} citations)", expanded=(idx == 1)):
             st.markdown(
                 f"""
-                <div style="background: #FFFFFF; padding: 14px 18px; border-radius: 6px; border: 1px solid #E5E5E3; margin-bottom: 12px;">
+                <div style="background: {colors['card_bg']}; padding: 14px 18px; border-radius: 6px; border: 1px solid {colors['border']}; margin-bottom: 12px;">
                     <div class="source-title" style="font-size: 1.05rem;">
-                        <a href="{pdf_link}" target="_blank" style="color: #111827; text-decoration: none; border-bottom: 1px solid #D1D5DB;">{p.title}</a>
+                        <a href="{pdf_link}" target="_blank" style="color: {colors['text_primary']}; text-decoration: none; border-bottom: 1px solid {colors['border']};">{p.title}</a>
                     </div>
                     <div class="source-meta" style="margin-top: 6px; line-height: 1.6;">
                         <b>Authors</b>: {", ".join(p.authors)} <br/>
@@ -106,10 +109,10 @@ def render_paper_explorer_page():
                     </div>
                     <div style="display: flex; gap: 6px; margin-top: 10px;">
                         <a href="{arxiv_link}" target="_blank" class="badge-pill badge-outline" style="text-decoration: none;">
-                            {svg_icon('external-link', size=11, color='#1F2937')} arXiv:{p.arxiv_id if p.arxiv_id else 'PDF'}
+                            {svg_icon('external-link', size=11, color=colors['text_primary'])} arXiv:{p.arxiv_id if p.arxiv_id else 'PDF'}
                         </a>
                         <a href="{pdf_link}" target="_blank" class="badge-pill badge-slate" style="text-decoration: none;">
-                            {svg_icon('file-text', size=11, color='#334155')} Open PDF
+                            {svg_icon('file-text', size=11, color=colors['text_primary'])} Open PDF
                         </a>
                     </div>
                 </div>
@@ -118,10 +121,10 @@ def render_paper_explorer_page():
             )
 
             # Abstract & AI Structured Summary
-            st.markdown("<div class='academic-title' style='font-size: 0.95rem; margin-top: 6px; margin-bottom: 4px;'>Abstract</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='academic-title' style='font-size: 0.95rem; margin-top: 6px; margin-bottom: 4px; color: {colors['text_primary']};'>Abstract</div>", unsafe_allow_html=True)
             st.markdown(f"*{p.abstract}*")
 
-            st.markdown("<div class='academic-title' style='font-size: 0.95rem; margin-top: 12px; margin-bottom: 4px;'>AI Structured Summary &amp; Section Layout</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='academic-title' style='font-size: 0.95rem; margin-top: 12px; margin-bottom: 4px; color: {colors['text_primary']};'>AI Structured Summary &amp; Section Layout</div>", unsafe_allow_html=True)
             col_sum1, col_sum2 = st.columns(2)
             
             with col_sum1:

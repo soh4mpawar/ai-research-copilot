@@ -2,7 +2,7 @@
 AI Research Copilot — Master Streamlit Application.
 Main router, sidebar navigation, custom theme injection, singleton model caching (FR-19), and page state management.
 Author: Soham Pawar
-Academic Scientific Instrument Design System (Zero Emojis, Clean Inline SVGs).
+Academic Scientific Instrument Design System (Dual-Theme Engine, Zero Emojis, Clean Inline SVGs).
 """
 
 import sys
@@ -12,6 +12,7 @@ import streamlit as st
 # Ensure repository root is on Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+from frontend.styles.theme import inject_theme, get_theme_colors, is_dark_mode
 from frontend.components.header import render_header
 from frontend.pages_ui.research_page import render_research_page
 from frontend.pages_ui.lit_review_page import render_lit_review_page
@@ -27,7 +28,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Load Custom Academic Scientific Instrument Styling
+# Load Base Custom Academic Styling
 css_file = os.path.join(os.path.dirname(__file__), "styles", "custom.css")
 if os.path.exists(css_file):
     with open(css_file, "r", encoding="utf-8") as f:
@@ -62,7 +63,7 @@ def main():
     # Sidebar Navigation Menu
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.85rem; font-weight: 600; color: #111827; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+        <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
             Navigation
         </div>
         """,
@@ -85,13 +86,21 @@ def main():
     st.sidebar.markdown("<div style='border-top: 1px solid #E5E5E3; margin: 16px 0 12px 0;'></div>", unsafe_allow_html=True)
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.85rem; font-weight: 600; color: #111827; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+        <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
             Configuration
         </div>
         """,
         unsafe_allow_html=True
     )
     
+    # Dark Mode Toggle with session persistence
+    dark_mode_active = st.sidebar.toggle(
+        "Dark Mode",
+        value=st.session_state.get("dark_mode", False),
+        key="dark_mode",
+        help="Switch between Scientific Light and Scientific Dark theme."
+    )
+
     use_mock = st.sidebar.checkbox(
         "Use Mock Backend Engine",
         value=False,
@@ -99,17 +108,20 @@ def main():
     )
     os.environ["USE_MOCK_ENGINE"] = "true" if use_mock else "false"
 
-    st.sidebar.markdown(f"<div style='font-size:0.75rem; color:#6B7280; margin-top:4px;'>Corpus Version: <code>{corpus_v}</code></div>", unsafe_allow_html=True)
+    st.sidebar.markdown(f"<div style='font-size:0.75rem; margin-top:4px;'>Corpus Version: <code>{corpus_v}</code></div>", unsafe_allow_html=True)
 
     st.sidebar.markdown(
         """
-        <div style="font-size: 0.76rem; color: #6B7280; line-height: 1.5; margin-top: 14px; border-top: 1px solid #E5E5E3; padding-top: 10px;">
+        <div style="font-size: 0.76rem; line-height: 1.5; margin-top: 14px; border-top: 1px solid #E5E5E3; padding-top: 10px;">
             <b>AI Research Copilot v1.0</b><br/>
             Built by <b>Soham Pawar</b>
         </div>
         """,
         unsafe_allow_html=True
     )
+
+    # Dynamic Theme Injection
+    inject_theme()
 
     # Top Header Component (Landing Hero on QA, Slim Breadcrumb on other pages)
     render_header(page_choice)

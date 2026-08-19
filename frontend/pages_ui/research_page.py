@@ -2,7 +2,7 @@
 Research QA Page Layout.
 Main interface for submitting scientific queries, selecting search modes,
 viewing grounded answers, and downloading Markdown reports.
-Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs).
+Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-Theme Aware).
 """
 
 import streamlit as st
@@ -11,6 +11,7 @@ from backend.corpus import CorpusManager
 from frontend.components.answer_card import render_answer_card
 from frontend.components.evidence_viewer import render_evidence_viewer
 from frontend.components.icons import svg_icon
+from frontend.styles.theme import get_theme_colors
 
 # Initialize Corpus Manager for Corpus Stats
 corpus_mgr = CorpusManager()
@@ -18,14 +19,16 @@ corpus_mgr = CorpusManager()
 
 def render_research_page():
     """Render main Research QA interface."""
+    colors = get_theme_colors()
+
     # Unboxed Page Header
     st.markdown(
-        """
+        f"""
         <div style="margin-bottom: 12px;">
-            <div class="academic-title" style="font-size: 1.45rem; margin-bottom: 2px;">
+            <div class="academic-title" style="font-size: 1.45rem; margin-bottom: 2px; color: {colors['text_primary']};">
                 Scientific Query &amp; Answer Engine
             </div>
-            <div style="color: #525252; font-size: 0.88rem;">
+            <div style="color: {colors['text_secondary']}; font-size: 0.88rem;">
                 Ask technical research questions across the indexed literature with source-grounded evidence.
             </div>
         </div>
@@ -37,19 +40,19 @@ def render_research_page():
     health = corpus_mgr.get_corpus_health_summary()
     st.markdown(
         f"""
-        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: #6B7280; padding-bottom: 10px; border-bottom: 1px solid #E5E5E3; margin-bottom: 14px;">
+        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: {colors['text_secondary']}; padding-bottom: 10px; border-bottom: 1px solid {colors['border']}; margin-bottom: 14px;">
             <span style="display: flex; align-items: center; gap: 4px;">
-                {svg_icon('database', size=13, color='#6B7280')}
+                {svg_icon('database', size=13, color=colors['text_secondary'])}
                 <b>Corpus Index</b>: {health['total_papers']} papers ({health['nlp_papers_count']} NLP / {health['cv_papers_count']} CV)
             </span>
             <span>·</span>
             <span style="display: flex; align-items: center; gap: 4px;">
-                {svg_icon('file-text', size=13, color='#6B7280')}
+                {svg_icon('file-text', size=13, color=colors['text_secondary'])}
                 <b>Docling Parsed</b>: {health['successfully_parsed']}/{health['total_papers']} ({health['parse_success_rate']}%)
             </span>
             <span>·</span>
             <span style="display: flex; align-items: center; gap: 4px;">
-                {svg_icon('layers', size=13, color='#6B7280')}
+                {svg_icon('layers', size=13, color=colors['text_secondary'])}
                 <b>Total Chunks</b>: {health['total_estimated_chunks']:,}
             </span>
         </div>
@@ -62,7 +65,7 @@ def render_research_page():
         st.session_state["query_input"] = "What is Retrieval-Augmented Generation (RAG) and why was it introduced?"
 
     # Preset Example Query Chips
-    st.markdown("<div style='font-size: 0.76rem; color: #6B7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;'>Preset Queries</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='font-size: 0.76rem; color: {colors['text_secondary']}; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;'>Preset Queries</div>", unsafe_allow_html=True)
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -104,7 +107,7 @@ def render_research_page():
         with st.spinner("Executing hybrid retrieval (ChromaDB + BM25s) ➜ bge-reranker-base ➜ Gemini 3.5 Flash Lite..."):
             result = research_engine.query(query_text, mode=mode_key)
 
-        st.markdown("<div style='border-top: 1px solid #E5E5E3; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
 
         # Action Bar: Download Report
         report_md = f"# Research Report: {query_text}\n\n{result.answer}\n\n## Sources\n"

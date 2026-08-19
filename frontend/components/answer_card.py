@@ -2,13 +2,14 @@
 Answer Card Component.
 Renders grounded LLM answers, evidence confidence progress bars, interactive action toolbars,
 and rich source bibliography cards with inline abstract inspect expanders.
-Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs).
+Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-Theme Support).
 """
 
 import re
 import streamlit as st
 from backend.contract import QueryResult
 from frontend.components.icons import svg_icon
+from frontend.styles.theme import get_theme_colors
 
 
 def make_citation_link(match):
@@ -19,13 +20,14 @@ def make_citation_link(match):
 
 def render_answer_card(result: QueryResult):
     """Render formatted grounded answer, metadata badges, confidence bar, and rich source cards."""
+    colors = get_theme_colors()
     confidence_pct = 92 if result.evidence_strength == "Strong" else 76
     badge_class = "badge-strong" if result.evidence_strength == "Strong" else "badge-moderate"
-    bar_fill_color = "#1E5631" if result.evidence_strength == "Strong" else "#92400E"
+    bar_fill_color = colors["badge_strong_border"] if result.evidence_strength == "Strong" else colors["badge_moderate_border"]
     
     st.markdown(
         f"""
-        <div class="glass-card" style="padding: 22px 26px; border-left: 3px solid #2B4C7E;">
+        <div class="glass-card" style="padding: 20px 24px; border-left: 3px solid {colors['accent']}; margin-bottom: 16px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
                 <div class="academic-title" style="font-size: 1.3rem;">
                     Scientific Research Synthesis
@@ -36,18 +38,18 @@ def render_answer_card(result: QueryResult):
                         Evidence: {result.evidence_strength} ({confidence_pct}%)
                     </span>
                     <span class="badge-pill badge-slate">
-                        {svg_icon('clock', size=12, color='#334155')}
+                        {svg_icon('clock', size=12, color=colors['text_secondary'])}
                         Latency: {result.metrics.total_time_sec}s
                     </span>
                 </div>
             </div>
             <!-- Evidence Confidence Flat Visual Bar -->
-            <div style="width: 100%; background: #E5E7EB; border-radius: 2px; height: 4px; overflow: hidden; margin-bottom: 12px;">
+            <div style="width: 100%; background: {colors['progress_bar_track']}; border-radius: 2px; height: 4px; overflow: hidden; margin-bottom: 12px;">
                 <div style="width: {confidence_pct}%; background-color: {bar_fill_color} !important; height: 100%; border-radius: 2px;"></div>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
-                <span style="font-size: 0.76rem; color: #6B7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 2px;">
-                    {svg_icon('tag', size=11, color='#6B7280')} Topics:
+                <span style="font-size: 0.76rem; color: {colors['text_secondary']}; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 2px;">
+                    {svg_icon('tag', size=11, color=colors['text_secondary'])} Topics:
                 </span>
                 <span class="badge-pill badge-outline">Retrieval-Augmented Generation</span>
                 <span class="badge-pill badge-outline">Dense Passage Retrieval</span>
@@ -62,15 +64,8 @@ def render_answer_card(result: QueryResult):
     raw_answer = result.answer
     formatted_answer = re.sub(r'(?:\*\*|\b)?\[(\d+)\](?:\*\*|\b)?', make_citation_link, raw_answer)
 
-    # Render Main Answer Markdown/HTML
-    st.markdown(
-        f"""
-        <div style="background: #FFFFFF; border: 1px solid #E5E5E3; border-radius: 8px; padding: 22px 26px; line-height: 1.7; font-size: 0.95rem; color: #1F2937; margin-bottom: 16px;">
-            {formatted_answer}
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    # Render Main Answer Markdown/HTML directly so markdown headings/lists parse natively
+    st.markdown(formatted_answer, unsafe_allow_html=True)
 
     # Action Strip (Sources, Chunks, Plain-text copy)
     col_tb1, col_tb2, col_tb3 = st.columns([1, 1, 2])
@@ -94,7 +89,7 @@ def render_answer_card(result: QueryResult):
         with m4:
             st.metric("Final Context Chunks", f"{result.metrics.final_context_chunks_count} / {result.metrics.dense_candidates_count}")
 
-    st.markdown("<div style='border-top: 1px solid #E5E5E3; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
     st.markdown("<div class='academic-title' style='font-size: 1.15rem; margin-bottom: 12px;'>Grounded Source Bibliography</div>", unsafe_allow_html=True)
 
     # Render Sources Grid with Clickable PDF & arXiv Links + Abstract Expander
@@ -110,7 +105,7 @@ def render_answer_card(result: QueryResult):
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
                     <div>
                         <div class="source-title">
-                            [{idx}] <a href="{pdf_link}" target="_blank" style="color: #111827; text-decoration: none; border-bottom: 1px solid #D1D5DB;">{paper.title}</a>
+                            [{idx}] <a href="{pdf_link}" target="_blank" style="color: {colors['text_primary']}; text-decoration: none; border-bottom: 1px solid {colors['border']};">{paper.title}</a>
                         </div>
                         <div class="source-meta">
                             <b>{authors_str}</b> · {paper.year} · {paper.venue} · {citations_fmt} citations · <code>{paper.category}</code>
@@ -118,10 +113,10 @@ def render_answer_card(result: QueryResult):
                     </div>
                     <div style="display: flex; gap: 6px; align-items: center; margin-top: 2px;">
                         <a href="{arxiv_link}" target="_blank" class="badge-pill badge-outline" style="text-decoration: none;">
-                            {svg_icon('external-link', size=11, color='#1F2937')} arXiv:{paper.arxiv_id if paper.arxiv_id else 'PDF'}
+                            {svg_icon('external-link', size=11, color=colors['text_primary'])} arXiv:{paper.arxiv_id if paper.arxiv_id else 'PDF'}
                         </a>
                         <a href="{pdf_link}" target="_blank" class="badge-pill badge-slate" style="text-decoration: none;">
-                            {svg_icon('file-text', size=11, color='#334155')} PDF
+                            {svg_icon('file-text', size=11, color=colors['text_primary'])} PDF
                         </a>
                     </div>
                 </div>

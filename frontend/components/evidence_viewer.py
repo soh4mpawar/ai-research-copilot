@@ -2,23 +2,26 @@
 Evidence Panel and Retrieval Transparency Component.
 Exposes multi-stage candidate funnels, comparative rank matrices, cross-encoder scores,
 and passage text inspectors.
-Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs).
+Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-Theme Aware).
 """
 
 import streamlit as st
 import pandas as pd
 from backend.contract import QueryResult
 from frontend.components.icons import svg_icon
+from frontend.styles.theme import get_theme_colors
 
 
 def render_evidence_viewer(result: QueryResult):
     """Render interactive retrieval transparency panel and chunk inspector."""
+    colors = get_theme_colors()
+
     st.markdown(
-        """
-        <div class="academic-title" style="font-size: 1.2rem; margin-bottom: 4px;">
+        f"""
+        <div class="academic-title" style="font-size: 1.2rem; margin-bottom: 4px; color: {colors['text_primary']};">
             Retrieval Pipeline Transparency &amp; Multi-Stage Inspector
         </div>
-        <div style="font-size: 0.84rem; color: #525252; margin-bottom: 14px;">
+        <div style="font-size: 0.84rem; color: {colors['text_secondary']}; margin-bottom: 14px;">
             Candidate progression across dense vector search, lexical BM25, Reciprocal Rank Fusion, and cross-encoder scoring.
         </div>
         """,
@@ -28,35 +31,35 @@ def render_evidence_viewer(result: QueryResult):
     # Connected Multi-Stage Funnel Horizontal Strip
     st.markdown(
         f"""
-        <div style="background: #FFFFFF; border: 1px solid #E5E5E3; border-radius: 6px; padding: 14px 18px; margin-bottom: 18px;">
-            <div style="font-size: 0.75rem; font-weight: 600; color: #6B7280; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;">
+        <div style="background: {colors['card_bg']}; border: 1px solid {colors['border']}; border-radius: 6px; padding: 14px 18px; margin-bottom: 18px;">
+            <div style="font-size: 0.75rem; font-weight: 600; color: {colors['text_secondary']}; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;">
                 Multi-Stage Retrieval Funnel
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px;">
-                <div style="border-right: 1px solid #F3F4F6; padding-right: 8px;">
-                    <div style="font-size: 0.72rem; color: #6B7280;">1. Dense Vector</div>
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: #111827;">{result.metrics.dense_candidates_count}</div>
-                    <div style="font-size: 0.70rem; color: #9CA3AF;">Top ChromaDB</div>
+                <div style="border-right: 1px solid {colors['border']}; padding-right: 8px;">
+                    <div style="font-size: 0.72rem; color: {colors['text_secondary']};">1. Dense Vector</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: {colors['text_primary']};">{result.metrics.dense_candidates_count}</div>
+                    <div style="font-size: 0.70rem; color: {colors['text_secondary']};">Top ChromaDB</div>
                 </div>
-                <div style="border-right: 1px solid #F3F4F6; padding-right: 8px;">
-                    <div style="font-size: 0.72rem; color: #6B7280;">2. Sparse BM25</div>
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: #111827;">{result.metrics.bm25_candidates_count}</div>
-                    <div style="font-size: 0.70rem; color: #9CA3AF;">Top Lexical</div>
+                <div style="border-right: 1px solid {colors['border']}; padding-right: 8px;">
+                    <div style="font-size: 0.72rem; color: {colors['text_secondary']};">2. Sparse BM25</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: {colors['text_primary']};">{result.metrics.bm25_candidates_count}</div>
+                    <div style="font-size: 0.70rem; color: {colors['text_secondary']};">Top Lexical</div>
                 </div>
-                <div style="border-right: 1px solid #F3F4F6; padding-right: 8px;">
-                    <div style="font-size: 0.72rem; color: #6B7280;">3. RRF Fusion</div>
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: #111827;">{result.metrics.rrf_candidates_count}</div>
-                    <div style="font-size: 0.70rem; color: #9CA3AF;">Merged Candidates</div>
+                <div style="border-right: 1px solid {colors['border']}; padding-right: 8px;">
+                    <div style="font-size: 0.72rem; color: {colors['text_secondary']};">3. RRF Fusion</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: {colors['text_primary']};">{result.metrics.rrf_candidates_count}</div>
+                    <div style="font-size: 0.70rem; color: {colors['text_secondary']};">Merged Candidates</div>
                 </div>
-                <div style="border-right: 1px solid #F3F4F6; padding-right: 8px;">
-                    <div style="font-size: 0.72rem; color: #6B7280;">4. Cross-Reranker</div>
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: #111827;">{result.metrics.reranked_candidates_count}</div>
-                    <div style="font-size: 0.70rem; color: #9CA3AF;">bge-reranker-base</div>
+                <div style="border-right: 1px solid {colors['border']}; padding-right: 8px;">
+                    <div style="font-size: 0.72rem; color: {colors['text_secondary']};">4. Cross-Reranker</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: {colors['text_primary']};">{result.metrics.reranked_candidates_count}</div>
+                    <div style="font-size: 0.70rem; color: {colors['text_secondary']};">bge-reranker-base</div>
                 </div>
                 <div>
-                    <div style="font-size: 0.72rem; color: #1E5631; font-weight: 600;">5. Injected Context</div>
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: #1E5631;">{result.metrics.final_context_chunks_count}</div>
-                    <div style="font-size: 0.70rem; color: #1E5631;">Prompt Passages</div>
+                    <div style="font-size: 0.72rem; color: {colors['badge_strong_text']}; font-weight: 600;">5. Injected Context</div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; color: {colors['badge_strong_text']};">{result.metrics.final_context_chunks_count}</div>
+                    <div style="font-size: 0.70rem; color: {colors['badge_strong_text']};">Prompt Passages</div>
                 </div>
             </div>
         </div>
@@ -64,7 +67,7 @@ def render_evidence_viewer(result: QueryResult):
         unsafe_allow_html=True
     )
 
-    st.markdown("<div class='academic-title' style='font-size: 1.05rem; margin-bottom: 8px;'>Comparative Rank Matrix Across Retrieval Strategies</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='academic-title' style='font-size: 1.05rem; margin-bottom: 8px; color: {colors['text_primary']};'>Comparative Rank Matrix Across Retrieval Strategies</div>", unsafe_allow_html=True)
 
     # Build Comparative Matrix DataFrame
     matrix_data = []
@@ -95,8 +98,8 @@ def render_evidence_viewer(result: QueryResult):
         }
     )
 
-    st.markdown("<div style='border-top: 1px solid #E5E5E3; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
-    st.markdown("<div class='academic-title' style='font-size: 1.05rem; margin-bottom: 8px;'>Injected Context Passages &amp; Text Inspector</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='academic-title' style='font-size: 1.05rem; margin-bottom: 8px; color: {colors['text_primary']};'>Injected Context Passages &amp; Text Inspector</div>", unsafe_allow_html=True)
 
     # Render Chunks Passage Cards
     for idx, chunk in enumerate(result.retrieved_chunks, 1):
@@ -112,11 +115,11 @@ def render_evidence_viewer(result: QueryResult):
             with col_ranks:
                 st.markdown(
                     f"""
-                    <div style="background: #F9FAFB; padding: 8px 12px; border-radius: 6px; border: 1px solid #E5E7EB; font-size: 0.80rem; line-height: 1.6;">
+                    <div style="background: {colors['card_bg']}; padding: 8px 12px; border-radius: 6px; border: 1px solid {colors['border']}; font-size: 0.80rem; line-height: 1.6;">
                         <div><b>Dense Rank</b>: #{chunk.dense_rank}</div>
                         <div><b>BM25 Rank</b>: #{chunk.bm25_rank}</div>
                         <div><b>RRF Rank</b>: #{chunk.rrf_rank}</div>
-                        <div style="color:#1E5631; margin-top: 2px;"><b>Cross-Rerank Score</b>: {chunk.rerank_score:.3f}</div>
+                        <div style="color:{colors['badge_strong_text']}; margin-top: 2px;"><b>Cross-Rerank Score</b>: {chunk.rerank_score:.3f}</div>
                     </div>
                     """,
                     unsafe_allow_html=True
