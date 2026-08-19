@@ -97,25 +97,69 @@ def get_citation_graph() -> CitationGraphData:
                 title = attr.get("title", attr.get("label", nid))
                 cat = attr.get("category", "cs.CL")
                 cits = attr.get("citation_count", 50)
-                color = "#3B82F6" if "CV" in cat else "#10B981"
+                year = attr.get("year", 2026)
+                authors = attr.get("authors", "Author")
+                in_deg = engine.graph.in_degree(nid)
+                out_deg = engine.graph.out_degree(nid)
+                total_deg = in_deg + out_deg
+                
+                # Category-based color
+                if "CV" in cat:
+                    node_color = "#F59E0B"  # Amber for Vision
+                elif "AI" in cat or "LG" in cat:
+                    node_color = "#10B981"  # Emerald for AI/ML
+                else:
+                    node_color = "#3B82F6"  # Blue for NLP/CL
+                
+                # Degree & impact sizing
+                if total_deg >= 10:
+                    val = 32
+                elif total_deg >= 4:
+                    val = 22
+                elif total_deg >= 1:
+                    val = 15
+                else:
+                    val = 9
+
+                short_label = title[:24] + "..." if len(title) > 24 else title
+                tooltip_html = (
+                    f"<b>{title}</b><br/>"
+                    f"<i>{authors} ({year})</i><br/>"
+                    f"Category: <code>{cat}</code><br/>"
+                    f"Citations: <b>{cits:,}</b><br/>"
+                    f"Corpus Connections: <b>{in_deg} cited by, {out_deg} cites</b>"
+                )
                 
                 nodes.append({
                     "id": nid,
-                    "label": f"[{nid}] {title[:28]}...",
-                    "title": f"Title: {title}\nArXiv ID: {nid}\nCategory: {cat}\nCitations: {cits}",
+                    "label": f"[{nid}] {short_label}",
+                    "title": tooltip_html,
                     "group": cat,
-                    "color": color,
-                    "val": min(35, max(12, int(cits) // 400 + 10))
+                    "category": cat,
+                    "color": node_color,
+                    "val": val,
+                    "in_degree": in_deg,
+                    "out_degree": out_deg,
+                    "degree": total_deg,
+                    "citation_count": cits,
+                    "year": year,
+                    "authors": authors,
+                    "full_title": title
                 })
 
             edges = []
             for u, v, data in engine.graph.edges(data=True):
                 is_cross = data.get("is_cross_category", False)
+                src_cat = engine.graph.nodes[u].get("category", "")
+                tgt_cat = engine.graph.nodes[v].get("category", "")
+                is_cross = is_cross or (bool(src_cat) and bool(tgt_cat) and src_cat != tgt_cat)
+                
                 edges.append({
                     "from": u,
                     "to": v,
-                    "label": "CITES",
-                    "color": "#EF4444" if is_cross else "#9CA3AF",
+                    "label": f"CITES {'(Cross-Domain)' if is_cross else ''}",
+                    "color": "#EF4444" if is_cross else "#5B7FB5",
+                    "is_cross": is_cross,
                     "weight": data.get("weight", 1.0)
                 })
 
