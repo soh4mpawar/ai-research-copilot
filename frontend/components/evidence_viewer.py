@@ -9,6 +9,7 @@ import streamlit as st
 import pandas as pd
 from backend.contract import QueryResult
 from frontend.components.icons import svg_icon
+from frontend.components.copy_button import render_copy_button
 from frontend.styles.theme import get_theme_colors
 
 
@@ -140,5 +141,9 @@ def render_evidence_viewer(result: QueryResult):
                 unsafe_allow_html=True
             )
 
-            with st.expander("Copy Passage Text"):
-                st.code(chunk.text, language="text")
+            render_copy_button(
+                text_to_copy=chunk.text,
+                label="Copy Passage",
+                tooltip="Copy extracted passage text to clipboard",
+                height=30
+            )

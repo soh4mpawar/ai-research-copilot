@@ -9,6 +9,7 @@ import re
 import streamlit as st
 from backend.contract import QueryResult
 from frontend.components.icons import svg_icon
+from frontend.components.copy_button import render_copy_button
 from frontend.styles.theme import get_theme_colors
 
 
@@ -93,15 +94,19 @@ def render_answer_card(result: QueryResult):
     # Render Main Answer Markdown/HTML directly so markdown headings/lists parse natively
     st.markdown(formatted_answer, unsafe_allow_html=True)
 
-    # Action Strip (Sources, Chunks, Plain-text copy)
+    # Action Strip (Sources, Chunks, One-Click Plain-Text Copy)
     col_tb1, col_tb2, col_tb3 = st.columns([1, 1, 2])
     with col_tb1:
         st.markdown(f"**Sources**: `{len(result.sources)} Papers`")
     with col_tb2:
         st.markdown(f"**Retrieved**: `{len(result.retrieved_chunks)} Chunks`")
     with col_tb3:
-        with st.expander("Copy Plain Text Answer"):
-            st.code(raw_answer, language="markdown")
+        render_copy_button(
+            text_to_copy=raw_answer,
+            label="Copy Answer",
+            tooltip="Copy plain text answer to clipboard",
+            height=32
+        )
 
     # Timing Latency Strip (No emojis)
     with st.expander("Pipeline Execution Latency & Candidate Funnel", expanded=False):

@@ -8,6 +8,7 @@ import streamlit as st
 import pandas as pd
 from backend import research_engine
 from frontend.components.icons import svg_icon
+from frontend.components.copy_button import render_copy_button
 from frontend.styles.theme import get_theme_colors, is_dark_mode
 
 
@@ -87,12 +88,22 @@ def render_lit_review_page():
 
         st.markdown(lit_res.conclusion)
 
-        # Export Button
+        # Export & Copy Actions Strip
         st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
         export_md = f"# Literature Review: {topic_to_run}\n\n{lit_res.introduction}\n\n{lit_res.architectural_evolution}\n\n{lit_res.methodology_synthesis}\n\n{lit_res.conclusion}"
-        st.download_button(
-            label="Export Literature Review (.md)",
-            data=export_md,
-            file_name=f"Literature_Review_{topic_to_run.replace(' ', '_')[:30]}.md",
-            mime="text/markdown"
-        )
+        
+        col_exp1, col_exp2 = st.columns([1, 2])
+        with col_exp1:
+            st.download_button(
+                label="Export Literature Review (.md)",
+                data=export_md,
+                file_name=f"Literature_Review_{topic_to_run.replace(' ', '_')[:30]}.md",
+                mime="text/markdown"
+            )
+        with col_exp2:
+            render_copy_button(
+                text_to_copy=export_md,
+                label="Copy Full Synthesis Markdown",
+                tooltip="Copy full literature review synthesis to clipboard",
+                height=36
+            )
