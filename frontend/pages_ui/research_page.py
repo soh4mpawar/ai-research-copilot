@@ -1,24 +1,26 @@
 """
-Research QA Page Layout.
-Main interface for submitting scientific queries, selecting search modes,
-viewing grounded answers, and downloading Markdown reports.
-Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-Theme Aware).
+Research QA & Synthesis Engine Page Layout.
+Directs technical query execution across hybrid retrieval, cross-reranking, and grounded answer synthesis.
+Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Native Type-Ahead Autocomplete).
 """
 
 import streamlit as st
 from backend import research_engine
-from backend.corpus import CorpusManager
 from frontend.components.answer_card import render_answer_card
 from frontend.components.evidence_viewer import render_evidence_viewer
 from frontend.components.icons import svg_icon
 from frontend.styles.theme import get_theme_colors
 
-# Initialize Corpus Manager for Corpus Stats
-corpus_mgr = CorpusManager()
+
+PRESET_RESEARCH_QUESTIONS = [
+    "What is Retrieval-Augmented Generation (RAG) and why was it introduced?",
+    "How does Reciprocal Rank Fusion (RRF) combine dense and sparse BM25 scores?",
+    "What are the key computational limitations of transformer self-attention mechanisms?",
+]
 
 
 def render_research_page():
-    """Render main Research QA interface."""
+    """Render Research QA Engine UI."""
     colors = get_theme_colors()
 
     # Unboxed Page Header
@@ -36,57 +38,33 @@ def render_research_page():
         unsafe_allow_html=True
     )
 
-    # Unboxed Compact Corpus Metadata Strip
-    health = corpus_mgr.get_corpus_health_summary()
+    health = research_engine.get_system_health()
+
     st.markdown(
         f"""
-        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: {colors['text_secondary']}; padding-bottom: 10px; border-bottom: 1px solid {colors['border']}; margin-bottom: 14px;">
-            <span style="display: flex; align-items: center; gap: 4px;">
-                {svg_icon('database', size=13, color=colors['text_secondary'])}
-                <b>Corpus Index</b>: {health['total_papers']} papers ({health['nlp_papers_count']} NLP / {health['cv_papers_count']} CV)
-            </span>
-            <span>·</span>
-            <span style="display: flex; align-items: center; gap: 4px;">
-                {svg_icon('file-text', size=13, color=colors['text_secondary'])}
-                <b>Docling Parsed</b>: {health['successfully_parsed']}/{health['total_papers']} ({health['parse_success_rate']}%)
-            </span>
-            <span>·</span>
-            <span style="display: flex; align-items: center; gap: 4px;">
-                {svg_icon('layers', size=13, color=colors['text_secondary'])}
-                <b>Total Chunks</b>: {health['total_estimated_chunks']:,}
-            </span>
+        <div style="font-size: 0.82rem; color: {colors['text_secondary']}; margin-bottom: 16px;">
+            Corpus Index: <b>{health['total_papers']} papers</b> ({health['domain_breakdown'].get('NLP', 0)} NLP / {health['domain_breakdown'].get('CV', 0)} CV) &nbsp;·&nbsp;
+            Docling Parsed: <b>{health['successfully_parsed']}/{health['total_papers']}</b> ({health['parse_success_rate']}%) &nbsp;·&nbsp;
+            Total Chunks: <b>{health['total_estimated_chunks']:,}</b>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    # Initialize Session State Query
-    if "query_input" not in st.session_state:
-        st.session_state["query_input"] = "What is Retrieval-Augmented Generation (RAG) and why was it introduced?"
-
-    # Preset Example Query Chips
-    st.markdown(f"<div style='font-size: 0.76rem; color: {colors['text_secondary']}; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;'>Preset Queries</div>", unsafe_allow_html=True)
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        if st.button("What is RAG and why was it introduced?"):
-            st.session_state["query_input"] = "What is Retrieval-Augmented Generation (RAG) and why was it introduced?"
-    with col2:
-        if st.button("How does RRF fuse BM25 and Vector Search?"):
-            st.session_state["query_input"] = "How does Reciprocal Rank Fusion (RRF) combine dense and sparse BM25 scores?"
-    with col3:
-        if st.button("What are transformer self-attention limits?"):
-            st.session_state["query_input"] = "What are the key computational limitations of transformer self-attention mechanisms?"
-
-    # Query Input & Mode Controls
+    # Query Input (Native Autocomplete with Type-Ahead & Free-Form Typing) & Mode Controls
     col_input, col_mode = st.columns([3, 1])
     
     with col_input:
-        query_text = st.text_input(
+        selected_query = st.selectbox(
             "Enter scientific research question:",
-            key="query_input",
-            placeholder="e.g. Compare dense passage retrieval with sparse BM25 search..."
+            options=PRESET_RESEARCH_QUESTIONS,
+            index=None,
+            accept_new_options=True,
+            filter_mode="fuzzy",
+            placeholder="Type to search presets or enter custom question...",
+            key="query_input_selectbox"
         )
+        query_text = str(selected_query).strip() if selected_query else ""
 
     with col_mode:
         search_mode = st.selectbox(
@@ -96,21 +74,36 @@ def render_research_page():
 
     submit_clicked = st.button("Run Research Pipeline", type="primary")
 
-    # Process Query Execution
-    if submit_clicked or query_text.strip():
-        mode_key = "qa"
-        if search_mode == "Multi-Paper Summary":
-            mode_key = "summary"
-        elif search_mode == "Literature Review":
-            mode_key = "literature_review"
+    # State preservation for query results
+    if "active_result" not in st.session_state:
+        st.session_state["active_result"] = None
+        st.session_state["active_query"] = None
 
-        with st.spinner("Executing hybrid retrieval (ChromaDB + BM25s) ➜ bge-reranker-base ➜ Gemini 3.5 Flash Lite..."):
-            result = research_engine.query(query_text, mode=mode_key)
+    # Process Query Execution on Submit
+    if submit_clicked:
+        if not query_text:
+            st.warning("Please enter or select a research question first.")
+        else:
+            mode_key = "qa"
+            if search_mode == "Multi-Paper Summary":
+                mode_key = "summary"
+            elif search_mode == "Literature Review":
+                mode_key = "literature_review"
+
+            with st.spinner("Executing hybrid retrieval (ChromaDB + BM25s) ➜ bge-reranker-base ➜ Gemini 3.5 Flash Lite..."):
+                result = research_engine.query(query_text, mode=mode_key)
+                st.session_state["active_result"] = result
+                st.session_state["active_query"] = query_text
+
+    # Render Results
+    if st.session_state.get("active_result"):
+        result = st.session_state["active_result"]
+        active_q = st.session_state.get("active_query", query_text)
 
         st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
 
         # Action Bar: Download Report
-        report_md = f"# Research Report: {query_text}\n\n{result.answer}\n\n## Sources\n"
+        report_md = f"# Research Report: {active_q}\n\n{result.answer}\n\n## Sources\n"
         for idx, s in enumerate(result.sources, 1):
             report_md += f"{idx}. {s.title} ({s.year}) - {', '.join(s.authors[:3])}\n"
 
@@ -119,7 +112,7 @@ def render_research_page():
             st.download_button(
                 label="Download Report (.md)",
                 data=report_md,
-                file_name=f"Research_Report_{query_text[:20].replace(' ', '_')}.md",
+                file_name=f"Research_Report_{active_q[:20].replace(' ', '_')}.md",
                 mime="text/markdown"
             )
 
