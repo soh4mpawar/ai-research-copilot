@@ -226,18 +226,12 @@ def inject_theme():
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237AA2DC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='20' x2='18' y2='10'%3E%3C/line%3E%3Cline x1='12' y1='20' x2='12' y2='4'%3E%3C/line%3E%3Cline x1='6' y1='20' x2='6' y2='14'%3E%3C/line%3E%3C/svg%3E") !important;
             }
 
-            [data-testid="stSidebar"] code {
-                background-color: #262A30 !important;
-                color: #E2E8F0 !important;
-                border: 1px solid #3E444E !important;
-            }
-
             [data-testid="stSidebar"] hr {
                 border-color: #2E3238 !important;
             }
 
             /* ====================================================================
-               3. MAIN CANVAS CONTENT & TYPOGRAPHY
+               3. MAIN CANVAS CONTENT, TYPOGRAPHY & UNIVERSAL INLINE CODE
                ==================================================================== */
             [data-testid="stMarkdownContainer"] p,
             [data-testid="stMarkdownContainer"] span,
@@ -261,6 +255,36 @@ def inject_theme():
 
             .metric-val {
                 color: #F3F4F6 !important;
+            }
+
+            /* Universal Inline Code, Badges, and Tag Chips in Dark Mode */
+            code,
+            kbd,
+            [data-testid="stMarkdownContainer"] code,
+            .stMarkdown code,
+            p code,
+            span code,
+            div code,
+            li code,
+            td code,
+            th code,
+            .source-meta code {
+                background-color: #1E2126 !important;
+                background: #1E2126 !important;
+                color: #E8E8E6 !important;
+                border: 1px solid #2E3238 !important;
+                border-radius: 4px !important;
+                padding: 2px 6px !important;
+                font-size: 0.85em !important;
+                font-family: 'JetBrains Mono', monospace !important;
+            }
+
+            /* Category, Venue & Domain Badges */
+            .category-chip,
+            .domain-tag {
+                background-color: #1E2126 !important;
+                color: #E8E8E6 !important;
+                border: 1px solid #2E3238 !important;
             }
 
             /* ====================================================================
@@ -373,27 +397,47 @@ def inject_theme():
             }
 
             /* ====================================================================
-               6. BADGES & CITATION CHIPS
+               6. BADGES, STATUS PILLS & CITATION CHIPS
                ==================================================================== */
-            .badge-outline {
+            .badge-pill {
+                font-family: 'Inter', sans-serif !important;
+            }
+
+            .badge-outline, a.badge-outline, span.badge-outline {
                 background: #1E2126 !important;
                 color: #E2E8F0 !important;
                 border: 1px solid #4B5563 !important;
+                font-weight: 550 !important;
             }
-            .badge-slate {
+            .badge-outline *, a.badge-outline *, span.badge-outline * {
+                color: #E2E8F0 !important;
+            }
+
+            .badge-slate, a.badge-slate, span.badge-slate {
                 background: #262A30 !important;
                 color: #CBD5E1 !important;
                 border: 1px solid #3E444E !important;
             }
-            .badge-strong {
+            .badge-slate *, a.badge-slate *, span.badge-slate * {
+                color: #CBD5E1 !important;
+            }
+
+            .badge-strong, a.badge-strong, span.badge-strong {
                 background: #143521 !important;
                 color: #4ADE80 !important;
                 border: 1px solid #1E5631 !important;
             }
-            .badge-moderate {
+            .badge-strong *, a.badge-strong *, span.badge-strong * {
+                color: #4ADE80 !important;
+            }
+
+            .badge-moderate, a.badge-moderate, span.badge-moderate {
                 background: #3A230B !important;
                 color: #FBBF24 !important;
                 border: 1px solid #854D0E !important;
+            }
+            .badge-moderate *, a.badge-moderate *, span.badge-moderate * {
+                color: #FBBF24 !important;
             }
 
             [data-testid="stMarkdownContainer"] a.citation-chip, a.citation-chip {
