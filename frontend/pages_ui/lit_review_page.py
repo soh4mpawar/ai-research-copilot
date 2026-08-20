@@ -9,6 +9,7 @@ import pandas as pd
 from backend import research_engine
 from frontend.components.icons import svg_icon
 from frontend.components.copy_button import render_copy_button
+from frontend.components.data_table import render_academic_table
 from frontend.styles.theme import get_theme_colors, is_dark_mode
 
 
@@ -55,17 +56,7 @@ def render_lit_review_page():
         # Multi-Paper Comparison Matrix Table
         st.markdown(f"<div class='academic-title' style='font-size: 1.15rem; margin-top: 14px; margin-bottom: 8px; color: {colors['text_primary']};'>Multi-Paper Comparative Summary Matrix</div>", unsafe_allow_html=True)
         df_comp = pd.DataFrame(lit_res.comparison_table)
-        st.dataframe(
-            df_comp,
-            use_container_width=True,
-            column_config={
-                "Paper Title": st.column_config.TextColumn("Paper Title", width="medium"),
-                "Year": st.column_config.NumberColumn("Year", format="%d"),
-                "Core Approach": st.column_config.TextColumn("Core Approach", width="medium"),
-                "Key Contribution": st.column_config.TextColumn("Key Contribution", width="large"),
-                "Limitations": st.column_config.TextColumn("Limitations", width="large"),
-            }
-        )
+        render_academic_table(df_comp, wrap_cells=True)
 
         st.markdown(lit_res.architectural_evolution)
         st.markdown(lit_res.methodology_synthesis)

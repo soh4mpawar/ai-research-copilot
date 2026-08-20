@@ -10,6 +10,7 @@ from backend import research_engine
 from backend.contract import CitationGraphData
 from frontend.components.citation_graph_ui import render_citation_graph
 from frontend.components.icons import svg_icon
+from frontend.components.data_table import render_academic_table
 from frontend.styles.theme import get_theme_colors
 
 
@@ -164,7 +165,7 @@ def render_citation_graph_page():
         
         if hub_data:
             hub_df = pd.DataFrame(hub_data).sort_values("Total Connections", ascending=False)
-            st.dataframe(hub_df, use_container_width=True, hide_index=True)
+            render_academic_table(hub_df)
 
     st.markdown(
         f"""

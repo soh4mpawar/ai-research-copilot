@@ -10,6 +10,7 @@ import pandas as pd
 from backend.contract import QueryResult
 from frontend.components.icons import svg_icon
 from frontend.components.copy_button import render_copy_button
+from frontend.components.data_table import render_academic_table
 from frontend.styles.theme import get_theme_colors
 
 
@@ -86,18 +87,7 @@ def render_evidence_viewer(result: QueryResult):
         })
 
     df_matrix = pd.DataFrame(matrix_data)
-    st.dataframe(
-        df_matrix,
-        use_container_width=True,
-        column_config={
-            "Context #": st.column_config.TextColumn("Context #", width="small"),
-            "Chunk ID": st.column_config.TextColumn("Chunk ID", width="small"),
-            "Paper Title": st.column_config.TextColumn("Paper Title", width="large"),
-            "Docling Section": st.column_config.TextColumn("Docling Section", width="medium"),
-            "Reranker Score": st.column_config.TextColumn("Reranker Score", width="small"),
-            "Status": st.column_config.TextColumn("Status", width="medium"),
-        }
-    )
+    render_academic_table(df_matrix)
 
     st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 14px 0;'></div>", unsafe_allow_html=True)
     st.markdown(f"<div class='academic-title' style='font-size: 1.05rem; margin-bottom: 8px; color: {colors['text_primary']};'>Injected Context Passages &amp; Text Inspector</div>", unsafe_allow_html=True)

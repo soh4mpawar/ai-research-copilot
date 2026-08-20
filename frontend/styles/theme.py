@@ -87,10 +87,20 @@ def inject_theme():
             /* ====================================================================
                1. FULL-VIEWPORT DARK ROOT & CHROME OVERRIDES
                ==================================================================== */
-            html, body, .stApp, [data-testid="stAppViewContainer"], section.main {
+            :root,
+            html,
+            body,
+            .stApp,
+            [data-testid="stAppViewContainer"],
+            section.main {
                 background-color: #16181C !important;
                 background: #16181C !important;
                 color: #E8E8E6 !important;
+                --background-color: #16181C !important;
+                --secondary-background-color: #1E2126 !important;
+                --text-color: #F3F4F6 !important;
+                --primary-color: #5B7FB5 !important;
+                --border-color: #2E3238 !important;
             }
 
             /* Top Streamlit Header / AppToolbar Strip */
@@ -468,6 +478,71 @@ def inject_theme():
             /* Dividers */
             hr {
                 border-color: #2E3238 !important;
+            }
+
+            /* ====================================================================
+               7. UNIVERSAL DATAFRAME, DATA EDITOR & TABLE DARK THEME
+               ==================================================================== */
+            [data-testid="stDataFrame"],
+            [data-testid="stDataFrameResizable"],
+            [data-testid="stDataFrameContainer"],
+            [data-testid="stDataFrame"] > div,
+            [data-testid="stDataFrameResizable"] > div,
+            .dvn-scroller,
+            .dvn-underlay,
+            .dvn-overlay,
+            .glideDataGrid {
+                background-color: #1E2126 !important;
+                background: #1E2126 !important;
+                color: #F3F4F6 !important;
+                border-color: #2E3238 !important;
+            }
+
+            /* Custom Dataframe wrapper border & rounded corner styling */
+            [data-testid="stDataFrame"] {
+                border: 1px solid #2E3238 !important;
+                border-radius: 6px !important;
+                overflow: hidden !important;
+            }
+
+            /* Native Streamlit Table & pandas HTML dataframe rendering */
+            [data-testid="stTable"],
+            [data-testid="stTable"] table,
+            table.dataframe,
+            .stTable table {
+                background-color: #1E2126 !important;
+                color: #E8E8E6 !important;
+                border: 1px solid #2E3238 !important;
+                border-radius: 6px !important;
+                border-collapse: collapse !important;
+                width: 100% !important;
+            }
+
+            [data-testid="stTable"] th,
+            table.dataframe th,
+            .stTable th {
+                background-color: #262A30 !important;
+                color: #F3F4F6 !important;
+                border: 1px solid #2E3238 !important;
+                font-weight: 600 !important;
+                padding: 8px 12px !important;
+                font-size: 0.82rem !important;
+            }
+
+            [data-testid="stTable"] td,
+            table.dataframe td,
+            .stTable td {
+                background-color: #1E2126 !important;
+                color: #E8E8E6 !important;
+                border: 1px solid #2E3238 !important;
+                padding: 8px 12px !important;
+                font-size: 0.82rem !important;
+            }
+
+            [data-testid="stTable"] tr:hover,
+            table.dataframe tr:hover,
+            .stTable tr:hover {
+                background-color: #262A30 !important;
             }
             </style>
             """,

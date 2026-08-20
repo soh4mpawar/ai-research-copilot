@@ -13,6 +13,7 @@ from frontend.components.metrics_card import (
     render_retrieval_stage_chart,
 )
 from frontend.components.icons import svg_icon
+from frontend.components.data_table import render_academic_table
 from frontend.styles.theme import get_theme_colors
 
 
@@ -55,15 +56,4 @@ def render_eval_dashboard_page():
 
     # Test Samples DataFrame
     df_samples = pd.DataFrame(metrics.eval_samples)
-    st.dataframe(
-        df_samples,
-        use_container_width=True,
-        column_config={
-            "id": st.column_config.TextColumn("QA ID", width="small"),
-            "question": st.column_config.TextColumn("Question", width="large"),
-            "ground_truth": st.column_config.TextColumn("Ground Truth Target", width="large"),
-            "faithfulness": st.column_config.NumberColumn("Faithfulness", format="%.4f"),
-            "precision": st.column_config.NumberColumn("Precision", format="%.4f"),
-            "status": st.column_config.TextColumn("Status", width="small"),
-        }
-    )
+    render_academic_table(df_samples, wrap_cells=True, max_height_px=400)

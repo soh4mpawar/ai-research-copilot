@@ -143,5 +143,6 @@ def render_citation_graph(graph_data: CitationGraphData, height: int = 600):
         st.warning(f"Citation Graph Interactive Renderer Note: {e}")
         st.info("Displaying fallback citation relationship summary table.")
         import pandas as pd
+        from frontend.components.data_table import render_academic_table
         nodes_df = pd.DataFrame(graph_data.nodes)
-        st.dataframe(nodes_df)
+        render_academic_table(nodes_df)
