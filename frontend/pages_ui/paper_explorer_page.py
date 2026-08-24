@@ -111,7 +111,7 @@ def render_paper_explorer_page():
         citations_fmt = f"{p.citation_count:,}" if p.citation_count else "1,200+"
         cleaned_abs = clean_abstract_text(p.abstract)
 
-        with st.expander(f"[{idx}] {p.title} ({p.year}) — {authors_str} ({citations_fmt} citations)", expanded=(idx == 1)):
+        with st.expander(f"[{idx}] {p.title} ({p.year}) — {authors_str} ({citations_fmt} citations)", expanded=False):
             st.markdown(
                 f"""
                 <div style="background: {colors['card_bg']}; padding: 14px 18px; border-radius: 6px; border: 1px solid {colors['border']}; margin-bottom: 12px;">
