@@ -1,14 +1,14 @@
 """
 Source-Grounded Coherence Gate (Phase 2 / FR-11, PRD §7.4).
-Checks reranked candidates against an empirically calibrated primary relevance threshold (0.35)
+Checks reranked candidates against a primary relevance threshold (0.35)
 and enforces source-grounded clustered coherence (same-paper dual support, deep topic focus,
-or multi-paper consensus) to prevent isolated cross-encoder false-positive spikes on out-of-domain
-queries while preserving narrow single-fact and deep-focus in-domain retrieval.
+high-confidence single-chunk override, or multi-paper consensus) to prevent isolated cross-encoder
+false-positive spikes on out-of-domain queries while preserving narrow single-fact and deep-focus in-domain retrieval.
 """
 
 from typing import List, Dict, Any, Tuple
 
-# Empirically calibrated relevance threshold constants (PRD §7.4 / FR-11)
+# Default heuristic thresholds (not empirically calibrated — see known limitation in evaluation writeup)
 DEFAULT_RELEVANCE_THRESHOLD = 0.35
 DEFAULT_SECONDARY_THRESHOLD = 0.15
 DEFAULT_DEEP_FOCUS_THRESHOLD = 0.85
@@ -77,15 +77,22 @@ class RelevanceThresholdGate:
                     deep_focus_passed = True
                     break
 
-        # 3. Condition C: Multi-Paper Cross-Source Consensus
+        # 3. Condition C: High-Confidence Single-Chunk Override
+        # A single chunk with very high rerank score (>= deep_focus_threshold) passes on its own
+        high_confidence_override = False
+        if not same_paper_passed and not deep_focus_passed:
+            if top_score >= self.deep_focus_threshold:
+                high_confidence_override = True
+
+        # 4. Condition D: Multi-Paper Cross-Source Consensus
         # At least two distinct papers each have a chunk >= threshold
         multi_paper_passed = False
-        if not same_paper_passed and not deep_focus_passed:
+        if not same_paper_passed and not deep_focus_passed and not high_confidence_override:
             qualifying_papers = [pid for pid, sc_list in paper_scores.items() if max(sc_list) >= self.threshold]
             if len(qualifying_papers) >= 2:
                 multi_paper_passed = True
 
-        if not (same_paper_passed or deep_focus_passed or multi_paper_passed):
+        if not (same_paper_passed or deep_focus_passed or high_confidence_override or multi_paper_passed):
             msg = (
                 f"[WARN] Retrieval rejected: Isolated single-chunk hook without intra-paper or cross-paper support "
                 f"(Top score: {top_score:.3f}, lacking secondary source reinforcement)."

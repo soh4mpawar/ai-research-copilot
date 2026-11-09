@@ -1,0 +1,624 @@
+{
+  "provenance_status": "INDIVIDUALLY_AUTHORED_SEMANTIC_ANNOTATIONS",
+  "description": "Batch 05 semantic annotations personally authored by directly reading metadata-concealed question and passages for contexts ctx_tr_0193 to ctx_tr_0240. No programmatic regex heuristics, substring matches, or condition-tag lookups were used to assign labels.",
+  "batch": "Batch 05 (Families v2_train_049 to v2_train_060)",
+  "context_range": "ctx_tr_0193 to ctx_tr_0240",
+  "total_records": 48,
+  "counts": {
+    "sufficient": 26,
+    "insufficient": 22,
+    "ambiguous": 0
+  },
+  "annotations": [
+    {
+      "opaque_context_id": "ctx_tr_0193",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes target model Gemma width configuration and mentions a 4-layer aligner, but omits the interface constraints specifying which architectural dimensions (global width, attention-head dimensionality, feed-forward width, token embedding space, output head) the aligner must share with the target model to satisfy shape-compatibility without projection layers.",
+      "rationale": "Passage 1 outlines general MoT baseline settings and hyperparameters, but omits the interface constraints and shared dimension definitions. Passages 2, 3, and 4 discuss unrelated topics (hardware tiling, SReT token merging, class geometry).",
+      "payload_hash": "d058b3a39824ea67fc151ebd798e9f49993414642c21f771c45a1a0b444869a2",
+      "question_hash": "6c85449e54aa8feff240638c826162342fc3c7a5ff29e52d388f444ffc5394ad"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0194",
+      "judgment": "sufficient",
+      "derivable_answer": "In Table I of the NARU benchmark, the five Cultural level tasks, their evidence types, and codes are: C.1 Aizuchi (Conversational Mechanics) with evidence type 'Backchannels and response timing'; C.2 Kuuki wo Yomu (Situational Awareness) with evidence type 'Social atmosphere or implicit norms'; C.3 Subtext Interpretation with evidence type 'Surface utterance plus context'; C.4 Cultural Context Recognition with evidence type 'Culturally specific references'; and C.5 Sentiment Analysis with evidence type 'Verbal, visual, and social cues'.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "Cultural\n(C, 736)\nAizuchi (Conversational Mechanics) Backchannels and response timing C.1 143\nKuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147\nSubtext Interpretation Surface utterance plus context C.3 148\nCultural Context Recognition Culturally specific references C.4 149\nSentiment Analysis Verbal, visual, and social cues C.5 149"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 displays Table I containing all five cultural task codes (C.1 through C.5) along with their corresponding task names and explicit evidence types.",
+      "payload_hash": "7bdc138109aa5301bb33e2bc47975d08335b3493e18d8884478ea38d79b63aee",
+      "question_hash": "cc5f833e1ab4b30e10f9824e583f80816d1c4d0c841c17a7364db3785c7920b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0195",
+      "judgment": "sufficient",
+      "derivable_answer": "Unlike post-hoc graph explainers (GNNExplainer and SubgraphX) that explain a prediction over an explicit graph after it has already been produced, VLSR learns chemically relevant regions directly from molecular depiction pixels and uses them as intermediate computational states before property prediction.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "GNNExplainer identifies compact\nsubgraphs and node features that preserve a graph model’s\nprediction, whereas SubgraphX explicitly searches for importantsubgraphsandaccountsforinteractionsamongthem\n(Ying et al. 2019; Yuan et al. 2021). These approaches explain a prediction over an explicit graph after it has been pro-\nduced. VLSR instead learns regions directly from depiction\npixels and uses them as intermediate computational states\nbefore the property prediction."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly compares VLSR against post-hoc graph explainers GNNExplainer and SubgraphX, explaining that the latter explain existing graph predictions post-hoc while VLSR learns pixel regions as intermediate computational states prior to prediction.",
+      "payload_hash": "83e1168d1961dbe0cbaea2d886deeb698b67c6b9f0a442fd530bbdfdc6b0656c",
+      "question_hash": "db82f6f1df47fd12bd3d47a0656128bb1f394157d7fe4a16e5f7d7b040dfbf96"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0196",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context defines endogenous environment construction (where an encoder checkpoint creates the partition used to regularize later checkpoints on the same trajectory), but omits the definition and contrast with exogenous construction (reading partitions off a detached reference encoder trained beforehand).",
+      "rationale": "Passages 1 and 2 define endogenous partitions in ERAS but do not mention or contrast exogenous environment construction. Passages 3 and 4 discuss unrelated simulation validation and meta-learning.",
+      "payload_hash": "4ee0f290a5af3fc1825f3b2800ea5a39de43714f5468e8793f9dfca4c51abb8f",
+      "question_hash": "1c3cb3183963ca6d8b3636ac8f0c3504717d44da5b8ec39c9dcda2b7dd1987de"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0197",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses N.4 (Idea/Thematic Development) in Passage 1, but omits Table I and the five Cultural level task codes (C.1 to C.5) and their evidence types.",
+      "rationale": "Passage 1 only covers narrative evolution category N.4. Passage 2 is Figure 5 from another NLP annotation study, and Passages 3 and 4 discuss cultural evaluation in NLP and German-Bavarian continued pretraining.",
+      "payload_hash": "d460e99547bd621a9be766552de81793f07b1aa6f6113d4a4b8ff0a63c5fa15f",
+      "question_hash": "cc5f833e1ab4b30e10f9824e583f80816d1c4d0c841c17a7364db3785c7920b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0198",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context defines endogenous environment partitions on the same training trajectory, but completely omits what an exogenous construction is and how endogenous is distinguished from it.",
+      "rationale": "Passage 1 defines endogenous environments but lacks the exogenous contrast. Passages 2, 3, and 4 are distractors from other papers.",
+      "payload_hash": "6595bf8332bacc0fc732fc1cc38a9d523c8eeb25c29acbb864d8525e4e2fac02",
+      "question_hash": "1c3cb3183963ca6d8b3636ac8f0c3504717d44da5b8ec39c9dcda2b7dd1987de"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0199",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 are duplicate paragraphs describing general MoT pretraining parameters, but omit the interface constraints and architectural dimensions the aligner must share with the target model.",
+      "rationale": "Context contains duplicate text on general MoT experimental setup without the shape-compatibility interface constraints. Passages 3 and 4 discuss ViT compression and prototype margins.",
+      "payload_hash": "e5c0ad25aeb89290be986dab670d72ddae9143b4dae7a68013afa932c4ac4d7f",
+      "question_hash": "6c85449e54aa8feff240638c826162342fc3c7a5ff29e52d388f444ffc5394ad"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0200",
+      "judgment": "sufficient",
+      "derivable_answer": "In professional tasks, prompts containing women-associated language systematically elicit model responses that are shorter, less sophisticated, more readable, and less formal across multiple document types and models.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly reports that women-associated language in prompts systematically causes LLM responses in professional tasks to be shorter, less sophisticated, more readable, and less formal.",
+      "payload_hash": "94a1622e375a595dc959c9f79c2813a65ba7383d965093df322bab6e4eb25c94",
+      "question_hash": "2aec9fb6583d819635e949a99fe20a0fcb75f0c27e044dd1b5ac70e6efeb8cf2"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0201",
+      "judgment": "sufficient",
+      "derivable_answer": "For 8-bit grayscale images, the typical stabilizing constant values are C1 = (0.01 x 255)^2 (approx. 6.5025) and C2 = (0.03 x 255)^2 (approx. 58.5225).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Typical values for 8-bit grayscale images\nareC 1 = (0.01×255)2 andC 2 = (0.03×255)2."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the mathematical definition of SSIM and explicitly states the typical stabilizing constant values for C1 and C2 in 8-bit grayscale images.",
+      "payload_hash": "1f8d604677335f38cb30dc0ce988f05b5f570c48663bac60b930b3e1c8506d97",
+      "question_hash": "5e4b5026b86a34f5e924120133906d53df75bdc059a4a116a5e01861f9481e3b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0202",
+      "judgment": "sufficient",
+      "derivable_answer": "In the released version of TRAPSBench, the two evaluation conditions evaluated in released control/void pairs are occlusion (202 pairs) and chaotic (500 pairs).",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "computed on the released version of TRAPSBench (202 occlusion and 500 chaotic\ncontrol/void pairs; Table 6)."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 (Appendix P) explicitly states that the released version of TRAPSBench evaluates 202 occlusion and 500 chaotic control/void pairs.",
+      "payload_hash": "b6e8ac34869b16b5613f57cd6f739424764eced87e3306a961835ce0d2ae4ada",
+      "question_hash": "50ecf74255b783db028536074e655fd6faea5e42b8ab73dff322a296224dbb03"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0203",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses multi-sequence timepoints, radiologist QA generation, task definitions, and text chunking, but omits the registration tool (ANTs) and neurological reorientation convention (RAS+).",
+      "rationale": "None of the passages in this context mention the registration software or the anatomical orientation convention used during MRI preprocessing.",
+      "payload_hash": "ed04ba6b5848a4c564a4b9938e3b056b2c4dd316c04cba09350a23c013baef61",
+      "question_hash": "f2b45428828d2e31ac90f914f6e5d67dc453d92b1bad16b6ec386b79a29aef69"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0204",
+      "judgment": "sufficient",
+      "derivable_answer": "The three main contributions of SketchSense are: (1) A synchronous RGB–structure framework coupling two branches via Bidirectional Attention Fusion and phrase-level semantic consistency to restore RGB and refined structure; (2) Intrinsic Sketch-Aware Spatial Regulation to adapt sketch attention and fusion across locations and transformer blocks; and (3) Explicit Signed Sketch-Use Modeling using an optional signed spatial prior to express local preservation-or-correction intent when geometry is ambiguous.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "In summary, our contributions are threefold:\n• We propose a synchronous RGB–structure framework\nfor interpreting imperfect sketch guidance. Bidirectional\nAttention Fusion and phrase-level semantic consistency\ncouple the two branches, which produce restored RGB\nand an observable refined structure. • We introduce Intrinsic Sketch-Aware Spatial Regulation,\nwhich learns to adapt sketch attention and the fusion process across locations and transformer blocks. • We introduce Explicit Signed Sketch-Use Modeling to\nexpress local preservation-or-correction intent when geometry alone is ambiguous, using an optional prior to regulate sketch representation and use."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly details the three contributions of SketchSense under an enumerated list.",
+      "payload_hash": "c1998b588183a7d67d0b6960ac1c4708a3d63ef3453a48a6f9b9fb908258743d",
+      "question_hash": "5bfc46bd4e03095b5eee5a67d9eae7745551531242cb05b975666459b1c8ba66"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0205",
+      "judgment": "sufficient",
+      "derivable_answer": "RippleMem operationalizes associative recollection through a write–read design: the write phase stores interaction history as cue-rich episodic memory units linked by semantic and structural associations in an event graph, while the read phase uses initially recalled memories as cues to follow local associations and recover additional supporting evidence.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "RippleMem operationalizes them through a write–read\ndesign: the write phase stores interaction history\nas cue-rich episodic memory units linked by semantic and structural associations, while the read\nphase uses initially recalled memories as cues for\nrecovering additional support."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly defines the operational mechanism of RippleMem's write and read phases.",
+      "payload_hash": "02e78764b5d69259352b89be856960053f54506fe24ba1dfff1be4ceabc81202",
+      "question_hash": "72e6e9d23e9b8cd17e142f70bb7dc4293c85f4844ef049778a6f52e6af7a9277"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0206",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 are duplicate title and abstract fragments of VLSR that omit the comparison with post-hoc graph explainers like GNNExplainer and SubgraphX.",
+      "rationale": "Context duplicates the general introduction of VLSR without mentioning GNNExplainer, SubgraphX, or post-hoc graph localization.",
+      "payload_hash": "4284d84cba71fd4a1b0f75380e48e70fdac7dc3715cabdfa96c2235d20950fcb",
+      "question_hash": "db82f6f1df47fd12bd3d47a0656128bb1f394157d7fe4a16e5f7d7b040dfbf96"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0207",
+      "judgment": "sufficient",
+      "derivable_answer": "In ProME's problem formulation, an exogenous construction fixes environment assignments beforehand using a detached reference encoder, creating an environment–representation mismatch that persists throughout training; in contrast, an endogenous construction draws the partition directly from an encoder checkpoint on the training trajectory that it later regularizes.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "To supply the missing assignments, a\nnatural strategy is to read them off a detached reference\nencoder𝜙 ref trained beforehand. However, a partition fixed\nby𝜙 ref reflects the geometry of that encoder, not that of\nthe representation trained downstream. Thisenvironment–\nrepresentation mismatch then persists for the rest of training. Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory\nthat it later regularizes."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage explicitly contrasts exogenous construction (fixed beforehand by a detached reference encoder) with endogenous construction (drawn from a checkpoint on the trajectory it regularizes).",
+      "payload_hash": "9dca4aaeaa932dcded8f4599319d1701ad77a360af8cee970dcb53aa5a526295",
+      "question_hash": "1c3cb3183963ca6d8b3636ac8f0c3504717d44da5b8ec39c9dcda2b7dd1987de"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0208",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses multi-view and temporal slice extraction, tumor centroid identification, percentile normalization, and radiologist review, but omits the registration tool (ANTs) and neurological reorientation convention (RAS+).",
+      "rationale": "Passages 1 and 2 cover MRI normalization and tumor slicing but do not name ANTs or RAS+.",
+      "payload_hash": "187530c3fe867ec8755778b2b805643db62c3c1db8c659a6c99df8fd85551021",
+      "question_hash": "f2b45428828d2e31ac90f914f6e5d67dc453d92b1bad16b6ec386b79a29aef69"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0209",
+      "judgment": "sufficient",
+      "derivable_answer": "In Mixture of Training (MoT), to satisfy shape-compatibility without projection or stitching layers, the aligner must share the same global width, attention-head dimensionality, feed-forward width, token embedding space, and output head with the target model.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Interface constraints.The aligner is required to be shape-compatible with the target model: it uses the same global width,\nattention-head dimensionality, feed-forward width, token embedding space, and output head. This lets aligner slices and\ntarget slices be swapped without adding projection or stitching layers."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly specifies the interface constraints that the aligner must share with the target model to enable slice swapping without projection layers.",
+      "payload_hash": "b028a094c533c90ff7bbd3bbf74f51c14a6402119eedffca46e5c8a485b60a9d",
+      "question_hash": "6c85449e54aa8feff240638c826162342fc3c7a5ff29e52d388f444ffc5394ad"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0210",
+      "judgment": "sufficient",
+      "derivable_answer": "RippleMem operationalizes associative recollection through a write phase that converts interaction history into cue-rich episodic memory units linked in a memory graph by semantic and structural associations, and a read phase where adaptive associative recollection recalls candidate memories and follows local associations to recover missing evidence.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Write Phase.The write phase builds the memory substrate for later recollection.Cue-Rich\nEpisodic Memory Constructionconverts dialogue history into self-contained event memories\nwith semantic representations and episodic cues,\n3\nwhile the Event-Centric Memory Graphlinks\nthese memories through semantic and structural\nassociations. Together, they transform raw interaction history into a connected event memory space. Read Phase.The read phase uses this event\nmemory space to recover evidence for a query. Adaptive Associative Recollectionfirst recalls\ncandidate evidence and then, when needed, follows\nlocal associations from salient recalled memories\nto recover missing support."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 outlines the operational details of both the Write Phase and Read Phase for associative recollection.",
+      "payload_hash": "7f54073c788b6ae69ed0636a4ca5214d7f105e129e9ceb99bacb3f5f95514de1",
+      "question_hash": "72e6e9d23e9b8cd17e142f70bb7dc4293c85f4844ef049778a6f52e6af7a9277"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0211",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 are duplicate introduction sections that briefly mention 'condition-state mismatch in TI2V models', but omit the specific failure mode mechanism caused by first-frame conditioning (clean first frame forced into partially denoised frames causing corrupted velocity fields and contradictory signals).",
+      "rationale": "Context contains duplicate introductory paragraphs mentioning condition-state mismatch in passing, but lacks the detailed physical failure mode description. Passages 3 and 4 are distractors on LLM OPD.",
+      "payload_hash": "651d3f56562a4e408c516d4c891791e571f0bb357b2730d5f8975d8164266152",
+      "question_hash": "143010941cf8be6beeda02cf56bbe806756064d00ae8555756e2dfc1e5e140da"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0212",
+      "judgment": "sufficient",
+      "derivable_answer": "In MoT, shape-compatibility without projection or stitching layers requires the aligner to share the same global width, attention-head dimensionality, feed-forward width, token embedding space, and output head with the target model.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Interface constraints.The aligner is required to be shape-compatible with the target model: it uses the same global width,\nattention-head dimensionality, feed-forward width, token embedding space, and output head. This lets aligner slices and\ntarget slices be swapped without adding projection or stitching layers."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly enumerates the architectural dimensions shared between aligner and target model to achieve shape compatibility.",
+      "payload_hash": "cb8b1b4d40921f9b67267c0ee61256ec46c0602d5fd60c03e37514f86e6a79e3",
+      "question_hash": "6c85449e54aa8feff240638c826162342fc3c7a5ff29e52d388f444ffc5394ad"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0213",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 are duplicate survey sections that mention Multi Parallel U-Net as an MoE paradigm for computer vision, but omit the two key architectural differences of the proposed sign language generator (identical input resolution and United Loss consensus mechanism).",
+      "rationale": "Context mentions Multi Parallel U-Net in related work but completely omits the two differentiating architectural respects of the proposed model.",
+      "payload_hash": "c0bcc56bdb414c6f547ce3fa0163ad3fd2b2c4640bc292c230c22e173f753a57",
+      "question_hash": "4cbc069bf3189954e34d1c8b019271c0329db68e12a7ba33f40d802084742290"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0214",
+      "judgment": "sufficient",
+      "derivable_answer": "In the longitudinal MRI preprocessing pipeline, serial scans were registered to baseline using ANTs (Advanced Normalization Tools), and all volumes were reoriented to RAS+ neurological convention.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Serial scans were registered to baseline using ANTs [2] (deformable for most cohorts, rigid for geometrically consistent acquisitions). All\nvolumeswerereorientedtoRAS+neurological convention to ensure standardized\nanatomical presentation."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly documents that serial scans were registered using ANTs and that all volumes were reoriented to RAS+ neurological convention.",
+      "payload_hash": "bb337d0951b5defa12244e0913f6ff8a18d45d5955636b5072b65164cb55aa21",
+      "question_hash": "f2b45428828d2e31ac90f914f6e5d67dc453d92b1bad16b6ec386b79a29aef69"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0215",
+      "judgment": "sufficient",
+      "derivable_answer": "In professional tasks, prompts containing women-associated language lead to model responses that are shorter, less sophisticated, more readable, and less formal.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly answers the question regarding the effect of women-associated language on model outputs in professional communication tasks.",
+      "payload_hash": "f83ac267f2b63f0f1cd42c2a48e9f27cfc0646dee8f0af350ecda6c895b27409",
+      "question_hash": "2aec9fb6583d819635e949a99fe20a0fcb75f0c27e044dd1b5ac70e6efeb8cf2"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0216",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces the general VLSR framework in Passage 1, but completely lacks the discussion or comparison with post-hoc graph explainers such as GNNExplainer and SubgraphX.",
+      "rationale": "Passage 1 describes VLSR's visual latent structural reasoning, but neither GNNExplainer nor SubgraphX is mentioned anywhere in the context (Passages 2-4 discuss unrelated topics). Therefore, the operational difference cannot be derived.",
+      "payload_hash": "b19b57aaec1d73ff9bf2215a9458b0f99ee738bef26c093443cead2aa8659a64",
+      "question_hash": "db82f6f1df47fd12bd3d47a0656128bb1f394157d7fe4a16e5f7d7b040dfbf96"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0217",
+      "judgment": "sufficient",
+      "derivable_answer": "In Table I of the NARU benchmark, the five Cultural level task codes and evidence types are: C.1 (Aizuchi) with 'Backchannels and response timing'; C.2 (Kuuki wo Yomu) with 'Social atmosphere or implicit norms'; C.3 (Subtext Interpretation) with 'Surface utterance plus context'; C.4 (Cultural Context Recognition) with 'Culturally specific references'; and C.5 (Sentiment Analysis) with 'Verbal, visual, and social cues'.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Cultural\n(C, 736)\nAizuchi (Conversational Mechanics) Backchannels and response timing C.1 143\nKuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147\nSubtext Interpretation Surface utterance plus context C.3 148\nCultural Context Recognition Culturally specific references C.4 149\nSentiment Analysis Verbal, visual, and social cues C.5 149"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 contains Table I detailing each cultural task code, name, and associated evidence type.",
+      "payload_hash": "fed0a858f244d8cc167111121f91e22e1402ea91e98d32c6b3ef86c94736cb63",
+      "question_hash": "cc5f833e1ab4b30e10f9824e583f80816d1c4d0c841c17a7364db3785c7920b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0218",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 are duplicate excerpts discussing narrative category N.4, omitting Table I and the five Cultural level task codes (C.1 through C.5).",
+      "rationale": "Context duplicates narrative flow details while omitting the requested cultural taxonomy table.",
+      "payload_hash": "9d2c53386facd1229be3ed7a23d24389ba3514ca47f850be787880c95511c5bb",
+      "question_hash": "cc5f833e1ab4b30e10f9824e583f80816d1c4d0c841c17a7364db3785c7920b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0219",
+      "judgment": "sufficient",
+      "derivable_answer": "The proposed sign language generator differs from the original Multi Parallel U-Net in two key respects: (1) its branches share identical input resolution rather than using pre-trained heterogeneous encoders, and (2) it introduces a United Loss consensus mechanism to coordinate training across branches.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "While\nour architecture draws inspiration from this fully parallel paradigm, it differs in two key respects:\n(1) our branches share identical input resolution\nrather than employing pre-trained heterogeneous\nencoders, and (2) our design introduces a United\nLoss consensus mechanism to coordinate training\nacross branches, which is not present in the original\nMulti Parallel U-Net."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly lists the two architectural distinctions between the proposed model and the original Multi Parallel U-Net.",
+      "payload_hash": "63dbcebeef07bbddf74a0ffe408e71a2d81e683b8c0d60a3e453eebbbd3f9de2",
+      "question_hash": "4cbc069bf3189954e34d1c8b019271c0329db68e12a7ba33f40d802084742290"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0220",
+      "judgment": "sufficient",
+      "derivable_answer": "The proposed generator differs from Multi Parallel U-Net in two key respects: (1) expert branches share identical input resolution instead of heterogeneous encoders, and (2) a United Loss consensus mechanism is introduced to coordinate training across branches.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "While\nour architecture draws inspiration from this fully parallel paradigm, it differs in two key respects:\n(1) our branches share identical input resolution\nrather than employing pre-trained heterogeneous\nencoders, and (2) our design introduces a United\nLoss consensus mechanism to coordinate training\nacross branches, which is not present in the original\nMulti Parallel U-Net."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly enumerates the two architectural departures from Multi Parallel U-Net.",
+      "payload_hash": "48fbdc5dd505f5c907e3614cb51e2478996128d54a028868640a9ea5d180958b",
+      "question_hash": "4cbc069bf3189954e34d1c8b019271c0329db68e12a7ba33f40d802084742290"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0221",
+      "judgment": "sufficient",
+      "derivable_answer": "In TRAPSBench, the released control/void pairs evaluate 202 occlusion pairs and 500 chaotic pairs.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Top (Occlusion, N=202):an opaque\nwall blocks the outcome.Bottom (Chaotic, N=500):the video is truncated before the"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 gives the exact counts of released control/void pairs for occlusion (N=202) and chaotic (N=500) conditions.",
+      "payload_hash": "988502ba4420cc5b8a977386a6f33fc25e5057dffa4547b1ea84f3b7fdde5b6f",
+      "question_hash": "50ecf74255b783db028536074e655fd6faea5e42b8ab73dff322a296224dbb03"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0222",
+      "judgment": "sufficient",
+      "derivable_answer": "When on-policy distillation is applied to TI2V models, a severe condition-state mismatch arises because the TI2V teacher rigidly requires a clean first frame, but querying it on a student's intermediate T2V rollout forces a clean image condition to coexist with partially denoised frames depicting different content; this unaligned mixture creates temporal discontinuity and causes the teacher to output corrupted velocity fields with contradictory signals that mislead the student toward the image condition rather than refining its own content.",
+      "supporting_quotations": [
+        {
+          "passage_index": 4,
+          "quote": "Conversely, recent on-policy distillation methods (Jiang et al., 2026; Zhou et al., 2026) evaluate at student-visited states to offer localized correction, but suffer from a severe condition-state\nmismatch in the TI2V setting, as shown in Fig. 3. Rolling out in the T2V mode, the student generates\nan internally coherent latent sequence x Stu,(1:F)\nt . However, since the TI2V teacher rigidly requires\na clean first frame, querying it on a student’s intermediate state creates a conflicted mixed input:\nˆxMismatch\nt = [c img, xStu,(2:F)\nt ].(5)\nHere, the clean condition c img is forced to coexist with the student’s partially denoised frames, which\ndepict a completely different, free-running T2V content, causing a severe temporal discontinuity. Essentially, this unaligned mixture constitutes an invalid input state for the model. The teacher\nthus outputs a corrupted velocity field, generating contradictory signals that mislead the student’s\ndenoising process toward c img, rather than refining the student’s own content."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 4 provides a comprehensive explanation of the condition-state mismatch failure mode caused by first-frame conditioning in TI2V on-policy distillation.",
+      "payload_hash": "1498a45cd71f5d3d7b916de4c5b3021ea7ef4eba0d28a9facb1ead41fdbb3e7d",
+      "question_hash": "143010941cf8be6beeda02cf56bbe806756064d00ae8555756e2dfc1e5e140da"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0223",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses on-policy distillation in LLM reasoning tasks and test-time scaling, but omits text-image-to-video (TI2V) diffusion models, first-frame conditioning, and the condition-state mismatch failure mode.",
+      "rationale": "Passages 1–4 are centered on language model test-time scaling and omit video diffusion distillation.",
+      "payload_hash": "11038de676c5b8005632671813175ba1ceafcbb30a6f5a681ea51f7cbeca0d17",
+      "question_hash": "143010941cf8be6beeda02cf56bbe806756064d00ae8555756e2dfc1e5e140da"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0224",
+      "judgment": "sufficient",
+      "derivable_answer": "In RippleMem, the write phase converts dialogue history into cue-rich episodic memory units and links them via semantic/structural associations in an event graph, while the read phase recalls candidate evidence and follows local associations to recover missing evidence context.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Write Phase.The write phase builds the memory substrate for later recollection.Cue-Rich\nEpisodic Memory Constructionconverts dialogue history into self-contained event memories\nwith semantic representations and episodic cues,\n3\nwhile the Event-Centric Memory Graphlinks\nthese memories through semantic and structural\nassociations. Together, they transform raw interaction history into a connected event memory space. Read Phase.The read phase uses this event\nmemory space to recover evidence for a query. Adaptive Associative Recollectionfirst recalls\ncandidate evidence and then, when needed, follows\nlocal associations from salient recalled memories\nto recover missing support."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (and duplicate Passage 2) explicitly describes how associative recollection is operationalized across the write and read phases.",
+      "payload_hash": "95b52ae3d5cd4e7db71998302def8c6a9281c82fbc121b975a9e3521fa17fc22",
+      "question_hash": "72e6e9d23e9b8cd17e142f70bb7dc4293c85f4844ef049778a6f52e6af7a9277"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0225",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces black-box fidelity anchoring concepts, but omits the SSIM formula and the specific stabilizing constant values for C1 and C2 in 8-bit grayscale images.",
+      "rationale": "Passage 1 is high-level introduction without mathematical formula for SSIM constants. Passages 2, 3, and 4 are distractors.",
+      "payload_hash": "2e66544241e507fc2374bb84a35a098e2f61541d827a6e50750debc75a02c2e5",
+      "question_hash": "5e4b5026b86a34f5e924120133906d53df75bdc059a4a116a5e01861f9481e3b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0226",
+      "judgment": "sufficient",
+      "derivable_answer": "When prompts contain linguistic features commonly used by women (hedges, tag questions, collective reference), models systematically produce shorter, less sophisticated, and less formal responses across professional document types and multiple models.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We show that when prompts contain\nlinguistic features more commonly used by women (hedges, tag questions,\ncollective reference), they systematically elicit shorter, less sophisticated,\nand less formal responses across three document types and four models."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (the paper abstract) explicitly states the empirical finding that women-associated linguistic patterns systematically elicit shorter, less sophisticated, and less formal responses.",
+      "payload_hash": "f87d5cf5925c1a383e1b6d816c52397c1f9b7ca1189e23490fd7636648cdd52b",
+      "question_hash": "2aec9fb6583d819635e949a99fe20a0fcb75f0c27e044dd1b5ac70e6efeb8cf2"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0227",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passage 1 mentions Multi Parallel U-Net as prior work in Section 2.3, but omits the two specific architectural respects in which the proposed model differs.",
+      "rationale": "The related work summary does not provide the proposed model's two architectural differences from Multi Parallel U-Net. Passages 2, 3, and 4 are distractors.",
+      "payload_hash": "8d0abc51087894c9bd4a81358b7284389ce399f3ce932e2078e4a09246da0950",
+      "question_hash": "4cbc069bf3189954e34d1c8b019271c0329db68e12a7ba33f40d802084742290"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0228",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passage 1 presents tables for Occlusion Ill-Posed and Chaotic performance, but omits the authoritative statement from Appendix P establishing that these are the two evaluation conditions evaluated in released control/void pairs of TRAPSBench.",
+      "rationale": "Context contains benchmark tables but omits the release provenance text establishing the evaluation conditions and their sample pair counts. Passages 2 and 3 are distractors.",
+      "payload_hash": "ebbd3b048f84ef4f5f7e2c49892f12b3aa15f6319f80e89782dfd30b1976de24",
+      "question_hash": "50ecf74255b783db028536074e655fd6faea5e42b8ab73dff322a296224dbb03"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0229",
+      "judgment": "sufficient",
+      "derivable_answer": "Post-hoc explainers like GNNExplainer and SubgraphX explain predictions over an explicit graph structure after the prediction has been made, whereas VLSR learns regions directly from molecular depiction pixels and employs them as intermediate computational states before property prediction.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "GNNExplainer identifies compact\nsubgraphs and node features that preserve a graph model’s\nprediction, whereas SubgraphX explicitly searches for importantsubgraphsandaccountsforinteractionsamongthem\n(Ying et al. 2019; Yuan et al. 2021). These approaches explain a prediction over an explicit graph after it has been pro-\nduced. VLSR instead learns regions directly from depiction\npixels and uses them as intermediate computational states\nbefore the property prediction."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly contrasts post-hoc graph explainers with VLSR's pre-prediction pixel region reasoning.",
+      "payload_hash": "58c638e4602179e1a95a2d753efb67d5a42574e918cbf9cde62b7516abdd9131",
+      "question_hash": "db82f6f1df47fd12bd3d47a0656128bb1f394157d7fe4a16e5f7d7b040dfbf96"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0230",
+      "judgment": "sufficient",
+      "derivable_answer": "In professional tasks, prompts containing women-associated linguistic features elicit responses that are systematically shorter, less sophisticated, and less formal across models and document types.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We show that when prompts contain\nlinguistic features more commonly used by women (hedges, tag questions,\ncollective reference), they systematically elicit shorter, less sophisticated,\nand less formal responses across three document types and four models."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly reports that women-associated linguistic features lead to shorter, less sophisticated, and less formal responses in workplace communication tasks.",
+      "payload_hash": "65d02bc9af79c9b1aa814306f9804b21927c030d974584ca3916faab4e2e535c",
+      "question_hash": "2aec9fb6583d819635e949a99fe20a0fcb75f0c27e044dd1b5ac70e6efeb8cf2"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0231",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context contains general discussion of inpainting and conclusion summary, but omits the explicit three-part contribution list (Synchronous RGB-structure framework, Intrinsic Sketch-Aware Spatial Regulation, Explicit Signed Sketch-Use Modeling).",
+      "rationale": "Passage 1 and 2 discuss motivation and conclusion but lack the specific enumerated contributions introduced by SketchSense.",
+      "payload_hash": "e33ea530829d9b89441766f3a12704ec905a89ed5fb2ebd7e3f29c923d2ed09f",
+      "question_hash": "5bfc46bd4e03095b5eee5a67d9eae7745551531242cb05b975666459b1c8ba66"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0232",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses longitudinal follow-up periods, radiologist verification rates, and multi-view slice extraction, but omits the registration tool (ANTs) and neurological reorientation convention (RAS+).",
+      "rationale": "Passages cover dataset statistics and slice selection but omit preprocessing registration and coordinate reorientation details.",
+      "payload_hash": "7139078a5f96af8e1af2dee7c4925b8b83d3bc579d2c50810f8a329b73cc85c5",
+      "question_hash": "f2b45428828d2e31ac90f914f6e5d67dc453d92b1bad16b6ec386b79a29aef69"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0233",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passage 1 is an overview of sketch inpainting without the three specific architectural contributions introduced by SketchSense.",
+      "rationale": "Context omits the three explicit contribution points detailing the framework, regulation, and signed sketch-use modeling.",
+      "payload_hash": "8e7d3835839bf307e2992776d66c3c91313cccdab52d674e24033a6aad17473c",
+      "question_hash": "5bfc46bd4e03095b5eee5a67d9eae7745551531242cb05b975666459b1c8ba66"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0234",
+      "judgment": "sufficient",
+      "derivable_answer": "In ProME's problem formulation, an exogenous environment construction reads partitions off a detached reference encoder trained beforehand (which reflects that encoder's geometry rather than the downstream representation, causing persistent mismatch), whereas an endogenous construction draws the partition from a checkpoint on the training trajectory that it later regularizes.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "To supply the missing assignments, a\nnatural strategy is to read them off a detached reference\nencoder𝜙 ref trained beforehand. However, a partition fixed\nby𝜙 ref reflects the geometry of that encoder, not that of\nthe representation trained downstream. Thisenvironment–\nrepresentation mismatch then persists for the rest of training. Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory\nthat it later regularizes."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly defines and contrasts exogenous and endogenous environment constructions in invariant representation learning.",
+      "payload_hash": "a9a6c48a6e7c18ea6d85fbc52e458ebcbc3c5ab7b64ccaa114c1d2e24ed3ce8c",
+      "question_hash": "1c3cb3183963ca6d8b3636ac8f0c3504717d44da5b8ec39c9dcda2b7dd1987de"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0235",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 are duplicate introduction paragraphs discussing general denoising fidelity, but omit the mathematical definition of SSIM and the constants C1 and C2 for 8-bit grayscale images.",
+      "rationale": "Context contains duplicate text on image denoising without the SSIM formula or stabilizing constant values.",
+      "payload_hash": "bacd4b5c91fe1106c0ec123d5512d128a34a287eebb229f735fed214aa9fe922",
+      "question_hash": "5e4b5026b86a34f5e924120133906d53df75bdc059a4a116a5e01861f9481e3b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0236",
+      "judgment": "sufficient",
+      "derivable_answer": "In 8-bit grayscale SSIM computation, the typical stabilizing constant values are C1 = (0.01 x 255)^2 (6.5025) and C2 = (0.03 x 255)^2 (58.5225).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Typical values for 8-bit grayscale images\nareC 1 = (0.01×255)2 andC 2 = (0.03×255)2."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 defines the SSIM formula and explicitly provides the typical numerical formulas for C1 and C2 in 8-bit grayscale images.",
+      "payload_hash": "4f318b8db96f065180d850ba9892c2a16e25da5a3cdc1f5c8805f8075a994200",
+      "question_hash": "5e4b5026b86a34f5e924120133906d53df75bdc059a4a116a5e01861f9481e3b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0237",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses HPSD overview in Passage 1 and LLM test-time scaling in Passages 2–4, but omits the detailed failure mode mechanism caused by first-frame conditioning in TI2V on-policy distillation.",
+      "rationale": "Context omits the specific mechanism of temporal discontinuity and corrupted velocity fields in TI2V OPD.",
+      "payload_hash": "0f80f9afebe071d7d869a7fed7548402c5e69e0c655722c79e8973ba28776784",
+      "question_hash": "143010941cf8be6beeda02cf56bbe806756064d00ae8555756e2dfc1e5e140da"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0238",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passage 1 reports benchmark performance across models, but omits the authoritative release provenance statement establishing that the released control/void pairs consist of 202 occlusion and 500 chaotic pairs.",
+      "rationale": "Context lacks the explicit release provenance statement specifying the two evaluation conditions and their sample counts in released pairs.",
+      "payload_hash": "ebbd3b048f84ef4f5f7e2c49892f12b3aa15f6319f80e89782dfd30b1976de24",
+      "question_hash": "50ecf74255b783db028536074e655fd6faea5e42b8ab73dff322a296224dbb03"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0239",
+      "judgment": "sufficient",
+      "derivable_answer": "SketchSense introduces three main contributions: (1) A synchronous RGB–structure framework using Bidirectional Attention Fusion and phrase-level semantic consistency to simultaneously restore RGB and refined structure; (2) Intrinsic Sketch-Aware Spatial Regulation to adapt sketch attention and fusion across locations and blocks; and (3) Explicit Signed Sketch-Use Modeling to resolve ambiguous geometry via an optional signed spatial prior.",
+      "supporting_quotations": [
+        {
+          "passage_index": 6,
+          "quote": "In summary, our contributions are threefold:\n• We propose a synchronous RGB–structure framework\nfor interpreting imperfect sketch guidance. Bidirectional\nAttention Fusion and phrase-level semantic consistency\ncouple the two branches, which produce restored RGB\nand an observable refined structure. • We introduce Intrinsic Sketch-Aware Spatial Regulation,\nwhich learns to adapt sketch attention and the fusion process across locations and transformer blocks. • We introduce Explicit Signed Sketch-Use Modeling to\nexpress local preservation-or-correction intent when geometry alone is ambiguous, using an optional prior to regulate sketch representation and use."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 6 provides the complete threefold contribution list for SketchSense.",
+      "payload_hash": "b10d1a2f412e486592d7287fb58908ff35214cbc8c4fa03fc39a703c4a5beecb",
+      "question_hash": "5bfc46bd4e03095b5eee5a67d9eae7745551531242cb05b975666459b1c8ba66"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0240",
+      "judgment": "sufficient",
+      "derivable_answer": "RippleMem operationalizes associative recollection through a write–read architecture: the write phase converts interaction history into cue-rich episodic memory units linked by semantic and structural associations, while the read phase uses initially recalled memories as cues to recover additional supporting evidence.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "RippleMem operationalizes them through a write–read\ndesign: the write phase stores interaction history\nas cue-rich episodic memory units linked by semantic and structural associations, while the read\nphase uses initially recalled memories as cues for\nrecovering additional support."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly describes how the write and read phases of RippleMem operationalize associative recollection.",
+      "payload_hash": "aa770f35832bd2dc57a451399f721f7d781f7cd340314b83e9ece2838ef0d44c",
+      "question_hash": "72e6e9d23e9b8cd17e142f70bb7dc4293c85f4844ef049778a6f52e6af7a9277"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-11-03 18:34:40",
+  "status": "DEVELOPMENT_SMOKE_TEST_NON_RESEARCH_PILOT",
+  "provenance_note": "Pilot development test across 12 families. Non-research smoke test only. Evaluated strictly offline with synthetic pilot labels. Does not represent deployment prevalence or final empirical findings.",
+  "split_metadata": {
+    "num_connected_components": 12,
+    "component_sizes": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "train_families_count": 6,
+    "val_families_count": 3,
+    "test_families_count": 3,
+    "train_unique_papers": 6,
+    "val_unique_papers": 3,
+    "test_unique_papers": 3,
+    "paper_leakage_detected": false
+  },
+  "test_records_count": 12,
+  "model_evaluations": {
+    "B0_AlwaysAccept": {
+      "achieved_coverage": 1.0,
+      "evidence_selection_risk": 0.25,
+      "type1_error_insufficient_accepted": 1.0,
+      "type2_error_sufficient_rejected": 0.0,
+      "aurc": 0.125,
+      "aurc_95_ci": [
+        0.125,
+        0.125
+      ],
+      "matched_coverage_risk": {
+        "0.5": 0.125,
+        "0.75": 0.1875,
+        "0.9": 0.225
+      },
+      "inference_latency_ms": 0.0
+    },
+    "B1_ValidationTunedThreshold": {
+      "achieved_coverage": 0.75,
+      "evidence_selection_risk": 0.0,
+      "type1_error_insufficient_accepted": 0.0,
+      "type2_error_sufficient_rejected": 0.0,
+      "aurc": 0.0312,
+      "aurc_95_ci": [
+        0.0312,
+        0.0312
+      ],
+      "matched_coverage_risk": {
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.15
+      },
+      "inference_latency_ms": 0.0
+    },
+    "B2_FrozenHistoricalGate": {
+      "achieved_coverage": 1.0,
+      "evidence_selection_risk": 0.25,
+      "type1_error_insufficient_accepted": 1.0,
+      "type2_error_sufficient_rejected": 0.0,
+      "aurc": 0.0312,
+      "aurc_95_ci": [
+        0.0312,
+        0.0312
+      ],
+      "matched_coverage_risk": {
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.15
+      },
+      "inference_latency_ms": 0.0
+    },
+    "M1_LogisticRelevanceOnly": {
+      "achieved_coverage": 0.75,
+      "evidence_selection_risk": 0.0,
+      "type1_error_insufficient_accepted": 0.0,
+      "type2_error_sufficient_rejected": 0.0,
+      "aurc": 0.0312,
+      "aurc_95_ci": [
+        0.0312,
+        0.0312
+      ],
+      "matched_coverage_risk": {
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.15
+      },
+      "inference_latency_ms": 4.47
+    },
+    "M2_LogisticStructuralRaw": {
+      "achieved_coverage": 0.75,
+      "evidence_selection_risk": 0.0,
+      "type1_error_insufficient_accepted": 0.0,
+      "type2_error_sufficient_rejected": 0.0,
+      "aurc": 0.0312,
+      "aurc_95_ci": [
+        0.0312,
+        0.0312
+      ],
+      "matched_coverage_risk": {
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.15
+      },
+      "inference_latency_ms": 10.63
+    },
+    "M3_LogisticDuplicateAware": {
+      "achieved_coverage": 0.75,
+      "evidence_selection_risk": 0.0,
+      "type1_error_insufficient_accepted": 0.0,
+      "type2_error_sufficient_rejected": 0.0,
+      "aurc": 0.0312,
+      "aurc_95_ci": [
+        0.0312,
+        0.0312
+      ],
+      "matched_coverage_risk": {
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.15
+      },
+      "inference_latency_ms": 1.74
+    }
+  },
+  "total_elapsed_sec": 0.233
+}

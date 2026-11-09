@@ -22,6 +22,12 @@ class VectorStore:
     """Local persistent ChromaDB vector store manager for dense embeddings."""
 
     def __init__(self, persist_dir: str = "data/chroma_db", collection_name: str = "scientific_papers"):
+        if not os.path.isabs(persist_dir):
+            pkg_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            candidate = os.path.join(pkg_root, persist_dir)
+            if os.path.exists(candidate) and os.path.exists(os.path.join(candidate, "chroma.sqlite3")):
+                persist_dir = candidate
+
         self.persist_dir = persist_dir
         self.collection_name = collection_name
         os.makedirs(self.persist_dir, exist_ok=True)
@@ -49,14 +55,26 @@ class VectorStore:
         except Exception:
             pass
 
-    def _compute_dense_vector(self, text: str, dim: int = 384, is_query: bool = True) -> List[float]:
-        """Generate a dense semantic vector using nomic-embed-text (768-dim) or fallback hashed vector."""
-        if self.embed_model:
+    def _compute_dense_vector(self, text: str, dim: int = 384, is_query: bool = True, strict: bool = False) -> List[float]:
+        """
+        Generate a dense semantic vector using nomic-embed-text (768-dim) or fallback hashed vector.
+        In strict mode (required for selective research experiments), failure to compute real embeddings
+        raises RuntimeError and strictly prohibits silent fallback to hashed vectors.
+        """
+        if self.embed_model is not None:
             try:
                 prefix = "search_query: " if is_query else "search_document: "
                 return self.embed_model.encode([f"{prefix}{text}"], show_progress_bar=False)[0].tolist()
-            except Exception:
+            except Exception as e:
+                if strict:
+                    raise RuntimeError(f"Dense vector embedding computation failed in strict mode: {e}") from e
                 pass
+
+        if strict:
+            raise RuntimeError(
+                "Dense embedding model is not loaded in strict experiment mode! "
+                "Silent fallback to hashed vectors is prohibited."
+            )
 
         # High-performance hashed dense feature vector fallback (384 dimensions)
         vec = [0.0] * dim

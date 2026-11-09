@@ -1,7 +1,7 @@
 """
 Multi-Paper Literature Review Synthesis Engine (Phase 3 / FR-8, PRD §7.1).
 Decomposes query into research sub-topics, retrieves top-10 chunks per sub-topic,
-and passes full papers into Gemini 2.5 Flash long context when retrieved set spans <5 papers.
+and passes full papers into gemini-3.5-flash-lite long context when retrieved set spans <5 papers.
 """
 
 import os
@@ -10,10 +10,11 @@ from backend.contract import LitReviewResult, SourcePaper
 
 
 class MultiPaperLitReviewEngine:
-    """Literature review synthesis engine using Gemini 2.5 Flash long context (FR-8)."""
+    """Literature review synthesis engine using gemini-3.5-flash-lite long context (FR-8)."""
 
-    def __init__(self, api_key: str = None):
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
+    def __init__(self, api_key: str = None, strict_mode: bool = False):
+        self.strict_mode = strict_mode
+        self.api_key = api_key if api_key is not None else os.getenv("GEMINI_API_KEY", "")
         self.client = None
         self._init_client()
 
@@ -43,7 +44,8 @@ class MultiPaperLitReviewEngine:
         self,
         topic: str,
         retrieved_chunks: List[Dict[str, Any]],
-        papers: List[Dict[str, Any]]
+        papers: List[Dict[str, Any]],
+        strict_mode: bool = None
     ) -> LitReviewResult:
         """
         Generate structured literature review.
@@ -54,7 +56,7 @@ class MultiPaperLitReviewEngine:
 
         # 1. Select Context Mode per FR-8
         if spans_fewer_than_5_papers and len(papers) > 0:
-            mode_desc = "Gemini 2.5 Flash 1M-Token Long Context (Full Paper Payload)"
+            mode_desc = "Top Retrieved Passages Multi-Document Synthesis"
             context_blocks = []
             for p in papers[:4]:
                 title = p.get("title", "Paper")
@@ -97,7 +99,10 @@ class MultiPaperLitReviewEngine:
             except Exception as e:
                 print(f"[LitReview] API call exception: {e}. Utilizing fallback structured synthesis.")
 
+        is_strict = self.strict_mode if strict_mode is None else strict_mode
         if not review_text:
+            if is_strict:
+                raise RuntimeError(f"[Strict Mode Error] Literature review generation failed for topic '{topic}'. LLM client unconfigured or API call failed.")
             review_text = self._build_offline_fallback_review(topic, spans_fewer_than_5_papers)
 
         # Format Source Papers
@@ -123,7 +128,7 @@ class MultiPaperLitReviewEngine:
             comp_table.append({
                 "Paper Title": title[:30] + "...",
                 "Approach": "Dense RAG / Transformer",
-                "Key Metric": f"Faithfulness 0.8{idx}",
+                "Status": "Retrieved passage context",
                 "Year": p.get("year", 2021)
             })
 
@@ -143,9 +148,9 @@ class MultiPaperLitReviewEngine:
         )
 
     def _build_offline_fallback_review(self, topic: str, long_context_mode: bool) -> str:
-        mode_str = "Gemini 2.5 Flash 1M Long Context (Full Paper Payload)" if long_context_mode else "Top-10 Chunk Sub-Topic Synthesis"
+        mode_str = "gemini-3.5-flash-lite 1M Long Context (Full Paper Payload)" if long_context_mode else "Top-10 Chunk Sub-Topic Synthesis"
         return (
-            f"### Comprehensive Synthesis: {topic}\n\n"
+            f"> ⚠️ **[DEMO FALLBACK - OFFLINE/UNCONFIGURED API KEY]**\n\n### Comprehensive Synthesis: {topic}\n\n"
             f"*Context Mode*: `{mode_str}`\n\n"
             f"#### 1. Foundational Architecture & Dense Passage Ingestion\n"
             f"Modern RAG systems combine layout-aware document conversion with section-aware chunking. "

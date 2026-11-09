@@ -1,0 +1,398 @@
+[
+  {
+    "family_id": "v2_val_001",
+    "paper_id": "2608.12598",
+    "question_type": "single_passage",
+    "question": "In the description-based account of intensional anaphora by Keshet and Abney, what presupposition does a pronoun carry regarding its antecedent description, and what formal logic implements it?",
+    "primary_chunk_id": "2608.12598_sec_002",
+    "support_chunk_ids": [
+      "2608.12598_sec_002"
+    ],
+    "support_excerpts": [
+      "We propose that a pronoun presupposes that its corresponding\nantecedent description is instantiated in each world of the context set.",
+      "We implement our proposal via a new logic (building on work\nby Keshet (2018) and Abney & Keshet (2022)) that we name Plural Intensional\nPresuppositional predicate calculus (or PIP)."
+    ]
+  },
+  {
+    "family_id": "v2_val_002",
+    "paper_id": "2608.12720",
+    "question_type": "single_passage",
+    "question": "In ERSkill, what three single-primitive seed skills and corresponding search primitives initialize the capability and deploy frontiers?",
+    "primary_chunk_id": "2608.12720_sec_011",
+    "support_chunk_ids": [
+      "2608.12720_sec_011"
+    ],
+    "support_excerpts": [
+      "Evolution starts from three single-primitive seed skills: semantic-clue with dense_search,\nentity-focus with entity_search, and surface-fact with lexical_search; both frontiers\nare initialized from them, so B0 =C 0."
+    ]
+  },
+  {
+    "family_id": "v2_val_003",
+    "paper_id": "2608.12721",
+    "question_type": "single_passage",
+    "question": "In the VOS-Agent framework for video object segmentation, what specific models or tools instantiate the SAM3 Agent, Target Perception and Routing Agent, Visual Tracking Agent, and Semantic Agent?",
+    "primary_chunk_id": "2608.12721_sec_013",
+    "support_chunk_ids": [
+      "2608.12721_sec_013"
+    ],
+    "support_excerpts": [
+      "The SAM3 Agent is implemented using the official SAM3 model [1]. The Target\nPerception and Routing Agent is instantiated with Qwen3.5-397B-A17B [11]. The Visual Tracking Agent is instantiated with SUTrack [2] and receives the\nRGB crop enclosed by the first-frame mask as its visual exemplar. The Semantic Agent is instantiated with Qwen3.5-397B-A17B [11]"
+    ]
+  },
+  {
+    "family_id": "v2_val_004",
+    "paper_id": "2608.12746",
+    "question_type": "single_passage",
+    "question": "In Dual-Stream Cross-Anchor Correction (DSCC), how do the perception stream and cognition stream interact with object-level visual anchors during fine-tuning?",
+    "primary_chunk_id": "2608.12746_sec_001",
+    "support_chunk_ids": [
+      "2608.12746_sec_001"
+    ],
+    "support_excerpts": [
+      "a perception stream aligns object-level hidden states at an intermediate layer to frozen text\nanchors by a bidirectional contrastive objective; a cognition stream lets deeper layers query those\nanchors by cross-attention at every generation step; and a two-stage curriculum gate couples them"
+    ]
+  },
+  {
+    "family_id": "v2_val_005",
+    "paper_id": "2608.12773",
+    "question_type": "single_passage",
+    "question": "In CW-BASS v2, what decision rule governs the one-pass saturation gate when selecting pseudo-labels under foundation-model teachers?",
+    "primary_chunk_id": "2608.12773_sec_001",
+    "support_chunk_ids": [
+      "2608.12773_sec_001"
+    ],
+    "support_excerpts": [
+      "reliability of the teacher’s confident set, πkept= Pr[correct|c≥τ] ,\non a held-out slice, and filter strictly when it meets the confidence\ndemanded ( πkept≥τ), falling back to the adaptive floor otherwise."
+    ]
+  },
+  {
+    "family_id": "v2_val_006",
+    "paper_id": "2608.12806",
+    "question_type": "single_passage",
+    "question": "In the animation character erasure framework by Li et al., what mathematical formulation achieves continuous fine-grained control over the erasure degree in Eq. 19, and what do its endpoint values represent?",
+    "primary_chunk_id": "2608.12806_sec_012",
+    "support_chunk_ids": [
+      "2608.12806_sec_012"
+    ],
+    "support_excerpts": [
+      "Continuous fine-grained control is achieved through:\n𝑒\n′\n=𝑒𝑎𝑛𝑐ℎ𝑜𝑟+𝛼·(𝑒 𝑡𝑎𝑟𝑔𝑒𝑡−𝑒𝑎𝑛𝑐ℎ𝑜𝑟), 𝛼∈[0,1](19)",
+      "This formulation interpolates between anchor embedding𝑒𝑎𝑛𝑐ℎ𝑜𝑟\n(complete erasure) and target embedding𝑒𝑡𝑎𝑟𝑔𝑒𝑡 (no erasure), where\n𝛼 governs the interpolation strength."
+    ]
+  },
+  {
+    "family_id": "v2_val_007",
+    "paper_id": "2608.12825",
+    "question_type": "multi_passage",
+    "question": "In LocusGS, how is each query's anchor state defined at decoder layer l, and how does support radius r define preference in cross-attention?",
+    "primary_chunk_id": "2608.12825_sec_011",
+    "support_chunk_ids": [
+      "2608.12825_sec_011",
+      "2608.12825_sec_012"
+    ],
+    "support_excerpts": [
+      "al\ni = (µl\ni, rl\ni)\nwhere µl\ni ∈R 3 is the center and rl\ni ∈R + is its spatial support radius.",
+      "Image tokens whose rays pass closer to the anchor are considered more\nrelevant, while the support radius r l\ni controls the spatial extent of this preference."
+    ]
+  },
+  {
+    "family_id": "v2_val_008",
+    "paper_id": "2608.12875",
+    "question_type": "multi_passage",
+    "question": "According to El Assadi et al., what is the cost ratio between Gemini 3.1 Pro and a comparable embedding model, and on what task category do LLMs maintain a distinct lead over embedding models?",
+    "primary_chunk_id": "2608.12875_sec_001",
+    "support_chunk_ids": [
+      "2608.12875_sec_001",
+      "2608.12875_sec_005"
+    ],
+    "support_excerpts": [
+      "An LLM costs up to 1,431 ×\nmore than an embedding model of comparable quality ($154 vs. $0.11",
+      "Embedding pipelines\nremain the efficient default for classification, similarity, and clustering; LLMs are most\nuseful for reasoning-intensive retrieval."
+    ]
+  },
+  {
+    "family_id": "v2_val_009",
+    "paper_id": "2608.12876",
+    "question_type": "single_passage",
+    "question": "In SPARED, what adversary architecture and generator are paired with the reasoning-MLLM defender to prevent dataset-bias shortcuts in visual forgery detection?",
+    "primary_chunk_id": "2608.12876_sec_008",
+    "support_chunk_ids": [
+      "2608.12876_sec_008"
+    ],
+    "support_excerpts": [
+      "A heterogeneous, continuous-pixel-space adversary (a\nPaCo-gated, RL-trained diffusion image editor) paired\nwith a decoupled reasoning-MLLM defender, extending\nthe anti-collapse mechanisms of prior self-play systems\nto the vision domain."
+    ]
+  },
+  {
+    "family_id": "v2_val_010",
+    "paper_id": "2608.13040",
+    "question_type": "single_passage",
+    "question": "In Latent On-Policy Self-Distillation (LOPD), what constraint ensures the teacher maintains an information advantage over the student, and what components are needed at inference time?",
+    "primary_chunk_id": "2608.13040_sec_006",
+    "support_chunk_ids": [
+      "2608.13040_sec_006"
+    ],
+    "support_excerpts": [
+      "we introduce a privileged-margin constraint that requires the teacher to maintain\na verifiable log-probability advantage over the student.",
+      "After training, only the student is retained:\ninference requires no experience database, retrieval module, composer, or latent context."
+    ]
+  },
+  {
+    "family_id": "v2_val_011",
+    "paper_id": "2608.13063",
+    "question_type": "single_passage",
+    "question": "In the asymptotic AI failure study by Sam Mao, what are the five elicitation conditions governing when and how a model explains tool failure?",
+    "primary_chunk_id": "2608.13063_sec_009",
+    "support_chunk_ids": [
+      "2608.13063_sec_009"
+    ],
+    "support_excerpts": [
+      "(1) immediate_forced — the model is explicitly prompted to explain the failure immediately\nafter\nit\noccurs,\nevery\ntime. (2) grouped_runs — the model explains once at the end of a batch of trials, covering any\nfailures\nthat\noccurred\nwithin\nthat\nbatch. (3) delayed_n_trials — explanation is elicited a fixed number of trials after the failure, not\nimmediately. (4) post_streak_contextual — explanation is elicited with reference to the length of the\nsuccess\nstreak\nimmediately\npreceding\nthe\nfailure. (5) passive_unprompted — the model is never explicitly asked to explain a failure; any\nexplanatory\ncontent\nis\npurely\nvolunteered."
+    ]
+  },
+  {
+    "family_id": "v2_val_012",
+    "paper_id": "2608.13064",
+    "question_type": "multi_passage",
+    "question": "In the UVIF video face forgery framework, what classification losses optimize the unified encoder in Eq. 8, and how are two augmented views generated for video frames in Eq. 9?",
+    "primary_chunk_id": "2608.13064_sec_014",
+    "support_chunk_ids": [
+      "2608.13064_sec_014",
+      "2608.13064_sec_015"
+    ],
+    "support_excerpts": [
+      "The classification losses are defined as:\nLvideo =H(Y, pv),L image =H(y s, ps),(8)",
+      "we generate two augmented views\nfor each video frame v t:\nv weak\nt =A weak(vt), v strong\nt =A strong(vt),(9)"
+    ]
+  },
+  {
+    "family_id": "v2_val_013",
+    "paper_id": "2608.13092",
+    "question": "In the Prompt-aware Spatio-temporal Transformer (PST), how does the bidirectional temporal shift mechanism partition and shift the prompt subsets across video frames?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13092_sec_016"
+    ],
+    "support_excerpts": [
+      "Bidirectional Temporal Shift.After the temporal prompt shuffle, we split the prompts into two equal subsets along the prompt\ndimension: the forward group ˆ𝑃𝑓𝑤𝑑 and the backward group ˆ𝑃𝑏𝑤𝑑 ,\neach containing half prompts:\nˆ𝑃𝑙 =\nh\nˆ𝑃𝑙\nfwd; ˆ𝑃𝑙\nbwd\ni\n,(12)\nwhere ˆ𝑃𝑙\nfwd, ˆ𝑃𝑙\nbwd∈R 𝑇× 𝐺\n2×𝐷 . The forward subset is shifted from\nthe previous frame to the current frame:\n˜𝑃𝑙\nfwd,𝑡 =\n( ˆ𝑃𝑙\nfwd,𝑡, 𝑡=1,\nˆ𝑃𝑙\nfwd,𝑡−1,1<𝑡≤𝑇, (13)\nwhile the backward subset is"
+    ],
+    "expected_answer": "After temporal prompt shuffle, prompts are split into two equal subsets along the prompt dimension: forward and backward groups. The forward subset is shifted from the previous frame to the current frame, while the backward subset is shifted from the next frame.",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13092_sec_016"
+    ],
+    "primary_chunk_id": "2608.13092_sec_016"
+  },
+  {
+    "family_id": "v2_val_014",
+    "paper_id": "2608.13102",
+    "question": "According to the categorization following TacoDepth, what is the distinction between independent and plug-in radar-camera depth completion methods?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13102_sec_005"
+    ],
+    "support_excerpts": [
+      "Following TacoDepth (Wang et al. 2025), we categorize\nradar–camera depth completion methods as independent or\nplug-in. Independent methods directly predict metric depth\nfrom radar and RGB, whereas plug-in methods additionally\nrelyonanauxiliarymonoculardepthmodel."
+    ],
+    "expected_answer": "Independent methods directly predict metric depth from radar and RGB, whereas plug-in methods additionally rely on an auxiliary monocular depth model.",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13102_sec_005"
+    ],
+    "primary_chunk_id": "2608.13102_sec_005"
+  },
+  {
+    "family_id": "v2_val_015",
+    "paper_id": "2608.13168",
+    "question": "How does the evaluation framework measure LLM attachment styles using the ECR-R scale, and why was the ECBench benchmark developed to complement it?",
+    "family_type": "multi_passage",
+    "support_chunks": [
+      "2608.13168_sec_007",
+      "2608.13168_sec_008"
+    ],
+    "support_excerpts": [
+      "For model evaluation, we present the ECR-R\nitems to each model individually and require responses within a ﬁxed set of options. We then\ncompute the mean scores for anxiety and avoidance and map them onto a two-dimensional attachment space.",
+      "The ECR-R characterize the attachment tendencies of LLMs, but lacks realistic interpersonal interaction contexts. We therefore introduce a dialogue benchmark called ECBench for evaluating\nemotional companionship capabilities in realistic\ninteraction scenarios."
+    ],
+    "expected_answer": "The framework presents ECR-R items to models within a fixed option set, computing mean anxiety and avoidance scores to map models into a 2D attachment space. Because ECR-R characterizes tendencies but lacks realistic interpersonal contexts, ECBench was introduced to evaluate emotional companionship capabilities in realistic dialogue.",
+    "question_type": "multi_passage",
+    "support_chunk_ids": [
+      "2608.13168_sec_007",
+      "2608.13168_sec_008"
+    ],
+    "primary_chunk_id": "2608.13168_sec_007"
+  },
+  {
+    "family_id": "v2_val_016",
+    "paper_id": "2608.13183",
+    "question": "How does V-JEPA adapt joint-embedding predictive architectures to video, and how does its relationship with MAE/V-MAE differ in terms of prediction targets?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13183_sec_009"
+    ],
+    "support_excerpts": [
+      "V-JEPA extends the same idea to video by predicting representations of masked spatiotemporal regions from visible spatiotemporal context [5]. This places I-JEPA/V-JEPA close to MAE/V-MAE in masking structure, while\nseparating them by the prediction target."
+    ],
+    "expected_answer": "V-JEPA extends joint-embedding prediction to video by predicting representations of masked spatiotemporal regions from visible context. While its masking structure is close to MAE/V-MAE, it differs by predicting learned representation targets rather than reconstructing low-level pixel details.",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13183_sec_009"
+    ],
+    "primary_chunk_id": "2608.13183_sec_009"
+  },
+  {
+    "family_id": "v2_val_017",
+    "paper_id": "2608.13237",
+    "question": "What structured output format does the Search-R1 stopping judge produce, and what motivation from S2G-RAG led to replacing a simple binary target?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13237_sec_006"
+    ],
+    "support_excerpts": [
+      "S2G-RAG argues that a binary suﬀicient/insuﬀicient target discards information about what remains missing [ 6]. We transfer this structured judging mechanism to the Search-R1 state interface and train a judge specifically on Search-R1 states. Our judge outputs a frozen JSON schema with a\nBoolean sufficient field and a list of gap_items."
+    ],
+    "expected_answer": "The Search-R1 stopping judge outputs a frozen JSON schema with a Boolean sufficient field and a list of gap_items, motivated by S2G-RAG's argument that a binary sufficient/insufficient target discards vital information about what evidence remains missing.",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13237_sec_006"
+    ],
+    "primary_chunk_id": "2608.13237_sec_006"
+  },
+  {
+    "family_id": "v2_val_018",
+    "paper_id": "2608.13239",
+    "question": "How are candidate broken questions ranked and reviewed in benchmark curation, and how many trivial questions were excluded along with what percentage of swapped distractor options?",
+    "family_type": "multi_passage",
+    "support_chunks": [
+      "2608.13239_sec_017",
+      "2608.13239_sec_018"
+    ],
+    "support_excerpts": [
+      "1.Removing broken questions from the benchmark, meaning questions\nwith any of the breaking problems that were discussed prior. This is done by\nmaking a ranking of the questions, placing questions with highest suspicion\nof being broken at the top.",
+      "Using this method, we are able to exclude 616 trivial\nquestions from the benchmark. Out of these 616, 536 (87%) were questions\nwith swapped distractor options."
+    ],
+    "expected_answer": "Questions are ranked with those having highest suspicion of being broken at the top and manually inspected in order. Using this method, 616 trivial questions were excluded from the benchmark, of which 536 (87%) were questions with swapped distractor options.",
+    "question_type": "multi_passage",
+    "support_chunk_ids": [
+      "2608.13239_sec_017",
+      "2608.13239_sec_018"
+    ],
+    "primary_chunk_id": "2608.13239_sec_017"
+  },
+  {
+    "family_id": "v2_val_019",
+    "paper_id": "2608.13255",
+    "question": "How does GeoCache borrow from reverse reprojection caching to reuse computations across multi-view diffusion trajectories?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13255_sec_013"
+    ],
+    "support_excerpts": [
+      "Reverse reprojection\ncaching (Nehab et al. 2007) provides a closer computational\npattern by transporting a per-pixel quantity through geometric correspondence, integrating it into the target pixel’s retained value, and periodically refreshing the result. GeoCache applies these operations inside a denoising trajectory\nand transports a first difference inx0 across views of the\nsame object."
+    ],
+    "expected_answer": "GeoCache adapts reverse reprojection caching by transporting a first difference in x0 across views of the same object inside a denoising trajectory through geometric correspondence, integrating it into the target pixel's retained value and periodically refreshing the result.",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13255_sec_013"
+    ],
+    "primary_chunk_id": "2608.13255_sec_013"
+  },
+  {
+    "family_id": "v2_val_020",
+    "paper_id": "2608.13304",
+    "question": "What is the dual mechanism of WIFA-Boost and A-GCRT in intent-group supervision, and what data compositions are used in Stage 2 calibration of WIFA-Boost?",
+    "family_type": "multi_passage",
+    "support_chunks": [
+      "2608.13304_sec_007",
+      "2608.13304_sec_009"
+    ],
+    "support_excerpts": [
+      "WIFA first\nconstructs matched harmful and benign intent\ngroups under shared wrapper families, making\nwrapper form non-diagnostic of the desired decision. On this data layer, WIFA-Boost uses a\ntwo-stage recipe for robust harmful-request refusal,\nwhile A-GCRT adds anchored group-consistent\ntraining to reduce unnecessary benign refusal while\npreserving harmful-request refusal.",
+      "Stage 2 continues from θ1 on a 2750example calibration dataset Dcal, which contains\n3\nthe same 2250 harmful refusal examples plus 500\nplain benign examples with intent-analysis targets:"
+    ],
+    "expected_answer": "WIFA-Boost uses a two-stage recipe for robust harmful-request refusal while A-GCRT adds anchored group-consistent training to reduce unnecessary benign refusal. Stage 2 trains on a 2750-example calibration dataset Dcal containing 2250 harmful refusal examples plus 500 plain benign examples with intent-analysis targets.",
+    "question_type": "multi_passage",
+    "support_chunk_ids": [
+      "2608.13304_sec_007",
+      "2608.13304_sec_009"
+    ],
+    "primary_chunk_id": "2608.13304_sec_007"
+  },
+  {
+    "family_id": "v2_val_021",
+    "paper_id": "2608.13326",
+    "question": "In the protocol-level identifiability framework, how is observational equivalence defined between two policies, and what guarantees that an estimator correctly recovers the target estimand?",
+    "family_type": "multi_passage",
+    "support_chunks": [
+      "2608.13326_sec_006",
+      "2608.13326_sec_007"
+    ],
+    "support_excerpts": [
+      "Two policies h, h′ areobservationally equivalent\non O, written h≡ O h′, if they produce identical\nobservable responses on O.",
+      "Proof. (⇒) If some h, h′ with τ(h)̸=τ(h ′) satisfy\nh≡ O h′, then any estimator ˆτmeasurable with respect to O assigns ˆτ(h) = ˆτ(h′), so at least one is\nwrong. (⇐) If all pairs with different τ are in equivalent, then τ is constant on each equivalence class,\nso the estimator ˆτ(h) =τ(h∗) for any h∗ ≡O h is\nwell-defined and correct."
+    ],
+    "expected_answer": "Two policies are observationally equivalent if they produce identical observable responses on all inputs in the observation support O. An estimator is guaranteed well-defined and correct if and only if all policy pairs with distinct target estimand values tau are observationally inequivalent, making tau constant on each equivalence class.",
+    "question_type": "multi_passage",
+    "support_chunk_ids": [
+      "2608.13326_sec_006",
+      "2608.13326_sec_007"
+    ],
+    "primary_chunk_id": "2608.13326_sec_006"
+  },
+  {
+    "family_id": "v2_val_022",
+    "paper_id": "2608.13387",
+    "question": "In CROP selective distillation, how is the token-level relevance score computed from counterfactual and paraphrase sensitivities?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13387_sec_010"
+    ],
+    "support_excerpts": [
+      "CROP Score\nr_t = S_cf - S_para\n4 Select Top-k Tokens and Apply OPD Update"
+    ],
+    "expected_answer": "The CROP score is computed as r_t = S_cf - S_para, subtracting the paraphrase sensitivity S_para = JSD(Po_t || Pp_t) from the counterfactual sensitivity S_cf = JSD(Po_t || Pc_t).",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13387_sec_010"
+    ],
+    "primary_chunk_id": "2608.13387_sec_010"
+  },
+  {
+    "family_id": "v2_val_023",
+    "paper_id": "2608.13517",
+    "question": "In the Mimir v1 instruction dataset mixture, which category dominates by token volume and what datasets lead the Math & reasoning category?",
+    "family_type": "multi_passage",
+    "support_chunks": [
+      "2608.13517_sec_004",
+      "2608.13517_sec_005"
+    ],
+    "support_excerpts": [
+      "The Danish instruction & knowledge category is the largest by token volume, driven primarily bylærebogen, a\n1https://www.",
+      "Math & reasoning is led by OpenMathInstruct-2[Toshniwal et al., 2024] (6.60B, 9.4%), the third-largest single dataset overall, followed by AceReason1.1-SFT [Liu et al., 2025] (1.95B) and verifiable reasoning traces (0.68B)."
+    ],
+    "expected_answer": "Danish instruction & knowledge is the largest category by token volume (driven primarily by laerebogen). Math & reasoning is led by OpenMathInstruct-2 (6.60B tokens, 9.4%), followed by AceReason1.1-SFT (1.95B) and verifiable reasoning traces (0.68B).",
+    "question_type": "multi_passage",
+    "support_chunk_ids": [
+      "2608.13517_sec_004",
+      "2608.13517_sec_005"
+    ],
+    "primary_chunk_id": "2608.13517_sec_004"
+  },
+  {
+    "family_id": "v2_val_024",
+    "paper_id": "2608.13556",
+    "question": "Why did V-RAE select temporal attention pooling as its default temporal pooling mechanism?",
+    "family_type": "single_passage",
+    "support_chunks": [
+      "2608.13556_sec_023"
+    ],
+    "support_excerpts": [
+      "With only 3M\nparameters, it achieves 6.12 rFVD while retaining 89.13% probing accuracy, providing a substantially\nbetter reconstruction-semantics balance than the other pooling strategies. We therefore adopt temporal\nattention pooling as the default configuration in all remaining experiments."
+    ],
+    "expected_answer": "Temporal attention pooling achieves 6.12 rFVD while retaining 89.13% probing accuracy with only 3M parameters, providing a substantially better reconstruction-semantics balance than alternatives like Convolutional and Q-Former pooling.",
+    "question_type": "single_passage",
+    "support_chunk_ids": [
+      "2608.13556_sec_023"
+    ],
+    "primary_chunk_id": "2608.13556_sec_023"
+  }
+]

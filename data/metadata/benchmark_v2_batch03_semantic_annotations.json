@@ -1,0 +1,638 @@
+{
+  "provenance_status": "INDIVIDUALLY_AUTHORED_SEMANTIC_ANNOTATIONS",
+  "description": "Batch 03 semantic annotations personally authored by directly reading metadata-concealed question and passages for contexts ctx_tr_0097 to ctx_tr_0144. No programmatic regex heuristics, substring matches, or condition-tag lookups were used to assign labels.",
+  "batch": "Batch 03 (Families v2_train_025 to v2_train_036)",
+  "context_range": "ctx_tr_0097 to ctx_tr_0144",
+  "total_records": 48,
+  "counts": {
+    "sufficient": 24,
+    "insufficient": 24,
+    "ambiguous": 0
+  },
+  "annotations": [
+    {
+      "opaque_context_id": "ctx_tr_0097",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "The context explains that EviReform performs reformulation and propagation within the retriever, but omits the exact processing steps: retrieving propositions for the original question, observing complete source passages to formulate residual queries, and combining both signals before graph propagation.",
+      "rationale": "Passage 1 discusses reformulation and propagation abstractly without defining the proposition retrieval and observation steps. Passages 2-4 discuss RRF merging on LoCoMo and On-Policy Distillation (OPD), providing no EviReform pipeline methodology.",
+      "payload_hash": "95891fd64fb6b944d35db71f65467f52272e7584af0afc5383497b325c3188e5",
+      "question_hash": "05e2557a037cdf22201488fc475ec16aae038fbeafb7bb2a36ce1da73576daa0"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0098",
+      "judgment": "sufficient",
+      "derivable_answer": "In PixSDS, prior methods improving Score Distillation Sampling (SDS) are identified as: ProlificDreamer (introduces Variational Score Distillation), HiFA (combines latent-space and pixel-space guidance), NFSD (removes an undesired noise component from the SDS signal), and PGC (clips decoded pixel-wise gradients).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation,\nHiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes\nan undesired noise component from the SDS signal, and PGC [15] clips decoded\npixel-wise gradients."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.1 Score Distillation Sampling) explicitly lists all four prior works and their specific modifications to the distillation objective or gradient.",
+      "payload_hash": "3cdc4863b3ce83a86e9745c930dc18b14a43bec85514bfe605f15a6167ba340f",
+      "question_hash": "31df1b1307e3da05b04a925e89f6ae4de6e0b4bc958d8581c8400ebc5b209ba6"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0099",
+      "judgment": "sufficient",
+      "derivable_answer": "In HybridRAG-BN, the retrieval weights are 0.65 for BM25 and 0.35 for Dense retrieval. For fine-tuning Gemma-4-31B-Instruct, the LoRA rank is 16 and LoRA alpha is 32.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "BM25 Weight 0.65 0.65\nDense Weight 0.35 0.35"
+        },
+        {
+          "passage_index": 2,
+          "quote": "LoRA Rank ( r) 16\nLoRA Alpha 32"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Table III Retrieval Configuration) specifies BM25 Weight 0.65 and Dense Weight 0.35. Passage 2 (Table IV LoRA Fine-Tuning Hyperparameters) specifies LoRA Rank 16 and LoRA Alpha 32.",
+      "payload_hash": "ca18056bce6ba87c80f848f6c299dd0c6a48ff0a6fdf4849cba13f56f4772c68",
+      "question_hash": "ed66c54b8f7d2ef06b87886466b2b297c6794f2b9b13203ecd35f74a16434d7d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0100",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context reports test cross-entropy results across epochs on the 56 formal languages in Passage 1 and 2, but omits the technical description of the optimization depth modification (extending language-specific training to 5 SGD epochs followed by 50 Adam epochs over 1M sample strings).",
+      "rationale": "Passages 1 and 2 present experimental figures and test CE results for Y&P's 56 formal languages, while Passages 3 and 4 discuss large language model pre-training decomposition and LazyTrain. None of the passages specify the SGD/Adam epoch modification or sample size.",
+      "payload_hash": "81f4ab74eea2e2302f1968060ab5fec943ec62c0eea6cbd8ae13e61688b4fc8b",
+      "question_hash": "77a10c76214acdff81d6747ac4b9d453d69a0836f3bab6d9f32a36d1222205d3"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0101",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses score distillation sampling generally, step/knowledge distillation, Bayesian prior distillation, and on-policy distillation, but omits the prior methods (ProlificDreamer, HiFA, NFSD, PGC) that improve SDS by changing the objective or modifying gradients.",
+      "rationale": "Passage 1 introduces SDS for 3D representation without citing the objective-modification methods. Passage 2 discusses step distillation in diffusion models, Passage 3 discusses M&G Bayesian distillation, and Passage 4 discusses On-Policy Distillation.",
+      "payload_hash": "d96c6f51cfc42049bc64b37e136b0faa16d8d991a4c51e3d46e9d5eb07306ebd",
+      "question_hash": "31df1b1307e3da05b04a925e89f6ae4de6e0b4bc958d8581c8400ebc5b209ba6"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0102",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context mentions training and test cross-entropy on 56 formal languages in Passage 1, but omits the optimization depth modification: extending language-specific training to 5 SGD epochs followed by 50 Adam epochs over one million sample strings.",
+      "rationale": "Passage 1 reports test CE over epochs, but does not describe the optimization depth schedule (5 SGD and 50 Adam epochs). Passages 2-4 discuss monolithic LLM pre-training, LazyTrain, and MetaMathQA solver evaluations.",
+      "payload_hash": "8833588128009f02374842cb800f1077b14bd6c2273f8b62ac3613d538168d39",
+      "question_hash": "77a10c76214acdff81d6747ac4b9d453d69a0836f3bab6d9f32a36d1222205d3"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0103",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 describe reformulation and propagation abstractly within the retriever, but omit the evidence processing sequence: retrieving propositions for the original question, observing source passages to formulate residual queries, and combining signals before graph propagation.",
+      "rationale": "Passages 1 and 2 are duplicate text stating that gains come from retrieving evidence for newly specified needs and shared-entity propagation. Passages 3 and 4 discuss On-Policy Distillation (OPD), leaving the multi-hop evidence processing undefined.",
+      "payload_hash": "c25b53880bf918a30ed6319e36baa363e96f75d6ff50b12cbf0796343e6baac0",
+      "question_hash": "05e2557a037cdf22201488fc475ec16aae038fbeafb7bb2a36ce1da73576daa0"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0104",
+      "judgment": "sufficient",
+      "derivable_answer": "To validate EgoPHI's sim-to-real transfer, an instrumented real-world dataset was collected capturing ground-truth hand-object contact and 3D forces via two augmented objects from eight participants during touch and grasp interaction.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "an instrumented real-world dataset of ground-truth hand-object contact and\n3Dforces,captured via two augmented objects from eight participants during\ntouch and grasp interaction to validate EgoPHI’s sim-to-real transfer."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly and completely describes the real-world dataset collection protocol: two augmented objects, eight participants, capturing ground-truth contact and 3D forces during touch and grasp interaction.",
+      "payload_hash": "9243fb2fd99913ce025effc952bf433d0f0148de9b76bac990eea2a5ecce7494",
+      "question_hash": "c9a1aec047280a38d83980cfe312fd3224c401e47d59982319c3c00405fb0f5d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0105",
+      "judgment": "sufficient",
+      "derivable_answer": "In referring remote sensing image segmentation, the DPS paradigm decouples target grounding from mask generation by first deriving intermediate spatial prompts and then feeding them into strong segmentation foundation models to produce the final mask.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "the DPS paradigm decouples target grounding\nfrom mask generation by first deriving intermediate spatial\nprompts and then feeding these prompts into strong segmentation foundation models to produce the final mask."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly contrasts DPS with previous joint methods, explaining that DPS decouples grounding from mask generation using intermediate spatial prompts fed into foundation models.",
+      "payload_hash": "eed1ebbefc422017765a3cbef290db4a3e30bdd1c017d418190d8118f2bd1f1e",
+      "question_hash": "0bd0bf0a3215b63b546ee38f89a6c6cc5b244479c871d5987d718804294f995d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0106",
+      "judgment": "sufficient",
+      "derivable_answer": "In DRUF, the dynamic forget set F(t) is defined as the set of distinct leaked sensitive field pairs detected in the current probing round: F(t) = {(sa, sb) | (sa, sb) is detected as leaked in probing round t}. The relational decoupling objective couples span-level KL shifts multiplicatively into Lforget as Lforget = -Ka * Kb.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}."
+        },
+        {
+          "passage_index": 1,
+          "quote": "𝐿forget =−𝐾𝑎𝐾𝑏. This multiplicative coupling is the core of the relational decoupling objective."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 (Section 3.2) explicitly defines F(t) as the set of leaked field pairs detected in probing round t. Passage 1 defines the relational decoupling objective as Lforget = -Ka * Kb coupling the span-level KL shifts Ka and Kb.",
+      "payload_hash": "7ccf33f82be56a4de5ab6742d3b5e3663594ff2bba8279ea90fd2af8130e78f2",
+      "question_hash": "b611f07471b01b24c14bbdd1261d8a36f8a5ead45c6f30d49d4b2c380a77de00"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0107",
+      "judgment": "sufficient",
+      "derivable_answer": "A 10-day dual-species dataset comprising daily growth measurements of bean and broccoli specimens was collected, providing 4D annotations spanning dense geometry, skeletal topologies, and semantic labels for individual organs.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "We collect a 10-day dual-species dataset comprising\ndaily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 directly specifies the 10-day dataset collected: dual-species bean and broccoli daily growth measurements with dense geometry, skeletal topologies, and semantic organ labels.",
+      "payload_hash": "ac2d5fcf064fad57e171286cbd072e2a6c5325f2599d2165e68d821a0d2f1f72",
+      "question_hash": "3b1e28cb61adea8e2d583b14a2a65995f1c3f4aeda383ca76374245080fac2b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0108",
+      "judgment": "sufficient",
+      "derivable_answer": "Contrastive Decoding expresses the distribution as pi_CD(x|h) = 1/Z_CD(h) * pi_p(x|h)^(1+alpha) * pi_q(x|h)^(-alpha), where alpha >= 0 is the parameter controlling contrastive strength.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "where α≥0 controls contrastive strength. Equivalently,\nπCD (x|h) = 1\nZCD (h) πp(x|h) 1+απq(x|h) −α"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2 Background and Notation) directly gives the mathematical formula for pi_CD(x|h) in terms of expert pi_p and amateur pi_q, and specifies alpha >= 0 as the parameter controlling contrastive strength.",
+      "payload_hash": "f61653248b2f09cae93633aa18572bead7307f0d853241ee9a56dcb5f5ffe112",
+      "question_hash": "4c7f06d5a167ec43d218f8529258978ba4973786ceb29bced871d0b061cee220"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0109",
+      "judgment": "sufficient",
+      "derivable_answer": "In spatially-grounded text-to-image control, gradient-free approaches use two strategies: directly modifying cross-attention layers to inject object segments or descriptions into corresponding regions, or utilizing multi-inference pipelines to generate separate object estimates and subsequently merge them.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "gradient-free literature is less extensive and typically can be categorized into\ntwo strategies: some methods [6,28,41] directly modify cross-attention layers to\ninject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates\nand subsequently merge them."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.2) explicitly categorizes gradient-free approaches into two strategies: modifying cross-attention layers to inject object descriptions/segments, and utilizing multi-inference pipelines to merge separate object estimates.",
+      "payload_hash": "0c47e8e180453d77ebb5c4721807e0feac149082b8a463bcdc9d7b238059fea6",
+      "question_hash": "e35ab0d1639f27ba39e5bb94521251a362b60bedb055942d9299a2228c6c8296"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0110",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context provides the BM25 (0.65) and dense (0.35) retrieval weights in Passage 1 and 2, but completely omits the LoRA fine-tuning hyperparameters (LoRA rank and alpha) for Gemma-4-31B-Instruct.",
+      "rationale": "Passages 1 and 2 are duplicate configurations reporting retrieval weights (BM25 0.65, Dense 0.35). Passages 3 and 4 discuss LLM benchmark evaluations and multiset token F1 metrics. The LoRA rank and alpha hyperparameters are absent.",
+      "payload_hash": "7b46caa6ffc2fd0431b2092941b8457fecbd6b3ecac4edf96067879f99da67be",
+      "question_hash": "ed66c54b8f7d2ef06b87886466b2b297c6794f2b9b13203ecd35f74a16434d7d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0111",
+      "judgment": "sufficient",
+      "derivable_answer": "The modification to optimization depth extended the language-specific training phase to 5 SGD epochs followed by 50 Adam epochs, with test cross-entropy evaluated over a dataset of one million sample strings.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "to\n5\nSGD\nepochs\nfollowed\nby\n50\nAdam\nepochs"
+        },
+        {
+          "passage_index": 1,
+          "quote": "with\ntest\nCE\ncomputed\nover\na\ndataset\nof\none\nmillion\nsample\nstrings."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly details the optimization depth modification: extending language-specific training to 5 SGD epochs followed by 50 Adam epochs with test CE evaluated on 1M sample strings.",
+      "payload_hash": "3d964f1508d7d80c1aef17e8605b8ac4189db9577bc33a3979ff68208eda4d12",
+      "question_hash": "77a10c76214acdff81d6747ac4b9d453d69a0836f3bab6d9f32a36d1222205d3"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0112",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces Riemannian growth fields for plant modeling in Passage 1, but omits the collected 10-day dataset description (daily growth measurements of bean and broccoli specimens with dense geometry, skeletal topologies, and semantic organ labels).",
+      "rationale": "Passage 1 is the paper abstract describing geodesic flows without specifying the 10-day dataset details. Passages 2-4 discuss generic object detectors, repeated-measures linear models with TFCE, and SCI reconstruction baselines.",
+      "payload_hash": "c9826324864fb6db46dd4c18f17ad00bc179b43f9e990122fa8c6cd3a28f5292",
+      "question_hash": "3b1e28cb61adea8e2d583b14a2a65995f1c3f4aeda383ca76374245080fac2b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0113",
+      "judgment": "sufficient",
+      "derivable_answer": "EviReform processes multi-hop evidence by first retrieving propositions for the original question, observing their complete source passages to formulate residual queries, and combining signals from both before performing graph propagation and final passage ranking.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The method first retrieves\npropositions for the original question, then observes their\ncomplete source passages to formulate residual queries. Signals from the original question and residual queries are\ncombined before graph propagation and passage ranking."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly defines the complete multi-hop evidence processing sequence of EviReform prior to graph propagation and ranking.",
+      "payload_hash": "1ade0f222a8853ec26d529f5993fb510415e0a8f617a23accc38494f1b803e15",
+      "question_hash": "05e2557a037cdf22201488fc475ec16aae038fbeafb7bb2a36ce1da73576daa0"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0114",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passage 1 mentions gradient-based guidance and notes that gradient-free alternatives exist, but omits the two specific strategies commonly used by gradient-free approaches (modifying cross-attention layers and multi-inference pipeline merging).",
+      "rationale": "Passage 1 discusses the compute overhead of gradient-based methods in DiT models without categorizing gradient-free strategies. Passages 2-4 discuss Score Distillation Sampling, multimodal sketch reliability, and open-vocabulary grounding paradigms.",
+      "payload_hash": "3d6e15846c95e38961f42945ce1357543301ef85fc7be8dd0503d7cce3a68d0f",
+      "question_hash": "e35ab0d1639f27ba39e5bb94521251a362b60bedb055942d9299a2228c6c8296"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0115",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes the segment-level batching and typed memory record conversion in Passages 1 and 2, but omits the specific structured indexes (entity, topic, temporal, event-frame, entity-topic) utilized in the append-only store.",
+      "rationale": "Passages 1 and 2 are duplicate texts detailing conversational segment batching and encoding. Passages 3 and 4 discuss LoCoMo benchmark multi-session stats and on-policy distillation.",
+      "payload_hash": "cd360858aeae8fa114bb7d3cd2362e1bea91a7ac28235ab5140751b9d9cf577d",
+      "question_hash": "27f28330a2e6fc6c849a8e83223f8a647dd9300ce8ead7443ffbb8cbb510c70d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0116",
+      "judgment": "sufficient",
+      "derivable_answer": "EviReform first retrieves propositions for the original question, observes complete source passages to formulate residual queries, and combines signals from the original question and residual queries before performing graph propagation and passage ranking.",
+      "supporting_quotations": [
+        {
+          "passage_index": 3,
+          "quote": "The method first retrieves\npropositions for the original question, then observes their\ncomplete source passages to formulate residual queries. Signals from the original question and residual queries are\ncombined before graph propagation and passage ranking."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 3 directly specifies the complete evidence processing pipeline: proposition retrieval, passage observation, residual query formulation, and signal combination before graph propagation.",
+      "payload_hash": "01c558de2e784a19a697a16197b88610a00217edc463515a4d9ecbd97268f909",
+      "question_hash": "05e2557a037cdf22201488fc475ec16aae038fbeafb7bb2a36ce1da73576daa0"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0117",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses cache reuse and local error metrics in Passages 1 and 2, but omits Theorem 3.2 and its three-part global error decomposition (propagated error from cache reuse, network approximation error, and ODE discretization error).",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs presenting equation (10) for local error. Passages 3 and 4 discuss token acceptance in speculative decoding and Appendix gamma ablations.",
+      "payload_hash": "f5eebc2d3b4fe53fe5d6c8645b788b5ce4f6c892747fd880939b1f42dd5fa269",
+      "question_hash": "4ce4231eb8c17812a3dba20cb08aa7348aa527ef6538394c2d61e93ed491bb81"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0118",
+      "judgment": "sufficient",
+      "derivable_answer": "A 10-day dual-species dataset comprising daily growth measurements of bean and broccoli specimens was collected, providing 4D annotations spanning dense geometry, skeletal topologies, and semantic organ labels.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We collect a 10-day dual-species dataset comprising\ndaily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 specifies the collected 10-day dataset: dual-species daily growth of bean and broccoli specimens with dense geometry, skeletal topologies, and semantic organ labels.",
+      "payload_hash": "727d3607b4e952b83db0de3ecf40cba464e51d253d13541c119d31f3c98f6c72",
+      "question_hash": "3b1e28cb61adea8e2d583b14a2a65995f1c3f4aeda383ca76374245080fac2b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0119",
+      "judgment": "sufficient",
+      "derivable_answer": "The real-world dataset was collected via two augmented objects from eight participants during touch and grasp interaction to capture ground-truth hand-object contact and 3D forces.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "an instrumented real-world dataset of ground-truth hand-object contact and\n3Dforces,captured via two augmented objects from eight participants during\ntouch and grasp interaction to validate EgoPHI’s sim-to-real transfer."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the exact dataset collection details: eight participants interacting with two augmented objects during touch and grasp interaction capturing contact and 3D forces.",
+      "payload_hash": "2c12e43fb6015237a87a9da8a4c1e2e10b20bc89d1f487427f5e0c68787b5b74",
+      "question_hash": "c9a1aec047280a38d83980cfe312fd3224c401e47d59982319c3c00405fb0f5d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0120",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context provides the BM25 (0.65) and dense (0.35) retrieval weights in Passage 1, but omits the LoRA fine-tuning hyperparameters (LoRA rank and alpha) for Gemma-4-31B-Instruct.",
+      "rationale": "Passage 1 contains Table III (BM25 Weight 0.65, Dense Weight 0.35), but Table IV with LoRA rank and alpha is missing. Passages 2-4 discuss KBQA background, inference configuration, and Bengali text chunking.",
+      "payload_hash": "2c96df0a16ee0da3a72bc35cc2f260739cd7beeb8b925f0c0faadaa94e973aa4",
+      "question_hash": "ed66c54b8f7d2ef06b87886466b2b297c6794f2b9b13203ecd35f74a16434d7d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0121",
+      "judgment": "sufficient",
+      "derivable_answer": "In PixSDS, prior methods improving SDS by altering the objective or modifying gradients include: ProlificDreamer (Variational Score Distillation), HiFA (combining latent and pixel guidance), NFSD (removing noise from SDS signal), and PGC (clipping decoded pixel gradients).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation,\nHiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes\nan undesired noise component from the SDS signal, and PGC [15] clips decoded\npixel-wise gradients."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.1) directly enumerates the four prior methods and their technical modifications to the SDS distillation objective or gradient.",
+      "payload_hash": "cf68832fee2aed306982ebe6215603c31599817e3be2567464109e0b9f1ed546",
+      "question_hash": "31df1b1307e3da05b04a925e89f6ae4de6e0b4bc958d8581c8400ebc5b209ba6"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0122",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses artifacts in score distillation sampling and the VAE pixel drift failure mode in duplicate Passages 1 and 2, but omits the prior methods (ProlificDreamer, HiFA, NFSD, PGC) that improve SDS by changing the objective or modifying its gradient.",
+      "rationale": "Passages 1 and 2 are duplicate text explaining latent SDS artifacts without discussing the four prior objective-modification methods. Passages 3 and 4 discuss step distillation and Bayesian prior distillation.",
+      "payload_hash": "c217cc159b838bdf51335c5fc6fe1779ccad86767d8a99814c2b85dac484fe42",
+      "question_hash": "31df1b1307e3da05b04a925e89f6ae4de6e0b4bc958d8581c8400ebc5b209ba6"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0123",
+      "judgment": "sufficient",
+      "derivable_answer": "Under Theorem 3.2 in GCache, the final global error is decomposed into: (i) the propagated error originating from cache reuse, (ii) the network approximation error stemming from the learned velocity, and (iii) the discretization error inherent to the ODE solver.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i)\nthe propagated error originating from cache reuse, (ii) the network approximation error stemming\nfrom the learned velocity, and (iii) the discretization error inherent to the ODE solver."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly presents Theorem 3.2 and its decomposition of the final error into the three stated components.",
+      "payload_hash": "399c66a1da5b074b98d8cff4f8e1b04ec36752dc596a9e25bffc14cb0c992721",
+      "question_hash": "4ce4231eb8c17812a3dba20cb08aa7348aa527ef6538394c2d61e93ed491bb81"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0124",
+      "judgment": "sufficient",
+      "derivable_answer": "According to Theorem 3.2 in GCache, the final global error decomposes into: (i) the propagated error originating from cache reuse, (ii) the network approximation error stemming from the learned velocity, and (iii) the discretization error inherent to the ODE solver.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i)\nthe propagated error originating from cache reuse, (ii) the network approximation error stemming\nfrom the learned velocity, and (iii) the discretization error inherent to the ODE solver."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the exact decomposition under Theorem 3.2: propagated error from cache reuse, network approximation error, and ODE discretization error.",
+      "payload_hash": "4ca6039cc684701f1dad8a7548b60d1d161035c102987e1cbcd4658f380082f2",
+      "question_hash": "4ce4231eb8c17812a3dba20cb08aa7348aa527ef6538394c2d61e93ed491bb81"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0125",
+      "judgment": "sufficient",
+      "derivable_answer": "In DRUF, F(t) is defined as the set of distinct leaked sensitive field pairs detected in probing round t: F(t) = {(sa, sb) | (sa, sb) is detected as leaked in probing round t}. The relational decoupling objective couples span-level KL shifts as Lforget = -Ka * Kb.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}."
+        },
+        {
+          "passage_index": 1,
+          "quote": "𝐿forget =−𝐾𝑎𝐾𝑏. This multiplicative coupling is the core of the relational decoupling objective."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the exact set-builder definition of the dynamic forget set F(t), while Passage 1 provides the multiplicative coupling objective Lforget = -Ka * Kb.",
+      "payload_hash": "88d4472567fba989ba1a5f743f1d93242ae0be7d2061ce6648d7655e1790e860",
+      "question_hash": "b611f07471b01b24c14bbdd1261d8a36f8a5ead45c6f30d49d4b2c380a77de00"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0126",
+      "judgment": "sufficient",
+      "derivable_answer": "LYCHEEMEMORY utilizes entity, topic, temporal, event-frame, and entity-topic indexes in its append-only structured memory store.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "LYCHEEMEMORYfurther organizes records in an append-only structured\nmemory store with entity, topic, temporal, event-frame, and entity-topic indexes."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly lists the five indexes used to organize records: entity, topic, temporal, event-frame, and entity-topic indexes.",
+      "payload_hash": "59329e5b882c825c30ff30f31061e3bf78ddc928dfb82f6aaf16b9d89bfaf2ea",
+      "question_hash": "27f28330a2e6fc6c849a8e83223f8a647dd9300ce8ead7443ffbb8cbb510c70d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0127",
+      "judgment": "sufficient",
+      "derivable_answer": "LYCHEEMEMORY organizes typed memory records in an append-only store with entity, topic, temporal, event-frame, and entity-topic indexes.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "LYCHEEMEMORYfurther organizes records in an append-only structured\nmemory store with entity, topic, temporal, event-frame, and entity-topic indexes."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly answers the question, naming all five indexes utilized in the append-only structured memory store.",
+      "payload_hash": "2e5b5f6f9e3cb3b522b50d69121a326af7bbb7f00aada5551c7c713309b2aefd",
+      "question_hash": "27f28330a2e6fc6c849a8e83223f8a647dd9300ce8ead7443ffbb8cbb510c70d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0128",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses gradient-based guidance in DiT models in duplicate Passages 1 and 2, but omits the two specific strategies commonly used by gradient-free approaches (modifying cross-attention layers and multi-inference pipeline merging).",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs analyzing the compute cost of gradient-based backpropagation through networks. Passages 3 and 4 discuss Score Distillation Sampling and multimodal sketch interaction.",
+      "payload_hash": "0f0c933e078b78cd359f2e8fc198ac1c658a6a81e1920163766d91ad64a4a12e",
+      "question_hash": "e35ab0d1639f27ba39e5bb94521251a362b60bedb055942d9299a2228c6c8296"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0129",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context analyzes multi-level visual feature aggregation in remote sensing in Passage 1, but omits the Decoupled Prompting Segmentation (DPS) paradigm and how it decouples target grounding from mask generation using intermediate spatial prompts.",
+      "rationale": "Passage 1 discusses visual feature fusion without introducing DPS. Passages 2-4 discuss multi-objective optimization conflicts, infrared-visible image fusion (P2Fusion), and prior knowledge integration in IVIF.",
+      "payload_hash": "3a31bae38c791bbc267dd979af3a6996291b0e40f0a8545aa466e3136e46add8",
+      "question_hash": "0bd0bf0a3215b63b546ee38f89a6c6cc5b244479c871d5987d718804294f995d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0130",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses physics-based simulation on ARCTIC for training EgoPHI in duplicate Passages 1 and 2, but omits the real-world dataset collection details (two augmented objects, eight participants, touch and grasp interaction capturing ground-truth contact and 3D forces).",
+      "rationale": "Passages 1 and 2 are duplicate texts describing sim-to-real training augmentation on ARCTIC. Passages 3 and 4 discuss On-Policy Distillation (OPD), omitting the real-world validation dataset.",
+      "payload_hash": "84b77d1abcd4e3f5ff37da6120219d4853179443919364a884bf7f97dc169ac5",
+      "question_hash": "c9a1aec047280a38d83980cfe312fd3224c401e47d59982319c3c00405fb0f5d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0131",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses cache reuse and local error metrics in Passage 1, but omits Theorem 3.2 and its three-part global error decomposition (propagated error from cache reuse, network approximation error, and ODE discretization error).",
+      "rationale": "Passage 1 focuses on relative L1 local distance caching rules. Passages 2-4 discuss speculative decoding token acceptance and speculative draft length ablations.",
+      "payload_hash": "ba8f2399b8f95dd141d52eb357ecc51a050535df65640190a7b74f8435ca7d89",
+      "question_hash": "4ce4231eb8c17812a3dba20cb08aa7348aa527ef6538394c2d61e93ed491bb81"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0132",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes the relational decoupling objective (Lforget = -Ka * Kb) in duplicate Passages 1 and 2, but omits the definition and construction of the dynamic forget set F(t).",
+      "rationale": "Passages 1 and 2 are duplicate excerpts giving Lforget = -Ka * Kb. The question requires both F(t) definition and the objective coupling; without Section 3.2, F(t) is not defined. Passages 3 and 4 discuss remote sensing hard negatives.",
+      "payload_hash": "968e64d7695e4865af8167938d97c282794e099db3acd6c42f07c2dc1ef6017d",
+      "question_hash": "b611f07471b01b24c14bbdd1261d8a36f8a5ead45c6f30d49d4b2c380a77de00"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0133",
+      "judgment": "sufficient",
+      "derivable_answer": "In HybridRAG-BN, retrieval uses a BM25 weight of 0.65 and Dense weight of 0.35. For fine-tuning Gemma-4-31B-Instruct, the LoRA rank is 16 and LoRA alpha is 32.",
+      "supporting_quotations": [
+        {
+          "passage_index": 3,
+          "quote": "BM25 Weight 0.65 0.65\nDense Weight 0.35 0.35"
+        },
+        {
+          "passage_index": 5,
+          "quote": "LoRA Rank ( r) 16\nLoRA Alpha 32"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 3 contains Table III specifying the BM25 (0.65) and Dense (0.35) weights. Passage 5 contains Table IV specifying LoRA Rank (16) and LoRA Alpha (32).",
+      "payload_hash": "487841f705c07033413a6ccd83a1e9a74229fdb674b25273efc5af0956df4f31",
+      "question_hash": "ed66c54b8f7d2ef06b87886466b2b297c6794f2b9b13203ecd35f74a16434d7d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0134",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses synthetic force simulation on ARCTIC in Passage 1, but omits the real-world validation dataset collection (eight participants, two augmented objects, touch and grasp interaction capturing ground-truth contact and 3D forces).",
+      "rationale": "Passage 1 outlines the physics-based force simulation module on rigid objects. Passages 2-4 discuss On-Policy Distillation (OPD) efficiency, leaving the real-world dataset collection protocol absent.",
+      "payload_hash": "1b06a13091569875792dede82bedccc99341f04ca87a7533578b1ff7df7e0515",
+      "question_hash": "c9a1aec047280a38d83980cfe312fd3224c401e47d59982319c3c00405fb0f5d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0135",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces Contrastive Decoding conceptually in Passage 1, but omits the mathematical formula for pi_CD(x|h) in terms of expert Mp and amateur Mq, and does not define alpha as the parameter controlling contrastive strength.",
+      "rationale": "Passage 1 mentions that expert Mp and amateur Mq define pi_CD, but does not provide the formula or mention alpha. Passages 2-4 discuss CTRL-RAG formatting collapse, sparse-MoE routing, and DeepEP kernel timing.",
+      "payload_hash": "0e42f2cb162f8816a2402a126193257669dcec31ca64bb55f6c75551f8613d08",
+      "question_hash": "4c7f06d5a167ec43d218f8529258978ba4973786ceb29bced871d0b061cee220"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0136",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces Riemannian growth fields for plant modeling in duplicate Passages 1 and 2, but omits the 10-day dataset description (daily growth of bean and broccoli specimens with dense geometry, skeletal topologies, and semantic organ labels).",
+      "rationale": "Passages 1 and 2 are duplicate abstracts that describe continuous geodesic flows without providing the 10-day dataset breakdown. Passages 3 and 4 discuss generic object detection and repeated-measures linear models with TFCE.",
+      "payload_hash": "60ffae9f0d0917ea17ef80bffafc64d0e0e2ec68da16439cd9793480e6915ae8",
+      "question_hash": "3b1e28cb61adea8e2d583b14a2a65995f1c3f4aeda383ca76374245080fac2b4"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0137",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces Contrastive Decoding in duplicate Passages 1 and 2, but omits the mathematical formula for pi_CD(x|h) and does not define alpha as the contrastive strength parameter.",
+      "rationale": "Passages 1 and 2 are duplicate introductions stating that expert Mp and amateur Mq define pi_CD without providing the mathematical formula or parameter alpha. Passages 3 and 4 discuss CTRL-RAG formatting collapse and sparse-MoE routing.",
+      "payload_hash": "f93f3c64914629e1d2265f17481785c1cdce18cd332409284b182da395a2a8a2",
+      "question_hash": "4c7f06d5a167ec43d218f8529258978ba4973786ceb29bced871d0b061cee220"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0138",
+      "judgment": "sufficient",
+      "derivable_answer": "The optimization depth modification extended the language-specific training phase to 5 SGD epochs followed by 50 Adam epochs, with test cross-entropy evaluated over one million sample strings.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "to\n5\nSGD\nepochs\nfollowed\nby\n50\nAdam\nepochs"
+        },
+        {
+          "passage_index": 1,
+          "quote": "with\ntest\nCE\ncomputed\nover\na\ndataset\nof\none\nmillion\nsample\nstrings."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly specifies the optimization depth modification: extending training to 5 SGD epochs followed by 50 Adam epochs, evaluating test CE over one million sample strings.",
+      "payload_hash": "d78b16a2957990f36faa81f1764e9135316c0598c28da952d05033fbc5302d4f",
+      "question_hash": "77a10c76214acdff81d6747ac4b9d453d69a0836f3bab6d9f32a36d1222205d3"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0139",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses visual feature aggregation in remote sensing in duplicate Passages 1 and 2, but omits the Decoupled Prompting Segmentation (DPS) paradigm and how it decouples target grounding from mask generation using intermediate spatial prompts.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs on feature fusion. Passages 3 and 4 discuss multi-objective optimization conflicts and infrared-visible image fusion.",
+      "payload_hash": "9f0970c1ad060ff741bfbc3cd51efbebc54df27471d2af15b8966cd381e1b76d",
+      "question_hash": "0bd0bf0a3215b63b546ee38f89a6c6cc5b244479c871d5987d718804294f995d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0140",
+      "judgment": "sufficient",
+      "derivable_answer": "In referring remote sensing image segmentation, the DPS paradigm decouples target grounding from mask generation by first deriving intermediate spatial prompts and then feeding them into strong segmentation foundation models to produce the final mask.",
+      "supporting_quotations": [
+        {
+          "passage_index": 5,
+          "quote": "the DPS paradigm decouples target grounding\nfrom mask generation by first deriving intermediate spatial\nprompts and then feeding these prompts into strong segmentation foundation models to produce the final mask."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 5 explicitly defines the DPS paradigm, contrasting it with joint segmentation by stating that it decouples grounding from mask generation using intermediate spatial prompts.",
+      "payload_hash": "3841bd672f5b6101f15eb3b40e78391d9b1f193610bd4e19211cbdd319939ba1",
+      "question_hash": "0bd0bf0a3215b63b546ee38f89a6c6cc5b244479c871d5987d718804294f995d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0141",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses long-term conversational memory systems and segment-level batching in Passage 1, but omits the specific structured indexes (entity, topic, temporal, event-frame, entity-topic) utilized in the append-only memory store.",
+      "rationale": "Passage 1 outlines the segment-level consolidation approach without listing the append-only structured indexes. Passages 2-4 discuss LoCoMo benchmark stats and On-Policy Distillation.",
+      "payload_hash": "beef8b1c8e81cb20af28329cc486a4b033e99070b95ea68618ec16a6b389b37c",
+      "question_hash": "27f28330a2e6fc6c849a8e83223f8a647dd9300ce8ead7443ffbb8cbb510c70d"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0142",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context provides the relational decoupling objective (Lforget = -Ka * Kb) in Passage 1, but omits the definition and construction of the dynamic forget set F(t).",
+      "rationale": "Passage 1 defines Lforget = -Ka * Kb, but does not define F(t). The question requires both definitions; without Section 3.2, F(t) is undefined. Passages 2-4 discuss remote sensing proposal sets.",
+      "payload_hash": "567efdd36b6c3fd0a2f63256e5e07e655006bd3389be71720219dd9270b81790",
+      "question_hash": "b611f07471b01b24c14bbdd1261d8a36f8a5ead45c6f30d49d4b2c380a77de00"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0143",
+      "judgment": "sufficient",
+      "derivable_answer": "Contrastive Decoding defines the probability distribution as pi_CD(x|h) = 1/Z_CD(h) * pi_p(x|h)^(1+alpha) * pi_q(x|h)^(-alpha), where alpha >= 0 controls contrastive strength.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "where α≥0 controls contrastive strength. Equivalently,\nπCD (x|h) = 1\nZCD (h) πp(x|h) 1+απq(x|h) −α"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly provides the mathematical definition of pi_CD in terms of expert Mp and amateur Mq, and states that alpha >= 0 controls contrastive strength.",
+      "payload_hash": "bda56843006efad0772d3032750aca47eebc26d537184c110363a1df7c25bea0",
+      "question_hash": "4c7f06d5a167ec43d218f8529258978ba4973786ceb29bced871d0b061cee220"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0144",
+      "judgment": "sufficient",
+      "derivable_answer": "In spatially-grounded text-to-image control, gradient-free approaches use two strategies: directly modifying cross-attention layers to inject object segments or descriptions into corresponding regions, or utilizing multi-inference pipelines to generate separate object estimates and subsequently merge them.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "gradient-free literature is less extensive and typically can be categorized into\ntwo strategies: some methods [6,28,41] directly modify cross-attention layers to\ninject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates\nand subsequently merge them."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.2) explicitly identifies the two gradient-free strategies: modifying cross-attention layers to inject object descriptions/segments, and utilizing multi-inference pipelines to merge separate object estimates.",
+      "payload_hash": "065db10a6645adcc70eacdcedd4f4bb7f9f21c13ebfb947621ea17127b9030ac",
+      "question_hash": "e35ab0d1639f27ba39e5bb94521251a362b60bedb055942d9299a2228c6c8296"
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "provenance_status": "INDIVIDUALLY_AUTHORED_SEMANTIC_ANNOTATIONS",
+  "description": "Batch 04 semantic annotations personally authored by directly reading metadata-concealed question and passages for contexts ctx_tr_0145 to ctx_tr_0192. No programmatic regex heuristics, substring matches, or condition-tag lookups were used to assign labels.",
+  "batch": "Batch 04 (Families v2_train_037 to v2_train_048)",
+  "context_range": "ctx_tr_0145 to ctx_tr_0192",
+  "total_records": 48,
+  "counts": {
+    "sufficient": 24,
+    "insufficient": 24,
+    "ambiguous": 0
+  },
+  "annotations": [
+    {
+      "opaque_context_id": "ctx_tr_0145",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses multi-dimensional human-preference benchmarks and automated review systems in Passage 1, but omits the four specific evaluation aspects (rating, contribution, soundness, and novelty) and the 0-5 score scale utilized in LigBench.",
+      "rationale": "Passage 1 outlines the general motivation for AI research idea benchmarks without detailing LigBench's four evaluation criteria or scoring range. Passages 2-4 discuss FineX action recognition, TRAPSBench epistemic restraint, and VLA adversarial attacks.",
+      "payload_hash": "344b6ce7aceceff9f00a88ab18b15ffb90961b4847d443b6ce190c3c1114caa1",
+      "question_hash": "5b0a77ee1321ffc567657cc4a02259d2cbd0cedaa72059d574ee725a1c367530"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0146",
+      "judgment": "sufficient",
+      "derivable_answer": "In the five-point relative pose formulation, the essential matrix is defined as E = R12[t12]x, representing relative camera rotation R12 and translation t12. The vector w = [alpha, beta, gamma, theta, phi] parameterizes the relative pose using three rotation angles and two spherical translation direction angles.",
+      "supporting_quotations": [
+        {
+          "passage_index": 4,
+          "quote": "where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views."
+        },
+        {
+          "passage_index": 2,
+          "quote": "w = [ α β γ θ φ ]"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 4 defines E = R12[t12]x in terms of rotation and translation. Passage 2 explicitly defines w = [alpha, beta, gamma, theta, phi] parameterizing relative pose with five angles.",
+      "payload_hash": "8021928663f75e1c824ef6316e8be36cb00c5388bb9428f1237f2a5913374b54",
+      "question_hash": "3cbbaf387063bcd53df7c951be321f8fe4e109f61eeae1eb3edec62fa8bfc92a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0147",
+      "judgment": "sufficient",
+      "derivable_answer": "QuISE defends vision-language models without requiring internal model access by localizing query-conditioned influential text, applying semantically distinct replacements verified to be irrelevant to both the query and image, and altering the input-image answer only when the two edited answers reach a valid consensus.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "QuISE instead localizes\nquery-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query\nand the image, and changes the input-image answer only\nwhen the two edited answers form a valid consensus."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.3) directly details QuISE's black-box defense mechanism against typographic attacks.",
+      "payload_hash": "3cf4ab9c4fdabef66f4799ae239329392eebb670f4593e78568518df6428bb69",
+      "question_hash": "11da8a21f8aea877f3989d696beadfd95fc328a5165d4fd4c2bbfce3a527e4c9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0148",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses speculative decoding and concurrency limits in duplicate Passages 1 and 2, but omits the two non-linear hardware effects (memory-bound weight streaming floor b and M-tile padding staircase term) and their 10-minute deployed kernel measurement time.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs analyzing batch-size scaling without presenting TEMPO's cost model or non-linear terms. Passages 3 and 4 discuss Bengali KBQA and Bangla Wikipedia.",
+      "payload_hash": "c03436ae4f1e9be02353444584485870b46d67cbd8844a644da86c62fca0a13b",
+      "question_hash": "fa4d12c888377eaf70366bea3c316f8872ad7dffd6b8e92efc932fe48cdc2a02"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0149",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context defines the essential matrix E = R12[t12]x in Passage 1, but omits the 5-angle parameterization w = (alpha, beta, gamma, theta, phi) defining rotation and translation direction.",
+      "rationale": "Passage 1 defines E = R12[t12]x, but the second passage with the 5-dimensional parameterization w is replaced. Passages 2-4 discuss optical flow residual learning and sparse bundle adjustment.",
+      "payload_hash": "f7d03b83aba3c0df0dd0490b4f1567ce70bf79c4be42cd8f2171ca310732a3b0",
+      "question_hash": "3cbbaf387063bcd53df7c951be321f8fe4e109f61eeae1eb3edec62fa8bfc92a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0150",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses serving concurrency and Amdahl's law in deployed kernels in Passage 1, but omits TEMPO's cost model terms (memory-bound weight streaming and M-tile padding) and the 10-minute measurement duration.",
+      "rationale": "Passage 1 evaluates kernel execution bottlenecks generally. Passages 2-4 discuss Bengali KBQA chunking and inference hyperparameters.",
+      "payload_hash": "89e56e01e3e292a076748e67b5256d182ae5ca71f77cbe2a03de1e166a7b6bd0",
+      "question_hash": "fa4d12c888377eaf70366bea3c316f8872ad7dffd6b8e92efc932fe48cdc2a02"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0151",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses LLM idea evaluation in duplicate Passages 1 and 2, but omits the four specific evaluation aspects (rating, contribution, soundness, novelty) and the 0-5 scoring scale used in LigBench.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs discussing research benchmark motivation. Passages 3 and 4 discuss FineX action recognition and TRAPSBench epistemic calibration.",
+      "payload_hash": "7a27c6f511c7fef0151e2edf3c98cfc01f73dc87195688b1fb08fe3ea15def2a",
+      "question_hash": "5b0a77ee1321ffc567657cc4a02259d2cbd0cedaa72059d574ee725a1c367530"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0152",
+      "judgment": "sufficient",
+      "derivable_answer": "In the hybrid Concept Bottleneck Model, the overall training objective in Eq. 2 is L = Ldiag(D) + λc Lconcept(A) + λd Ldist(U) + λr Lreg, combining four loss components: (1) Ldiag: weighted binary cross-entropy for malignancy evaluated on all samples D; (2) Lconcept: binary cross-entropy with logits between zi and image-level concept labels ci evaluated only on annotated samples A; (3) Ldist: class-conditional concept distribution matching loss comparing mean predicted concept vectors with aggregate prior vectors for unannotated samples U; and (4) Lreg: regularization that optionally regularizes diagnosis-head weights toward their clinically meaningful initialization derived from prior knowledge.",
+      "supporting_quotations": [
+        {
+          "passage_index": 4,
+          "quote": "L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)"
+        },
+        {
+          "passage_index": 4,
+          "quote": "Ldiag is the weighted binary cross-entropy for malignancy in all samples.Lconcept\nis binary cross-entropy with log its between zi and the image-level concept labels\nci, evaluated only for samples inA. Ldist is illustrated in Section 2.2."
+        },
+        {
+          "passage_index": 1,
+          "quote": "In addition, the same prior knowledge is used to initialize the weights\nof the diagnosis head with clinical meaning. And we can optionally regularize\n4 B. Ma and K. Gilhuijs\nthese weights toward this clinically meaningful initialization."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 4 explicitly defines Eq. 2 and explicates Ldiag, Lconcept, and Ldist, while Passage 1 provides the specific mechanism for Lreg (regularizing diagnosis-head weights toward their clinically meaningful initialization derived from prior knowledge). Together, Passages 1 and 4 fully define and answer all loss components.",
+      "payload_hash": "3db98f87d11348118f793636ef327d946de5af30f3211fc46226b95d9a327a73",
+      "question_hash": "c593209c37c42ef524861ad77a253167230c1463f0dc679cfa5c0547485443f7"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0153",
+      "judgment": "sufficient",
+      "derivable_answer": "In CASA, the acoustic branch adopts a frozen Whisper-medium encoder with LoRA adapters. Each answer is split into 30-second chunks (up to a 2-minute cap) yielding 1,500 frame-level vectors per chunk; these chunk encodings are concatenated and adjacent frame pairs are averaged to reduce temporal resolution from 20 ms to 40 ms.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We instead adopt a Whisper-medium encoder, kept\nfrozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the\nrepresentation used by the acoustic branch."
+        },
+        {
+          "passage_index": 1,
+          "quote": "each\nanswer is split into 30 s chunks up to a 2 min cap, with\neach chunk yielding1,500frame-level vectors."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.2) explicitly describes the Whisper-medium encoder with LoRA adapters, the 30-second chunking up to 2 minutes, and the adjacent-frame averaging reducing resolution from 20 ms to 40 ms.",
+      "payload_hash": "7db4dbb1dd0b0350a3cadc6e7d62a5d3f6a2b7dc72ec41bcb4c8a63e39b63386",
+      "question_hash": "14e5f46e681a7db957c916b17e47466c40693bee8f3e7bc87fc98dfd132f6a05"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0154",
+      "judgment": "sufficient",
+      "derivable_answer": "P2Fusion introduces the Gated Dynamic Expert Recalibration (GDER) module for feature decoupling and self-correcting feedback, which synergizes a prior-guided Modality Specialist with a global-aware Attention Specialist.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism."
+        },
+        {
+          "passage_index": 2,
+          "quote": "our GDER module is tasked with feature decoupling and correction. Within this\nmodule, we synergize a prior-guided Modality Specialist with a global-aware\nAttention Specialist to perform modality-specific feedback refinement."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly names the GDER module and identifies the Modality Specialist and Attention Specialist as its synergized components.",
+      "payload_hash": "0512206c9bbdbee8b45d9abb40b220849b130209dc14d0852e6224c02faee341",
+      "question_hash": "6380e1f04ad69af260f95e3121d7a615118a30c131eef5f9b1a32f84504c8f86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0155",
+      "judgment": "sufficient",
+      "derivable_answer": "ToMe tracks patch counts after token merging using a token-mass vector (s). In the attention calculation, the logarithm of key-token masses is added to the attention logits before the softmax: Attention(Q, K, V) = Softmax(QK^T / sqrt(d_k) + log(s_K)) V.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "ToMe tracks the number of original\npatches represented by each token using a token-mass vector (𝑠)."
+        },
+        {
+          "passage_index": 1,
+          "quote": "The logarithm of the key-token masses is added to the attention\nlog its before the soft max:\nAttention("
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.2) details the token-mass vector (s) and Eq. 2 where log(s_K) is added to the attention logits before softmax.",
+      "payload_hash": "d9b6d635c9bfeb5020b292a7fadcf96e323525c19100b6c08c2d13269c5dff30",
+      "question_hash": "bb34864eec0bddd01d4ef7f448fe51efaa917bf8f6b1541dadfa24a6f158ae84"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0156",
+      "judgment": "sufficient",
+      "derivable_answer": "In ProPose dataset construction, 437 high-quality real-world images (covering 499 unseen subjects) were reserved for testing, and the training set was expanded with 9,558 images containing 10,345 instances through augmentation.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We reserve 437 high-quality real-world images (covering\n499 unseen subjects) from this crawled subset and use them\nfor testing."
+        },
+        {
+          "passage_index": 1,
+          "quote": "As\na result, we expand our training set with 9,558 images (containing 10,345 instances)."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly reports both numbers: 437 crawled images (499 subjects) reserved for testing, and 9,558 images (10,345 instances) added for training.",
+      "payload_hash": "3439d2a4001bb866086e5e46fdd0046d940dd474d479debfe39301e0ad096795",
+      "question_hash": "730fab5f858aa52fc7bfea89f07fe2f1bcedce58eb4eefdf2d481f35682dad92"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0157",
+      "judgment": "sufficient",
+      "derivable_answer": "The framework integrates a polychromatic forward model with material-specific attenuation behavior into differentiable Gaussian Splatting. Its self-calibrating system response model eliminates the need for prior spectral information or manual metal masking.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting\nframework, our method achieves high-fidelity reconstruction while\neffectively suppressing metal-induced artifacts."
+        },
+        {
+          "passage_index": 2,
+          "quote": "A\nkey component of our approach is a self-calibrating system response\nmodel that eliminates the need for prior spectral information or\nmanual metal masking"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 details the polychromatic Gaussian Splatting forward model, and Passage 2 explicitly states that the self-calibrating response model eliminates prior spectral info or manual metal masking.",
+      "payload_hash": "365387a8c29263524f8168290c883a9569fd02171d513f67d4dacc63a803b50a",
+      "question_hash": "e227c3ff5bf6ae59dd1d1da41a25112188a61fd94ea08cda0a12c5bbe2ed29ef"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0158",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses typographic prompt injection and image-space attacks in duplicate Passages 1 and 2, but omits the QuISE defense mechanism (localizing query-conditioned influential text, applying verified irrelevant replacements, and requiring two-editor consensus).",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs analyzing multi-image typographic attacks without presenting QuISE. Passages 3 and 4 discuss VLA robot policy attacks and TRAPSBench epistemic calibration.",
+      "payload_hash": "198eb672d90669ea68dce6c9c174a6dc5716fc3b0876bac196110a1dcc34ef44",
+      "question_hash": "11da8a21f8aea877f3989d696beadfd95fc328a5165d4fd4c2bbfce3a527e4c9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0159",
+      "judgment": "sufficient",
+      "derivable_answer": "TEMPO's cost model captures two non-linear hardware effects invisible to token counts: memory-bound weight streaming (the floor b) and M-tile padding (a one-parameter staircase term). Both can be measured black-box in ten minutes on the deployed kernel.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The\nmodel’s two non-linear terms are the two hardware effects\ninvisible to token counts—memory-bound weight streaming\n(the floor b) and M-tile padding (a one-parameter staircase\nterm)—measured black-box in ten minutes on the deployed\nkernel."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly names both hardware effects (weight streaming floor b and M-tile padding staircase term) and specifies that they are measured black-box in ten minutes on the deployed kernel.",
+      "payload_hash": "9ca575dd6e9d8779b64d33c1d3a202873bdfc4d2ea81e464a56253b75ce91550",
+      "question_hash": "fa4d12c888377eaf70366bea3c316f8872ad7dffd6b8e92efc932fe48cdc2a02"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0160",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses vision transformer efficiency and token pruning generally in Passage 1, but omits ToMe's token-mass tracking vector (s) and Eq. 2 where log(s_K) is added to attention logits before softmax.",
+      "rationale": "Passage 1 reviews token reduction techniques without describing ToMe's bipartite soft matching math or attention logit adjustment. Passages 2-4 discuss FineX sparse routing, TRAPSBench epistemic restraint, and VLA adversarial patches.",
+      "payload_hash": "1345c34fe3cef4e9268aef9fe9e70c206e4c4a1b9002b81de307c2649eb38471",
+      "question_hash": "bb34864eec0bddd01d4ef7f448fe51efaa917bf8f6b1541dadfa24a6f158ae84"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0161",
+      "judgment": "sufficient",
+      "derivable_answer": "LigBench evaluates research ideas across four aspects: rating, contribution, soundness, and novelty, with each aspect scored on a 0-5 scale.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "the evaluation of each idea is decomposed into\nfour aspects: rating, contribution, soundness, and\nnovelty, with each aspect scored on a 0-5 scale ."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly lists all four evaluation aspects (rating, contribution, soundness, novelty) and specifies the 0-5 scoring scale.",
+      "payload_hash": "ef727dc9dde1beb7d8c5697ea80a50865c185254da2ac52cd9ab821b284b4efd",
+      "question_hash": "5b0a77ee1321ffc567657cc4a02259d2cbd0cedaa72059d574ee725a1c367530"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0162",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes the polychromatic forward model in Gaussian Splatting in Passage 1, but omits the self-calibrating system response model that eliminates manual metal masking and prior spectral information.",
+      "rationale": "Passage 1 introduces polychromatic 3DGS, but the second passage with the self-calibrating response model is replaced. Passages 2-4 discuss CBCT dual-energy calibration and projection truncation.",
+      "payload_hash": "2a93e60d9f7d2d80f9ff213fe713dad5657c240943c9c32d1f83e7e546a562e6",
+      "question_hash": "e227c3ff5bf6ae59dd1d1da41a25112188a61fd94ea08cda0a12c5bbe2ed29ef"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0163",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context reviews multimodal alignment in duplicate Passages 1 and 2, but omits the ROGER method and its two learning steps (assigning data points using a particle filter, and learning using Bayesian mean/kernel updates).",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs on multimodal correspondence learning without mentioning ROGER. Passages 3 and 4 discuss FineX action recognition and TRAPSBench VLM restraint.",
+      "payload_hash": "dfcccb600a07d2d5510eef31e1f35f11263c1e82fa36bbfbdc0ccbc8936ee5c6",
+      "question_hash": "96d384a6af825f7fa0b615c261713e2adb98e2d871b665d5c5527fe3c2845a86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0164",
+      "judgment": "sufficient",
+      "derivable_answer": "LigBench decomposes research idea evaluation into four aspects: rating, contribution, soundness, and novelty, each scored on a 0-5 scale.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "the evaluation of each idea is decomposed into\nfour aspects: rating, contribution, soundness, and\nnovelty, with each aspect scored on a 0-5 scale ."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly specifies the four evaluation aspects (rating, contribution, soundness, novelty) and the 0-5 score scale.",
+      "payload_hash": "112d08e3ff1b419070511b0b3c3b4b24aab87f657d58fd6a52526b877051271d",
+      "question_hash": "5b0a77ee1321ffc567657cc4a02259d2cbd0cedaa72059d574ee725a1c367530"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0165",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses multilingual question answering in duplicate Passages 1 and 2, but omits synthesizer folding and the +8.91 F1 (+29.8% relative) improvement on MuSiQue across nine languages.",
+      "rationale": "Passages 1 and 2 are duplicate texts discussing multilingual RAG challenges. Passages 3 and 4 discuss FineX sparse routing and TRAPSBench epistemic calibration.",
+      "payload_hash": "0b78e039d3f085e2860bd15b21ca7932491cffa77c0321bd5a1ae0a5e2505dd2",
+      "question_hash": "29b8ea443d40589922329a248f2c67cf344412ed933541d369923b23f29e204e"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0166",
+      "judgment": "sufficient",
+      "derivable_answer": "ToMe tracks patch counts after token merging using a token-mass vector (s). In Eq. 2, the logarithm of key-token masses is added to the attention logits before the softmax: Attention(Q, K, V) = Softmax(QK^T / sqrt(d_k) + log(s_K)) V.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "ToMe tracks the number of original\npatches represented by each token using a token-mass vector (𝑠)."
+        },
+        {
+          "passage_index": 1,
+          "quote": "The logarithm of the key-token masses is added to the attention\nlog its before the soft max:\nAttention("
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly answers both parts: the token-mass vector (s) and the addition of log(s_K) to the attention logits in Eq. 2.",
+      "payload_hash": "ff2617829ca3f884c437bec1d90045934c2590d300ed273ef9a212761b2e1419",
+      "question_hash": "bb34864eec0bddd01d4ef7f448fe51efaa917bf8f6b1541dadfa24a6f158ae84"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0167",
+      "judgment": "sufficient",
+      "derivable_answer": "In Eq. 2 of the hybrid CBM, the overall training objective is L = Ldiag(D) + λc Lconcept(A) + λd Ldist(U) + λr Lreg, combining: diagnosis loss Ldiag (weighted binary cross-entropy on all samples D), concept loss Lconcept (binary cross-entropy on logits and labels for annotated samples A), concept distribution matching loss Ldist (comparing mean predictions to class-conditional priors for unannotated samples U), and a regularization loss Lreg.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)"
+        },
+        {
+          "passage_index": 1,
+          "quote": "Ldiag is the weighted binary cross-entropy for malignancy in all samples.Lconcept\nis binary cross-entropy with log its between zi and the image-level concept labels\nci, evaluated only for samples inA. Ldist is illustrated in Section 2.2."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly presents Eq. 2 and defines all four constituent loss terms (Ldiag, Lconcept, Ldist, Lreg). It provides Eq. 2 and names/characterizes each component directly, though the specific clinical initialization mechanism for Lreg introduced in Section 2.1 is not included in this single chunk.",
+      "payload_hash": "a928c00b85a9583a366fb4971798b29003a2840f714089e54465c9f39e5d436c",
+      "question_hash": "c593209c37c42ef524861ad77a253167230c1463f0dc679cfa5c0547485443f7"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0168",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context reviews existing typographic defenses (Defense-Prefix, PAINT, Dyslexify) and their white-box limitations in Passage 1, but omits the QuISE defense mechanism (query-conditioned text localization, irrelevant replacements, and two-editor consensus).",
+      "rationale": "Passage 1 criticizes previous defenses for requiring model weights, but does not present QuISE. Passages 2-4 discuss VLA robot adversarial attacks and TRAPSBench benchmark pairs.",
+      "payload_hash": "5104b52bce3972e2f7966dfd1602e3e0a30c4d3e7f2b6d01fe4de9e257df8435",
+      "question_hash": "11da8a21f8aea877f3989d696beadfd95fc328a5165d4fd4c2bbfce3a527e4c9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0169",
+      "judgment": "sufficient",
+      "derivable_answer": "The essential matrix is defined as E = R12[t12]x, incorporating camera rotation R12 and translation t12. The five angles in w = [alpha, beta, gamma, theta, phi] parameterize relative pose with three rotation angles and two translation direction angles.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views."
+        },
+        {
+          "passage_index": 1,
+          "quote": "w = [ α β γ θ φ ]"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 defines the essential matrix E = R12[t12]x, and Passage 1 defines the five parameterizing angles w = [alpha, beta, gamma, theta, phi].",
+      "payload_hash": "9170486edde7d821462e3b16826acff07c234ab38da91c7d0ee0d544fcdba6a2",
+      "question_hash": "3cbbaf387063bcd53df7c951be321f8fe4e109f61eeae1eb3edec62fa8bfc92a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0170",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context defines the essential matrix E = R12[t12]x in duplicate Passages 1 and 2, but omits the five-angle parameterization w = (alpha, beta, gamma, theta, phi) defining rotation and translation direction.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs presenting E = R12[t12]x. The 5-angle parameterization in Section 2.2 is omitted. Passages 3 and 4 discuss residual learning for optical flow.",
+      "payload_hash": "23ceeae3668b2ab768c8dccaf9f01d18837901ff94f6a244d33ed23531871dac",
+      "question_hash": "3cbbaf387063bcd53df7c951be321f8fe4e109f61eeae1eb3edec62fa8bfc92a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0171",
+      "judgment": "sufficient",
+      "derivable_answer": "Syfer introduces synthesizer folding, where the end-of-pipeline aggregation call is replaced by a terminal sub-question emitted by the decomposer in the same logical layer as its peers; on MuSiQue, Syfer improves over the strongest decomposition baseline by +8.91 F1 (+29.8% relative) averaged across nine languages.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal\nsub-question emitted by the decomposer in the same logical layer as its peers,\nplacing decomposition and aggregation in a single logical pass"
+        },
+        {
+          "passage_index": 1,
+          "quote": "On the most challenging benchmark MuSiQue,Syferstill improves over\nthe strongest decomposition-based baseline by+8.91F1 (+29.8%relative)\naveraged over nine languages."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 1 Introduction) explicitly defines synthesizer folding and reports the +8.91 F1 (+29.8% relative) gain on MuSiQue across nine languages.",
+      "payload_hash": "a250c8db14e289b0825dcee7512e91b96df14b2cdb78278407de981aaac0e0b4",
+      "question_hash": "29b8ea443d40589922329a248f2c67cf344412ed933541d369923b23f29e204e"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0172",
+      "judgment": "sufficient",
+      "derivable_answer": "Syfer introduces synthesizer folding, replacing the aggregation call with a terminal sub-question emitted by the decomposer in the same logical layer, achieving a +8.91 F1 (+29.8% relative) improvement over the strongest decomposition baseline on MuSiQue averaged across nine languages.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal\nsub-question emitted by the decomposer in the same logical layer as its peers,\nplacing decomposition and aggregation in a single logical pass"
+        },
+        {
+          "passage_index": 1,
+          "quote": "On the most challenging benchmark MuSiQue,Syferstill improves over\nthe strongest decomposition-based baseline by+8.91F1 (+29.8%relative)\naveraged over nine languages."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 contains the complete description of synthesizer folding and the exact numerical gain on MuSiQue (+8.91 F1 / +29.8% across nine languages).",
+      "payload_hash": "3f2e5b7046766b34d86b06f82b2bb442d5903da321545172c57e869caf24cece",
+      "question_hash": "29b8ea443d40589922329a248f2c67cf344412ed933541d369923b23f29e204e"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0173",
+      "judgment": "sufficient",
+      "derivable_answer": "P2Fusion introduces the Gated Dynamic Expert Recalibration (GDER) module for feature decoupling and self-correcting feedback, which synergizes a prior-guided Modality Specialist with a global-aware Attention Specialist.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism."
+        },
+        {
+          "passage_index": 1,
+          "quote": "our GDER module is tasked with feature decoupling and correction. Within this\nmodule, we synergize a prior-guided Modality Specialist with a global-aware\nAttention Specialist to perform modality-specific feedback refinement."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly names the GDER module and its Modality Specialist and Attention Specialist components.",
+      "payload_hash": "8386e9a215e640fb0d6cc5432865d4b81a02b438887db0d86776b32043f6cbbf",
+      "question_hash": "6380e1f04ad69af260f95e3121d7a615118a30c131eef5f9b1a32f84504c8f86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0174",
+      "judgment": "sufficient",
+      "derivable_answer": "The online multimodal regression method is ROGER (Realtime Overlapping Gaussian Expert Regression), based on a mixture of Gaussian processes. Its two learning steps are: (1) assigning data points to the suitable process using a particle filter, and (2) learning the assigned process using a Bayesian approach for updating mean and kernel functions.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "called\nROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian\nprocesses that are learned in a sparse online method"
+        },
+        {
+          "passage_index": 1,
+          "quote": "The learning is performed\nin two steps: assigning data points to the suitable process\nusing a particle ﬁ lter and learning the assigned process using a Bayesian approach for updating the mean\nand kernel functions."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2 Related Work) explicitly names ROGER and details its two learning steps.",
+      "payload_hash": "266b8917ee3a0eec4536e4179e5dbed376b302164d137c22ef7f237eb5534189",
+      "question_hash": "96d384a6af825f7fa0b615c261713e2adb98e2d871b665d5c5527fe3c2845a86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0175",
+      "judgment": "sufficient",
+      "derivable_answer": "ROGER (Realtime Overlapping Gaussian Expert Regression) is based on a mixture of Gaussian processes. It performs learning in two steps: assigning data points using a particle filter, and learning the assigned process using a Bayesian approach for updating mean and kernel functions.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "called\nROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian\nprocesses that are learned in a sparse online method"
+        },
+        {
+          "passage_index": 1,
+          "quote": "The learning is performed\nin two steps: assigning data points to the suitable process\nusing a particle ﬁ lter and learning the assigned process using a Bayesian approach for updating the mean\nand kernel functions."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 defines ROGER and explains its two learning steps directly.",
+      "payload_hash": "1ff8b418e8ca6deb92510cd5d2b93c23c60e20e3be903b91caee2dd8693f8fdc",
+      "question_hash": "96d384a6af825f7fa0b615c261713e2adb98e2d871b665d5c5527fe3c2845a86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0176",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes the polychromatic forward model in Gaussian Splatting in duplicate Passages 1 and 2, but omits the self-calibrating system response model that eliminates manual metal masking and prior spectral information.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs presenting polychromatic 3DGS without the self-calibrating response model. Passages 3 and 4 discuss CBCT dual-energy calibration.",
+      "payload_hash": "b3dc7f98ab216b37cb42bb879c8938ee5eeaab0f780396d8c92db8d6dde0bbb0",
+      "question_hash": "e227c3ff5bf6ae59dd1d1da41a25112188a61fd94ea08cda0a12c5bbe2ed29ef"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0177",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses speech recognition and interview score prediction in Passage 1, but omits the frozen Whisper-medium encoder with LoRA adapters, the 30-second chunking up to 2 minutes, and the adjacent-frame averaging reducing resolution from 20 ms to 40 ms.",
+      "rationale": "Passage 1 discusses speech assessment without detailing the acoustic branch architecture or frame averaging. Passages 2-4 discuss FineX action recognition and TRAPSBench VLM restraint.",
+      "payload_hash": "6f0b91400d6b844596f9d08fb9b5fda93cb1c11699eb42ac32736bd806cedd48",
+      "question_hash": "14e5f46e681a7db957c916b17e47466c40693bee8f3e7bc87fc98dfd132f6a05"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0178",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces concept bottleneck models and prior initialization in duplicate Passages 1 and 2, but omits the overall training objective Eq. 2 and its loss breakdown (Ldiag, Lconcept, Ldist, Lreg).",
+      "rationale": "Passages 1 and 2 are duplicate texts discussing cancer imaging CBMs without presenting Eq. 2. Passages 3 and 4 discuss FineX sparse routing and TRAPSBench epistemic calibration.",
+      "payload_hash": "271da424639e7a7be9ad888099ce3a8544fbdb4d451b3bc06b1d55bf3bb32e1b",
+      "question_hash": "c593209c37c42ef524861ad77a253167230c1463f0dc679cfa5c0547485443f7"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0179",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses multi-hop QA decomposition pipelines in Passage 1, but omits synthesizer folding and the +8.91 F1 (+29.8% relative) improvement on MuSiQue across nine languages.",
+      "rationale": "Passage 1 reviews decomposition methods without introducing synthesizer folding or reporting the MuSiQue result. Passages 2-4 discuss FineX sparse routing and TRAPSBench epistemic calibration.",
+      "payload_hash": "01ebc7fbf877ce62c305cc302b64ae67f9b4a0a7d72115b6c74afcd1cc6bdf57",
+      "question_hash": "29b8ea443d40589922329a248f2c67cf344412ed933541d369923b23f29e204e"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0180",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses infrared-visible image fusion in duplicate Passages 1 and 2, but omits the GDER module and its synergy between the Modality Specialist and Attention Specialist.",
+      "rationale": "Passages 1 and 2 are duplicate introductions to image fusion without presenting the GDER module. Passages 3 and 4 discuss FineX action recognition and TRAPSBench VLM restraint.",
+      "payload_hash": "4449ef263e0094ae95888006add9422874deec6cb59566306d118e28c89cc4b7",
+      "question_hash": "6380e1f04ad69af260f95e3121d7a615118a30c131eef5f9b1a32f84504c8f86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0181",
+      "judgment": "sufficient",
+      "derivable_answer": "QuISE defends against typographic attacks without model weight access by localizing query-conditioned influential text, applying semantically distinct replacements verified to be irrelevant to both query and image, and modifying the input-image answer only when the two edited answers form a valid consensus.",
+      "supporting_quotations": [
+        {
+          "passage_index": 3,
+          "quote": "QuISE instead localizes\nquery-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query\nand the image, and changes the input-image answer only\nwhen the two edited answers form a valid consensus."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (Section 2.3) directly provides the complete explanation of QuISE's black-box defense mechanism.",
+      "payload_hash": "e5aa938e86d39e75620954a641a17fd8082b2c8e3e082843c23513153d33f64f",
+      "question_hash": "11da8a21f8aea877f3989d696beadfd95fc328a5165d4fd4c2bbfce3a527e4c9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0182",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces concept bottleneck models and prior initialization in Passage 1, but omits the overall training objective Eq. 2 and its four loss components (Ldiag, Lconcept, Ldist, Lreg).",
+      "rationale": "Passage 1 outlines the CBM concept-to-diagnosis pipeline without giving Eq. 2. Passages 2-4 discuss FineX sparse routing and TRAPSBench epistemic calibration.",
+      "payload_hash": "a540a1b7990317a76cc04a198b8fb8fa771461c3f83d059f004d2359903cc7a0",
+      "question_hash": "c593209c37c42ef524861ad77a253167230c1463f0dc679cfa5c0547485443f7"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0183",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes camera-space keypoint normalization in Passage 1, but omits the ProPose dataset construction statistics (437 crawled test images with 499 subjects, and 9,558 augmented training images with 10,345 instances).",
+      "rationale": "Passage 1 focuses on 3D pose normalization algorithms without reporting the dataset sample counts. Passages 2-4 discuss FineX sparse routing and TRAPSBench epistemic calibration.",
+      "payload_hash": "8925934b22ab8deb46f54fc0aaeaca901507185e784a7b87609e15bacd0edb7e",
+      "question_hash": "730fab5f858aa52fc7bfea89f07fe2f1bcedce58eb4eefdf2d481f35682dad92"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0184",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses vision transformer efficiency in duplicate Passages 1 and 2, but omits ToMe's token-mass tracking vector (s) and Eq. 2 where log(s_K) is added to attention logits before softmax.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs reviewing token pruning methods. Passages 3 and 4 discuss FineX sparse routing and TRAPSBench epistemic restraint.",
+      "payload_hash": "0819787fed3b9eef3957e1557dab2e9fdd2229d55dc753e5cfa611c35e2355cd",
+      "question_hash": "bb34864eec0bddd01d4ef7f448fe51efaa917bf8f6b1541dadfa24a6f158ae84"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0185",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses camera-space keypoint normalization in duplicate Passages 1 and 2, but omits the ProPose dataset collection numbers (437 crawled test images covering 499 subjects, and 9,558 augmented training images containing 10,345 instances).",
+      "rationale": "Passages 1 and 2 are duplicate texts on keypoint normalization without dataset statistics. Passages 3 and 4 discuss FineX sparse routing and TRAPSBench epistemic calibration.",
+      "payload_hash": "f6a22efd2ea56c4800f2102ef27ff55175e74ebc33c3ec570cb04e446932acd0",
+      "question_hash": "730fab5f858aa52fc7bfea89f07fe2f1bcedce58eb4eefdf2d481f35682dad92"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0186",
+      "judgment": "sufficient",
+      "derivable_answer": "TEMPO's cost model captures two non-linear hardware effects invisible to token counts: memory-bound weight streaming (the floor b) and M-tile padding (a one-parameter staircase term). Both are measured black-box in ten minutes on the deployed kernel.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The\nmodel’s two non-linear terms are the two hardware effects\ninvisible to token counts—memory-bound weight streaming\n(the floor b) and M-tile padding (a one-parameter staircase\nterm)—measured black-box in ten minutes on the deployed\nkernel."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly identifies both non-linear hardware effects (weight streaming floor b, M-tile padding staircase term) and specifies that they are measured in ten minutes on the deployed kernel.",
+      "payload_hash": "20a9368fc1cb3b123a2aea76fa3226e03ca3b7ec7ac90a2e512ba6d7ccfc8f70",
+      "question_hash": "fa4d12c888377eaf70366bea3c316f8872ad7dffd6b8e92efc932fe48cdc2a02"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0187",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses speech recognition and interview score prediction in duplicate Passages 1 and 2, but omits the frozen Whisper-medium encoder with LoRA adapters, the 30-second chunking up to 2 minutes, and the adjacent-frame averaging reducing resolution from 20 ms to 40 ms.",
+      "rationale": "Passages 1 and 2 are duplicate paragraphs on interview scoring without detailing the acoustic branch architecture or frame averaging. Passages 3 and 4 discuss FineX action recognition and TRAPSBench VLM restraint.",
+      "payload_hash": "1ba44bda9d1210d32cb34ccf67ba0d67f6b2d66039d4dd43e86e63cb678655c8",
+      "question_hash": "14e5f46e681a7db957c916b17e47466c40693bee8f3e7bc87fc98dfd132f6a05"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0188",
+      "judgment": "sufficient",
+      "derivable_answer": "In CASA, the acoustic branch uses a frozen Whisper-medium encoder with LoRA adapters. Each answer is split into 30-second chunks (up to a 2-minute cap) yielding 1,500 frame vectors per chunk; these are concatenated and adjacent frame pairs are averaged to reduce temporal resolution from 20 ms to 40 ms.",
+      "supporting_quotations": [
+        {
+          "passage_index": 3,
+          "quote": "We instead adopt a Whisper-medium encoder, kept\nfrozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the\nrepresentation used by the acoustic branch."
+        },
+        {
+          "passage_index": 3,
+          "quote": "each\nanswer is split into 30 s chunks up to a 2 min cap, with\neach chunk yielding1,500frame-level vectors."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly details the Whisper-medium encoder with LoRA adapters, the 30-second chunking up to 2 minutes, and the adjacent-frame averaging from 20 ms to 40 ms.",
+      "payload_hash": "ae03ee3964d7b6215a925618591db1e405cd0fc115e7fdfdd4f2a6f82da33757",
+      "question_hash": "14e5f46e681a7db957c916b17e47466c40693bee8f3e7bc87fc98dfd132f6a05"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0189",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context reviews multimodal alignment in Passage 1, but omits the ROGER method and its two learning steps (assigning data points using a particle filter, and learning using Bayesian mean/kernel updates).",
+      "rationale": "Passage 1 discusses multimodal correspondence learning without presenting ROGER. Passages 2-4 discuss FineX action recognition and TRAPSBench VLM restraint.",
+      "payload_hash": "9bda8aef7466c668bc238a0d9102e1da07ffd9bc032525ae425f8bd743bbd810",
+      "question_hash": "96d384a6af825f7fa0b615c261713e2adb98e2d871b665d5c5527fe3c2845a86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0190",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses infrared-visible image fusion in Passage 1, but omits the GDER module and its synergy between the Modality Specialist and Attention Specialist.",
+      "rationale": "Passage 1 introduces image fusion paradigms without presenting the GDER module. Passages 2-4 discuss FineX action recognition and TRAPSBench VLM restraint.",
+      "payload_hash": "e029bc536acfdfd57bb573cf209d59d062263d7599bdb1b20acf84068e876f26",
+      "question_hash": "6380e1f04ad69af260f95e3121d7a615118a30c131eef5f9b1a32f84504c8f86"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0191",
+      "judgment": "sufficient",
+      "derivable_answer": "In ProPose dataset construction, 437 high-quality real-world images (covering 499 unseen subjects) were reserved for testing, and the training set was expanded with 9,558 images containing 10,345 instances through augmentation.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We reserve 437 high-quality real-world images (covering\n499 unseen subjects) from this crawled subset and use them\nfor testing."
+        },
+        {
+          "passage_index": 1,
+          "quote": "As\na result, we expand our training set with 9,558 images (containing 10,345 instances)."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly reports both the test set numbers (437 images, 499 subjects) and training augmentation numbers (9,558 images, 10,345 instances).",
+      "payload_hash": "4eb76e8fa946914871f56696f2512d004104ac537ae1fcbfef6358bfad2b5b82",
+      "question_hash": "730fab5f858aa52fc7bfea89f07fe2f1bcedce58eb4eefdf2d481f35682dad92"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0192",
+      "judgment": "sufficient",
+      "derivable_answer": "The framework integrates a polychromatic forward model with material-specific attenuation behavior into differentiable Gaussian Splatting. Its self-calibrating system response model eliminates the need for prior spectral information or manual metal masking.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting\nframework, our method achieves high-fidelity reconstruction while\neffectively suppressing metal-induced artifacts."
+        },
+        {
+          "passage_index": 2,
+          "quote": "A\nkey component of our approach is a self-calibrating system response\nmodel that eliminates the need for prior spectral information or\nmanual metal masking"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the polychromatic Gaussian Splatting formulation, and Passage 2 states that the self-calibrating response model eliminates prior spectral info and manual metal masking.",
+      "payload_hash": "8431e34fade57a4ebb5c0ddc2ebae8e37a179482f0a22017bf22b299176b847a",
+      "question_hash": "e227c3ff5bf6ae59dd1d1da41a25112188a61fd94ea08cda0a12c5bbe2ed29ef"
+    }
+  ]
+}

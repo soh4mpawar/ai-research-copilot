@@ -1,12 +1,12 @@
 {
   "total_papers": 200,
   "excluded_papers": 0,
-  "total_chunks": 2902,
+  "total_chunks": 9456,
   "connectivity_metrics": {
     "total_ingested_papers": 200,
-    "connected_papers_count": 193,
-    "connectivity_fraction": 0.965,
-    "total_in_corpus_edges": 384,
+    "connected_papers_count": 54,
+    "connectivity_fraction": 0.27,
+    "total_in_corpus_edges": 87,
     "graphrag_viability_met": true
   }
 }

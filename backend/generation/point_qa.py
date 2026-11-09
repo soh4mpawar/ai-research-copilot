@@ -1,6 +1,6 @@
 """
 Grounded Point-QA Generation Engine (Phase 3 / FR-7, FR-11, PRD §7.1).
-Takes retrieved reranked chunks and generates grounded answers via Gemini 2.5 Flash API.
+Takes retrieved reranked chunks and generates grounded answers via gemini-3.5-flash-lite API.
 Every factual claim is traceable to a retrieved chunk citation tag ([1], [2], [3]).
 """
 
@@ -12,10 +12,11 @@ from backend.retrieval.threshold_gate import RelevanceThresholdGate
 
 
 class GroundedPointQAEngine:
-    """Grounded question answering engine using Gemini 2.5 Flash API (FR-7)."""
+    """Grounded question answering engine using gemini-3.5-flash-lite API (FR-7)."""
 
-    def __init__(self, api_key: str = None):
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
+    def __init__(self, api_key: str = None, strict_mode: bool = False):
+        self.strict_mode = strict_mode
+        self.api_key = api_key if api_key is not None else os.getenv("GEMINI_API_KEY", "")
         self.client = None
         self._init_client()
 
@@ -47,7 +48,10 @@ class GroundedPointQAEngine:
         reranked_chunks: List[Dict[str, Any]],
         dense_count: int = 20,
         sparse_count: int = 20,
-        rrf_count: int = 25
+        rrf_count: int = 25,
+        retrieval_time_sec: float = None,
+        reranking_time_sec: float = None,
+        strict_mode: bool = None
     ) -> QueryResult:
         """
         Generate grounded Point-QA answer with citation tags.
@@ -111,7 +115,7 @@ class GroundedPointQAEngine:
 
         context_str = "\n".join(context_blocks)
 
-        # 3. Prompt Construction for Gemini 2.5 Flash
+        # 3. Prompt Construction for gemini-3.5-flash-lite
         prompt = (
             f"You are AI Research Copilot, an expert scientific literature assistant.\n"
             f"Answer the user's research question using ONLY the retrieved context below.\n"
@@ -150,18 +154,23 @@ class GroundedPointQAEngine:
                 if answer_text:
                     break
 
+        is_strict = self.strict_mode if strict_mode is None else strict_mode
         if not answer_text:
+            if is_strict:
+                raise RuntimeError(f"[Strict Mode Error] Generation failed for query '{query}'. LLM client unconfigured or API call failed.")
             actual_model_used = "offline-fallback"
             answer_text = self._build_offline_fallback_answer(query, valid_chunks[:4])
 
         t_end = time.time()
         top_score = valid_chunks[0].get("score", 0.85) if valid_chunks else 0.5
         
+        r_sec = retrieval_time_sec if retrieval_time_sec is not None else 0.0
+        rk_sec = reranking_time_sec if reranking_time_sec is not None else 0.0
         metrics = PipelineMetrics(
-            retrieval_time_sec=0.28,
-            reranking_time_sec=0.32,
+            retrieval_time_sec=round(r_sec, 3),
+            reranking_time_sec=round(rk_sec, 3),
             generation_time_sec=round(t_end - t0, 2),
-            total_time_sec=round(t_end - t0 + 0.6, 2),
+            total_time_sec=round(t_end - t0 + r_sec + rk_sec, 2),
             dense_candidates_count=dense_count,
             bm25_candidates_count=sparse_count,
             rrf_candidates_count=rrf_count,
@@ -181,14 +190,28 @@ class GroundedPointQAEngine:
         )
 
     def _build_short_circuit_result(
-        self, query: str, msg: str, dense_count: int, sparse_count: int, rrf_count: int, reranked_count: int
+        self,
+        query: str,
+        msg: str,
+        dense_count: int,
+        sparse_count: int,
+        rrf_count: int,
+        reranked_count: int,
+        retrieval_time_sec: float = None,
+        reranking_time_sec: float = None,
+        t0: float = None
     ) -> QueryResult:
-        """Build short-circuited result per FR-11."""
+        """Build short-circuited result per FR-11 with actual measured or None timings."""
+        gen_time = round(time.time() - t0, 3) if t0 is not None else None
+        tot_time = None
+        if gen_time is not None and retrieval_time_sec is not None and reranking_time_sec is not None:
+            tot_time = round(gen_time + retrieval_time_sec + reranking_time_sec, 3)
+
         metrics = PipelineMetrics(
-            retrieval_time_sec=0.08,
-            reranking_time_sec=0.10,
-            generation_time_sec=0.05,
-            total_time_sec=0.23,
+            retrieval_time_sec=round(retrieval_time_sec, 3) if retrieval_time_sec is not None else None,
+            reranking_time_sec=round(reranking_time_sec, 3) if reranking_time_sec is not None else None,
+            generation_time_sec=gen_time,
+            total_time_sec=tot_time,
             dense_candidates_count=dense_count,
             bm25_candidates_count=sparse_count,
             rrf_candidates_count=rrf_count,
@@ -206,6 +229,106 @@ class GroundedPointQAEngine:
             generator_model="None (Relevance Short-Circuit)"
         )
 
+    def generate_from_context_record(
+        self,
+        record: Any,  # FinalContextRecord
+        retrieval_time_sec: float = None,
+        reranking_time_sec: float = None,
+        strict_mode: bool = None
+    ) -> Any:
+        """
+        Generate grounded QA directly from an immutable FinalContextRecord.
+        Guarantees that the generator receives the exact serialized payload evaluated by the gate.
+        Returns (QueryResult, payload_sent_to_model, payload_hash).
+        """
+        import hashlib
+        t0 = time.time()
+        is_strict = self.strict_mode if strict_mode is None else strict_mode
+
+        payload_sent = record.serialized_payload
+        computed_hash = hashlib.sha256(payload_sent.encode("utf-8")).hexdigest()
+        assert computed_hash == record.payload_hash, (
+            f"Context payload mismatch: computed {computed_hash} != record {record.payload_hash}"
+        )
+
+        prompt = (
+            f"You are AI Research Copilot, an expert scientific literature assistant.\n"
+            f"Answer the user query based ONLY on the retrieved scientific passages provided below.\n\n"
+            f"Retrieved Passages:\n{payload_sent}\n\n"
+            f"Query: {record.query}\n\n"
+            f"Instructions:\n"
+            f"1. Structure your answer clearly with markdown headings, bullet points, and citations.\n"
+            f"2. Every key factual claim MUST cite its source passage using bracketed citation tags: [1], [2], etc.\n"
+            f"3. Do not make unverified claims not grounded in the passages above.\n\n"
+            f"Detailed Technical Answer:"
+        )
+
+        answer_text = None
+        actual_model_used = "offline-demo"
+
+        if self.client:
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt
+                )
+                answer_text = response.text
+                if not answer_text and is_strict:
+                    raise RuntimeError("[Strict Mode Error] LLM returned empty response.")
+                actual_model_used = self.model_name
+            except Exception as e:
+                if is_strict:
+                    raise RuntimeError(f"[Strict Mode Error] Generation failed: {e}")
+                answer_text = f"> ⚠️ **[DEMO FALLBACK]**\n\nGenerated from context record with {len(record.passages)} passages."
+        else:
+            if is_strict:
+                raise RuntimeError("[Strict Mode Error] LLM client is unconfigured.")
+            answer_text = f"> ⚠️ **[DEMO FALLBACK]**\n\nGenerated from context record with {len(record.passages)} passages."
+
+        t_end = time.time()
+        gen_time = round(t_end - t0, 3)
+        metrics = PipelineMetrics(
+            retrieval_time_sec=round(retrieval_time_sec, 3) if retrieval_time_sec is not None else None,
+            reranking_time_sec=round(reranking_time_sec, 3) if reranking_time_sec is not None else None,
+            generation_time_sec=gen_time,
+            total_time_sec=round(gen_time + (retrieval_time_sec or 0.0) + (reranking_time_sec or 0.0), 3) if (retrieval_time_sec and reranking_time_sec) else None,
+            dense_candidates_count=0,
+            bm25_candidates_count=0,
+            rrf_candidates_count=0,
+            reranked_candidates_count=len(record.passages),
+            final_context_chunks_count=len(record.passages)
+        )
+
+        retrieved_chunks = [
+            RetrievedChunk(
+                chunk_id=p.passage_id,
+                paper_id=p.paper_id or "unknown",
+                paper_title=p.paper_id or "Paper",
+                authors="",
+                section=p.section or "",
+                text=p.text,
+                score=p.score,
+                dense_rank=1,
+                bm25_rank=1,
+                rrf_rank=1,
+                rerank_score=p.score,
+                page=1
+            )
+            for p in record.passages
+        ]
+
+        res = QueryResult(
+            query=record.query,
+            mode="qa",
+            answer=answer_text,
+            evidence_strength="Strong",
+            sources=[],
+            retrieved_chunks=retrieved_chunks,
+            metrics=metrics,
+            generator_model=f"Google/{actual_model_used}"
+        )
+        return res, payload_sent, computed_hash
+
     def _build_offline_fallback_answer(self, query: str, valid_chunks: List[Dict[str, Any]]) -> str:
         """Construct a structured grounded answer from retrieved chunks for offline / unbudgeted API runs."""
         claims = []
@@ -215,7 +338,7 @@ class GroundedPointQAEngine:
             claims.append(f"According to research in *{title}* [{idx}], the {sec} section highlights key technical mechanisms in RAG and dense passage retrieval.")
 
         return (
-            f"### Grounded Literature QA Response\n\n"
+            f"> ⚠️ **[DEMO FALLBACK - OFFLINE/UNCONFIGURED API KEY]**\n\n### Grounded Literature QA Response\n\n"
             f"Based on the ingested paper corpus, several key methodology insights emerge regarding your question: **\"{query}\"**.\n\n"
             + "\n\n".join(f"* {claim}" for claim in claims) + "\n\n"
             f"### Technical Synthesis & Evidence\n"

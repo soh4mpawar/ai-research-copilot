@@ -1,0 +1,113 @@
+{
+  "specification_title": "Benchmark v2 Final Evaluation Protocol Specification",
+  "protocol_version": "research_protocol_v1_amendment_v1.1",
+  "status": "FROZEN_BEFORE_V2_TEST_CONSTRUCTION_POST_STAGE4_EXPOSURE",
+  "date_frozen": "2026-11-04",
+  "scoring_provenance": {
+    "model_identity": "BAAI/bge-reranker-base",
+    "scoring_configuration": "CUDA fp32, sigmoid activation, duplicate-exact cached",
+    "training_scores_hash": "2e1e2c2010b6b5ba366922b471594e8c43acc0c5f5817ecab1f48507ddcc8006",
+    "validation_scores_hash": "3a2026b96d4fa961c1948f8dee13cae2a823b1b012926434f59d6bd849cb9909"
+  },
+  "test_partition_status": {
+    "total_papers": 48,
+    "target_test_families": 36,
+    "target_controlled_contexts": 108,
+    "target_natural_contexts": 36,
+    "target_total_contexts": 144,
+    "status": "NO_ADDITIONAL_TEST_CONTENT_ACCESS_DURING_REPAIR",
+    "historical_disclosure": "Test partition papers were exposed during the archived invalid Stage 4 proxy experiment. No additional test-content access occurred during this repair or benchmark rebuild. Frozen prior to new v2 test construction."
+  },
+  "hypotheses_and_comparisons": {
+    "primary_hypothesis": "M4 (Full Deduplicated) achieves lower discrete tie-correct AURC than M1 (Raw Relevance) on controlled contexts.",
+    "primary_comparison": {
+      "method_A": "M4_Full_Dedup",
+      "method_B": "M1_Relevance_Raw",
+      "metric": "discrete_expected_AURC",
+      "eval_subset": "controlled_contexts_108"
+    },
+    "factorial_ablations": [
+      {
+        "ablation": "Deduplication effect in relevance-only models",
+        "comparison": "M2_Relevance_Dedup vs M1_Relevance_Raw"
+      },
+      {
+        "ablation": "Structural features effect on raw passages",
+        "comparison": "M3_Full_Raw vs M1_Relevance_Raw"
+      },
+      {
+        "ablation": "Structural features effect on deduplicated passages",
+        "comparison": "M4_Full_Dedup vs M2_Relevance_Dedup"
+      },
+      {
+        "ablation": "Deduplication effect with structural features",
+        "comparison": "M4_Full_Dedup vs M3_Full_Raw"
+      }
+    ],
+    "practical_generalization_check": {
+      "subset": "natural_retrieval_contexts_36",
+      "reporting": "Reported separately from controlled contexts as the practical generalization check."
+    },
+    "property_checks": {
+      "duplicate_invariance": "Evaluated separately from evidence-removal experiments to measure sensitivity to redundant passage duplication."
+    }
+  },
+  "statistical_testing_protocol": {
+    "bootstrap_method": "paired_cluster_bootstrap",
+    "cluster_unit": "primary_source_paper_id",
+    "cluster_policy": "All conditions and question families associated with a primary source paper are kept together in each resample.",
+    "num_resamples": 2000,
+    "random_seed": 20261104,
+    "reported_metrics": [
+      "observed_paired_difference (Metric_A - Metric_B)",
+      "95_percent_bootstrap_percentile_interval [q_0.025, q_0.975]"
+    ],
+    "interpretation_rule": "Report the observed difference and bootstrap percentile interval as uncertainty estimates. An interval containing zero is compatible with differences in either direction and does not establish equivalence.",
+    "dependence_disclosure": "Shared distractor passages across families can create residual inter-cluster dependence."
+  },
+  "threshold_evaluations": {
+    "target_coverages": [
+      0.5,
+      0.75,
+      0.9
+    ],
+    "threshold_source": "frozen_validation_selected_thresholds",
+    "reporting": "Both descriptive matched-coverage comparisons and deployable validation-frozen operating point performance must be reported."
+  },
+  "validation_tuning_summary": {
+    "controlled_aurc": {
+      "B0_AlwaysAccept": 0.666667,
+      "B1_MaxRelevance": 0.461406,
+      "M1_Relevance_Raw": 0.509885,
+      "M2_Relevance_Dedup": 0.563787,
+      "M3_Full_Raw": 0.536971,
+      "M4_Full_Dedup": 0.550724,
+      "Shortcut_LengthDiagnostic": 0.697268
+    },
+    "natural_aurc": {
+      "B0_AlwaysAccept": 0.041667,
+      "B1_MaxRelevance": 0.035291,
+      "M1_Relevance_Raw": 0.028031,
+      "M2_Relevance_Dedup": 0.080943,
+      "M3_Full_Raw": 0.028031,
+      "M4_Full_Dedup": 0.094832,
+      "Shortcut_LengthDiagnostic": 0.094832
+    },
+    "pooled_aurc": {
+      "B0_AlwaysAccept": 0.510417,
+      "B1_MaxRelevance": 0.295896,
+      "M1_Relevance_Raw": 0.235635,
+      "M2_Relevance_Dedup": 0.273909,
+      "M3_Full_Raw": 0.249247,
+      "M4_Full_Dedup": 0.274382,
+      "Shortcut_LengthDiagnostic": 0.312277
+    },
+    "selected_C_values": {
+      "M1_Relevance_Raw": 100.0,
+      "M2_Relevance_Dedup": 10.0,
+      "M3_Full_Raw": 100.0,
+      "M4_Full_Dedup": 10.0,
+      "Shortcut_LengthDiagnostic": 1.0
+    }
+  }
+}

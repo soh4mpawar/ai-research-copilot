@@ -1,0 +1,1911 @@
+{
+  "ctx_tr_0001": {
+    "family_id": "v2_train_009",
+    "paper_id": "2608.12713",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12713_sec_001",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.9775
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12713_sec_002",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.9408
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12713_sec_009",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.8551
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12713_sec_006",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.8211
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12713_sec_004",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.7601
+      }
+    ],
+    "payload_hash": "cee0ca8cfffdb8e093cd52b1bb19e30cb438e80861eb829cc512d7248e4540b7",
+    "total_tokens": 1823
+  },
+  "ctx_tr_0002": {
+    "family_id": "v2_train_001",
+    "paper_id": "2608.11829",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11829_sec_004",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.9976
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_004_dup",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.9976
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13205_sec_011",
+        "paper_id": "2608.13205",
+        "section": "Related Work",
+        "rerank_score": 0.709
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13057_sec_006",
+        "paper_id": "2608.13057",
+        "section": "Introduction",
+        "rerank_score": 0.0001
+      }
+    ],
+    "payload_hash": "71fbb03f5007ce9a137456339bb0c19f352206835d9f23260481387f6920b5bb",
+    "total_tokens": 1524
+  },
+  "ctx_tr_0003": {
+    "family_id": "v2_train_011",
+    "paper_id": "2608.12717",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12717_sec_001",
+        "paper_id": "2608.12717",
+        "section": "Abstract",
+        "rerank_score": 0.9783
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0012
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_003",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.0003
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "2c241103f043f7ef34f89965182d031e0883bb4309c67d97f9fdcf74ac515cd3",
+    "total_tokens": 1239
+  },
+  "ctx_tr_0004": {
+    "family_id": "v2_train_007",
+    "paper_id": "2608.12652",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12652_sec_004",
+        "paper_id": "2608.12652",
+        "section": "Introduction",
+        "rerank_score": 0.9826
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12652_sec_004_dup",
+        "paper_id": "2608.12652",
+        "section": "Introduction",
+        "rerank_score": 0.9826
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12911_sec_046",
+        "paper_id": "2608.12911",
+        "section": "Results",
+        "rerank_score": 0.0012
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13484_sec_019",
+        "paper_id": "2608.13484",
+        "section": "Related Work",
+        "rerank_score": 0.0008
+      }
+    ],
+    "payload_hash": "74779aeb7826278dabea95658a5a1afb893bbea5ca9cf10580604213ce3dcf8f",
+    "total_tokens": 1347
+  },
+  "ctx_tr_0005": {
+    "family_id": "v2_train_005",
+    "paper_id": "2608.12626",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12626_sec_002",
+        "paper_id": "2608.12626",
+        "section": "Introduction",
+        "rerank_score": 0.9973
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12626_sec_002_dup",
+        "paper_id": "2608.12626",
+        "section": "Introduction",
+        "rerank_score": 0.9973
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13334_sec_007",
+        "paper_id": "2608.13334",
+        "section": "Related Work",
+        "rerank_score": 0.0891
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11919_sec_006",
+        "paper_id": "2608.11919",
+        "section": "Related Work",
+        "rerank_score": 0.0663
+      }
+    ],
+    "payload_hash": "c2725b82150092c23ebe7dcc19596cb755521c82ed4911930a7803772fb0598c",
+    "total_tokens": 1475
+  },
+  "ctx_tr_0006": {
+    "family_id": "v2_train_012",
+    "paper_id": "2608.12748",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12748_sec_007",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.9944
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12748_sec_008",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.0955
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13037_sec_010",
+        "paper_id": "2608.13037",
+        "section": "Methodology",
+        "rerank_score": 0.0073
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13045_sec_005",
+        "paper_id": "2608.13045",
+        "section": "Introduction",
+        "rerank_score": 0.0001
+      }
+    ],
+    "payload_hash": "9ac7adca62f449c6b3cbecc06b5300b56b9b827adc72bea45db063a8b141707d",
+    "total_tokens": 1763
+  },
+  "ctx_tr_0007": {
+    "family_id": "v2_train_009",
+    "paper_id": "2608.12713",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12713_sec_001",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.9775
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0002
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_003",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "df6e72a0e55ed44cb4b0f610f272497af80c9da8201bf0a64b8a13406ec9c2f4",
+    "total_tokens": 1191
+  },
+  "ctx_tr_0008": {
+    "family_id": "v2_train_011",
+    "paper_id": "2608.12717",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12717_sec_001",
+        "paper_id": "2608.12717",
+        "section": "Abstract",
+        "rerank_score": 0.9783
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12717_sec_001_dup",
+        "paper_id": "2608.12717",
+        "section": "Abstract",
+        "rerank_score": 0.9783
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0012
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "dc5e11849188d22b437a0546d619c10fa432d40042571e4314d89cf317209d34",
+    "total_tokens": 1302
+  },
+  "ctx_tr_0009": {
+    "family_id": "v2_train_003",
+    "paper_id": "2608.11919",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11919_sec_002",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 1.0
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11919_sec_039",
+        "paper_id": "2608.11919",
+        "section": "Results",
+        "rerank_score": 0.9996
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11919_sec_016",
+        "paper_id": "2608.11919",
+        "section": "Methodology",
+        "rerank_score": 0.9992
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11919_sec_019",
+        "paper_id": "2608.11919",
+        "section": "Methodology",
+        "rerank_score": 0.999
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.11919_sec_001",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 0.9985
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.11919_sec_008",
+        "paper_id": "2608.11919",
+        "section": "Conclusion",
+        "rerank_score": 0.1383
+      }
+    ],
+    "payload_hash": "48886f27b618d09ff46cf468d1e7be0f2ba38943b9d08a30b30329c0fe110b8e",
+    "total_tokens": 1956
+  },
+  "ctx_tr_0010": {
+    "family_id": "v2_train_010",
+    "paper_id": "2608.12714",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12714_sec_004",
+        "paper_id": "2608.12714",
+        "section": "Introduction",
+        "rerank_score": 0.9996
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12714_sec_001",
+        "paper_id": "2608.12714",
+        "section": "Abstract",
+        "rerank_score": 0.9993
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12714_sec_005",
+        "paper_id": "2608.12714",
+        "section": "Introduction",
+        "rerank_score": 0.9993
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12714_sec_025",
+        "paper_id": "2608.12714",
+        "section": "Methodology",
+        "rerank_score": 0.9951
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12714_sec_002",
+        "paper_id": "2608.12714",
+        "section": "Introduction",
+        "rerank_score": 0.9949
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.12714_sec_022",
+        "paper_id": "2608.12714",
+        "section": "Methodology",
+        "rerank_score": 0.9938
+      }
+    ],
+    "payload_hash": "27302eccbe16e7396a68df52e093eaf67972f4cad2cc7fb0d9770d8d9592eb63",
+    "total_tokens": 1984
+  },
+  "ctx_tr_0011": {
+    "family_id": "v2_train_005",
+    "paper_id": "2608.12626",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12626_sec_001",
+        "paper_id": "2608.12626",
+        "section": "Abstract",
+        "rerank_score": 0.9995
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12626_sec_002",
+        "paper_id": "2608.12626",
+        "section": "Introduction",
+        "rerank_score": 0.9973
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12626_sec_004",
+        "paper_id": "2608.12626",
+        "section": "Introduction",
+        "rerank_score": 0.9914
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12626_sec_003",
+        "paper_id": "2608.12626",
+        "section": "Introduction",
+        "rerank_score": 0.9362
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12626_sec_013",
+        "paper_id": "2608.12626",
+        "section": "Related Work",
+        "rerank_score": 0.8462
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.12626_sec_020",
+        "paper_id": "2608.12626",
+        "section": "Conclusion",
+        "rerank_score": 0.363
+      }
+    ],
+    "payload_hash": "66bf086a7d3e97a4068b20230b5d8f13701acb4107875396da8ca92e31d9eabe",
+    "total_tokens": 1853
+  },
+  "ctx_tr_0012": {
+    "family_id": "v2_train_011",
+    "paper_id": "2608.12717",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12717_sec_002",
+        "paper_id": "2608.12717",
+        "section": "Abstract",
+        "rerank_score": 0.9982
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12717_sec_001",
+        "paper_id": "2608.12717",
+        "section": "Abstract",
+        "rerank_score": 0.9783
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12717_sec_077",
+        "paper_id": "2608.12717",
+        "section": "Conclusion",
+        "rerank_score": 0.9706
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12717_sec_051",
+        "paper_id": "2608.12717",
+        "section": "Results",
+        "rerank_score": 0.958
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12717_sec_068",
+        "paper_id": "2608.12717",
+        "section": "Conclusion",
+        "rerank_score": 0.9381
+      }
+    ],
+    "payload_hash": "8c336d09575d58e0583c175ccac3d161feff2ea42d7eabc4343bf331644b4569",
+    "total_tokens": 1954
+  },
+  "ctx_tr_0013": {
+    "family_id": "v2_train_004",
+    "paper_id": "2608.11922",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11922_sec_006",
+        "paper_id": "2608.11922",
+        "section": "Introduction",
+        "rerank_score": 0.9893
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_003",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "16972243c66c14c16a022e92e6d9b97529c703061215e803b182a12e0268d2c8",
+    "total_tokens": 1186
+  },
+  "ctx_tr_0014": {
+    "family_id": "v2_train_003",
+    "paper_id": "2608.11919",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11919_sec_002",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 1.0
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11919_sec_001",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 0.9985
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.001
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "f1369741d96d5829ec198429ca4d9dfcf2cbfb78db94c571c2ca388b154068fa",
+    "total_tokens": 971
+  },
+  "ctx_tr_0015": {
+    "family_id": "v2_train_012",
+    "paper_id": "2608.12748",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12748_sec_007",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.9944
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12748_sec_015",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.7519
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13037_sec_010",
+        "paper_id": "2608.13037",
+        "section": "Methodology",
+        "rerank_score": 0.0073
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13045_sec_005",
+        "paper_id": "2608.13045",
+        "section": "Introduction",
+        "rerank_score": 0.0001
+      }
+    ],
+    "payload_hash": "859d0db6e0c81fb191a9c4b8327be67b57808bd19b4dee221e509d2be10a045f",
+    "total_tokens": 1611
+  },
+  "ctx_tr_0016": {
+    "family_id": "v2_train_007",
+    "paper_id": "2608.12652",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12652_sec_004",
+        "paper_id": "2608.12652",
+        "section": "Introduction",
+        "rerank_score": 0.9826
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12911_sec_027",
+        "paper_id": "2608.12911",
+        "section": "Related Work",
+        "rerank_score": 0.0037
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12911_sec_046",
+        "paper_id": "2608.12911",
+        "section": "Results",
+        "rerank_score": 0.0012
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13484_sec_019",
+        "paper_id": "2608.13484",
+        "section": "Related Work",
+        "rerank_score": 0.0008
+      }
+    ],
+    "payload_hash": "514e83efaf03b145ee19f4d405e5d077e4f363683e945eaea9687d82d969960a",
+    "total_tokens": 1352
+  },
+  "ctx_tr_0017": {
+    "family_id": "v2_train_005",
+    "paper_id": "2608.12626",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12626_sec_001",
+        "paper_id": "2608.12626",
+        "section": "Abstract",
+        "rerank_score": 0.9995
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.13334_sec_003",
+        "paper_id": "2608.13334",
+        "section": "Introduction",
+        "rerank_score": 0.1077
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13334_sec_007",
+        "paper_id": "2608.13334",
+        "section": "Related Work",
+        "rerank_score": 0.0891
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11919_sec_006",
+        "paper_id": "2608.11919",
+        "section": "Related Work",
+        "rerank_score": 0.0663
+      }
+    ],
+    "payload_hash": "97a6b1816c88041467aedf820d14caddbab9fc3a6af0235103c0fb0a8917057e",
+    "total_tokens": 1556
+  },
+  "ctx_tr_0018": {
+    "family_id": "v2_train_003",
+    "paper_id": "2608.11919",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11919_sec_001",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 0.9985
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11919_sec_001_dup",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 0.9985
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.001
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "57e05b9458086443213122d1a2a54e88028d70f107414e531da781e392c82376",
+    "total_tokens": 1242
+  },
+  "ctx_tr_0019": {
+    "family_id": "v2_train_009",
+    "paper_id": "2608.12713",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12713_sec_002",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.9408
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0002
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_003",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "4f30eec541f164d112faad6c9665a46b5fbdca7ddbf3591eaf635e9774100a0e",
+    "total_tokens": 1233
+  },
+  "ctx_tr_0020": {
+    "family_id": "v2_train_002",
+    "paper_id": "2608.11889",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11889_sec_009",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9948
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11889_sec_009_dup",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9948
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "1e80ac98cf5d81cc3369d70c5af55f88c1578c35d6e376655a6243ebcd18aab8",
+    "total_tokens": 1224
+  },
+  "ctx_tr_0021": {
+    "family_id": "v2_train_010",
+    "paper_id": "2608.12714",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12714_sec_005",
+        "paper_id": "2608.12714",
+        "section": "Introduction",
+        "rerank_score": 0.9993
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12714_sec_007",
+        "paper_id": "2608.12714",
+        "section": "Related Work",
+        "rerank_score": 0.9557
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12698_sec_006",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.577
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12698_sec_019",
+        "paper_id": "2608.12698",
+        "section": "Methodology",
+        "rerank_score": 0.0226
+      }
+    ],
+    "payload_hash": "1f056234f649e2d635c0763995d991bd41c5d92fa45a256063bcd36456701c78",
+    "total_tokens": 1432
+  },
+  "ctx_tr_0022": {
+    "family_id": "v2_train_003",
+    "paper_id": "2608.11919",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11919_sec_039",
+        "paper_id": "2608.11919",
+        "section": "Results",
+        "rerank_score": 0.9996
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11919_sec_001",
+        "paper_id": "2608.11919",
+        "section": "Abstract",
+        "rerank_score": 0.9985
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.001
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "bce1e3298b730bcf866369e72e2f3782bd9b9670f9dfc7b443e0ca09a10efeb3",
+    "total_tokens": 1292
+  },
+  "ctx_tr_0023": {
+    "family_id": "v2_train_001",
+    "paper_id": "2608.11829",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.9999
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_004",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.9976
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_005",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.9967
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_010",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.9937
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.11829_sec_012",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.986
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.11829_sec_021",
+        "paper_id": "2608.11829",
+        "section": "Conclusion",
+        "rerank_score": 0.8822
+      }
+    ],
+    "payload_hash": "0f875e33a5a188e5a7b320f418a49a749a8d9637131f1cc94ca3291c770f0dc8",
+    "total_tokens": 1975
+  },
+  "ctx_tr_0024": {
+    "family_id": "v2_train_002",
+    "paper_id": "2608.11889",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11889_sec_002",
+        "paper_id": "2608.11889",
+        "section": "Abstract",
+        "rerank_score": 0.9998
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11889_sec_007",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9997
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11889_sec_045",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9991
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11889_sec_037",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.999
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.11889_sec_044",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9965
+      }
+    ],
+    "payload_hash": "1e6a304d538a4c50635d96a77b32668313b62f106d1348766b30dd3c670ade24",
+    "total_tokens": 1996
+  },
+  "ctx_tr_0025": {
+    "family_id": "v2_train_006",
+    "paper_id": "2608.12630",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12630_sec_007",
+        "paper_id": "2608.12630",
+        "section": "Introduction",
+        "rerank_score": 0.9764
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12630_sec_007_dup",
+        "paper_id": "2608.12630",
+        "section": "Introduction",
+        "rerank_score": 0.9764
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12913_sec_014",
+        "paper_id": "2608.12913",
+        "section": "Methodology",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13430_sec_008",
+        "paper_id": "2608.13430",
+        "section": "Methodology",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "42d01a7dc09f2ff54ae2a470c7583beb119186898b6515bd541b33898c45db37",
+    "total_tokens": 1610
+  },
+  "ctx_tr_0026": {
+    "family_id": "v2_train_004",
+    "paper_id": "2608.11922",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11922_sec_005",
+        "paper_id": "2608.11922",
+        "section": "Introduction",
+        "rerank_score": 0.992
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11922_sec_006",
+        "paper_id": "2608.11922",
+        "section": "Introduction",
+        "rerank_score": 0.9893
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11922_sec_014",
+        "paper_id": "2608.11922",
+        "section": "Methodology",
+        "rerank_score": 0.9741
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11922_sec_015",
+        "paper_id": "2608.11922",
+        "section": "Methodology",
+        "rerank_score": 0.8013
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.11922_sec_001",
+        "paper_id": "2608.11922",
+        "section": "Abstract",
+        "rerank_score": 0.6986
+      }
+    ],
+    "payload_hash": "df6b681ae068a6cd8f7b735878dbe233f35a6f649ba0c1e3f80d312505b3c140",
+    "total_tokens": 1940
+  },
+  "ctx_tr_0027": {
+    "family_id": "v2_train_005",
+    "paper_id": "2608.12626",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12626_sec_002",
+        "paper_id": "2608.12626",
+        "section": "Introduction",
+        "rerank_score": 0.9973
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.13334_sec_003",
+        "paper_id": "2608.13334",
+        "section": "Introduction",
+        "rerank_score": 0.1077
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13334_sec_007",
+        "paper_id": "2608.13334",
+        "section": "Related Work",
+        "rerank_score": 0.0891
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11919_sec_006",
+        "paper_id": "2608.11919",
+        "section": "Related Work",
+        "rerank_score": 0.0663
+      }
+    ],
+    "payload_hash": "fd953d76ea945288eff0817f2bff59648fa55aef0b33f7bf31b7a647ea072d44",
+    "total_tokens": 1536
+  },
+  "ctx_tr_0028": {
+    "family_id": "v2_train_008",
+    "paper_id": "2608.12698",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12698_sec_007",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.2847
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12698_sec_007_dup",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.2847
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0001
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "4491c23129057ea8055ac0b689f9d7a4889c5f3c02ba4048f03835ec63ed7bf8",
+    "total_tokens": 1278
+  },
+  "ctx_tr_0029": {
+    "family_id": "v2_train_002",
+    "paper_id": "2608.11889",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11889_sec_002",
+        "paper_id": "2608.11889",
+        "section": "Abstract",
+        "rerank_score": 0.9998
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11889_sec_009",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9948
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "5244337befff16544e27c3477218a6c8fd1b3402c28af22205c6f5b648d1d6a3",
+    "total_tokens": 972
+  },
+  "ctx_tr_0030": {
+    "family_id": "v2_train_006",
+    "paper_id": "2608.12630",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12630_sec_007",
+        "paper_id": "2608.12630",
+        "section": "Introduction",
+        "rerank_score": 0.9764
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12630_sec_034",
+        "paper_id": "2608.12630",
+        "section": "Methodology",
+        "rerank_score": 0.7235
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12913_sec_014",
+        "paper_id": "2608.12913",
+        "section": "Methodology",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13430_sec_008",
+        "paper_id": "2608.13430",
+        "section": "Methodology",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "c2265f7e174e14014f5c53ab46871580e5e0a454bd76a41ace6e4f36f52600af",
+    "total_tokens": 1622
+  },
+  "ctx_tr_0031": {
+    "family_id": "v2_train_007",
+    "paper_id": "2608.12652",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12652_sec_004",
+        "paper_id": "2608.12652",
+        "section": "Introduction",
+        "rerank_score": 0.9826
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12652_sec_022",
+        "paper_id": "2608.12652",
+        "section": "Results",
+        "rerank_score": 0.9826
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12652_sec_013",
+        "paper_id": "2608.12652",
+        "section": "Results",
+        "rerank_score": 0.9173
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12652_sec_005",
+        "paper_id": "2608.12652",
+        "section": "Conclusion",
+        "rerank_score": 0.9128
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12652_sec_009",
+        "paper_id": "2608.12652",
+        "section": "Conclusion",
+        "rerank_score": 0.6603
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.12652_sec_003",
+        "paper_id": "2608.12652",
+        "section": "Abstract",
+        "rerank_score": 0.3923
+      }
+    ],
+    "payload_hash": "dcef28ecf3fe58bf11703fc472d1add9b4ab0c2401ae374919d7ecb446addbfd",
+    "total_tokens": 1940
+  },
+  "ctx_tr_0032": {
+    "family_id": "v2_train_008",
+    "paper_id": "2608.12698",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12698_sec_001",
+        "paper_id": "2608.12698",
+        "section": "Abstract",
+        "rerank_score": 0.9969
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12698_sec_007",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.2847
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0001
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "f193d206d9bc1234c61fb00eecd2a901a6ffa3c0ef21f90e2eb3a39ecfda789c",
+    "total_tokens": 1297
+  },
+  "ctx_tr_0033": {
+    "family_id": "v2_train_012",
+    "paper_id": "2608.12748",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12748_sec_007",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.9944
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12748_sec_007_dup",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.9944
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.13037_sec_010",
+        "paper_id": "2608.13037",
+        "section": "Methodology",
+        "rerank_score": 0.0073
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13045_sec_005",
+        "paper_id": "2608.13045",
+        "section": "Introduction",
+        "rerank_score": 0.0001
+      }
+    ],
+    "payload_hash": "356c04ec3e2e862989641fc4f093c0793c271b4ad23e18024d80fc5f841009fc",
+    "total_tokens": 1593
+  },
+  "ctx_tr_0034": {
+    "family_id": "v2_train_010",
+    "paper_id": "2608.12714",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12714_sec_007",
+        "paper_id": "2608.12714",
+        "section": "Related Work",
+        "rerank_score": 0.9557
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12714_sec_007_dup",
+        "paper_id": "2608.12714",
+        "section": "Related Work",
+        "rerank_score": 0.9557
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12698_sec_006",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.577
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12698_sec_019",
+        "paper_id": "2608.12698",
+        "section": "Methodology",
+        "rerank_score": 0.0226
+      }
+    ],
+    "payload_hash": "5d78339487846cbb24fdc3dbd237017104ea62988ec9e7c97af9a34ae449dcc2",
+    "total_tokens": 1733
+  },
+  "ctx_tr_0035": {
+    "family_id": "v2_train_008",
+    "paper_id": "2608.12698",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12698_sec_023",
+        "paper_id": "2608.12698",
+        "section": "Methodology",
+        "rerank_score": 0.9524
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12698_sec_007",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.2847
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0001
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "867c42dad7152ca7de66f3dae9885c015cb80f0ad8aaa9e05d4c41674b62f2db",
+    "total_tokens": 1230
+  },
+  "ctx_tr_0036": {
+    "family_id": "v2_train_002",
+    "paper_id": "2608.11889",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11889_sec_007",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9997
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11889_sec_009",
+        "paper_id": "2608.11889",
+        "section": "Methodology",
+        "rerank_score": 0.9948
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "da328dcb628acaa3491d0df14efb1205557af4cd5708d81d60527d667bc31924",
+    "total_tokens": 1291
+  },
+  "ctx_tr_0037": {
+    "family_id": "v2_train_009",
+    "paper_id": "2608.12713",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12713_sec_002",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.9408
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12713_sec_002_dup",
+        "paper_id": "2608.12713",
+        "section": "Abstract",
+        "rerank_score": 0.9408
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0002
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "9d44b44c219daa43c0ae4828bdf84df29245c3bc3e267de91dba5583a515cdf9",
+    "total_tokens": 1290
+  },
+  "ctx_tr_0038": {
+    "family_id": "v2_train_001",
+    "paper_id": "2608.11829",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.9999
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.13205_sec_011",
+        "paper_id": "2608.13205",
+        "section": "Related Work",
+        "rerank_score": 0.709
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11889_sec_001",
+        "paper_id": "2608.11889",
+        "section": "Abstract",
+        "rerank_score": 0.0004
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13057_sec_006",
+        "paper_id": "2608.13057",
+        "section": "Introduction",
+        "rerank_score": 0.0001
+      }
+    ],
+    "payload_hash": "863907e5a33652480e0f20fce83225d70997d51283b7119d7bc9b5f679d41ebc",
+    "total_tokens": 1531
+  },
+  "ctx_tr_0039": {
+    "family_id": "v2_train_007",
+    "paper_id": "2608.12652",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12652_sec_005",
+        "paper_id": "2608.12652",
+        "section": "Conclusion",
+        "rerank_score": 0.9128
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12911_sec_027",
+        "paper_id": "2608.12911",
+        "section": "Related Work",
+        "rerank_score": 0.0037
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12911_sec_046",
+        "paper_id": "2608.12911",
+        "section": "Results",
+        "rerank_score": 0.0012
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13484_sec_019",
+        "paper_id": "2608.13484",
+        "section": "Related Work",
+        "rerank_score": 0.0008
+      }
+    ],
+    "payload_hash": "f1744da3dddbf4954f4020a3941a1623e19b218b40ae12fa28ae18a826019f41",
+    "total_tokens": 1335
+  },
+  "ctx_tr_0040": {
+    "family_id": "v2_train_004",
+    "paper_id": "2608.11922",
+    "variant": "duplicate_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11922_sec_005",
+        "paper_id": "2608.11922",
+        "section": "Introduction",
+        "rerank_score": 0.992
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11922_sec_005_dup",
+        "paper_id": "2608.11922",
+        "section": "Introduction",
+        "rerank_score": 0.992
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "9b6674e5bd459a7f11ea4d4c1eff9d93bbbf9ed9ed6c4d350d31d122671322a7",
+    "total_tokens": 1250
+  },
+  "ctx_tr_0041": {
+    "family_id": "v2_train_001",
+    "paper_id": "2608.11829",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11829_sec_004",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.9976
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.13205_sec_011",
+        "paper_id": "2608.13205",
+        "section": "Related Work",
+        "rerank_score": 0.709
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11889_sec_001",
+        "paper_id": "2608.11889",
+        "section": "Abstract",
+        "rerank_score": 0.0004
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13057_sec_006",
+        "paper_id": "2608.13057",
+        "section": "Introduction",
+        "rerank_score": 0.0001
+      }
+    ],
+    "payload_hash": "5ba94a1d9dd409f02daf6a33df3772511e1126b010688e18082c49608c4846cd",
+    "total_tokens": 1500
+  },
+  "ctx_tr_0042": {
+    "family_id": "v2_train_010",
+    "paper_id": "2608.12714",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12714_sec_004",
+        "paper_id": "2608.12714",
+        "section": "Introduction",
+        "rerank_score": 0.9996
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12714_sec_007",
+        "paper_id": "2608.12714",
+        "section": "Related Work",
+        "rerank_score": 0.9557
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12698_sec_006",
+        "paper_id": "2608.12698",
+        "section": "Related Work",
+        "rerank_score": 0.577
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12698_sec_019",
+        "paper_id": "2608.12698",
+        "section": "Methodology",
+        "rerank_score": 0.0226
+      }
+    ],
+    "payload_hash": "81acd58e213d65f0cc43420d05aaa5fcb1a75505a9b65ff58f65aa5fd1d643c4",
+    "total_tokens": 1728
+  },
+  "ctx_tr_0043": {
+    "family_id": "v2_train_008",
+    "paper_id": "2608.12698",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12698_sec_001",
+        "paper_id": "2608.12698",
+        "section": "Abstract",
+        "rerank_score": 0.9969
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12698_sec_023",
+        "paper_id": "2608.12698",
+        "section": "Methodology",
+        "rerank_score": 0.9524
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12698_sec_016",
+        "paper_id": "2608.12698",
+        "section": "Results",
+        "rerank_score": 0.9046
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12698_sec_005",
+        "paper_id": "2608.12698",
+        "section": "Introduction",
+        "rerank_score": 0.5129
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12698_sec_020",
+        "paper_id": "2608.12698",
+        "section": "Methodology",
+        "rerank_score": 0.506
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.12698_sec_024",
+        "paper_id": "2608.12698",
+        "section": "Conclusion",
+        "rerank_score": 0.1504
+      }
+    ],
+    "payload_hash": "fe26753ee053c9bcbd237333c814a2132010b66bec94de495e6df7e574f43b4d",
+    "total_tokens": 1918
+  },
+  "ctx_tr_0044": {
+    "family_id": "v2_train_006",
+    "paper_id": "2608.12630",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12630_sec_002",
+        "paper_id": "2608.12630",
+        "section": "Abstract",
+        "rerank_score": 0.9958
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12630_sec_007",
+        "paper_id": "2608.12630",
+        "section": "Introduction",
+        "rerank_score": 0.9764
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12630_sec_034",
+        "paper_id": "2608.12630",
+        "section": "Methodology",
+        "rerank_score": 0.7235
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12630_sec_043",
+        "paper_id": "2608.12630",
+        "section": "Conclusion",
+        "rerank_score": 0.6017
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12630_sec_018",
+        "paper_id": "2608.12630",
+        "section": "Methodology",
+        "rerank_score": 0.5798
+      },
+      {
+        "passage_index": 6,
+        "chunk_id": "2608.12630_sec_032",
+        "paper_id": "2608.12630",
+        "section": "Methodology",
+        "rerank_score": 0.4098
+      }
+    ],
+    "payload_hash": "ba4fac3444e00cc4c23b1b4c5c90fc0d274978b22a00805d1d6af938331f1e6c",
+    "total_tokens": 1549
+  },
+  "ctx_tr_0045": {
+    "family_id": "v2_train_006",
+    "paper_id": "2608.12630",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12630_sec_002",
+        "paper_id": "2608.12630",
+        "section": "Abstract",
+        "rerank_score": 0.9958
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12630_sec_007",
+        "paper_id": "2608.12630",
+        "section": "Introduction",
+        "rerank_score": 0.9764
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12913_sec_014",
+        "paper_id": "2608.12913",
+        "section": "Methodology",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.13430_sec_008",
+        "paper_id": "2608.13430",
+        "section": "Methodology",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "200dadb6e80e956a1311ae980fa45a2ee43aab277cacee930a21d58fcb76b92e",
+    "total_tokens": 1397
+  },
+  "ctx_tr_0046": {
+    "family_id": "v2_train_004",
+    "paper_id": "2608.11922",
+    "variant": "relevant_replacement",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.11922_sec_005",
+        "paper_id": "2608.11922",
+        "section": "Introduction",
+        "rerank_score": 0.992
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_003",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "79ef66b77b3f08fe020f87332f3480eca3af6390903e19201993945aaf75cd17",
+    "total_tokens": 1213
+  },
+  "ctx_tr_0047": {
+    "family_id": "v2_train_011",
+    "paper_id": "2608.12717",
+    "variant": "supported_candidate",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12717_sec_002",
+        "paper_id": "2608.12717",
+        "section": "Abstract",
+        "rerank_score": 0.9982
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.11829_sec_001",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0012
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.11829_sec_003",
+        "paper_id": "2608.11829",
+        "section": "Introduction",
+        "rerank_score": 0.0003
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.11829_sec_002",
+        "paper_id": "2608.11829",
+        "section": "Abstract",
+        "rerank_score": 0.0
+      }
+    ],
+    "payload_hash": "45b367f6a37bef8b102ea86f4438dded81cabcf9cd85a94b54600e86c0ef60d2",
+    "total_tokens": 1099
+  },
+  "ctx_tr_0048": {
+    "family_id": "v2_train_012",
+    "paper_id": "2608.12748",
+    "variant": "natural_retrieval",
+    "passages_meta": [
+      {
+        "passage_index": 1,
+        "chunk_id": "2608.12748_sec_007",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.9944
+      },
+      {
+        "passage_index": 2,
+        "chunk_id": "2608.12748_sec_015",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.7519
+      },
+      {
+        "passage_index": 3,
+        "chunk_id": "2608.12748_sec_001",
+        "paper_id": "2608.12748",
+        "section": "Abstract",
+        "rerank_score": 0.5533
+      },
+      {
+        "passage_index": 4,
+        "chunk_id": "2608.12748_sec_009",
+        "paper_id": "2608.12748",
+        "section": "Methodology",
+        "rerank_score": 0.52
+      },
+      {
+        "passage_index": 5,
+        "chunk_id": "2608.12980_sec_012",
+        "paper_id": "2608.12980",
+        "section": "Methodology",
+        "rerank_score": 0.427
+      }
+    ],
+    "payload_hash": "681a3f02deff20fee530e518bf64f50ebe81074b0dcb4e55ba00ff579899f090",
+    "total_tokens": 1956
+  }
+}

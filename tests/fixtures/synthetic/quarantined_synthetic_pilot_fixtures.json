@@ -1,0 +1,530 @@
+[
+  {
+    "family_id": "pilot_01",
+    "base_question": "Why is the scaling factor 1/sqrt(d_k) applied in Scaled Dot-Product Attention?",
+    "reference_answer": "To prevent dot products from growing large in magnitude for large values of d_k, which pushes softmax into regions with extremely small gradients.",
+    "source_paper_ids": [
+      "1706.03762"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_01_pass_support",
+      "paper_id": "1706.03762",
+      "section": "Attention Mechanism",
+      "text": "The scaling factor 1/sqrt(d_k) is applied because for large values of d_k, the dot products grow large in magnitude, pushing the softmax function into regions with extremely small gradients."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "0d1853f110135ebb2e93dbc5efddb51d1ecb90383abf88f514dbdc470dcb8717",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "f4148a98701a802bb05ec06b5a527badb50a3195e13d322ae53b4ef043ece9ed",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "9107c7b09c206d594d0b0a82c7a240a5886c855af19310452f367ffe9a770d15",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "eeaba9f749b15da7cabac0c7df70131fa8a807b1ae74e7f1640e09913e8413de",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_02",
+    "base_question": "How do residual shortcut connections in ResNet handle dimension matching when feature map dimensions increase?",
+    "reference_answer": "They use either zero-padding shortcuts to increase dimensions or 1x1 projection convolutions to match dimensions.",
+    "source_paper_ids": [
+      "1512.03385"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_02_pass_support",
+      "paper_id": "1512.03385",
+      "section": "Deep Residual Learning",
+      "text": "When the dimensions increase, we consider two options: (A) The shortcut still performs identity mapping, with extra zero entries padded for increasing dimensions; (B) The projection shortcut in Eqn.(2) is used to match dimensions (done by 1x1 convolutions)."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "8a72bce68d326ab870bac67e398939feb104806ce5dee5d8a0abb975fe899ef1",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "82ab52f33eb1133124d2cf13c618171d1c407abb0be96d3d5cff260e29c7bee4",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "44e7e6f59557b01b47b178c3d9b819b5d9c94a1e81880b6782650e16204a6b91",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "6697f804bba44b542455deadd65d18413c8691ab08ab1e65cd53e47b5de78327",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_03",
+    "base_question": "What is the token replacement strategy used during BERT's Masked Language Model pre-training when a token is chosen?",
+    "reference_answer": "80% of the time it is replaced with [MASK], 10% of the time with a random token, and 10% of the time unchanged.",
+    "source_paper_ids": [
+      "1810.04805"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_03_pass_support",
+      "paper_id": "1810.04805",
+      "section": "Pre-training BERT",
+      "text": "The training data generator chooses 15% of the token positions, and if chosen: the [MASK] token 80% of the time, a random token 10% of the time, and the unchanged token 10% of the time."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "b1b601b96f7bf31f8a15cf8be0b2133acceda893884fd6ecda4f29b7d4db3009",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "35301096b03138fe8ed273f3be24702fde2e36b42f4d14c19a1c050c7dabaa10",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "8a8bf6e80a051d79a120d34a827a1178c404c38007870382e4f012d4d8858001",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "3fd2b8990008db4396dd4f8ace2dee4b5a799032f068ec6f24d84b91984eef8e",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_04",
+    "base_question": "How do RAG-Sequence and RAG-Token models differ in how they marginalize over retrieved documents?",
+    "reference_answer": "RAG-Sequence uses the same retrieved document to generate the complete sequence, while RAG-Token marginalizes over different documents per token.",
+    "source_paper_ids": [
+      "2005.11401"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_04_pass_support",
+      "paper_id": "2005.11401",
+      "section": "Methods",
+      "text": "In RAG-Sequence, the top-k documents are marginalized over sequence-level, using the same document to predict each target token. In RAG-Token, the model marginalizes over different documents for each individual token."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "ba457e9b48f9fd7c110dcbf586081a5b07795cd70b8d0f046b47bf27dc2cfbb8",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "c20c85c10c780b7e75a980992d1127c0b1839ed59a51ab8faeb48d7dbe88b1c5",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "e8970ae34b9a84236bc8f6b79b9a1f1027e5ee3545bbab46fd4dcd9666c3dc16",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "ba1dd0bd648d103a5f6fe5e7f38e53a6d8090784c56528bbc37023a1bfd53934",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_05",
+    "base_question": "On the Natural Questions benchmark, by how much does DPR's top-20 passage retrieval accuracy outperform traditional BM25?",
+    "reference_answer": "DPR achieves 78.4% top-20 accuracy compared to BM25's 59.1%, outperforming it by approximately 19.3 percentage points.",
+    "source_paper_ids": [
+      "2004.04906"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_05_pass_support",
+      "paper_id": "2004.04906",
+      "section": "Experiments",
+      "text": "On the Natural Questions benchmark, DPR achieves a top-20 passage retrieval accuracy of 78.4%, compared to Lucene BM25 which achieves 59.1%, outperforming traditional BM25 by 19.3 percentage points."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "3d9d707b5c8f6dba6dd1dc09472a1776eb9fc8195146fd1457bcb09cb40c0f61",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "50308f5dbbdc8dff4f212cf86eddab00867d1eb0aec0518a3d05fd0474abb7f3",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "5a1c81f5033345ec5fae2b32146de25f7a167507cb5831e071ac9f522a416503",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "462380478d472a8034148edbb9ae8dc633f2a0b159a73de8a1aec4dd5a1407c3",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_06",
+    "base_question": "Why does Vision Transformer require pre-training on large datasets like JFT-300M to outperform ResNets?",
+    "reference_answer": "Because ViT lacks inductive biases such as translation equivariance and locality present in CNNs, requiring massive data to learn them.",
+    "source_paper_ids": [
+      "2010.11929"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_06_pass_support",
+      "paper_id": "2010.11929",
+      "section": "Methodology",
+      "text": "Vision Transformers lack inductive biases inherent to CNNs, such as translation equivariance and locality, and therefore do not generalize well when trained on insufficient amounts of data; pre-training on large datasets like JFT-300M is required."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "ab64b82c2d1b5da779b14e2e5d61d8732678595c30ff4a2e0cd59c934016b8f9",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "bf589207e46ce62924a42bca435dcb59d4bc68fcab9e3c698120324d5b79bd43",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "4eb344fcfbab4d8dc355256afeb623307d83febf8788e5aaa6fa3b04c2504c17",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "6afc7df83cf8221077338db185642af6dff53d5f42469180c70b5204753a3f43",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_07",
+    "base_question": "How does the cyclic shift with masked self-attention in Swin Transformer avoid increasing window computations?",
+    "reference_answer": "By shifting sub-windows cyclically and applying an attention mask that limits self-attention to within contiguous sub-windows.",
+    "source_paper_ids": [
+      "2103.14030"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_07_pass_support",
+      "paper_id": "2103.14030",
+      "section": "Shifted Window Attention",
+      "text": "An efficient batch computation approach for shifted configuration is cyclic shifting toward the top-left direction; after shifting, a masked mechanism limits self-attention computation to each sub-window, keeping the number of windows identical."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "a0abd3bf323a48df12fb83f6ef724ebb9c2874106b8ee0bef2e887c90fbb024f",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "b4469875de6767497ae7c41ca2ec8ece494cb6afd2f268d2494eebd1a920113a",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "752b35ca4f836f083cee819c3bf451f6a4a1294b3788a167d734ffc7c2b1985d",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "11c8dc23c47ef21447c4ca0b31d557be098c8259d32953eefb146b3acacccf58",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_08",
+    "base_question": "What is the theoretical benefit of stacking two 3x3 convolution layers instead of using a single 5x5 convolution layer in VGGNet?",
+    "reference_answer": "It incorporates two non-linear rectification layers instead of one and reduces the parameter count from 25 to 18 (a 28% reduction).",
+    "source_paper_ids": [
+      "1409.1556"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_08_pass_support",
+      "paper_id": "1409.1556",
+      "section": "Architecture",
+      "text": "A stack of two 3x3 conv layers has an effective receptive field of 5x5. This incorporates two non-linear rectification layers instead of a single one, and decreases parameter count from 25*C^2 to 2*(3*3*C^2) = 18*C^2, a 28% parameter reduction."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "e4b80d10342930cecbfff11c713c6f6d295a5a6f58c7f568d50313d71f90339a",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "e60ef5af83e094b6dfccb846dc543c1506395d8af99461393b0e86469dda4600",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "183fcd10d749db34bd7dbdad5046313dfd090848d428420890e9c089c4242b59",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "21bf95909dcf8d0f0e794cd745ee95ca70d6c88e8ae6d72457c67c52bebbb7b7",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_09",
+    "base_question": "What is the RoIAlign layer in Mask R-CNN and how does it fix the spatial misalignments caused by RoIPool?",
+    "reference_answer": "RoIAlign avoids quantization of RoI boundaries using bilinear interpolation to sample feature values at continuous locations.",
+    "source_paper_ids": [
+      "1703.06870"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_09_pass_support",
+      "paper_id": "1703.06870",
+      "section": "RoIAlign",
+      "text": "RoIAlign removes the harsh quantization of RoIPool, properly aligning extracted features with the input. We avoid any quantization of the RoI boundaries or bins and use bilinear interpolation to compute exact values at four sampling locations."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "699e70e29c8a1b322f29ee5d6a167cc5c820afe6c490d4a751ccebfaa2a0e296",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "9a106d0e3bbdcf1bd9f62645e07dfc6483d573e2bb2364712d6bb060b5dec02a",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "9085307b60f1d841ea6eeacd8d096d2fff32f7ee4a58b2b89b2fca8add6d2105",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "c1efa5f51bfd3226ce78bc6d96831da908b720f718ab8f5db87184a3fc915f97",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_10",
+    "base_question": "In EfficientNet's compound scaling, how are depth, width, and resolution constrained relative to user coefficient phi?",
+    "reference_answer": "Depth d = alpha^phi, width w = beta^phi, resolution r = gamma^phi, subject to alpha * beta^2 * gamma^2 ~= 2.",
+    "source_paper_ids": [
+      "1905.11946"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_10_pass_support",
+      "paper_id": "1905.11946",
+      "section": "Compound Model Scaling",
+      "text": "In compound scaling, depth d = alpha^phi, width w = beta^phi, resolution r = gamma^phi, subject to alpha * beta^2 * gamma^2 ~= 2 and alpha >= 1, beta >= 1, gamma >= 1, where alpha, beta, gamma are constant coefficients determined by small grid search."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "a9c4505e08a633d2b4d40470f78df49907bb6b2a8ce03b3521f4ba7651b59094",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "6670d13277f9b858769a9e46c63adbd75841a880de10c33b6221617af3360b25",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "a3e558290e992f5d23b7875fad559466b9e54e4e1a891510a0fdde5f555ef3ef",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "7acf8f866d306243bcf703301669e20defe2a75ba97c14787e84da1bea6cc949",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_11",
+    "base_question": "Why does locating latent representations via probing fail to guarantee successful behavioral model intervention?",
+    "reference_answer": "Because probes can identify correlations that are acausal or read-only features not utilized downstream by the model's generation heads.",
+    "source_paper_ids": [
+      "2408.11830"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_11_pass_support",
+      "paper_id": "2408.11830",
+      "section": "Discussion",
+      "text": "Locating information via linear probes fails to guarantee intervention success because representations identified by probing may reflect read-only computational side-effects or acausal correlations that downstream generation layers ignore during autoregressive decoding."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "4ef2970c35edd4c6d84f39ce51e6482fd3170e85f39d5333fcc540ef12965941",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "8b7e9201fb25f26d69b7715a18faa96000af442a038a269fd2ca5927fdd102ae",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "1641e36eb0473a701f301b33d4ce249dfb58279dddaca4dacbab1ff1c7256ed9",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "c33bc6a0ed69537fef1432680a9e6c94a9af12dcb87f44defd8bbbe7313f3869",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  },
+  {
+    "family_id": "pilot_12",
+    "base_question": "How is the Faithfulness metric defined mathematically in the RAGAS framework?",
+    "reference_answer": "As the number of claims in the generated answer supported by the retrieved context divided by the total number of claims in the generated answer.",
+    "source_paper_ids": [
+      "2309.15217"
+    ],
+    "supporting_passage": {
+      "passage_id": "pilot_12_pass_support",
+      "paper_id": "2309.15217",
+      "section": "Metrics",
+      "text": "Faithfulness F is calculated as |Claims_supported| / |Claims_total|, where Claims_total is the set of factual statements decomposed from generated answer Y, and Claims_supported is the subset of statements verified as entailed by retrieved context C."
+    },
+    "variants": {
+      "clean": {
+        "num_passages": 3,
+        "payload_hash": "2e51bb2b16270d21eba3f675b5668b769df2c5bb6c719ab121e1f646dd3fb856",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage contains direct factual answer)",
+        "rationale": "Supporting passage contains explicit factual justification."
+      },
+      "duplicate": {
+        "num_passages": 4,
+        "payload_hash": "e28d8c2a554a0477aeba810d542b7114eca9abb33ac74c1ab2ecc62f76c304bf",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: exact duplicate retains supporting evidence)",
+        "rationale": "Duplicate passage appended; evidence sufficiency is maintained."
+      },
+      "distractor": {
+        "num_passages": 4,
+        "payload_hash": "377d663e844931603941c6c15a2f154ef7b1396ca2880c7dc318d6adbbccabbf",
+        "sufficiency_label": 1,
+        "sufficiency_provenance": "automated_pilot_curation (verified: supporting passage present alongside distractor)",
+        "rationale": "Distractor passage does not contradict or remove the supporting evidence."
+      },
+      "evidence_removed": {
+        "num_passages": 3,
+        "payload_hash": "762c03922fdee0641c87f0bece28f1aa7b483aacf36feb8eee65ab195c8a45cc",
+        "sufficiency_label": 0,
+        "sufficiency_provenance": "automated_pilot_curation (verified: key premise removed; context does not substantiate reference answer)",
+        "rationale": "Context lacks the specific numerical parameter, equation, or causal relationship required."
+      }
+    }
+  }
+]

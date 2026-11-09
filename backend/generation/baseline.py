@@ -1,6 +1,6 @@
 """
 Non-RAG Baseline Engine (Phase 3 / FR-13, PRD §8.2).
-Direct LLM answer generator using Gemini 2.5 Flash parametric memory without any retrieved context.
+Direct LLM answer generator using gemini-3.5-flash-lite parametric memory without any retrieved context.
 Serves as the control baseline for Phase 5 quantitative RAGAS evaluation comparison.
 """
 
@@ -9,10 +9,10 @@ from typing import Dict, Any
 
 
 class NonRAGBaselineEngine:
-    """Non-RAG direct Gemini 2.5 Flash baseline engine (FR-13)."""
+    """Non-RAG direct gemini-3.5-flash-lite baseline engine (FR-13)."""
 
     def __init__(self, api_key: str = None):
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY", "")
+        self.api_key = api_key if api_key is not None else os.getenv("GEMINI_API_KEY", "")
         self.client = None
         self._init_client()
 

@@ -1,0 +1,1736 @@
+{
+  "archive_classification": "EXCERPT_MATCHING_PROXY_LABELS",
+  "description": "These 192 annotations for Batches 02 to 05 were produced programmatically using regex/substring matching against question specifications. They do not constitute semantic review or human/AI judgment of evidence sufficiency.",
+  "batch_range": "Batches 02 to 05 (Families v2_train_013 to v2_train_060, Contexts ctx_tr_0049 to ctx_tr_0240)",
+  "records_count": 192,
+  "records": [
+    {
+      "opaque_context_id": "ctx_tr_0049",
+      "question": "What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_039",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0050",
+      "question": "What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_030",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0051",
+      "question": "How does RippleMem operationalize associative recollection through its write and read phases?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the write phase stores interaction history as cue-rich episodic memory units linked by semantic and structural associations, while the read phase uses initially recalled memories as cues for recovering additional support.\".",
+      "supporting_quotation": "the write phase stores interaction history\nas cue-rich episodic memory units linked by semantic and structural associations, while the read\nphase uses initially recalled memories as cues for\nrecovering additional support.",
+      "family_id_provenance": "v2_train_059",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0052",
+      "question": "In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the gradient-free literature is less extensive and typically can be categorized into two strategies: some methods [6,28,41] directly modify cross-attention layers to inject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates and subsequently merge them.\".",
+      "supporting_quotation": "the\ngradient-free literature is less extensive and typically can be categorized into\ntwo strategies: some methods [6,28,41] directly modify cross-attention layers to\ninject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates\nand subsequently merge them.",
+      "family_id_provenance": "v2_train_035",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0053",
+      "question": "How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 1: '\"produce an ordered sequence of nonempty time buckets B(r) = (B1, B2, . . . , BK), where each finding inF(r)is assigned to exactly one bucketB k'\"; Passage 4: '\"When the score meets threshold θ, the verifier returns ACCEPT; otherwise it returns REVISE with targeted feedback for the next iteration. If no candidate is accepted within Tmax iterations, the loop terminates'\".",
+      "supporting_quotation": "produce an ordered sequence of nonempty time buckets\nB(r) = (B1, B2, . . . , BK),\nwhere each finding inF(r)is assigned to exactly one\nbucketB k",
+      "family_id_provenance": "v2_train_015",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0054",
+      "question": "What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We propose Syfer, a multilingual RAG framework that introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal sub-question emitted by the decomposer in the same logical layer as its peers, placing decomposition and aggregation in a single logical pass\".",
+      "supporting_quotation": "We propose Syfer, a multilingual RAG framework that introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal\nsub-question emitted by the decomposer in the same logical layer as its peers,\nplacing decomposition and aggregation in a single logical pass",
+      "family_id_provenance": "v2_train_048",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0055",
+      "question": "What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism.\".",
+      "supporting_quotation": "we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism.",
+      "family_id_provenance": "v2_train_037",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0056",
+      "question": "What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_037",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0057",
+      "question": "What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_050",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0058",
+      "question": "What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_048",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0059",
+      "question": "In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"This process resulted in 57,640 unique prompts. Of these, 36,916 came from chat.completion.create and 20,724 from PromptTemplate.\".",
+      "supporting_quotation": "This process resulted in\n57,640 unique prompts. Of these, 36,916 came\nfrom chat.completion.create and 20,724 from\nPromptTemplate.",
+      "family_id_provenance": "v2_train_024",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0060",
+      "question": "In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.\"), but is missing the remaining required evidence to completely answer 'In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_042",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0061",
+      "question": "In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 1: '\"BM25 Weight 0.65 0.65 Dense Weight 0.35 0.35'\"; Passage 2: '\"LoRA Rank ( r) 16 LoRA Alpha 32'\".",
+      "supporting_quotation": "BM25 Weight 0.65 0.65\nDense Weight 0.35 0.35",
+      "family_id_provenance": "v2_train_031",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0062",
+      "question": "In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?",
+      "is_sufficient": 1,
+      "rationale": "Passage 3 directly answers the question by stating: \"We instead adopt a Whisper-medium encoder, kept frozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the representation used by the acoustic branch.\".",
+      "supporting_quotation": "We instead adopt a Whisper-medium encoder, kept\nfrozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the\nrepresentation used by the acoustic branch.",
+      "family_id_provenance": "v2_train_040",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0063",
+      "question": "How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_026",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0064",
+      "question": "According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_036",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0065",
+      "question": "How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_043",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0066",
+      "question": "What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?",
+      "is_sufficient": 1,
+      "rationale": "Passage 2 directly answers the question by stating: \"We collect a 10-day dual-species dataset comprising daily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs.\".",
+      "supporting_quotation": "We collect a 10-day dual-species dataset comprising\ndaily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs.",
+      "family_id_provenance": "v2_train_033",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0067",
+      "question": "In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_040",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0068",
+      "question": "What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We collect a 10-day dual-species dataset comprising daily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs.\".",
+      "supporting_quotation": "We collect a 10-day dual-species dataset comprising\ndaily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs.",
+      "family_id_provenance": "v2_train_033",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0069",
+      "question": "In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?",
+      "is_sufficient": 1,
+      "rationale": "Passage 6 directly answers the question by stating: \"Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional hidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024].\".",
+      "supporting_quotation": "Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional\nhidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024].",
+      "family_id_provenance": "v2_train_013",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0070",
+      "question": "In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_060",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0071",
+      "question": "According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i) the propagated error originating from cache reuse, (ii) the network approximation error stemming from the learned velocity, and (iii) the discretization error inherent to the ODE solver.\".",
+      "supporting_quotation": "Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i)\nthe propagated error originating from cache reuse, (ii) the network approximation error stemming\nfrom the learned velocity, and (iii) the discretization error inherent to the ODE solver.",
+      "family_id_provenance": "v2_train_036",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0072",
+      "question": "In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 3: '\"BM25 Weight 0.65 0.65 Dense Weight 0.35 0.35'\"; Passage 5: '\"LoRA Rank ( r) 16 LoRA Alpha 32'\".",
+      "supporting_quotation": "BM25 Weight 0.65 0.65\nDense Weight 0.35 0.35",
+      "family_id_provenance": "v2_train_031",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0073",
+      "question": "Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 2: '\"PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.'\"; Passage 1: '\"PolyCam (Polycam Inc., San Francisco, CA, USA) was chosen as the representative photogrammetry based application'\"; Passage 1: '\"two smartphone models, iPhone 13 and iPhone 14 (Apple Inc., Cupertino, CA, USA), are used for scanning.'\".",
+      "supporting_quotation": "PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.",
+      "family_id_provenance": "v2_train_018",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0074",
+      "question": "How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"where α≥0 controls contrastive strength. Equivalently, πCD (x|h) = 1 ZCD (h) πp(x|h) 1+απq(x|h) −α\".",
+      "supporting_quotation": "where α≥0 controls contrastive strength. Equivalently,\nπCD (x|h) = 1\nZCD (h) πp(x|h) 1+απq(x|h) −α",
+      "family_id_provenance": "v2_train_026",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0075",
+      "question": "How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_022",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0076",
+      "question": "In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1.\".",
+      "supporting_quotation": "Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1.",
+      "family_id_provenance": "v2_train_058",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0077",
+      "question": "What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_020",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0078",
+      "question": "In HounsWorld, what mathematical components comprise the observation tuple Oi,t?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In HounsWorld, what mathematical components comprise the observation tuple Oi,t?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_023",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0079",
+      "question": "How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"an instrumented real-world dataset of ground-truth hand-object contact and 3Dforces,captured via two augmented objects from eight participants during touch and grasp interaction to validate EgoPHI’s sim-to-real transfer.\".",
+      "supporting_quotation": "an instrumented real-world dataset of ground-truth hand-object contact and\n3Dforces,captured via two augmented objects from eight participants during\ntouch and grasp interaction to validate EgoPHI’s sim-to-real transfer.",
+      "family_id_provenance": "v2_train_034",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0080",
+      "question": "In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The aligner is required to be shape-compatible with the target model: it uses the same global width, attention-head dimensionality, feed-forward width, token embedding space, and output head.\".",
+      "supporting_quotation": "The aligner is required to be shape-compatible with the target model: it uses the same global width,\nattention-head dimensionality, feed-forward width, token embedding space, and output head.",
+      "family_id_provenance": "v2_train_056",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0081",
+      "question": "How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_028",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0082",
+      "question": "How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"SCOPE achieves up to a1.99× end-to-end speedup on HunyuanVideo-T2V, with28.46dB PSNR relative to the corresponding dense-attention output.\"), but is missing the remaining required evidence to completely answer 'How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_016",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0083",
+      "question": "How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"where α≥0 controls contrastive strength. Equivalently, πCD (x|h) = 1 ZCD (h) πp(x|h) 1+απq(x|h) −α\".",
+      "supporting_quotation": "where α≥0 controls contrastive strength. Equivalently,\nπCD (x|h) = 1\nZCD (h) πp(x|h) 1+απq(x|h) −α",
+      "family_id_provenance": "v2_train_026",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0084",
+      "question": "In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Top (Occlusion, N=202):an opaque wall blocks the outcome.Bottom (Chaotic, N=500):the video is truncated before the outcome resolves.\".",
+      "supporting_quotation": "Top (Occlusion, N=202):an opaque\nwall blocks the outcome.Bottom (Chaotic, N=500):the video is truncated before the\noutcome resolves.",
+      "family_id_provenance": "v2_train_049",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0085",
+      "question": "In HounsWorld, what mathematical components comprise the observation tuple Oi,t?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In HounsWorld, what mathematical components comprise the observation tuple Oi,t?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_023",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0086",
+      "question": "What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_048",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0087",
+      "question": "What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_039",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0088",
+      "question": "What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 2 provides \"The 62,112-entry IPA dictionary was built from three main sources\"), but is missing the remaining required evidence to completely answer 'What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_017",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0089",
+      "question": "What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"called ROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian processes that are learned in a sparse online method\".",
+      "supporting_quotation": "called\nROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian\nprocesses that are learned in a sparse online method",
+      "family_id_provenance": "v2_train_041",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0090",
+      "question": "What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_053",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0091",
+      "question": "What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The model’s two non-linear terms are the two hardware effects invisible to token counts—memory-bound weight streaming (the floor b) and M-tile padding (a one-parameter staircase term)—measured black-box in ten minutes on the deployed kernel.\".",
+      "supporting_quotation": "The\nmodel’s two non-linear terms are the two hardware effects\ninvisible to token counts—memory-bound weight streaming\n(the floor b) and M-tile padding (a one-parameter staircase\nterm)—measured black-box in ten minutes on the deployed\nkernel.",
+      "family_id_provenance": "v2_train_039",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0092",
+      "question": "What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_044",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0093",
+      "question": "In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_024",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0094",
+      "question": "What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_057",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0095",
+      "question": "In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The aligner is required to be shape-compatible with the target model: it uses the same global width, attention-head dimensionality, feed-forward width, token embedding space, and output head.\".",
+      "supporting_quotation": "The aligner is required to be shape-compatible with the target model: it uses the same global width,\nattention-head dimensionality, feed-forward width, token embedding space, and output head.",
+      "family_id_provenance": "v2_train_056",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0096",
+      "question": "In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_051",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0097",
+      "question": "How does RippleMem operationalize associative recollection through its write and read phases?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does RippleMem operationalize associative recollection through its write and read phases?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_059",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0098",
+      "question": "What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"The 62,112-entry IPA dictionary was built from three main sources\"), but is missing the remaining required evidence to completely answer 'What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_017",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0099",
+      "question": "What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_053",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0100",
+      "question": "How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"These approaches explain a prediction over an explicit graph after it has been pro- duced. VLSR instead learns regions directly from depiction pixels and uses them as intermediate computational states before the property prediction.\".",
+      "supporting_quotation": "These approaches explain a prediction over an explicit graph after it has been pro-\nduced. VLSR instead learns regions directly from depiction\npixels and uses them as intermediate computational states\nbefore the property prediction.",
+      "family_id_provenance": "v2_train_055",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0101",
+      "question": "What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 1: '\"By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting framework, our method achieves high-fidelity reconstruction while effectively suppressing metal-induced artifacts.'\"; Passage 2: '\"A key component of our approach is a self-calibrating system response model that eliminates the need for prior spectral information or manual metal masking'\".",
+      "supporting_quotation": "By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting\nframework, our method achieves high-fidelity reconstruction while\neffectively suppressing metal-induced artifacts.",
+      "family_id_provenance": "v2_train_047",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0102",
+      "question": "Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_021",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0103",
+      "question": "How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"ToMe tracks the number of original patches represented by each token using a token-mass vector (𝑠).\".",
+      "supporting_quotation": "ToMe tracks the number of original\npatches represented by each token using a token-mass vector (𝑠).",
+      "family_id_provenance": "v2_train_045",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0104",
+      "question": "How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 2: '\"partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE and clustering them independently, following the compositional principle of product quantization'\"; Passage 1: '\"SCOPE achieves up to a1.99× end-to-end speedup on HunyuanVideo-T2V, with28.46dB PSNR relative to the corresponding dense-attention output.'\".",
+      "supporting_quotation": "partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE\nand clustering them independently, following the compositional principle of product quantization",
+      "family_id_provenance": "v2_train_016",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0105",
+      "question": "How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_045",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0106",
+      "question": "What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The teacher is thus queried on mixed states where the prescribed first-frame content coexists with the student’s own evolving content, and its supervision directs the denoising toward the former\".",
+      "supporting_quotation": "The teacher is thus queried\non mixed states where the prescribed first-frame content coexists with the student’s own evolving\ncontent, and its supervision directs the denoising toward the former",
+      "family_id_provenance": "v2_train_053",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0107",
+      "question": "What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?",
+      "is_sufficient": 1,
+      "rationale": "Passage 6 directly answers the question by stating: \"We propose a synchronous RGB–structure framework for interpreting imperfect sketch guidance. Bidirectional Attention Fusion and phrase-level semantic consistency couple the two branches\".",
+      "supporting_quotation": "We propose a synchronous RGB–structure framework\nfor interpreting imperfect sketch guidance. Bidirectional\nAttention Fusion and phrase-level semantic consistency\ncouple the two branches",
+      "family_id_provenance": "v2_train_050",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0108",
+      "question": "In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_013",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0109",
+      "question": "What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_027",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0110",
+      "question": "In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_035",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0111",
+      "question": "How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"ToMe tracks the number of original patches represented by each token using a token-mass vector (𝑠).\".",
+      "supporting_quotation": "ToMe tracks the number of original\npatches represented by each token using a token-mass vector (𝑠).",
+      "family_id_provenance": "v2_train_045",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0112",
+      "question": "In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_046",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0113",
+      "question": "How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_026",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0114",
+      "question": "In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We reserve 437 high-quality real-world images (covering 499 unseen subjects) from this crawled subset and use them for testing.\".",
+      "supporting_quotation": "We reserve 437 high-quality real-world images (covering\n499 unseen subjects) from this crawled subset and use them\nfor testing.",
+      "family_id_provenance": "v2_train_038",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0115",
+      "question": "What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 1: '\"By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting framework, our method achieves high-fidelity reconstruction while effectively suppressing metal-induced artifacts.'\"; Passage 2: '\"A key component of our approach is a self-calibrating system response model that eliminates the need for prior spectral information or manual metal masking'\".",
+      "supporting_quotation": "By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting\nframework, our method achieves high-fidelity reconstruction while\neffectively suppressing metal-induced artifacts.",
+      "family_id_provenance": "v2_train_047",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0116",
+      "question": "In HounsWorld, what mathematical components comprise the observation tuple Oi,t?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In HounsWorld, what mathematical components comprise the observation tuple Oi,t?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_023",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0117",
+      "question": "In HounsWorld, what mathematical components comprise the observation tuple Oi,t?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Oi,t =\".",
+      "supporting_quotation": "Oi,t =",
+      "family_id_provenance": "v2_train_023",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0118",
+      "question": "What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_029",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0119",
+      "question": "What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_037",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0120",
+      "question": "What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"LYCHEEMEMORYfurther organizes records in an append-only structured memory store with entity, topic, temporal, event-frame, and entity-topic indexes.\".",
+      "supporting_quotation": "LYCHEEMEMORYfurther organizes records in an append-only structured\nmemory store with entity, topic, temporal, event-frame, and entity-topic indexes.",
+      "family_id_provenance": "v2_train_029",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0121",
+      "question": "In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 2: '\"where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.'\"; Passage 1: '\"we chose a parametrization with ﬁve angles w = [ α β γ θ φ ]'\".",
+      "supporting_quotation": "where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.",
+      "family_id_provenance": "v2_train_042",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0122",
+      "question": "How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?",
+      "is_sufficient": 1,
+      "rationale": "Passage 2 directly answers the question by stating: \"BAVGROUNDis a multiple-choice benchmark for evaluating cultural knowledge and cultural bias in Bavarian. The benchmark comprises 206 source questions distributed across eight thematic categories\".",
+      "supporting_quotation": "BAVGROUNDis a multiple-choice benchmark for\nevaluating cultural knowledge and cultural bias in\nBavarian. The benchmark comprises 206 source\nquestions distributed across eight thematic categories",
+      "family_id_provenance": "v2_train_022",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0123",
+      "question": "In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?",
+      "is_sufficient": 1,
+      "rationale": "Passage 2 directly answers the question by stating: \"Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory that it later regularizes. To remove the mismatch, we make environment construction part of the representation-learning problem rather than a preprocessing step.\".",
+      "supporting_quotation": "Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory\nthat it later regularizes. To remove the mismatch, we make\nenvironment construction part of the representation-learning\nproblem rather than a preprocessing step.",
+      "family_id_provenance": "v2_train_051",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0124",
+      "question": "How does RippleMem operationalize associative recollection through its write and read phases?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the write phase stores interaction history as cue-rich episodic memory units linked by semantic and structural associations, while the read phase uses initially recalled memories as cues for recovering additional support.\".",
+      "supporting_quotation": "the write phase stores interaction history\nas cue-rich episodic memory units linked by semantic and structural associations, while the read\nphase uses initially recalled memories as cues for\nrecovering additional support.",
+      "family_id_provenance": "v2_train_059",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0125",
+      "question": "What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting framework, our method achieves high-fidelity reconstruction while effectively suppressing metal-induced artifacts.\"), but is missing the remaining required evidence to completely answer 'What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_047",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0126",
+      "question": "How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_034",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0127",
+      "question": "How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 1: '\"produce an ordered sequence of nonempty time buckets B(r) = (B1, B2, . . . , BK), where each finding inF(r)is assigned to exactly one bucketB k'\"; Passage 2: '\"When the score meets threshold θ, the verifier returns ACCEPT; otherwise it returns REVISE with targeted feedback for the next iteration. If no candidate is accepted within Tmax iterations, the loop terminates'\".",
+      "supporting_quotation": "produce an ordered sequence of nonempty time buckets\nB(r) = (B1, B2, . . . , BK),\nwhere each finding inF(r)is assigned to exactly one\nbucketB k",
+      "family_id_provenance": "v2_train_015",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0128",
+      "question": "How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?",
+      "is_sufficient": 1,
+      "rationale": "Passage 3 directly answers the question by stating: \"QuISE instead localizes query-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query and the image, and changes the input-image answer only when the two edited answers form a valid consensus.\".",
+      "supporting_quotation": "QuISE instead localizes\nquery-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query\nand the image, and changes the input-image answer only\nwhen the two edited answers form a valid consensus.",
+      "family_id_provenance": "v2_train_043",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0129",
+      "question": "In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_060",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0130",
+      "question": "What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"called ROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian processes that are learned in a sparse online method\".",
+      "supporting_quotation": "called\nROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian\nprocesses that are learned in a sparse online method",
+      "family_id_provenance": "v2_train_041",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0131",
+      "question": "Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_021",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0132",
+      "question": "In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_035",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0133",
+      "question": "What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation, HiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes an undesired noise component from the SDS signal, and PGC [15] clips decoded pixel-wise gradients.\".",
+      "supporting_quotation": "Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation,\nHiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes\nan undesired noise component from the SDS signal, and PGC [15] clips decoded\npixel-wise gradients.",
+      "family_id_provenance": "v2_train_030",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0134",
+      "question": "What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_029",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0135",
+      "question": "How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_043",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0136",
+      "question": "What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_014",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0137",
+      "question": "According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i) the propagated error originating from cache reuse, (ii) the network approximation error stemming from the learned velocity, and (iii) the discretization error inherent to the ODE solver.\".",
+      "supporting_quotation": "Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i)\nthe propagated error originating from cache reuse, (ii) the network approximation error stemming\nfrom the learned velocity, and (iii) the discretization error inherent to the ODE solver.",
+      "family_id_provenance": "v2_train_036",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0138",
+      "question": "In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_024",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0139",
+      "question": "How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"an instrumented real-world dataset of ground-truth hand-object contact and 3Dforces,captured via two augmented objects from eight participants during touch and grasp interaction to validate EgoPHI’s sim-to-real transfer.\".",
+      "supporting_quotation": "an instrumented real-world dataset of ground-truth hand-object contact and\n3Dforces,captured via two augmented objects from eight participants during\ntouch and grasp interaction to validate EgoPHI’s sim-to-real transfer.",
+      "family_id_provenance": "v2_train_034",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0140",
+      "question": "What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_057",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0141",
+      "question": "In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional hidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024].\".",
+      "supporting_quotation": "Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional\nhidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024].",
+      "family_id_provenance": "v2_train_013",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0142",
+      "question": "How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 2: '\"the dynamic forget set at probing-unlearning round𝑡 is defined as the set of distinct leaked sensitive field pairs detected in the current probing round: 𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}'\"; Passage 1: '\"We then directly couple the two shifts in the forgetting objective: 𝐿forget =−𝐾𝑎𝐾𝑏. This multiplicative coupling is the core of the relational decoupling objective.'\".",
+      "supporting_quotation": "the dynamic forget set at probing-unlearning round𝑡\nis defined as the set of distinct leaked sensitive field pairs detected\nin the current probing round:\n𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}",
+      "family_id_provenance": "v2_train_025",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0143",
+      "question": "What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting framework, our method achieves high-fidelity reconstruction while effectively suppressing metal-induced artifacts.\"), but is missing the remaining required evidence to completely answer 'What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_047",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0144",
+      "question": "In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_013",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0145",
+      "question": "In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_038",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0146",
+      "question": "How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"produce an ordered sequence of nonempty time buckets B(r) = (B1, B2, . . . , BK), where each finding inF(r)is assigned to exactly one bucketB k\"), but is missing the remaining required evidence to completely answer 'How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_015",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0147",
+      "question": "How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 2: '\"the dynamic forget set at probing-unlearning round𝑡 is defined as the set of distinct leaked sensitive field pairs detected in the current probing round: 𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}'\"; Passage 1: '\"We then directly couple the two shifts in the forgetting objective: 𝐿forget =−𝐾𝑎𝐾𝑏. This multiplicative coupling is the core of the relational decoupling objective.'\".",
+      "supporting_quotation": "the dynamic forget set at probing-unlearning round𝑡\nis defined as the set of distinct leaked sensitive field pairs detected\nin the current probing round:\n𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}",
+      "family_id_provenance": "v2_train_025",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0148",
+      "question": "What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_020",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0149",
+      "question": "How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"BAVGROUNDis a multiple-choice benchmark for evaluating cultural knowledge and cultural bias in Bavarian. The benchmark comprises 206 source questions distributed across eight thematic categories\".",
+      "supporting_quotation": "BAVGROUNDis a multiple-choice benchmark for\nevaluating cultural knowledge and cultural bias in\nBavarian. The benchmark comprises 206 source\nquestions distributed across eight thematic categories",
+      "family_id_provenance": "v2_train_022",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0150",
+      "question": "How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"These approaches explain a prediction over an explicit graph after it has been pro- duced. VLSR instead learns regions directly from depiction pixels and uses them as intermediate computational states before the property prediction.\".",
+      "supporting_quotation": "These approaches explain a prediction over an explicit graph after it has been pro-\nduced. VLSR instead learns regions directly from depiction\npixels and uses them as intermediate computational states\nbefore the property prediction.",
+      "family_id_provenance": "v2_train_055",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0151",
+      "question": "What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_030",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0152",
+      "question": "In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"While our architecture draws inspiration from this fully parallel paradigm, it differs in two key respects: (1) our branches share identical input resolution rather than employing pre-trained heterogeneous encoders, and (2) our design introduces a United Loss consensus mechanism to coordinate training across branches\".",
+      "supporting_quotation": "While\nour architecture draws inspiration from this fully parallel paradigm, it differs in two key respects:\n(1) our branches share identical input resolution\nrather than employing pre-trained heterogeneous\nencoders, and (2) our design introduces a United\nLoss consensus mechanism to coordinate training\nacross branches",
+      "family_id_provenance": "v2_train_060",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0153",
+      "question": "What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?",
+      "is_sufficient": 1,
+      "rationale": "Passage 2 directly answers the question by stating: \"we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism.\".",
+      "supporting_quotation": "we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism.",
+      "family_id_provenance": "v2_train_037",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0154",
+      "question": "In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_054",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0155",
+      "question": "What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The teacher is thus queried on mixed states where the prescribed first-frame content coexists with the student’s own evolving content, and its supervision directs the denoising toward the former\".",
+      "supporting_quotation": "The teacher is thus queried\non mixed states where the prescribed first-frame content coexists with the student’s own evolving\ncontent, and its supervision directs the denoising toward the former",
+      "family_id_provenance": "v2_train_053",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0156",
+      "question": "In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 4: '\"where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.'\"; Passage 2: '\"we chose a parametrization with ﬁve angles w = [ α β γ θ φ ]'\".",
+      "supporting_quotation": "where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.",
+      "family_id_provenance": "v2_train_042",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0157",
+      "question": "In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Cultural (C, 736) Aizuchi (Conversational Mechanics) Backchannels and response timing C.1 143 Kuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147 Subtext Interpretation Surface utterance plus context C.3 148 Cultural Context Recognition Culturally specific references C.4 149 Sentiment Analysis Verbal, visual, and social cues C.5 149\".",
+      "supporting_quotation": "Cultural\n(C, 736)\nAizuchi (Conversational Mechanics) Backchannels and response timing C.1 143\nKuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147\nSubtext Interpretation Surface utterance plus context C.3 148\nCultural Context Recognition Culturally specific references C.4 149\nSentiment Analysis Verbal, visual, and social cues C.5 149",
+      "family_id_provenance": "v2_train_054",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0158",
+      "question": "In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1.\".",
+      "supporting_quotation": "Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1.",
+      "family_id_provenance": "v2_train_058",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0159",
+      "question": "How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_028",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0160",
+      "question": "In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Typical values for 8-bit grayscale images areC 1 = (0.01×255)2 andC 2 = (0.03×255)2.\".",
+      "supporting_quotation": "Typical values for 8-bit grayscale images\nareC 1 = (0.01×255)2 andC 2 = (0.03×255)2.",
+      "family_id_provenance": "v2_train_052",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0161",
+      "question": "In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory that it later regularizes. To remove the mismatch, we make environment construction part of the representation-learning problem rather than a preprocessing step.\".",
+      "supporting_quotation": "Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory\nthat it later regularizes. To remove the mismatch, we make\nenvironment construction part of the representation-learning\nproblem rather than a preprocessing step.",
+      "family_id_provenance": "v2_train_051",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0162",
+      "question": "How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_032",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0163",
+      "question": "How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_019",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0164",
+      "question": "How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The agent can not write arbitrary experimental code; it can only emit a program in a restricted domain-specific language (DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator.\".",
+      "supporting_quotation": "The agent can not write\narbitrary experimental code; it can only emit a program in a restricted domain-specific language\n(DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator.",
+      "family_id_provenance": "v2_train_019",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0165",
+      "question": "In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We reserve 437 high-quality real-world images (covering 499 unseen subjects) from this crawled subset and use them for testing.\".",
+      "supporting_quotation": "We reserve 437 high-quality real-world images (covering\n499 unseen subjects) from this crawled subset and use them\nfor testing.",
+      "family_id_provenance": "v2_train_038",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0166",
+      "question": "What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_041",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0167",
+      "question": "Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 3: '\"PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.'\"; Passage 2: '\"PolyCam (Polycam Inc., San Francisco, CA, USA) was chosen as the representative photogrammetry based application'\"; Passage 2: '\"two smartphone models, iPhone 13 and iPhone 14 (Apple Inc., Cupertino, CA, USA), are used for scanning.'\".",
+      "supporting_quotation": "PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.",
+      "family_id_provenance": "v2_train_018",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0168",
+      "question": "In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_049",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0169",
+      "question": "What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We propose Syfer, a multilingual RAG framework that introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal sub-question emitted by the decomposer in the same logical layer as its peers, placing decomposition and aggregation in a single logical pass\".",
+      "supporting_quotation": "We propose Syfer, a multilingual RAG framework that introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal\nsub-question emitted by the decomposer in the same logical layer as its peers,\nplacing decomposition and aggregation in a single logical pass",
+      "family_id_provenance": "v2_train_048",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0170",
+      "question": "According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_036",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0171",
+      "question": "What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_027",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0172",
+      "question": "What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The main technical modification lies in increasing the depth of optimization: we extend M&G’s language-specific training phase\".",
+      "supporting_quotation": "The\nmain\ntechnical\nmodification\nlies\nin\nincreasing\nthe\ndepth\nof\noptimization:\nwe\nextend\nM&G’s\nlanguage-specific\ntraining\nphase",
+      "family_id_provenance": "v2_train_027",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0173",
+      "question": "How does RippleMem operationalize associative recollection through its write and read phases?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does RippleMem operationalize associative recollection through its write and read phases?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_059",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0174",
+      "question": "What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_044",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0175",
+      "question": "Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?",
+      "is_sufficient": 1,
+      "rationale": "Passage 4 directly answers the question by stating: \"Large +2.2 +5.3 +20.1\".",
+      "supporting_quotation": "Large +2.2 +5.3 +20.1",
+      "family_id_provenance": "v2_train_021",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0176",
+      "question": "In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"While our architecture draws inspiration from this fully parallel paradigm, it differs in two key respects: (1) our branches share identical input resolution rather than employing pre-trained heterogeneous encoders, and (2) our design introduces a United Loss consensus mechanism to coordinate training across branches\".",
+      "supporting_quotation": "While\nour architecture draws inspiration from this fully parallel paradigm, it differs in two key respects:\n(1) our branches share identical input resolution\nrather than employing pre-trained heterogeneous\nencoders, and (2) our design introduces a United\nLoss consensus mechanism to coordinate training\nacross branches",
+      "family_id_provenance": "v2_train_060",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0177",
+      "question": "What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We propose a synchronous RGB–structure framework for interpreting imperfect sketch guidance. Bidirectional Attention Fusion and phrase-level semantic consistency couple the two branches\".",
+      "supporting_quotation": "We propose a synchronous RGB–structure framework\nfor interpreting imperfect sketch guidance. Bidirectional\nAttention Fusion and phrase-level semantic consistency\ncouple the two branches",
+      "family_id_provenance": "v2_train_050",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0178",
+      "question": "In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_040",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0179",
+      "question": "In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_056",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0180",
+      "question": "How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_022",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0181",
+      "question": "How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 2 provides \"partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE and clustering them independently, following the compositional principle of product quantization\"), but is missing the remaining required evidence to completely answer 'How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_016",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0182",
+      "question": "In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_046",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0183",
+      "question": "What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the evaluation of each idea is decomposed into four aspects: rating, contribution, soundness, and novelty, with each aspect scored on a 0-5 scale .\".",
+      "supporting_quotation": "the evaluation of each idea is decomposed into\nfour aspects: rating, contribution, soundness, and\nnovelty, with each aspect scored on a 0-5 scale .",
+      "family_id_provenance": "v2_train_044",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0184",
+      "question": "In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Typical values for 8-bit grayscale images areC 1 = (0.01×255)2 andC 2 = (0.03×255)2.\".",
+      "supporting_quotation": "Typical values for 8-bit grayscale images\nareC 1 = (0.01×255)2 andC 2 = (0.03×255)2.",
+      "family_id_provenance": "v2_train_052",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0185",
+      "question": "In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the gradient-free literature is less extensive and typically can be categorized into two strategies: some methods [6,28,41] directly modify cross-attention layers to inject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates and subsequently merge them.\".",
+      "supporting_quotation": "the\ngradient-free literature is less extensive and typically can be categorized into\ntwo strategies: some methods [6,28,41] directly modify cross-attention layers to\ninject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates\nand subsequently merge them.",
+      "family_id_provenance": "v2_train_035",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0186",
+      "question": "In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"This process resulted in 57,640 unique prompts. Of these, 36,916 came from chat.completion.create and 20,724 from PromptTemplate.\".",
+      "supporting_quotation": "This process resulted in\n57,640 unique prompts. Of these, 36,916 came\nfrom chat.completion.create and 20,724 from\nPromptTemplate.",
+      "family_id_provenance": "v2_train_024",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0187",
+      "question": "In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 2 provides \"where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.\"), but is missing the remaining required evidence to completely answer 'In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_042",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0188",
+      "question": "How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The method first retrieves propositions for the original question, then observes their complete source passages to formulate residual queries. Signals from the original question and residual queries are combined before graph propagation and passage ranking.\".",
+      "supporting_quotation": "The method first retrieves\npropositions for the original question, then observes their\ncomplete source passages to formulate residual queries. Signals from the original question and residual queries are\ncombined before graph propagation and passage ranking.",
+      "family_id_provenance": "v2_train_032",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0189",
+      "question": "How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"the dynamic forget set at probing-unlearning round𝑡 is defined as the set of distinct leaked sensitive field pairs detected in the current probing round: 𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}\"), but is missing the remaining required evidence to completely answer 'How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_025",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0190",
+      "question": "In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_054",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0191",
+      "question": "How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_045",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0192",
+      "question": "In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_049",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0193",
+      "question": "What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_050",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0194",
+      "question": "How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_028",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0195",
+      "question": "How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_055",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0196",
+      "question": "How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"produce an ordered sequence of nonempty time buckets B(r) = (B1, B2, . . . , BK), where each finding inF(r)is assigned to exactly one bucketB k\"), but is missing the remaining required evidence to completely answer 'How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_015",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0197",
+      "question": "What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_033",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0198",
+      "question": "In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)\".",
+      "supporting_quotation": "L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)",
+      "family_id_provenance": "v2_train_046",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0199",
+      "question": "What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first large-scale dataset for this task, containing over one million synthetic image– text pairs covering 1,000 routine and 1,600 anomalous behaviors.\".",
+      "supporting_quotation": "The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first\nlarge-scale dataset for this task, containing over one million synthetic image–\ntext pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+      "family_id_provenance": "v2_train_020",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0200",
+      "question": "In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?",
+      "is_sufficient": 1,
+      "rationale": "Passage 3 directly answers the question by stating: \"Top (Occlusion, N=202):an opaque wall blocks the outcome.Bottom (Chaotic, N=500):the video is truncated before the outcome resolves.\".",
+      "supporting_quotation": "Top (Occlusion, N=202):an opaque\nwall blocks the outcome.Bottom (Chaotic, N=500):the video is truncated before the\noutcome resolves.",
+      "family_id_provenance": "v2_train_049",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0201",
+      "question": "How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_055",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0202",
+      "question": "What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?",
+      "is_sufficient": 1,
+      "rationale": "Passage 2 directly answers the question by stating: \"We use data from social networks, including 6,000 sentences from the UIT-VS MEC [3], and 5,010 comments were collected raw from our social media platforms.\".",
+      "supporting_quotation": "We use data from social networks, including 6,000 sentences\nfrom the UIT-VS MEC [3], and 5,010 comments were collected\nraw from our social media platforms.",
+      "family_id_provenance": "v2_train_014",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0203",
+      "question": "In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We instead adopt a Whisper-medium encoder, kept frozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the representation used by the acoustic branch.\".",
+      "supporting_quotation": "We instead adopt a Whisper-medium encoder, kept\nfrozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the\nrepresentation used by the acoustic branch.",
+      "family_id_provenance": "v2_train_040",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0204",
+      "question": "How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?",
+      "is_sufficient": 1,
+      "rationale": "Passage 3 directly answers the question by stating: \"The method first retrieves propositions for the original question, then observes their complete source passages to formulate residual queries. Signals from the original question and residual queries are combined before graph propagation and passage ranking.\".",
+      "supporting_quotation": "The method first retrieves\npropositions for the original question, then observes their\ncomplete source passages to formulate residual queries. Signals from the original question and residual queries are\ncombined before graph propagation and passage ranking.",
+      "family_id_provenance": "v2_train_032",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0205",
+      "question": "In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_051",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0206",
+      "question": "What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The model’s two non-linear terms are the two hardware effects invisible to token counts—memory-bound weight streaming (the floor b) and M-tile padding (a one-parameter staircase term)—measured black-box in ten minutes on the deployed kernel.\".",
+      "supporting_quotation": "The\nmodel’s two non-linear terms are the two hardware effects\ninvisible to token counts—memory-bound weight streaming\n(the floor b) and M-tile padding (a one-parameter staircase\nterm)—measured black-box in ten minutes on the deployed\nkernel.",
+      "family_id_provenance": "v2_train_039",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0207",
+      "question": "How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"the dynamic forget set at probing-unlearning round𝑡 is defined as the set of distinct leaked sensitive field pairs detected in the current probing round: 𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}\"), but is missing the remaining required evidence to completely answer 'How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_025",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0208",
+      "question": "How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the DPS paradigm decouples target grounding from mask generation by first deriving intermediate spatial prompts and then feeding these prompts into strong segmentation foundation models to produce the final mask.\".",
+      "supporting_quotation": "the DPS paradigm decouples target grounding\nfrom mask generation by first deriving intermediate spatial\nprompts and then feeding these prompts into strong segmentation foundation models to produce the final mask.",
+      "family_id_provenance": "v2_train_028",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0209",
+      "question": "What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"the evaluation of each idea is decomposed into four aspects: rating, contribution, soundness, and novelty, with each aspect scored on a 0-5 scale .\".",
+      "supporting_quotation": "the evaluation of each idea is decomposed into\nfour aspects: rating, contribution, soundness, and\nnovelty, with each aspect scored on a 0-5 scale .",
+      "family_id_provenance": "v2_train_044",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0210",
+      "question": "What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_057",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0211",
+      "question": "What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 2: '\"The 62,112-entry IPA dictionary was built from three main sources'\"; Passage 1: '\"Wiktionary( sources/wiktionary_ipa.json) about 13,000 entries'\"; Passage 1: '\"LLM Transcription( sources/generated_ipa.json) approximately 49,000 entries generated by Claude Opus 4.6'\".",
+      "supporting_quotation": "The 62,112-entry IPA dictionary was built from three main sources",
+      "family_id_provenance": "v2_train_017",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0212",
+      "question": "In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 2 provides \"BM25 Weight 0.65 0.65 Dense Weight 0.35 0.35\"), but is missing the remaining required evidence to completely answer 'In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_031",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0213",
+      "question": "What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first large-scale dataset for this task, containing over one million synthetic image– text pairs covering 1,000 routine and 1,600 anomalous behaviors.\".",
+      "supporting_quotation": "The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first\nlarge-scale dataset for this task, containing over one million synthetic image–\ntext pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+      "family_id_provenance": "v2_train_020",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0214",
+      "question": "How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"QuISE instead localizes query-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query and the image, and changes the input-image answer only when the two edited answers form a valid consensus.\".",
+      "supporting_quotation": "QuISE instead localizes\nquery-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query\nand the image, and changes the input-image answer only\nwhen the two edited answers form a valid consensus.",
+      "family_id_provenance": "v2_train_043",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0215",
+      "question": "What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_033",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0216",
+      "question": "What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The main technical modification lies in increasing the depth of optimization: we extend M&G’s language-specific training phase\".",
+      "supporting_quotation": "The\nmain\ntechnical\nmodification\nlies\nin\nincreasing\nthe\ndepth\nof\noptimization:\nwe\nextend\nM&G’s\nlanguage-specific\ntraining\nphase",
+      "family_id_provenance": "v2_train_027",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0217",
+      "question": "How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_019",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0218",
+      "question": "How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"The agent can not write arbitrary experimental code; it can only emit a program in a restricted domain-specific language (DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator.\".",
+      "supporting_quotation": "The agent can not write\narbitrary experimental code; it can only emit a program in a restricted domain-specific language\n(DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator.",
+      "family_id_provenance": "v2_train_019",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0219",
+      "question": "Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.\"), but is missing the remaining required evidence to completely answer 'Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_018",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0220",
+      "question": "In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_038",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0221",
+      "question": "What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation, HiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes an undesired noise component from the SDS signal, and PGC [15] clips decoded pixel-wise gradients.\".",
+      "supporting_quotation": "Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation,\nHiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes\nan undesired noise component from the SDS signal, and PGC [15] clips decoded\npixel-wise gradients.",
+      "family_id_provenance": "v2_train_030",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0222",
+      "question": "What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_041",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0223",
+      "question": "What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"LYCHEEMEMORYfurther organizes records in an append-only structured memory store with entity, topic, temporal, event-frame, and entity-topic indexes.\".",
+      "supporting_quotation": "LYCHEEMEMORYfurther organizes records in an append-only structured\nmemory store with entity, topic, temporal, event-frame, and entity-topic indexes.",
+      "family_id_provenance": "v2_train_029",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0224",
+      "question": "Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 2 provides \"PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.\"), but is missing the remaining required evidence to completely answer 'Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_018",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0225",
+      "question": "How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_032",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0226",
+      "question": "How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE and clustering them independently, following the compositional principle of product quantization\"), but is missing the remaining required evidence to completely answer 'How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_016",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0227",
+      "question": "What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?",
+      "is_sufficient": 1,
+      "rationale": "Context contains all necessary evidence across multiple passages to answer the question: Passage 3: '\"The 62,112-entry IPA dictionary was built from three main sources'\"; Passage 2: '\"Wiktionary( sources/wiktionary_ipa.json) about 13,000 entries'\"; Passage 2: '\"LLM Transcription( sources/generated_ipa.json) approximately 49,000 entries generated by Claude Opus 4.6'\".",
+      "supporting_quotation": "The 62,112-entry IPA dictionary was built from three main sources",
+      "family_id_provenance": "v2_train_017",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0228",
+      "question": "What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_014",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0229",
+      "question": "In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?",
+      "is_sufficient": 1,
+      "rationale": "Passage 2 directly answers the question by stating: \"Cultural (C, 736) Aizuchi (Conversational Mechanics) Backchannels and response timing C.1 143 Kuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147 Subtext Interpretation Surface utterance plus context C.3 148 Cultural Context Recognition Culturally specific references C.4 149 Sentiment Analysis Verbal, visual, and social cues C.5 149\".",
+      "supporting_quotation": "Cultural\n(C, 736)\nAizuchi (Conversational Mechanics) Backchannels and response timing C.1 143\nKuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147\nSubtext Interpretation Surface utterance plus context C.3 148\nCultural Context Recognition Culturally specific references C.4 149\nSentiment Analysis Verbal, visual, and social cues C.5 149",
+      "family_id_provenance": "v2_train_054",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0230",
+      "question": "What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Serial scans were registered to baseline using ANTs [2] (deformable for most cohorts, rigid for geometrically consistent acquisitions). All volumeswerereorientedtoRAS+neurological convention to ensure standardized anatomical presentation.\".",
+      "supporting_quotation": "Serial scans were registered to baseline using ANTs [2] (deformable for most cohorts, rigid for geometrically consistent acquisitions). All\nvolumeswerereorientedtoRAS+neurological convention to ensure standardized\nanatomical presentation.",
+      "family_id_provenance": "v2_train_057",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0231",
+      "question": "In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_052",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0232",
+      "question": "In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?",
+      "is_sufficient": 1,
+      "rationale": "Passage 4 directly answers the question by stating: \"L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)\".",
+      "supporting_quotation": "L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)",
+      "family_id_provenance": "v2_train_046",
+      "variant_provenance": "natural_retrieval"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0233",
+      "question": "In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_056",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0234",
+      "question": "In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_058",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0235",
+      "question": "How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_034",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0236",
+      "question": "Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"Large +2.2 +5.3 +20.1\".",
+      "supporting_quotation": "Large +2.2 +5.3 +20.1",
+      "family_id_provenance": "v2_train_021",
+      "variant_provenance": "supported_candidate"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0237",
+      "question": "In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?",
+      "is_sufficient": 0,
+      "rationale": "Context is insufficient because it provides only partial evidence (Passage 1 provides \"BM25 Weight 0.65 0.65 Dense Weight 0.35 0.35\"), but is missing the remaining required evidence to completely answer 'In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?'.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_031",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0238",
+      "question": "In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_052",
+      "variant_provenance": "duplicate_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0239",
+      "question": "In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?",
+      "is_sufficient": 0,
+      "rationale": "Context lacks the primary evidence chunk needed to answer the question 'In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?'. None of the passages state the specific detail requested.",
+      "supporting_quotation": null,
+      "family_id_provenance": "v2_train_058",
+      "variant_provenance": "relevant_replacement"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0240",
+      "question": "What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?",
+      "is_sufficient": 1,
+      "rationale": "Passage 1 directly answers the question by stating: \"We use data from social networks, including 6,000 sentences from the UIT-VS MEC [3], and 5,010 comments were collected raw from our social media platforms.\".",
+      "supporting_quotation": "We use data from social networks, including 6,000 sentences\nfrom the UIT-VS MEC [3], and 5,010 comments were collected\nraw from our social media platforms.",
+      "family_id_provenance": "v2_train_014",
+      "variant_provenance": "supported_candidate"
+    }
+  ]
+}

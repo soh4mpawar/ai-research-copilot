@@ -1,0 +1,878 @@
+[
+  {
+    "family_id": "v2_train_001",
+    "paper_id": "2608.11829",
+    "is_multi_passage": false,
+    "question": "In on-policy distillation (OPD) for large language models, how does the pass@K performance of OPD-trained models change relative to pre-OPD base models as the sampling budget K increases, and what does problem-level solvability analysis at pass@1024 reveal?",
+    "reference_answer": "As the sampling budget K increases, the pass@K advantage initially held by OPD-trained models gradually shifts to the pre-OPD base models, indicating that OPD improves sampling efficiency rather than expanding the capability boundary. Furthermore, a problem-level solvability analysis using pass@1024 reveals an asymmetry: OPD causes more previously solvable problems to become unsolvable than previously unsolvable problems to become solvable.",
+    "supporting_chunks": [
+      "2608.11829_sec_001"
+    ],
+    "supporting_excerpts": [
+      "while the advantage in pass@K gradually shifts to the pre-OPD base models as K increases. These results suggest that OPD primarily improves sampling efficiency rather than consistently expanding the student’s reasoning capability boundary. The pass@K dynamics throughout OPD training further reveal a progressive shift toward stronger small-K performance at the expense of the large-K capability boundary. Furthermore, a problem-level solvability analysis using pass@1024 as the criterion reveals an asymmetry: OPD causes more previously solvable problems to become unsolvable than previously unsolvable problems to become solvable."
+    ],
+    "fact_explanations": "Single passage supplies both the pass@K scaling shift and the pass@1024 solvability asymmetry.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_002",
+    "paper_id": "2608.11889",
+    "is_multi_passage": true,
+    "question": "In DexterSQL, why does resolving schema ambiguity between columns like Patient.Diagnosis and Examination.Diagnosis require inspecting data distributions rather than schema definitions alone, and what execution accuracy (EX) does DexterSQL achieve on the BIRD-Dev benchmark using the open-weight GPT-OSS-120B model?",
+    "reference_answer": "Resolving schema ambiguity between Patient.Diagnosis and Examination.Diagnosis requires inspecting data distributions because column names and schemas alone cannot differentiate their roles: Patient.Diagnosis contains one row per patient representing a single final diagnosis, whereas Examination.Diagnosis contains multiple preliminary rows per patient ID. On the BIRD-Dev benchmark, DexterSQL achieves an execution accuracy (EX) of 67.6% using the open-weight GPT-OSS-120B model, outperforming prior non-fine-tuned Text-to-SQL systems by at least 2.7%.",
+    "supporting_chunks": [
+      "2608.11889_sec_009",
+      "2608.11889_sec_007"
+    ],
+    "supporting_excerpts": [
+      "This distinction is not obvious from the column names or from the overlapping values and can only be clear from the underlying data distribution:Patient.Diagnosishas one row per patient, whereas Examination.Diagnosiscan have multiple rows for the same Patient.ID. SincePatient.Diagnosisrecords a single, final diagnosis per patient, it is the correct column for this patient-level question—a choice that requires inspecting the data distribution, not just the schema.",
+      "Particularly, on BIRD-Dev benchmark [18],DexterSQLachieves an execution accuracy, EX (i.e., percentage of queries whose execution results match the gold-SQL results), of 67.6% using GPT-OSS-120B, outperforming existing non-fine-tuned Text-to-SQL systems by at least 2.7%; see the last column of Table 1."
+    ],
+    "fact_explanations": "Passage 2608.11889_sec_009 provides the structural data distribution reason (one final diagnosis row vs multiple examination rows per patient ID), while Passage 2608.11889_sec_007 provides the empirical BIRD-Dev execution accuracy (67.6% on GPT-OSS-120B).",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "multi_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_003",
+    "paper_id": "2608.11919",
+    "is_multi_passage": true,
+    "question": "How does LazyTrain's Hybrid 8-bit operator optimize LLM training on limited hardware, and what sustained TFLOPS, throughput, and peak GPU memory does LazyTrain achieve in the Qwen3.6-27B H800 MetaMathQA run at batch size 72?",
+    "reference_answer": "LazyTrain's Hybrid 8-bit operator couples 8-bit optimizer states with fast gradient clipping, where state compression reduces optimizer state memory and fast clipping counteracts the additional CPU-side update overhead. In the primary Qwen3.6-27B H800 MetaMathQA run at batch size 72, LazyTrain achieves 219.95 TFLOPS and 1361 tokens/s throughput, peaking at 68.84 GB of GPU memory while obtaining 95.42% exact match accuracy.",
+    "supporting_chunks": [
+      "2608.11919_sec_001",
+      "2608.11919_sec_002"
+    ],
+    "supporting_excerpts": [
+      "It further couples 8-bit optimizer states with fast gradient clipping as a single Hybrid 8-bit operator: state compression reduces optimizer state memory, while fast clipping counteracts the additional CPU-side update overhead.",
+      "In the primary Qwen3.6-27B H800 MetaMathQA run, LazyTrain reaches 219.95 T FLOPS and 1361 tokens/s at batch size 72, peaks at 68.84 GB of GPU memory, and obtains 95.42% exact match accuracy on the full evaluation split."
+    ],
+    "fact_explanations": "Passage 2608.11919_sec_001 provides the Hybrid 8-bit operator coupling mechanism, while Passage 2608.11919_sec_002 provides the specific empirical metrics (219.95 TFLOPS, 1361 tokens/s, 68.84 GB peak GPU memory) on Qwen3.6-27B.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "multi_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_004",
+    "paper_id": "2608.11922",
+    "is_multi_passage": false,
+    "question": "What failure mode occurs when ranking candidate retrieval passages by raw respondent predictive entropy alone within a single question, and how does the LODESTAR method modify the prompt to create a directed entropy signal?",
+    "reference_answer": "Within a single question, ranking candidate passages by raw respondent predictive entropy alone is unreliable because misleading passages systematically lower entropy, reading a misleading passage 30.3% of the time (worse than the random candidate baseline of 28.9%). LODESTAR modifies the prompt to [p; psi*; q] by inserting a learned short natural-language polarizer string psi* between the passage and the question, which steers entropy higher on misleading passages while keeping it low on supporting passages.",
+    "supporting_chunks": [
+      "2608.11922_sec_006"
+    ],
+    "supporting_excerpts": [
+      "Ranking by entropy alone reads a misleading passage more often on average than drawing one of the ten at random,30.3%against the pool’s own28.9%. One learned string puts the selection below that floor on all five benchmarks,26.0%macro-averaged (Tables 1 and 3)."
+    ],
+    "fact_explanations": "Single passage 2608.11922_sec_006 contains the failure rate (30.3% vs 28.9%) and the learned string polarizer mechanism.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_005",
+    "paper_id": "2608.12626",
+    "is_multi_passage": false,
+    "question": "What primary limitation causes strategic drift in LLM agents during long-horizon reasoning tasks, and how does the EpicStar framework address it during inference using its episodic and working memory components?",
+    "reference_answer": "In long-horizon reasoning tasks, finite attention resources prevent LLMs from maintaining strategic coherence over thousands of steps, causing agents to overfit to local observations and produce inconsistent subgoals (strategic drift). EpicStar addresses this by maintaining a structured memory bank of successful past episodes alongside a working memory of short-term environmental changes, using a dynamic gating mechanism during inference to choose between executing a retrieved action directly or generating new reasoning through contextual fusion of past episodes and working memory.",
+    "supporting_chunks": [
+      "2608.12626_sec_001"
+    ],
+    "supporting_excerpts": [
+      "Strategic reasoning in Large Language Models (LLMs) within long-horizon environments is often limited by inconsistent subgoals. In these settings, finite attention resources prevent the model from maintaining strategic coherence over thousands of steps. This limitation leads to strategic drift, where localized decisions fail to sustain a coherent trajectory across reasoning. To address this, we introduce EpicStar, a framework that enables agents to learn memory as policy to tackle long-horizon reasoning. Specifically, the agent maintains a bank of successful past episodes as a heuristic alongside a working memory to track short-term environmental changes. During inference, a dynamic gating mechanism determines whether to execute a retrieved action directly or to perform new reasoning through a contextual fusion of the retrieved episodes and current working memory."
+    ],
+    "fact_explanations": "Single passage 2608.12626_sec_001 explains both the strategic drift mechanism and the EpicStar dual-memory inference architecture.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_006",
+    "paper_id": "2608.12630",
+    "is_multi_passage": false,
+    "question": "In the study of AI-generated fiction, how do the authors define the corpus-level concept of 'overclosure' (including their specific definition of 'formal range'), and how do they distinguish between 'variance overclosure' and 'correlational overclosure'?",
+    "reference_answer": "Overclosure describes a corpus-level condition where generated texts remain locally fluent and coherent but display an unusually restricted range across measured formal dimensions; 'formal range' specifically denotes the dispersion and coordination among measured stylistic features (excluding plot, characterization, or narrative structure). The authors distinguish 'variance overclosure' (where novels differ very little from one another with respect to individual stylistic features) from 'correlational overclosure', which describes coupled feature compression where an individual AI-generated novel may stylistically resemble human fiction, while a collection of AI-generated novels occupies a much narrower formal range.",
+    "supporting_chunks": [
+      "2608.12630_sec_007",
+      "2608.12630_sec_002"
+    ],
+    "supporting_excerpts": [
+      "Overclosure describes a corpus-level condition in which generated texts remain locally fluent and coherent but depict an unusually restricted tendency across the measured formal dimensions. “Variance over closure” means that novels differ very little from one another with respect to fea2 tures",
+      "This article therefore distinguishes between variance over closure, which represents a limited formal range between novels, and a more specific phenomenon of correlational over closure. This means that an individual AIgenerated novel may resemble human fiction stylistically, while a collection of AI-generated novels occupies a much narrower formal range."
+    ],
+    "fact_explanations": "Passage 2608.12630_sec_007 defines corpus-level overclosure and clarifies formal range as stylistic dispersion, while Passage 2608.12630_sec_002 provides the conceptual distinction between variance and correlational overclosure.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Empirically reclassified from multi_passage to single_passage per ChatGPT decision: a single supplied passage was confirmed sufficient to answer the complete question."
+  },
+  {
+    "family_id": "v2_train_007",
+    "paper_id": "2608.12652",
+    "is_multi_passage": false,
+    "question": "Why does training a linear activation probe on temporal benchmark splits (such as WikiMIA) fail to provide an unconfounded estimate of model memorization in benchmark contamination detection?",
+    "reference_answer": "A probe trained to separate two item sets will exploit any feature that separates them. When member and non-member benchmark sets are split by publication date (as in WikiMIA), they systematically differ in topic, style, and temporal distribution shift. As a result, a probe without access to the target model can achieve a high AUC, and any activation probe evaluated on such a split reports the confounded sum of two quantities—memorization and distribution shift—rather than an isolated memorization signal.",
+    "supporting_chunks": [
+      "2608.12652_sec_005"
+    ],
+    "supporting_excerpts": [
+      "The difficulty is that a probe trained to separate two item sets will use anything that separates them. Das et al. [20] show that on several widely used membership-inference 1 arXiv:2608.12652v1 [cs.CL] 12 Aug 2026 benchmarks, including WikiMIA, a classifier with no access to the target model at all reaches high AUC, because the member and non-member sets were split by publication date and therefore differ in topic and style. Any probe evaluated on such a split reports the sum of two quantities, memorisation and distribution shift, and the split’s"
+    ],
+    "fact_explanations": "Single passage 2608.12652_sec_005 explains why temporal splits confound probe memorization with distribution shift.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_008",
+    "paper_id": "2608.12698",
+    "is_multi_passage": true,
+    "question": "How does Class-Geometry Supervision (CGS) structurally depart from prior prototype-based few-shot object detectors regarding relational constraints among prototypes, and what do ablation studies reveal regarding meaningful visual geometry versus random geometry?",
+    "reference_answer": "Prior prototype-based few-shot detectors optimize class prototypes independently from support examples without constraining the relational geometry among the prototypes themselves, whereas CGS explicitly supervises the prototype space by aligning pairwise distances among learned class representations with a target class-geometry matrix estimated from training data. Ablation studies show that meaningful visual geometry provides the most reliable performance gains in sample efficiency and detection, whereas random geometry can assist novel class separation but is less consistent for few-shot detection.",
+    "supporting_chunks": [
+      "2608.12698_sec_007",
+      "2608.12698_sec_001"
+    ],
+    "supporting_excerpts": [
+      "However, the key distinction is that prior prototype methods learn class anchors from support exam- ples but do not explicitly constrain the relational geometry among the prototypes themselves. While few-shot detectors improve adaptation from limited support examples through meta-learning, fine-tuning, contrastive encoding, or prototype calibration, our approach structurally departs from this paradigm by supervising the prototype space using known class relationships, ensuring that scarce examples are inherently arranged in a more calibrated open-world geometry.",
+      "Ablations show that meaningful visual geometry provides the most reliable gains, while random geometry can help novel separation but is less consistent for few-shot detection."
+    ],
+    "fact_explanations": "Passage 2608.12698_sec_007 explains the relational prototype constraint departure, while Passage 2608.12698_sec_001 reports the empirical ablation comparison between visual and random geometry.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "multi_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_009",
+    "paper_id": "2608.12713",
+    "is_multi_passage": false,
+    "question": "What security vulnerability arises from using highly edit-robust LLM watermarks alone (termed piggyback spoofing), and how does the Cocktail watermarking scheme resolve it to support three-state detection?",
+    "reference_answer": "When an LLM watermark is designed to be highly robust to edits, an adversary can alter critical content while retaining the watermark attribution signal, making the scheme endorse content the model did not generate (piggyback spoofing). Cocktail resolves this by co-embedding two complementary signals into each generated token—a robust signal using a short seeding window and a fragile signal using a long seeding window—sharing the same mechanism but with independent keys. At detection, their joint scores form a two-dimensional space supporting three states: Intact, Tampered, and No-Watermark.",
+    "supporting_chunks": [
+      "2608.12713_sec_001"
+    ],
+    "supporting_excerpts": [
+      "Existing LLM watermarks preserve provenance under editing, but this same robustness allows an adversary to alter critical content while retaining attribution, a vulnerability known as piggyback spoofing. We introduce an innovative watermark that jointly provides provenance and tamper evidence. It co-embeds a robust signal and a fragile signal into each generated token. The signals share the same mechanism but use independent keys and different seeding windows over normalized text, making one resilient to edits and the other sensitive to reader-visible changes. Multiple rounds of unbiased tournament reweighting preserve the expected generation distribution, while a periodic round-allocation pattern controls the trade-off between the two signals. At detection, their scores form a two-dimensional space supporting three decisions: Intact, Tampered, and No-Watermark."
+    ],
+    "fact_explanations": "Single passage 2608.12713_sec_001 defines piggyback spoofing and specifies the co-embedded robust/fragile dual-signal Cocktail architecture.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_010",
+    "paper_id": "2608.12714",
+    "is_multi_passage": false,
+    "question": "Why do conventional Open-World Object Detection (OWOD) and Sparsely Annotated Object Detection (SAOD) frameworks fail in sparsely annotated open environments, and how do the KTRM and DDTG modules in the DPOD framework resolve the dual ambiguity of unlabeled regions?",
+    "reference_answer": "Conventional OWOD assumes densely annotated data (so unlabeled known objects obscure boundaries between known and unknown categories), while SAOD operates under a closed-world assumption where unseen novel categories are implicitly treated as background. In the DPOD framework, KTRM recovers missing known objects to stabilize pseudo-label learning and refine decision boundaries, while DDTG discovers additional unknown instances via cross-view semantic disagreement.",
+    "supporting_chunks": [
+      "2608.12714_sec_007",
+      "2608.12714_sec_005"
+    ],
+    "supporting_excerpts": [
+      "However, despite their effectiveness, most existing OWOD methods still depend on densely annotated data. Under sparse annotation settings, unlabeled known objects obscure the boundary between known and unknown categories, leading to degraded detection performance. 2.2 Sparsely Annotated Object Detection (SAOD) Sparsely Annotated Object Detection (SAOD) [10,28,32,42,45] addresses object detection when only a subset of object instances is annotated per image, resulting in sparse supervision. In such scenarios, detectors incorrectly interpret unlabeled objects as background regions, introducing false-negative supervision during training.",
+      "KTRM recovers missing known objects to stabilize pseudo-label learning and refine decision boundaries, while DDTG discovers additional unknown instances via cross-view semantic disagreement."
+    ],
+    "fact_explanations": "Passage 2608.12714_sec_007 explains why prior OWOD and SAOD fail under sparse annotations, while Passage 2608.12714_sec_005 specifies the roles of KTRM (known recovery) and DDTG (unknown discovery).",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Empirically reclassified from multi_passage to single_passage per ChatGPT decision: a single supplied passage was confirmed sufficient to answer the complete question."
+  },
+  {
+    "family_id": "v2_train_011",
+    "paper_id": "2608.12717",
+    "is_multi_passage": false,
+    "question": "In the PRISM framework for studying naming-error dissociations across transformers and post-stroke aphasia patients, how does the contrast operator differ between the LLM and cortical substrates, and what specific anatomical and layer clusters were recovered in the phonemic-favoring dissociation?",
+    "reference_answer": "In PRISM, the contrast operator differs between substrates: it is a within-subject error-proportion difference for the LLM, whereas it is a between-subject correlation difference for the cortex. Both substrates recover a replicating phonemic-favoring dissociation, located in a deep layer cluster for the LLM and a frontal-perisylvian cortical cluster for post-stroke aphasia patients.",
+    "supporting_chunks": [
+      "2608.12717_sec_002"
+    ],
+    "supporting_excerpts": [
+      "The designs match in subject dimension (seeds, patients), spatial dimension (layers, atlas-parcel lated cortex) and thresholding, but the contrast operator differs: a within-subject error-proportion difference for the LLM, a between-subject correlation difference for the cortex. Both substrates recover a robust phonemic-favoring dissociation, a deep layer cluster and a frontal-perisylvian cortical cluster, both replicating; the semantic-favoring direction is a consistently signed but non-significant trend on both."
+    ],
+    "fact_explanations": "Single passage 2608.12717_sec_002 specifies both the substrate contrast operator difference and the recovered phonemic-favoring cluster locations.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_012",
+    "paper_id": "2608.12748",
+    "is_multi_passage": false,
+    "question": "How does the visual grounding framework in paper 2608.12748 combine discriminative grounding with reconstructive regularization during training without incurring inference overhead, and how does the Modulated Attention-Contrastive Head (mACH) reformulate query-text interaction to accelerate multi-query inference?",
+    "reference_answer": "The framework jointly supervises visual features during training with a discriminative Modulated Attention-Contrastive Head (mACH) and an auxiliary reconstructive JEPA stream, where the JEPA branch is removed after training, adding zero inference cost. To accelerate multi-query inference, mACH broadcasts flattened visual feature maps along the batch dimension (pairing each visual map with every referring expression in an expanded batch) so that a single visual forward pass interacts with all candidate expressions simultaneously.",
+    "supporting_chunks": [
+      "2608.12748_sec_007",
+      "2608.12748_sec_008"
+    ],
+    "supporting_excerpts": [
+      "Unlike conventional groundingframeworksthatoptimizeonlydiscriminativealignment, our method jointly supervises the same visual features with two complementary objectives during training:(1)adiscriminative Modulated Attention-Contrastive Head (mACH) for open-vocabulary grounding, and (2) a reconstructive JEPA auxiliary stream that regularizes the shared visual representation.SincetheJEPAbranchisremovedaftertraining, it introduces no additional inference cost.",
+      "Toavoidredundantvisualcomputation,the visual features are broadcast along the batch dimension, Q= Broadcast(X)∈R Bnc×M×C ,(1) such that each visual feature map is paired with every referring expression. Meanwhile, the textual embeddings are linearly projected to generate the corresponding keys and values"
+    ],
+    "fact_explanations": "Passage 2608.12748_sec_007 explains the dual-objective training and inference-free JEPA removal, while Passage 2608.12748_sec_008 provides the mACH batch-broadcasting formula for multi-query inference.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Empirically reclassified from multi_passage to single_passage per ChatGPT decision: a single supplied passage was confirmed sufficient to answer the complete question."
+  },
+  {
+    "family_id": "v2_train_013",
+    "paper_id": "2608.12756",
+    "question": "In the ReconSpan implementation overview, what architectures and model sizes are chosen for the encoder and the backward decoder, and what is the dimensionality of the latent code?",
+    "reference_answer": "The encoder is a Pythia-410M Transformer whose final 1024-dimensional hidden state is the code, and the decoder is a Mamba2-130M backward model.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12756_sec_010"
+    ],
+    "supporting_excerpts": [
+      "Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional hidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024]."
+    ]
+  },
+  {
+    "family_id": "v2_train_014",
+    "paper_id": "2608.12776",
+    "question": "What are the source datasets and sample counts used to create the ViTOED dataset, and what annotation tool was utilized?",
+    "reference_answer": "ViTOED used 6,000 sentences from UIT-VSMEC and 5,010 raw comments collected from social media platforms, annotated using Doccano.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12776_sec_006"
+    ],
+    "supporting_excerpts": [
+      "We use data from social networks, including 6,000 sentences from the UIT-VS MEC [3], and 5,010 comments were collected raw from our social media platforms.",
+      "we use Doccano 1 to annotate the data with a friendly user interface and easy setup on individual devices."
+    ]
+  },
+  {
+    "family_id": "v2_train_015",
+    "paper_id": "2608.12779",
+    "question": "How does CRAFT represent patient temporal progression, and what condition determines whether the iterative generator-verifier loop terminates or revises?",
+    "reference_answer": "CRAFT produces an ordered sequence of nonempty time buckets B(r) = (B1, B2, ..., BK) grouping findings occurring at the same point in time. The loop terminates when the verifier score meets threshold theta (returning ACCEPT) or when the iteration budget Tmax is exhausted; otherwise it returns REVISE.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.12779_sec_008",
+      "2608.12779_sec_010"
+    ],
+    "supporting_excerpts": [
+      "produce an ordered sequence of nonempty time buckets B(r) = (B1, B2, . . . , BK), where each finding inF(r)is assigned to exactly one bucketB k",
+      "When the score meets threshold θ, the verifier returns ACCEPT; otherwise it returns REVISE with targeted feedback for the next iteration. If no candidate is accepted within Tmax iterations, the loop terminates"
+    ]
+  },
+  {
+    "family_id": "v2_train_016",
+    "paper_id": "2608.12780",
+    "question": "How does SCOPE cluster keys in sparse video attention, and what speedup and PSNR does it achieve on HunyuanVideo-T2V?",
+    "reference_answer": "SCOPE partitions each post-RoPE key into temporal, height, and width ranges of 3D RoPE and clusters them independently. On HunyuanVideo-T2V, it achieves up to a 1.99x end-to-end speedup with 28.46dB PSNR relative to dense attention.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.12780_sec_005",
+      "2608.12780_sec_006"
+    ],
+    "supporting_excerpts": [
+      "partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE and clustering them independently, following the compositional principle of product quantization",
+      "SCOPE achieves up to a1.99× end-to-end speedup on HunyuanVideo-T2V, with28.46dB PSNR relative to the corresponding dense-attention output."
+    ]
+  },
+  {
+    "family_id": "v2_train_017",
+    "paper_id": "2608.12814",
+    "question": "What is the size of the FastThaiG2P IPA dictionary, and how many entries were derived from Wiktionary versus LLM generation?",
+    "reference_answer": "The dictionary contains 62,112 words in total, including about 13,000 entries extracted from Wiktionary and approximately 49,000 entries generated by Claude Opus 4.6.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.12814_sec_006",
+      "2608.12814_sec_007"
+    ],
+    "supporting_excerpts": [
+      "The 62,112-entry IPA dictionary was built from three main sources",
+      "Wiktionary( sources/wiktionary_ipa.json) about 13,000 entries",
+      "LLM Transcription( sources/generated_ipa.json) approximately 49,000 entries generated by Claude Opus 4.6"
+    ]
+  },
+  {
+    "family_id": "v2_train_018",
+    "paper_id": "2608.12827",
+    "question": "Which commercial scanner and mobile application were evaluated in the 3D body scanning validation study, and what phone models were used?",
+    "reference_answer": "The study evaluated the Fit3D ProScanner commercial body scanner and the PolyCam photogrammetry mobile application on iPhone 13 and iPhone 14.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.12827_sec_006",
+      "2608.12827_sec_007"
+    ],
+    "supporting_excerpts": [
+      "PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner.",
+      "PolyCam (Polycam Inc., San Francisco, CA, USA) was chosen as the representative photogrammetry based application",
+      "two smartphone models, iPhone 13 and iPhone 14 (Apple Inc., Cupertino, CA, USA), are used for scanning."
+    ]
+  },
+  {
+    "family_id": "v2_train_019",
+    "paper_id": "2608.12841",
+    "question": "How does AQuA prevent research agents from exploiting data leakage during autonomous experimentation?",
+    "reference_answer": "AQuA prevents leakage by prohibiting arbitrary experimental code, restricting the agent to a domain-specific language (DSL) that contains no operations for modifying or bypassing sealed data splits or the evaluator.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12841_sec_007"
+    ],
+    "supporting_excerpts": [
+      "The agent can not write arbitrary experimental code; it can only emit a program in a restricted domain-specific language (DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator."
+    ]
+  },
+  {
+    "family_id": "v2_train_020",
+    "paper_id": "2608.12843",
+    "question": "What is the Pedestrian Anomaly Behavior (PAB) benchmark, and how many synthetic pairs and behavior categories does it contain?",
+    "reference_answer": "The Pedestrian Anomaly Behavior (PAB) benchmark is a dataset for text-based person anomaly search containing over one million synthetic image-text pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12843_sec_006"
+    ],
+    "supporting_excerpts": [
+      "The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first large-scale dataset for this task, containing over one million synthetic image– text pairs covering 1,000 routine and 1,600 anomalous behaviors."
+    ]
+  },
+  {
+    "family_id": "v2_train_021",
+    "paper_id": "2608.12847",
+    "question": "Under large binding shift in Table 3 of the trajectory reuse study, what percentage-point gain over No Memory does QCR achieve compared to Full Trajectory and Generic Summary?",
+    "reference_answer": "Under large binding shift, QCR achieves a +20.1 percentage-point gain over No Memory, whereas Full Trajectory achieves +2.2 and Generic Summary achieves +5.3.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12847_sec_007"
+    ],
+    "supporting_excerpts": [
+      "Large +2.2 +5.3 +20.1",
+      "Table 3:Memory utility under binding shift.Entries are percentage-point gains over No Memory within each rewrite level."
+    ]
+  },
+  {
+    "family_id": "v2_train_022",
+    "paper_id": "2608.12894",
+    "question": "How many questions comprise the BAVGROUND benchmark, across how many thematic categories, and what are the two question types in each category?",
+    "reference_answer": "BAVGROUND comprises 206 source questions across eight thematic categories, divided into general-knowledge questions (GEN) and grounded questions (GRD).",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12894_sec_009"
+    ],
+    "supporting_excerpts": [
+      "BAVGROUNDis a multiple-choice benchmark for evaluating cultural knowledge and cultural bias in Bavarian. The benchmark comprises 206 source questions distributed across eight thematic categories",
+      "Within each category, the benchmark is divided into two structurally distinct types (subsets). The first type (GEN) contains broadly accessible general-knowledge questions",
+      "The second contains grounded questions (GRD)"
+    ]
+  },
+  {
+    "family_id": "v2_train_023",
+    "paper_id": "2608.12904",
+    "question": "In HounsWorld, what mathematical components comprise the observation tuple Oi,t?",
+    "reference_answer": "The observation tuple Oi,t consists of a CT volume oct, report otext, condition descriptors for contrast phase cphase, acquisition dose cdose, HU window cHU, and query q.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12904_sec_010"
+    ],
+    "supporting_excerpts": [
+      "Oi,t =",
+      "Here,o ct is a CT volume and o text is a report;c phase,c dose, and c HU specify the contrast phase, acquisition dose, and HU window under which the CT is observed; and q is a query."
+    ]
+  },
+  {
+    "family_id": "v2_train_024",
+    "paper_id": "2608.12905",
+    "question": "In the Prompts in the Wild collection, how many unique prompts were collected in total, and how many originated from chat.completion.create versus PromptTemplate?",
+    "reference_answer": "A total of 57,640 unique prompts were collected, with 36,916 originating from chat.completion.create and 20,724 from PromptTemplate.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12905_sec_007"
+    ],
+    "supporting_excerpts": [
+      "This process resulted in 57,640 unique prompts. Of these, 36,916 came from chat.completion.create and 20,724 from PromptTemplate."
+    ]
+  },
+  {
+    "family_id": "v2_train_025",
+    "paper_id": "2608.12911",
+    "question": "How is the dynamic forget set F(t) defined in DRUF, and how does the relational decoupling objective couple span-level KL shifts into Lforget?",
+    "reference_answer": "F(t) is defined as the set of distinct leaked sensitive field pairs detected in probing round t: F(t) = {(sa, sb) | (sa, sb) is detected as leaked in probing round t}. The relational decoupling objective couples them multiplicatively as Lforget = -Ka * Kb, where Ka and Kb are span-level KL shifts.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.12911_sec_005",
+      "2608.12911_sec_009"
+    ],
+    "supporting_excerpts": [
+      "the dynamic forget set at probing-unlearning round𝑡 is defined as the set of distinct leaked sensitive field pairs detected in the current probing round: 𝐹(𝑡) ={(𝑠 𝑎,𝑠𝑏)|(𝑠 𝑎,𝑠𝑏)is detected as leaked in probing round𝑡}",
+      "We then directly couple the two shifts in the forgetting objective: 𝐿forget =−𝐾𝑎𝐾𝑏. This multiplicative coupling is the core of the relational decoupling objective."
+    ]
+  },
+  {
+    "family_id": "v2_train_026",
+    "paper_id": "2608.12913",
+    "question": "How does Contrastive Decoding express the probability distribution pi_CD(x|h) in terms of expert Mp and amateur Mq, and what parameter controls contrastive strength?",
+    "reference_answer": "Contrastive Decoding defines pi_CD(x|h) = 1/Z_CD(h) * pi_p(x|h)^(1+alpha) * pi_q(x|h)^(-alpha), where alpha >= 0 controls contrastive strength.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12913_sec_005"
+    ],
+    "supporting_excerpts": [
+      "where α≥0 controls contrastive strength. Equivalently, πCD (x|h) = 1 ZCD (h) πp(x|h) 1+απq(x|h) −α"
+    ]
+  },
+  {
+    "family_id": "v2_train_027",
+    "paper_id": "2608.12974",
+    "question": "What modification to the optimization depth was introduced in the 56 formal languages experiment to assess McCoy and Griffiths' meta-trained model?",
+    "reference_answer": "The language-specific training phase was extended to 5 SGD epochs followed by 50 Adam epochs, with test cross-entropy computed over a dataset of one million sample strings.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12974_sec_005"
+    ],
+    "supporting_excerpts": [
+      "The main technical modification lies in increasing the depth of optimization: we extend M&G’s language-specific training phase",
+      "to 5 SGD epochs followed by 50 Adam epochs",
+      "with test CE computed over a dataset of one million sample strings."
+    ]
+  },
+  {
+    "family_id": "v2_train_028",
+    "paper_id": "2608.12980",
+    "question": "How does the Decoupled Prompting Segmentation (DPS) paradigm differ from Joint Feature Segmentation (JFS) in referring remote sensing image segmentation?",
+    "reference_answer": "DPS decouples target grounding from mask generation by first deriving intermediate spatial prompts and feeding them into strong segmentation foundation models to produce the final mask.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12980_sec_005"
+    ],
+    "supporting_excerpts": [
+      "the DPS paradigm decouples target grounding from mask generation by first deriving intermediate spatial prompts and then feeding these prompts into strong segmentation foundation models to produce the final mask."
+    ]
+  },
+  {
+    "family_id": "v2_train_029",
+    "paper_id": "2608.12990",
+    "question": "What indexes does LYCHEEMEMORY utilize in its append-only structured memory store to organize context-independent typed memory records?",
+    "reference_answer": "LYCHEEMEMORY organizes records using entity, topic, temporal, event-frame, and entity-topic indexes.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12990_sec_006"
+    ],
+    "supporting_excerpts": [
+      "LYCHEEMEMORYfurther organizes records in an append-only structured memory store with entity, topic, temporal, event-frame, and entity-topic indexes."
+    ]
+  },
+  {
+    "family_id": "v2_train_030",
+    "paper_id": "2608.12997",
+    "question": "What prior methods are identified in PixSDS as improving Score Distillation Sampling (SDS) by changing its distillation objective or modifying its gradient?",
+    "reference_answer": "ProlificDreamer introduces Variational Score Distillation, HiFA combines latent-space and pixel-space guidance, NFSD removes an undesired noise component from the SDS signal, and PGC clips decoded pixel-wise gradients.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.12997_sec_005"
+    ],
+    "supporting_excerpts": [
+      "Several works improve SDS by changing the distillation objective or modifying its gradient. ProlificDreamer [21] introduces Variational Score Distillation, HiFA [23] combines latent-space and pixel-space guidance, NFSD [7] removes an undesired noise component from the SDS signal, and PGC [15] clips decoded pixel-wise gradients."
+    ]
+  },
+  {
+    "family_id": "v2_train_031",
+    "paper_id": "2608.13004",
+    "question": "In the HybridRAG-BN framework, what BM25 and dense weights are used during retrieval, and what LoRA rank and alpha are used for fine-tuning Gemma-4-31B-Instruct?",
+    "reference_answer": "Retrieval uses a BM25 weight of 0.65 and Dense weight of 0.35. For fine-tuning Gemma-4-31B-Instruct, LoRA rank (r) is 16 and LoRA Alpha is 32.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.13004_sec_006",
+      "2608.13004_sec_008"
+    ],
+    "supporting_excerpts": [
+      "BM25 Weight 0.65 0.65 Dense Weight 0.35 0.35",
+      "LoRA Rank ( r) 16 LoRA Alpha 32"
+    ]
+  },
+  {
+    "family_id": "v2_train_032",
+    "paper_id": "2608.13006",
+    "question": "How does EviReform process multi-hop evidence before performing graph propagation and final passage ranking?",
+    "reference_answer": "EviReform first retrieves propositions for the original question, observes their complete source passages to formulate residual queries, and combines original and residual retrieval signals before graph propagation.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13006_sec_007"
+    ],
+    "supporting_excerpts": [
+      "The method first retrieves propositions for the original question, then observes their complete source passages to formulate residual queries. Signals from the original question and residual queries are combined before graph propagation and passage ranking."
+    ]
+  },
+  {
+    "family_id": "v2_train_033",
+    "paper_id": "2608.13007",
+    "question": "What 10-day dataset was collected to evaluate structure-aware Riemannian growth fields for 4D plant modeling?",
+    "reference_answer": "A 10-day dual-species dataset comprising daily growth measurements of bean and broccoli specimens, providing dense geometry, skeletal topologies, and semantic organ labels.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13007_sec_005"
+    ],
+    "supporting_excerpts": [
+      "We collect a 10-day dual-species dataset comprising daily growth measurements of bean and broccoli specimens. This dataset provides comprehensive 4D annotations spanning dense geometry, extracted skeletal topologies, and semantic labels for individual organs."
+    ]
+  },
+  {
+    "family_id": "v2_train_034",
+    "paper_id": "2608.13014",
+    "question": "How was the real-world dataset collected to validate EgoPHI's sim-to-real transfer in hand-object contact and force estimation?",
+    "reference_answer": "The real-world dataset captured ground-truth hand-object contact and 3D forces via two augmented objects from eight participants during touch and grasp interaction.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13014_sec_005"
+    ],
+    "supporting_excerpts": [
+      "an instrumented real-world dataset of ground-truth hand-object contact and 3Dforces,captured via two augmented objects from eight participants during touch and grasp interaction to validate EgoPHI’s sim-to-real transfer."
+    ]
+  },
+  {
+    "family_id": "v2_train_035",
+    "paper_id": "2608.13037",
+    "question": "In spatially-grounded text-to-image control, what two strategies are commonly used by gradient-free approaches?",
+    "reference_answer": "Gradient-free methods either directly modify cross-attention layers to inject object segments or descriptions into corresponding regions, or utilize multi-inference pipelines to generate separate object estimates and merge them.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13037_sec_007"
+    ],
+    "supporting_excerpts": [
+      "the gradient-free literature is less extensive and typically can be categorized into two strategies: some methods [6,28,41] directly modify cross-attention layers to inject object segments or descriptions into their corresponding regions,while others [4,35] utilize multi-inference pipelines to generate separate object estimates and subsequently merge them."
+    ]
+  },
+  {
+    "family_id": "v2_train_036",
+    "paper_id": "2608.13043",
+    "question": "According to Theorem 3.2 in GCache, into what three distinct components is the final global error decomposed under cache reuse?",
+    "reference_answer": "Under Theorem 3.2, the final error is decomposed into: (i) the propagated error originating from cache reuse, (ii) the network approximation error stemming from the learned velocity, and (iii) the discretization error inherent to the ODE solver.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13043_sec_013"
+    ],
+    "supporting_excerpts": [
+      "Theorem 3.2 demonstrates that the final error can be decomposed into three distinct components: (i) the propagated error originating from cache reuse, (ii) the network approximation error stemming from the learned velocity, and (iii) the discretization error inherent to the ODE solver."
+    ]
+  },
+  {
+    "family_id": "v2_train_037",
+    "paper_id": "2608.13045",
+    "question": "What module does P2Fusion introduce for feature decoupling and self-correcting feedback, and what two specialist components does it synergize?",
+    "reference_answer": "P2Fusion introduces the Gated Dynamic Expert Recalibration (GDER) module, which synergizes a prior-guided Modality Specialist with a global-aware Attention Specialist.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13045_sec_005"
+    ],
+    "supporting_excerpts": [
+      "we design a fusion architecture featuring a Gated Dynamic Expert Recalibration (GDER) module, which functions as a self-correcting feedback mechanism.",
+      "Within this module, we synergize a prior-guided Modality Specialist with a global-aware Attention Specialist to perform modality-specific feedback refinement."
+    ]
+  },
+  {
+    "family_id": "v2_train_038",
+    "paper_id": "2608.13047",
+    "question": "In the ProPose dataset construction, how many high-quality crawled images were reserved for testing, and how many images were added through the augmentation pipeline?",
+    "reference_answer": "437 high-quality real-world images covering 499 unseen subjects were reserved for testing, and the training set was expanded with 9,558 images containing 10,345 instances.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13047_sec_005"
+    ],
+    "supporting_excerpts": [
+      "We reserve 437 high-quality real-world images (covering 499 unseen subjects) from this crawled subset and use them for testing.",
+      "As a result, we expand our training set with 9,558 images (containing 10,345 instances)."
+    ]
+  },
+  {
+    "family_id": "v2_train_039",
+    "paper_id": "2608.13057",
+    "question": "What two hardware effects invisible to token counts are captured by TEMPO's cost model, and how quickly can they be measured on deployed kernels?",
+    "reference_answer": "The two non-linear terms are memory-bound weight streaming (the floor b) and M-tile padding (a one-parameter staircase term), measured black-box in ten minutes on the deployed kernel.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13057_sec_005"
+    ],
+    "supporting_excerpts": [
+      "The model’s two non-linear terms are the two hardware effects invisible to token counts—memory-bound weight streaming (the floor b) and M-tile padding (a one-parameter staircase term)—measured black-box in ten minutes on the deployed kernel."
+    ]
+  },
+  {
+    "family_id": "v2_train_040",
+    "paper_id": "2608.13101",
+    "question": "In CASA, what encoder is used for the acoustic branch, and how are frame representations processed across 30-second audio chunks?",
+    "reference_answer": "CASA adopts a frozen Whisper-medium encoder with LoRA adapters. Each answer is split into 30-second chunks (up to a 2-minute cap) yielding 1,500 frame vectors per chunk, which are concatenated and have adjacent frame pairs averaged to reduce temporal resolution from 20 ms to 40 ms.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13101_sec_005"
+    ],
+    "supporting_excerpts": [
+      "We instead adopt a Whisper-medium encoder, kept frozen: the encoder–decoder still produces the ASR transcript, while LoRA adapters [11] on the encoder produce the representation used by the acoustic branch.",
+      "each answer is split into 30 s chunks up to a 2 min cap, with each chunk yielding1,500frame-level vectors.",
+      "we concatenate the chunk encodings and average adjacent frame pairs, reducing the temporal resolution from 20 ms to 40 ms and halving the sequence length"
+    ]
+  },
+  {
+    "family_id": "v2_train_041",
+    "paper_id": "2608.13104",
+    "question": "What online multimodal regression method based on a mixture of Gaussian processes is discussed in the literature review of correspondence learning, and how are its two learning steps performed?",
+    "reference_answer": "ROGER (Realtime Overlapping Gaussian Expert Regression), which performs learning in two steps: assigning data points to the suitable process using a particle filter, and learning the assigned process using a Bayesian approach for updating the mean and kernel functions.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13104_sec_006"
+    ],
+    "supporting_excerpts": [
+      "called ROGER (Realtime Overlapping Gaussian Expert Regression) [11], [12]. ROGER is based on a mixture of Gaussian processes that are learned in a sparse online method",
+      "The learning is performed in two steps: assigning data points to the suitable process using a particle ﬁ lter and learning the assigned process using a Bayesian approach for updating the mean and kernel functions."
+    ]
+  },
+  {
+    "family_id": "v2_train_042",
+    "paper_id": "2608.13114",
+    "question": "In the fast iterative five-point relative pose formulation, how is the essential matrix E defined in terms of camera rotation and translation, and what five angles parameterize w?",
+    "reference_answer": "The essential matrix is defined as E = R12[t12]x, and the five angles parameterizing w are w = [alpha beta gamma theta phi].",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.13114_sec_005",
+      "2608.13114_sec_006"
+    ],
+    "supporting_excerpts": [
+      "where E = R12[t12]× is the essential matrix, which contains the relative rotation and translation between the views.",
+      "we chose a parametrization with ﬁve angles w = [ α β γ θ φ ]"
+    ]
+  },
+  {
+    "family_id": "v2_train_043",
+    "paper_id": "2608.13119",
+    "question": "How does QuISE defend vision-language models against typographic attacks without requiring access to model weights or internal components?",
+    "reference_answer": "QuISE localizes query-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query and the image, and changes the input-image answer only when the two edited answers form a valid consensus.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13119_sec_006"
+    ],
+    "supporting_excerpts": [
+      "QuISE instead localizes query-conditioned influential text, applies semantically distinct replacements verified to be irrelevant to both the query and the image, and changes the input-image answer only when the two edited answers form a valid consensus."
+    ]
+  },
+  {
+    "family_id": "v2_train_044",
+    "paper_id": "2608.13136",
+    "question": "What four aspects are evaluated in LigBench to assess research ideas, and what score scale is used for each aspect?",
+    "reference_answer": "The four aspects are rating, contribution, soundness, and novelty, each scored on a 0-5 scale.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13136_sec_005"
+    ],
+    "supporting_excerpts": [
+      "the evaluation of each idea is decomposed into four aspects: rating, contribution, soundness, and novelty, with each aspect scored on a 0-5 scale ."
+    ]
+  },
+  {
+    "family_id": "v2_train_045",
+    "paper_id": "2608.13141",
+    "question": "How does ToMe track patch counts after token merging via Bipartite Soft Matching, and how does this affect the attention calculation in Eq. 2?",
+    "reference_answer": "ToMe tracks patch counts using a token-mass vector (s), and the logarithm of key-token masses is added to the attention logits before the softmax: Attention(Q,K,V) = Softmax(QK^T / sqrt(d_k) + log(s_K)) V.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13141_sec_006"
+    ],
+    "supporting_excerpts": [
+      "ToMe tracks the number of original patches represented by each token using a token-mass vector (𝑠).",
+      "The logarithm of the key-token masses is added to the attention log its before the soft max:"
+    ]
+  },
+  {
+    "family_id": "v2_train_046",
+    "paper_id": "2608.13148",
+    "question": "In the hybrid Concept Bottleneck Model, what loss components constitute the overall training objective L in Eq. 2?",
+    "reference_answer": "The objective is L = Ldiag(D) + lambda_c Lconcept(A) + lambda_d Ldist(U) + lambda_r Lreg, combining diagnosis loss on all samples D, concept loss on annotated samples A, distribution matching loss on unannotated samples U, and regularization.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13148_sec_006"
+    ],
+    "supporting_excerpts": [
+      "L=L diag(D) +λcLconcept(A) +λdLdist(U) +λrLreg.(2)",
+      "Ldiag is the weighted binary cross-entropy for malignancy in all samples.Lconcept is binary cross-entropy with log its between zi and the image-level concept labels ci, evaluated only for samples inA. Ldist is illustrated in Section 2.2."
+    ]
+  },
+  {
+    "family_id": "v2_train_047",
+    "paper_id": "2608.13159",
+    "question": "What forward model does the splat-based metal artifact reduction framework incorporate into Gaussian Splatting, and what manual requirements does its self-calibrating response model eliminate?",
+    "reference_answer": "It integrates a polychromatic forward model with material-specific attenuation behavior into differentiable Gaussian Splatting, eliminating the need for prior spectral information or manual metal masking.",
+    "is_multi_passage": true,
+    "supporting_chunks": [
+      "2608.13159_sec_005",
+      "2608.13159_sec_006"
+    ],
+    "supporting_excerpts": [
+      "By integrating a polychromatic forward model with material specific attenuation behavior into a differentiable GaussianSplatting framework, our method achieves high-fidelity reconstruction while effectively suppressing metal-induced artifacts.",
+      "A key component of our approach is a self-calibrating system response model that eliminates the need for prior spectral information or manual metal masking"
+    ]
+  },
+  {
+    "family_id": "v2_train_048",
+    "paper_id": "2608.13160",
+    "question": "What core mechanism does Syfer introduce to unify decomposition and aggregation in multilingual multi-hop question answering, and what improvement does it achieve on MuSiQue?",
+    "reference_answer": "Syfer introduces synthesizer folding, where the end-of-pipeline aggregation call is replaced by a terminal sub-question emitted by the decomposer in the same logical layer as its peers; on MuSiQue, Syfer improves over the strongest decomposition-based baseline by +8.91 F1 (+29.8% relative) averaged across nine languages.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13160_sec_005"
+    ],
+    "supporting_excerpts": [
+      "We propose Syfer, a multilingual RAG framework that introduces synthesizer folding, the end-of-pipeline aggregation call is replaced by a terminal sub-question emitted by the decomposer in the same logical layer as its peers, placing decomposition and aggregation in a single logical pass",
+      "On the most challenging benchmark MuSiQue,Syferstill improves over the strongest decomposition-based baseline by+8.91F1 (+29.8%relative) averaged over nine languages."
+    ]
+  },
+  {
+    "family_id": "v2_train_049",
+    "paper_id": "2608.13167",
+    "question": "In the TRAPSBench release, what two evaluation conditions are evaluated in released pairs, and what are their sample counts?",
+    "reference_answer": "The two released conditions are Occlusion (N=202) where an opaque wall blocks the outcome, and Chaotic (N=500) where the video is truncated before the outcome resolves.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13167_sec_006"
+    ],
+    "supporting_excerpts": [
+      "Top (Occlusion, N=202):an opaque wall blocks the outcome.Bottom (Chaotic, N=500):the video is truncated before the outcome resolves."
+    ]
+  },
+  {
+    "family_id": "v2_train_050",
+    "paper_id": "2608.13186",
+    "question": "What are the three main contributions introduced by SketchSense for interpreting imperfect sketch guidance in image inpainting?",
+    "reference_answer": "SketchSense introduces: (1) a synchronous RGB-structure framework with Bidirectional Attention Fusion and phrase-level semantic consistency; (2) Intrinsic Sketch-Aware Spatial Regulation; and (3) Explicit Signed Sketch-Use Modeling with an optional signed spatial prior.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13186_sec_005"
+    ],
+    "supporting_excerpts": [
+      "We propose a synchronous RGB–structure framework for interpreting imperfect sketch guidance. Bidirectional Attention Fusion and phrase-level semantic consistency couple the two branches",
+      "We introduce Intrinsic Sketch-Aware Spatial Regulation, which learns to adapt sketch attention and the fusion process across locations and transformer blocks.",
+      "We introduce Explicit Signed Sketch-Use Modeling to express local preservation-or-correction intent when geometry alone is ambiguous, using an optional prior to regulate sketch representation and use."
+    ]
+  },
+  {
+    "family_id": "v2_train_051",
+    "paper_id": "2608.13190",
+    "question": "In ProME's problem formulation, how is an endogenous environment construction distinguished from an exogenous construction?",
+    "reference_answer": "An exogenous construction reads assignments off a detached reference encoder trained beforehand, whereas an endogenous construction draws partitions from a checkpoint on the trajectory that it later regularizes, removing environment-representation mismatch.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13190_sec_005"
+    ],
+    "supporting_excerpts": [
+      "Wecallsuchaconstructionexogenous,and reserve endogenous for a partition drawn from a checkpoint on the trajectory that it later regularizes. To remove the mismatch, we make environment construction part of the representation-learning problem rather than a preprocessing step."
+    ]
+  },
+  {
+    "family_id": "v2_train_052",
+    "paper_id": "2608.13194",
+    "question": "In fidelity-constrained anchoring, what stabilizing constant values are typically used for C1 and C2 in 8-bit grayscale SSIM computation?",
+    "reference_answer": "Typical values for 8-bit grayscale images are C1 = (0.01 * 255)^2 and C2 = (0.03 * 255)^2.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13194_sec_005"
+    ],
+    "supporting_excerpts": [
+      "Typical values for 8-bit grayscale images areC 1 = (0.01×255)2 andC 2 = (0.03×255)2."
+    ]
+  },
+  {
+    "family_id": "v2_train_053",
+    "paper_id": "2608.13205",
+    "question": "What failure mode arises when applying on-policy distillation directly to text-image-to-video models due to first-frame conditioning?",
+    "reference_answer": "Condition-state mismatch, where the teacher is queried on mixed states where the prescribed first-frame coexists with the student's evolving content, directing denoising toward the prescribed frame in conflict with the generated video.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13205_sec_006"
+    ],
+    "supporting_excerpts": [
+      "The teacher is thus queried on mixed states where the prescribed first-frame content coexists with the student’s own evolving content, and its supervision directs the denoising toward the former",
+      "failure we term condition-state mismatch"
+    ]
+  },
+  {
+    "family_id": "v2_train_054",
+    "paper_id": "2608.13210",
+    "question": "In Table I of the NARU benchmark, what are the five Cultural level task codes and their evidence types?",
+    "reference_answer": "The five cultural task codes are C.1 (Aizuchi: Backchannels and response timing), C.2 (Kuuki wo Yomu: Social atmosphere or implicit norms), C.3 (Subtext Interpretation: Surface utterance plus context), C.4 (Cultural Context Recognition: Culturally specific references), and C.5 (Sentiment Analysis: Verbal, visual, and social cues).",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13210_sec_005"
+    ],
+    "supporting_excerpts": [
+      "Cultural (C, 736) Aizuchi (Conversational Mechanics) Backchannels and response timing C.1 143 Kuuki wo Yomu (Situational Awareness) Social atmosphere or implicit norms C.2 147 Subtext Interpretation Surface utterance plus context C.3 148 Cultural Context Recognition Culturally specific references C.4 149 Sentiment Analysis Verbal, visual, and social cues C.5 149"
+    ]
+  },
+  {
+    "family_id": "v2_train_055",
+    "paper_id": "2608.13244",
+    "question": "How does Visual Latent Structural Reasoning (VLSR) differ from post-hoc graph explainers like GNNExplainer and SubgraphX in chemical localization?",
+    "reference_answer": "Rather than explaining a prediction over an explicit graph post hoc, VLSR learns regions directly from depiction pixels and uses them as intermediate computational states before property prediction.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13244_sec_006"
+    ],
+    "supporting_excerpts": [
+      "These approaches explain a prediction over an explicit graph after it has been pro- duced. VLSR instead learns regions directly from depiction pixels and uses them as intermediate computational states before the property prediction."
+    ]
+  },
+  {
+    "family_id": "v2_train_056",
+    "paper_id": "2608.13277",
+    "question": "In Mixture of Training (MoT), what architectural dimensions must the aligner share with the target model to satisfy shape-compatibility without projection layers?",
+    "reference_answer": "The aligner must share the same global width, attention-head dimensionality, feed-forward width, token embedding space, and output head.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13277_sec_005"
+    ],
+    "supporting_excerpts": [
+      "The aligner is required to be shape-compatible with the target model: it uses the same global width, attention-head dimensionality, feed-forward width, token embedding space, and output head."
+    ]
+  },
+  {
+    "family_id": "v2_train_057",
+    "paper_id": "2608.13309",
+    "question": "What registration tool was used in the longitudinal MRI preprocessing pipeline, and to what neurological convention were all volumes reoriented?",
+    "reference_answer": "Serial scans were registered using ANTs (deformable or rigid), and all volumes were reoriented to RAS+ neurological convention.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13309_sec_006"
+    ],
+    "supporting_excerpts": [
+      "Serial scans were registered to baseline using ANTs [2] (deformable for most cohorts, rigid for geometrically consistent acquisitions). All volumeswerereorientedtoRAS+neurological convention to ensure standardized anatomical presentation."
+    ]
+  },
+  {
+    "family_id": "v2_train_058",
+    "paper_id": "2608.13328",
+    "question": "In the study of gender-associated linguistic bias in LLMs, how does prompt text with women-associated language affect model responses in professional tasks?",
+    "reference_answer": "Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13328_sec_005"
+    ],
+    "supporting_excerpts": [
+      "Women-associated language in prompts leads to responses that are shorter, less sophisticated, more readable, and less formal, as illustrated in Figure 1."
+    ]
+  },
+  {
+    "family_id": "v2_train_059",
+    "paper_id": "2608.13334",
+    "question": "How does RippleMem operationalize associative recollection through its write and read phases?",
+    "reference_answer": "In the write phase, interaction history is stored as cue-rich episodic memory units linked by semantic and structural associations; in the read phase, initially recalled memories serve as cues for recovering additional support.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13334_sec_006"
+    ],
+    "supporting_excerpts": [
+      "the write phase stores interaction history as cue-rich episodic memory units linked by semantic and structural associations, while the read phase uses initially recalled memories as cues for recovering additional support."
+    ]
+  },
+  {
+    "family_id": "v2_train_060",
+    "paper_id": "2608.13368",
+    "question": "In what two key respects does the proposed sign language generator architecture differ from the original Multi Parallel U-Net?",
+    "reference_answer": "(1) Branches share identical input resolution rather than using pre-trained heterogeneous encoders; and (2) it introduces a United Loss consensus mechanism to coordinate training across branches.",
+    "is_multi_passage": false,
+    "supporting_chunks": [
+      "2608.13368_sec_005"
+    ],
+    "supporting_excerpts": [
+      "While our architecture draws inspiration from this fully parallel paradigm, it differs in two key respects: (1) our branches share identical input resolution rather than employing pre-trained heterogeneous encoders, and (2) our design introduces a United Loss consensus mechanism to coordinate training across branches"
+    ]
+  }
+]

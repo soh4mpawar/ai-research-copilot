@@ -1,0 +1,689 @@
+{
+  "provenance_status": "INDIVIDUALLY_AUTHORED_SEMANTIC_ANNOTATIONS",
+  "description": "Batch 02 semantic annotations personally authored by directly reading metadata-concealed question and passages for contexts ctx_tr_0049 to ctx_tr_0096. No programmatic regex heuristics, substring matches, or condition-tag lookups were used to assign labels.",
+  "batch": "Batch 02 (Families v2_train_013 to v2_train_024)",
+  "context_range": "ctx_tr_0049 to ctx_tr_0096",
+  "total_records": 48,
+  "counts": {
+    "sufficient": 27,
+    "insufficient": 21,
+    "ambiguous": 0
+  },
+  "annotations": [
+    {
+      "opaque_context_id": "ctx_tr_0049",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context does not define the Pedestrian Anomaly Behavior (PAB) benchmark, nor does it provide the number of synthetic pairs or behavior categories.",
+      "rationale": "Passage 1 introduces text-based person anomaly retrieval (TBAPS) generally, while passages 2-4 discuss LLM safety benchmarks, HumanTracker evaluation, and vision-language model probing. None of the passages describe the PAB benchmark or provide its synthetic pair and behavior category counts.",
+      "payload_hash": "15aeaeca26501d58048dba82147435b1a21ad2e54c9e5f57782f2d0995db62d7",
+      "question_hash": "64f7ad04eebffacdfdcd4c40c3c49fba6b577cf39a4cfb25792b8e164efe245b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0050",
+      "judgment": "sufficient",
+      "derivable_answer": "The study evaluated the commercial Fit3D ProScanner against the PolyCam mobile application running on iPhone 13 and iPhone 14 smartphone models.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We evaluated a representative application, PolyCam,\nagainst the commercial depth-sensor-based Fit3D ProScanner"
+        },
+        {
+          "passage_index": 2,
+          "quote": "And two smartphone models, iPhone 13 and iPhone 14 (Apple Inc., Cupertino, CA, USA), are used for scanning."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 identifies the mobile application PolyCam and commercial depth-sensor-based Fit3D ProScanner. Passage 2 explicitly names the phone models used for scanning as iPhone 13 and iPhone 14.",
+      "payload_hash": "e0019e4e613bbd462162ecb6478249fe992bf2a3d17a13b3963a37155ecaf502",
+      "question_hash": "68a413642c78b7073bc113d0e1cf0d3b7b9a85657f241eec85f90ca53c9e2142"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0051",
+      "judgment": "sufficient",
+      "derivable_answer": "AQuA prevents data leakage by making leakage-inducing actions unavailable to the agent: fixing the data pipeline, splits, labels, and evaluator before iteration begins, and restricting the agent to a domain-specific language (DSL) containing no operations for modifying or bypassing the sealed data path or evaluator.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "AQuA instead makes leakage-inducing actions unavailable to the agent. Each system fixes its data\n*Equal contribution 1\narXiv:2608.12841v1 [cs.CL] 13 Aug 2026\nAQuA: Recursively Self-Improving Quantitative Trading Research Agents\nFigure 1| Overview of the two AQuA systems. Factor discovery (Part I) and model development\n(Part II) use separate agents, memories, search spaces, and outputs. Each closes its own loop through\nhypothesis, construct/train, evaluate, validate, select/combine, and a persistent update that guides\nthe next iteration. pipeline, splits, labels, and evaluator before autonomous iteration begins. The agent can not write\narbitrary experimental code; it can only emit a program in a restricted domain-specific language\n(DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly and fully details how AQuA seals data paths, pre-fixes splits and evaluators, and restricts agent code emission strictly to a domain-specific language with no bypass operations.",
+      "payload_hash": "406b1f61edd5ec2c724c67f9e37eb12f94961d2744c64f9ed2c2e7f5cbaad22e",
+      "question_hash": "036241c366346da3c81fa3b9ee1e48fadca334f5b401ec4e22ea952c06ea6add"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0052",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context defines the bucketed temporal progression representation B(r) in Passage 1/2, but does not provide the condition (verifier score threshold theta or Tmax iteration limit) determining whether the loop terminates or revises.",
+      "rationale": "Passage 1 (and duplicate Passage 2) specify the ordered sequence of nonempty time buckets B(r) = (B1, ..., BK) grouping clinical findings. However, neither passage details the verification termination rule or score threshold governing CRAFT's accept/revise decision, while Passages 3 and 4 discuss an unrelated coding agent artifact refinement framework.",
+      "payload_hash": "c2f056f905013c44f23e533a9278b3c6add9be54703a9bc9a9ff53c640794922",
+      "question_hash": "8cbb9ddeeb1c4fb77e5f8effad04abf26ac04a9dbd135a2172f4b6996aa69481"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0053",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context identifies PolyCam and Fit3D ProScanner in Passages 1 and 2, but completely omits which smartphone models were used.",
+      "rationale": "Passages 1 and 2 mention PolyCam as a photogrammetric application and Fit3D ProScanner as the commercial scanner. However, the smartphone hardware models (iPhone 13 and iPhone 14) are not mentioned anywhere in the context, while Passages 3 and 4 describe unrelated clinical MRI benchmarks and synthetic limb datasets.",
+      "payload_hash": "8431677c8f5890e2e1b5f6e251fd76980faec1ca91219eabcf1098e0ac7b428e",
+      "question_hash": "68a413642c78b7073bc113d0e1cf0d3b7b9a85657f241eec85f90ca53c9e2142"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0054",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context explains CRAFT's temporal progression representation B(r) in Passage 1, but does not state the termination condition (score threshold theta or maximum iteration count Tmax) determining whether the generator-verifier loop terminates or revises.",
+      "rationale": "Passage 1 defines patient progression as an ordered sequence of nonempty time buckets B(r) = (B1, ..., BK), and Passage 2 provides high-level architectural framing. However, neither passage includes the verifier score threshold or iteration stopping condition, while Passages 3 and 4 describe an unrelated HTML artifact generation loop.",
+      "payload_hash": "184ef84ef53759ba7268b88fc2c4c4667d69e26d7ab09b9d5f079533a7caa4fc",
+      "question_hash": "8cbb9ddeeb1c4fb77e5f8effad04abf26ac04a9dbd135a2172f4b6996aa69481"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0055",
+      "judgment": "sufficient",
+      "derivable_answer": "The Pedestrian Anomaly Behavior (PAB) dataset is a large-scale benchmark for text-based person anomaly retrieval, containing over one million synthetic image–text training pairs covering 1,000 routine and 1,600 anomalous action categories.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The AI City Challenge 2026 Track 4 formulates TBA PS on the Pedestrian\nAnomalyBehavior(PAB)dataset[18],a large-scale benchmark consisting of over\none million synthetic image–text training pairs covering 1,000 routine and 1,600\nanomalous action categories."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 defines the PAB dataset as a large-scale benchmark formulated for text-based person anomaly retrieval, containing over 1 million synthetic pairs covering 1,000 routine and 1,600 anomalous action categories.",
+      "payload_hash": "f0e751df62990edac552abd2b5b1d3a45f9ee96851a05a1eed20596209ce7c35",
+      "question_hash": "64f7ad04eebffacdfdcd4c40c3c49fba6b577cf39a4cfb25792b8e164efe245b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0056",
+      "judgment": "sufficient",
+      "derivable_answer": "BAVGROUND comprises 206 source multiple-choice questions across eight thematic categories, with each category divided into two types: general-knowledge questions (GEN) and grounded questions (GRD).",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "The benchmark comprises 206 source\nquestions distributed across eight thematic categories of Bavarian culture and identity with two\ntypes each. Within each category, the benchmark\nis divided into two structurally distinct types (subsets). The first type (GEN) contains broadly accessible general-knowledge questions targeting widely\nrecognizable aspects of Bavarian culture. The second contains grounded questions (GRD) derived\nfrom regional journalism, anthropological monographs, and specialist historical sources"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the complete specification: 206 source questions across eight thematic categories, divided into two distinct question types (GEN general-knowledge and GRD grounded questions).",
+      "payload_hash": "f7d66a88ce1b676dc9b2ef60d71cac2cc8ac66174e6c127f360aa5b01781397a",
+      "question_hash": "b7d766aa5de5ee0e9a9f595382f66dd38688fec07d29b281aa2264239747560a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0057",
+      "judgment": "sufficient",
+      "derivable_answer": "SCOPE partitions each post-RoPE key into temporal, height, and width ranges of 3D RoPE and clusters them independently following product quantization. On HunyuanVideo-T2V, it achieves up to a 1.99x end-to-end speedup with 28.46dB PSNR relative to dense attention.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE\nand clustering them independently, following the compositional principle of product quantization [11]."
+        },
+        {
+          "passage_index": 1,
+          "quote": "In particular, SCOPE achieves up to a1.99× end-to-end speedup on\nHunyuanVideo-T2V, with28.46dB PSNR relative to the corresponding dense-attention output."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 explains the 3D-RoPE key partitioning and independent subspace clustering mechanism. Passage 1 provides the measured empirical results on HunyuanVideo-T2V (up to 1.99x speedup and 28.46dB PSNR).",
+      "payload_hash": "4e28ef809b3a8dc438049128b5dfab317edfb8fbd23cc8a69ad1b165e8c05385",
+      "question_hash": "0eabab4e20269bb311aa102b1245e9eeeedeef57b8b7a8a471f85e5aeb314a2c"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0058",
+      "judgment": "sufficient",
+      "derivable_answer": "In ReconSpan's implementation, the encoder is a Pythia-410M Transformer, the backward decoder is a Mamba2-130M backward model, and the latent code is the final 1024-dimensional hidden state.",
+      "supporting_quotations": [
+        {
+          "passage_index": 6,
+          "quote": "Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional\nhidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024]."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 6 (Section 3.4 Implementation overview) directly states all three requested facts: Pythia-410M encoder, Mamba2-130M backward decoder, and 1024-dimensional latent code.",
+      "payload_hash": "2efb8ffe794302d13c51190477f84815866bfa0ab981a4cd3382ce7b219c5dde",
+      "question_hash": "25807308c45c6f1b158e72c37e068f15da8b242aefdbb215667c8d974c8daf4b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0059",
+      "judgment": "sufficient",
+      "derivable_answer": "Under large binding shift in Table 3, QCR achieves a +20.1 percentage-point gain over No Memory, compared to +2.2 for Full Trajectory and +5.3 for Generic Summary.",
+      "supporting_quotations": [
+        {
+          "passage_index": 4,
+          "quote": "Binding shift Full Trajectory Generic Summary QCR\nNone +26.9 +18.2 +29.6\nSmall +19.3 +15.6 +28.6\nMedium +9.7 +10.2 +24.5\nLarge +2.2 +5.3 +20.1\nTable 3:Memory utility under binding shift.Entries are\npercentage-point gains over No Memory within each rewrite\nlevel."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 4 explicitly reproduces Table 3, reporting percentage-point gains over No Memory under Large rewrite as +20.1 for QCR, +2.2 for Full Trajectory, and +5.3 for Generic Summary.",
+      "payload_hash": "e7af0fba321eb21e1a2890d212398971b930302467d9045c20e1777d8093a271",
+      "question_hash": "ec1891d87a641c06d5e99e09e0210dc477a59ae981e1f6aea43df7b9427832b9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0060",
+      "judgment": "sufficient",
+      "derivable_answer": "ViTOED was created from social networks using 6,000 sentences from UIT-VSMEC and 5,010 raw comments from social media platforms, annotated using Doccano.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We use data from social networks, including 6,000 sentences\nfrom the UIT-VS MEC [3], and 5,010 comments were collected\nraw from our social media platforms."
+        },
+        {
+          "passage_index": 1,
+          "quote": "we use Doccano 1 to annotate the data with a\nfriendly user interface and easy setup on individual devices."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 specifies the two data sources with exact sample counts (6,000 sentences from UIT-VSMEC and 5,010 comments from social media) and names Doccano as the annotation tool.",
+      "payload_hash": "09f927062c08f00fe39c214925f3e91e746c208f14ab16df1c654bccd0319a42",
+      "question_hash": "e4d77b31d45a4d233cad9e9e4560d8766499aba03efad1ae679c92a52309a75b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0061",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes HounsWorld generally and cites loss equations, but omits the mathematical definition and components comprising the observation tuple O_{i,t}.",
+      "rationale": "Passages 1 through 4 outline the general world-model architecture and language loss Llang, but nowhere define the mathematical tuple O_{i,t} (volumetric CT scan, report text, contrast phase, dose, HU window, and query).",
+      "payload_hash": "208d7c29adc7aee7624d4b6efca96dd598663455eac97919ec194893f441cf3b",
+      "question_hash": "7564238d13d50854fcc9d59639c00e0e84521f4863186e47f368b199eb599158"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0062",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context mentions the intention to make data paths unreachable in Passage 1/2, but omits the technical enforcement mechanism: restricting the agent to a domain-specific language (DSL) without operations to bypass the sealed pipeline or evaluator.",
+      "rationale": "Passage 1 (and duplicate Passage 2) states that AQuA targets data leakage by making data paths unreachable rather than relying on agent self-judgment. However, it does not explain how this is enforced (via a restricted domain-specific language preventing arbitrary code execution), while Passages 3 and 4 focus on document MLLM privacy leakage.",
+      "payload_hash": "4f7a2876b1ad61d4cd64bce7a77e97c08a63f83fd8d6736c432701d391c14c77",
+      "question_hash": "036241c366346da3c81fa3b9ee1e48fadca334f5b401ec4e22ea952c06ea6add"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0063",
+      "judgment": "sufficient",
+      "derivable_answer": "CRAFT represents patient progression as an ordered sequence of nonempty time buckets B(r) = (B1, ..., BK) grouping concurrent findings from earliest to latest. The generator-verifier loop returns ACCEPT and terminates when the verifier score meets threshold theta, returns REVISE with feedback otherwise, or terminates when Tmax iterations are exhausted.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "produce an ordered sequence of nonempty time buckets\nB(r) = (B1, B2, . . . , BK),\nwhere each finding inF(r)is assigned to exactly one\nbucketB k, grouping together findings that occurred\nat the same point in the patient’s clinical course, and\nindex k orders the buckets from earliest to latest."
+        },
+        {
+          "passage_index": 4,
+          "quote": "When the score meets threshold\nθ, the verifier returns ACCEPT; otherwise it returns\nREVISE with targeted feedback for the next iteration. If no candidate is accepted within Tmax iterations, the\nloop terminates and the last candidate is returned."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 defines the ordered bucket representation B(r) = (B1, ..., BK). Passage 4 specifies the verifier termination/revision rule: score threshold theta for ACCEPT, REVISE with feedback otherwise, and termination upon reaching Tmax iterations.",
+      "payload_hash": "b96810839dd28322537ee0e45386b9fede70444accb4d54cc67af4a5c59331fc",
+      "question_hash": "8cbb9ddeeb1c4fb77e5f8effad04abf26ac04a9dbd135a2172f4b6996aa69481"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0064",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context includes Table 1 (overall end-to-end performance) in Passage 1, but omits Table 3 and the utility gains under large binding shift (+2.2, +5.3, +20.1).",
+      "rationale": "Passage 1 reports general end-to-end agent performance from Table 1, but does not provide Table 3 or the performance under large binding shifts. Passages 2, 3, and 4 discuss unrelated multi-hop QA, driving-video retrieval, and latent tokenization, leaving the requested numbers unavailable.",
+      "payload_hash": "50c585e44f2c927bad189927ad1ca89826067398c0870552f0c5c7cd9210fb66",
+      "question_hash": "ec1891d87a641c06d5e99e09e0210dc477a59ae981e1f6aea43df7b9427832b9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0065",
+      "judgment": "sufficient",
+      "derivable_answer": "The Pedestrian Anomaly Behavior (PAB) benchmark is a large-scale dataset for text-based person anomaly retrieval, containing over one million synthetic image–text pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first\nlarge-scale dataset for this task, containing over one million synthetic image–\ntext pairs covering 1,000 routine and 1,600 anomalous behaviors."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the definition of the PAB benchmark as the first large-scale text-based person anomaly retrieval dataset, containing over 1 million synthetic pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+      "payload_hash": "3d4e9fece68beba1c7871e4988ec51f0af7b191d6692bf678bcc720ffe11a5ef",
+      "question_hash": "64f7ad04eebffacdfdcd4c40c3c49fba6b577cf39a4cfb25792b8e164efe245b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0066",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context provides an architectural abstract of HounsWorld in Passage 1, but does not state the mathematical components that comprise the observation tuple O_{i,t}.",
+      "rationale": "Passage 1 outlines the general clinical world model concept, but does not provide the formal mathematical formulation of the observation tuple O_{i,t}. Passages 2, 3, and 4 discuss prompt databases, physical occlusion experiments, and calibration failures, providing no medical vision-language modeling formulations.",
+      "payload_hash": "e316fc07b84785e5d2ecabd778cc9ed16307ee4464f8136ea8ed02639ce709e7",
+      "question_hash": "7564238d13d50854fcc9d59639c00e0e84521f4863186e47f368b199eb599158"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0067",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 state the total dictionary size (62,112 entries), but truncate before providing the breakdown of entries derived from Wiktionary versus LLM generation.",
+      "rationale": "Passages 1 and 2 report that the FastThaiG2P IPA dictionary contains 62,112 entries, but the passage truncates after describing Manual Overrides, omitting the numerical counts for Wiktionary entries (~13,000) and LLM-generated entries (~49,000). Passages 3 and 4 discuss unrelated QA retrieval evaluation.",
+      "payload_hash": "937cfaae4f889a085797227ea51f3001b0a838035c9e63fca270d9bcbc048e99",
+      "question_hash": "f1cb7cbf8cd71222547cd6d84d51bc1e41518a576359f471513549488c0d526f"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0068",
+      "judgment": "sufficient",
+      "derivable_answer": "The Pedestrian Anomaly Behavior (PAB) benchmark is a large-scale dataset for text-based person anomaly retrieval, containing over one million synthetic image–text pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The Pedestrian Anomaly Behavior (PAB) benchmark [18] established the first\nlarge-scale dataset for this task, containing over one million synthetic image–\ntext pairs covering 1,000 routine and 1,600 anomalous behaviors."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 (as well as Passages 2 and 3) explicitly defines the PAB benchmark for text-based person anomaly retrieval and states the dataset scale: over 1 million synthetic pairs covering 1,000 routine and 1,600 anomalous behaviors.",
+      "payload_hash": "c61a0d85ac6596bb42860215a881f01310d168d7b5240d76ab298806d5476377",
+      "question_hash": "64f7ad04eebffacdfdcd4c40c3c49fba6b577cf39a4cfb25792b8e164efe245b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0069",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "The context gives the total number of unique prompts (57.5K) in Passages 1 and 2, but does not provide the breakdown of prompts originating from chat.completion.create versus PromptTemplate.",
+      "rationale": "Passages 1 and 2 (duplicate) state that 57.5K unique prompt samples were collected from GitHub. However, neither passage reports the origin breakdown between chat.completion.create and PromptTemplate, while Passages 3 and 4 discuss unrelated WildChat rewritten prompt benchmarks and synthetic persona post-training.",
+      "payload_hash": "39807cdb141d06f6fb7ef2f52d1de278e858af741d822500164b1391e9e03b70",
+      "question_hash": "7c2015e63a44b4ea367628beb67efc6355b76ad7b9d4074f06543d011c79d82a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0070",
+      "judgment": "sufficient",
+      "derivable_answer": "Under large binding shift in Table 3, QCR achieves a +20.1 percentage-point gain over No Memory, compared to +2.2 for Full Trajectory and +5.3 for Generic Summary.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Binding shift Full Trajectory Generic Summary QCR\nNone +26.9 +18.2 +29.6\nSmall +19.3 +15.6 +28.6\nMedium +9.7 +10.2 +24.5\nLarge +2.2 +5.3 +20.1\nTable 3:Memory utility under binding shift.Entries are\npercentage-point gains over No Memory within each rewrite\nlevel."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 reproduces Table 3, reporting percentage-point gains over No Memory under Large rewrite as +20.1 for QCR, +2.2 for Full Trajectory, and +5.3 for Generic Summary.",
+      "payload_hash": "8e0cf15243d367bc9745188021737f9acde60f18ac2b935fae74179a5528d7d7",
+      "question_hash": "ec1891d87a641c06d5e99e09e0210dc477a59ae981e1f6aea43df7b9427832b9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0071",
+      "judgment": "sufficient",
+      "derivable_answer": "BAVGROUND comprises 206 source multiple-choice questions across eight thematic categories, with each category divided into two types: general-knowledge questions (GEN) and grounded questions (GRD).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The benchmark comprises 206 source\nquestions distributed across eight thematic categories of Bavarian culture and identity with two\ntypes each. Within each category, the benchmark\nis divided into two structurally distinct types (subsets). The first type (GEN) contains broadly accessible general-knowledge questions targeting widely\nrecognizable aspects of Bavarian culture. The second contains grounded questions (GRD) derived\nfrom regional journalism, anthropological monographs, and specialist historical sources"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the complete dataset breakdown: 206 source questions across eight thematic categories, structured into GEN (general-knowledge) and GRD (grounded) question types.",
+      "payload_hash": "384604ad312a5e7ab06a6f024f296d83057b6083478369a36ba13700916813c7",
+      "question_hash": "b7d766aa5de5ee0e9a9f595382f66dd38688fec07d29b281aa2264239747560a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0072",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context notes that data leakage is targeted by making the data path and evaluator unreachable from the agent in Passage 1, but omits the actual mechanism: restricting the agent to a domain-specific language (DSL) without operations for bypassing the sealed data pipeline or evaluator.",
+      "rationale": "Passage 1 mentions that AQuA prevents data leakage by making data paths unreachable rather than relying on agent self-judgment. However, it does not explain how this is enforced (via a restricted domain-specific language preventing arbitrary code execution), and Passages 2 through 4 focus on document MLLM privacy leakage.",
+      "payload_hash": "539ae628bcb05fb93cecb70e14cd5643bc4d4abada587fd1bd7de7c8e794e0ac",
+      "question_hash": "036241c366346da3c81fa3b9ee1e48fadca334f5b401ec4e22ea952c06ea6add"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0073",
+      "judgment": "sufficient",
+      "derivable_answer": "The study evaluated the commercial Fit3D ProScanner against the PolyCam mobile application running on iPhone 13 and iPhone 14 smartphone models.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "namely PolyCam, as a photogrammetric reconstruction application and Fit3D ProScanner as a commercial depth-sensor-based body scanner."
+        },
+        {
+          "passage_index": 1,
+          "quote": "And two smartphone models, iPhone 13 and iPhone 14 (Apple Inc., Cupertino, CA, USA), are used for scanning."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 names PolyCam and Fit3D ProScanner as the evaluated photogrammetric application and commercial body scanner, and Passage 1 explicitly identifies iPhone 13 and iPhone 14 as the smartphone models used.",
+      "payload_hash": "3c69aa7b1b9a826c388ca4ec0b84b04c036e6fbae4ad464e95b6b731e4dacb43",
+      "question_hash": "68a413642c78b7073bc113d0e1cf0d3b7b9a85657f241eec85f90ca53c9e2142"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0074",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context names PolyCam and Fit3D ProScanner in Passages 1 and 2, but completely omits which smartphone models were used.",
+      "rationale": "Passages 1 and 2 mention PolyCam as a photogrammetric application and Fit3D ProScanner as the commercial scanner. However, the smartphone models (iPhone 13 and iPhone 14) are not mentioned anywhere in the context, while Passages 3 and 4 describe unrelated clinical MRI benchmarks and synthetic limb datasets.",
+      "payload_hash": "95a4ae40909da9301da30898d2f358c264c76b9e8dbbba9d9f619239f59590e5",
+      "question_hash": "68a413642c78b7073bc113d0e1cf0d3b7b9a85657f241eec85f90ca53c9e2142"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0075",
+      "judgment": "sufficient",
+      "derivable_answer": "In Prompts in the Wild, 57,640 unique prompts were collected in total (57.5K), of which 36,916 originated from chat.completion.create and 20,724 from PromptTemplate.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "This process resulted in\n57,640 unique prompts. Of these, 36,916 came\nfrom chat.completion.create and 20,724 from\nPromptTemplate."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly provides the total unique prompt count (57,640) and the exact counts originating from chat.completion.create (36,916) and PromptTemplate (20,724).",
+      "payload_hash": "8196ae9914701369d1c6cf3d84cdb6ca100028b3929a27d95ed052c379d6b0f2",
+      "question_hash": "7c2015e63a44b4ea367628beb67efc6355b76ad7b9d4074f06543d011c79d82a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0076",
+      "judgment": "sufficient",
+      "derivable_answer": "In Prompts in the Wild, 57,640 unique prompts were collected in total (57.5K), of which 36,916 originated from chat.completion.create and 20,724 from PromptTemplate.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "This process resulted in\n57,640 unique prompts. Of these, 36,916 came\nfrom chat.completion.create and 20,724 from\nPromptTemplate."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the complete answer: 57,640 unique prompts, with 36,916 from chat.completion.create and 20,724 from PromptTemplate.",
+      "payload_hash": "1c133567d19f0f029aedd0253e3eda8c1fe9a6e5c94666666f56ab5f9dd13f8b",
+      "question_hash": "7c2015e63a44b4ea367628beb67efc6355b76ad7b9d4074f06543d011c79d82a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0077",
+      "judgment": "sufficient",
+      "derivable_answer": "In ReconSpan's implementation, the encoder is a Pythia-410M Transformer, the backward decoder is a Mamba2-130M backward model, and the latent code is the final 1024-dimensional hidden state.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Our encoder is a Pythia-410M Transformer [Biderman et al., 2023] whose final 1024-dimensional\nhidden state is the code; the decoder is a Mamba2-130M backward model [Dao and Gu, 2024]."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly reports that the encoder is a Pythia-410M Transformer, the decoder is a Mamba2-130M backward model, and the latent code is the 1024-dimensional hidden state.",
+      "payload_hash": "f7be732f73d5945cc3843c486eea8d21fbc6ef4b2e858786416731a7a9b304a2",
+      "question_hash": "25807308c45c6f1b158e72c37e068f15da8b242aefdbb215667c8d974c8daf4b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0078",
+      "judgment": "sufficient",
+      "derivable_answer": "FastThaiG2P combines a 62,112-word IPA dictionary, containing about 13,000 entries derived from Wiktionary and approximately 49,000 entries generated by Claude Opus 4.6 via Amazon Bedrock.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The system combines a 62,112-word IPA\ndictionary"
+        },
+        {
+          "passage_index": 2,
+          "quote": "Wiktionary( sources/wiktionary_ipa.json) about 13,000 entries extracted from the Thai\nWiktionary dump."
+        },
+        {
+          "passage_index": 2,
+          "quote": "LLM Transcription( sources/generated_ipa.json) approximately 49,000 entries generated\nby Claude Opus 4.6 via Amazon Bedrock."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 gives the overall dictionary size of 62,112 words, and Passage 2 breaks down the sources into about 13,000 entries from Wiktionary and approximately 49,000 entries from LLM generation.",
+      "payload_hash": "894eaeaeb1e594ae6e6b46b48aa803e8134313c6fa17e6326dc8ff4921b26f2a",
+      "question_hash": "f1cb7cbf8cd71222547cd6d84d51bc1e41518a576359f471513549488c0d526f"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0079",
+      "judgment": "sufficient",
+      "derivable_answer": "FastThaiG2P's IPA dictionary contains 62,112 entries, with about 13,000 entries extracted from Wiktionary and approximately 49,000 entries generated by Claude Opus 4.6 via Amazon Bedrock.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "The 62,112-entry IPA dictionary was built from three main sources"
+        },
+        {
+          "passage_index": 1,
+          "quote": "Wiktionary( sources/wiktionary_ipa.json) about 13,000 entries extracted from the Thai\nWiktionary dump."
+        },
+        {
+          "passage_index": 1,
+          "quote": "LLM Transcription( sources/generated_ipa.json) approximately 49,000 entries generated\nby Claude Opus 4.6 via Amazon Bedrock."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the total size (62,112 entries), while Passage 1 provides the specific counts for Wiktionary (~13,000 entries) and LLM transcription (~49,000 entries).",
+      "payload_hash": "4d3ba595d2eadae2007d889a0316812b4c56f370c15ebc2c8a028f06e8470267",
+      "question_hash": "f1cb7cbf8cd71222547cd6d84d51bc1e41518a576359f471513549488c0d526f"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0080",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context gives an overview abstract of HounsWorld in Passages 1 and 2, but completely omits the formal mathematical formulation of the observation tuple O_{i,t}.",
+      "rationale": "Passages 1 and 2 describe the clinical motivation and high-level architecture of HounsWorld, but do not provide the mathematical notation or components comprising O_{i,t}, while Passages 3 and 4 focus on physical reasoning and occlusion benchmarks.",
+      "payload_hash": "834c7747470568b396fe1691f3b6971d8aacf261f0c2b0d149b690829d5a4f8b",
+      "question_hash": "7564238d13d50854fcc9d59639c00e0e84521f4863186e47f368b199eb599158"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0081",
+      "judgment": "sufficient",
+      "derivable_answer": "SCOPE partitions each post-RoPE key into temporal, height, and width ranges of 3D RoPE and clusters them independently. On HunyuanVideo-T2V, it achieves up to a 1.99x end-to-end speedup with 28.46dB PSNR relative to dense attention.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "partitioning each post-RoPE key into temporal, height and width ranges of 3D RoPE\nand clustering them independently, following the compositional principle of product quantization [11]."
+        },
+        {
+          "passage_index": 1,
+          "quote": "achieving up to a1.99× end-to-end speedup on 720p\nHunyuanVideo with28.46dB PSNR relative to dense attention."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 explains the 3D-RoPE key partitioning and clustering mechanism. Passage 1 provides the measured empirical results on HunyuanVideo (up to 1.99x speedup and 28.46dB PSNR).",
+      "payload_hash": "5b1cae7fb96704d7160096c8bddd3c84d79b811b60c7de7ebf190f28fa6f94ce",
+      "question_hash": "0eabab4e20269bb311aa102b1245e9eeeedeef57b8b7a8a471f85e5aeb314a2c"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0082",
+      "judgment": "sufficient",
+      "derivable_answer": "BAVGROUND contains 206 source multiple-choice questions across eight thematic categories, combining broadly accessible general-knowledge questions with source-grounded regional questions.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "BAVGROUNDcontains 206 source multiple-choice\nquestions across eight thematic categories, translated into English, German, and Bavarian, yielding\n618 evaluation instances."
+        },
+        {
+          "passage_index": 1,
+          "quote": "The benchmark combines\nbroadly accessible general-knowledge questions\nwith source-grounded regional questions derived\nfrom regional journalism, anthropological monographs, and specialist historical sources."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly answers all three parts: 206 source questions, eight thematic categories, and two question types (general-knowledge questions and source-grounded regional questions).",
+      "payload_hash": "230fc4b1c9d00cd5ad50d6f5f9b9458dc24fde718022490c3aedd3d01c71b183",
+      "question_hash": "b7d766aa5de5ee0e9a9f595382f66dd38688fec07d29b281aa2264239747560a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0083",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context reports that 57.5K unique prompt samples were collected from GitHub in Passage 1, but omits the breakdown between chat.completion.create and PromptTemplate.",
+      "rationale": "Passage 1 describes the collection of 57.5K transactional prompts from GitHub, but does not provide the sub-counts for chat.completion.create and PromptTemplate, while Passages 2-4 discuss WildChat rewriting, synthetic persona post-training, and gender-associated prompt features.",
+      "payload_hash": "7836d52ae74a38868471aa15049645c8a1e0cfae4cc29376927f70f414b2a0f5",
+      "question_hash": "7c2015e63a44b4ea367628beb67efc6355b76ad7b9d4074f06543d011c79d82a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0084",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes theoretical autoencoder equations in Passages 1 and 2, but omits the Section 3.4 Implementation Overview detailing the specific model architectures (Pythia-410M and Mamba2-130M) and the 1024-dimensional latent code size.",
+      "rationale": "Passages 1 and 2 provide the theoretical definition of the prefix encoder and backward decoder, but do not provide the concrete model implementations (Pythia-410M, Mamba2-130M) or the latent code dimensionality. Passages 3 and 4 discuss unrelated ViT architectures.",
+      "payload_hash": "514ec9e3c2e87b80491e15c06c89616ba362cad3609051d7b6604726277c30cd",
+      "question_hash": "25807308c45c6f1b158e72c37e068f15da8b242aefdbb215667c8d974c8daf4b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0085",
+      "judgment": "sufficient",
+      "derivable_answer": "AQuA prevents research agents from exploiting data leakage by fixing the data pipeline, splits, labels, and evaluator before iteration begins, and restricting the agent to a domain-specific language (DSL) containing no operations for modifying or bypassing the sealed data path or evaluator.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "AQuA instead makes leakage-inducing actions unavailable to the agent. Each system fixes its data\n*Equal contribution 1\narXiv:2608.12841v1 [cs.CL] 13 Aug 2026\nAQuA: Recursively Self-Improving Quantitative Trading Research Agents\nFigure 1| Overview of the two AQuA systems. Factor discovery (Part I) and model development\n(Part II) use separate agents, memories, search spaces, and outputs. Each closes its own loop through\nhypothesis, construct/train, evaluate, validate, select/combine, and a persistent update that guides\nthe next iteration. pipeline, splits, labels, and evaluator before autonomous iteration begins. The agent can not write\narbitrary experimental code; it can only emit a program in a restricted domain-specific language\n(DSL), which contains no operation for modifying or bypassing the sealed data path or evaluator."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 completely describes AQuA's integrity boundary: pre-fixing pipeline, splits, labels, and evaluators, and restricting agent code generation to a DSL devoid of bypass operations.",
+      "payload_hash": "42721ab8b5e1e61290ca56c32d5698cdf3a426168343f770a497c9933c9a5f3f",
+      "question_hash": "036241c366346da3c81fa3b9ee1e48fadca334f5b401ec4e22ea952c06ea6add"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0086",
+      "judgment": "sufficient",
+      "derivable_answer": "BAVGROUND contains 206 source multiple-choice questions across eight thematic categories, combining broadly accessible general-knowledge questions with source-grounded regional questions.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "BAVGROUNDcontains 206 source multiple-choice\nquestions across eight thematic categories, translated into English, German, and Bavarian, yielding\n618 evaluation instances."
+        },
+        {
+          "passage_index": 1,
+          "quote": "The benchmark combines\nbroadly accessible general-knowledge questions\nwith source-grounded regional questions derived\nfrom regional journalism, anthropological monographs, and specialist historical sources."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides all three facts: 206 source questions, eight thematic categories, and two question types (general-knowledge questions and source-grounded regional questions).",
+      "payload_hash": "581221f214f6daeb903996c26056944c86702d769f2994a4b7eba9db682c858b",
+      "question_hash": "b7d766aa5de5ee0e9a9f595382f66dd38688fec07d29b281aa2264239747560a"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0087",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context gives aggregate counts (10,985 comments, 21,244 quadruples) in Passage 1, but omits the source datasets (UIT-VSMEC with 6,000 sentences, 5,010 raw social media comments) and the annotation tool utilized (Doccano).",
+      "rationale": "Passage 1 gives the overall dataset scale of ViTOED, but does not provide the constituent source datasets (UIT-VSMEC vs social media platforms) or sample breakdowns, nor does it identify the annotation tool (Doccano), while Passages 2-4 discuss unrelated object grounding, detection, and error analyses.",
+      "payload_hash": "37a47f7d864ea6f56196630dc017e14ed43d02d55f767a6dd7eea4b20110f47a",
+      "question_hash": "e4d77b31d45a4d233cad9e9e4560d8766499aba03efad1ae679c92a52309a75b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0088",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context includes Table 1 (general end-to-end performance) in Passages 1 and 2, but completely omits Table 3 and the binding shift utility results (+2.2, +5.3, +20.1).",
+      "rationale": "Passages 1 and 2 (duplicate) report overall success and token counts across agent environments from Table 1, but do not provide Table 3 or the performance under large binding shifts. Passages 3 and 4 discuss unrelated multi-hop QA and driving-video benchmarks.",
+      "payload_hash": "951303f0723d453fc277be4926800d98853202fdb96ab6b53321b2097a31b58c",
+      "question_hash": "ec1891d87a641c06d5e99e09e0210dc477a59ae981e1f6aea43df7b9427832b9"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0089",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context includes the general paper abstract in duplicate Passages 1 and 2, but completely omits the component datasets (UIT-VSMEC and social media platform comments), their sample counts (6,000 and 5,010), and the annotation tool (Doccano).",
+      "rationale": "Passages 1 and 2 only report total aggregated counts (10,985 comments) and quadruple categories, without mentioning the source datasets (UIT-VSMEC) or their sample counts, or the annotation software Doccano. Passages 3 and 4 discuss unrelated object referring captions and annotation error analysis.",
+      "payload_hash": "3486a550b787556fcdf7fa55dad0fc35cfd18343ec6b2632ebf0f8fba3b9a408",
+      "question_hash": "e4d77b31d45a4d233cad9e9e4560d8766499aba03efad1ae679c92a52309a75b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0090",
+      "judgment": "sufficient",
+      "derivable_answer": "CRAFT represents patient progression as an ordered sequence of nonempty time buckets B(r) = (B1, ..., BK) grouping concurrent findings from earliest to latest. The generator-verifier loop returns ACCEPT and terminates when the verifier score meets threshold theta, returns REVISE with feedback otherwise, or terminates when Tmax iterations are exhausted.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "produce an ordered sequence of nonempty time buckets\nB(r) = (B1, B2, . . . , BK),\nwhere each finding inF(r)is assigned to exactly one\nbucketB k, grouping together findings that occurred\nat the same point in the patient’s clinical course, and\nindex k orders the buckets from earliest to latest."
+        },
+        {
+          "passage_index": 2,
+          "quote": "When the score meets threshold\nθ, the verifier returns ACCEPT; otherwise it returns\nREVISE with targeted feedback for the next iteration. If no candidate is accepted within Tmax iterations, the\nloop terminates and the last candidate is returned."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 provides the formal time bucket representation B(r) = (B1, ..., BK). Passage 2 defines the termination and revision condition: verifier score threshold theta for ACCEPT, REVISE with feedback otherwise, and termination upon Tmax iterations.",
+      "payload_hash": "5baeca6de12c92480dba5800cd175febcb4484df261645d8ea6872c90d2e6950",
+      "question_hash": "8cbb9ddeeb1c4fb77e5f8effad04abf26ac04a9dbd135a2172f4b6996aa69481"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0091",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Passages 1 and 2 explain the 3D-RoPE key partitioning and clustering mechanism, but omit the specific empirical speedup (up to 1.99x) and PSNR (28.46dB) achieved on HunyuanVideo-T2V.",
+      "rationale": "The context details how SCOPE partitions post-RoPE keys into temporal, height, and width ranges and clusters them independently. However, neither Passage 1 nor 2 provides the measured speedup or PSNR values on HunyuanVideo-T2V, and Passages 3-4 discuss unrelated video DiT and streaming architectures.",
+      "payload_hash": "67e31911ca8742de162642378f77ceddc75bfaf985d5927d8cffe04fb651c785",
+      "question_hash": "0eabab4e20269bb311aa102b1245e9eeeedeef57b8b7a8a471f85e5aeb314a2c"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0092",
+      "judgment": "sufficient",
+      "derivable_answer": "SCOPE partitions keys into temporal, height, and width ranges of 3D-RoPE and clusters them independently. On HunyuanVideo-T2V, it achieves up to a 1.99x end-to-end speedup with 28.46dB PSNR relative to dense attention.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We propose 3D-RoPE-aligned key subspace clustering, which independently clusters the temporal, height\nand width channel ranges and composes their centroid scores into fine-grained key-level proxy log its\nwith additive scoring cost."
+        },
+        {
+          "passage_index": 1,
+          "quote": "In particular, SCOPE achieves up to a1.99× end-to-end speedup on\nHunyuanVideo-T2V, with28.46dB PSNR relative to the corresponding dense-attention output."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly presents both key subspace clustering across temporal, height, and width ranges of 3D-RoPE and the empirical performance on HunyuanVideo-T2V (up to 1.99x speedup, 28.46dB PSNR).",
+      "payload_hash": "ddbf1ed8914edfd17cf20bbf4dff7a9f7421d95b151f4a91891db9ea88ef1d0f",
+      "question_hash": "0eabab4e20269bb311aa102b1245e9eeeedeef57b8b7a8a471f85e5aeb314a2c"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0093",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context gives the total dictionary size (62,112 entries) in Passages 1 and 2, but omits the numerical breakdown of entries derived from Wiktionary versus LLM generation.",
+      "rationale": "Passages 1 and 2 mention the 62,112-entry dictionary, but Passage 2 terminates after describing Manual Overrides, leaving the Wiktionary and LLM generation counts missing. Passages 3 and 4 describe unrelated multi-hop QA and stylistic novel analyses.",
+      "payload_hash": "22b492af6c04d159ac8e4a764dfb4db2cd4d56536a9ec90f489110eca928e39f",
+      "question_hash": "f1cb7cbf8cd71222547cd6d84d51bc1e41518a576359f471513549488c0d526f"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0094",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context outlines the generic prefix encoder and backward decoder formulation in Passage 1, but does not provide the concrete model sizes (Pythia-410M, Mamba2-130M) or the latent code dimensionality (1024).",
+      "rationale": "Passage 1 outlines the generic prefix encoder and backward decoder formulation, but does not provide the concrete model sizes (Pythia-410M, Mamba2-130M) or the latent code dimensionality (1024), while Passages 2-4 discuss segmentation recalibration and recursive ViT architectures.",
+      "payload_hash": "3e9fdae030f5df94f4e33537dd1b9bc1b29b98608972fe6573c0a1b8d6f97106",
+      "question_hash": "25807308c45c6f1b158e72c37e068f15da8b242aefdbb215667c8d974c8daf4b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0095",
+      "judgment": "sufficient",
+      "derivable_answer": "ViTOED was created from social networks using 6,000 sentences from UIT-VSMEC and 5,010 raw comments collected from social media platforms, annotated using Doccano.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "We use data from social networks, including 6,000 sentences\nfrom the UIT-VS MEC [3], and 5,010 comments were collected\nraw from our social media platforms."
+        },
+        {
+          "passage_index": 2,
+          "quote": "we use Doccano 1 to annotate the data with a\nfriendly user interface and easy setup on individual devices."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the complete dataset construction details: 6,000 sentences from UIT-VSMEC, 5,010 comments from social media platforms, and Doccano as the annotation interface.",
+      "payload_hash": "c796a72e5f74a709909467bfc1726cc87e46b982fbfeb501310cf85d42cce130",
+      "question_hash": "e4d77b31d45a4d233cad9e9e4560d8766499aba03efad1ae679c92a52309a75b"
+    },
+    {
+      "opaque_context_id": "ctx_tr_0096",
+      "judgment": "sufficient",
+      "derivable_answer": "In HounsWorld, the observation tuple Oi,t comprises: the volumetric CT scan (oct_i,t), clinical report text (otext_i,t), acquisition condition descriptors (cphase_i,t for contrast phase, cdose_i,t for radiation dose, cHU_i,t for Hounsfield-unit window), and a task query (q_i,t).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Here,o ct is a CT volume and o text is a report;c phase,c dose, and c HU specify the contrast phase, acquisition\ndose, and HU window under which the CT is observed; and q is a query."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 defines the observation tuple Oi,t explicitly: oct is a CT volume, otext is a report, condition parameters cphase, cdose, cHU specify contrast phase, acquisition dose, and HU window, and q is a query.",
+      "payload_hash": "71890a6981e51138c6500949881c570d3fe10cdfbd0e97e5deec446bf2ffbd52",
+      "question_hash": "7564238d13d50854fcc9d59639c00e0e84521f4863186e47f368b199eb599158"
+    }
+  ]
+}

@@ -1,0 +1,592 @@
+[
+  {
+    "family_id": "v2_test_001",
+    "paper_id": "2608.11847",
+    "question_type": "single_passage",
+    "question": "In the LOOKBACK framework for scoring LVLM responses, how is the token-level visual lookback score At formally defined across layers L and attention heads H?",
+    "primary_chunk_id": "2608.11847_sec_016",
+    "support_chunk_ids": [
+      "2608.11847_sec_016"
+    ],
+    "support_excerpts": [
+      "Let Ct\ndenote the full causal context at the prediction step\nfor yt, comprising text query tokens, vision tokens,\nand previous output tokens. Let Pv ⊂C t denote\nthe positions corresponding to vision tokens v.",
+      "We define the token-level visual\nlookback scoreA t as:\nAt = 1\nLH\nLX\nℓ=1\nHX\nh=1\nP\nk∈Pv a(ℓ,h)\nt,k\nP\nk∈Ct a(ℓ,h)\nt,k\n,(3)\nwhere L and H denote the number of layers and\natt"
+    ],
+    "replacement_chunk_id": "2608.11847_sec_018",
+    "replacement_topic": "Entropy-regularized relevance maximization and proposition 1 for response weighting"
+  },
+  {
+    "family_id": "v2_test_002",
+    "paper_id": "2608.12447",
+    "question_type": "single_passage",
+    "question": "In the PDSF basis construction for transformer residual streams, what are the four strictly orthogonal components into which the hidden state h is decomposed, and how are the adaptive rank clamps defined for D and S?",
+    "primary_chunk_id": "2608.12447_sec_013",
+    "support_chunk_ids": [
+      "2608.12447_sec_013"
+    ],
+    "support_excerpts": [
+      "The strict orthogonality hP ⊥ hD ⊥ hS ⊥ hF ensures that\ninterventions on one subspace do not mechanically contaminate another",
+      "2. D (Discriminative) : top-k PCA of the P-residuals H⊥ across all prompts. Adaptive rank set\nby participation ratio: kD = round(P R), clamped to [2, 12].",
+      "3. S (Situational) : top-k PCA of the double residual after removing both P and D. Same PRadaptive rank procedure, clamped to [4, 16].",
+      "4. F (F ramework): hF = h⊥⊥ − hS. The high-dimensional residual spanning thousands of\ndimensions."
+    ],
+    "replacement_chunk_id": "2608.12447_sec_020",
+    "replacement_topic": "Matched-dimensionality random control and KL divergence metrics for subspace specificity"
+  },
+  {
+    "family_id": "v2_test_003",
+    "paper_id": "2608.12486",
+    "question_type": "single_passage",
+    "question": "In the DIVE framework, how is the Upper Confidence Bound (UCB) score defined to adaptively allocate the evolution budget across heterogeneous operators, and how is the parent-relative reward R_tau calculated?",
+    "primary_chunk_id": "2608.12486_sec_011",
+    "support_chunk_ids": [
+      "2608.12486_sec_011"
+    ],
+    "support_excerpts": [
+      "To\nadaptively allocate the evolution budget across operators,\nwe balance exploitation and exploration using an upper confidence-bound (UCB) score:\nUCBa(t) =bµa(t) +β\ns\nlog t\nNa(t) ,(11)",
+      "whereN a(t)denotes the number of times operator a has\nbeen selected before step t, and\nbµa(t) = 1\nNa(t)\nX\nτ <t:aτ =a\nRτ (12)\nis its empirical mean parent-relative reward.",
+      "Here,Rτ ≜\nU(s ′\nτ )−max s∈Pτ U(s)denotes the improvement of the proposed skill over its best-performing parent at stepτ, where\nU(s)denotes the average correctness of skills."
+    ],
+    "replacement_chunk_id": "2608.12486_sec_010",
+    "replacement_topic": "Independent skill population construction and seed skill initialization"
+  },
+  {
+    "family_id": "v2_test_004",
+    "paper_id": "2608.12511",
+    "question_type": "multi_passage",
+    "question": "In the systematic literature review methodology for software privacy documents, how many papers were extracted during initial collection, how were author disagreements resolved to retain 171 papers, and how many papers resulted from forward and backward snowballing?",
+    "primary_chunk_id": "2608.12511_sec_018",
+    "support_chunk_ids": [
+      "2608.12511_sec_018",
+      "2608.12511_sec_019"
+    ],
+    "support_excerpts": [
+      "We extracted 218 papers after completing\nthe initial data collection. To minimize the number of false\npositives in our set, we conducted an additional round of\nreview at this point. Since each venue was checked by two\nauthors, the third author, who did not initially search for a\ngiven venue, reviewed any disagreements between the papers\ncollected by the other two authors.",
+      "the third author examined\nthe title and abstract and wrote a short rationale for inclusion\nor exclusion. All authors then discussed and approved these\nrationales before finalizing the decisions. The final decisions\nwere based on whether each paper satisfied the criteria listed\nabove. After this filtering stage, 171 papers remained.",
+      "which yielded 286 additional papers for forward\nsnowballing and 228 additional papers for backward snow"
+    ],
+    "replacement_chunk_id": "2608.12511_sec_020",
+    "replacement_topic": "Summary of research trends and open opportunities across privacy document lifecycle stages"
+  },
+  {
+    "family_id": "v2_test_005",
+    "paper_id": "2608.12571",
+    "question_type": "single_passage",
+    "question": "In evaluating legal citation support verification, what are the three corruption strategies used to generate synthetic negatives, and why can Same-Document Corruption not be constructed for the BriefMe dataset?",
+    "primary_chunk_id": "2608.12571_sec_011",
+    "support_chunk_ids": [
+      "2608.12571_sec_011"
+    ],
+    "support_excerpts": [
+      "Random Document Corruption (Easy).We replace the\ncitation with one from an entirely different legal document. This tests basic relevance detection: the replacement cited\ndocument shares almost no topical overlap with the original\nproposition.",
+      "Same-Document Corruption (Medium).We replace the\ncitation with a different citation found in the preceding\nparagraphs of the same source document. Both citations\nappear in related legal contexts, but the replacement does\nnot support the specific proposition. Since BriefMe does\nnot include preceding paragraphs, we can not construct this\ncorruption for that dataset.",
+      "Wrong Page Number Corruption (Hard).We change\nonly the pinpoint page number within the same case (e.g.,\n“500 U.S. at 105” → “500 U.S. at 112”). The citation still\nreferences the same case but points to a different page discussing a different legal issue."
+    ],
+    "replacement_chunk_id": "2608.12571_sec_008",
+    "replacement_topic": "Legal citation taxonomy classifying substantive, procedural history, and secondary citations"
+  },
+  {
+    "family_id": "v2_test_006",
+    "paper_id": "2608.12623",
+    "question_type": "multi_passage",
+    "question": "In the Unsupported Groundedness auditing algorithm for black-box language model classifiers, how is the consistency drift score D_sup(x) calculated from quoted evidence spans, and how is the document drift score D_doc(x) computed from keep/drop and local view probes?",
+    "primary_chunk_id": "2608.12623_sec_014",
+    "support_chunk_ids": [
+      "2608.12623_sec_014",
+      "2608.12623_sec_015"
+    ],
+    "support_excerpts": [
+      "Evidence-support consistency.For each valid\nevidence span ej, we re-query the model on only\nthe span text and obtain a label voteˆy(ej). Let\nVℓ(E) = 1\nm\nmX\nj=1\nI[ˆy(ej) =ℓ]. The consistency drift score is\nDsup(x) = max\nℓ̸=yB\nVℓ(E)−V yB(E),\nwith missing or invalid evidence assigned high drift.",
+      "We query the model on x keep,\nthe concatenation of valid evidence spans, and\nx drop, the original input with those spans removed. Their indicator values are\nIkeep =I[f θ(x keep)̸=y B],\nIdrop =I[f θ(x drop) =y B].",
+      "U(x, E) ={I[f θ(cj)̸=y B]} k\nj=1 ∪ {Ikeep, Idrop}. The document drift score is\nDdoc(x) = 1\n|U(x, E)|\nX\nu∈U(x,E)\nu."
+    ],
+    "replacement_chunk_id": "2608.12623_sec_008",
+    "replacement_topic": "Threat model, clean calibration set size, and deployment assumptions for backdoor auditing"
+  },
+  {
+    "family_id": "v2_test_007",
+    "paper_id": "2608.12627",
+    "question_type": "single_passage",
+    "question": "In the EgoCITE framework for long-horizon egocentric memory, how does EgoRetrv's dual-agent design partition responsibilities between the drafting agent and the sampling agent, and what structured query set Q does the drafting agent generate?",
+    "primary_chunk_id": "2608.12627_sec_017",
+    "support_chunk_ids": [
+      "2608.12627_sec_017"
+    ],
+    "support_excerpts": [
+      "It combines question-conditioned temporal relevance scoring with a dual-agent design: (1) A\ndrafting agent issues multi-round semantic, view, and time queries to EgoIndex and progressively\naccumulates specific atomic memory indices in a persistent working memory named the index pool,\nprioritizing retrieval recall. (2) Asamplingagent reasons over the accumulated indices in context\nand curates a coherent evidence set aligned with the question’s temporal intent, improving retrieval\nprecision by selecting temporally relevant indices and removing redundant ones.",
+      "Design 3: Drafting agent with time query.At each retrieval round, given a question Q, the drafting\nagent generates a structured query set Q={Q s, Qv, Qt}, where Qs is a semantic query,Qv specifies\nthe memory view to retrieve, and Qt is an optional temporal query."
+    ],
+    "replacement_chunk_id": "2608.12627_sec_006",
+    "replacement_topic": "Agentic memory background and continuous multimodal sensor stream indexing challenges"
+  },
+  {
+    "family_id": "v2_test_008",
+    "paper_id": "2608.12654",
+    "question_type": "single_passage",
+    "question": "In the SteerBench-Work benchmark design, what outputs are returned in the structured verdict for each scenario, what is the single scored field, and how do the expected verbs map onto that scored field?",
+    "primary_chunk_id": "2608.12654_sec_010",
+    "support_chunk_ids": [
+      "2608.12654_sec_010"
+    ],
+    "support_excerpts": [
+      "It returns a structured verdict: a commit permission (allowed or blocked), a policy\naction (continue, show progress, ask clarification, request approval, or escalate), a confidence, and\na short reason. The scored field is the commit permission alone.",
+      "Each scenario’s expected verb\nmaps onto it through a fixed published mapping: continue and proceed map to allowed; block,\nrequest approval, escalate, and ask clarification map to blocked. Asking, escalating, and requesting\napproval are therefore all holds at the scored boundary."
+    ],
+    "replacement_chunk_id": "2608.12654_sec_015",
+    "replacement_topic": "Secondary operational severity metric weighting misses by normalized irreversibility tiers"
+  },
+  {
+    "family_id": "v2_test_009",
+    "paper_id": "2608.12725",
+    "question_type": "single_passage",
+    "question": "In the Generative Defect Isolation (GDI) pipeline for photovoltaic modules, what area-based filtering criterion must a defect meet to be considered for isolation, what additional sample is generated if at least one defect meets this criterion, and what dilation kernel size is applied to the mask?",
+    "primary_chunk_id": "2608.12725_sec_013",
+    "support_chunk_ids": [
+      "2608.12725_sec_013"
+    ],
+    "support_excerpts": [
+      "As shown in Figure 1, a specific defect type within an image is only\nconsidered for isolation if its total annotated area covers more than 10% of\nthe entire image area.",
+      "Further, if at least\none defect satisfies this criterion and is successfully isolated, we additionally\ncreate a combined mask covering all annotated defects in the source image\nand in paint these regions to generate a corresponding defect free sample.",
+      "A square dilation kernel of size15×15was used."
+    ],
+    "replacement_chunk_id": "2608.12725_sec_015",
+    "replacement_topic": "Input tensor construction, Fast Fourier Convolutions, and LaMa neural inpainting steps"
+  },
+  {
+    "family_id": "v2_test_010",
+    "paper_id": "2608.12737",
+    "question_type": "single_passage",
+    "question": "In the Dual-Manifold Geometry Guided Representation Learning framework, how are the Exploit Mode (M_exploit) and Explore Mode (M_explore) guidance matrices formulated from the kernel Gram matrix G, and what does delta denote?",
+    "primary_chunk_id": "2608.12737_sec_012",
+    "support_chunk_ids": [
+      "2608.12737_sec_012"
+    ],
+    "support_excerpts": [
+      "Exploit Mode:For shallow layers, stable low-level representations are more important than representation diversity. Therefore, we directly utilize the kernel geometry:\nMexploit =G+εI C (3)\nwhere ε >0 ensures positive definiteness.",
+      "Explore Mode:As network depth increases, excessive dependence on existing kernel correlations may restrict semantic\ndiversity. To encourage feature exploration, we first normalize the kernel Gram matrix:\nC=D −1/2GD−1/2, whereD=diag(G)(4)\nThe explore guidance matrix is then defined as:\nMexplore =δ(I C −C) +εI C (5)\nwhere δ= 1\nC ΣC\ni=1Gii denotes the average geometric scale."
+    ],
+    "replacement_chunk_id": "2608.12737_sec_010",
+    "replacement_topic": "Kernel manifold and data manifold geometric formulations in parameter and feature space"
+  },
+  {
+    "family_id": "v2_test_011",
+    "paper_id": "2608.12750",
+    "question_type": "single_passage",
+    "question": "In the PatientAct mental health client simulation, what three attributes are assigned to each item in the dynamic memory layer, and onto what numeric scale and step size are the seven ordinal trust levels mapped?",
+    "primary_chunk_id": "2608.12750_sec_018",
+    "support_chunk_ids": [
+      "2608.12750_sec_018"
+    ],
+    "support_excerpts": [
+      "To form the dynamic layer, we prompted GPT5.4 to convert the remaining profile content into\nindividual items with three attributes: a disclosure\nlevel indicating the minimum trust level required\nto share this content;activation tags determining\nwhen the item becomes relevant to the conversation; and, a discomfort flag, indicating whether approaching this topic without sufficient trust would\nproduce visible discomfort.",
+      "We map these\nseven levels onto a numeric scale from 1.0 (least\ntrust) to 4.0 (achieved trust) in steps of 0.5, so that\ndisclosure thresholds and trust updates operate on\na common scale"
+    ],
+    "replacement_chunk_id": "2608.12750_sec_020",
+    "replacement_topic": "Emotion and behavior modeling following Hill taxonomy and asymmetric trust dynamics"
+  },
+  {
+    "family_id": "v2_test_012",
+    "paper_id": "2608.12766",
+    "question_type": "single_passage",
+    "question": "In PatchGen, how is the patch-selection score m_phi,p(X) computed from outgoing interaction scores across heads H and target patches P, and what does the resulting soft mask define?",
+    "primary_chunk_id": "2608.12766_sec_011",
+    "support_chunk_ids": [
+      "2608.12766_sec_011"
+    ],
+    "support_excerpts": [
+      "The\npatch-selection score is obtained by averaging the outgoing\ninteraction scores over heads and target patches:",
+      "where σ(·) denotes the sigmoid function.",
+      "The resulting soft\nmask is mϕ(X) = (m ϕ,1(X), . . . , mϕ,P (X))∈(0,1) P."
+    ],
+    "replacement_chunk_id": "2608.12766_sec_014",
+    "replacement_topic": "Overall learning objective combining main loss, mask suppression, similarity, and confidence loss"
+  },
+  {
+    "family_id": "v2_test_013",
+    "paper_id": "2608.12781",
+    "question_type": "single_passage",
+    "question": "In the PatternEval evaluation framework for hybrid-thinking MLLMs, what four binary failure labels are returned by the pattern judge J_pat, and how are Acc_m and Trigger_m computed?",
+    "primary_chunk_id": "2608.12781_sec_013",
+    "support_chunk_ids": [
+      "2608.12781_sec_013"
+    ],
+    "support_excerpts": [
+      "The pattern judge assigns\nb(x, ym) =J pat(x, ym) = [b cot, b rep, bc on, bpr]∈ {0,1}4.(3)\nWe instantiate Jpat with Seed-2.0-Pro. The four labels indicate chain-of-thought leakage, response repetition,\nlogical contradiction, and performative reasoning",
+      "We then compute\nAccm = 1\nN\nNX\ni=1\nc(xi, yi,m, gi),Trigger m = 1\nN\nNX\ni=1\nb any(xi, yi,m).(5)\nThus, higher Acc indicates better task performance, whereas lower Trigger indicates fewer undesirable\nuser-facing response patterns."
+    ],
+    "replacement_chunk_id": "2608.12781_sec_005",
+    "replacement_topic": "Empirical impact of PatternRL on Qwen3-VL models and thinking discrepancy"
+  },
+  {
+    "family_id": "v2_test_014",
+    "paper_id": "2608.12811",
+    "question_type": "single_passage",
+    "question": "In structured local differential modeling for AI-generated image detection, how is gradient magnitude related to signal-to-noise ratio (SNR) across frequencies, and what is the information bottleneck objective?",
+    "primary_chunk_id": "2608.12811_sec_008",
+    "support_chunk_ids": [
+      "2608.12811_sec_008"
+    ],
+    "support_excerpts": [
+      "Under a simplified frequency-wise\nview, its magnitude can be approximately characterized as\n∥∇θL∥f ∝SNR 1/2\nf .(1)",
+      "From the information bottleneck (IB) perspective, representation learning seeks\nZ=h θ(X)that remains predictive of the label Ywhile\ndiscarding task-irrelevant input information:\nmax\nθ\nI(Z;Y)−βI(Z;X),(2)\nwhereβcontrols the compression–prediction trade-off."
+    ],
+    "replacement_chunk_id": "2608.12811_sec_004",
+    "replacement_topic": "Physical imaging pipelines and local differential statistics introduction"
+  },
+  {
+    "family_id": "v2_test_015",
+    "paper_id": "2608.12829",
+    "question_type": "multi_passage",
+    "question": "In the MM-DiT architecture analysis of Stable Diffusion-v3.5, how many total Transformer blocks and tokens per modality are established, and why are the middle blocks identified as most representative of target semantics?",
+    "primary_chunk_id": "2608.12829_sec_014",
+    "support_chunk_ids": [
+      "2608.12829_sec_014",
+      "2608.12829_sec_016"
+    ],
+    "support_excerpts": [
+      "Taken Stable Diffusion-v3.5 as an example, it contains 24 Transformer blocks, and establishes a unified token space for visual and\ntext modalities:64×64image tokens (flattened to 4096) in the image\nbranch (when generating1024× 1024images), and 154 or 333 text\ntokens (77 CLIP tokens plus 77 or 256 T5 tokens) in the text branch.",
+      "These observations highlight the\nstrong hierarchical characteristic of MM-DiT architecture: early\nblocks model global structure, late blocks refine surface details, and\nmiddle blocks are most expressive of core semantic content.",
+      "The attention patterns reveal that only in the middle\nblocks do such tokens attend significantly to the primary subject\nitself (e.g., Taylor’s face)."
+    ],
+    "replacement_chunk_id": "2608.12829_sec_010",
+    "replacement_topic": "Prior tuning-free concept erasure methods in diffusion models and negative prompting limitations"
+  },
+  {
+    "family_id": "v2_test_016",
+    "paper_id": "2608.12836",
+    "question_type": "multi_passage",
+    "question": "In structured compositional reasoning over compound answer options, how are raw atomic scores calibrated, and how does Integer Linear Programming (ILP) combine calibrated scores under global logical constraints?",
+    "primary_chunk_id": "2608.12836_sec_016",
+    "support_chunk_ids": [
+      "2608.12836_sec_016",
+      "2608.12836_sec_017"
+    ],
+    "support_excerpts": [
+      "of the raw positive score to the gold atomic label\n(Platt, 1999). Isotonic calibration instead fits a\nnon-decreasing non-parametric mapping, without\nassuming a sigmoid relationship between the score\nand correctness",
+      "Following prompt-based structured prediction (Mehta\net al., 2024; Pauk and Pacheco, 2026), we combine these scores under global constraints that encode the logical structure of the compound answer\noptions using Integer Linear Programming (ILP)."
+    ],
+    "replacement_chunk_id": "2608.12836_sec_004",
+    "replacement_topic": "Overview of compositional question answering benchmarks and atomic evidence limitations"
+  },
+  {
+    "family_id": "v2_test_017",
+    "paper_id": "2608.12852",
+    "question_type": "single_passage",
+    "question": "In the internal representation geometry of language models, how do truth and impossibility directions compare in orientation, and what is their maximum absolute cosine beyond depth 10?",
+    "primary_chunk_id": "2608.12852_sec_009",
+    "support_chunk_ids": [
+      "2608.12852_sec_009"
+    ],
+    "support_excerpts": [
+      "The impossibility probe separates them nearly perfectly, against a strongest surface\nbaseline of 0.77 (character TF–IDF), while carrying no information about true versus\nfalse.",
+      "The two directions fitted on the full data are correspondingly close to orthogonal\nthroughout the network. Their absolute cosine is at most 0.12 at every depth beyond\n10 (Fig. 2c)."
+    ],
+    "replacement_chunk_id": "2608.12852_sec_003",
+    "replacement_topic": "Philosophical background on contradictory versus contingent language expressions"
+  },
+  {
+    "family_id": "v2_test_018",
+    "paper_id": "2608.12854",
+    "question_type": "single_passage",
+    "question": "In the BrainWAM coordination framework for autonomous driving, how is the linear noising path applied to video latents and action trajectories in the WAM branch, and what are the corresponding velocity targets?",
+    "primary_chunk_id": "2608.12854_sec_011",
+    "support_chunk_ids": [
+      "2608.12854_sec_011"
+    ],
+    "support_excerpts": [
+      "For the WAM branch, this path is applied to both future video\nlatent s and action trajectories:\n𝑥 𝑣\n𝑡𝑣 =(1−𝑡 𝑣)𝑥 𝑣\n0+𝑡 𝑣𝜖 𝑣, 𝑥 𝑎\n𝑡𝑎 =(1−𝑡 𝑎)𝑥 𝑎\n0+𝑡 𝑎𝜖𝑎.(3)",
+      "The corresponding velocity targets are\n𝑢𝑣 =𝜖 𝑣−𝑥 𝑣\n0, 𝑢 𝑎 =𝜖 𝑎−𝑥 𝑎\n0.(4)"
+    ],
+    "replacement_chunk_id": "2608.12854_sec_006",
+    "replacement_topic": "High-level bilateral pathway coordination between VLM semantics and VGM world modeling"
+  },
+  {
+    "family_id": "v2_test_019",
+    "paper_id": "2608.12888",
+    "question_type": "multi_passage",
+    "question": "In the ReFind search engine for agent chat-history retrieval, what two rankings are combined via Reciprocal Rank Fusion (RRF), and how do temporal filtering and session deduplication operate?",
+    "primary_chunk_id": "2608.12888_sec_013",
+    "support_chunk_ids": [
+      "2608.12888_sec_013",
+      "2608.12888_sec_014"
+    ],
+    "support_excerpts": [
+      "Inspired by passage-level evidence aggregation (Callan, 1994), we employ Reciprocal Rank Fusion\n(RRF) (Cormack et al., 2009) to combine two granularity levels of ranking. For each turn c, we compute two rankings:\nFirst ranking r 1(c): Direct BM25 ranking of all turns by score. Second ranking r 2(c): Session-level aggregation.",
+      "Temporal filtering (narrow to a remembered time range).When a question involves a time period (e.g., “last\nmonth”), the agent supplies start and end parameters, and turns are filtered by timestamp before BM25\nscoring.",
+      "Session de duplication (skip what has already been inspected).The system maintains the set of sessions\nreturned in prior rounds and excludes them from subsequent searches."
+    ],
+    "replacement_chunk_id": "2608.12888_sec_008",
+    "replacement_topic": "Comparison between structured memory architectures and agent-controlled raw chat log search"
+  },
+  {
+    "family_id": "v2_test_020",
+    "paper_id": "2608.12898",
+    "question_type": "single_passage",
+    "question": "In NaviDC-OCR, what four key aspects of document parsing are evaluated, and what exact formula computes the overall score?",
+    "primary_chunk_id": "2608.12898_sec_009",
+    "support_chunk_ids": [
+      "2608.12898_sec_009"
+    ],
+    "support_excerpts": [
+      "The\nbenchmark evaluates four key aspects of document parsing: text recognition using normalized edit distance,\nformula recognition using the Character Detection Metric (CDM) Wang et al. (2025a), table reconstruction\nusing Tree Edit Distance Similarity (TEDS) and TEDS-S Zhong et al. (2020), and reading order recovery\n11\nusing text block sequence edit distance.",
+      "The overall score is computed as the average of text recognition,\nformula CDM, and table TEDS."
+    ],
+    "replacement_chunk_id": "2608.12898_sec_005",
+    "replacement_topic": "End-to-end vs decoupled document parsing paradigms and layout analysis error propagation"
+  },
+  {
+    "family_id": "v2_test_021",
+    "paper_id": "2608.12920",
+    "question_type": "multi_passage",
+    "question": "In the TennisVAR multimodal framework, what discrete primitives does the Event Parsing Module (EPM) provide, and what two complementary dependencies does the Tactical Graph-Guided Temporal Reasoner (TGTR) jointly model?",
+    "primary_chunk_id": "2608.12920_sec_005",
+    "support_chunk_ids": [
+      "2608.12920_sec_005",
+      "2608.12920_sec_006"
+    ],
+    "support_excerpts": [
+      "TennisVAR first introduces an Event\nParsing Module (EPM)that converts a continuous rally video\ninto an ordered sequence of semantically explicit stroke\nevents, providing discrete and interpretable primitives for\nreasoning.",
+      "It then employs aTactical Graph-Guided Temporal Reasoner (TGTR), which constructs a typed graph\nover these events and jointly models two complementary\ndependencies:the temporal progression between consecutive\nstrokes and the same player’s decision transitions across intervening opponent returns."
+    ],
+    "replacement_chunk_id": "2608.12920_sec_007",
+    "replacement_topic": "Sports video understanding benchmarks and ball tracking literature review"
+  },
+  {
+    "family_id": "v2_test_022",
+    "paper_id": "2608.12953",
+    "question_type": "single_passage",
+    "question": "In SNIPER's knapsack optimization for LLM pruning, how is the recurrence relation f(i, j) defined, and how does the discretizing factor alpha reduce the algorithm's time complexity?",
+    "primary_chunk_id": "2608.12953_sec_011",
+    "support_chunk_ids": [
+      "2608.12953_sec_011"
+    ],
+    "support_excerpts": [
+      "The recurrence relation\nis defined as:\nf (i, j) =\n{\nf (i − 1, j) if w(xi) > j\nmax (f (i − 1, j), ∆) if w(xi) ≤ j (2)\nwhere, ∆ = f (i − 1, j − w(xi)) + v(xi).",
+      "This reduces\nthe algorithm’s time complexity to Θ(N ⌊ C\nα ⌋)."
+    ],
+    "replacement_chunk_id": "2608.12953_sec_004",
+    "replacement_topic": "Calibration-induced distributional bias and failure modes of existing structured pruning methods"
+  },
+  {
+    "family_id": "v2_test_023",
+    "paper_id": "2608.12957",
+    "question_type": "single_passage",
+    "question": "In the I-SDPO policy optimization framework, under what condition is teacher supervision locally helpful, and how is the alignment Gamma_s defined?",
+    "primary_chunk_id": "2608.12957_sec_010",
+    "support_chunk_ids": [
+      "2608.12957_sec_010"
+    ],
+    "support_excerpts": [
+      "Their alignment is\nΓs = (qs −p s)⊤(us −p s)",
+      "Thus, teacher supervision is locally helpful only whenΓ s >0."
+    ],
+    "replacement_chunk_id": "2608.12957_sec_003",
+    "replacement_topic": "Variance vs bias trade-off in RL from sequence reward vs teacher distillation"
+  },
+  {
+    "family_id": "v2_test_024",
+    "paper_id": "2608.12960",
+    "question_type": "single_passage",
+    "question": "In deep reinforcement learning for white matter tractography, how is the policy gradient nabla_theta J(theta) estimated using bootstrapped values, and how is the Temporal Difference (TD) error J(phi) defined?",
+    "primary_chunk_id": "2608.12960_sec_053",
+    "support_chunk_ids": [
+      "2608.12960_sec_053"
+    ],
+    "support_excerpts": [
+      "2.1.21 is replaced by the bootstrapped\nestimate as follows:\n∇θJ(θ) = 1\nN\nNX\ni=1\n\"T−1X\nt=0\n∇θ logπ θ(at|st)(r+γV ϕ(st′ )−V ϕ(st)\n#\n(2.1.21)",
+      "Critic is updated using Temporal Difference (TD) error which is computed as\nthe difference between the bootstrapped estimate and the current value prediction:\nJ(ϕ) =r+γV ϕ(st′ )−V ϕ(st)(2.1.22)"
+    ],
+    "replacement_chunk_id": "2608.12960_sec_004",
+    "replacement_topic": "Limitations of classical tractography algorithms and introduction to RL for tractography"
+  },
+  {
+    "family_id": "v2_test_025",
+    "paper_id": "2608.12971",
+    "question_type": "single_passage",
+    "question": "How does the DeSCon-WG pair sampling strategy differ from DeSCon-Hard in mitigating demographic bias in face recognition?",
+    "primary_chunk_id": "2608.12971_sec_005",
+    "support_chunk_ids": [
+      "2608.12971_sec_005"
+    ],
+    "support_excerpts": [
+      "(1)DeSCon-WGrestricts non-mated pair sampling\nwithin demographic groups to enhance local balance, while\n(2)DeSCon-Hardfurther focuses on the hardest non-mated\npairs to maximize fairness regularization and moves further\ninto the tail of the non-match score distribution."
+    ],
+    "replacement_chunk_id": "2608.12971_sec_002",
+    "replacement_topic": "Deployment and general verification background in face recognition"
+  },
+  {
+    "family_id": "v2_test_026",
+    "paper_id": "2608.12984",
+    "question_type": "multi_passage",
+    "question": "In the trust-tiered research writing architecture, what role does the cheap refinement LLM pass play on numeric evidence cards, and how does the self-correcting write-back loop handle red-team refutations?",
+    "primary_chunk_id": "2608.12984_sec_006",
+    "support_chunk_ids": [
+      "2608.12984_sec_006",
+      "2608.12984_sec_005"
+    ],
+    "support_excerpts": [
+      "a cheap refinement pass\n(Claude Haiku 4.5) that corrects a numeric card’s value/unit against\nits own quote or demotes it to qualitative.",
+      "(4) A self-correcting write-back loop(§2): a report-side red-team\nrefutation flows back as a source override that self-corrects the\nledger at the next cutoff with no manual edits"
+    ],
+    "replacement_chunk_id": "2608.12984_sec_003",
+    "replacement_topic": "Failure modes in naive automated long-form equity research generation"
+  },
+  {
+    "family_id": "v2_test_027",
+    "paper_id": "2608.13010",
+    "question_type": "single_passage",
+    "question": "What core principle underlies RAGSieve's local contrast operation for knowledge-poison detection in RAG systems?",
+    "primary_chunk_id": "2608.13010_sec_004",
+    "support_chunk_ids": [
+      "2608.13010_sec_004"
+    ],
+    "support_excerpts": [
+      "We call this operation local contrast: score\nsuspicious evidence against a reference constructed from\nthe same retrieval event or corpus neighborhood. Because the inspected system supplies its own comparison\nset, this is a self-referenced form of detection that needs\nneither an external clean corpus nor a global threshold\ncalibrated across heterogeneous regions."
+    ],
+    "replacement_chunk_id": "2608.13010_sec_002",
+    "replacement_topic": "Threat model of corpus poisoning in retrieval-augmented generation"
+  },
+  {
+    "family_id": "v2_test_028",
+    "paper_id": "2608.13028",
+    "question_type": "multi_passage",
+    "question": "In the Hand2Bot dataset for human-to-robot handover, how is realistic depth sensor noise simulated, and how are negative intention cases defined during data capture?",
+    "primary_chunk_id": "2608.13028_sec_004",
+    "support_chunk_ids": [
+      "2608.13028_sec_004",
+      "2608.13028_sec_007"
+    ],
+    "support_excerpts": [
+      "implement a\nmorphology-based edge erosion strategy that directly models the realistic void distributions of an\nIntel RealSense L515 sensor.",
+      "Intention-Centric Labeling:Critically, we include approximately 20% of video pairs as negative\ncases where the human moves with the object but has no intention to hand it over."
+    ],
+    "replacement_chunk_id": "2608.13028_sec_002",
+    "replacement_topic": "Applications and significance of human-to-robot object handover"
+  },
+  {
+    "family_id": "v2_test_029",
+    "paper_id": "2608.13031",
+    "question_type": "single_passage",
+    "question": "How does the UniTraffic-Agent pipeline process traffic video clips to generate predictions across different traffic benchmarks?",
+    "primary_chunk_id": "2608.13031_sec_006",
+    "support_chunk_ids": [
+      "2608.13031_sec_006"
+    ],
+    "support_excerpts": [
+      "it first builds a timestamped visual observation, then asks an MLLM to infer\na shared event context, including the relevant actors, road layout, temporal\nevolution, and outcome. This shared context is finally mapped to benchmark specific predictions by task-specific action adapters."
+    ],
+    "replacement_chunk_id": "2608.13031_sec_003",
+    "replacement_topic": "Introduction to traffic video understanding and existing traffic-language systems"
+  },
+  {
+    "family_id": "v2_test_030",
+    "paper_id": "2608.13049",
+    "question_type": "single_passage",
+    "question": "Which five complementary dimensions are evaluated by H2R-Bench to assess human-to-robot manipulation video generation?",
+    "primary_chunk_id": "2608.13049_sec_005",
+    "support_chunk_ids": [
+      "2608.13049_sec_005"
+    ],
+    "support_excerpts": [
+      "H2R-Bench scores five complementary dimensions: goal\ncompletion, action-event completion, functional contact\ntransfer, embodiment correctness, and task-agnostic video\nquality."
+    ],
+    "replacement_chunk_id": "2608.13049_sec_002",
+    "replacement_topic": "Importance and high collection costs of robot manipulation demonstrations"
+  },
+  {
+    "family_id": "v2_test_031",
+    "paper_id": "2608.13112",
+    "question_type": "multi_passage",
+    "question": "What core objective motivates the Princigram framework, and what is the size and composition of its curated high-quality physics diagram dataset?",
+    "primary_chunk_id": "2608.13112_sec_006",
+    "support_chunk_ids": [
+      "2608.13112_sec_006",
+      "2608.13112_sec_002"
+    ],
+    "support_excerpts": [
+      "present Princigram, a physics-faithful scientific-diagram generator,\nand the data pipeline behind it. The name states the goal: to render the figure that a set of physical\nprinciples entails, rather than one that merely resembles figures of its kind.",
+      "curate and\nstructurally annotate a corpus of4.3million physics images spanning the six subdisciplines, within which\na high-quality subset of115,037images carries expert-level annotation"
+    ],
+    "replacement_chunk_id": "2608.13112_sec_003",
+    "replacement_topic": "Progress and milestones in general text-to-image generation models"
+  },
+  {
+    "family_id": "v2_test_032",
+    "paper_id": "2608.13113",
+    "question_type": "single_passage",
+    "question": "On the EgoMonth benchmark, what performance did the highest-scoring model achieve compared to human baseline accuracy?",
+    "primary_chunk_id": "2608.13113_sec_002",
+    "support_chunk_ids": [
+      "2608.13113_sec_002"
+    ],
+    "support_excerpts": [
+      "even\nthe best-performing model, Gemini 2.5 Pro, achieves only 71.8% macro-average\naccuracy, remaining 22.4 percentage points below the human baseline of 94.2%."
+    ],
+    "replacement_chunk_id": "2608.13113_sec_004",
+    "replacement_topic": "Limitations of short-term clip perception and temporal depth in prior datasets"
+  },
+  {
+    "family_id": "v2_test_033",
+    "paper_id": "2608.13147",
+    "question_type": "single_passage",
+    "question": "How does the GeoUP framework decompose VGGT's global cross-image attention mechanism for streaming multi-camera driving scenes?",
+    "primary_chunk_id": "2608.13147_sec_005",
+    "support_chunk_ids": [
+      "2608.13147_sec_005"
+    ],
+    "support_excerpts": [
+      "GeoUP\nretains the self-attention in VGGT [63] and decomposes its global cross-image attention into\ntemporal and view attention. Self attention models image-level context, temporal attention\ncaptures correspondences within each camera stream,"
+    ],
+    "replacement_chunk_id": "2608.13147_sec_003",
+    "replacement_topic": "Overview of camera-based 3D scene perception and core readouts in autonomous driving"
+  },
+  {
+    "family_id": "v2_test_034",
+    "paper_id": "2608.13200",
+    "question_type": "multi_passage",
+    "question": "How does the GEM framework unify reasoning with retrieval, and what procedure is used to generate positive and negative documents during training?",
+    "primary_chunk_id": "2608.13200_sec_002",
+    "support_chunk_ids": [
+      "2608.13200_sec_002",
+      "2608.13200_sec_004"
+    ],
+    "support_excerpts": [
+      "GEM unifies generation and embedding\nwithin a single model: it first reasons over the\nquery, then appends an embedding token to\nencode the enriched context for retrieval",
+      "sample K= 8 responses from GEM’s backbone\nusing a temperature of 1.0. For simplicity, filtering is performed by the same backbone using\ngreedy decoding. For document generation, we\nuse Llama-3.1-8B-Instruct with greedy decoding to generate one positive and one hard negative\nper response."
+    ],
+    "replacement_chunk_id": "2608.13200_sec_003",
+    "replacement_topic": "Sensitivity metrics and instruction following in TREC and InstructIR datasets"
+  },
+  {
+    "family_id": "v2_test_035",
+    "paper_id": "2608.13223",
+    "question_type": "single_passage",
+    "question": "Why does the 3-seed deep ensemble in the BraTS-GoAT study provide a clean, label-referenced uncertainty estimate compared to a 5-fold ensemble?",
+    "primary_chunk_id": "2608.13223_sec_007",
+    "support_chunk_ids": [
+      "2608.13223_sec_007"
+    ],
+    "support_excerpts": [
+      "The uncertainty method is a 3-seed deep ensemble: three nnU-Nets trained on\na single fixed split with different random seeds [10]. The seeds are nnU-Net’s\ndefault and two explicit alternatives. Because the members share one training\nsplit, their held-out cases are unseen by every member, so their disagreement is a\nclean, label-referenced uncertainty."
+    ],
+    "replacement_chunk_id": "2608.13223_sec_003",
+    "replacement_topic": "Clinical motivations and reliability obstacles in automated glioma segmentation"
+  },
+  {
+    "family_id": "v2_test_036",
+    "paper_id": "2608.13226",
+    "question_type": "multi_passage",
+    "question": "How does CoverPrune shift the token pruning objective compared to conventional attention-based and diversity-based pruning in 3D VLMs?",
+    "primary_chunk_id": "2608.13226_sec_006",
+    "support_chunk_ids": [
+      "2608.13226_sec_003",
+      "2608.13226_sec_006"
+    ],
+    "support_excerpts": [
+      "Attention-based approaches [8, 20, 39, 40] remove tokens\nwith low early-layer attention mass, while\ndiversity-based approaches [1, 32] treat\nsimilarity in feature space as a proxy for\nredundancy and remove the most mutually similar tokens to maximize dispersion among the retain",
+      "We introduce CoverPrune, a training-free token pruning framework for 3D VLMs that fundamentally shifts the pruning\nobjective from maximizing token diversity to preserving visual evidence coverage. We elegantly formulate this via Optimal Transport (OT) to retain a\ncompact yet highly representative set of visual tokens."
+    ],
+    "replacement_chunk_id": "2608.13226_sec_002",
+    "replacement_topic": "Emergence of 3D vision-language models and visual token computational explosion"
+  }
+]

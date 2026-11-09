@@ -1,8 +1,8 @@
 {
-  "total_samples": 5,
+  "total_samples": 10,
   "baseline_metrics": {
-    "answer_relevance": 0.636,
-    "manual_factual_accuracy": 0.58,
+    "answer_relevance": 0.827,
+    "manual_factual_accuracy": null,
     "faithfulness": null,
     "context_precision": null,
     "context_recall": null
@@ -10,38 +10,73 @@
   "samples": [
     {
       "sample_id": "qa_001",
-      "question": "How does Attention Is All You Need achieve high accuracy in open-domain question answering?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does Attention Is All You Need achieve high accuracy in open-domain question answering?\"**:\n\nVision Tr...",
-      "answer_relevance": 0.62,
-      "manual_factual_accuracy": 0.57
+      "question": "How is Scaled Dot-Product Attention calculated mathematically in the Transformer, and why is the scaling factor 1/sqrt(d_k) applied?",
+      "baseline_answer": "**Mathematical Calculation:**\n\nScaled Dot-Product Attention, introduced in the Transformer architecture, takes three inputs: Queries ($Q$), Keys ($K$), and Values ($V$). The mathem...",
+      "answer_relevance": 0.8691,
+      "manual_factual_accuracy": null
     },
     {
       "sample_id": "qa_002",
-      "question": "What baseline comparisons are conducted in Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What baseline comparisons are conducted in Retrieval-Augmented Generation for Knowledge-Intensive NLP Task...",
-      "answer_relevance": 0.66,
-      "manual_factual_accuracy": 0.62
+      "question": "How do residual shortcut connections in ResNet handle dimension matching when input and output feature map dimensions increase?",
+      "baseline_answer": "When the dimensions of the feature maps increase (typically when the spatial resolution is halved via strided convolutions and the number of channels is increased), the input $x$ a...",
+      "answer_relevance": 0.8014,
+      "manual_factual_accuracy": null
     },
     {
       "sample_id": "qa_003",
-      "question": "What are the primary limitations of BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What are the primary limitations of BERT: Pre-training of Deep Bidirectional Transformers for Language Und...",
-      "answer_relevance": 0.7,
-      "manual_factual_accuracy": 0.52
+      "question": "What is the token replacement strategy used during BERT's Masked Language Model (MLM) pre-training when a token is chosen for masking?",
+      "baseline_answer": "During BERT's Masked Language Model (MLM) pre-training, when a token is chosen for masking, the replacement strategy operates on the 15% of tokens selected from the input sequence ...",
+      "answer_relevance": 0.8936,
+      "manual_factual_accuracy": null
     },
     {
       "sample_id": "qa_004",
-      "question": "What are the key structural attention mechanisms in Dense Passage Retrieval for Open-Domain Question Answering?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What are the key structural attention mechanisms in Dense Passage Retrieval for Open-Domain Question Answe...",
-      "answer_relevance": 0.58,
-      "manual_factual_accuracy": 0.57
+      "question": "How do RAG-Sequence and RAG-Token models differ in how they marginalize over retrieved documents during answer generation?",
+      "baseline_answer": "The difference between RAG-Sequence and RAG-Token models lies in the level at which they marginalize over the retrieved documents (latent variables) during the generation of the ta...",
+      "answer_relevance": 0.8128,
+      "manual_factual_accuracy": null
     },
     {
       "sample_id": "qa_005",
-      "question": "How does Reciprocal Rank Fusion Outperforms Vector Similarity Search in Hybrid Retrieval achieve high accuracy in open-domain question answering?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does Reciprocal Rank Fusion Outperforms Vector Similarity Search in Hybrid Retrieval achieve high accu...",
-      "answer_relevance": 0.62,
-      "manual_factual_accuracy": 0.62
+      "question": "On the Natural Questions benchmark, by how much does DPR's top-20 passage retrieval accuracy outperform traditional Lucene BM25?",
+      "baseline_answer": "On the Natural Questions benchmark, Dense Passage Retrieval (DPR) outperforms traditional Lucene BM25 by a substantial margin. Specifically, DPR achieves a top-20 passage retrieval...",
+      "answer_relevance": 0.9006,
+      "manual_factual_accuracy": null
+    },
+    {
+      "sample_id": "qa_006",
+      "question": "Why does Vision Transformer (ViT) require pre-training on large datasets like JFT-300M to outperform standard ResNets?",
+      "baseline_answer": "Unlike Convolutional Neural Networks (CNNs), which are heavily regularized by built-in inductive biases such as translation equivariance and locality (the assumption that pixels cl...",
+      "answer_relevance": 0.6855,
+      "manual_factual_accuracy": null
+    },
+    {
+      "sample_id": "qa_007",
+      "question": "How does the cyclic shift with masked self-attention in Swin Transformer avoid increasing the number of window computations?",
+      "baseline_answer": "To avoid increasing the number of window computations when implementing the shifted window (cyclic shift) mechanism, the Swin Transformer uses a **batch-computation approach via ef...",
+      "answer_relevance": 0.7887,
+      "manual_factual_accuracy": null
+    },
+    {
+      "sample_id": "qa_008",
+      "question": "What is the theoretical benefit of stacking two 3x3 convolution layers instead of using a single 5x5 convolution layer in VGGNet?",
+      "baseline_answer": "Stacking two 3x3 convolution layers instead of a single 5x5 convolution layer provides two main theoretical benefits:\n\n1. **Reduced Parameter Count and Computational Cost:** \n   A ...",
+      "answer_relevance": 0.8382,
+      "manual_factual_accuracy": null
+    },
+    {
+      "sample_id": "qa_009",
+      "question": "What is the RoIAlign layer in Mask R-CNN and how does it fix the spatial misalignments caused by RoIPool?",
+      "baseline_answer": "**RoIAlign** is a pooling layer introduced in Mask R-CNN that extracts a small feature map of a fixed size (e.g., $7 \\times 7$) from a region of interest (RoI) in a larger feature ...",
+      "answer_relevance": 0.8456,
+      "manual_factual_accuracy": null
+    },
+    {
+      "sample_id": "qa_010",
+      "question": "In EfficientNet's compound scaling method, how are depth (d), width (w), and resolution (r) constrained relative to the user-specified coefficient phi?",
+      "baseline_answer": "In EfficientNet's compound scaling method, the depth ($d$), width ($w$), and resolution ($r$) are constrained relative to the user-specified coefficient $\\phi$ by the following for...",
+      "answer_relevance": 0.8297,
+      "manual_factual_accuracy": null
     }
   ]
 }

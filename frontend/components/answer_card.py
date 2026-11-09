@@ -8,6 +8,7 @@ Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Dual-The
 import re
 import streamlit as st
 from backend.contract import QueryResult
+from backend.config import PRIMARY_GENERATOR_MODEL
 from frontend.components.icons import svg_icon
 from frontend.components.copy_button import render_copy_button
 from frontend.styles.theme import get_theme_colors
@@ -116,7 +117,7 @@ def render_answer_card(result: QueryResult):
         with m2:
             st.metric("Cross-Encoder Rerank", f"{result.metrics.reranking_time_sec}s")
         with m3:
-            st.metric("Gemini 3.5 Generation", f"{result.metrics.generation_time_sec}s")
+            st.metric(f"{PRIMARY_GENERATOR_MODEL} Generation", f"{result.metrics.generation_time_sec}s")
         with m4:
             st.metric("Final Context Chunks", f"{result.metrics.final_context_chunks_count} / {result.metrics.dense_candidates_count}")
 

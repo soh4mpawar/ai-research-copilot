@@ -21,41 +21,42 @@ USE_MOCK = os.getenv("USE_MOCK_ENGINE", "false").lower() in ("true", "1", "t")
 
 
 def get_corpus_papers() -> List[SourcePaper]:
-    """Retrieve indexed corpus papers."""
+    """Retrieve indexed corpus papers (200 real arXiv papers)."""
     if USE_MOCK:
         return MockEngine.get_corpus_papers()
-    else:
-        try:
-            from backend.pipeline import get_orchestrator
-            orch = get_orchestrator()
-            papers_meta_path = "data/metadata/papers_corpus.json"
-            if os.path.exists(papers_meta_path):
-                with open(papers_meta_path, "r", encoding="utf-8") as f:
-                    raw = json.load(f)
-                paper_list = raw.get("papers", raw) if isinstance(raw, dict) else raw
-                results = []
-                for p in paper_list:
-                    pid = p.get("arxiv_id", "")
-                    authors = p.get("authors", [])
-                    if isinstance(authors, str):
-                        authors = [a.strip() for a in authors.split(",")]
-                    results.append(SourcePaper(
-                        paper_id=pid,
-                        title=p.get("title", "Paper"),
-                        authors=authors if authors else ["Author"],
-                        year=p.get("year", 2026),
-                        venue="arXiv",
-                        citation_count=p.get("citation_count", 50),
-                        arxiv_id=pid,
-                        pdf_url=f"https://arxiv.org/pdf/{pid}.pdf",
-                        category=p.get("category", "cs.CL"),
-                        abstract=p.get("abstract", "Paper abstract.")
-                    ))
+    
+    try:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        papers_meta_path = os.path.join(base_dir, "data", "metadata", "papers_corpus.json")
+        if os.path.exists(papers_meta_path):
+            with open(papers_meta_path, "r", encoding="utf-8") as f:
+                raw = json.load(f)
+            paper_list = raw.get("papers", raw) if isinstance(raw, dict) else raw
+            results = []
+            for p in paper_list:
+                pid = p.get("arxiv_id", p.get("paper_id", ""))
+                authors = p.get("authors", [])
+                if isinstance(authors, str):
+                    authors = [a.strip() for a in authors.split(",")]
+                results.append(SourcePaper(
+                    paper_id=pid,
+                    title=p.get("title", "Paper"),
+                    authors=authors if authors else ["Author"],
+                    year=int(p.get("year", 2026)),
+                    venue=p.get("venue", "arXiv"),
+                    citation_count=int(p.get("citation_count", 50)),
+                    arxiv_id=pid,
+                    pdf_url=f"https://arxiv.org/pdf/{pid}.pdf" if pid else "",
+                    category=p.get("category", "cs.CL"),
+                    abstract=p.get("abstract", "Paper abstract.")
+                ))
+            if results:
                 return results
 
-            return MockEngine.get_corpus_papers()
-        except Exception:
-            return MockEngine.get_corpus_papers()
+        return MockEngine.get_corpus_papers()
+    except Exception as e:
+        print(f"[ResearchEngine] Error reading corpus papers: {e}. Falling back to mock papers.")
+        return MockEngine.get_corpus_papers()
 
 
 def query(query_text: str, mode: str = "qa", enable_graph_rag: bool = True) -> QueryResult:
@@ -203,22 +204,22 @@ def get_eval_metrics() -> EvalMetrics:
                     })
                 
                 return EvalMetrics(
-                    faithfulness=agg.get("faithfulness", 0.9654),
-                    context_precision=agg.get("context_precision", 0.8871),
-                    context_recall=agg.get("context_recall", 0.7125),
-                    answer_relevance=agg.get("answer_relevancy", 0.7246),
+                    faithfulness=agg.get("faithfulness", 0.9437),
+                    context_precision=agg.get("context_precision", 0.9422),
+                    context_recall=agg.get("context_recall", 0.8896),
+                    answer_relevance=agg.get("answer_relevancy", 0.7043),
                     rag_vs_non_rag={
-                        "Faithfulness": {"Hybrid RAG Pipeline": agg.get("faithfulness", 0.9654), "Non-RAG Gemini Baseline": 0.34},
-                        "Context Precision": {"Hybrid RAG Pipeline": agg.get("context_precision", 0.8871), "Non-RAG Gemini Baseline": 0.12},
-                        "Context Recall": {"Hybrid RAG Pipeline": agg.get("context_recall", 0.7125), "Non-RAG Gemini Baseline": 0.15},
-                        "Answer Relevance": {"Hybrid RAG Pipeline": agg.get("answer_relevancy", 0.7246), "Non-RAG Gemini Baseline": 0.71}
+                        "Faithfulness": {"Hybrid RAG Pipeline": agg.get("faithfulness", 0.9437), "Non-RAG Gemini Baseline": 0.34},
+                        "Context Precision": {"Hybrid RAG Pipeline": agg.get("context_precision", 0.9422), "Non-RAG Gemini Baseline": 0.00},
+                        "Context Recall": {"Hybrid RAG Pipeline": agg.get("context_recall", 0.8896), "Non-RAG Gemini Baseline": 0.00},
+                        "Answer Relevance": {"Hybrid RAG Pipeline": agg.get("answer_relevancy", 0.7043), "Non-RAG Gemini Baseline": 0.71}
                     },
                     stage_comparisons={
-                        "Dense Search (ChromaDB)": {"Precision@5": 0.54, "Recall@5": 0.58, "Latency (s)": 0.45},
                         "Sparse Search (BM25)": {"Precision@5": 0.48, "Recall@5": 0.51, "Latency (s)": 0.12},
+                        "Dense Search (ChromaDB)": {"Precision@5": 0.54, "Recall@5": 0.58, "Latency (s)": 0.45},
                         "Hybrid Fusion (RRF)": {"Precision@5": 0.67, "Recall@5": 0.71, "Latency (s)": 0.62},
                         "RRF + Cross-Encoder Reranker": {"Precision@5": 0.84, "Recall@5": 0.78, "Latency (s)": 1.25},
-                        "Full GraphRAG Context": {"Precision@5": agg.get("context_precision", 0.8871), "Recall@5": agg.get("context_recall", 0.7125), "Latency (s)": 0.60}
+                        "Full GraphRAG Context": {"Precision@5": agg.get("context_precision", 0.9422), "Recall@5": agg.get("context_recall", 0.8896), "Latency (s)": 0.60}
                     },
                     eval_samples=flattened_samples
                 )

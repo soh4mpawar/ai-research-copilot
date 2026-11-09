@@ -406,17 +406,18 @@ class MockEngine:
     def get_eval_metrics() -> EvalMetrics:
         """Return RAGAS framework evaluation metrics and baseline comparisons."""
         rag_vs_non_rag = {
-            "Faithfulness": {"Hybrid RAG Pipeline": 0.86, "Non-RAG Gemini Baseline": 0.34},
-            "Context Precision": {"Hybrid RAG Pipeline": 0.74, "Non-RAG Gemini Baseline": 0.12},
-            "Context Recall": {"Hybrid RAG Pipeline": 0.78, "Non-RAG Gemini Baseline": 0.15},
-            "Answer Relevance": {"Hybrid RAG Pipeline": 0.82, "Non-RAG Gemini Baseline": 0.71},
+            "Faithfulness": {"Hybrid RAG Pipeline": 0.9437, "Non-RAG Gemini Baseline": 0.34},
+            "Context Precision": {"Hybrid RAG Pipeline": 0.9422, "Non-RAG Gemini Baseline": 0.00},
+            "Context Recall": {"Hybrid RAG Pipeline": 0.8896, "Non-RAG Gemini Baseline": 0.00},
+            "Answer Relevance": {"Hybrid RAG Pipeline": 0.7043, "Non-RAG Gemini Baseline": 0.71},
         }
 
         stage_comparisons = {
-            "Dense Search (ChromaDB)": {"Precision@5": 0.54, "Recall@5": 0.58, "Latency (s)": 0.45},
             "Sparse Search (BM25)": {"Precision@5": 0.48, "Recall@5": 0.51, "Latency (s)": 0.12},
+            "Dense Search (ChromaDB)": {"Precision@5": 0.54, "Recall@5": 0.58, "Latency (s)": 0.45},
             "Hybrid Fusion (RRF)": {"Precision@5": 0.67, "Recall@5": 0.71, "Latency (s)": 0.62},
             "RRF + Cross-Encoder Reranker": {"Precision@5": 0.84, "Recall@5": 0.78, "Latency (s)": 1.25},
+            "Full GraphRAG Context": {"Precision@5": 0.9422, "Recall@5": 0.8896, "Latency (s)": 0.60},
         }
 
         samples = [
@@ -467,10 +468,10 @@ class MockEngine:
         ]
 
         return EvalMetrics(
-            faithfulness=0.86,
-            context_precision=0.74,
-            context_recall=0.78,
-            answer_relevance=0.82,
+            faithfulness=0.9437,
+            context_precision=0.9422,
+            context_recall=0.8896,
+            answer_relevance=0.7043,
             rag_vs_non_rag=rag_vs_non_rag,
             stage_comparisons=stage_comparisons,
             eval_samples=samples

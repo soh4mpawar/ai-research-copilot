@@ -1,0 +1,218 @@
+[
+  {
+    "family_id": "v2_train_001",
+    "paper_id": "2608.11829",
+    "is_multi_passage": false,
+    "question": "In on-policy distillation (OPD) for large language models, how does the pass@K performance of OPD-trained models change relative to pre-OPD base models as the sampling budget K increases, and what does problem-level solvability analysis at pass@1024 reveal?",
+    "reference_answer": "As the sampling budget K increases, the pass@K advantage initially held by OPD-trained models gradually shifts to the pre-OPD base models, indicating that OPD improves sampling efficiency rather than expanding the capability boundary. Furthermore, a problem-level solvability analysis using pass@1024 reveals an asymmetry: OPD causes more previously solvable problems to become unsolvable than previously unsolvable problems to become solvable.",
+    "supporting_chunks": [
+      "2608.11829_sec_001"
+    ],
+    "supporting_excerpts": [
+      "while the advantage in pass@K gradually shifts to the pre-OPD base models as K increases. These results suggest that OPD primarily improves sampling efficiency rather than consistently expanding the student’s reasoning capability boundary. The pass@K dynamics throughout OPD training further reveal a progressive shift toward stronger small-K performance at the expense of the large-K capability boundary. Furthermore, a problem-level solvability analysis using pass@1024 as the criterion reveals an asymmetry: OPD causes more previously solvable problems to become unsolvable than previously unsolvable problems to become solvable."
+    ],
+    "fact_explanations": "Single passage supplies both the pass@K scaling shift and the pass@1024 solvability asymmetry.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_002",
+    "paper_id": "2608.11889",
+    "is_multi_passage": true,
+    "question": "In DexterSQL, why does resolving schema ambiguity between columns like Patient.Diagnosis and Examination.Diagnosis require inspecting data distributions rather than schema definitions alone, and what execution accuracy (EX) does DexterSQL achieve on the BIRD-Dev benchmark using the open-weight GPT-OSS-120B model?",
+    "reference_answer": "Resolving schema ambiguity between Patient.Diagnosis and Examination.Diagnosis requires inspecting data distributions because column names and schemas alone cannot differentiate their roles: Patient.Diagnosis contains one row per patient representing a single final diagnosis, whereas Examination.Diagnosis contains multiple preliminary rows per patient ID. On the BIRD-Dev benchmark, DexterSQL achieves an execution accuracy (EX) of 67.6% using the open-weight GPT-OSS-120B model, outperforming prior non-fine-tuned Text-to-SQL systems by at least 2.7%.",
+    "supporting_chunks": [
+      "2608.11889_sec_009",
+      "2608.11889_sec_007"
+    ],
+    "supporting_excerpts": [
+      "This distinction is not obvious from the column names or from the overlapping values and can only be clear from the underlying data distribution:Patient.Diagnosishas one row per patient, whereas Examination.Diagnosiscan have multiple rows for the same Patient.ID. SincePatient.Diagnosisrecords a single, final diagnosis per patient, it is the correct column for this patient-level question—a choice that requires inspecting the data distribution, not just the schema.",
+      "Particularly, on BIRD-Dev benchmark [18],DexterSQLachieves an execution accuracy, EX (i.e., percentage of queries whose execution results match the gold-SQL results), of 67.6% using GPT-OSS-120B, outperforming existing non-fine-tuned Text-to-SQL systems by at least 2.7%; see the last column of Table 1."
+    ],
+    "fact_explanations": "Passage 2608.11889_sec_009 provides the structural data distribution reason (one final diagnosis row vs multiple examination rows per patient ID), while Passage 2608.11889_sec_007 provides the empirical BIRD-Dev execution accuracy (67.6% on GPT-OSS-120B).",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "multi_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_003",
+    "paper_id": "2608.11919",
+    "is_multi_passage": true,
+    "question": "How does LazyTrain's Hybrid 8-bit operator optimize LLM training on limited hardware, and what sustained TFLOPS, throughput, and peak GPU memory does LazyTrain achieve in the Qwen3.6-27B H800 MetaMathQA run at batch size 72?",
+    "reference_answer": "LazyTrain's Hybrid 8-bit operator couples 8-bit optimizer states with fast gradient clipping, where state compression reduces optimizer state memory and fast clipping counteracts the additional CPU-side update overhead. In the primary Qwen3.6-27B H800 MetaMathQA run at batch size 72, LazyTrain achieves 219.95 TFLOPS and 1361 tokens/s throughput, peaking at 68.84 GB of GPU memory while obtaining 95.42% exact match accuracy.",
+    "supporting_chunks": [
+      "2608.11919_sec_001",
+      "2608.11919_sec_002"
+    ],
+    "supporting_excerpts": [
+      "It further couples 8-bit optimizer states with fast gradient clipping as a single Hybrid 8-bit operator: state compression reduces optimizer state memory, while fast clipping counteracts the additional CPU-side update overhead.",
+      "In the primary Qwen3.6-27B H800 MetaMathQA run, LazyTrain reaches 219.95 T FLOPS and 1361 tokens/s at batch size 72, peaks at 68.84 GB of GPU memory, and obtains 95.42% exact match accuracy on the full evaluation split."
+    ],
+    "fact_explanations": "Passage 2608.11919_sec_001 provides the Hybrid 8-bit operator coupling mechanism, while Passage 2608.11919_sec_002 provides the specific empirical metrics (219.95 TFLOPS, 1361 tokens/s, 68.84 GB peak GPU memory) on Qwen3.6-27B.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "multi_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_004",
+    "paper_id": "2608.11922",
+    "is_multi_passage": false,
+    "question": "What failure mode occurs when ranking candidate retrieval passages by raw respondent predictive entropy alone within a single question, and how does the LODESTAR method modify the prompt to create a directed entropy signal?",
+    "reference_answer": "Within a single question, ranking candidate passages by raw respondent predictive entropy alone is unreliable because misleading passages systematically lower entropy, reading a misleading passage 30.3% of the time (worse than the random candidate baseline of 28.9%). LODESTAR modifies the prompt to [p; psi*; q] by inserting a learned short natural-language polarizer string psi* between the passage and the question, which steers entropy higher on misleading passages while keeping it low on supporting passages.",
+    "supporting_chunks": [
+      "2608.11922_sec_006"
+    ],
+    "supporting_excerpts": [
+      "Ranking by entropy alone reads a misleading passage more often on average than drawing one of the ten at random,30.3%against the pool’s own28.9%. One learned string puts the selection below that floor on all five benchmarks,26.0%macro-averaged (Tables 1 and 3)."
+    ],
+    "fact_explanations": "Single passage 2608.11922_sec_006 contains the failure rate (30.3% vs 28.9%) and the learned string polarizer mechanism.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_005",
+    "paper_id": "2608.12626",
+    "is_multi_passage": false,
+    "question": "What primary limitation causes strategic drift in LLM agents during long-horizon reasoning tasks, and how does the EpicStar framework address it during inference using its episodic and working memory components?",
+    "reference_answer": "In long-horizon reasoning tasks, finite attention resources prevent LLMs from maintaining strategic coherence over thousands of steps, causing agents to overfit to local observations and produce inconsistent subgoals (strategic drift). EpicStar addresses this by maintaining a structured memory bank of successful past episodes alongside a working memory of short-term environmental changes, using a dynamic gating mechanism during inference to choose between executing a retrieved action directly or generating new reasoning through contextual fusion of past episodes and working memory.",
+    "supporting_chunks": [
+      "2608.12626_sec_001"
+    ],
+    "supporting_excerpts": [
+      "Strategic reasoning in Large Language Models (LLMs) within long-horizon environments is often limited by inconsistent subgoals. In these settings, finite attention resources prevent the model from maintaining strategic coherence over thousands of steps. This limitation leads to strategic drift, where localized decisions fail to sustain a coherent trajectory across reasoning. To address this, we introduce EpicStar, a framework that enables agents to learn memory as policy to tackle long-horizon reasoning. Specifically, the agent maintains a bank of successful past episodes as a heuristic alongside a working memory to track short-term environmental changes. During inference, a dynamic gating mechanism determines whether to execute a retrieved action directly or to perform new reasoning through a contextual fusion of the retrieved episodes and current working memory."
+    ],
+    "fact_explanations": "Single passage 2608.12626_sec_001 explains both the strategic drift mechanism and the EpicStar dual-memory inference architecture.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_006",
+    "paper_id": "2608.12630",
+    "is_multi_passage": false,
+    "question": "In the study of AI-generated fiction, how do the authors define the corpus-level concept of 'overclosure' (including their specific definition of 'formal range'), and how do they distinguish between 'variance overclosure' and 'correlational overclosure'?",
+    "reference_answer": "Overclosure describes a corpus-level condition where generated texts remain locally fluent and coherent but display an unusually restricted range across measured formal dimensions; 'formal range' specifically denotes the dispersion and coordination among measured stylistic features (excluding plot, characterization, or narrative structure). The authors distinguish 'variance overclosure' (where novels differ very little from one another with respect to individual stylistic features) from 'correlational overclosure', which describes coupled feature compression where an individual AI-generated novel may stylistically resemble human fiction, while a collection of AI-generated novels occupies a much narrower formal range.",
+    "supporting_chunks": [
+      "2608.12630_sec_007",
+      "2608.12630_sec_002"
+    ],
+    "supporting_excerpts": [
+      "Overclosure describes a corpus-level condition in which generated texts remain locally fluent and coherent but depict an unusually restricted tendency across the measured formal dimensions. “Variance over closure” means that novels differ very little from one another with respect to fea2 tures",
+      "This article therefore distinguishes between variance over closure, which represents a limited formal range between novels, and a more specific phenomenon of correlational over closure. This means that an individual AIgenerated novel may resemble human fiction stylistically, while a collection of AI-generated novels occupies a much narrower formal range."
+    ],
+    "fact_explanations": "Passage 2608.12630_sec_007 defines corpus-level overclosure and clarifies formal range as stylistic dispersion, while Passage 2608.12630_sec_002 provides the conceptual distinction between variance and correlational overclosure.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Empirically reclassified from multi_passage to single_passage per ChatGPT decision: a single supplied passage was confirmed sufficient to answer the complete question."
+  },
+  {
+    "family_id": "v2_train_007",
+    "paper_id": "2608.12652",
+    "is_multi_passage": false,
+    "question": "Why does training a linear activation probe on temporal benchmark splits (such as WikiMIA) fail to provide an unconfounded estimate of model memorization in benchmark contamination detection?",
+    "reference_answer": "A probe trained to separate two item sets will exploit any feature that separates them. When member and non-member benchmark sets are split by publication date (as in WikiMIA), they systematically differ in topic, style, and temporal distribution shift. As a result, a probe without access to the target model can achieve a high AUC, and any activation probe evaluated on such a split reports the confounded sum of two quantities—memorization and distribution shift—rather than an isolated memorization signal.",
+    "supporting_chunks": [
+      "2608.12652_sec_005"
+    ],
+    "supporting_excerpts": [
+      "The difficulty is that a probe trained to separate two item sets will use anything that separates them. Das et al. [20] show that on several widely used membership-inference 1 arXiv:2608.12652v1 [cs.CL] 12 Aug 2026 benchmarks, including WikiMIA, a classifier with no access to the target model at all reaches high AUC, because the member and non-member sets were split by publication date and therefore differ in topic and style. Any probe evaluated on such a split reports the sum of two quantities, memorisation and distribution shift, and the split’s"
+    ],
+    "fact_explanations": "Single passage 2608.12652_sec_005 explains why temporal splits confound probe memorization with distribution shift.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_008",
+    "paper_id": "2608.12698",
+    "is_multi_passage": true,
+    "question": "How does Class-Geometry Supervision (CGS) structurally depart from prior prototype-based few-shot object detectors regarding relational constraints among prototypes, and what do ablation studies reveal regarding meaningful visual geometry versus random geometry?",
+    "reference_answer": "Prior prototype-based few-shot detectors optimize class prototypes independently from support examples without constraining the relational geometry among the prototypes themselves, whereas CGS explicitly supervises the prototype space by aligning pairwise distances among learned class representations with a target class-geometry matrix estimated from training data. Ablation studies show that meaningful visual geometry provides the most reliable performance gains in sample efficiency and detection, whereas random geometry can assist novel class separation but is less consistent for few-shot detection.",
+    "supporting_chunks": [
+      "2608.12698_sec_007",
+      "2608.12698_sec_001"
+    ],
+    "supporting_excerpts": [
+      "However, the key distinction is that prior prototype methods learn class anchors from support exam- ples but do not explicitly constrain the relational geometry among the prototypes themselves. While few-shot detectors improve adaptation from limited support examples through meta-learning, fine-tuning, contrastive encoding, or prototype calibration, our approach structurally departs from this paradigm by supervising the prototype space using known class relationships, ensuring that scarce examples are inherently arranged in a more calibrated open-world geometry.",
+      "Ablations show that meaningful visual geometry provides the most reliable gains, while random geometry can help novel separation but is less consistent for few-shot detection."
+    ],
+    "fact_explanations": "Passage 2608.12698_sec_007 explains the relational prototype constraint departure, while Passage 2608.12698_sec_001 reports the empirical ablation comparison between visual and random geometry.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "multi_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_009",
+    "paper_id": "2608.12713",
+    "is_multi_passage": false,
+    "question": "What security vulnerability arises from using highly edit-robust LLM watermarks alone (termed piggyback spoofing), and how does the Cocktail watermarking scheme resolve it to support three-state detection?",
+    "reference_answer": "When an LLM watermark is designed to be highly robust to edits, an adversary can alter critical content while retaining the watermark attribution signal, making the scheme endorse content the model did not generate (piggyback spoofing). Cocktail resolves this by co-embedding two complementary signals into each generated token—a robust signal using a short seeding window and a fragile signal using a long seeding window—sharing the same mechanism but with independent keys. At detection, their joint scores form a two-dimensional space supporting three states: Intact, Tampered, and No-Watermark.",
+    "supporting_chunks": [
+      "2608.12713_sec_001"
+    ],
+    "supporting_excerpts": [
+      "Existing LLM watermarks preserve provenance under editing, but this same robustness allows an adversary to alter critical content while retaining attribution, a vulnerability known as piggyback spoofing. We introduce an innovative watermark that jointly provides provenance and tamper evidence. It co-embeds a robust signal and a fragile signal into each generated token. The signals share the same mechanism but use independent keys and different seeding windows over normalized text, making one resilient to edits and the other sensitive to reader-visible changes. Multiple rounds of unbiased tournament reweighting preserve the expected generation distribution, while a periodic round-allocation pattern controls the trade-off between the two signals. At detection, their scores form a two-dimensional space supporting three decisions: Intact, Tampered, and No-Watermark."
+    ],
+    "fact_explanations": "Single passage 2608.12713_sec_001 defines piggyback spoofing and specifies the co-embedded robust/fragile dual-signal Cocktail architecture.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_010",
+    "paper_id": "2608.12714",
+    "is_multi_passage": false,
+    "question": "Why do conventional Open-World Object Detection (OWOD) and Sparsely Annotated Object Detection (SAOD) frameworks fail in sparsely annotated open environments, and how do the KTRM and DDTG modules in the DPOD framework resolve the dual ambiguity of unlabeled regions?",
+    "reference_answer": "Conventional OWOD assumes densely annotated data (so unlabeled known objects obscure boundaries between known and unknown categories), while SAOD operates under a closed-world assumption where unseen novel categories are implicitly treated as background. In the DPOD framework, KTRM recovers missing known objects to stabilize pseudo-label learning and refine decision boundaries, while DDTG discovers additional unknown instances via cross-view semantic disagreement.",
+    "supporting_chunks": [
+      "2608.12714_sec_007",
+      "2608.12714_sec_005"
+    ],
+    "supporting_excerpts": [
+      "However, despite their effectiveness, most existing OWOD methods still depend on densely annotated data. Under sparse annotation settings, unlabeled known objects obscure the boundary between known and unknown categories, leading to degraded detection performance. 2.2 Sparsely Annotated Object Detection (SAOD) Sparsely Annotated Object Detection (SAOD) [10,28,32,42,45] addresses object detection when only a subset of object instances is annotated per image, resulting in sparse supervision. In such scenarios, detectors incorrectly interpret unlabeled objects as background regions, introducing false-negative supervision during training.",
+      "KTRM recovers missing known objects to stabilize pseudo-label learning and refine decision boundaries, while DDTG discovers additional unknown instances via cross-view semantic disagreement."
+    ],
+    "fact_explanations": "Passage 2608.12714_sec_007 explains why prior OWOD and SAOD fail under sparse annotations, while Passage 2608.12714_sec_005 specifies the roles of KTRM (known recovery) and DDTG (unknown discovery).",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Empirically reclassified from multi_passage to single_passage per ChatGPT decision: a single supplied passage was confirmed sufficient to answer the complete question."
+  },
+  {
+    "family_id": "v2_train_011",
+    "paper_id": "2608.12717",
+    "is_multi_passage": false,
+    "question": "In the PRISM framework for studying naming-error dissociations across transformers and post-stroke aphasia patients, how does the contrast operator differ between the LLM and cortical substrates, and what specific anatomical and layer clusters were recovered in the phonemic-favoring dissociation?",
+    "reference_answer": "In PRISM, the contrast operator differs between substrates: it is a within-subject error-proportion difference for the LLM, whereas it is a between-subject correlation difference for the cortex. Both substrates recover a replicating phonemic-favoring dissociation, located in a deep layer cluster for the LLM and a frontal-perisylvian cortical cluster for post-stroke aphasia patients.",
+    "supporting_chunks": [
+      "2608.12717_sec_002"
+    ],
+    "supporting_excerpts": [
+      "The designs match in subject dimension (seeds, patients), spatial dimension (layers, atlas-parcel lated cortex) and thresholding, but the contrast operator differs: a within-subject error-proportion difference for the LLM, a between-subject correlation difference for the cortex. Both substrates recover a robust phonemic-favoring dissociation, a deep layer cluster and a frontal-perisylvian cortical cluster, both replicating; the semantic-favoring direction is a consistently signed but non-significant trend on both."
+    ],
+    "fact_explanations": "Single passage 2608.12717_sec_002 specifies both the substrate contrast operator difference and the recovered phonemic-favoring cluster locations.",
+    "intended_question_type": "single_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Verified matches intended type."
+  },
+  {
+    "family_id": "v2_train_012",
+    "paper_id": "2608.12748",
+    "is_multi_passage": false,
+    "question": "How does the visual grounding framework in paper 2608.12748 combine discriminative grounding with reconstructive regularization during training without incurring inference overhead, and how does the Modulated Attention-Contrastive Head (mACH) reformulate query-text interaction to accelerate multi-query inference?",
+    "reference_answer": "The framework jointly supervises visual features during training with a discriminative Modulated Attention-Contrastive Head (mACH) and an auxiliary reconstructive JEPA stream, where the JEPA branch is removed after training, adding zero inference cost. To accelerate multi-query inference, mACH broadcasts flattened visual feature maps along the batch dimension (pairing each visual map with every referring expression in an expanded batch) so that a single visual forward pass interacts with all candidate expressions simultaneously.",
+    "supporting_chunks": [
+      "2608.12748_sec_007",
+      "2608.12748_sec_008"
+    ],
+    "supporting_excerpts": [
+      "Unlike conventional groundingframeworksthatoptimizeonlydiscriminativealignment, our method jointly supervises the same visual features with two complementary objectives during training:(1)adiscriminative Modulated Attention-Contrastive Head (mACH) for open-vocabulary grounding, and (2) a reconstructive JEPA auxiliary stream that regularizes the shared visual representation.SincetheJEPAbranchisremovedaftertraining, it introduces no additional inference cost.",
+      "Toavoidredundantvisualcomputation,the visual features are broadcast along the batch dimension, Q= Broadcast(X)∈R Bnc×M×C ,(1) such that each visual feature map is paired with every referring expression. Meanwhile, the textual embeddings are linearly projected to generate the corresponding keys and values"
+    ],
+    "fact_explanations": "Passage 2608.12748_sec_007 explains the dual-objective training and inference-free JEPA removal, while Passage 2608.12748_sec_008 provides the mACH batch-broadcasting formula for multi-query inference.",
+    "intended_question_type": "multi_passage",
+    "verified_question_type": "single_passage",
+    "reclassification_note": "Empirically reclassified from multi_passage to single_passage per ChatGPT decision: a single supplied passage was confirmed sufficient to answer the complete question."
+  }
+]

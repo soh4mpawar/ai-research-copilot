@@ -1,0 +1,1634 @@
+{
+  "ctx_val_0001": {
+    "opaque_context_id": "ctx_val_0001",
+    "family_id": "v2_val_009",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12876",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9947,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9835864086806828,
+      "M2_Relevance_Dedup": 0.9158533017533215,
+      "M3_Full_Raw": 0.9921123005965875,
+      "M4_Full_Dedup": 0.9368965780626294,
+      "Shortcut_LengthDiagnostic": 0.9857179971733773
+    }
+  },
+  "ctx_val_0002": {
+    "opaque_context_id": "ctx_val_0002",
+    "family_id": "v2_val_001",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12598",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.041067711014637416,
+      "M2_Relevance_Dedup": 0.044355414774166387,
+      "M3_Full_Raw": 0.03567337501444057,
+      "M4_Full_Dedup": 0.05041021917286714,
+      "Shortcut_LengthDiagnostic": 0.3909872471117624
+    }
+  },
+  "ctx_val_0003": {
+    "opaque_context_id": "ctx_val_0003",
+    "family_id": "v2_val_011",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13063",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9623,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5440119092791482,
+      "M2_Relevance_Dedup": 0.468464959226108,
+      "M3_Full_Raw": 0.5693763447467838,
+      "M4_Full_Dedup": 0.5064329202226671,
+      "Shortcut_LengthDiagnostic": 0.4108716874905561
+    }
+  },
+  "ctx_val_0004": {
+    "opaque_context_id": "ctx_val_0004",
+    "family_id": "v2_val_007",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12825",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9982,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5459950867223792,
+      "M2_Relevance_Dedup": 0.5605783257043828,
+      "M3_Full_Raw": 0.5789917861400341,
+      "M4_Full_Dedup": 0.5925675071179018,
+      "Shortcut_LengthDiagnostic": 0.4068691774838741
+    }
+  },
+  "ctx_val_0005": {
+    "opaque_context_id": "ctx_val_0005",
+    "family_id": "v2_val_005",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12773",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.041067711014637416,
+      "M2_Relevance_Dedup": 0.044355414774166387,
+      "M3_Full_Raw": 0.030100591561748196,
+      "M4_Full_Dedup": 0.06213101156141916,
+      "Shortcut_LengthDiagnostic": 0.4238097939805903
+    }
+  },
+  "ctx_val_0006": {
+    "opaque_context_id": "ctx_val_0006",
+    "family_id": "v2_val_012",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13064",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9908,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5420702286781035,
+      "M2_Relevance_Dedup": 0.7908827140319373,
+      "M3_Full_Raw": 0.4791993137525421,
+      "M4_Full_Dedup": 0.8032077744399468,
+      "Shortcut_LengthDiagnostic": 0.42520256779737625
+    }
+  },
+  "ctx_val_0007": {
+    "opaque_context_id": "ctx_val_0007",
+    "family_id": "v2_val_009",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12876",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9947,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5716363132837331,
+      "M2_Relevance_Dedup": 0.4931251345295216,
+      "M3_Full_Raw": 0.5255298201232169,
+      "M4_Full_Dedup": 0.44999545387057993,
+      "Shortcut_LengthDiagnostic": 0.3920867404790646
+    }
+  },
+  "ctx_val_0008": {
+    "opaque_context_id": "ctx_val_0008",
+    "family_id": "v2_val_011",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13063",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0006,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04117750342408664,
+      "M2_Relevance_Dedup": 0.044453548317021495,
+      "M3_Full_Raw": 0.042382293058715756,
+      "M4_Full_Dedup": 0.04089900471299192,
+      "Shortcut_LengthDiagnostic": 0.41495193467275937
+    }
+  },
+  "ctx_val_0009": {
+    "opaque_context_id": "ctx_val_0009",
+    "family_id": "v2_val_003",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12721",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9998,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9956921822743349,
+      "M2_Relevance_Dedup": 0.914503263618405,
+      "M3_Full_Raw": 0.9955044408091637,
+      "M4_Full_Dedup": 0.9367633905435606,
+      "Shortcut_LengthDiagnostic": 0.9856643917506815
+    }
+  },
+  "ctx_val_0010": {
+    "opaque_context_id": "ctx_val_0010",
+    "family_id": "v2_val_010",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13040",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9984,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.99122480598839,
+      "M2_Relevance_Dedup": 0.904139845773615,
+      "M3_Full_Raw": 0.9884926560998067,
+      "M4_Full_Dedup": 0.8986125996077622,
+      "Shortcut_LengthDiagnostic": 0.9856336711100607
+    }
+  },
+  "ctx_val_0011": {
+    "opaque_context_id": "ctx_val_0011",
+    "family_id": "v2_val_005",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12773",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9983,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9830875453363473,
+      "M2_Relevance_Dedup": 0.9733238759217334,
+      "M3_Full_Raw": 0.9829048078923377,
+      "M4_Full_Dedup": 0.9668837602935658,
+      "Shortcut_LengthDiagnostic": 0.9856067373391345
+    }
+  },
+  "ctx_val_0012": {
+    "opaque_context_id": "ctx_val_0012",
+    "family_id": "v2_val_011",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13063",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9994,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9450755031005219,
+      "M2_Relevance_Dedup": 0.9605482188041071,
+      "M3_Full_Raw": 0.9458175431893882,
+      "M4_Full_Dedup": 0.9696958458525134,
+      "Shortcut_LengthDiagnostic": 0.878177335649637
+    }
+  },
+  "ctx_val_0013": {
+    "opaque_context_id": "ctx_val_0013",
+    "family_id": "v2_val_004",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12746",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9997,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5756687416236972,
+      "M2_Relevance_Dedup": 0.49690988317721035,
+      "M3_Full_Raw": 0.5293406819429407,
+      "M4_Full_Dedup": 0.4533109109015415,
+      "Shortcut_LengthDiagnostic": 0.408573686650952
+    }
+  },
+  "ctx_val_0014": {
+    "opaque_context_id": "ctx_val_0014",
+    "family_id": "v2_val_003",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12721",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9998,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5777415843556984,
+      "M2_Relevance_Dedup": 0.4989653971788536,
+      "M3_Full_Raw": 0.43309409297422086,
+      "M4_Full_Dedup": 0.2661007868797234,
+      "Shortcut_LengthDiagnostic": 0.40248720136252897
+    }
+  },
+  "ctx_val_0015": {
+    "opaque_context_id": "ctx_val_0015",
+    "family_id": "v2_val_012",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13064",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9827,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5413510262031141,
+      "M2_Relevance_Dedup": 0.7429563657073872,
+      "M3_Full_Raw": 0.4750596360284013,
+      "M4_Full_Dedup": 0.538067758138648,
+      "Shortcut_LengthDiagnostic": 0.42414129788446187
+    }
+  },
+  "ctx_val_0016": {
+    "opaque_context_id": "ctx_val_0016",
+    "family_id": "v2_val_007",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12825",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9982,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.546663593888777,
+      "M2_Relevance_Dedup": 0.793565536319698,
+      "M3_Full_Raw": 0.5689340132242834,
+      "M4_Full_Dedup": 0.7483485762412226,
+      "Shortcut_LengthDiagnostic": 0.4100833579126495
+    }
+  },
+  "ctx_val_0017": {
+    "opaque_context_id": "ctx_val_0017",
+    "family_id": "v2_val_005",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12773",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9956,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.57221707648267,
+      "M2_Relevance_Dedup": 0.4936368131110147,
+      "M3_Full_Raw": 0.4275717064468493,
+      "M4_Full_Dedup": 0.2624380195764976,
+      "Shortcut_LengthDiagnostic": 0.42188843232184525
+    }
+  },
+  "ctx_val_0018": {
+    "opaque_context_id": "ctx_val_0018",
+    "family_id": "v2_val_003",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12721",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0033,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04184867126839619,
+      "M2_Relevance_Dedup": 0.04508428593805757,
+      "M3_Full_Raw": 0.030675151433648934,
+      "M4_Full_Dedup": 0.06311206154833432,
+      "Shortcut_LengthDiagnostic": 0.3932521040060173
+    }
+  },
+  "ctx_val_0019": {
+    "opaque_context_id": "ctx_val_0019",
+    "family_id": "v2_val_009",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12876",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.984,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5625563975257465,
+      "M2_Relevance_Dedup": 0.48494869069359836,
+      "M3_Full_Raw": 0.516878931662312,
+      "M4_Full_Dedup": 0.4425803105359633,
+      "Shortcut_LengthDiagnostic": 0.38924326974545626
+    }
+  },
+  "ctx_val_0020": {
+    "opaque_context_id": "ctx_val_0020",
+    "family_id": "v2_val_002",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12720",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0001,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04108132609867709,
+      "M2_Relevance_Dedup": 0.044369440867411174,
+      "M3_Full_Raw": 0.03011037490167535,
+      "M4_Full_Dedup": 0.06215157296891177,
+      "Shortcut_LengthDiagnostic": 0.4238097939805903
+    }
+  },
+  "ctx_val_0021": {
+    "opaque_context_id": "ctx_val_0021",
+    "family_id": "v2_val_010",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13040",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9984,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5783307751363977,
+      "M2_Relevance_Dedup": 0.5793069674035022,
+      "M3_Full_Raw": 0.5391943228680578,
+      "M4_Full_Dedup": 0.5024644592353524,
+      "Shortcut_LengthDiagnostic": 0.40261778513116925
+    }
+  },
+  "ctx_val_0022": {
+    "opaque_context_id": "ctx_val_0022",
+    "family_id": "v2_val_003",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12721",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9988,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5768980724392353,
+      "M2_Relevance_Dedup": 0.49820086520973567,
+      "M3_Full_Raw": 0.4323531199924455,
+      "M4_Full_Dedup": 0.2657494724827156,
+      "Shortcut_LengthDiagnostic": 0.3946780879324508
+    }
+  },
+  "ctx_val_0023": {
+    "opaque_context_id": "ctx_val_0023",
+    "family_id": "v2_val_001",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12598",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9968,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9674749065682007,
+      "M2_Relevance_Dedup": 0.9678978808592431,
+      "M3_Full_Raw": 0.9669144000524781,
+      "M4_Full_Dedup": 0.9685959316119839,
+      "Shortcut_LengthDiagnostic": 0.8752430517246529
+    }
+  },
+  "ctx_val_0024": {
+    "opaque_context_id": "ctx_val_0024",
+    "family_id": "v2_val_002",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12720",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.997,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9918238392025135,
+      "M2_Relevance_Dedup": 0.8993925722790787,
+      "M3_Full_Raw": 0.9872664168433297,
+      "M4_Full_Dedup": 0.8801220209842338,
+      "Shortcut_LengthDiagnostic": 0.9855836116512307
+    }
+  },
+  "ctx_val_0025": {
+    "opaque_context_id": "ctx_val_0025",
+    "family_id": "v2_val_006",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12806",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0005,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04113357813444368,
+      "M2_Relevance_Dedup": 0.0444534103512188,
+      "M3_Full_Raw": 0.04229380416463164,
+      "M4_Full_Dedup": 0.04089172257580713,
+      "Shortcut_LengthDiagnostic": 0.4028136866722523
+    }
+  },
+  "ctx_val_0026": {
+    "opaque_context_id": "ctx_val_0026",
+    "family_id": "v2_val_004",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12746",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9997,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9814990947225988,
+      "M2_Relevance_Dedup": 0.9817050154683223,
+      "M3_Full_Raw": 0.9823528950158548,
+      "M4_Full_Dedup": 0.9788313711473023,
+      "Shortcut_LengthDiagnostic": 0.9854479803052789
+    }
+  },
+  "ctx_val_0027": {
+    "opaque_context_id": "ctx_val_0027",
+    "family_id": "v2_val_005",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12773",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9983,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.574500125526368,
+      "M2_Relevance_Dedup": 0.49570082879679445,
+      "M3_Full_Raw": 0.429567635073758,
+      "M4_Full_Dedup": 0.2633796620913422,
+      "Shortcut_LengthDiagnostic": 0.41521558379678386
+    }
+  },
+  "ctx_val_0028": {
+    "opaque_context_id": "ctx_val_0028",
+    "family_id": "v2_val_008",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12875",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9957,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5517287957271875,
+      "M2_Relevance_Dedup": 0.5617281137361901,
+      "M3_Full_Raw": 0.5927607883006923,
+      "M4_Full_Dedup": 0.5932971134777136,
+      "Shortcut_LengthDiagnostic": 0.42241822958113107
+    }
+  },
+  "ctx_val_0029": {
+    "opaque_context_id": "ctx_val_0029",
+    "family_id": "v2_val_002",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12720",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9524,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5353306179523817,
+      "M2_Relevance_Dedup": 0.46072419100111633,
+      "M3_Full_Raw": 0.396003009625354,
+      "M4_Full_Dedup": 0.2477024841646602,
+      "Shortcut_LengthDiagnostic": 0.4230144648825011
+    }
+  },
+  "ctx_val_0030": {
+    "opaque_context_id": "ctx_val_0030",
+    "family_id": "v2_val_006",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12806",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.4208,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.1551857553557341,
+      "M2_Relevance_Dedup": 0.1440210572459329,
+      "M3_Full_Raw": 0.17737585921362045,
+      "M4_Full_Dedup": 0.14617792966719095,
+      "Shortcut_LengthDiagnostic": 0.40732786507770125
+    }
+  },
+  "ctx_val_0031": {
+    "opaque_context_id": "ctx_val_0031",
+    "family_id": "v2_val_007",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12825",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9982,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9790866725229699,
+      "M2_Relevance_Dedup": 0.9792271929671348,
+      "M3_Full_Raw": 0.9774626901673955,
+      "M4_Full_Dedup": 0.9786971007685804,
+      "Shortcut_LengthDiagnostic": 0.9856720617902065
+    }
+  },
+  "ctx_val_0032": {
+    "opaque_context_id": "ctx_val_0032",
+    "family_id": "v2_val_008",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12875",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9992,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5547191353726518,
+      "M2_Relevance_Dedup": 0.7987181294668438,
+      "M3_Full_Raw": 0.5851555518408696,
+      "M4_Full_Dedup": 0.7561195887280037,
+      "Shortcut_LengthDiagnostic": 0.41561114847385744
+    }
+  },
+  "ctx_val_0033": {
+    "opaque_context_id": "ctx_val_0033",
+    "family_id": "v2_val_012",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13064",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9827,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5351122048380439,
+      "M2_Relevance_Dedup": 0.5487327970530649,
+      "M3_Full_Raw": 0.4724304144211186,
+      "M4_Full_Dedup": 0.39209527920958254,
+      "Shortcut_LengthDiagnostic": 0.4232795304602754
+    }
+  },
+  "ctx_val_0034": {
+    "opaque_context_id": "ctx_val_0034",
+    "family_id": "v2_val_010",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13040",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.2323,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.0884861300281307,
+      "M2_Relevance_Dedup": 0.09317103460592338,
+      "M3_Full_Raw": 0.07886246917064191,
+      "M4_Full_Dedup": 0.08965874254422353,
+      "Shortcut_LengthDiagnostic": 0.40542864814969265
+    }
+  },
+  "ctx_val_0035": {
+    "opaque_context_id": "ctx_val_0035",
+    "family_id": "v2_val_008",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12875",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9957,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5518135026975615,
+      "M2_Relevance_Dedup": 0.7964524651506245,
+      "M3_Full_Raw": 0.5928020572787577,
+      "M4_Full_Dedup": 0.9068375260744417,
+      "Shortcut_LengthDiagnostic": 0.41910997218138907
+    }
+  },
+  "ctx_val_0036": {
+    "opaque_context_id": "ctx_val_0036",
+    "family_id": "v2_val_002",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12720",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.997,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5733977791855657,
+      "M2_Relevance_Dedup": 0.4947417088326918,
+      "M3_Full_Raw": 0.42861101000829366,
+      "M4_Full_Dedup": 0.2629605096237341,
+      "Shortcut_LengthDiagnostic": 0.4164685777502486
+    }
+  },
+  "ctx_val_0037": {
+    "opaque_context_id": "ctx_val_0037",
+    "family_id": "v2_val_009",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12876",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0004,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.0411210718620337,
+      "M2_Relevance_Dedup": 0.04442544966224486,
+      "M3_Full_Raw": 0.035718255354590986,
+      "M4_Full_Dedup": 0.050503460072065444,
+      "Shortcut_LengthDiagnostic": 0.40059529912322417
+    }
+  },
+  "ctx_val_0038": {
+    "opaque_context_id": "ctx_val_0038",
+    "family_id": "v2_val_001",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12598",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9968,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5732321506914146,
+      "M2_Relevance_Dedup": 0.494554130821066,
+      "M3_Full_Raw": 0.5270022915701964,
+      "M4_Full_Dedup": 0.4512193894125824,
+      "Shortcut_LengthDiagnostic": 0.3856995177712356
+    }
+  },
+  "ctx_val_0039": {
+    "opaque_context_id": "ctx_val_0039",
+    "family_id": "v2_val_007",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12825",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9982,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.549448968860536,
+      "M2_Relevance_Dedup": 0.7750770245832858,
+      "M3_Full_Raw": 0.5806873236459922,
+      "M4_Full_Dedup": 0.8939568352254663,
+      "Shortcut_LengthDiagnostic": 0.40759004487128525
+    }
+  },
+  "ctx_val_0040": {
+    "opaque_context_id": "ctx_val_0040",
+    "family_id": "v2_val_004",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.12746",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0004,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04111994647573888,
+      "M2_Relevance_Dedup": 0.04441154452780282,
+      "M3_Full_Raw": 0.035717002315072396,
+      "M4_Full_Dedup": 0.05045855635466218,
+      "Shortcut_LengthDiagnostic": 0.4134369015386821
+    }
+  },
+  "ctx_val_0041": {
+    "opaque_context_id": "ctx_val_0041",
+    "family_id": "v2_val_001",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12598",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9119,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5003939721781157,
+      "M2_Relevance_Dedup": 0.4301053034604466,
+      "M3_Full_Raw": 0.4583586991272,
+      "M4_Full_Dedup": 0.39320940518128433,
+      "Shortcut_LengthDiagnostic": 0.390276398834628
+    }
+  },
+  "ctx_val_0042": {
+    "opaque_context_id": "ctx_val_0042",
+    "family_id": "v2_val_010",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13040",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9883,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5697943182324392,
+      "M2_Relevance_Dedup": 0.5717615165739921,
+      "M3_Full_Raw": 0.5310541672401504,
+      "M4_Full_Dedup": 0.49538341690217674,
+      "Shortcut_LengthDiagnostic": 0.4062796749210924
+    }
+  },
+  "ctx_val_0043": {
+    "opaque_context_id": "ctx_val_0043",
+    "family_id": "v2_val_008",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12875",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9992,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9810739172936397,
+      "M2_Relevance_Dedup": 0.9810938438152241,
+      "M3_Full_Raw": 0.9810620555266008,
+      "M4_Full_Dedup": 0.9791407345554712,
+      "Shortcut_LengthDiagnostic": 0.875687026078351
+    }
+  },
+  "ctx_val_0044": {
+    "opaque_context_id": "ctx_val_0044",
+    "family_id": "v2_val_006",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.12806",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9181,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.6396518450574254,
+      "M2_Relevance_Dedup": 0.6092911657970966,
+      "M3_Full_Raw": 0.6275410371925451,
+      "M4_Full_Dedup": 0.620728349317011,
+      "Shortcut_LengthDiagnostic": 0.878002967959847
+    }
+  },
+  "ctx_val_0045": {
+    "opaque_context_id": "ctx_val_0045",
+    "family_id": "v2_val_006",
+    "condition": "supported_candidate",
+    "paper_id": "2608.12806",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9181,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5061317178003086,
+      "M2_Relevance_Dedup": 0.4350031815944746,
+      "M3_Full_Raw": 0.5329530854583975,
+      "M4_Full_Dedup": 0.46993062077411424,
+      "Shortcut_LengthDiagnostic": 0.410346083324122
+    }
+  },
+  "ctx_val_0046": {
+    "opaque_context_id": "ctx_val_0046",
+    "family_id": "v2_val_004",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.12746",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9992,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5752464938574234,
+      "M2_Relevance_Dedup": 0.49652763053003224,
+      "M3_Full_Raw": 0.528937071748927,
+      "M4_Full_Dedup": 0.4529634362251856,
+      "Shortcut_LengthDiagnostic": 0.40608323397054846
+    }
+  },
+  "ctx_val_0047": {
+    "opaque_context_id": "ctx_val_0047",
+    "family_id": "v2_val_011",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13063",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9994,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5756028903338268,
+      "M2_Relevance_Dedup": 0.4967874589693574,
+      "M3_Full_Raw": 0.5995553600067457,
+      "M4_Full_Dedup": 0.5370359573018746,
+      "Shortcut_LengthDiagnostic": 0.4189117047102318
+    }
+  },
+  "ctx_val_0048": {
+    "opaque_context_id": "ctx_val_0048",
+    "family_id": "v2_val_012",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13064",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9908,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.8968220004360041,
+      "M2_Relevance_Dedup": 0.9349696565242986,
+      "M3_Full_Raw": 0.8859158618033564,
+      "M4_Full_Dedup": 0.9509927314291695,
+      "Shortcut_LengthDiagnostic": 0.9856259808189156
+    }
+  },
+  "ctx_val_0049": {
+    "opaque_context_id": "ctx_val_0049",
+    "family_id": "v2_val_023",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13517",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9989,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5416298701520487,
+      "M2_Relevance_Dedup": 0.5591830398112767,
+      "M3_Full_Raw": 0.5694770792414373,
+      "M4_Full_Dedup": 0.5914039208914449,
+      "Shortcut_LengthDiagnostic": 0.42898888304144184
+    }
+  },
+  "ctx_val_0050": {
+    "opaque_context_id": "ctx_val_0050",
+    "family_id": "v2_val_024",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13556",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.933,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.518619505328581,
+      "M2_Relevance_Dedup": 0.44598795055460305,
+      "M3_Full_Raw": 0.4753723623465538,
+      "M4_Full_Dedup": 0.4074135751375614,
+      "Shortcut_LengthDiagnostic": 0.39111654207354013
+    }
+  },
+  "ctx_val_0051": {
+    "opaque_context_id": "ctx_val_0051",
+    "family_id": "v2_val_016",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13183",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.1919,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.07661473286196714,
+      "M2_Relevance_Dedup": 0.08258831302393632,
+      "M3_Full_Raw": 0.07556920873725222,
+      "M4_Full_Dedup": 0.07866905423195272,
+      "Shortcut_LengthDiagnostic": 0.4199033027138775
+    }
+  },
+  "ctx_val_0052": {
+    "opaque_context_id": "ctx_val_0052",
+    "family_id": "v2_val_019",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13255",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9966,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5731280601946905,
+      "M2_Relevance_Dedup": 0.49573423341152023,
+      "M3_Full_Raw": 0.4286836150114011,
+      "M4_Full_Dedup": 0.2641213108219684,
+      "Shortcut_LengthDiagnostic": 0.39922714509542295
+    }
+  },
+  "ctx_val_0053": {
+    "opaque_context_id": "ctx_val_0053",
+    "family_id": "v2_val_022",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13387",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9979,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5746860336764145,
+      "M2_Relevance_Dedup": 0.49610936840538467,
+      "M3_Full_Raw": 0.5285789436346108,
+      "M4_Full_Dedup": 0.4528961032229617,
+      "Shortcut_LengthDiagnostic": 0.41093740234463466
+    }
+  },
+  "ctx_val_0054": {
+    "opaque_context_id": "ctx_val_0054",
+    "family_id": "v2_val_018",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13239",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9248,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.47875541550393896,
+      "M2_Relevance_Dedup": 0.4975170546805736,
+      "M3_Full_Raw": 0.5038270225454633,
+      "M4_Full_Dedup": 0.5264614575178784,
+      "Shortcut_LengthDiagnostic": 0.4017039897119158
+    }
+  },
+  "ctx_val_0055": {
+    "opaque_context_id": "ctx_val_0055",
+    "family_id": "v2_val_017",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13237",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.6149,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.2640415700159688,
+      "M2_Relevance_Dedup": 0.23331385052640988,
+      "M3_Full_Raw": 0.24430916357343507,
+      "M4_Full_Dedup": 0.21981272378644073,
+      "Shortcut_LengthDiagnostic": 0.403793658442716
+    }
+  },
+  "ctx_val_0056": {
+    "opaque_context_id": "ctx_val_0056",
+    "family_id": "v2_val_021",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13326",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9412,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.4924661687607836,
+      "M2_Relevance_Dedup": 0.7520032671742922,
+      "M3_Full_Raw": 0.5177862400978046,
+      "M4_Full_Dedup": 0.8757169835116506,
+      "Shortcut_LengthDiagnostic": 0.4161387371468681
+    }
+  },
+  "ctx_val_0057": {
+    "opaque_context_id": "ctx_val_0057",
+    "family_id": "v2_val_014",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13102",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9997,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9679795078455558,
+      "M2_Relevance_Dedup": 0.9434376644691419,
+      "M3_Full_Raw": 0.9734881231140986,
+      "M4_Full_Dedup": 0.9262654936053858,
+      "Shortcut_LengthDiagnostic": 0.4329834692845581
+    }
+  },
+  "ctx_val_0058": {
+    "opaque_context_id": "ctx_val_0058",
+    "family_id": "v2_val_020",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13304",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.8578,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.423640278576213,
+      "M2_Relevance_Dedup": 0.4422244302221231,
+      "M3_Full_Raw": 0.3591726820364511,
+      "M4_Full_Dedup": 0.31618807551625433,
+      "Shortcut_LengthDiagnostic": 0.4016387446584017
+    }
+  },
+  "ctx_val_0059": {
+    "opaque_context_id": "ctx_val_0059",
+    "family_id": "v2_val_016",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13183",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9923,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5789727187655695,
+      "M2_Relevance_Dedup": 0.5605702237365242,
+      "M3_Full_Raw": 0.6132634253652233,
+      "M4_Full_Dedup": 0.5940012232055687,
+      "Shortcut_LengthDiagnostic": 0.42089554778491545
+    }
+  },
+  "ctx_val_0060": {
+    "opaque_context_id": "ctx_val_0060",
+    "family_id": "v2_val_013",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13092",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.984,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.6149999903679516,
+      "M2_Relevance_Dedup": 0.5250775000319939,
+      "M3_Full_Raw": 0.6429931570653193,
+      "M4_Full_Dedup": 0.5606725910478957,
+      "Shortcut_LengthDiagnostic": 0.40759004487128525
+    }
+  },
+  "ctx_val_0061": {
+    "opaque_context_id": "ctx_val_0061",
+    "family_id": "v2_val_024",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13556",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.041067711014637416,
+      "M2_Relevance_Dedup": 0.044355414774166387,
+      "M3_Full_Raw": 0.03567337501444057,
+      "M4_Full_Dedup": 0.05041021917286714,
+      "Shortcut_LengthDiagnostic": 0.3937056301048501
+    }
+  },
+  "ctx_val_0062": {
+    "opaque_context_id": "ctx_val_0062",
+    "family_id": "v2_val_021",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13326",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9412,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9408787132756802,
+      "M2_Relevance_Dedup": 0.8557730650288541,
+      "M3_Full_Raw": 0.9212904706776136,
+      "M4_Full_Dedup": 0.8740090118191084,
+      "Shortcut_LengthDiagnostic": 0.8764533700161339
+    }
+  },
+  "ctx_val_0063": {
+    "opaque_context_id": "ctx_val_0063",
+    "family_id": "v2_val_014",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13102",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9997,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5757764148324949,
+      "M2_Relevance_Dedup": 0.4968245852994976,
+      "M3_Full_Raw": 0.5996911483939428,
+      "M4_Full_Dedup": 0.537107247081227,
+      "Shortcut_LengthDiagnostic": 0.4148201283622142
+    }
+  },
+  "ctx_val_0064": {
+    "opaque_context_id": "ctx_val_0064",
+    "family_id": "v2_val_021",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13326",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9412,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.4923306272499497,
+      "M2_Relevance_Dedup": 0.5110799783800483,
+      "M3_Full_Raw": 0.5177186526425562,
+      "M4_Full_Dedup": 0.5408599006809901,
+      "Shortcut_LengthDiagnostic": 0.42215330855825767
+    }
+  },
+  "ctx_val_0065": {
+    "opaque_context_id": "ctx_val_0065",
+    "family_id": "v2_val_013",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13092",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.984,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9774010459612901,
+      "M2_Relevance_Dedup": 0.9683071229806862,
+      "M3_Full_Raw": 0.976358795990897,
+      "M4_Full_Dedup": 0.9761770027026583,
+      "Shortcut_LengthDiagnostic": 0.4337834502557232
+    }
+  },
+  "ctx_val_0066": {
+    "opaque_context_id": "ctx_val_0066",
+    "family_id": "v2_val_016",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13183",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9889,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5761051851423492,
+      "M2_Relevance_Dedup": 0.5580073493300722,
+      "M3_Full_Raw": 0.6105581324752137,
+      "M4_Full_Dedup": 0.5912869437303714,
+      "Shortcut_LengthDiagnostic": 0.4182510026008461
+    }
+  },
+  "ctx_val_0067": {
+    "opaque_context_id": "ctx_val_0067",
+    "family_id": "v2_val_017",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13237",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.896,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.486656717569508,
+      "M2_Relevance_Dedup": 0.41822939089951106,
+      "M3_Full_Raw": 0.44559967142019424,
+      "M4_Full_Dedup": 0.38262247140723715,
+      "Shortcut_LengthDiagnostic": 0.40353225723119474
+    }
+  },
+  "ctx_val_0068": {
+    "opaque_context_id": "ctx_val_0068",
+    "family_id": "v2_val_018",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13239",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9641,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5127020627116399,
+      "M2_Relevance_Dedup": 0.7616727196138147,
+      "M3_Full_Raw": 0.5294513317950051,
+      "M4_Full_Dedup": 0.7122982356735735,
+      "Shortcut_LengthDiagnostic": 0.4064106522199066
+    }
+  },
+  "ctx_val_0069": {
+    "opaque_context_id": "ctx_val_0069",
+    "family_id": "v2_val_018",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13239",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9998,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9068584338762806,
+      "M2_Relevance_Dedup": 0.9092894831505228,
+      "M3_Full_Raw": 0.8810803140722379,
+      "M4_Full_Dedup": 0.9212510897089613,
+      "Shortcut_LengthDiagnostic": 0.8773909879727195
+    }
+  },
+  "ctx_val_0070": {
+    "opaque_context_id": "ctx_val_0070",
+    "family_id": "v2_val_014",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13102",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.8399,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.43858086600431717,
+      "M2_Relevance_Dedup": 0.3772129689759204,
+      "M3_Full_Raw": 0.46723684940040516,
+      "M4_Full_Dedup": 0.406193115707453,
+      "Shortcut_LengthDiagnostic": 0.4269950201505419
+    }
+  },
+  "ctx_val_0071": {
+    "opaque_context_id": "ctx_val_0071",
+    "family_id": "v2_val_017",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13237",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.041067711014637416,
+      "M2_Relevance_Dedup": 0.044355414774166387,
+      "M3_Full_Raw": 0.03567337501444057,
+      "M4_Full_Dedup": 0.05041021917286714,
+      "Shortcut_LengthDiagnostic": 0.3954566553801987
+    }
+  },
+  "ctx_val_0072": {
+    "opaque_context_id": "ctx_val_0072",
+    "family_id": "v2_val_019",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13255",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.8414,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.43982893959776764,
+      "M2_Relevance_Dedup": 0.3794958031162815,
+      "M3_Full_Raw": 0.3195802125629996,
+      "M4_Full_Dedup": 0.21349801154830006,
+      "Shortcut_LengthDiagnostic": 0.4057558991906333
+    }
+  },
+  "ctx_val_0073": {
+    "opaque_context_id": "ctx_val_0073",
+    "family_id": "v2_val_013",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13092",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0818,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.0661849124837666,
+      "M2_Relevance_Dedup": 0.0629778110901256,
+      "M3_Full_Raw": 0.06858770153394941,
+      "M4_Full_Dedup": 0.05856825203133398,
+      "Shortcut_LengthDiagnostic": 0.3985111187801793
+    }
+  },
+  "ctx_val_0074": {
+    "opaque_context_id": "ctx_val_0074",
+    "family_id": "v2_val_016",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13183",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9923,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9806192041065326,
+      "M2_Relevance_Dedup": 0.9674241647996769,
+      "M3_Full_Raw": 0.9825537250065244,
+      "M4_Full_Dedup": 0.9634080566250719,
+      "Shortcut_LengthDiagnostic": 0.8783224780513362
+    }
+  },
+  "ctx_val_0075": {
+    "opaque_context_id": "ctx_val_0075",
+    "family_id": "v2_val_020",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13304",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9946,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9799889504126994,
+      "M2_Relevance_Dedup": 0.9779279790530417,
+      "M3_Full_Raw": 0.9795972213222045,
+      "M4_Full_Dedup": 0.975132459422568,
+      "Shortcut_LengthDiagnostic": 0.8760707066082628
+    }
+  },
+  "ctx_val_0076": {
+    "opaque_context_id": "ctx_val_0076",
+    "family_id": "v2_val_021",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13326",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9412,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.52392518783424,
+      "M2_Relevance_Dedup": 0.47127667646331434,
+      "M3_Full_Raw": 0.5334562296999651,
+      "M4_Full_Dedup": 0.6624939518119572,
+      "Shortcut_LengthDiagnostic": 0.4177226519072089
+    }
+  },
+  "ctx_val_0077": {
+    "opaque_context_id": "ctx_val_0077",
+    "family_id": "v2_val_020",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13304",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9946,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5411642882876972,
+      "M2_Relevance_Dedup": 0.7616659356534339,
+      "M3_Full_Raw": 0.4698863612769512,
+      "M4_Full_Dedup": 0.7816789730222632,
+      "Shortcut_LengthDiagnostic": 0.40634516190542685
+    }
+  },
+  "ctx_val_0078": {
+    "opaque_context_id": "ctx_val_0078",
+    "family_id": "v2_val_024",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13556",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.933,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9325266365040897,
+      "M2_Relevance_Dedup": 0.9124956144054198,
+      "M3_Full_Raw": 0.9181716934170562,
+      "M4_Full_Dedup": 0.9322095156454562,
+      "Shortcut_LengthDiagnostic": 0.8731531625743718
+    }
+  },
+  "ctx_val_0079": {
+    "opaque_context_id": "ctx_val_0079",
+    "family_id": "v2_val_024",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13556",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.8907,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.48208108473908456,
+      "M2_Relevance_Dedup": 0.4142910192056972,
+      "M3_Full_Raw": 0.44136170323045076,
+      "M4_Full_Dedup": 0.37911755850670836,
+      "Shortcut_LengthDiagnostic": 0.3862142300436462
+    }
+  },
+  "ctx_val_0080": {
+    "opaque_context_id": "ctx_val_0080",
+    "family_id": "v2_val_013",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13092",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9748,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.6074431344004533,
+      "M2_Relevance_Dedup": 0.518056951351969,
+      "M3_Full_Raw": 0.6358863957850311,
+      "M4_Full_Dedup": 0.5531656467837225,
+      "Shortcut_LengthDiagnostic": 0.3981857955383943
+    }
+  },
+  "ctx_val_0081": {
+    "opaque_context_id": "ctx_val_0081",
+    "family_id": "v2_val_022",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13387",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9896,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5676588206803003,
+      "M2_Relevance_Dedup": 0.4897650522401599,
+      "M3_Full_Raw": 0.5218733957192696,
+      "M4_Full_Dedup": 0.44713512723652593,
+      "Shortcut_LengthDiagnostic": 0.4119235052723979
+    }
+  },
+  "ctx_val_0082": {
+    "opaque_context_id": "ctx_val_0082",
+    "family_id": "v2_val_015",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13168",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9988,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9810346504238217,
+      "M2_Relevance_Dedup": 0.9809319387655604,
+      "M3_Full_Raw": 0.9838124334695707,
+      "M4_Full_Dedup": 0.9754086076197346,
+      "Shortcut_LengthDiagnostic": 0.9853150205822085
+    }
+  },
+  "ctx_val_0083": {
+    "opaque_context_id": "ctx_val_0083",
+    "family_id": "v2_val_018",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13239",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9998,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5434460950743673,
+      "M2_Relevance_Dedup": 0.7809221241944404,
+      "M3_Full_Raw": 0.5682955907048737,
+      "M4_Full_Dedup": 0.8963627138655962,
+      "Shortcut_LengthDiagnostic": 0.4040551142782431
+    }
+  },
+  "ctx_val_0084": {
+    "opaque_context_id": "ctx_val_0084",
+    "family_id": "v2_val_020",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13304",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9922,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5391036279159932,
+      "M2_Relevance_Dedup": 0.7603310193875876,
+      "M3_Full_Raw": 0.46064091122165857,
+      "M4_Full_Dedup": 0.5429054681611263,
+      "Shortcut_LengthDiagnostic": 0.40765559804768847
+    }
+  },
+  "ctx_val_0085": {
+    "opaque_context_id": "ctx_val_0085",
+    "family_id": "v2_val_023",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13517",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9989,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5420054017305899,
+      "M2_Relevance_Dedup": 0.7953717514445723,
+      "M3_Full_Raw": 0.5696621960672318,
+      "M4_Full_Dedup": 0.9046359825935205,
+      "Shortcut_LengthDiagnostic": 0.4161387371468681
+    }
+  },
+  "ctx_val_0086": {
+    "opaque_context_id": "ctx_val_0086",
+    "family_id": "v2_val_017",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13237",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.896,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.7866271789241726,
+      "M2_Relevance_Dedup": 0.8305384059654102,
+      "M3_Full_Raw": 0.7565891624678474,
+      "M4_Full_Dedup": 0.8151391908900053,
+      "Shortcut_LengthDiagnostic": 0.8768350179674755
+    }
+  },
+  "ctx_val_0087": {
+    "opaque_context_id": "ctx_val_0087",
+    "family_id": "v2_val_019",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13255",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9966,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9555311287552272,
+      "M2_Relevance_Dedup": 0.9547473148942693,
+      "M3_Full_Raw": 0.9542653361866016,
+      "M4_Full_Dedup": 0.9588541980971642,
+      "Shortcut_LengthDiagnostic": 0.8788437577113231
+    }
+  },
+  "ctx_val_0088": {
+    "opaque_context_id": "ctx_val_0088",
+    "family_id": "v2_val_015",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13168",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9123,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5045563564998328,
+      "M2_Relevance_Dedup": 0.517293361847988,
+      "M3_Full_Raw": 0.47762083805950617,
+      "M4_Full_Dedup": 0.38085636328366285,
+      "Shortcut_LengthDiagnostic": 0.40542864814969265
+    }
+  },
+  "ctx_val_0089": {
+    "opaque_context_id": "ctx_val_0089",
+    "family_id": "v2_val_023",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13517",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9989,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5419664336843777,
+      "M2_Relevance_Dedup": 0.7956200762638563,
+      "M3_Full_Raw": 0.5696429867353103,
+      "M4_Full_Dedup": 0.9047733563773521,
+      "Shortcut_LengthDiagnostic": 0.4218222202775951
+    }
+  },
+  "ctx_val_0090": {
+    "opaque_context_id": "ctx_val_0090",
+    "family_id": "v2_val_022",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13387",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9979,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.995053602916459,
+      "M2_Relevance_Dedup": 0.9233702003123089,
+      "M3_Full_Raw": 0.9940430366312895,
+      "M4_Full_Dedup": 0.8899933367909654,
+      "Shortcut_LengthDiagnostic": 0.9857409104089259
+    }
+  },
+  "ctx_val_0091": {
+    "opaque_context_id": "ctx_val_0091",
+    "family_id": "v2_val_019",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13255",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0036,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04159051280057726,
+      "M2_Relevance_Dedup": 0.04488614159972576,
+      "M3_Full_Raw": 0.030477401420755158,
+      "M4_Full_Dedup": 0.06290128607615272,
+      "Shortcut_LengthDiagnostic": 0.3983809787112523
+    }
+  },
+  "ctx_val_0092": {
+    "opaque_context_id": "ctx_val_0092",
+    "family_id": "v2_val_014",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13102",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0001,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04109644487786447,
+      "M2_Relevance_Dedup": 0.04437638663109114,
+      "M3_Full_Raw": 0.04226346832132713,
+      "M4_Full_Dedup": 0.04082399399024137,
+      "Shortcut_LengthDiagnostic": 0.4204985725944496
+    }
+  },
+  "ctx_val_0093": {
+    "opaque_context_id": "ctx_val_0093",
+    "family_id": "v2_val_022",
+    "condition": "duplicate_replacement",
+    "paper_id": "2608.13387",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.0016,
+      "B2_HistoricalGate": 0,
+      "M1_Relevance_Raw": 0.04137098783510428,
+      "M2_Relevance_Dedup": 0.044631245289128395,
+      "M3_Full_Raw": 0.03595987790148647,
+      "M4_Full_Dedup": 0.0507840313279572,
+      "Shortcut_LengthDiagnostic": 0.41508375315686474
+    }
+  },
+  "ctx_val_0094": {
+    "opaque_context_id": "ctx_val_0094",
+    "family_id": "v2_val_015",
+    "condition": "relevant_replacement",
+    "paper_id": "2608.13168",
+    "label": 0,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9988,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5786493693049962,
+      "M2_Relevance_Dedup": 0.7909870646073648,
+      "M3_Full_Raw": 0.5428036963762842,
+      "M4_Full_Dedup": 0.6008712003981175,
+      "Shortcut_LengthDiagnostic": 0.3978605622050182
+    }
+  },
+  "ctx_val_0095": {
+    "opaque_context_id": "ctx_val_0095",
+    "family_id": "v2_val_023",
+    "condition": "natural_retrieval",
+    "paper_id": "2608.13517",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9989,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.9908702493697839,
+      "M2_Relevance_Dedup": 0.9013038784291193,
+      "M3_Full_Raw": 0.990728014469125,
+      "M4_Full_Dedup": 0.950272373352918,
+      "Shortcut_LengthDiagnostic": 0.878293461493628
+    }
+  },
+  "ctx_val_0096": {
+    "opaque_context_id": "ctx_val_0096",
+    "family_id": "v2_val_015",
+    "condition": "supported_candidate",
+    "paper_id": "2608.13168",
+    "label": 1,
+    "scores": {
+      "B0_AlwaysAccept": 1.0,
+      "B1_MaxRelevance": 0.9149,
+      "B2_HistoricalGate": 1,
+      "M1_Relevance_Raw": 0.5068029245217082,
+      "M2_Relevance_Dedup": 0.7454150173712982,
+      "M3_Full_Raw": 0.47979474739853045,
+      "M4_Full_Dedup": 0.7729142794299493,
+      "Shortcut_LengthDiagnostic": 0.4044474001516463
+    }
+  }
+}

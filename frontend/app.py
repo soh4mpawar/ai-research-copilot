@@ -35,23 +35,7 @@ if os.path.exists(css_file):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-# Application-Scoped Singleton Model & Client Caching (FR-19)
-@st.cache_resource
-def get_cached_orchestrator():
-    """Cache heavyweight models & DB connections as application singletons (FR-19)."""
-    try:
-        from backend.pipeline import get_orchestrator
-        return get_orchestrator()
-    except Exception:
-        return None
-
-
-# Query Result Caching Keyed by (query, corpus_version) per FR-19
-@st.cache_data(show_spinner=False)
-def execute_cached_query(query_text: str, mode: str, corpus_version: str):
-    """Cache query results keyed by (query, corpus_version) to prevent redundant API calls on page refresh (FR-19)."""
-    from backend import research_engine
-    return research_engine.query(query_text, mode=mode)
+from frontend.utils.caching import get_cached_orchestrator, execute_cached_query
 
 
 def main():

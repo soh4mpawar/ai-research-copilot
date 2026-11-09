@@ -1,0 +1,1058 @@
+[
+  {
+    "opaque_context_id": "ctx_b01_001",
+    "question": "In on-policy distillation (OPD) for large language models, how does the pass@K performance of OPD-trained models change relative to pre-OPD base models as the sampling budget K increases, and what does problem-level solvability analysis at pass@1024 reveal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "TOWARDS UNDERSTANDING ON-POLICY DISTILLATION THROUGH THE LENS OF TEST-TIME SCALING\nXinmu Ge1,2,3,\u2020 Zizhuo Zhang4,\u2020 Yu Huang1,3 Jianing Zhu5 Lin Yuan3 Wanli Gu3\nWeichang Wu3 Weiran Huang1,2 Xiaolu Zhang3 Bo Han4,\u2217 Jun Zhou3,\u2217 Jiangchao Yao1,\u2217\n1Shanghai Jiao Tong University 2Shanghai Innovation Institute 3Ant Group\n4Hong Kong Baptist University 5University of Texas at Austin\n\u2020Equal contribution \u2217Corresponding authors\nOn-policy distillation (OPD) has emerged as a promising post-training technique\nfor enhancing LLM reasoning. It is commonly believed to enable the student\nmodel to distill knowledge from a stronger teacher model, thereby expanding\ncapabilities beyond the pre-OPD base model. In this study, we examine this\nview through the lens of test-time scaling by varying the sampling budget K and\nevaluating performance with pass@K and avg@K. Specifically, across several\nOPD variants, we observe that OPD-trained models maintain superior avg@ K\nperformance across sampling budgets, while the advantage in pass@K gradually\nshifts to the pre-OPD base models as K increases. These results suggest that OPD\nprimarily improves sampling efficiency rather than consistently expanding the\nstudent\u2019s reasoning capability boundary. The pass@K dynamics throughout OPD\ntraining further reveal a progressive shift toward stronger small-K performance\nat the expense of the large-K capability boundary. Furthermore, a problem-level\nsolvability analysis using pass@1024 as the criterion reveals an asymmetry: OPD\ncauses more previously solvable problems to become unsolvable than previously\nunsolvable problems to become solvable."
+      },
+      {
+        "passage_index": 2,
+        "text": "In open-world scenarios, object characteristics vary significantly across tasks, and certain categories \u2014 such\nas accessories (e.g., ties) \u2014 tend to yield lower object ness scores. Enforcing a\nfixed threshold under such noisy conditions is suboptimal and may introduce progressive learning bottlenecks. Replacing these fixed heuristics with task-adaptive\nthresholds remains a promising direction for future work. Acknowledgements\nThis work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean government (MSIT) (RS-2024-00358935,\n90%) and in part by the Institute of Information & Communications Technology\nPlanning & Evaluation (IITP) under the Artificial Intelligence Convergence Innovation Human Resources Development grant funded by the Korea government\n(MSIT) (IITP-2026-RS-2023-00254177, 10%). 16 H. Han et al."
+      },
+      {
+        "passage_index": 3,
+        "text": "2025M773057), Shenzhen Science\nand TechnologyProgram(GrantNo.ZDSYS20210623092007023),\nand the ShenzhenKeyLaboratoryofSafetyandSecurityfor\nNext Generation of Industrial Internet, Southern University\nof Science and Technology. Data availability\nThe three real-world datasets are publicly available\nfrom their cited sources. ColoredMNIST is generated from\nM NIST using the protocol in Section 6. Our code will be\npublicly available upon acceptance. Declaration of generative AI use\nThe authors used generative AI tools only for language\npolishing and readability improvement. All technical ideas,"
+      },
+      {
+        "passage_index": 4,
+        "text": "We further contribute a 10-day dual species dataset with dense geometric and semantic annotations. Experiments demonstrate that our method accurately\ntracks individual organ growth over time and significantly\noutperforms state-of-the-art baselines in both geometric accuracy and correspondence consistency."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_002",
+    "question": "In on-policy distillation (OPD) for large language models, how does the pass@K performance of OPD-trained models change relative to pre-OPD base models as the sampling budget K increases, and what does problem-level solvability analysis at pass@1024 reveal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "In open-world scenarios, object characteristics vary significantly across tasks, and certain categories \u2014 such\nas accessories (e.g., ties) \u2014 tend to yield lower object ness scores. Enforcing a\nfixed threshold under such noisy conditions is suboptimal and may introduce progressive learning bottlenecks. Replacing these fixed heuristics with task-adaptive\nthresholds remains a promising direction for future work. Acknowledgements\nThis work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean government (MSIT) (RS-2024-00358935,\n90%) and in part by the Institute of Information & Communications Technology\nPlanning & Evaluation (IITP) under the Artificial Intelligence Convergence Innovation Human Resources Development grant funded by the Korea government\n(MSIT) (IITP-2026-RS-2023-00254177, 10%). 16 H. Han et al."
+      },
+      {
+        "passage_index": 2,
+        "text": "By introducing\na Teach-to-Fuse mechanism, we successfully distill task-specific physical priors\u2014thermal saliency and spatial quality\u2014into learnable regulators that procedurally govern the fusion process. Central to our architecture is the Gated Dynamic Expert Recalibration (GDER) module, which adaptively mediates modal\ncompetition and rectifies feature conflicts through expert specialization. Extensive evaluations across five benchmarks and various challenging scenarios\u2014including overexposure, smoke occlusion, and rigorous out-of-distribution\n(OOD) verification demonstrate that P2Fusion not only achieves superior visual\nfidelity but also significantly enhances downstream perception. The remarkable\ngeneralization capability in unseen domains further underscores that our method\neffectively mitigates the inherent prior-dependency of traditional frameworks. Ultimately, this work provides a robust and versatile solution for multi-modal\ninformation integration, bridging the gap between high-level physical guidance\nand adaptive feature representation. Acknowledgements\nThis work was supported by the National Natural Science Foundation of China\nunder Grant 62293543 and Grant 62322605. 16 Y. Shi et al."
+      },
+      {
+        "passage_index": 3,
+        "text": "2025M773057), Shenzhen Science\nand TechnologyProgram(GrantNo.ZDSYS20210623092007023),\nand the ShenzhenKeyLaboratoryofSafetyandSecurityfor\nNext Generation of Industrial Internet, Southern University\nof Science and Technology. Data availability\nThe three real-world datasets are publicly available\nfrom their cited sources. ColoredMNIST is generated from\nM NIST using the protocol in Section 6. Our code will be\npublicly available upon acceptance. Declaration of generative AI use\nThe authors used generative AI tools only for language\npolishing and readability improvement. All technical ideas,"
+      },
+      {
+        "passage_index": 4,
+        "text": "We further contribute a 10-day dual species dataset with dense geometric and semantic annotations. Experiments demonstrate that our method accurately\ntracks individual organ growth over time and significantly\noutperforms state-of-the-art baselines in both geometric accuracy and correspondence consistency."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_003",
+    "question": "In on-policy distillation (OPD) for large language models, how does the pass@K performance of OPD-trained models change relative to pre-OPD base models as the sampling budget K increases, and what does problem-level solvability analysis at pass@1024 reveal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "In open-world scenarios, object characteristics vary significantly across tasks, and certain categories \u2014 such\nas accessories (e.g., ties) \u2014 tend to yield lower object ness scores. Enforcing a\nfixed threshold under such noisy conditions is suboptimal and may introduce progressive learning bottlenecks. Replacing these fixed heuristics with task-adaptive\nthresholds remains a promising direction for future work. Acknowledgements\nThis work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean government (MSIT) (RS-2024-00358935,\n90%) and in part by the Institute of Information & Communications Technology\nPlanning & Evaluation (IITP) under the Artificial Intelligence Convergence Innovation Human Resources Development grant funded by the Korea government\n(MSIT) (IITP-2026-RS-2023-00254177, 10%). 16 H. Han et al."
+      },
+      {
+        "passage_index": 2,
+        "text": "2025M773057), Shenzhen Science\nand TechnologyProgram(GrantNo.ZDSYS20210623092007023),\nand the ShenzhenKeyLaboratoryofSafetyandSecurityfor\nNext Generation of Industrial Internet, Southern University\nof Science and Technology. Data availability\nThe three real-world datasets are publicly available\nfrom their cited sources. ColoredMNIST is generated from\nM NIST using the protocol in Section 6. Our code will be\npublicly available upon acceptance. Declaration of generative AI use\nThe authors used generative AI tools only for language\npolishing and readability improvement. All technical ideas,"
+      },
+      {
+        "passage_index": 3,
+        "text": "2025M773057), Shenzhen Science\nand TechnologyProgram(GrantNo.ZDSYS20210623092007023),\nand the ShenzhenKeyLaboratoryofSafetyandSecurityfor\nNext Generation of Industrial Internet, Southern University\nof Science and Technology. Data availability\nThe three real-world datasets are publicly available\nfrom their cited sources. ColoredMNIST is generated from\nM NIST using the protocol in Section 6. Our code will be\npublicly available upon acceptance. Declaration of generative AI use\nThe authors used generative AI tools only for language\npolishing and readability improvement. All technical ideas,"
+      },
+      {
+        "passage_index": 4,
+        "text": "We further contribute a 10-day dual species dataset with dense geometric and semantic annotations. Experiments demonstrate that our method accurately\ntracks individual organ growth over time and significantly\noutperforms state-of-the-art baselines in both geometric accuracy and correspondence consistency."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_004",
+    "question": "In on-policy distillation (OPD) for large language models, how does the pass@K performance of OPD-trained models change relative to pre-OPD base models as the sampling budget K increases, and what does problem-level solvability analysis at pass@1024 reveal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "We run a structurally matched analysis on 213 chronic post-stroke aphasia patients using\ncorrelation-difference lesion-symptom mapping, and replicate both sides on held-out splits. The\ndesigns match in subject dimension (seeds, patients), spatial dimension (layers, atlas-parcel lated\ncortex) and thresholding, but the contrast operator differs: a within-subject error-proportion difference for the LLM, a between-subject correlation difference for the cortex. Both substrates recover a\nrobust phonemic-favoring dissociation, a deep layer cluster and a frontal-perisylvian cortical cluster,\nboth replicating; the semantic-favoring direction is a consistently signed but non-significant trend\non both. PRISM thus gives a falsifiable, spatially resolved test of functional-specialization claims\nin transformer language models. A confirmatory ROI-level intervention (PRISM Stage 3) licensing\nthe strongest causal-mechanism claim is left to subsequent work. Keywords: mechanistic interpretability, large language models, perturbation-response mapping,\ntransformer perturbation, subtraction analysis, lesion\u2013symptom mapping, threshold-free cluster\nenhancement, layer-resolved interpretability, patient-specific digital twins"
+      },
+      {
+        "passage_index": 2,
+        "text": "By pretraining\nmodels up to3B parameters on500B tokens, we show that SPP improves\nconstitutionfollowingandjailbreakrobustness, and reduces the misalignment\nrate in out-of-distribution moral dilemmas, while preserving capabilities. Early intervention matters: compared with alignment from token zero,\nintroducing SPP only at the end of pretraining yields weaker constitution\nadherence, does not shift value priorities, and leads to less aligned choices\nin dilemmas. This advantage depends on persona binding and, importantly,\nincreases with pretraining budget. Overall, our results show that shaping\nvalues early is critical for alignment and establish pretraining-time persona\ninterventions as an effective approach to do so."
+      },
+      {
+        "passage_index": 3,
+        "text": "In this work, we proposed a task-agnostic measure of training data influence by defining\nan example\u2019s contribution as the reduction in distance to the final parameters of a given\npretraining run. Across model configurations, we found systematic contribution dynamics\nthroughout pretraining, including earlier transitions for larger models, greater relative\ncontribution from difficult texts during the middle stage, and a crossover from literature related to STEM-related domains toward later training. Together, these results provide a\ntrajectory-level view of how the training data most strongly aligned with progress toward\nthe final parameters change across pretraining, complementing attribution analyses defined\nwith respect to particular downstream tasks or validation sets.\n10\nPublished as a conference paper at COLM 2026\nAcknowledgments\nThis study is partially supported by JST BOOST JPMJBY24A6. Max M \u00a8uller-Eberstein is\nsupported by the Carlsberg Foundation, grant CF-25-0624. Computational resources were\nprovided in part by \u201cmdx: a platform for building data-empowered society.\u201d"
+      },
+      {
+        "passage_index": 4,
+        "text": "This work provides a systematic understanding of on-policy distillation (OPD) through the lens of\ntest-time scaling. Across diverse OPD settings, we find that OPD improves performance under smaller\nsampling budgets and increases the likelihood of reaching correct reasoning paths, but does not consistently expand the student\u2019s capability boundary. Instead, at larger sampling budgets, OPD-trained\nmodels can lose previously accessible reasoning capabilities, revealing a trade-off between sampling\nefficiency and capability boundary. Our further analyses show that this phenomenon persists across\ndifferent OPD variants, while off-policy distillation can effectively expand the capability boundary\nthrough teacher-generated reasoning trajectories. These findings suggest that OPD can be viewed\nas an \u201cillusory distillation\u201d: despite leveraging a stronger teacher model, OPD primarily improves\nthe accessibility of reasoning capabilities already present in the student, rather than consistently\ntransferring new capabilities beyond the student\u2019s original boundary."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_005",
+    "question": "In DexterSQL, why does resolving schema ambiguity between columns like Patient.Diagnosis and Examination.Diagnosis require inspecting data distributions rather than schema definitions alone, and what execution accuracy (EX) does DexterSQL achieve on the BIRD-Dev benchmark using the open-weight GPT-OSS-120B model?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "intermediate representation to preserve question elements and combines it with few-shot in-context-learning and divide-and-conquer\ngeneration to produce multiple SQL candidates. DexterSQLPerformance.Text-to-SQL systems can be deployed using either open-weight, free LLMs (e.g., GPT-OSS-120B)\nor proprietary (closed-weight) LLMs (e.g., GPT-4o and GPT-5.2). These two classes of models show different tradeoffs. Open-weight\nmodels can be deployed within an organization\u2019s local or private\ninfrastructure, eliminating the need to transmit database schemas\nor other potentially sensitive information to third-party services. At sufficient scale, local deployment of smaller LLM models can\nalso reduce marginal inference costs, and operational security and\nprivacy. However, their SQL generation accuracy generally lags\nbehind that of state-of-the-art proprietary LLMs. In contrast, proprietary models often provide stronger out-of-the-box performance,\nbut they may require transmitting database schemas, metadata, or\ncontent to third-party services and can incur higher deployment\nand usage costs. DexterSQLnot only outperforms prior methods when using\nproprietary models, but also achieves substantially higher accuracy\nwith open-weight models, making it particularly well suited for\nsensitive-data applications and local or cost-efficient deployment. Particularly, on BIRD-Dev benchmark [18],DexterSQLachieves an\nexecution accuracy, EX (i.e., percentage of queries whose execution\nresults match the gold-SQL results), of 67.6% using GPT-OSS-120B,\noutperforming existing non-fine-tuned Text-to-SQL systems by at\nleast 2.7%; see the last column of Table 1. Also,DexterSQLachieves\nEX of 71.6% with GPT-4o and 72.2% with GPT-5.2, exceeding the\nstate-of-the-art non-fine-tuning methods by at least 0.9% [1, 13]."
+      },
+      {
+        "passage_index": 2,
+        "text": "This example shows LLMs need to understand fine-grained details of the database (e.g., relationships between columns \u2014 analyzing how a column relates to its table or other tables through the\nvalues it contains) to overcome ambiguity in understanding the\nschema. This distinction is not obvious from the column names\nor from the overlapping values and can only be clear from the\nunderlying data distribution:Patient.Diagnosishas one row per\npatient, whereas Examination.Diagnosiscan have multiple rows for\nthe same Patient.ID. SincePatient.Diagnosisrecords a single, final\ndiagnosis per patient, it is the correct column for this patient-level\nquestion\u2014a choice that requires inspecting the data distribution,\nnot just the schema. Existing prompt/non-fine-tuning-based approaches [1, 2, 5, 8, 11,\n13, 21, 23, 28, 33, 35], however, explore databases at a surface level. Our solution: Deep Schema Explorator (\u00a73.1.3).DexterSQL\nidentifies column pairs that are genuinely ambiguous for SQL generation. For each ambiguous pair, it examines the distribution within\neach column and joint distribution to measures how much the\ntwo columns\u2019 value sets overlap. When their tables can be joined,\nDexterSQLadditionally determines the fraction of records participating in the relationship and how often the ambiguous values\nagree across joined records. An LLM summarizes this information\ninto a concise disambiguation note explaining how the columns\ndiffer and when each should be used. For example, Table 2 contains one diagnosis for patient 1,\nwhereas Table 3 contains two examination diagnoses for the same\npatient."
+      },
+      {
+        "passage_index": 3,
+        "text": "We propose Hybrid-Policy Self-Distillation (HPSD) to internalize the superior, condition-elicited capabilities of TI2V models into their base generation ability. To resolve the lack of state-aware precise\ncorrection in off-policy methods and the condition-state mismatch in on-policy approaches, HPSD\nsupervises the student on sub-trajectories anchored by the teacher\u2019s privileged states but evolved\nunder its own policy. Experiments on W AN-2.2 and LTX-2.3 demonstrate that HPSD significantly\nboosts base T2V performance and concurrently enhances the TI2V mode, effectively strengthening\nthe model\u2019s inherent generation ability and offering a novel distillation paradigm.\n10\nPreprint."
+      },
+      {
+        "passage_index": 4,
+        "text": "Fast Iterative Five point Relative Pose Estimation\nJohan Hedborg Michael Felsberg\nComputer Vision Laboratory\nLink\u00a8oping University, Sweden\nhttps://www.cvl.isy.liu.se/\nRobust estimation of the relative pose between two cameras is a fundamental part of Structure and Motion methods. F or calibrated cameras, the \ufb01ve point method together\nwith a robust estimator such as RANSAC gives the best result in most cases. The current state-of-the-art method for\nsolving the relative pose problem from \ufb01ve points is due to\nNist\u00b4er [9], because it is faster than other methods and in the\nRANSAC scheme one can improve precision by increasing\nthe number of iterations.\nIn this paper , we propose a new iterative method, which\nis based on Powell\u2019s Dog Leg algorithm. The new method\nhas the same precision and is approximately twice as fast as\nNist\u00b4er\u2019s algorithm. The proposed method is easily extended\nto more than \ufb01ve points while retaining a ef\ufb01cient error metrics. This makes it also very suitable as an re \ufb01nement step.\nThe proposed algorithm is systematically evaluated on\nthree types of datasets with known ground truth."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_006",
+    "question": "In DexterSQL, why does resolving schema ambiguity between columns like Patient.Diagnosis and Examination.Diagnosis require inspecting data distributions rather than schema definitions alone, and what execution accuracy (EX) does DexterSQL achieve on the BIRD-Dev benchmark using the open-weight GPT-OSS-120B model?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "This example shows LLMs need to understand fine-grained details of the database (e.g., relationships between columns \u2014 analyzing how a column relates to its table or other tables through the\nvalues it contains) to overcome ambiguity in understanding the\nschema. This distinction is not obvious from the column names\nor from the overlapping values and can only be clear from the\nunderlying data distribution:Patient.Diagnosishas one row per\npatient, whereas Examination.Diagnosiscan have multiple rows for\nthe same Patient.ID. SincePatient.Diagnosisrecords a single, final\ndiagnosis per patient, it is the correct column for this patient-level\nquestion\u2014a choice that requires inspecting the data distribution,\nnot just the schema. Existing prompt/non-fine-tuning-based approaches [1, 2, 5, 8, 11,\n13, 21, 23, 28, 33, 35], however, explore databases at a surface level. Our solution: Deep Schema Explorator (\u00a73.1.3).DexterSQL\nidentifies column pairs that are genuinely ambiguous for SQL generation. For each ambiguous pair, it examines the distribution within\neach column and joint distribution to measures how much the\ntwo columns\u2019 value sets overlap. When their tables can be joined,\nDexterSQLadditionally determines the fraction of records participating in the relationship and how often the ambiguous values\nagree across joined records. An LLM summarizes this information\ninto a concise disambiguation note explaining how the columns\ndiffer and when each should be used. For example, Table 2 contains one diagnosis for patient 1,\nwhereas Table 3 contains two examination diagnoses for the same\npatient."
+      },
+      {
+        "passage_index": 2,
+        "text": "We propose Hybrid-Policy Self-Distillation (HPSD) to internalize the superior, condition-elicited capabilities of TI2V models into their base generation ability. To resolve the lack of state-aware precise\ncorrection in off-policy methods and the condition-state mismatch in on-policy approaches, HPSD\nsupervises the student on sub-trajectories anchored by the teacher\u2019s privileged states but evolved\nunder its own policy. Experiments on W AN-2.2 and LTX-2.3 demonstrate that HPSD significantly\nboosts base T2V performance and concurrently enhances the TI2V mode, effectively strengthening\nthe model\u2019s inherent generation ability and offering a novel distillation paradigm.\n10\nPreprint."
+      },
+      {
+        "passage_index": 3,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 4,
+        "text": "Fast Iterative Five point Relative Pose Estimation\nJohan Hedborg Michael Felsberg\nComputer Vision Laboratory\nLink\u00a8oping University, Sweden\nhttps://www.cvl.isy.liu.se/\nRobust estimation of the relative pose between two cameras is a fundamental part of Structure and Motion methods. F or calibrated cameras, the \ufb01ve point method together\nwith a robust estimator such as RANSAC gives the best result in most cases. The current state-of-the-art method for\nsolving the relative pose problem from \ufb01ve points is due to\nNist\u00b4er [9], because it is faster than other methods and in the\nRANSAC scheme one can improve precision by increasing\nthe number of iterations.\nIn this paper , we propose a new iterative method, which\nis based on Powell\u2019s Dog Leg algorithm. The new method\nhas the same precision and is approximately twice as fast as\nNist\u00b4er\u2019s algorithm. The proposed method is easily extended\nto more than \ufb01ve points while retaining a ef\ufb01cient error metrics. This makes it also very suitable as an re \ufb01nement step.\nThe proposed algorithm is systematically evaluated on\nthree types of datasets with known ground truth."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_007",
+    "question": "In DexterSQL, why does resolving schema ambiguity between columns like Patient.Diagnosis and Examination.Diagnosis require inspecting data distributions rather than schema definitions alone, and what execution accuracy (EX) does DexterSQL achieve on the BIRD-Dev benchmark using the open-weight GPT-OSS-120B model?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "This example shows LLMs need to understand fine-grained details of the database (e.g., relationships between columns \u2014 analyzing how a column relates to its table or other tables through the\nvalues it contains) to overcome ambiguity in understanding the\nschema. This distinction is not obvious from the column names\nor from the overlapping values and can only be clear from the\nunderlying data distribution:Patient.Diagnosishas one row per\npatient, whereas Examination.Diagnosiscan have multiple rows for\nthe same Patient.ID. SincePatient.Diagnosisrecords a single, final\ndiagnosis per patient, it is the correct column for this patient-level\nquestion\u2014a choice that requires inspecting the data distribution,\nnot just the schema. Existing prompt/non-fine-tuning-based approaches [1, 2, 5, 8, 11,\n13, 21, 23, 28, 33, 35], however, explore databases at a surface level. Our solution: Deep Schema Explorator (\u00a73.1.3).DexterSQL\nidentifies column pairs that are genuinely ambiguous for SQL generation. For each ambiguous pair, it examines the distribution within\neach column and joint distribution to measures how much the\ntwo columns\u2019 value sets overlap. When their tables can be joined,\nDexterSQLadditionally determines the fraction of records participating in the relationship and how often the ambiguous values\nagree across joined records. An LLM summarizes this information\ninto a concise disambiguation note explaining how the columns\ndiffer and when each should be used. For example, Table 2 contains one diagnosis for patient 1,\nwhereas Table 3 contains two examination diagnoses for the same\npatient."
+      },
+      {
+        "passage_index": 2,
+        "text": "We propose Hybrid-Policy Self-Distillation (HPSD) to internalize the superior, condition-elicited capabilities of TI2V models into their base generation ability. To resolve the lack of state-aware precise\ncorrection in off-policy methods and the condition-state mismatch in on-policy approaches, HPSD\nsupervises the student on sub-trajectories anchored by the teacher\u2019s privileged states but evolved\nunder its own policy. Experiments on W AN-2.2 and LTX-2.3 demonstrate that HPSD significantly\nboosts base T2V performance and concurrently enhances the TI2V mode, effectively strengthening\nthe model\u2019s inherent generation ability and offering a novel distillation paradigm.\n10\nPreprint."
+      },
+      {
+        "passage_index": 3,
+        "text": "We propose Hybrid-Policy Self-Distillation (HPSD) to internalize the superior, condition-elicited capabilities of TI2V models into their base generation ability. To resolve the lack of state-aware precise\ncorrection in off-policy methods and the condition-state mismatch in on-policy approaches, HPSD\nsupervises the student on sub-trajectories anchored by the teacher\u2019s privileged states but evolved\nunder its own policy. Experiments on W AN-2.2 and LTX-2.3 demonstrate that HPSD significantly\nboosts base T2V performance and concurrently enhances the TI2V mode, effectively strengthening\nthe model\u2019s inherent generation ability and offering a novel distillation paradigm.\n10\nPreprint."
+      },
+      {
+        "passage_index": 4,
+        "text": "Fast Iterative Five point Relative Pose Estimation\nJohan Hedborg Michael Felsberg\nComputer Vision Laboratory\nLink\u00a8oping University, Sweden\nhttps://www.cvl.isy.liu.se/\nRobust estimation of the relative pose between two cameras is a fundamental part of Structure and Motion methods. F or calibrated cameras, the \ufb01ve point method together\nwith a robust estimator such as RANSAC gives the best result in most cases. The current state-of-the-art method for\nsolving the relative pose problem from \ufb01ve points is due to\nNist\u00b4er [9], because it is faster than other methods and in the\nRANSAC scheme one can improve precision by increasing\nthe number of iterations.\nIn this paper , we propose a new iterative method, which\nis based on Powell\u2019s Dog Leg algorithm. The new method\nhas the same precision and is approximately twice as fast as\nNist\u00b4er\u2019s algorithm. The proposed method is easily extended\nto more than \ufb01ve points while retaining a ef\ufb01cient error metrics. This makes it also very suitable as an re \ufb01nement step.\nThe proposed algorithm is systematically evaluated on\nthree types of datasets with known ground truth."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_008",
+    "question": "In DexterSQL, why does resolving schema ambiguity between columns like Patient.Diagnosis and Examination.Diagnosis require inspecting data distributions rather than schema definitions alone, and what execution accuracy (EX) does DexterSQL achieve on the BIRD-Dev benchmark using the open-weight GPT-OSS-120B model?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "(C3) effective SQL generation.LLM-based SQL generation systems\nmay omit, hallucinate, or misplace conditions and relationships in\na complex NL question, producing executable SQL that answers an\nincomplete or different question. We develop DexterSQL, a non-fine-tuning Text-to-SQL system that addresses the above-mentioned challenges.DexterSQL\nintroduces three novel components, each addressing the above challenges: (i)deep schema explorator, an offline (i.e., before arrival of\nany NL query) analysis to mine data-level relationships among ambiguous columns into compact disambiguation notes; (ii)databaseagonistic rule creator, an offline process to learn recurring model failures using only the training dataset 1 and build database-agnostic\ncorrection rules that help for future NL questions; and (iii)multipath SQL generation, which introduces a dependency-tree-based\n1NL queries are asked on a database, entitled target database that is completely disjoint from\nthe training database. arXiv:2608.11889v1 [cs.DB] 12 Aug 2026"
+      },
+      {
+        "passage_index": 2,
+        "text": "Overall performance follows a\ndistinct tiering: proprietary models lead significantly, with\nGemini-3-Flash achieving the highest accuracy at 76.2%,\nfollowed by Gemini-3-Pro (70.0%) and Gemini-2.5-Flash\n(51.4%). In contrast, open-source models fall into a lower\nperformance regime (29.6\u201339.8%), led by Qwen3.5-9B. A deeper look at category-level performance reveals\na clear capability-dependent split between narrative and\ncultural reasoning. While Gemini models achieve approximately 11 percentage points higher accuracy on narrative\ntasks than on cultural ones, open-source models show\nvirtually no difference between the two dimensions. Within\nnarrative categories, tracking sequential structure (N.2) is\nuniversally the easiest task. Crucially, however, the primary performance bottleneck shifts as model capability increases: weaker models fail primarily at tracking low-level\nentity continuity (e.g., N.1 Character/Entity Evolution at\n20.0% for InternVL3.5 and 23.2% for MiniCPM-o-2.6),\nwhereas stronger models struggle most with high-level"
+      },
+      {
+        "passage_index": 3,
+        "text": "This work provides a systematic understanding of on-policy distillation (OPD) through the lens of\ntest-time scaling. Across diverse OPD settings, we find that OPD improves performance under smaller\nsampling budgets and increases the likelihood of reaching correct reasoning paths, but does not consistently expand the student\u2019s capability boundary. Instead, at larger sampling budgets, OPD-trained\nmodels can lose previously accessible reasoning capabilities, revealing a trade-off between sampling\nefficiency and capability boundary. Our further analyses show that this phenomenon persists across\ndifferent OPD variants, while off-policy distillation can effectively expand the capability boundary\nthrough teacher-generated reasoning trajectories. These findings suggest that OPD can be viewed\nas an \u201cillusory distillation\u201d: despite leveraging a stronger teacher model, OPD primarily improves\nthe accessibility of reasoning capabilities already present in the student, rather than consistently\ntransferring new capabilities beyond the student\u2019s original boundary."
+      },
+      {
+        "passage_index": 4,
+        "text": "Particularly,DexterSQL\u2019s shows a high improvement of at\nleast 2.7% using an open-weight model (GPT-OSS-120B) on BIRDDev, with total accuracy 67.6%.DexterSQLalso shows better improvement of at least 0.9% using closed-weight models, with total\naccuracy 71.6% and 72.2% on BIRD-Dev with GPT-4o and GPT-5.2."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_009",
+    "question": "How does LazyTrain's Hybrid 8-bit operator optimize LLM training on limited hardware, and what sustained TFLOPS, throughput, and peak GPU memory does LazyTrain achieve in the Qwen3.6-27B H800 MetaMathQA run at batch size 72?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "In the primary Qwen3.6-27B H800 MetaMathQA run,\nLazyTrain reaches 219.95 T FLOPS and 1361\ntokens/s at batch size 72, peaks at 68.84 GB\nof GPU memory, and obtains 95.42% exact match accuracy on the full evaluation split. The\nsource code is available at https://git hub. com/DataArcTech/LazyTrain."
+      },
+      {
+        "passage_index": 2,
+        "text": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield\nOptimization in Large Language Model Training\nXiaojun Wu\u22171,2 , Cehao Yang\u22171,2 , Honghao Liu\u22171,2 , Xueyuan Lin\u22172 ,\nXuhui Jiang1,3, Chengjin Xu1,3, Jia Li\u20202 , Jian Guo\u20201\n1IDEA Research\n2The Hong Kong University of Science and Technology (Guangzhou)\n3DataArcTech Ltd. Training large language models on limited\nhardware is increasingly a scheduling problem\nacross GPU compute, host memory, PCIe transfer, and storage bandwidth. Existing offloading systems reduce GPU residency, and MegaTrain shows that a CPU-master layer-streaming\nexecutor can train large models on a single\nGPU, but fixed checkpointing and placement\nheuristics still leave communication exposed\non the critical path. We propose LazyTrain,\nan optimization layer over a layer-streaming\nexecutor. LazyTrain formulates checkpoint selection, activation placement, recomputation,\nand CPU-GPU-NVMe communication overlap\nas a mixed-integer scheduling problem, then\nexecutes the solved policy during training. It\nfurther couples 8-bit optimizer states with fast\ngradient clipping as a single Hybrid 8-bit operator: state compression reduces optimizer state memory, while fast clipping counteracts the additional CPU-side update overhead. Across H800 experiments from Qwen2.5-3B to\nQwen3.6-27B, LazyTrain improves sustained\nT FLOPS over matched baselines runs by approximately 1.24 \u00d7; RTX 3090 experiments\nlikewise increase the maximum feasible batch\nsize by one at each model scale."
+      },
+      {
+        "passage_index": 3,
+        "text": "For instance, literature data are\nmore influential during early training, whereas STEM data become increasingly influential\nin later stages. These results suggest that the training examples that most strongly move the\nmodel toward its final pre trained parameters are not static across pretraining, motivating\nstage-aware approaches to pretraining data composition and curriculum design. Our contributions are threefold:\n\u2022 We reformulate training data influence across language model pretraining in task agnostic terms and derive a checkpoint-based approximation for post hoc estimation\nwithout retraining (\u00a7 3). \u2022 We characterize how training data contribution evolves throughout pretraining,\nrevealing systematic stage-dependent variation across different types of training\ndata (\u00a7 4). \u2022 We establish the reliability and scope of the proposed analysis across checkpoint\napproximation, reference endpoints, model configurations, and attribution targets\n(\u00a7 5)."
+      },
+      {
+        "passage_index": 4,
+        "text": "The agent interface executes these\ndecisions on the evaluated world model, captures the resulting observation, and returns it to the agent\nmodel, forming a closed interaction loop. Agent model decision.A straightforward way to instantiate the Agent Player is to let the agent\nplan the trajectory from scratch and interact with the world model without any human-provided\naction input. However, because each decision requires the agent model to reason over the current\nobservation, fully online planning introduces substantial decision latency and slows action execution. It may also produce highly different trajectories across world models with different capabilities,\nmaking cross-model comparison less consistent. We therefore use a human-annotated basic action\nsequence as a shared initial reference. This preserves a consistent evaluation intent across models,\nreduces the burden of open-ended sequential planning, and still allows observation-conditioned\nadaptation. As shown on the left of Fig. 1, the Agent Player receives the long-horizon objective and\nthe shared basic action sequence. At each interaction step, the agent model observes the generated\nframe, the previously executed actions, the scene description, and the objective."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_010",
+    "question": "How does LazyTrain's Hybrid 8-bit operator optimize LLM training on limited hardware, and what sustained TFLOPS, throughput, and peak GPU memory does LazyTrain achieve in the Qwen3.6-27B H800 MetaMathQA run at batch size 72?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield\nOptimization in Large Language Model Training\nXiaojun Wu\u22171,2 , Cehao Yang\u22171,2 , Honghao Liu\u22171,2 , Xueyuan Lin\u22172 ,\nXuhui Jiang1,3, Chengjin Xu1,3, Jia Li\u20202 , Jian Guo\u20201\n1IDEA Research\n2The Hong Kong University of Science and Technology (Guangzhou)\n3DataArcTech Ltd. Training large language models on limited\nhardware is increasingly a scheduling problem\nacross GPU compute, host memory, PCIe transfer, and storage bandwidth. Existing offloading systems reduce GPU residency, and MegaTrain shows that a CPU-master layer-streaming\nexecutor can train large models on a single\nGPU, but fixed checkpointing and placement\nheuristics still leave communication exposed\non the critical path. We propose LazyTrain,\nan optimization layer over a layer-streaming\nexecutor. LazyTrain formulates checkpoint selection, activation placement, recomputation,\nand CPU-GPU-NVMe communication overlap\nas a mixed-integer scheduling problem, then\nexecutes the solved policy during training. It\nfurther couples 8-bit optimizer states with fast\ngradient clipping as a single Hybrid 8-bit operator: state compression reduces optimizer state memory, while fast clipping counteracts the additional CPU-side update overhead. Across H800 experiments from Qwen2.5-3B to\nQwen3.6-27B, LazyTrain improves sustained\nT FLOPS over matched baselines runs by approximately 1.24 \u00d7; RTX 3090 experiments\nlikewise increase the maximum feasible batch\nsize by one at each model scale."
+      },
+      {
+        "passage_index": 2,
+        "text": "For instance, literature data are\nmore influential during early training, whereas STEM data become increasingly influential\nin later stages. These results suggest that the training examples that most strongly move the\nmodel toward its final pre trained parameters are not static across pretraining, motivating\nstage-aware approaches to pretraining data composition and curriculum design. Our contributions are threefold:\n\u2022 We reformulate training data influence across language model pretraining in task agnostic terms and derive a checkpoint-based approximation for post hoc estimation\nwithout retraining (\u00a7 3). \u2022 We characterize how training data contribution evolves throughout pretraining,\nrevealing systematic stage-dependent variation across different types of training\ndata (\u00a7 4). \u2022 We establish the reliability and scope of the proposed analysis across checkpoint\napproximation, reference endpoints, model configurations, and attribution targets\n(\u00a7 5)."
+      },
+      {
+        "passage_index": 3,
+        "text": "5 Conclusion\nWe present Syfer, a synthesizer-folding mRAG framework for multilingual\nmulti-hop QA that gates bilingual fusion on a faithfulness check and folds aggregation into a terminal sub-question, making decomposition quality directly\nverifiable. On a unified nine-language testbed extended from three multi-hop\nQA benchmarks,Syferoutperforms structure-aware, translation-based, and\ndecomposition-based baselines with a better quality\u2013cost trade-off. 6 Acknowledgements\nThis work was supported in part by the National Science Foundation of China\n(Nos. 62276056 and U24A20334), the Natural Science Foundation of Liaoning\nProvince of China (2022-KF-26-01), the Fundamental Research Funds for the\nCentral Universities (Nos. N2216016 and N2316002), the Yunnan Fundamental Research Projects (No. 202401BC070021), and the Program of Introducing\nTalents of Discipline to Universities, Plan 111 (No.B16009)."
+      },
+      {
+        "passage_index": 4,
+        "text": "The agent interface executes these\ndecisions on the evaluated world model, captures the resulting observation, and returns it to the agent\nmodel, forming a closed interaction loop. Agent model decision.A straightforward way to instantiate the Agent Player is to let the agent\nplan the trajectory from scratch and interact with the world model without any human-provided\naction input. However, because each decision requires the agent model to reason over the current\nobservation, fully online planning introduces substantial decision latency and slows action execution. It may also produce highly different trajectories across world models with different capabilities,\nmaking cross-model comparison less consistent. We therefore use a human-annotated basic action\nsequence as a shared initial reference. This preserves a consistent evaluation intent across models,\nreduces the burden of open-ended sequential planning, and still allows observation-conditioned\nadaptation. As shown on the left of Fig. 1, the Agent Player receives the long-horizon objective and\nthe shared basic action sequence. At each interaction step, the agent model observes the generated\nframe, the previously executed actions, the scene description, and the objective."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_011",
+    "question": "How does LazyTrain's Hybrid 8-bit operator optimize LLM training on limited hardware, and what sustained TFLOPS, throughput, and peak GPU memory does LazyTrain achieve in the Qwen3.6-27B H800 MetaMathQA run at batch size 72?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield\nOptimization in Large Language Model Training\nXiaojun Wu\u22171,2 , Cehao Yang\u22171,2 , Honghao Liu\u22171,2 , Xueyuan Lin\u22172 ,\nXuhui Jiang1,3, Chengjin Xu1,3, Jia Li\u20202 , Jian Guo\u20201\n1IDEA Research\n2The Hong Kong University of Science and Technology (Guangzhou)\n3DataArcTech Ltd. Training large language models on limited\nhardware is increasingly a scheduling problem\nacross GPU compute, host memory, PCIe transfer, and storage bandwidth. Existing offloading systems reduce GPU residency, and MegaTrain shows that a CPU-master layer-streaming\nexecutor can train large models on a single\nGPU, but fixed checkpointing and placement\nheuristics still leave communication exposed\non the critical path. We propose LazyTrain,\nan optimization layer over a layer-streaming\nexecutor. LazyTrain formulates checkpoint selection, activation placement, recomputation,\nand CPU-GPU-NVMe communication overlap\nas a mixed-integer scheduling problem, then\nexecutes the solved policy during training. It\nfurther couples 8-bit optimizer states with fast\ngradient clipping as a single Hybrid 8-bit operator: state compression reduces optimizer state memory, while fast clipping counteracts the additional CPU-side update overhead. Across H800 experiments from Qwen2.5-3B to\nQwen3.6-27B, LazyTrain improves sustained\nT FLOPS over matched baselines runs by approximately 1.24 \u00d7; RTX 3090 experiments\nlikewise increase the maximum feasible batch\nsize by one at each model scale."
+      },
+      {
+        "passage_index": 2,
+        "text": "For instance, literature data are\nmore influential during early training, whereas STEM data become increasingly influential\nin later stages. These results suggest that the training examples that most strongly move the\nmodel toward its final pre trained parameters are not static across pretraining, motivating\nstage-aware approaches to pretraining data composition and curriculum design. Our contributions are threefold:\n\u2022 We reformulate training data influence across language model pretraining in task agnostic terms and derive a checkpoint-based approximation for post hoc estimation\nwithout retraining (\u00a7 3). \u2022 We characterize how training data contribution evolves throughout pretraining,\nrevealing systematic stage-dependent variation across different types of training\ndata (\u00a7 4). \u2022 We establish the reliability and scope of the proposed analysis across checkpoint\napproximation, reference endpoints, model configurations, and attribution targets\n(\u00a7 5)."
+      },
+      {
+        "passage_index": 3,
+        "text": "For instance, literature data are\nmore influential during early training, whereas STEM data become increasingly influential\nin later stages. These results suggest that the training examples that most strongly move the\nmodel toward its final pre trained parameters are not static across pretraining, motivating\nstage-aware approaches to pretraining data composition and curriculum design. Our contributions are threefold:\n\u2022 We reformulate training data influence across language model pretraining in task agnostic terms and derive a checkpoint-based approximation for post hoc estimation\nwithout retraining (\u00a7 3). \u2022 We characterize how training data contribution evolves throughout pretraining,\nrevealing systematic stage-dependent variation across different types of training\ndata (\u00a7 4). \u2022 We establish the reliability and scope of the proposed analysis across checkpoint\napproximation, reference endpoints, model configurations, and attribution targets\n(\u00a7 5)."
+      },
+      {
+        "passage_index": 4,
+        "text": "The agent interface executes these\ndecisions on the evaluated world model, captures the resulting observation, and returns it to the agent\nmodel, forming a closed interaction loop. Agent model decision.A straightforward way to instantiate the Agent Player is to let the agent\nplan the trajectory from scratch and interact with the world model without any human-provided\naction input. However, because each decision requires the agent model to reason over the current\nobservation, fully online planning introduces substantial decision latency and slows action execution. It may also produce highly different trajectories across world models with different capabilities,\nmaking cross-model comparison less consistent. We therefore use a human-annotated basic action\nsequence as a shared initial reference. This preserves a consistent evaluation intent across models,\nreduces the burden of open-ended sequential planning, and still allows observation-conditioned\nadaptation. As shown on the left of Fig. 1, the Agent Player receives the long-horizon objective and\nthe shared basic action sequence. At each interaction step, the agent model observes the generated\nframe, the previously executed actions, the scene description, and the objective."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_012",
+    "question": "How does LazyTrain's Hybrid 8-bit operator optimize LLM training on limited hardware, and what sustained TFLOPS, throughput, and peak GPU memory does LazyTrain achieve in the Qwen3.6-27B H800 MetaMathQA run at batch size 72?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "In the primary Qwen3.6-27B H800 MetaMathQA run,\nLazyTrain reaches 219.95 T FLOPS and 1361\ntokens/s at batch size 72, peaks at 68.84 GB\nof GPU memory, and obtains 95.42% exact match accuracy on the full evaluation split. The\nsource code is available at https://git hub. com/DataArcTech/LazyTrain."
+      },
+      {
+        "passage_index": 2,
+        "text": "0\u201312\n13\u201325\n26\u201336\n0 1 2 3 4 5 6 7 8 9 10 11 12\n13 14 15 16 17 18 19 20 21 22 23 24 25\n26 27 28 29 30 31 32 33 34 35 36\nGPU CPU NVMe Recompute\nFigure 8: Boundary-wise JSON schedule map for the GPT-OSS-120B solver experiment at batch size 72. Each tile\nis one activation boundary from 0 to 36. The solver keeps every materialized activation checkpoint in GPU HBM\nand selects recomputation for boundaries 1\u20133; the JSON reports 0 ms exposed activation and NVMe communication,\nwhile mandatory parameter/gradient traffic remains exposed. 18"
+      },
+      {
+        "passage_index": 3,
+        "text": "HBM cap LazyTrain schedules use a configured 70GB peak cap; the observed NVMe-aware training\npeak is 68.84GB. Table 9: Common Qwen3.6-27B / MetaMathQA training configuration. The evaluation split is also used for periodic\nloss monitoring. Item Configuration\nModel and data\nModel Qwen3.6-27B; Qwen3.5-style text architecture (Qwen Team, 2026): 64 layers, hidden size\n5120, 24 attention heads, 4 KV heads, intermediate size 17408. The scheduler computes\n23.68B trainable parameters from this configuration. Precision and attention bfloat16 training with PyTorch scaled dot-product attention (SDPA). Dataset ModelScope MetaMathQA converted to a 70/30 split: 276,499 training examples and 118,501"
+      },
+      {
+        "passage_index": 4,
+        "text": "\u00afHL becomes the respondent\u2019s first-token entropyH 1, and the decoding a candidate needs to be\nscored collapses from Ltokens to one, anL-fold saving on every candidate of every question. 3We additionally run the cross-respondent comparison across two model generations, Qwen2.5-7B and\nQwen3.5-9B, training a polarizer for each respondent and evaluating every pairing both in-domain and out-of domain; every respondent improves under its own polarizer on both sides of the split (Section 6). 6\nTable 2:Passage-selectionF 1 with a frozen Llama-3.1-8B-Instruct respondent.All configurations select one of the same ten bge-m3 candidates and answer with the same frozen respondent,\nso the rows differ only in how that passage is chosen.Mean,EMand the LLM-judge column are\nfive-pool macro means ofF 1, of exact match (Appendix F) and of a GPT-4o answer-equivalence\nverdict (Appendix G). The LODESTARrow is the mean of the three runs listed beneath it in all three."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_013",
+    "question": "What failure mode occurs when ranking candidate retrieval passages by raw respondent predictive entropy alone within a single question, and how does the LODESTAR method modify the prompt to create a directed entropy signal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "The prompt then reads[p;\u03c8 \u22c6 ;q]. Across the same five datasets, LODESTAR\nfurther lifts mean answerF 1 from entropy selection\u2019s0.5148to0.5339(Section 5). Trained once\nand offline by reinforcement learning,\u03c8 \u22c6 is optimized against a reward that is not answer correctness but the within-question separation of the frozen respondent\u2019s entropy, raised on misleading\npassages and kept low on supporting ones (Figure 1b). We call the resulting signal directed entropy,\nbecause the polarizer steers the respondent\u2019s entropy in a chosen direction rather than leaving it\nto be passively measured. LODESTARruns at inference with no extra model, no sampling and no\nsupervision; the only thing it keeps from training is the polarizer\u03c8 \u22c6, one fixed string, enough by\nitself to outperform every published method the paper tests (Section 5). Our contributions can be\nsummarized as follows:\n2\n1.We show that ranking a question\u2019s candidates by entropy alone is unreliable, and repair it with one learned string.Within a single question, the respondent\u2019s entropy does\nnot reliably separate misleading passages from supporting ones (Section 3); one learned\nstring is enough to make it separate them. Ranking by entropy alone reads a misleading\npassage more often on average than drawing one of the ten at random,30.3%against the\npool\u2019s own28.9%. One learned string puts the selection below that floor on all five benchmarks,26.0%macro-averaged (Tables 1 and 3)."
+      },
+      {
+        "passage_index": 2,
+        "text": "We extract local noun phrasesP(p) =\nLLM(p), match each phrase to its prompt tokens, and aggregate its attention over the matched span and heads into\nAl\nb,k. The phrase-conditioned spatial distributions and their\ndiscrepancy are\n\u03c0l\nb,k = Norm\n\u0000\nPoolb(Al\nb,k)\n\u0001\n, b\u2208 {x, e},\ndlk = JS(\u03c0l\nx,k\u2225\u03c0l\ne,k),\nHerePool b aggregates each branch response onto the common spatial support used by the loss, and Norm(a) =\nsoft max(zscore(a)/T)."
+      },
+      {
+        "passage_index": 3,
+        "text": "The SCI consistency objective combines\u2113 1 and SSIM terms with weights of 0.9 and 0.1,\nwhile opacity regulation is weighted by 0.01. Pose gradients\nare accumulated over 25 iterations to stabilize camera refinement. The learning rates for pose corrections and Gaussian\nmeans decay exponentially from10 \u22122 and1.6\u00d710 \u22124 to\n2\u00d710 \u22125 and1.6\u00d710 \u22126, respectively. Densification.Densification is performed every 100 iterations between iterations 500 and 15,000. To constrain model\ngrowth, the Gaussian count at iteration 7,000 bounds all subsequent splitting and duplication, while opacity is reset every\n3,000 iterations. OSGR augments the conventional gradient,\nscale, and screen-space radius cues with the proposed local\nopacity criterion."
+      },
+      {
+        "passage_index": 4,
+        "text": "The average speedups on our data sets are summarized\n1http://www.robots.ox.ac.uk/ActiveVision/\n2http://users.cecs.anu.edu.au/ hartley/\n1 2 3 40\n0.2\n0.4\n0.6\n0.8\n1\n1.2\n1.4\n1.6translation direction error (deg)\nDataset number\nReal Scene Sideways 1\u22124\nNister\nDLconst\nDLinit\n1 2 3 40\n0.1\n0.2\n0.3\n0.4\n0.5\n0.6\n0.7\n0.8\n0.9translation direction error (deg)\nDataset number\nReal Scene Forward 1\u22124\nNister\nDLconst\nDLinit\nFigure 4. Real data"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_014",
+    "question": "What failure mode occurs when ranking candidate retrieval passages by raw respondent predictive entropy alone within a single question, and how does the LODESTAR method modify the prompt to create a directed entropy signal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Language GEN What does the Bavarian expression\u201eGeh, h\u00f6r auf!\u201dmost likely mean in context? GRD What is the meaning of the Bavarian expression\u201eHawadehre\u201c? Table 1: Example questions from BAV GROUND, illustrating one general (GEN) and one grounded (GRD) question\nper category. GEN questions target broadly available cultural knowledge; GRD questions are sourced from regional\njournalism and specialist monographs and probe knowledge unlikely to appear in standard LLM pretraining corpora. cred Heritage, Landscape, and Culinary foreground\nmaterial artifacts, physical environments, and everyday practices. Historical and Politics cover the\ninstitutional and political dimensions of Bavarian\nidentity. See Table 1 for examples of questions\nfrom both subsets across all eight categories. 3.1.1 General Knowledge Questions\nThe first ten questions in each category target\nbroadly accessible cultural knowledge likely to appear in general multilingual training data. These\nquestions were generated using Claude Sonnet\n4.6 with category-specific prompts of the form:\n\u201cCreate 10 multiple-choice questions that evaluate knowledge about Bavarian [category].\u201d The"
+      },
+      {
+        "passage_index": 2,
+        "text": "We extract local noun phrasesP(p) =\nLLM(p), match each phrase to its prompt tokens, and aggregate its attention over the matched span and heads into\nAl\nb,k. The phrase-conditioned spatial distributions and their\ndiscrepancy are\n\u03c0l\nb,k = Norm\n\u0000\nPoolb(Al\nb,k)\n\u0001\n, b\u2208 {x, e},\ndlk = JS(\u03c0l\nx,k\u2225\u03c0l\ne,k),\nHerePool b aggregates each branch response onto the common spatial support used by the loss, and Norm(a) =\nsoft max(zscore(a)/T)."
+      },
+      {
+        "passage_index": 3,
+        "text": "The SCI consistency objective combines\u2113 1 and SSIM terms with weights of 0.9 and 0.1,\nwhile opacity regulation is weighted by 0.01. Pose gradients\nare accumulated over 25 iterations to stabilize camera refinement. The learning rates for pose corrections and Gaussian\nmeans decay exponentially from10 \u22122 and1.6\u00d710 \u22124 to\n2\u00d710 \u22125 and1.6\u00d710 \u22126, respectively. Densification.Densification is performed every 100 iterations between iterations 500 and 15,000. To constrain model\ngrowth, the Gaussian count at iteration 7,000 bounds all subsequent splitting and duplication, while opacity is reset every\n3,000 iterations. OSGR augments the conventional gradient,\nscale, and screen-space radius cues with the proposed local\nopacity criterion."
+      },
+      {
+        "passage_index": 4,
+        "text": "The average speedups on our data sets are summarized\n1http://www.robots.ox.ac.uk/ActiveVision/\n2http://users.cecs.anu.edu.au/ hartley/\n1 2 3 40\n0.2\n0.4\n0.6\n0.8\n1\n1.2\n1.4\n1.6translation direction error (deg)\nDataset number\nReal Scene Sideways 1\u22124\nNister\nDLconst\nDLinit\n1 2 3 40\n0.1\n0.2\n0.3\n0.4\n0.5\n0.6\n0.7\n0.8\n0.9translation direction error (deg)\nDataset number\nReal Scene Forward 1\u22124\nNister\nDLconst\nDLinit\nFigure 4. Real data"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_015",
+    "question": "What failure mode occurs when ranking candidate retrieval passages by raw respondent predictive entropy alone within a single question, and how does the LODESTAR method modify the prompt to create a directed entropy signal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "We extract local noun phrasesP(p) =\nLLM(p), match each phrase to its prompt tokens, and aggregate its attention over the matched span and heads into\nAl\nb,k. The phrase-conditioned spatial distributions and their\ndiscrepancy are\n\u03c0l\nb,k = Norm\n\u0000\nPoolb(Al\nb,k)\n\u0001\n, b\u2208 {x, e},\ndlk = JS(\u03c0l\nx,k\u2225\u03c0l\ne,k),\nHerePool b aggregates each branch response onto the common spatial support used by the loss, and Norm(a) =\nsoft max(zscore(a)/T)."
+      },
+      {
+        "passage_index": 2,
+        "text": "The SCI consistency objective combines\u2113 1 and SSIM terms with weights of 0.9 and 0.1,\nwhile opacity regulation is weighted by 0.01. Pose gradients\nare accumulated over 25 iterations to stabilize camera refinement. The learning rates for pose corrections and Gaussian\nmeans decay exponentially from10 \u22122 and1.6\u00d710 \u22124 to\n2\u00d710 \u22125 and1.6\u00d710 \u22126, respectively. Densification.Densification is performed every 100 iterations between iterations 500 and 15,000. To constrain model\ngrowth, the Gaussian count at iteration 7,000 bounds all subsequent splitting and duplication, while opacity is reset every\n3,000 iterations. OSGR augments the conventional gradient,\nscale, and screen-space radius cues with the proposed local\nopacity criterion."
+      },
+      {
+        "passage_index": 3,
+        "text": "The average speedups on our data sets are summarized\n1http://www.robots.ox.ac.uk/ActiveVision/\n2http://users.cecs.anu.edu.au/ hartley/\n1 2 3 40\n0.2\n0.4\n0.6\n0.8\n1\n1.2\n1.4\n1.6translation direction error (deg)\nDataset number\nReal Scene Sideways 1\u22124\nNister\nDLconst\nDLinit\n1 2 3 40\n0.1\n0.2\n0.3\n0.4\n0.5\n0.6\n0.7\n0.8\n0.9translation direction error (deg)\nDataset number\nReal Scene Forward 1\u22124\nNister\nDLconst\nDLinit\nFigure 4. Real data"
+      },
+      {
+        "passage_index": 4,
+        "text": "The average speedups on our data sets are summarized\n1http://www.robots.ox.ac.uk/ActiveVision/\n2http://users.cecs.anu.edu.au/ hartley/\n1 2 3 40\n0.2\n0.4\n0.6\n0.8\n1\n1.2\n1.4\n1.6translation direction error (deg)\nDataset number\nReal Scene Sideways 1\u22124\nNister\nDLconst\nDLinit\n1 2 3 40\n0.1\n0.2\n0.3\n0.4\n0.5\n0.6\n0.7\n0.8\n0.9translation direction error (deg)\nDataset number\nReal Scene Forward 1\u22124\nNister\nDLconst\nDLinit\nFigure 4. Real data"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_016",
+    "question": "What failure mode occurs when ranking candidate retrieval passages by raw respondent predictive entropy alone within a single question, and how does the LODESTAR method modify the prompt to create a directed entropy signal?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "includes\nEmma Watson and Dan\nStevens\u201d\nmisleading (rank 10)\n\u201cknown as the voice of Beast\nin the Disney animated film\n\u201cBeauty and the Beast\u201d and\nits numerous sequels\u201d\npassage p \u2225\nquestion q\n\u2744 frozen respondentR\n0.0021 0.0013\n\u2193\n\u2717 mis pick\nentropy\n(lower = more confident)\nlowest entropy of all ten\nsits on the wrong passage\nanswer: \u201cRobby Benson\u201d \u2717\narg mina(q,p)\nentropy(q,p )\n(b)\nLODESTAR : directed entropy\nquestion q: \u201cwho played the beast\nin the movie beauty and the beast\u201d\nretrieval (e.g., bge-m3)\n1 2 3 4 5 6 7 8 9 10\ntop-K retrieved passages\npi \u2208PtopK\nsupporting (rank 1)\n\u201ca 2017 . . . live-action\nreimagining of Disney\u2019s 1991\nanimated film . . ."
+      },
+      {
+        "passage_index": 2,
+        "text": "Seven of them score each candidate from the frozen respondent\u2019s own response, SPS scores the passage representation alone, and Self-RAG (reflection) selects\nwith the method\u2019s officially released critic, which is what keeps it under the frozen respondent. Search-based guidance.We also ask whether the polarizer can simply be searched for. GEPA and\nMIPROv2 answer that under LODESTAR\u2019s exact reward function, training draws and frozen respondent, so only the optimizer differs. Both configurations start from the same hand-written caution\nseed and select identically at inference (arg min p H1(q, p, \u03c8)). Each row reports its strongest seed\nagainst LODESTAR\u2019s three-seed mean, a comparison deliberately set in the baselines\u2019 favour."
+      },
+      {
+        "passage_index": 3,
+        "text": "2024); what remains unclear is how to assess the value of\nthat extracted support for a later query. This observation changes the basic evaluation question. Memory should be judged by whether past experience improves the solution of the current query: higher verified completion, less unnecessary exploration, or lower online cost\nwithout discarding necessary checks. A high retrieval score\nalone can not answer this question for long trajectories. Consider an earlier multi-app workflow for search, verification,\nand artifact creation. A later request may preserve that workflow while changing the person, file, date, or environment\nstate. Starting from scratch wastes the earlier run; replaying\nit can copy an obsolete recipient, path, or state assumption. The useful support is a target-bound account of the procedure, the bindings to recover, and the checks that remain\nnecessary. We call this operation query-conditioned reuse. This criterion separates memory utility from both retrieval\nquality and source fidelity. A support object may faithfully\npreserve a source trajectory yet harm the target by carrying stale bindings forward; conversely, an aggressively short"
+      },
+      {
+        "passage_index": 4,
+        "text": "For example, a Transformer\ndecoder could receive the code through a soft prompt [Lester et al., 2021] or cross-attention [Vaswani\net al., 2017]. The linguistic structure of the boundaries placed by ReconSpan remains unexplored. Testing whether\nthey align with syntax, discourse, or information density could explain what the reconstruction\ncriterion treats as difficult and guide better allocation rules. Appendix F visualizes how changes in\nreconstruction reach produce the boundaries for one example. A further direction is to evaluate ReconSpan as a context-compression interface, measuring prefill\nlatency, KV-cache memory, boundary-selection cost, and amortization across repeated reads rather\nthan inferring efficiency from sequence reduction alone."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_017",
+    "question": "What primary limitation causes strategic drift in LLM agents during long-horizon reasoning tasks, and how does the EpicStar framework address it during inference using its episodic and working memory components?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "LL MS ARE NOT GOOD STRATEGISTS, YET MEMORY ENHANCED AGENCY BOOSTS REASONING\nYi Wu \u2217\nUniversity of Chicago\nyiwu@uchicago.edu\nZhimin Hu \u2217\nUniversity of Wisconsin-Madison\nhu436@wisc.edu\nStrategic reasoning in Large Language Models (LLMs) within long-horizon environments is often limited by inconsistent subgoals. In these settings, finite attention resources prevent the model from maintaining strategic coherence over\nthousands of steps. This limitation leads to strategic drift, where localized decisions fail to sustain a coherent trajectory across reasoning. To address this, we\nintroduce EpicStar, a framework that enables agents to learn memory as policy to\ntackle long-horizon reasoning. Specifically, the agent maintains a bank of successful past episodes as a heuristic alongside a working memory to track short-term\nenvironmental changes. During inference, a dynamic gating mechanism determines whether to execute a retrieved action directly or to perform new reasoning\nthrough a contextual fusion of the retrieved episodes and current working memory. Utilizing StarCraft II as the testbed, we evaluated EpicStar against diverse\nopponent styles. It significantly outperforms baseline methods, achieving higher\nwin rates while consuming an order of magnitude fewer tokens, and it maintains\nthis advantage consistently across difficulty levels and opponent strategies. Our\nfindings provide compelling evidence that structured cross-episode memory is essential for enabling LLM agents to perform robust, long-term strategic execution\nin dynamic, autonomous settings."
+      },
+      {
+        "passage_index": 2,
+        "text": "SegEarth-R2\n(3325M) MCD-Net\n(355M) SegEarth-R1\n(1589M)\nRSRefSeg-1\n(984M)\nRSRefSeg-2\n(1447M)\nRMS IN\n(240M)\nLAVT (228M)\nCroBIM* (222M)\nFIANet\n(256M)\nDiCoR\n(251M)\nBetter\n9.3% Higher\nFig. 1: Accuracy\u2013efficiency trade-off on the RefSegRS benchmark. DiCoR is compared with representative JFS and DPS"
+      },
+      {
+        "passage_index": 3,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 4,
+        "text": "Left: we train a Human-Aligned Reward Model on pairwise preference data from\ntracking rollouts, producing a scalar HumanScore via a temporal Transformer. Right: the HumanTracker Benchmark\nprovides 153 hours of motion trajectories across four families: daily tasks, highly dynamic motions, interaction motions,\nand ground-level movements. 1\narXiv:2608.13555v1 [cs.RO] 13 Aug 2026"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_018",
+    "question": "What primary limitation causes strategic drift in LLM agents during long-horizon reasoning tasks, and how does the EpicStar framework address it during inference using its episodic and working memory components?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "SegEarth-R2\n(3325M) MCD-Net\n(355M) SegEarth-R1\n(1589M)\nRSRefSeg-1\n(984M)\nRSRefSeg-2\n(1447M)\nRMS IN\n(240M)\nLAVT (228M)\nCroBIM* (222M)\nFIANet\n(256M)\nDiCoR\n(251M)\nBetter\n9.3% Higher\nFig. 1: Accuracy\u2013efficiency trade-off on the RefSegRS benchmark. DiCoR is compared with representative JFS and DPS"
+      },
+      {
+        "passage_index": 2,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 3,
+        "text": "method:the full PixSDS update combines g sds with the normalized clean direction obtained from the decoded latent look-ahead step. This preserves semantic\nguidance while reducing structured artifacts in both 2D and 3D optimization."
+      },
+      {
+        "passage_index": 4,
+        "text": "Left: we train a Human-Aligned Reward Model on pairwise preference data from\ntracking rollouts, producing a scalar HumanScore via a temporal Transformer. Right: the HumanTracker Benchmark\nprovides 153 hours of motion trajectories across four families: daily tasks, highly dynamic motions, interaction motions,\nand ground-level movements. 1\narXiv:2608.13555v1 [cs.RO] 13 Aug 2026"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_019",
+    "question": "What primary limitation causes strategic drift in LLM agents during long-horizon reasoning tasks, and how does the EpicStar framework address it during inference using its episodic and working memory components?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "SegEarth-R2\n(3325M) MCD-Net\n(355M) SegEarth-R1\n(1589M)\nRSRefSeg-1\n(984M)\nRSRefSeg-2\n(1447M)\nRMS IN\n(240M)\nLAVT (228M)\nCroBIM* (222M)\nFIANet\n(256M)\nDiCoR\n(251M)\nBetter\n9.3% Higher\nFig. 1: Accuracy\u2013efficiency trade-off on the RefSegRS benchmark. DiCoR is compared with representative JFS and DPS"
+      },
+      {
+        "passage_index": 2,
+        "text": "SegEarth-R2\n(3325M) MCD-Net\n(355M) SegEarth-R1\n(1589M)\nRSRefSeg-1\n(984M)\nRSRefSeg-2\n(1447M)\nRMS IN\n(240M)\nLAVT (228M)\nCroBIM* (222M)\nFIANet\n(256M)\nDiCoR\n(251M)\nBetter\n9.3% Higher\nFig. 1: Accuracy\u2013efficiency trade-off on the RefSegRS benchmark. DiCoR is compared with representative JFS and DPS"
+      },
+      {
+        "passage_index": 3,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 4,
+        "text": "Left: we train a Human-Aligned Reward Model on pairwise preference data from\ntracking rollouts, producing a scalar HumanScore via a temporal Transformer. Right: the HumanTracker Benchmark\nprovides 153 hours of motion trajectories across four families: daily tasks, highly dynamic motions, interaction motions,\nand ground-level movements. 1\narXiv:2608.13555v1 [cs.RO] 13 Aug 2026"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_020",
+    "question": "What primary limitation causes strategic drift in LLM agents during long-horizon reasoning tasks, and how does the EpicStar framework address it during inference using its episodic and working memory components?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "In this paper, we introduce a novel perspective on the design of reasoning agents for long-horizon\ntasks. By integrating episodic and working memory systems, we enable agents to maintain coherent\nstrategic trajectories and adapt dynamically to evolving game scenarios. Empirical results demonstrate that our approach not only outperforms base methods in terms of performance but also has\nmuch lower token consumption, indicating that episodic memory can serve as an implicit mechanism for policy optimization, which enables more efficient reasoning. We show that even limited\nhigh-quality past experience can be maximized for significant performance gains when paired with\na dynamic memory framework. This research also underscores the importance of human cognitive mechanisms in developing AI that can navigate and excel in complex strategic environments,\nbridging the gap between artificial intelligence and cognitive science."
+      },
+      {
+        "passage_index": 2,
+        "text": "Additionally, one could explore methods to integrate\nparameterized memory in such experiential learning (Jun et al., 2025), which remains a promising\ndirection. Beyond StarCraft II, testing whether episodic-memory-as-policy transfers to other long horizon, partially observable domains would help establish whether strategic drift and its mitigation\nvia structured memory are general phenomena rather than artifacts of this particular testbed. Finally,\nan important safety consideration for any system that reuses past successful behavior is the risk of\noverfitting to opponent styles seen during memory collection; developing principled ways to detect\nwhen a retrieved episode no longer applies, rather than relying solely on the gating heuristic used\nhere, would make such agents more robust when deployed against genuinely novel adversaries."
+      },
+      {
+        "passage_index": 3,
+        "text": "7), confirming an\nintrinsic enhancement of the model\u2019s shared generation priors. 5 LIMITATION AND DISCUSSION\nWhile HPSD significantly enhances the base T2V generation capability, it introduces certain computational overheads. First, constructing privileged conditions requires querying auxiliary LLM and\nT2I models, which incurs extra data synthesis costs. However, this overhead is a one-time offline\nprocess and can be effectively mitigated by deploying distilled or quantized generative models (e.g.,\nZ-Image-Turbo used in our experiments). Moreover, the performance ceiling of HPSD can naturally\nscale with the continuous advancements of these auxiliary models. Second, during training, rolling\nout the student to form the hybrid-policy sub-trajectory requires additional forward passes compared\nto SFT and OPD. Nevertheless, these intermediate steps operate strictly in inference mode and do\nnot require storing gradients, thereby avoiding substantial memory overhead."
+      },
+      {
+        "passage_index": 4,
+        "text": "EviReform thus lets\nobserved evidence refine what graph retrieval searches\nfor before producing the final passage ranking. Generative AI Use Disclosure\nDuring the preparation of this manuscript and its accompanying implementation, the authors used generative AI systems to assist with language polishing and\nwere also used as explicitly identified components of the\nre ranking, and question answering; their roles and experimental settings are reported in this manuscript. The\nauthors independently verified and take full responsibility for all scientific claims, experimental design, data\nprocessing, results, references, software, and final text. Relative to BGE-M3, Qwen3 changes R@5 by +0 .55,\n\u22120.95, and \u22120.04 points on 2Wiki, HotpotQA, and\nMuSiQue, while NV-Embed-v2 changes it by +0 .70,\n+0.60, and +5 .90 points. The ranges across the three\nembeddings are 0.70, 1.55, and 5.93 points, with the\nlargest variation on MuSiQue."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_021",
+    "question": "In the study of AI-generated fiction, how do the authors define the corpus-level concept of 'overclosure' (including their specific definition of 'formal range'), and how do they distinguish between 'variance overclosure' and 'correlational overclosure'?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "This article therefore distinguishes between variance over closure, which represents\na limited formal range between novels, and\na more specific phenomenon of correlational\nover closure. This means that an individual AIgenerated novel may resemble human fiction\nstylistically, while a collection of AI-generated\nnovels occupies a much narrower formal range. Keywords:AI-generated fiction; stylometry; zero\nstyle; lexical diversity; sentence length; variance;\nover closure"
+      },
+      {
+        "passage_index": 2,
+        "text": "This relative\nindependence gives literary corpora a diverse formal range. In this article, when we say \u201cformal\nrange,\u201d we specifically mean the dispersion and\ncoordination among the stylistic features we have\nmeasured; we do not mean plot, characterization,\npoint of view, or overall narrative structure. Overclosure describes a corpus-level condition\nin which generated texts remain locally fluent and\ncoherent but depict an unusually restricted tendency across the measured formal dimensions. \u201cVariance over closure\u201d means that novels differ\nvery little from one another with respect to fea2\ntures such as lexical diversity, entropy, sentence\nlength, or readability. \u201cCorrelational over closure\u201d\nis an exploratory hypothesis concerning features\nthat are not mechanically related but become more\nstrongly coordinated in generated texts than in a\nhuman comparator. These two types of over closure differ from one\nanother: a corpus can be restricted without its variables becoming interdependent, or conversely, its\nvariables can become interdependent without all of\nthem being compressed to the same degree. Overclosure does not mean that a text is simple, low quality, or lexically weak. A corpus might have a\nhigh average lexical diversity while still showing\nvery little difference between its novels. Nor does\nthis term describe a single text on its own; rather, it\ndescribes a pattern seen across an entire set of texts\nproduced under similar conditions. 1.5 Research questions\nRQ1."
+      },
+      {
+        "passage_index": 3,
+        "text": "We also do not yet\ninclude all compute-matched monolithic controls, such as baselines matched for fully charged MoT EFLOPs, aggregate\ntoken exposure, or estimated critical-path budget, nor do we report measured wall-clock time under equal hardware resources. Consequently, the current evidence demonstrates modular composability in this setting and identifies an amortized-reuse\nscheduling regime, rather than a uniform compute or equal-hardware speed advantage. As a proof of mechanism, MoT\nopens a concrete design space for reusable scaffolded sub-runs and their quality\u2013compute\u2013scheduling trade-offs."
+      },
+      {
+        "passage_index": 4,
+        "text": "On a\nRaspberry Pi 5 (ARM CPU), it reduces latency by 2.4% and 17.6%\nat batch sizes 1 and 16. These results show that MergeOvercan\nrecover a meaningful part of the throughput and memory cost that\nrecursive weight-sharing introduces, without retraining, and provides a baseline for combining token merging with hierarchical\nrecursive transformers. Keywords\nVision transformers, Model compression, Recursive weight-sharing,\nToken merging, Edge AI"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_022",
+    "question": "In the study of AI-generated fiction, how do the authors define the corpus-level concept of 'overclosure' (including their specific definition of 'formal range'), and how do they distinguish between 'variance overclosure' and 'correlational overclosure'?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "This relative\nindependence gives literary corpora a diverse formal range. In this article, when we say \u201cformal\nrange,\u201d we specifically mean the dispersion and\ncoordination among the stylistic features we have\nmeasured; we do not mean plot, characterization,\npoint of view, or overall narrative structure. Overclosure describes a corpus-level condition\nin which generated texts remain locally fluent and\ncoherent but depict an unusually restricted tendency across the measured formal dimensions. \u201cVariance over closure\u201d means that novels differ\nvery little from one another with respect to fea2\ntures such as lexical diversity, entropy, sentence\nlength, or readability. \u201cCorrelational over closure\u201d\nis an exploratory hypothesis concerning features\nthat are not mechanically related but become more\nstrongly coordinated in generated texts than in a\nhuman comparator. These two types of over closure differ from one\nanother: a corpus can be restricted without its variables becoming interdependent, or conversely, its\nvariables can become interdependent without all of\nthem being compressed to the same degree. Overclosure does not mean that a text is simple, low quality, or lexically weak. A corpus might have a\nhigh average lexical diversity while still showing\nvery little difference between its novels. Nor does\nthis term describe a single text on its own; rather, it\ndescribes a pattern seen across an entire set of texts\nproduced under similar conditions. 1.5 Research questions\nRQ1."
+      },
+      {
+        "passage_index": 2,
+        "text": "Seven of them score each candidate from the frozen respondent\u2019s own response, SPS scores the passage representation alone, and Self-RAG (reflection) selects\nwith the method\u2019s officially released critic, which is what keeps it under the frozen respondent. Search-based guidance.We also ask whether the polarizer can simply be searched for. GEPA and\nMIPROv2 answer that under LODESTAR\u2019s exact reward function, training draws and frozen respondent, so only the optimizer differs. Both configurations start from the same hand-written caution\nseed and select identically at inference (arg min p H1(q, p, \u03c8)). Each row reports its strongest seed\nagainst LODESTAR\u2019s three-seed mean, a comparison deliberately set in the baselines\u2019 favour."
+      },
+      {
+        "passage_index": 3,
+        "text": "We also do not yet\ninclude all compute-matched monolithic controls, such as baselines matched for fully charged MoT EFLOPs, aggregate\ntoken exposure, or estimated critical-path budget, nor do we report measured wall-clock time under equal hardware resources. Consequently, the current evidence demonstrates modular composability in this setting and identifies an amortized-reuse\nscheduling regime, rather than a uniform compute or equal-hardware speed advantage. As a proof of mechanism, MoT\nopens a concrete design space for reusable scaffolded sub-runs and their quality\u2013compute\u2013scheduling trade-offs."
+      },
+      {
+        "passage_index": 4,
+        "text": "On a\nRaspberry Pi 5 (ARM CPU), it reduces latency by 2.4% and 17.6%\nat batch sizes 1 and 16. These results show that MergeOvercan\nrecover a meaningful part of the throughput and memory cost that\nrecursive weight-sharing introduces, without retraining, and provides a baseline for combining token merging with hierarchical\nrecursive transformers. Keywords\nVision transformers, Model compression, Recursive weight-sharing,\nToken merging, Edge AI"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_023",
+    "question": "In the study of AI-generated fiction, how do the authors define the corpus-level concept of 'overclosure' (including their specific definition of 'formal range'), and how do they distinguish between 'variance overclosure' and 'correlational overclosure'?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "This relative\nindependence gives literary corpora a diverse formal range. In this article, when we say \u201cformal\nrange,\u201d we specifically mean the dispersion and\ncoordination among the stylistic features we have\nmeasured; we do not mean plot, characterization,\npoint of view, or overall narrative structure. Overclosure describes a corpus-level condition\nin which generated texts remain locally fluent and\ncoherent but depict an unusually restricted tendency across the measured formal dimensions. \u201cVariance over closure\u201d means that novels differ\nvery little from one another with respect to fea2\ntures such as lexical diversity, entropy, sentence\nlength, or readability. \u201cCorrelational over closure\u201d\nis an exploratory hypothesis concerning features\nthat are not mechanically related but become more\nstrongly coordinated in generated texts than in a\nhuman comparator. These two types of over closure differ from one\nanother: a corpus can be restricted without its variables becoming interdependent, or conversely, its\nvariables can become interdependent without all of\nthem being compressed to the same degree. Overclosure does not mean that a text is simple, low quality, or lexically weak. A corpus might have a\nhigh average lexical diversity while still showing\nvery little difference between its novels. Nor does\nthis term describe a single text on its own; rather, it\ndescribes a pattern seen across an entire set of texts\nproduced under similar conditions. 1.5 Research questions\nRQ1."
+      },
+      {
+        "passage_index": 2,
+        "text": "We also do not yet\ninclude all compute-matched monolithic controls, such as baselines matched for fully charged MoT EFLOPs, aggregate\ntoken exposure, or estimated critical-path budget, nor do we report measured wall-clock time under equal hardware resources. Consequently, the current evidence demonstrates modular composability in this setting and identifies an amortized-reuse\nscheduling regime, rather than a uniform compute or equal-hardware speed advantage. As a proof of mechanism, MoT\nopens a concrete design space for reusable scaffolded sub-runs and their quality\u2013compute\u2013scheduling trade-offs."
+      },
+      {
+        "passage_index": 3,
+        "text": "We also do not yet\ninclude all compute-matched monolithic controls, such as baselines matched for fully charged MoT EFLOPs, aggregate\ntoken exposure, or estimated critical-path budget, nor do we report measured wall-clock time under equal hardware resources. Consequently, the current evidence demonstrates modular composability in this setting and identifies an amortized-reuse\nscheduling regime, rather than a uniform compute or equal-hardware speed advantage. As a proof of mechanism, MoT\nopens a concrete design space for reusable scaffolded sub-runs and their quality\u2013compute\u2013scheduling trade-offs."
+      },
+      {
+        "passage_index": 4,
+        "text": "On a\nRaspberry Pi 5 (ARM CPU), it reduces latency by 2.4% and 17.6%\nat batch sizes 1 and 16. These results show that MergeOvercan\nrecover a meaningful part of the throughput and memory cost that\nrecursive weight-sharing introduces, without retraining, and provides a baseline for combining token merging with hierarchical\nrecursive transformers. Keywords\nVision transformers, Model compression, Recursive weight-sharing,\nToken merging, Edge AI"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_024",
+    "question": "In the study of AI-generated fiction, how do the authors define the corpus-level concept of 'overclosure' (including their specific definition of 'formal range'), and how do they distinguish between 'variance overclosure' and 'correlational overclosure'?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "This article therefore distinguishes between variance over closure, which represents\na limited formal range between novels, and\na more specific phenomenon of correlational\nover closure. This means that an individual AIgenerated novel may resemble human fiction\nstylistically, while a collection of AI-generated\nnovels occupies a much narrower formal range. Keywords:AI-generated fiction; stylometry; zero\nstyle; lexical diversity; sentence length; variance;\nover closure"
+      },
+      {
+        "passage_index": 2,
+        "text": "4 Discussion\n4.1 Variance over closure as the principal\nfinding\nThe main finding is that variance over closure is observed across both model\u2013workflow configurations\nand both stylistic targets. GPT Victorian, Qwen\nVictorian, GPT Zero-Style, and Qwen Zero-Style\nare all located within a smaller inter-novel range\nthan their human counterparts in terms of average\nsentence length, intra-novel sentence length variance, readability, and punctuation. Cross-workflow results for sentence structure\nare the most compelling evidence. There are differences in the mean sentence lengths between the\nmodels, but the document-level means and intra novel sentence lengths have very tight distributions\nacross all four generation conditions. This finding\nis true even when taking into account the number\nof documents, adjusting for document lengths, and\n9\nTable 4: Residual dispersion after adjustment for log word count and corpus membership."
+      },
+      {
+        "passage_index": 3,
+        "text": "This paper proposes the term \u201cover closure\u201d to describe a pattern seen at the corpus level in AIgenerated long fiction. Across the two model\u2013\n13\nworkflow configurations and stylistic targets examined, the generated novels showed narrower\ndocument-level formal ranges than the human corpora. The clearest evidence can be seen in sentence length dispersion which remains unusually low and\ncompressed even after author-balanced resampling,\nlength adjustment, removing each author individually to check their effect, and restricting the comparison group to just the Victorian period. Readability,\npunctuation, and intra-novel sentence-length variation provide further evidence, while the lexical"
+      },
+      {
+        "passage_index": 4,
+        "text": "Copyrighted contemporary\nhuman novels are not redistributed; reproducing\nfeature extraction for those texts requires lawful\naccess to the source novels.\u201d\nAuthor Contributions\nM.S.P. conceived the study, generated the model\ncorpora, conducted the computational analyses,\nand drafted the quantitative sections. J.Q. selected\nthe Zero-Style human corpus, conducted the close\nreading, contributed to the interpretation, and revised the manuscript. Both authors reviewed the\nEthics statement\nThe study analyzes published literary texts and\nmodel-generated fiction. It does not involve human\nparticipants, private personal data, or intervention\nwith human subjects. Competing interests\nThe authors declare no competing interests. AI-use disclosure\nThe ChatGPT interface and GPT-5.5 Thinking were\nused to generate the two AI fiction corpora. In the\nsupplementary material section, you can see the\nprompt transcription and original raw prompt files. ChatGPT was also used for drafting and debugging\nanalysis code and language editing. The authors selected and curated the corpora, designed the study,\nreviewed and executed the analyses, checked the\ncode and outputs, verified citations and reported\nvalues. The authors remain fully responsible for\nthe interpretation and final manuscript."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_025",
+    "question": "Why does training a linear activation probe on temporal benchmark splits (such as WikiMIA) fail to provide an unconfounded estimate of model memorization in benchmark contamination detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "relevant direction instead of assuming it. The difficulty is that a probe trained to separate two item\nsets will use anything that separates them. Das et al. [20]\nshow that on several widely used membership-inference\n1\narXiv:2608.12652v1 [cs.CL] 12 Aug 2026\nbenchmarks, including WikiMIA, a classifier with no access to the target model at all reaches high AUC, because\nthe member and non-member sets were split by publication date and therefore differ in topic and style. Any probe\nevaluated on such a split reports the sum of two quantities, memorisation and distribution shift, and the split\u2019s\nconstruction guarantees the second is large. The strongest\nevidence in Liu et al.\u2019s own paper is consistent with this\nreading: on the deliberately contaminated checkpoints of\nOren et al. [49], where the contaminated and clean item\nsets come from the same dataset and the split is not temporal, their probe reaches 54.0 and 51.9 AUC at duplication\ncounts of 1 and 2, against a 50.0 chance baseline. This paper takes the position that the probe is the right\ninstrument and the reported quantity is the wrong one. We propose Residual-Stream Contamination Probing\n(RSCP), a protocol whose output is the probe\u2019s advantage\nover a declared nuisance family, tested against a permutation null, and calibrated against known exposure counts. Contributions. 1."
+      },
+      {
+        "passage_index": 2,
+        "text": "Furthermore, because our model takes only geometry\nand a single RGB image as input, it lacks object properties (e.g., mass) needed\nto enforce global force equilibrium. Finally, the two real-world objects that resolved contact and force in our evaluation were a cube, which is piecewise planar,\nand a cylinder, which has a developable lateral surface. Future work should evaluate vision-based contact and force estimation on truly curved 3D objects. To\nobtain ground truth on such real-world geometries, our recent fabrication-based\napproach for retrofitting existing 3D objects with surface-conforming capacitive\nsensing could be a first step [19]."
+      },
+      {
+        "passage_index": 3,
+        "text": "DRUF improves privacy protection for document MLLMs by addressing relational leakage in KIE, where correlated sensitive fields\nmay be jointly disclosed under weak or missing visual evidence.\nUsing DocPrivacyBench, we systematically evaluate privacy risks,\nleakage suppression, and utility preservation. Experiments show\nthat relational leakage is common and that existing unlearning"
+      },
+      {
+        "passage_index": 4,
+        "text": "We denote the initialized per-layer TTT state before the first window by\nSinit. Globally continuous M-RoPE.The M-RoPE indexer (Wang et al., 2024; Bai et al., 2025) resets its\ncursor for each window, which would reuse positions across the stream. We preserve each window\u2019s\nlocally computed 3D positions and add a running scalar offset:\npi =p loc\ni + (mi\u22121 + 1), m i = max\n\u0000\npi\n\u0001\n, m 0 =\u22121,(6)\nwhere mi is the running maximum over all position axes. This preserves intra-window spatial temporal structure while matching the contiguous positions of a single full-video pass."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_026",
+    "question": "Why does training a linear activation probe on temporal benchmark splits (such as WikiMIA) fail to provide an unconfounded estimate of model memorization in benchmark contamination detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Furthermore, because our model takes only geometry\nand a single RGB image as input, it lacks object properties (e.g., mass) needed\nto enforce global force equilibrium. Finally, the two real-world objects that resolved contact and force in our evaluation were a cube, which is piecewise planar,\nand a cylinder, which has a developable lateral surface. Future work should evaluate vision-based contact and force estimation on truly curved 3D objects. To\nobtain ground truth on such real-world geometries, our recent fabrication-based\napproach for retrofitting existing 3D objects with surface-conforming capacitive\nsensing could be a first step [19]."
+      },
+      {
+        "passage_index": 2,
+        "text": "DRUF improves privacy protection for document MLLMs by addressing relational leakage in KIE, where correlated sensitive fields\nmay be jointly disclosed under weak or missing visual evidence.\nUsing DocPrivacyBench, we systematically evaluate privacy risks,\nleakage suppression, and utility preservation. Experiments show\nthat relational leakage is common and that existing unlearning"
+      },
+      {
+        "passage_index": 3,
+        "text": "We denote the initialized per-layer TTT state before the first window by\nSinit. Globally continuous M-RoPE.The M-RoPE indexer (Wang et al., 2024; Bai et al., 2025) resets its\ncursor for each window, which would reuse positions across the stream. We preserve each window\u2019s\nlocally computed 3D positions and add a running scalar offset:\npi =p loc\ni + (mi\u22121 + 1), m i = max\n\u0000\npi\n\u0001\n, m 0 =\u22121,(6)\nwhere mi is the running maximum over all position axes. This preserves intra-window spatial temporal structure while matching the contiguous positions of a single full-video pass."
+      },
+      {
+        "passage_index": 4,
+        "text": "In this paper, we presented our solution for AI City Challenge 2026 Track 4 on\ntext-based person anomaly retrieval. Building upon a strong retrieval backbone,\nwe proposed a heterogeneous ensemble framework that integrates complementary vision-language embedding models through score alignment and iterative\nfusion, followed by selective VLM-based re ranking for ambiguous queries.\nOur final system achieved90.92%mAP,85.13%Recall@1,97.72%Recall@5, and98.68%Recall@10 on the official PAB benchmark. These results\ndemonstrate the effectiveness of combining diverse vision-language representations with adaptive multimodal reasoning for fine-grained anomaly retrieval. We\nbelieve the proposed framework provides a practical and extensible solution for\nlarge-scale text-based person retrieval and offers useful insights for future multimodal retrieval systems in real-world surveillance scenarios.\nAcknowledgements\nWe thank the organizers of the AI City Challenge 2026 for providing the PAB\ndataset and evaluation platform. We acknowledge the authors of the baseline\nframework [11] for making their code publicly available. We are also grateful to\nAIVN and GenAI4E for their valuable support, guidance, and resources throughout this work."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_027",
+    "question": "Why does training a linear activation probe on temporal benchmark splits (such as WikiMIA) fail to provide an unconfounded estimate of model memorization in benchmark contamination detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Furthermore, because our model takes only geometry\nand a single RGB image as input, it lacks object properties (e.g., mass) needed\nto enforce global force equilibrium. Finally, the two real-world objects that resolved contact and force in our evaluation were a cube, which is piecewise planar,\nand a cylinder, which has a developable lateral surface. Future work should evaluate vision-based contact and force estimation on truly curved 3D objects. To\nobtain ground truth on such real-world geometries, our recent fabrication-based\napproach for retrofitting existing 3D objects with surface-conforming capacitive\nsensing could be a first step [19]."
+      },
+      {
+        "passage_index": 2,
+        "text": "Furthermore, because our model takes only geometry\nand a single RGB image as input, it lacks object properties (e.g., mass) needed\nto enforce global force equilibrium. Finally, the two real-world objects that resolved contact and force in our evaluation were a cube, which is piecewise planar,\nand a cylinder, which has a developable lateral surface. Future work should evaluate vision-based contact and force estimation on truly curved 3D objects. To\nobtain ground truth on such real-world geometries, our recent fabrication-based\napproach for retrofitting existing 3D objects with surface-conforming capacitive\nsensing could be a first step [19]."
+      },
+      {
+        "passage_index": 3,
+        "text": "DRUF improves privacy protection for document MLLMs by addressing relational leakage in KIE, where correlated sensitive fields\nmay be jointly disclosed under weak or missing visual evidence.\nUsing DocPrivacyBench, we systematically evaluate privacy risks,\nleakage suppression, and utility preservation. Experiments show\nthat relational leakage is common and that existing unlearning"
+      },
+      {
+        "passage_index": 4,
+        "text": "We denote the initialized per-layer TTT state before the first window by\nSinit. Globally continuous M-RoPE.The M-RoPE indexer (Wang et al., 2024; Bai et al., 2025) resets its\ncursor for each window, which would reuse positions across the stream. We preserve each window\u2019s\nlocally computed 3D positions and add a running scalar offset:\npi =p loc\ni + (mi\u22121 + 1), m i = max\n\u0000\npi\n\u0001\n, m 0 =\u22121,(6)\nwhere mi is the running maximum over all position axes. This preserves intra-window spatial temporal structure while matching the contiguous positions of a single full-video pass."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_028",
+    "question": "Why does training a linear activation probe on temporal benchmark splits (such as WikiMIA) fail to provide an unconfounded estimate of model memorization in benchmark contamination detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "al. [20] show to be separable blind, so the reported AUCs\nupper-bound rather than estimate the memorisation signal. The extraction point is the last token of a template that\nwraps the full sample and appends an evaluative question,\nreported as \u201cHere is a statement: [SAMPLE] Is the above\nstatement correct? Answer:\u201d. That state is downstream of\nthe entire item and the prompt explicitly asks the model to\nevaluate it; for benchmark contamination the consequences\nare severe, because competence on the item is precisely\nwhat contamination inflates (\u00a73.3). The layer is selected\non a validation set and reported without correction for the\nsearch. And the probe transfers from a fine-tuned proxy to\nthe target model, which assumes that the direction separating members after supervised fine-tuning is the direction\npretraining memorisation writes to; that assumption is substantive and is not tested. Their result on the deliberately contaminated checkpoints of Oren et al. [49], where the split is not temporal,\nis the honest calibration point for the whole approach and\nwe return to it in \u00a75.2."
+      },
+      {
+        "passage_index": 2,
+        "text": "generator\u2013verifier LLM framework for iterative temporal reasoning over clinical narratives, and MedTempo,\nan expert-annotated benchmark of 5,347 adverse-event\nnarratives, to evaluate structured symptom trajectory\nconstruction under sparse temporal anchoring. Experiments across four LLM backbones show that CRAFT\nconsistently improves temporal ordering accuracy.\nAblation analysis confirms that both generator and\nverifier components contribute meaningfully, with\nCRAFT-Full emerging as the strongest configuration\nacross all model tiers. Our results also reveal that\nrefinement behavior varies by model capability, suggesting that adaptive verification strategies may further\nimprove performance. Future work will leverage the\n2,181 non-temporal reports from MedTempo-NT as supervision for a learned temporal-evidence identification\nmodule, extending CRAFT into a unified end-to-end\nframework for automatic progression detection and\nstage-wise temporal ordering.\nAcknowledgments.This work was supported in\npart by the US National Science Foundation grant IIS2245907, IIS-2047843, IIS-2437621, and an Amazon\nResearch Award, Fall 2024.\nCopyright\u00a92026 by SIAM\nUnauthorized reproduction of this article is prohibited"
+      },
+      {
+        "passage_index": 3,
+        "text": "CRAFT: LLM-Based Iterative Refinement for Temporal Reasoning over Clinical\nNarratives\nChengyang He \u2217 Tahreem Arif\u2217 Marko Zivkovic\u2020 Lijing Wang\u2021 Yue Ning\u2217\nPing Wang\u2217\nAbstract.Understanding the temporal progression of symptoms in clinical narratives is critical for\ndisease monitoring, safety surveillance, and causality\nassessment. Clinical narratives, however, rarely provide explicit temporal anchors. Current approaches\nto temporal information reasoning focus predominantly\non pairwise relation classification across multi-visit\nand timestamp-rich records, leaving the reconstruction of structured symptom trajectories from individual\nanchor-sparse reports largely unaddressed. We propose\nCRAFT, an LLM framework that pairs a generator with\na constraint-based verifier to iteratively produce and\nrefine stage-wise symptom timelines through targeted\nfeedback. We conduct evaluation on MedTempo, a new\nbenchmark of 5,347 vaccine adverse-event narratives\nspanning three CO VID-19 vaccine types, with expert validated temporal stage annotations for 3,166 reports."
+      },
+      {
+        "passage_index": 4,
+        "text": "In particular, SSIM anchoring exhibits more consistent\nbehavior across noise levels, making it a robust choice for\npractical applications. The framework treats the de noise r as\na black-box mapping and does not require modification or\nretraining. Future work includes exploring additional fidelity metrics\nand metric combinations, and extending the framework to\nmore complex noise models and real-world scenarios. Importantly, the proposed strategy of blending black-box outputs\nwith inputs under explicit fidelity constraints is generic and can\nbe extended to other image restoration tasks, such as super resolution and de blurring. A limitation of our framework is that, because it is based\non linear blending, performance degrades when the de noise r\noutput differs substantially from the input or when the input\nnoise is so strong that the original image structure is heavily\ncorrupted. 4\nACKNOWLEDGMENT\nThe author would like to thank Takeshi Miura for insightful\ndiscussions, and Masaki Hilaga for his support and authorization to conduct this research as part of corporate duties. An\nAI language model was used to assist with the manuscript\u2019s\nstructure and English phrasing."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_029",
+    "question": "How does Class-Geometry Supervision (CGS) structurally depart from prior prototype-based few-shot object detectors regarding relational constraints among prototypes, and what do ablation studies reveal regarding meaningful visual geometry versus random geometry?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Class Geometry as Supervision for Sample-Efficient Open-World Detection\nAkash Rao1\u2217, Zhou Chen1\u2020, Revanth Reddy Palem1\u2020, Udhav Ramachandran2, Ruth Scimeca2,\nSathyanarayanan N. Aakur1\u2217\n1CSSE Department, Auburn University, Auburn, AL, 36849\n2 Department of Veterinary Pathobiology, Oklahoma State University, Stillwater, OK, 74078\n{azr0187,san0028}@auburn.edu\nOpen-world object detection requires models to recognize\nknown categories, reject unfamiliar objects, and incorporate new classes over time. This is especially challenging in\nscarce-data settings such as biomedical and scientific imaging, where rare categories may have only a few annotated\nexamples and fine-grained classes differ by subtle morphology. Prototype-based detectors are natural for this regime,\nbut they typically learn class prototypes as independent anchors,ignoring relational structure among classes.Wepropose\nclass-geometry supervision (CGS), a general framework that\nconstrains learned prototype or class-representation spaces\nto preserve visual or semantic class dissimilarities estimated\nfrom training data.CGSintroducesadissimilarity-preserving\nobjective that aligns pairwise distances among learned class\nrepresentations with a target class-geometry matrix while retaining the standard task loss. We instantiate the same objective across prototype recognition,few-shot biomedical object detection, open-set detection, novel-class insertion, and\nOWOD adaptation on COCO. Experiments show that CGS\nimproves sample efficiency in recognition and ova detection,\nsubstantially strengthens novel-class insertion, and improves\nunknownrecallonCOCOwhileretainingmuchoftheknownclass detection performance. Ablations show that meaningful\nvisual geometry provides the most reliable gains, while random geometry can help novel separation but is less consistent\nfor few-shot detection."
+      },
+      {
+        "passage_index": 2,
+        "text": "2019) to aggregate support features, while subsequent\nresearch demonstrated the efficacy of two-stage fine-tuning\n(Wang et al. 2020) and decoupled training pipelines like\nDeFRCN (Qiao et al. 2021). Additionally, methods such as\nFSCE (Sun et al. 2021) have focused on refining the feature\nspace through contrastive proposal encoding to better separate object classes. However, the key distinction is that prior\nprototype methods learn class anchors from support exam-\nples but do not explicitly constrain the relational geometry\namong the prototypes themselves. While few-shot detectors\nimprove adaptation from limited support examples through\nmeta-learning, fine-tuning, contrastive encoding, or prototype calibration, our approach structurally departs from this\nparadigm by supervising the prototype space using known\nclass relationships, ensuring that scarce examples are inherently arranged in a more calibrated open-world geometry. Class-relational, semantic, and geometry-aware representation learning.Moving beyond the assumption of\nindependent classes, classical Multidimensional Scaling\n(Kruskal 1964) and modern contrastive learning paradigms\n(Schroff,Kalenichenko,and Philbin2015;Khoslaetal.2020)\nstructure representation spaces by mapping relationships to\ngeometric constraints. Similarly, semantic structures have\nbeen explicitly modeled to improve generalization through\nzero-shot embeddings (Liu et al. 2021), hierarchy-aware\nlosses (Bertinetto et al. 2020), and vision-language priors\nlike CLIP (Radford et al. 2021) and BioCLIP (Stevens et al. 2024). While these methods demonstrate that labels contain\nrich relational structure beyond one-hot identity, we build\non this view by applying it directly to detector prototypes."
+      },
+      {
+        "passage_index": 3,
+        "text": "The next\ntwo subsections separate the two remaining concerns: Figure 4 checks that the verified CD target\nis preserved in task accuracy, and the latency decomposition in Section 3.5 shows why the cheaper\nproposal path can dominate even when SCD or\nCoS accept more draft tokens."
+      },
+      {
+        "passage_index": 4,
+        "text": "Particularly,DexterSQL\u2019s shows a high improvement of at\nleast 2.7% using an open-weight model (GPT-OSS-120B) on BIRDDev, with total accuracy 67.6%.DexterSQLalso shows better improvement of at least 0.9% using closed-weight models, with total\naccuracy 71.6% and 72.2% on BIRD-Dev with GPT-4o and GPT-5.2."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_030",
+    "question": "How does Class-Geometry Supervision (CGS) structurally depart from prior prototype-based few-shot object detectors regarding relational constraints among prototypes, and what do ablation studies reveal regarding meaningful visual geometry versus random geometry?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "2019) to aggregate support features, while subsequent\nresearch demonstrated the efficacy of two-stage fine-tuning\n(Wang et al. 2020) and decoupled training pipelines like\nDeFRCN (Qiao et al. 2021). Additionally, methods such as\nFSCE (Sun et al. 2021) have focused on refining the feature\nspace through contrastive proposal encoding to better separate object classes. However, the key distinction is that prior\nprototype methods learn class anchors from support exam-\nples but do not explicitly constrain the relational geometry\namong the prototypes themselves. While few-shot detectors\nimprove adaptation from limited support examples through\nmeta-learning, fine-tuning, contrastive encoding, or prototype calibration, our approach structurally departs from this\nparadigm by supervising the prototype space using known\nclass relationships, ensuring that scarce examples are inherently arranged in a more calibrated open-world geometry. Class-relational, semantic, and geometry-aware representation learning.Moving beyond the assumption of\nindependent classes, classical Multidimensional Scaling\n(Kruskal 1964) and modern contrastive learning paradigms\n(Schroff,Kalenichenko,and Philbin2015;Khoslaetal.2020)\nstructure representation spaces by mapping relationships to\ngeometric constraints. Similarly, semantic structures have\nbeen explicitly modeled to improve generalization through\nzero-shot embeddings (Liu et al. 2021), hierarchy-aware\nlosses (Bertinetto et al. 2020), and vision-language priors\nlike CLIP (Radford et al. 2021) and BioCLIP (Stevens et al. 2024). While these methods demonstrate that labels contain\nrich relational structure beyond one-hot identity, we build\non this view by applying it directly to detector prototypes."
+      },
+      {
+        "passage_index": 2,
+        "text": "This paper proposes the term \u201cover closure\u201d to describe a pattern seen at the corpus level in AIgenerated long fiction. Across the two model\u2013\n13\nworkflow configurations and stylistic targets examined, the generated novels showed narrower\ndocument-level formal ranges than the human corpora. The clearest evidence can be seen in sentence length dispersion which remains unusually low and\ncompressed even after author-balanced resampling,\nlength adjustment, removing each author individually to check their effect, and restricting the comparison group to just the Victorian period. Readability,\npunctuation, and intra-novel sentence-length variation provide further evidence, while the lexical"
+      },
+      {
+        "passage_index": 3,
+        "text": "The next\ntwo subsections separate the two remaining concerns: Figure 4 checks that the verified CD target\nis preserved in task accuracy, and the latency decomposition in Section 3.5 shows why the cheaper\nproposal path can dominate even when SCD or\nCoS accept more draft tokens."
+      },
+      {
+        "passage_index": 4,
+        "text": "Particularly,DexterSQL\u2019s shows a high improvement of at\nleast 2.7% using an open-weight model (GPT-OSS-120B) on BIRDDev, with total accuracy 67.6%.DexterSQLalso shows better improvement of at least 0.9% using closed-weight models, with total\naccuracy 71.6% and 72.2% on BIRD-Dev with GPT-4o and GPT-5.2."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_031",
+    "question": "How does Class-Geometry Supervision (CGS) structurally depart from prior prototype-based few-shot object detectors regarding relational constraints among prototypes, and what do ablation studies reveal regarding meaningful visual geometry versus random geometry?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "2019) to aggregate support features, while subsequent\nresearch demonstrated the efficacy of two-stage fine-tuning\n(Wang et al. 2020) and decoupled training pipelines like\nDeFRCN (Qiao et al. 2021). Additionally, methods such as\nFSCE (Sun et al. 2021) have focused on refining the feature\nspace through contrastive proposal encoding to better separate object classes. However, the key distinction is that prior\nprototype methods learn class anchors from support exam-\nples but do not explicitly constrain the relational geometry\namong the prototypes themselves. While few-shot detectors\nimprove adaptation from limited support examples through\nmeta-learning, fine-tuning, contrastive encoding, or prototype calibration, our approach structurally departs from this\nparadigm by supervising the prototype space using known\nclass relationships, ensuring that scarce examples are inherently arranged in a more calibrated open-world geometry. Class-relational, semantic, and geometry-aware representation learning.Moving beyond the assumption of\nindependent classes, classical Multidimensional Scaling\n(Kruskal 1964) and modern contrastive learning paradigms\n(Schroff,Kalenichenko,and Philbin2015;Khoslaetal.2020)\nstructure representation spaces by mapping relationships to\ngeometric constraints. Similarly, semantic structures have\nbeen explicitly modeled to improve generalization through\nzero-shot embeddings (Liu et al. 2021), hierarchy-aware\nlosses (Bertinetto et al. 2020), and vision-language priors\nlike CLIP (Radford et al. 2021) and BioCLIP (Stevens et al. 2024). While these methods demonstrate that labels contain\nrich relational structure beyond one-hot identity, we build\non this view by applying it directly to detector prototypes."
+      },
+      {
+        "passage_index": 2,
+        "text": "The next\ntwo subsections separate the two remaining concerns: Figure 4 checks that the verified CD target\nis preserved in task accuracy, and the latency decomposition in Section 3.5 shows why the cheaper\nproposal path can dominate even when SCD or\nCoS accept more draft tokens."
+      },
+      {
+        "passage_index": 3,
+        "text": "The next\ntwo subsections separate the two remaining concerns: Figure 4 checks that the verified CD target\nis preserved in task accuracy, and the latency decomposition in Section 3.5 shows why the cheaper\nproposal path can dominate even when SCD or\nCoS accept more draft tokens."
+      },
+      {
+        "passage_index": 4,
+        "text": "Particularly,DexterSQL\u2019s shows a high improvement of at\nleast 2.7% using an open-weight model (GPT-OSS-120B) on BIRDDev, with total accuracy 67.6%.DexterSQLalso shows better improvement of at least 0.9% using closed-weight models, with total\naccuracy 71.6% and 72.2% on BIRD-Dev with GPT-4o and GPT-5.2."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_032",
+    "question": "How does Class-Geometry Supervision (CGS) structurally depart from prior prototype-based few-shot object detectors regarding relational constraints among prototypes, and what do ablation studies reveal regarding meaningful visual geometry versus random geometry?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Tasks and Datasets.We evaluate class-geometry supervision across three complementary settings designed to test\nwhether relational class structure improves sample-efficient\nopen-world learning. First, we use a parasitic ova benchmark(Trehanetal.2026)for low-shot prototype recognition\nnovel insertion and unknown recall,though it can introduce a\nknown-classmAPtradeoff,particularly in frozen-head adaptation. Our ablations further show that the choice of target\ngeometry matters: visual morphology provides the most reliable gains,while random geometry can help separation but\nlacksconsistentandinterpretablestructure.Futureworkwill\naddress the broader challenge of howto learn or update class\ngeometry reliably as new categories arrive, especially when\nvisual and semantic geometry disagree.\nAcknowledgement.This work was supported in part by\nthe US NSF grants IIS 2348689, IIS 2348690, IIS 2615771,\nand the USDA award no. 2023-69014-39716."
+      },
+      {
+        "passage_index": 2,
+        "text": "We revisited referring expression comprehension from the\nperspective of unified open-vocabulary grounding and presented a holistic data-model co-design that jointly improves linguistic supervision and visual representation learn-\ning. Specifically, our framework combines a lightweight\nbroadcast-based grounding head with an inference-freeJEPA\nauxiliary objective to preserve representation diversity,while\nO365-Captionenriches grounding supervision through\ndiverse natural language descriptions.Extensiveexperiments\ndemonstrate strong cross-datasetgeneralizationandcompet-\nitive performance using a static checkpoint. Beyond the proposed framework, our theoretical and empirical results suggest preserving representation diversity is an important design principle for scaling unified vision-language grounding\nmodels beyond benchmark-specific specialization."
+      },
+      {
+        "passage_index": 3,
+        "text": "We introduced class-geometry supervision, a simple relational objective for organizing prototype and class representation spaces in sample-efficient open-world detection. Across recognition, ova detection, open-set detection,\nnovel-class insertion, and COCO OWOD adaptation, CGS\nimproves prototype calibration and strengthens open-world\nbehavior without requiring a new detector architecture. The"
+      },
+      {
+        "passage_index": 4,
+        "text": "In long-tailed video recognition, prior work tackles imbalance using\nclass-aware reconstruction and specialised prediction heads [23], while MEID [15]\nuses multiple experts with internal distillation to improve recognition on imbalanced classes. These approaches highlight the benefit of expert diversity but\nrely on a single visual representation and do not examine routing over multiple pose and appearance streams. FineX instead couples symmetric pairwise\ncross-attention with a shared latent expert bank: cross-attention exchanges evidence across RGB, pose-heat map, and skeletal-graph representations, and sparse\nrouting conditionally refines each stream. This differentiates FineX from both\ntwo-stream multimodal fusion and single-representation expert models."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_033",
+    "question": "What security vulnerability arises from using highly edit-robust LLM watermarks alone (termed piggyback spoofing), and how does the Cocktail watermarking scheme resolve it to support three-state detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Tracing Provenance and Detecting Tampering with\nComplementary LLM Watermarks\nXiaoyan Feng, Yanjun Zhang, He Zhang, Leo Yu Zhang, and Shirui Pan\nGriffith University\ntask for tracing its provenance. Existing LLM watermarks\npreserve provenance under editing, but this same robustness\nallows an adversary to alter critical content while retaining\nattribution, a vulnerability known as piggyback spoofing. We\nintroduce an innovative watermark that jointly provides provenance and tamper evidence. It co-embeds a robust signal and a\nfragile signal into each generated token. The signals share the\nsame mechanism but use independent keys and different seeding\nwindows over normalized text, making one resilient to edits and\nthe other sensitive to reader-visible changes. Multiple rounds\nof unbiased tournament reweighting preserve the expected generation distribution, while a periodic round-allocation pattern\ncontrols the trade-off between the two signals. At detection, their\nscores form a two-dimensional space supporting three decisions:\nIntact, Tampered, and No-Watermark. Across two large language\nmodels and two prompt datasets, our method demonstrates the\nhighest tamper-detection rate among the evaluated methods while\nmaintaining competitive attribution robustness and perplexity. Ablation studies show that reliable three-state detection requires\na well-defined notion of intact ness, co-embedding of the two\nsignals, and complementary sensitivity to edits. Index Terms\u2014large language models, text watermarking,\nprovenance, tamper evidence\nI. INTRODUCTION\nRegulations and industry commitments increasingly require\nAI-generated content to be identifiable [1]\u2013[3]."
+      },
+      {
+        "passage_index": 2,
+        "text": "Domain:\n[General;\nFacial;\nGeographic;\nMedical;\nUnsure]\nMLLM Router\nCLIP\nImage Statistics\nPreprocessing\nResizeNormalize\nResNet\nDINOStudentTeacher\nFigure 1. Overview of the ARM DIL pipeline for cross-domain image classification. Each input image is preprocessed via resizing and\nnormalization. Additionally, an image quality assessment (blur, brightness, contrast, and noise) is computed. The raw image and quality\nstatistics are passed jointly to an MLLM router (Gemma-4-12B), which reasons over the visual content and quality signals to assign the\nimage to one of five domain aliases (GENERAL, FACIAL, GEOGRAPHIC, MEDICAL, or UNSURE) and routes it to the corresponding\ndomain expert. Expert backbones (ResNet, DINO, and CLIP) are trained offline with domain-skewed sampling. Images assigned to\nUNSURE are redirected to the model with the best overall validation accuracy. All experts have unifiedN= 38class classification head,\nensuring valid predictions regardless of routing outcome."
+      },
+      {
+        "passage_index": 3,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 4,
+        "text": "On Testbed B,\ntwo flagship models bracket the predicted win region and the\nwins replicate; the time model repairs the latency tail, makes\ntight replica budgets safe to exploit, and converts a multi-node\nlocality regression into a gain. Our implementation is one deployable point, not the optimum of the theory it applies (L6);\nthe durable contribution is the map. As MoE serving consolidates around fp8 grouped kernels, large-expert flagships,\nand multi-node expert parallelism, dispatching on measured\ntime rather than counted tokens is both the principled and the\nprofitable choice."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_034",
+    "question": "What security vulnerability arises from using highly edit-robust LLM watermarks alone (termed piggyback spoofing), and how does the Cocktail watermarking scheme resolve it to support three-state detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Finally, model scaling experiments were conducted exclusively\nwithin the Gemma 4 family, leaving the framework\u2019s generalizability to other model families such as Llama, Qwen, or\nMistral unexplored."
+      },
+      {
+        "passage_index": 2,
+        "text": "Domain:\n[General;\nFacial;\nGeographic;\nMedical;\nUnsure]\nMLLM Router\nCLIP\nImage Statistics\nPreprocessing\nResizeNormalize\nResNet\nDINOStudentTeacher\nFigure 1. Overview of the ARM DIL pipeline for cross-domain image classification. Each input image is preprocessed via resizing and\nnormalization. Additionally, an image quality assessment (blur, brightness, contrast, and noise) is computed. The raw image and quality\nstatistics are passed jointly to an MLLM router (Gemma-4-12B), which reasons over the visual content and quality signals to assign the\nimage to one of five domain aliases (GENERAL, FACIAL, GEOGRAPHIC, MEDICAL, or UNSURE) and routes it to the corresponding\ndomain expert. Expert backbones (ResNet, DINO, and CLIP) are trained offline with domain-skewed sampling. Images assigned to\nUNSURE are redirected to the model with the best overall validation accuracy. All experts have unifiedN= 38class classification head,\nensuring valid predictions regardless of routing outcome."
+      },
+      {
+        "passage_index": 3,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 4,
+        "text": "On Testbed B,\ntwo flagship models bracket the predicted win region and the\nwins replicate; the time model repairs the latency tail, makes\ntight replica budgets safe to exploit, and converts a multi-node\nlocality regression into a gain. Our implementation is one deployable point, not the optimum of the theory it applies (L6);\nthe durable contribution is the map. As MoE serving consolidates around fp8 grouped kernels, large-expert flagships,\nand multi-node expert parallelism, dispatching on measured\ntime rather than counted tokens is both the principled and the\nprofitable choice."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_035",
+    "question": "What security vulnerability arises from using highly edit-robust LLM watermarks alone (termed piggyback spoofing), and how does the Cocktail watermarking scheme resolve it to support three-state detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Domain:\n[General;\nFacial;\nGeographic;\nMedical;\nUnsure]\nMLLM Router\nCLIP\nImage Statistics\nPreprocessing\nResizeNormalize\nResNet\nDINOStudentTeacher\nFigure 1. Overview of the ARM DIL pipeline for cross-domain image classification. Each input image is preprocessed via resizing and\nnormalization. Additionally, an image quality assessment (blur, brightness, contrast, and noise) is computed. The raw image and quality\nstatistics are passed jointly to an MLLM router (Gemma-4-12B), which reasons over the visual content and quality signals to assign the\nimage to one of five domain aliases (GENERAL, FACIAL, GEOGRAPHIC, MEDICAL, or UNSURE) and routes it to the corresponding\ndomain expert. Expert backbones (ResNet, DINO, and CLIP) are trained offline with domain-skewed sampling. Images assigned to\nUNSURE are redirected to the model with the best overall validation accuracy. All experts have unifiedN= 38class classification head,\nensuring valid predictions regardless of routing outcome."
+      },
+      {
+        "passage_index": 2,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 3,
+        "text": "4.5 Main Results\nTable 1 reports EM and F1 of Syferand the five baselines across nine languages on HotpotQA, 2WikiMultiHopQA, and MuSiQue. We organize the analysis around four observations. Single step retrieval is fundamentally insufficient for multi-hop QA,\nregardless of language alignment.Vanilla RAG and CrossRAG both plateau\nat low EM/F1 across datasets and languages, and CrossRAG\u2019s retrieve-then translate strategy fails to consistently improve over Vanilla RAG. The bottleneck\nSY FER 9\nTable 1.EM and F1 scores across nine languages on the three multilingual multi-hop\nQA datasets we constructed. Avg. denotes the average score across languages.Bold\nvalues indicate the best performance within each group."
+      },
+      {
+        "passage_index": 4,
+        "text": "On Testbed B,\ntwo flagship models bracket the predicted win region and the\nwins replicate; the time model repairs the latency tail, makes\ntight replica budgets safe to exploit, and converts a multi-node\nlocality regression into a gain. Our implementation is one deployable point, not the optimum of the theory it applies (L6);\nthe durable contribution is the map. As MoE serving consolidates around fp8 grouped kernels, large-expert flagships,\nand multi-node expert parallelism, dispatching on measured\ntime rather than counted tokens is both the principled and the\nprofitable choice."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_036",
+    "question": "What security vulnerability arises from using highly edit-robust LLM watermarks alone (termed piggyback spoofing), and how does the Cocktail watermarking scheme resolve it to support three-state detection?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "\u00afHL becomes the respondent\u2019s first-token entropyH 1, and the decoding a candidate needs to be\nscored collapses from Ltokens to one, anL-fold saving on every candidate of every question. 3We additionally run the cross-respondent comparison across two model generations, Qwen2.5-7B and\nQwen3.5-9B, training a polarizer for each respondent and evaluating every pairing both in-domain and out-of domain; every respondent improves under its own polarizer on both sides of the split (Section 6). 6\nTable 2:Passage-selectionF 1 with a frozen Llama-3.1-8B-Instruct respondent.All configurations select one of the same ten bge-m3 candidates and answer with the same frozen respondent,\nso the rows differ only in how that passage is chosen.Mean,EMand the LLM-judge column are\nfive-pool macro means ofF 1, of exact match (Appendix F) and of a GPT-4o answer-equivalence\nverdict (Appendix G). The LODESTARrow is the mean of the three runs listed beneath it in all three."
+      },
+      {
+        "passage_index": 2,
+        "text": "Language GEN What does the Bavarian expression\u201eGeh, h\u00f6r auf!\u201dmost likely mean in context? GRD What is the meaning of the Bavarian expression\u201eHawadehre\u201c? Table 1: Example questions from BAV GROUND, illustrating one general (GEN) and one grounded (GRD) question\nper category. GEN questions target broadly available cultural knowledge; GRD questions are sourced from regional\njournalism and specialist monographs and probe knowledge unlikely to appear in standard LLM pretraining corpora. cred Heritage, Landscape, and Culinary foreground\nmaterial artifacts, physical environments, and everyday practices. Historical and Politics cover the\ninstitutional and political dimensions of Bavarian\nidentity. See Table 1 for examples of questions\nfrom both subsets across all eight categories. 3.1.1 General Knowledge Questions\nThe first ten questions in each category target\nbroadly accessible cultural knowledge likely to appear in general multilingual training data. These\nquestions were generated using Claude Sonnet\n4.6 with category-specific prompts of the form:\n\u201cCreate 10 multiple-choice questions that evaluate knowledge about Bavarian [category].\u201d The"
+      },
+      {
+        "passage_index": 3,
+        "text": "2024); what remains unclear is how to assess the value of\nthat extracted support for a later query. This observation changes the basic evaluation question. Memory should be judged by whether past experience improves the solution of the current query: higher verified completion, less unnecessary exploration, or lower online cost\nwithout discarding necessary checks. A high retrieval score\nalone can not answer this question for long trajectories. Consider an earlier multi-app workflow for search, verification,\nand artifact creation. A later request may preserve that workflow while changing the person, file, date, or environment\nstate. Starting from scratch wastes the earlier run; replaying\nit can copy an obsolete recipient, path, or state assumption. The useful support is a target-bound account of the procedure, the bindings to recover, and the checks that remain\nnecessary. We call this operation query-conditioned reuse. This criterion separates memory utility from both retrieval\nquality and source fidelity. A support object may faithfully\npreserve a source trajectory yet harm the target by carrying stale bindings forward; conversely, an aggressively short"
+      },
+      {
+        "passage_index": 4,
+        "text": "Fast Iterative Five point Relative Pose Estimation\nJohan Hedborg Michael Felsberg\nComputer Vision Laboratory\nLink\u00a8oping University, Sweden\nhttps://www.cvl.isy.liu.se/\nRobust estimation of the relative pose between two cameras is a fundamental part of Structure and Motion methods. F or calibrated cameras, the \ufb01ve point method together\nwith a robust estimator such as RANSAC gives the best result in most cases. The current state-of-the-art method for\nsolving the relative pose problem from \ufb01ve points is due to\nNist\u00b4er [9], because it is faster than other methods and in the\nRANSAC scheme one can improve precision by increasing\nthe number of iterations.\nIn this paper , we propose a new iterative method, which\nis based on Powell\u2019s Dog Leg algorithm. The new method\nhas the same precision and is approximately twice as fast as\nNist\u00b4er\u2019s algorithm. The proposed method is easily extended\nto more than \ufb01ve points while retaining a ef\ufb01cient error metrics. This makes it also very suitable as an re \ufb01nement step.\nThe proposed algorithm is systematically evaluated on\nthree types of datasets with known ground truth."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_037",
+    "question": "Why do conventional Open-World Object Detection (OWOD) and Sparsely Annotated Object Detection (SAOD) frameworks fail in sparsely annotated open environments, and how do the KTRM and DDTG modules in the DPOD framework resolve the dual ambiguity of unlabeled regions?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "KTRM recovers missing\nknown objects to stabilize pseudo-label learning and refine decision boundaries, while DDTG discovers additional unknown instances via cross-view\nsemantic disagreement. \u2013We construct sparsely annotated open-world benchmarks and an evaluation\nprotocol that explicitly captures the dual nature of unlabeled regions. They\nallow quantitative evaluation of both missing known object recovery and\nunknown object discovery."
+      },
+      {
+        "passage_index": 2,
+        "text": "CROWD [25] discovers diverse unknown instances\nvia a sub modular gain objective and then learns disentangled representations of\nknown and unknown classes to reduce confusion. However, despite their effectiveness, most existing OWOD methods still depend on densely annotated data. Under sparse annotation settings, unlabeled\nknown objects obscure the boundary between known and unknown categories,\nleading to degraded detection performance. 2.2 Sparsely Annotated Object Detection (SAOD)\nSparsely Annotated Object Detection (SAOD) [10,28,32,42,45] addresses object detection when only a subset of object instances is annotated per image,\nresulting in sparse supervision. In such scenarios, detectors incorrectly interpret\nunlabeled objects as background regions, introducing false-negative supervision\nduring training. To alleviate this issue, several studies leverage pseudo-labeling to compensate for missing annotations. uDenseTeacher [47] utilizes dense pseudo-labels\ngenerated from the teacher\u2019s raw dense predictions instead of sparse box-level\npseudo-labels with post-processing. Co-mining [34] jointly trains two detectors\nthat exchange each other\u2019s high-confidence predictions. Co-Student [36] adopts\na collaborative strong\u2013weak student framework. The two students leverage each\nTowards Sparsely Annotated Open-World Object Detection 5\nFig.2:OverviewofDPOD.(a)KTRMrecoverssupervisionforunlabeledknownobjects and enforces known\u2013unknown feature separation. (b) DDTG identifies additional\nunknown candidates via cross-view semantic inconsistency. The two signals jointly\nstrengthen known\u2013unknown separation and stabilize feature representations. other\u2019s predictions, while a teacher model refines them to provide more reliable\nsupervision. However,these methods are designed under a closed-world assumption,where\nevery object belongs to a predefined class set."
+      },
+      {
+        "passage_index": 3,
+        "text": "This contrast indicates that the observed gains arise from the\nsystem design rather than a narrowly tuned boundary threshold. 5 Conclusion\nWe introduced LYCHEE MEMORY, a cost-efficient long-term memory framework for LLM agents that\nreplaces turn-level consolidation with semantic segment-level consolidation. Segment-level batching\nreduces construction frequency, while semantic boundary detection determines coherent segment\ncomposition before each segment is encoded into context-independent typed records. Together with\n15"
+      },
+      {
+        "passage_index": 4,
+        "text": "Domain:\n[General;\nFacial;\nGeographic;\nMedical;\nUnsure]\nMLLM Router\nCLIP\nImage Statistics\nPreprocessing\nResizeNormalize\nResNet\nDINOStudentTeacher\nFigure 1. Overview of the ARM DIL pipeline for cross-domain image classification. Each input image is preprocessed via resizing and\nnormalization. Additionally, an image quality assessment (blur, brightness, contrast, and noise) is computed. The raw image and quality\nstatistics are passed jointly to an MLLM router (Gemma-4-12B), which reasons over the visual content and quality signals to assign the\nimage to one of five domain aliases (GENERAL, FACIAL, GEOGRAPHIC, MEDICAL, or UNSURE) and routes it to the corresponding\ndomain expert. Expert backbones (ResNet, DINO, and CLIP) are trained offline with domain-skewed sampling. Images assigned to\nUNSURE are redirected to the model with the best overall validation accuracy. All experts have unifiedN= 38class classification head,\nensuring valid predictions regardless of routing outcome."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_038",
+    "question": "Why do conventional Open-World Object Detection (OWOD) and Sparsely Annotated Object Detection (SAOD) frameworks fail in sparsely annotated open environments, and how do the KTRM and DDTG modules in the DPOD framework resolve the dual ambiguity of unlabeled regions?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "CROWD [25] discovers diverse unknown instances\nvia a sub modular gain objective and then learns disentangled representations of\nknown and unknown classes to reduce confusion. However, despite their effectiveness, most existing OWOD methods still depend on densely annotated data. Under sparse annotation settings, unlabeled\nknown objects obscure the boundary between known and unknown categories,\nleading to degraded detection performance. 2.2 Sparsely Annotated Object Detection (SAOD)\nSparsely Annotated Object Detection (SAOD) [10,28,32,42,45] addresses object detection when only a subset of object instances is annotated per image,\nresulting in sparse supervision. In such scenarios, detectors incorrectly interpret\nunlabeled objects as background regions, introducing false-negative supervision\nduring training. To alleviate this issue, several studies leverage pseudo-labeling to compensate for missing annotations. uDenseTeacher [47] utilizes dense pseudo-labels\ngenerated from the teacher\u2019s raw dense predictions instead of sparse box-level\npseudo-labels with post-processing. Co-mining [34] jointly trains two detectors\nthat exchange each other\u2019s high-confidence predictions. Co-Student [36] adopts\na collaborative strong\u2013weak student framework. The two students leverage each\nTowards Sparsely Annotated Open-World Object Detection 5\nFig.2:OverviewofDPOD.(a)KTRMrecoverssupervisionforunlabeledknownobjects and enforces known\u2013unknown feature separation. (b) DDTG identifies additional\nunknown candidates via cross-view semantic inconsistency. The two signals jointly\nstrengthen known\u2013unknown separation and stabilize feature representations. other\u2019s predictions, while a teacher model refines them to provide more reliable\nsupervision. However,these methods are designed under a closed-world assumption,where\nevery object belongs to a predefined class set."
+      },
+      {
+        "passage_index": 2,
+        "text": "This contrast indicates that the observed gains arise from the\nsystem design rather than a narrowly tuned boundary threshold. 5 Conclusion\nWe introduced LYCHEE MEMORY, a cost-efficient long-term memory framework for LLM agents that\nreplaces turn-level consolidation with semantic segment-level consolidation. Segment-level batching\nreduces construction frequency, while semantic boundary detection determines coherent segment\ncomposition before each segment is encoded into context-independent typed records. Together with\n15"
+      },
+      {
+        "passage_index": 3,
+        "text": "Query-centroid slices score the corresponding subspace centroids\nto form lookup tables, and indexed summation reconstructs a proxy logit for every key. Hybrid Top-p/fixed-Top-k\nselection produces the initial key counts, from which SCOPE estimates an online per-head Top-k value. Sparse\nattention is computed using the selected original KandV."
+      },
+      {
+        "passage_index": 4,
+        "text": "Domain:\n[General;\nFacial;\nGeographic;\nMedical;\nUnsure]\nMLLM Router\nCLIP\nImage Statistics\nPreprocessing\nResizeNormalize\nResNet\nDINOStudentTeacher\nFigure 1. Overview of the ARM DIL pipeline for cross-domain image classification. Each input image is preprocessed via resizing and\nnormalization. Additionally, an image quality assessment (blur, brightness, contrast, and noise) is computed. The raw image and quality\nstatistics are passed jointly to an MLLM router (Gemma-4-12B), which reasons over the visual content and quality signals to assign the\nimage to one of five domain aliases (GENERAL, FACIAL, GEOGRAPHIC, MEDICAL, or UNSURE) and routes it to the corresponding\ndomain expert. Expert backbones (ResNet, DINO, and CLIP) are trained offline with domain-skewed sampling. Images assigned to\nUNSURE are redirected to the model with the best overall validation accuracy. All experts have unifiedN= 38class classification head,\nensuring valid predictions regardless of routing outcome."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_039",
+    "question": "Why do conventional Open-World Object Detection (OWOD) and Sparsely Annotated Object Detection (SAOD) frameworks fail in sparsely annotated open environments, and how do the KTRM and DDTG modules in the DPOD framework resolve the dual ambiguity of unlabeled regions?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "CROWD [25] discovers diverse unknown instances\nvia a sub modular gain objective and then learns disentangled representations of\nknown and unknown classes to reduce confusion. However, despite their effectiveness, most existing OWOD methods still depend on densely annotated data. Under sparse annotation settings, unlabeled\nknown objects obscure the boundary between known and unknown categories,\nleading to degraded detection performance. 2.2 Sparsely Annotated Object Detection (SAOD)\nSparsely Annotated Object Detection (SAOD) [10,28,32,42,45] addresses object detection when only a subset of object instances is annotated per image,\nresulting in sparse supervision. In such scenarios, detectors incorrectly interpret\nunlabeled objects as background regions, introducing false-negative supervision\nduring training. To alleviate this issue, several studies leverage pseudo-labeling to compensate for missing annotations. uDenseTeacher [47] utilizes dense pseudo-labels\ngenerated from the teacher\u2019s raw dense predictions instead of sparse box-level\npseudo-labels with post-processing. Co-mining [34] jointly trains two detectors\nthat exchange each other\u2019s high-confidence predictions. Co-Student [36] adopts\na collaborative strong\u2013weak student framework. The two students leverage each\nTowards Sparsely Annotated Open-World Object Detection 5\nFig.2:OverviewofDPOD.(a)KTRMrecoverssupervisionforunlabeledknownobjects and enforces known\u2013unknown feature separation. (b) DDTG identifies additional\nunknown candidates via cross-view semantic inconsistency. The two signals jointly\nstrengthen known\u2013unknown separation and stabilize feature representations. other\u2019s predictions, while a teacher model refines them to provide more reliable\nsupervision. However,these methods are designed under a closed-world assumption,where\nevery object belongs to a predefined class set."
+      },
+      {
+        "passage_index": 2,
+        "text": "This contrast indicates that the observed gains arise from the\nsystem design rather than a narrowly tuned boundary threshold. 5 Conclusion\nWe introduced LYCHEE MEMORY, a cost-efficient long-term memory framework for LLM agents that\nreplaces turn-level consolidation with semantic segment-level consolidation. Segment-level batching\nreduces construction frequency, while semantic boundary detection determines coherent segment\ncomposition before each segment is encoded into context-independent typed records. Together with\n15"
+      },
+      {
+        "passage_index": 3,
+        "text": "This contrast indicates that the observed gains arise from the\nsystem design rather than a narrowly tuned boundary threshold. 5 Conclusion\nWe introduced LYCHEE MEMORY, a cost-efficient long-term memory framework for LLM agents that\nreplaces turn-level consolidation with semantic segment-level consolidation. Segment-level batching\nreduces construction frequency, while semantic boundary detection determines coherent segment\ncomposition before each segment is encoded into context-independent typed records. Together with\n15"
+      },
+      {
+        "passage_index": 4,
+        "text": "Domain:\n[General;\nFacial;\nGeographic;\nMedical;\nUnsure]\nMLLM Router\nCLIP\nImage Statistics\nPreprocessing\nResizeNormalize\nResNet\nDINOStudentTeacher\nFigure 1. Overview of the ARM DIL pipeline for cross-domain image classification. Each input image is preprocessed via resizing and\nnormalization. Additionally, an image quality assessment (blur, brightness, contrast, and noise) is computed. The raw image and quality\nstatistics are passed jointly to an MLLM router (Gemma-4-12B), which reasons over the visual content and quality signals to assign the\nimage to one of five domain aliases (GENERAL, FACIAL, GEOGRAPHIC, MEDICAL, or UNSURE) and routes it to the corresponding\ndomain expert. Expert backbones (ResNet, DINO, and CLIP) are trained offline with domain-skewed sampling. Images assigned to\nUNSURE are redirected to the model with the best overall validation accuracy. All experts have unifiedN= 38class classification head,\nensuring valid predictions regardless of routing outcome."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_040",
+    "question": "Why do conventional Open-World Object Detection (OWOD) and Sparsely Annotated Object Detection (SAOD) frameworks fail in sparsely annotated open environments, and how do the KTRM and DDTG modules in the DPOD framework resolve the dual ambiguity of unlabeled regions?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "KTRM recovers missing\nknown objects to stabilize pseudo-label learning and refine decision boundaries, while DDTG discovers additional unknown instances via cross-view\nsemantic disagreement. \u2013We construct sparsely annotated open-world benchmarks and an evaluation\nprotocol that explicitly captures the dual nature of unlabeled regions. They\nallow quantitative evaluation of both missing known object recovery and\nunknown object discovery."
+      },
+      {
+        "passage_index": 2,
+        "text": "All weighting coefficients\u03b1uk,\u03b1 sep,\u03b2 cls,\n\u03b2sep,\u03b3 KT RM, and\u03b3 DDT Gare set to 1, and the facility-location parameter\u03b7\nis set to 1. During inference, predictions are obtained from 10,000 pre-defined\nbounding boxes, after which Non-Maximum Suppression (NMS) [27] is applied\nto remove redundant detections. Our model comprises 106.2M parameters with\na computational cost of 965.4 GFLOPs, running at 2.52 FPS with a latency of\n396.1 ms. Towards Sparsely Annotated Open-World Object Detection 11\nTable 2: Sparsely Annotated Open-World Object Detection (SA-OWOD)\nresults.Existing open-world detectors are benchmarked on sparse annotation datasets\nfor fair comparison. K-mAP and U-Recall denote Known mAP and Unknown Recall,\nrespectively."
+      },
+      {
+        "passage_index": 3,
+        "text": "We introduced class-geometry supervision, a simple relational objective for organizing prototype and class representation spaces in sample-efficient open-world detection. Across recognition, ova detection, open-set detection,\nnovel-class insertion, and COCO OWOD adaptation, CGS\nimproves prototype calibration and strengthens open-world\nbehavior without requiring a new detector architecture. The"
+      },
+      {
+        "passage_index": 4,
+        "text": "In open-world scenarios, object characteristics vary significantly across tasks, and certain categories \u2014 such\nas accessories (e.g., ties) \u2014 tend to yield lower object ness scores. Enforcing a\nfixed threshold under such noisy conditions is suboptimal and may introduce progressive learning bottlenecks. Replacing these fixed heuristics with task-adaptive\nthresholds remains a promising direction for future work. Acknowledgements\nThis work was supported in part by the National Research Foundation of Korea (NRF) grant funded by the Korean government (MSIT) (RS-2024-00358935,\n90%) and in part by the Institute of Information & Communications Technology\nPlanning & Evaluation (IITP) under the Artificial Intelligence Convergence Innovation Human Resources Development grant funded by the Korea government\n(MSIT) (IITP-2026-RS-2023-00254177, 10%). 16 H. Han et al."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_041",
+    "question": "In the PRISM framework for studying naming-error dissociations across transformers and post-stroke aphasia patients, how does the contrast operator differ between the LLM and cortical substrates, and what specific anatomical and layer clusters were recovered in the phonemic-favoring dissociation?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "We run a structurally matched analysis on 213 chronic post-stroke aphasia patients using\ncorrelation-difference lesion-symptom mapping, and replicate both sides on held-out splits. The\ndesigns match in subject dimension (seeds, patients), spatial dimension (layers, atlas-parcel lated\ncortex) and thresholding, but the contrast operator differs: a within-subject error-proportion difference for the LLM, a between-subject correlation difference for the cortex. Both substrates recover a\nrobust phonemic-favoring dissociation, a deep layer cluster and a frontal-perisylvian cortical cluster,\nboth replicating; the semantic-favoring direction is a consistently signed but non-significant trend\non both. PRISM thus gives a falsifiable, spatially resolved test of functional-specialization claims\nin transformer language models. A confirmatory ROI-level intervention (PRISM Stage 3) licensing\nthe strongest causal-mechanism claim is left to subsequent work. Keywords: mechanistic interpretability, large language models, perturbation-response mapping,\ntransformer perturbation, subtraction analysis, lesion\u2013symptom mapping, threshold-free cluster\nenhancement, layer-resolved interpretability, patient-specific digital twins"
+      },
+      {
+        "passage_index": 2,
+        "text": "For\nentities outside this boundary, the model should\nretreat to generic but still entailed entities (Figure\n1). To assess these two dimensions empirically,\nwe use entailment as a proxy for truthfulness and\ncompletion specificity as a proxy for informativeness. Our goal is to study whether models are able\nto balance these two dimensions when generating\ncompletions in real and synthetic cases. We use the LLM-as-a-judge to make this assessment. We aggregate results from both model\nsizes (12B and 1.4B), and both decoding strategies\n(argmax and multinomial) for this analysis."
+      },
+      {
+        "passage_index": 3,
+        "text": "Ranges from\u22121(complete reversal) to+1(perfect\nagreement); ties from within-bucket equivalence are\nhandled explicitly. Group-Aware LCCS [12]. Treatingeachbucketasatoken, LCCSisthelongest\ncommon contiguous subsequence of( \u02dcG1, . . . ,\u02dcGm)and\n( \u02dcP1, . . . ,\u02dcPn):\nL= max\n\b\n\u2113| \u2203i, j: (\u02dcGi, ...,\u02dcGi+\u2113\u22121) = (\u02dcPj, ...,\u02dcPj+\u2113\u22121)\n. This metric complements\u03c4 b by rewarding unbroken\nspans of perfectly matched phases, penalising isolated\nsegmentation errors. 6 Results.This section reports our empirical\nfindings, organized around the three research questions. We first compare CRAFT-Full against the baselines,\nthen examine how the four backbones compare to one\nanother, and then test whether these patterns hold\nwhen performance is broken out by vaccine type."
+      },
+      {
+        "passage_index": 4,
+        "text": "11 examines complex geometry\nand irregular camera motion, and Fig. 12 presents additional\nsynthetic-scene reconstructions. PREPRINT 18\nMeasurement Frames\nMeasurement Frames\nMeasurement Frames\nSCINeRF\nOurs\nSCINeRF\nOurs\nSCINeRF\nOurs\nFig. 11. Additional qualitative results for scenes with complex geometry and irregular camera motion. In each scene group, the coded SCI measurement is\nshown on the left, followed by frames sampled along the camera trajectory. SCINeRF [14] and our reconstruction are presented in the upper and lower rows,\nrespectively, enabling comparison of structural and appearance consistency across challenging viewpoint changes. PREPRINT 19\nSCINeRF\nOurs\nSCINeRF\nOurs\nSCINeRF\nOurs\nFig. 12. Additional reconstruction results on extended synthetic benchmarks. For each scene, the SCI measurement is shown on the left, followed by the\nreference frames and the reconstructions of SCINeRF [14] and our method from top to bottom. Colored boxes mark corresponding local regions for closer\ninspection of structural and appearance differences."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_042",
+    "question": "In the PRISM framework for studying naming-error dissociations across transformers and post-stroke aphasia patients, how does the contrast operator differ between the LLM and cortical substrates, and what specific anatomical and layer clusters were recovered in the phonemic-favoring dissociation?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "For\nentities outside this boundary, the model should\nretreat to generic but still entailed entities (Figure\n1). To assess these two dimensions empirically,\nwe use entailment as a proxy for truthfulness and\ncompletion specificity as a proxy for informativeness. Our goal is to study whether models are able\nto balance these two dimensions when generating\ncompletions in real and synthetic cases. We use the LLM-as-a-judge to make this assessment. We aggregate results from both model\nsizes (12B and 1.4B), and both decoding strategies\n(argmax and multinomial) for this analysis."
+      },
+      {
+        "passage_index": 2,
+        "text": "A\nkey component of our approach is a self-calibrating system response\nmodel that eliminates the need for prior spectral information or\nmanual metal masking, significantly improving both robustness and\npracticality for real-world CBCT systems."
+      },
+      {
+        "passage_index": 3,
+        "text": "Ranges from\u22121(complete reversal) to+1(perfect\nagreement); ties from within-bucket equivalence are\nhandled explicitly. Group-Aware LCCS [12]. Treatingeachbucketasatoken, LCCSisthelongest\ncommon contiguous subsequence of( \u02dcG1, . . . ,\u02dcGm)and\n( \u02dcP1, . . . ,\u02dcPn):\nL= max\n\b\n\u2113| \u2203i, j: (\u02dcGi, ...,\u02dcGi+\u2113\u22121) = (\u02dcPj, ...,\u02dcPj+\u2113\u22121)\n. This metric complements\u03c4 b by rewarding unbroken\nspans of perfectly matched phases, penalising isolated\nsegmentation errors. 6 Results.This section reports our empirical\nfindings, organized around the three research questions. We first compare CRAFT-Full against the baselines,\nthen examine how the four backbones compare to one\nanother, and then test whether these patterns hold\nwhen performance is broken out by vaccine type."
+      },
+      {
+        "passage_index": 4,
+        "text": "11 examines complex geometry\nand irregular camera motion, and Fig. 12 presents additional\nsynthetic-scene reconstructions. PREPRINT 18\nMeasurement Frames\nMeasurement Frames\nMeasurement Frames\nSCINeRF\nOurs\nSCINeRF\nOurs\nSCINeRF\nOurs\nFig. 11. Additional qualitative results for scenes with complex geometry and irregular camera motion. In each scene group, the coded SCI measurement is\nshown on the left, followed by frames sampled along the camera trajectory. SCINeRF [14] and our reconstruction are presented in the upper and lower rows,\nrespectively, enabling comparison of structural and appearance consistency across challenging viewpoint changes. PREPRINT 19\nSCINeRF\nOurs\nSCINeRF\nOurs\nSCINeRF\nOurs\nFig. 12. Additional reconstruction results on extended synthetic benchmarks. For each scene, the SCI measurement is shown on the left, followed by the\nreference frames and the reconstructions of SCINeRF [14] and our method from top to bottom. Colored boxes mark corresponding local regions for closer\ninspection of structural and appearance differences."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_043",
+    "question": "In the PRISM framework for studying naming-error dissociations across transformers and post-stroke aphasia patients, how does the contrast operator differ between the LLM and cortical substrates, and what specific anatomical and layer clusters were recovered in the phonemic-favoring dissociation?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "For\nentities outside this boundary, the model should\nretreat to generic but still entailed entities (Figure\n1). To assess these two dimensions empirically,\nwe use entailment as a proxy for truthfulness and\ncompletion specificity as a proxy for informativeness. Our goal is to study whether models are able\nto balance these two dimensions when generating\ncompletions in real and synthetic cases. We use the LLM-as-a-judge to make this assessment. We aggregate results from both model\nsizes (12B and 1.4B), and both decoding strategies\n(argmax and multinomial) for this analysis."
+      },
+      {
+        "passage_index": 2,
+        "text": "For\nentities outside this boundary, the model should\nretreat to generic but still entailed entities (Figure\n1). To assess these two dimensions empirically,\nwe use entailment as a proxy for truthfulness and\ncompletion specificity as a proxy for informativeness. Our goal is to study whether models are able\nto balance these two dimensions when generating\ncompletions in real and synthetic cases. We use the LLM-as-a-judge to make this assessment. We aggregate results from both model\nsizes (12B and 1.4B), and both decoding strategies\n(argmax and multinomial) for this analysis."
+      },
+      {
+        "passage_index": 3,
+        "text": "Ranges from\u22121(complete reversal) to+1(perfect\nagreement); ties from within-bucket equivalence are\nhandled explicitly. Group-Aware LCCS [12]. Treatingeachbucketasatoken, LCCSisthelongest\ncommon contiguous subsequence of( \u02dcG1, . . . ,\u02dcGm)and\n( \u02dcP1, . . . ,\u02dcPn):\nL= max\n\b\n\u2113| \u2203i, j: (\u02dcGi, ...,\u02dcGi+\u2113\u22121) = (\u02dcPj, ...,\u02dcPj+\u2113\u22121)\n. This metric complements\u03c4 b by rewarding unbroken\nspans of perfectly matched phases, penalising isolated\nsegmentation errors. 6 Results.This section reports our empirical\nfindings, organized around the three research questions. We first compare CRAFT-Full against the baselines,\nthen examine how the four backbones compare to one\nanother, and then test whether these patterns hold\nwhen performance is broken out by vaccine type."
+      },
+      {
+        "passage_index": 4,
+        "text": "11 examines complex geometry\nand irregular camera motion, and Fig. 12 presents additional\nsynthetic-scene reconstructions. PREPRINT 18\nMeasurement Frames\nMeasurement Frames\nMeasurement Frames\nSCINeRF\nOurs\nSCINeRF\nOurs\nSCINeRF\nOurs\nFig. 11. Additional qualitative results for scenes with complex geometry and irregular camera motion. In each scene group, the coded SCI measurement is\nshown on the left, followed by frames sampled along the camera trajectory. SCINeRF [14] and our reconstruction are presented in the upper and lower rows,\nrespectively, enabling comparison of structural and appearance consistency across challenging viewpoint changes. PREPRINT 19\nSCINeRF\nOurs\nSCINeRF\nOurs\nSCINeRF\nOurs\nFig. 12. Additional reconstruction results on extended synthetic benchmarks. For each scene, the SCI measurement is shown on the left, followed by the\nreference frames and the reconstructions of SCINeRF [14] and our method from top to bottom. Colored boxes mark corresponding local regions for closer\ninspection of structural and appearance differences."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_044",
+    "question": "In the PRISM framework for studying naming-error dissociations across transformers and post-stroke aphasia patients, how does the contrast operator differ between the LLM and cortical substrates, and what specific anatomical and layer clusters were recovered in the phonemic-favoring dissociation?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "We run a structurally matched analysis on 213 chronic post-stroke aphasia patients using\ncorrelation-difference lesion-symptom mapping, and replicate both sides on held-out splits. The\ndesigns match in subject dimension (seeds, patients), spatial dimension (layers, atlas-parcel lated\ncortex) and thresholding, but the contrast operator differs: a within-subject error-proportion difference for the LLM, a between-subject correlation difference for the cortex. Both substrates recover a\nrobust phonemic-favoring dissociation, a deep layer cluster and a frontal-perisylvian cortical cluster,\nboth replicating; the semantic-favoring direction is a consistently signed but non-significant trend\non both. PRISM thus gives a falsifiable, spatially resolved test of functional-specialization claims\nin transformer language models. A confirmatory ROI-level intervention (PRISM Stage 3) licensing\nthe strongest causal-mechanism claim is left to subsequent work. Keywords: mechanistic interpretability, large language models, perturbation-response mapping,\ntransformer perturbation, subtraction analysis, lesion\u2013symptom mapping, threshold-free cluster\nenhancement, layer-resolved interpretability, patient-specific digital twins"
+      },
+      {
+        "passage_index": 2,
+        "text": "\u00afHL becomes the respondent\u2019s first-token entropyH 1, and the decoding a candidate needs to be\nscored collapses from Ltokens to one, anL-fold saving on every candidate of every question. 3We additionally run the cross-respondent comparison across two model generations, Qwen2.5-7B and\nQwen3.5-9B, training a polarizer for each respondent and evaluating every pairing both in-domain and out-of domain; every respondent improves under its own polarizer on both sides of the split (Section 6). 6\nTable 2:Passage-selectionF 1 with a frozen Llama-3.1-8B-Instruct respondent.All configurations select one of the same ten bge-m3 candidates and answer with the same frozen respondent,\nso the rows differ only in how that passage is chosen.Mean,EMand the LLM-judge column are\nfive-pool macro means ofF 1, of exact match (Appendix F) and of a GPT-4o answer-equivalence\nverdict (Appendix G). The LODESTARrow is the mean of the three runs listed beneath it in all three."
+      },
+      {
+        "passage_index": 3,
+        "text": "Across\u03c3= 25,\u03c3= 50, and\u03c3= 75, SSIM\nanchoring shows similar PSNR-kurtosis trade-off curves, and\nTS SIM = 0.8is a reasonable operating point for all three\nnoise levels, yielding sufficiently high PSNR (compared to\nbilateral) and low excess kurtosis. In contrast, PSNR anchoring\n1For visual results, please refer to the supplementary material. Our framework finds the balance between the denoising strength and fidelity without\nsevere artifacts. 3\nbehaves differently across noise levels. AlthoughT PSNR = 25\nyields low excess kurtosis in all cases, the achieved PSNR is\nrelatively high for\u03c3= 25but low for\u03c3= 50and\u03c3= 75. Thus, PSNR anchoring is sensitive to noise level, while SSIM\nanchoring is relatively stable. This noise dependency of PSNR\nanchoring is consistent with the previous analysis."
+      },
+      {
+        "passage_index": 4,
+        "text": "Language GEN What does the Bavarian expression\u201eGeh, h\u00f6r auf!\u201dmost likely mean in context? GRD What is the meaning of the Bavarian expression\u201eHawadehre\u201c? Table 1: Example questions from BAV GROUND, illustrating one general (GEN) and one grounded (GRD) question\nper category. GEN questions target broadly available cultural knowledge; GRD questions are sourced from regional\njournalism and specialist monographs and probe knowledge unlikely to appear in standard LLM pretraining corpora. cred Heritage, Landscape, and Culinary foreground\nmaterial artifacts, physical environments, and everyday practices. Historical and Politics cover the\ninstitutional and political dimensions of Bavarian\nidentity. See Table 1 for examples of questions\nfrom both subsets across all eight categories. 3.1.1 General Knowledge Questions\nThe first ten questions in each category target\nbroadly accessible cultural knowledge likely to appear in general multilingual training data. These\nquestions were generated using Claude Sonnet\n4.6 with category-specific prompts of the form:\n\u201cCreate 10 multiple-choice questions that evaluate knowledge about Bavarian [category].\u201d The"
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_045",
+    "question": "How does the visual grounding framework in paper 2608.12748 combine discriminative grounding with reconstructive regularization during training without incurring inference overhead, and how does the Modulated Attention-Contrastive Head (mACH) reformulate query-text interaction to accelerate multi-query inference?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "The overall architecture of our framework is illustrated in\nFig. 2. Given an input image and a set of referring expressions, the vision backbone extracts multi-scale visual\nfeatures, while the language encoder produces the corresponding textual embeddings. Unlike conventional groundingframeworksthatoptimizeonlydiscriminativealignment,\nour method jointly supervises the same visual features with\ntwo complementary objectives during training:(1)adiscriminative Modulated Attention-Contrastive Head (mACH)\nfor open-vocabulary grounding, and (2) a reconstructive\nJEPA auxiliary stream that regularizes the shared visual\nrepresentation.SincetheJEPAbranchisremovedaftertraining, it introduces no additional inference cost. 3.1 Modulated Attention-Contrastive Head\n(mACH)\nTo efficiently align visual features with multiple referring\nexpressions concurrently,we adopt a lightweight,broadcast based cross-attention head, termed mACH. The proposed\nmACH is not intended as a fundamentally new attention operator. Instead, it serves as an efficient implementation of\nstandard cross-attention that reformulates query-text interaction into a broadcasted computation topology for unified\nopen-vocabulary grounding. This design allows a single visual forward pass across the backbone and neck to simultaneously interact with an arbitrary number of linguistic candidates, drastically accelerating multi-query inference while\nremaining fully compatible with conventional legacy detector architectures. LetX\u2208R B\u00d7M\u00d7C denote the flattened visual feature map\nextracted from one feature level of the detector, where Bis\nthe image batch size,Mis the number of spatial locations,\nand Cisthefeaturedimension.LetW\u2208R Bnc\u00d7L\u00d7C denote\nthe text embedding sequence,where Listhetokenlengthand\nBnc =B\u00d7N c corresponds to the expanded batch containing\nNc referring expressions for each image."
+      },
+      {
+        "passage_index": 2,
+        "text": "Toavoidredundantvisualcomputation,the visual features\nare broadcast along the batch dimension,\nQ= Broadcast(X)\u2208R Bnc\u00d7M\u00d7C ,(1)\nsuch that each visual feature map is paired with every referring expression. Meanwhile, the textual embeddings are\nlinearly projected to generate the corresponding keys and\nvaluesK, V= Linear(W). ConvNeXt\n&\nFPN\nQwen3-VLEmbdedding\nText Prompt List\n\u2018goggles\u2019\n\u201cbackpack\u201d\n[451,479,586,510]\nJEPA Auxiliary\nStream\nModulated\nAttention\nContrastive Head\n(mACH)\nJEPA\nLoss\nBbox & IoU\nLoss\nBCE\nLoss\nC\nL\nC\nP\nW\nC\nH\n\u2026\n\u2018man jacket\u2018\n[B,C,H,W] [B,Ppos,L,4] [B,P,L,C]\nTeacher\nMLP\nStudent\nMLP\nR\n\u2026\n(H W)\n\u2026\n(H W)\n\u2026\n(H W)\nFFN\nMHSA\nFFN\nFFN\nFFN\n\u2026\n(H W)\nRepeat\n\u2026\nS\nSmooth L1 + Cosine Sim\n+ \u2026\nGenerate\nSpatial Mask\nEMA\n[B,HW,C]\n[B,HW,C/4]\nPredictor\nStop Grad JEPA Loss\n[B,P,L,C/4]\nFFN\nFFN\nS MHSA FFN\n[B,P,L,C]\n[B,C,H,W]\nRConv2d E\nR\n[B,P,H,W]\nModulated Attention\nContrastive Head\n[B,H*W,C]\n[B,P,H*W,C]\n[B,P,H*W,C]\n[B,P,H*W,1]\nPositive Referring\nExpression\nNegative Referring\nExpression\nConcatenationC + Element Sum\nExpandE\nR Reshape + Transpose\nSplitS\n\u2018goggles\u2019\n\u2018skirt\u2018\nPositive Prompt Bbox Label\nreplace\nFigure 2: Overview of the proposed framework (illustrated using a CNN-based detector). The visual backbone extracts visual\nfeatures,whilethelanguageencoderproducestextembeddingsfromreferringexpressions.TheproposedModulatedAttentionContrastive Head (mACH) performs token-level cross-attention to generate grounding predictions supervised by classification\nand localization losses.Inparallel,a text-conditionedJEPAauxiliarybranchreconstructsmaskedvisualfeaturesunderlanguage\nguidance using an EMA teacher-student framework. Both branches operate on the same visual representations during training,\nallowing reconstructive regularization to complement discriminative grounding without introducing additional inference cost."
+      },
+      {
+        "passage_index": 3,
+        "text": "You are given:\n(1) the prompt text as a list of messages and (2) two sets of\nspans from the prompt representing its two blocks:\n- Context: grounding the model uses to produce the output\n(text to analyze, original to translate, image to caption, etc.). A context may come in many different forms, even in the\nform of a question, but should be identified as context if it\nfunctions as grounding/background. For example, in a\ntypical QA prompt with questions based on a text, the text\nforms the context part. - The question-like part expresses the *specific, low-level\nrequest or query* the model must *directly* respond to. For example, in the typical QA prompt, the questions\nthemselves (\u201cWhat is the capital of France?\u201d) form the\nquestion-like part. In *context* and *question* spans can either directly\nrepresent a unit of context or question (\"direct_content\") or\ndescribe it (\"description\"). Read the prompt and the units (spans) corresponding to the\ntwo blocks, and determine the *type* of *each unit*."
+      },
+      {
+        "passage_index": 4,
+        "text": "TEMPO, drift-16, R=64, two paired windows\nper point); at EP8 decode with K=8 experts per token, a step\nat concurrency C routes CK/8\u2248C token\u2013expert pairs to each\nGPU, so serving concurrency is numerically comparable to the\ntokens/GPU axis B of Section 3.2, and we reuse the symbol. We separately measured, with a torch-profiler kernel breakdown of steady-state decode, the expert block\u2019s share of GPU\nbusy time (DeepEP dispatch/combine + grouped GEMM +\ngating; the Amdahl denominator)."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_046",
+    "question": "How does the visual grounding framework in paper 2608.12748 combine discriminative grounding with reconstructive regularization during training without incurring inference overhead, and how does the Modulated Attention-Contrastive Head (mACH) reformulate query-text interaction to accelerate multi-query inference?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "The overall architecture of our framework is illustrated in\nFig. 2. Given an input image and a set of referring expressions, the vision backbone extracts multi-scale visual\nfeatures, while the language encoder produces the corresponding textual embeddings. Unlike conventional groundingframeworksthatoptimizeonlydiscriminativealignment,\nour method jointly supervises the same visual features with\ntwo complementary objectives during training:(1)adiscriminative Modulated Attention-Contrastive Head (mACH)\nfor open-vocabulary grounding, and (2) a reconstructive\nJEPA auxiliary stream that regularizes the shared visual\nrepresentation.SincetheJEPAbranchisremovedaftertraining, it introduces no additional inference cost. 3.1 Modulated Attention-Contrastive Head\n(mACH)\nTo efficiently align visual features with multiple referring\nexpressions concurrently,we adopt a lightweight,broadcast based cross-attention head, termed mACH. The proposed\nmACH is not intended as a fundamentally new attention operator. Instead, it serves as an efficient implementation of\nstandard cross-attention that reformulates query-text interaction into a broadcasted computation topology for unified\nopen-vocabulary grounding. This design allows a single visual forward pass across the backbone and neck to simultaneously interact with an arbitrary number of linguistic candidates, drastically accelerating multi-query inference while\nremaining fully compatible with conventional legacy detector architectures. LetX\u2208R B\u00d7M\u00d7C denote the flattened visual feature map\nextracted from one feature level of the detector, where Bis\nthe image batch size,Mis the number of spatial locations,\nand Cisthefeaturedimension.LetW\u2208R Bnc\u00d7L\u00d7C denote\nthe text embedding sequence,where Listhetokenlengthand\nBnc =B\u00d7N c corresponds to the expanded batch containing\nNc referring expressions for each image."
+      },
+      {
+        "passage_index": 2,
+        "text": "You are given:\n(1) the prompt text as a list of messages and (2) two sets of\nspans from the prompt representing its two blocks:\n- Context: grounding the model uses to produce the output\n(text to analyze, original to translate, image to caption, etc.). A context may come in many different forms, even in the\nform of a question, but should be identified as context if it\nfunctions as grounding/background. For example, in a\ntypical QA prompt with questions based on a text, the text\nforms the context part. - The question-like part expresses the *specific, low-level\nrequest or query* the model must *directly* respond to. For example, in the typical QA prompt, the questions\nthemselves (\u201cWhat is the capital of France?\u201d) form the\nquestion-like part. In *context* and *question* spans can either directly\nrepresent a unit of context or question (\"direct_content\") or\ndescribe it (\"description\"). Read the prompt and the units (spans) corresponding to the\ntwo blocks, and determine the *type* of *each unit*."
+      },
+      {
+        "passage_index": 3,
+        "text": "TEMPO, drift-16, R=64, two paired windows\nper point); at EP8 decode with K=8 experts per token, a step\nat concurrency C routes CK/8\u2248C token\u2013expert pairs to each\nGPU, so serving concurrency is numerically comparable to the\ntokens/GPU axis B of Section 3.2, and we reuse the symbol. We separately measured, with a torch-profiler kernel breakdown of steady-state decode, the expert block\u2019s share of GPU\nbusy time (DeepEP dispatch/combine + grouped GEMM +\ngating; the Amdahl denominator)."
+      },
+      {
+        "passage_index": 4,
+        "text": "Copyrighted contemporary\nhuman novels are not redistributed; reproducing\nfeature extraction for those texts requires lawful\naccess to the source novels.\u201d\nAuthor Contributions\nM.S.P. conceived the study, generated the model\ncorpora, conducted the computational analyses,\nand drafted the quantitative sections. J.Q. selected\nthe Zero-Style human corpus, conducted the close\nreading, contributed to the interpretation, and revised the manuscript. Both authors reviewed the\nEthics statement\nThe study analyzes published literary texts and\nmodel-generated fiction. It does not involve human\nparticipants, private personal data, or intervention\nwith human subjects. Competing interests\nThe authors declare no competing interests. AI-use disclosure\nThe ChatGPT interface and GPT-5.5 Thinking were\nused to generate the two AI fiction corpora. In the\nsupplementary material section, you can see the\nprompt transcription and original raw prompt files. ChatGPT was also used for drafting and debugging\nanalysis code and language editing. The authors selected and curated the corpora, designed the study,\nreviewed and executed the analyses, checked the\ncode and outputs, verified citations and reported\nvalues. The authors remain fully responsible for\nthe interpretation and final manuscript."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_047",
+    "question": "How does the visual grounding framework in paper 2608.12748 combine discriminative grounding with reconstructive regularization during training without incurring inference overhead, and how does the Modulated Attention-Contrastive Head (mACH) reformulate query-text interaction to accelerate multi-query inference?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "The overall architecture of our framework is illustrated in\nFig. 2. Given an input image and a set of referring expressions, the vision backbone extracts multi-scale visual\nfeatures, while the language encoder produces the corresponding textual embeddings. Unlike conventional groundingframeworksthatoptimizeonlydiscriminativealignment,\nour method jointly supervises the same visual features with\ntwo complementary objectives during training:(1)adiscriminative Modulated Attention-Contrastive Head (mACH)\nfor open-vocabulary grounding, and (2) a reconstructive\nJEPA auxiliary stream that regularizes the shared visual\nrepresentation.SincetheJEPAbranchisremovedaftertraining, it introduces no additional inference cost. 3.1 Modulated Attention-Contrastive Head\n(mACH)\nTo efficiently align visual features with multiple referring\nexpressions concurrently,we adopt a lightweight,broadcast based cross-attention head, termed mACH. The proposed\nmACH is not intended as a fundamentally new attention operator. Instead, it serves as an efficient implementation of\nstandard cross-attention that reformulates query-text interaction into a broadcasted computation topology for unified\nopen-vocabulary grounding. This design allows a single visual forward pass across the backbone and neck to simultaneously interact with an arbitrary number of linguistic candidates, drastically accelerating multi-query inference while\nremaining fully compatible with conventional legacy detector architectures. LetX\u2208R B\u00d7M\u00d7C denote the flattened visual feature map\nextracted from one feature level of the detector, where Bis\nthe image batch size,Mis the number of spatial locations,\nand Cisthefeaturedimension.LetW\u2208R Bnc\u00d7L\u00d7C denote\nthe text embedding sequence,where Listhetokenlengthand\nBnc =B\u00d7N c corresponds to the expanded batch containing\nNc referring expressions for each image."
+      },
+      {
+        "passage_index": 2,
+        "text": "You are given:\n(1) the prompt text as a list of messages and (2) two sets of\nspans from the prompt representing its two blocks:\n- Context: grounding the model uses to produce the output\n(text to analyze, original to translate, image to caption, etc.). A context may come in many different forms, even in the\nform of a question, but should be identified as context if it\nfunctions as grounding/background. For example, in a\ntypical QA prompt with questions based on a text, the text\nforms the context part. - The question-like part expresses the *specific, low-level\nrequest or query* the model must *directly* respond to. For example, in the typical QA prompt, the questions\nthemselves (\u201cWhat is the capital of France?\u201d) form the\nquestion-like part. In *context* and *question* spans can either directly\nrepresent a unit of context or question (\"direct_content\") or\ndescribe it (\"description\"). Read the prompt and the units (spans) corresponding to the\ntwo blocks, and determine the *type* of *each unit*."
+      },
+      {
+        "passage_index": 3,
+        "text": "You are given:\n(1) the prompt text as a list of messages and (2) two sets of\nspans from the prompt representing its two blocks:\n- Context: grounding the model uses to produce the output\n(text to analyze, original to translate, image to caption, etc.). A context may come in many different forms, even in the\nform of a question, but should be identified as context if it\nfunctions as grounding/background. For example, in a\ntypical QA prompt with questions based on a text, the text\nforms the context part. - The question-like part expresses the *specific, low-level\nrequest or query* the model must *directly* respond to. For example, in the typical QA prompt, the questions\nthemselves (\u201cWhat is the capital of France?\u201d) form the\nquestion-like part. In *context* and *question* spans can either directly\nrepresent a unit of context or question (\"direct_content\") or\ndescribe it (\"description\"). Read the prompt and the units (spans) corresponding to the\ntwo blocks, and determine the *type* of *each unit*."
+      },
+      {
+        "passage_index": 4,
+        "text": "TEMPO, drift-16, R=64, two paired windows\nper point); at EP8 decode with K=8 experts per token, a step\nat concurrency C routes CK/8\u2248C token\u2013expert pairs to each\nGPU, so serving concurrency is numerically comparable to the\ntokens/GPU axis B of Section 3.2, and we reuse the symbol. We separately measured, with a torch-profiler kernel breakdown of steady-state decode, the expert block\u2019s share of GPU\nbusy time (DeepEP dispatch/combine + grouped GEMM +\ngating; the Amdahl denominator)."
+      }
+    ]
+  },
+  {
+    "opaque_context_id": "ctx_b01_048",
+    "question": "How does the visual grounding framework in paper 2608.12748 combine discriminative grounding with reconstructive regularization during training without incurring inference overhead, and how does the Modulated Attention-Contrastive Head (mACH) reformulate query-text interaction to accelerate multi-query inference?",
+    "passages": [
+      {
+        "passage_index": 1,
+        "text": "Compared with conventional text-based person retrieval,\nsuccessful retrieval requires jointly reasoning about pedestrian appearance, fine grained behaviors, object interactions, and scene context under substantial domain shifts between synthetic training data and real-world surveillance images. Limitations.Our framework increases inference cost by combining multiple embedding models and selective VLM re ranking. Moreover, the ensemble weights\nand routing strategy are empirically determined. Future work may explore adaptive ensemble weighting and learned query routing to further improve both retrieval accuracy and computational efficiency."
+      },
+      {
+        "passage_index": 2,
+        "text": "We revisited referring expression comprehension from the\nperspective of unified open-vocabulary grounding and presented a holistic data-model co-design that jointly improves linguistic supervision and visual representation learn-\ning. Specifically, our framework combines a lightweight\nbroadcast-based grounding head with an inference-freeJEPA\nauxiliary objective to preserve representation diversity,while\nO365-Captionenriches grounding supervision through\ndiverse natural language descriptions.Extensiveexperiments\ndemonstrate strong cross-datasetgeneralizationandcompet-\nitive performance using a static checkpoint. Beyond the proposed framework, our theoretical and empirical results suggest preserving representation diversity is an important design principle for scaling unified vision-language grounding\nmodels beyond benchmark-specific specialization."
+      },
+      {
+        "passage_index": 3,
+        "text": "7), confirming an\nintrinsic enhancement of the model\u2019s shared generation priors. 5 LIMITATION AND DISCUSSION\nWhile HPSD significantly enhances the base T2V generation capability, it introduces certain computational overheads. First, constructing privileged conditions requires querying auxiliary LLM and\nT2I models, which incurs extra data synthesis costs. However, this overhead is a one-time offline\nprocess and can be effectively mitigated by deploying distilled or quantized generative models (e.g.,\nZ-Image-Turbo used in our experiments). Moreover, the performance ceiling of HPSD can naturally\nscale with the continuous advancements of these auxiliary models. Second, during training, rolling\nout the student to form the hybrid-policy sub-trajectory requires additional forward passes compared\nto SFT and OPD. Nevertheless, these intermediate steps operate strictly in inference mode and do\nnot require storing gradients, thereby avoiding substantial memory overhead."
+      },
+      {
+        "passage_index": 4,
+        "text": "Compositional centroid lookups then recover proxy log its for\nindividual keys without scoring every key against every query centroid. SCOPE also estimates a Top-k value\nonline for each head by averaging the initial retained counts with weights given by query cluster size and\nextends only clusters whose counts fall below this estimate. These proxy quantities are used solely for key\nselection, while attention is computed with the original tokens. Across six 720p T2V and I2V settings on\nWan2.1, Wan2.2 and HunyuanVideo, SCOPE achieves higher fidelity to dense attention and lower measured\nlatency than competing training-free methods, delivering1.67\u00d7\u20131.99\u00d7 end-to-end speedups while maintaining\ngeneration quality. Together, these results validate subspace clustering and online Top-k estimation as\ncomplementary mechanisms for accurate and efficient sparse video attention."
+      }
+    ]
+  }
+]

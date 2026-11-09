@@ -1,0 +1,459 @@
+{
+  "metadata": {
+    "protocol": "research_protocol_v1_amendment_v1.1",
+    "date": "2026-11-04",
+    "training_dataset_sha256": "884f33b0086a5163cef6181065bafa1e8c4caba2ecb19f3267d59bc8a165b7eb",
+    "validation_dataset_sha256": "832ea363dcb242dc60f5c7bb70f11ecc09d2a41e093c1835e3c8b4af853c6a61",
+    "training_scores_hash": "2e1e2c2010b6b5ba366922b471594e8c43acc0c5f5817ecab1f48507ddcc8006",
+    "validation_scores_hash": "3a2026b96d4fa961c1948f8dee13cae2a823b1b012926434f59d6bd849cb9909",
+    "scoring_provenance": {
+      "model": "BAAI/bge-reranker-base",
+      "device": "cuda:0",
+      "activation": "sigmoid",
+      "max_length": 512,
+      "precision": "fp32",
+      "cache_policy": "query_text_config_exact_match (exact_score_match_for_duplicates)",
+      "generating_script": "scratch/build_v2_repaired_val_contexts.py",
+      "scores_hash": "3a2026b96d4fa961c1948f8dee13cae2a823b1b012926434f59d6bd849cb9909"
+    },
+    "python_version": "3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]",
+    "sklearn_version": "1.7.2",
+    "numpy_version": "1.26.4",
+    "random_seed": 42,
+    "reproducible_command": "python evaluation/run_benchmark_v2_train_val.py"
+  },
+  "models": {
+    "B0_AlwaysAccept": {
+      "name": "B0_AlwaysAccept",
+      "type": "baseline_always_accept",
+      "description": "Baseline B0: Unconditional acceptance (Coverage = 1.0)"
+    },
+    "B1_MaxRelevance": {
+      "name": "B1_MaxRelevance",
+      "type": "baseline_max_relevance",
+      "description": "Baseline B1: Maximum passage reranker score",
+      "thresholds": {
+        "0.5": {
+          "threshold": 0.9908,
+          "target_coverage": 0.5,
+          "val_achieved_coverage": 0.5,
+          "val_deviation": 0.0
+        },
+        "0.75": {
+          "threshold": 0.9119,
+          "target_coverage": 0.75,
+          "val_achieved_coverage": 0.75,
+          "val_deviation": 0.0
+        },
+        "0.9": {
+          "threshold": 0.0016,
+          "target_coverage": 0.9,
+          "val_achieved_coverage": 0.8958333333333334,
+          "val_deviation": 0.004166666666666652
+        }
+      }
+    },
+    "B2_HistoricalGate": {
+      "name": "B2_HistoricalGate",
+      "type": "baseline_discrete_heuristic",
+      "description": "Baseline B2: Frozen historical 4-condition heuristic gate (discrete operating point)"
+    },
+    "M1_Relevance_Raw": {
+      "name": "M1_Relevance_Raw",
+      "type": "logistic_gating_model",
+      "description": "M1: Relevance features, raw passages",
+      "feature_names": [
+        "top1_score",
+        "top2_score",
+        "mean_score",
+        "score_spread"
+      ],
+      "feature_mode": "relevance_only",
+      "deduplicate": false,
+      "scaler_mean": [
+        0.7639384150882562,
+        0.41149958333333336,
+        0.3750300343276197,
+        0.6453304984215894
+      ],
+      "scaler_scale": [
+        0.3826976854857851,
+        0.44490603422688385,
+        0.2902703002942942,
+        0.40877962299137965
+      ],
+      "selected_C": 100.0,
+      "coefficients": [
+        -1.7859552768616487,
+        -1.834175312702716,
+        4.620992346249802,
+        1.6938020899292403
+      ],
+      "intercept": 0.23213629171630992,
+      "c_tuning_log": [
+        {
+          "C": 0.01,
+          "val_log_loss": 0.5825069087729856
+        },
+        {
+          "C": 0.1,
+          "val_log_loss": 0.5313264363741945
+        },
+        {
+          "C": 1.0,
+          "val_log_loss": 0.4895098456791111
+        },
+        {
+          "C": 10.0,
+          "val_log_loss": 0.47148920098352126
+        },
+        {
+          "C": 100.0,
+          "val_log_loss": 0.4636912722908025
+        }
+      ],
+      "thresholds": {
+        "0.5": {
+          "threshold": 0.5518135026975615,
+          "target_coverage": 0.5,
+          "val_achieved_coverage": 0.5,
+          "val_deviation": 0.0
+        },
+        "0.75": {
+          "threshold": 0.4923306272499497,
+          "target_coverage": 0.75,
+          "val_achieved_coverage": 0.75,
+          "val_deviation": 0.0
+        },
+        "0.9": {
+          "threshold": 0.04137098783510428,
+          "target_coverage": 0.9,
+          "val_achieved_coverage": 0.8958333333333334,
+          "val_deviation": 0.004166666666666652
+        }
+      }
+    },
+    "M2_Relevance_Dedup": {
+      "name": "M2_Relevance_Dedup",
+      "type": "logistic_gating_model",
+      "description": "M2: Relevance features, deduplicated passages",
+      "feature_names": [
+        "top1_score",
+        "top2_score",
+        "mean_score",
+        "score_spread"
+      ],
+      "feature_mode": "relevance_only",
+      "deduplicate": true,
+      "scaler_mean": [
+        0.7639384150882562,
+        0.35205708333333346,
+        0.3647455898831753,
+        0.6453304984215894
+      ],
+      "scaler_scale": [
+        0.3826976854857851,
+        0.43566978219345576,
+        0.29015132637099283,
+        0.40877962299137965
+      ],
+      "selected_C": 10.0,
+      "coefficients": [
+        1.3099234076589854,
+        0.27739115823518445,
+        0.8715841948582143,
+        -0.45607057046940097
+      ],
+      "intercept": 0.14453346050046426,
+      "c_tuning_log": [
+        {
+          "C": 0.01,
+          "val_log_loss": 0.5502477997204296
+        },
+        {
+          "C": 0.1,
+          "val_log_loss": 0.5151589422084956
+        },
+        {
+          "C": 1.0,
+          "val_log_loss": 0.5093525789297523
+        },
+        {
+          "C": 10.0,
+          "val_log_loss": 0.5088406041551421
+        },
+        {
+          "C": 100.0,
+          "val_log_loss": 0.5091686403709733
+        }
+      ],
+      "thresholds": {
+        "0.5": {
+          "threshold": 0.5250775000319939,
+          "target_coverage": 0.5,
+          "val_achieved_coverage": 0.5,
+          "val_deviation": 0.0
+        },
+        "0.75": {
+          "threshold": 0.4422244302221231,
+          "target_coverage": 0.75,
+          "val_achieved_coverage": 0.75,
+          "val_deviation": 0.0
+        },
+        "0.9": {
+          "threshold": 0.044631245289128395,
+          "target_coverage": 0.9,
+          "val_achieved_coverage": 0.8958333333333334,
+          "val_deviation": 0.004166666666666652
+        }
+      }
+    },
+    "M3_Full_Raw": {
+      "name": "M3_Full_Raw",
+      "type": "logistic_gating_model",
+      "description": "M3: Relevance + source/section structural features, raw passages",
+      "feature_names": [
+        "top1_score",
+        "top2_score",
+        "mean_score",
+        "score_spread",
+        "s_top_paper_second_passage",
+        "s_other",
+        "section_diversity",
+        "section_mean_score"
+      ],
+      "feature_mode": "combined",
+      "deduplicate": false,
+      "scaler_mean": [
+        0.7639384150882562,
+        0.41149958333333336,
+        0.3750300343276197,
+        0.6453304984215894,
+        0.3865275000000001,
+        0.04096041666666664,
+        0.7313888888888891,
+        0.37888949831645563
+      ],
+      "scaler_scale": [
+        0.3826976854857851,
+        0.44490603422688385,
+        0.2902703002942942,
+        0.40877962299137965,
+        0.45356594484934937,
+        0.128945148447546,
+        0.21274967177296925,
+        0.2884782783139326
+      ],
+      "selected_C": 100.0,
+      "coefficients": [
+        -1.7594175351981383,
+        -3.6872094778460442,
+        5.025173370221564,
+        1.615484501270472,
+        1.864025085433779,
+        0.5636885290295356,
+        0.14945416929586192,
+        -0.38311723422672866
+      ],
+      "intercept": 0.2502876606809949,
+      "c_tuning_log": [
+        {
+          "C": 0.01,
+          "val_log_loss": 0.5680029393999763
+        },
+        {
+          "C": 0.1,
+          "val_log_loss": 0.5231928800216901
+        },
+        {
+          "C": 1.0,
+          "val_log_loss": 0.49578800482002805
+        },
+        {
+          "C": 10.0,
+          "val_log_loss": 0.4757151732911449
+        },
+        {
+          "C": 100.0,
+          "val_log_loss": 0.4653500289531893
+        }
+      ],
+      "thresholds": {
+        "0.5": {
+          "threshold": 0.5293406819429407,
+          "target_coverage": 0.5,
+          "val_achieved_coverage": 0.5,
+          "val_deviation": 0.0
+        },
+        "0.75": {
+          "threshold": 0.429567635073758,
+          "target_coverage": 0.75,
+          "val_achieved_coverage": 0.75,
+          "val_deviation": 0.0
+        },
+        "0.9": {
+          "threshold": 0.04226346832132713,
+          "target_coverage": 0.9,
+          "val_achieved_coverage": 0.8958333333333334,
+          "val_deviation": 0.004166666666666652
+        }
+      }
+    },
+    "M4_Full_Dedup": {
+      "name": "M4_Full_Dedup",
+      "type": "logistic_gating_model",
+      "description": "M4: Relevance + source/section structural features, deduplicated passages",
+      "feature_names": [
+        "top1_score",
+        "top2_score",
+        "mean_score",
+        "score_spread",
+        "s_top_paper_second_passage",
+        "s_other",
+        "section_diversity",
+        "section_mean_score"
+      ],
+      "feature_mode": "combined",
+      "deduplicate": true,
+      "scaler_mean": [
+        0.7639384150882562,
+        0.35205708333333346,
+        0.3647455898831753,
+        0.6453304984215894,
+        0.32337791666666676,
+        0.04096041666666664,
+        0.7848611111111111,
+        0.3785494288720112
+      ],
+      "scaler_scale": [
+        0.3826976854857851,
+        0.43566978219345576,
+        0.29015132637099283,
+        0.40877962299137965,
+        0.4422643167691983,
+        0.128945148447546,
+        0.21917876850125848,
+        0.28861264667281583
+      ],
+      "selected_C": 10.0,
+      "coefficients": [
+        1.470851144085314,
+        -0.7047031299763016,
+        2.519512758836695,
+        -0.4906606035575687,
+        0.8402811516264395,
+        0.28775987398391606,
+        -0.14562531716118948,
+        -1.7398996921026981
+      ],
+      "intercept": 0.16866087276776376,
+      "c_tuning_log": [
+        {
+          "C": 0.01,
+          "val_log_loss": 0.5359650673263893
+        },
+        {
+          "C": 0.1,
+          "val_log_loss": 0.5202441535498109
+        },
+        {
+          "C": 1.0,
+          "val_log_loss": 0.5108053735960166
+        },
+        {
+          "C": 10.0,
+          "val_log_loss": 0.50840407016725
+        },
+        {
+          "C": 100.0,
+          "val_log_loss": 0.5100301302243107
+        }
+      ],
+      "thresholds": {
+        "0.5": {
+          "threshold": 0.538067758138648,
+          "target_coverage": 0.5,
+          "val_achieved_coverage": 0.5,
+          "val_deviation": 0.0
+        },
+        "0.75": {
+          "threshold": 0.2657494724827156,
+          "target_coverage": 0.75,
+          "val_achieved_coverage": 0.75,
+          "val_deviation": 0.0
+        },
+        "0.9": {
+          "threshold": 0.06213101156141916,
+          "target_coverage": 0.9,
+          "val_achieved_coverage": 0.8958333333333334,
+          "val_deviation": 0.004166666666666652
+        }
+      }
+    },
+    "Shortcut_LengthDiagnostic": {
+      "name": "Shortcut_LengthDiagnostic",
+      "type": "diagnostic_shortcut_baseline",
+      "description": "Diagnostic Baseline: Passage count and token count shortcuts (clearly separate from proposed methods)",
+      "feature_names": [
+        "passage_count",
+        "total_token_count"
+      ],
+      "scaler_mean": [
+        4.35,
+        1497.0833333333333
+      ],
+      "scaler_scale": [
+        0.6910137480542635,
+        246.1747205859197
+      ],
+      "selected_C": 1.0,
+      "coefficients": [
+        1.5528066218790746,
+        0.06683137326846218
+      ],
+      "intercept": 0.42860290701383214,
+      "c_tuning_log": [
+        {
+          "C": 0.01,
+          "val_log_loss": 0.619866424111653
+        },
+        {
+          "C": 0.1,
+          "val_log_loss": 0.5728550748938829
+        },
+        {
+          "C": 1.0,
+          "val_log_loss": 0.5659842545982406
+        },
+        {
+          "C": 10.0,
+          "val_log_loss": 0.5675239890891284
+        },
+        {
+          "C": 100.0,
+          "val_log_loss": 0.5678485963187577
+        }
+      ],
+      "thresholds": {
+        "0.5": {
+          "threshold": 0.41521558379678386,
+          "target_coverage": 0.5,
+          "val_achieved_coverage": 0.5,
+          "val_deviation": 0.0
+        },
+        "0.75": {
+          "threshold": 0.4040551142782431,
+          "target_coverage": 0.75,
+          "val_achieved_coverage": 0.75,
+          "val_deviation": 0.0
+        },
+        "0.9": {
+          "threshold": 0.3954566553801987,
+          "target_coverage": 0.9,
+          "val_achieved_coverage": 0.8958333333333334,
+          "val_deviation": 0.004166666666666652
+        }
+      }
+    }
+  }
+}

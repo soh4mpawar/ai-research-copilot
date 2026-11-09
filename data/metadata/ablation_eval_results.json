@@ -1,53 +1,411 @@
 {
-  "timestamp": "2026-08-15 22:42:21",
+  "timestamp": "2026-08-25 02:12:20",
   "total_eval_samples": 40,
   "corpus_papers_count": 204,
   "chroma_chunks_count": 1094,
+  "judge_model": "OpenAI/gpt-4o-mini",
   "ablation_configurations": {
     "Config 1: Full Hybrid RAG + Reranker + GraphRAG": {
-      "faithfulness": 0.654,
-      "answer_relevance": 0.111
+      "faithfulness": 0.958,
+      "answer_relevance": 0.697
     },
     "Config 2: Dense Vector Only (No BM25, No Reranker)": {
-      "faithfulness": 0.471,
-      "answer_relevance": 0.047
+      "faithfulness": 0.911,
+      "answer_relevance": 0.701
     },
-    "Config 3: Non-RAG Baseline (Direct Gemini 2.5 Flash)": {
+    "Config 3: Non-RAG Baseline (Direct Parametric Generation)": {
       "faithfulness": null,
-      "answer_relevance": 0.182
+      "answer_relevance": 0.701
     }
   },
-  "baseline_sample_inspection": [
+  "per_sample_comparison": [
     {
       "sample_id": "qa_001",
-      "question": "How does 'Attention Is All You Need' handle sequence transduction without recurrent or convolutional layers?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does 'Attention Is All You Need' handle sequence transduction without recurrent or convolutional layers?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 ima...",
-      "jaccard_relevance": 0.175
+      "question": "How is Scaled Dot-Product Attention calculated mathematically in the Transformer, and why is the scaling factor 1/sqrt(d_k) applied?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8058,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8647,
+      "config3_baseline_answer_relevance": 0.8606
     },
     {
       "sample_id": "qa_002",
-      "question": "What methodology mechanism does ResNet introduce to ease the training of substantially deeper neural networks?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What methodology mechanism does ResNet introduce to ease the training of substantially deeper neural networks?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 i...",
-      "jaccard_relevance": 0.172
+      "question": "How do residual shortcut connections in ResNet handle dimension matching when input and output feature map dimensions increase?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8544,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8477,
+      "config3_baseline_answer_relevance": 0.7882
     },
     {
       "sample_id": "qa_003",
-      "question": "What pre-training objectives are used in BERT to train deep bidirectional representations?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"What pre-training objectives are used in BERT to train deep bidirectional representations?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 image patches. Dense ...",
-      "jaccard_relevance": 0.133
+      "question": "What is the token replacement strategy used during BERT's Masked Language Model (MLM) pre-training when a token is chosen for masking?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8752,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8752,
+      "config3_baseline_answer_relevance": 0.8947
     },
     {
       "sample_id": "qa_004",
-      "question": "How does RAG combine parametric and non-parametric memory for knowledge-intensive tasks?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does RAG combine parametric and non-parametric memory for knowledge-intensive tasks?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 image patches. Dense Pa...",
-      "jaccard_relevance": 0.153
+      "question": "How do RAG-Sequence and RAG-Token models differ in how they marginalize over retrieved documents during answer generation?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8097,
+      "config2_dense_faithfulness": 0.9167,
+      "config2_dense_answer_relevance": 0.8093,
+      "config3_baseline_answer_relevance": 0.8274
     },
     {
       "sample_id": "qa_005",
-      "question": "How does Dense Passage Retrieval (DPR) index passages compared to traditional BM25 keyword search?",
-      "baseline_answer": "### Non-RAG Baseline Direct Response (Parametric Knowledge)\n\nRegarding **\"How does Dense Passage Retrieval (DPR) index passages compared to traditional BM25 keyword search?\"**:\n\nVision Transformers (ViT) apply standard Transformer encoders directly to sequences of non-overlapping 16x16 image patches...",
-      "jaccard_relevance": 0.186
+      "question": "On the Natural Questions benchmark, by how much does DPR's top-20 passage retrieval accuracy outperform traditional Lucene BM25?",
+      "config1_hybrid_faithfulness": 0.9,
+      "config1_hybrid_answer_relevance": 0.908,
+      "config2_dense_faithfulness": 0.5,
+      "config2_dense_answer_relevance": 0.8316,
+      "config3_baseline_answer_relevance": 0.9281
+    },
+    {
+      "sample_id": "qa_006",
+      "question": "Why does Vision Transformer (ViT) require pre-training on large datasets like JFT-300M to outperform standard ResNets?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6548,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.6511,
+      "config3_baseline_answer_relevance": 0.7672
+    },
+    {
+      "sample_id": "qa_007",
+      "question": "How does the cyclic shift with masked self-attention in Swin Transformer avoid increasing the number of window computations?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6427,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.0,
+      "config3_baseline_answer_relevance": 0.7412
+    },
+    {
+      "sample_id": "qa_008",
+      "question": "What is the theoretical benefit of stacking two 3x3 convolution layers instead of using a single 5x5 convolution layer in VGGNet?",
+      "config1_hybrid_faithfulness": 0.0,
+      "config1_hybrid_answer_relevance": 0.0,
+      "config2_dense_faithfulness": 0.6667,
+      "config2_dense_answer_relevance": 0.0,
+      "config3_baseline_answer_relevance": 0.8208
+    },
+    {
+      "sample_id": "qa_009",
+      "question": "What is the RoIAlign layer in Mask R-CNN and how does it fix the spatial misalignments caused by RoIPool?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8517,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.6593,
+      "config3_baseline_answer_relevance": 0.8255
+    },
+    {
+      "sample_id": "qa_010",
+      "question": "In EfficientNet's compound scaling method, how are depth (d), width (w), and resolution (r) constrained relative to the user-specified coefficient phi?",
+      "config1_hybrid_faithfulness": 0.7,
+      "config1_hybrid_answer_relevance": 0.822,
+      "config2_dense_faithfulness": 0.7,
+      "config2_dense_answer_relevance": 0.7825,
+      "config3_baseline_answer_relevance": 0.8583
+    },
+    {
+      "sample_id": "qa_011",
+      "question": "According to the paper 'Located but Not Releasable', why does locating latent representations via probing fail to guarantee successful behavioral model intervention?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.0,
+      "config2_dense_faithfulness": 0.96,
+      "config2_dense_answer_relevance": 0.553,
+      "config3_baseline_answer_relevance": 0.8848
+    },
+    {
+      "sample_id": "qa_012",
+      "question": "How does paper 2608.11830 evaluate the trade-off between clinical safety scores and environmental compute cost across therapeutic LLMs?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.7658,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8296,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_013",
+      "question": "In machine translation of historical records like the Seungjeongwon Ilgi, what failure mode occurs when the knowledge base itself is used as the evaluation gold standard?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.7593,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.7821,
+      "config3_baseline_answer_relevance": 0.8411
+    },
+    {
+      "sample_id": "qa_014",
+      "question": "What security vulnerabilities in tool-augmented LLM agents does ToolHazard identify regarding indirect prompt injection in environmental states?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.7408,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8633,
+      "config3_baseline_answer_relevance": 0.7894
+    },
+    {
+      "sample_id": "qa_015",
+      "question": "When benchmarking agentic memory systems (Mem0, Hindsight, Mastra), what separable cost model is formulated to predict serving costs across 400-turn conversations?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6817,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.7621,
+      "config3_baseline_answer_relevance": 0.7434
+    },
+    {
+      "sample_id": "qa_016",
+      "question": "How does Spark-to-Paper orchestrate end-to-end academic paper generation as composable skills inside a coding assistant without external orchestration frameworks?",
+      "config1_hybrid_faithfulness": 0.9091,
+      "config1_hybrid_answer_relevance": 0.7263,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.6815,
+      "config3_baseline_answer_relevance": 0.8401
+    },
+    {
+      "sample_id": "qa_017",
+      "question": "In paper 2608.11947, why do model accuracy and prompt order sensitivity diverge when evaluating language models under permutation?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.0,
+      "config2_dense_faithfulness": 0.625,
+      "config2_dense_answer_relevance": 0.7225,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_018",
+      "question": "How does the SLM trustworthiness benchmark compare pre-trained small language models against compressed larger models across core trustworthiness dimensions?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8378,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.6212,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_019",
+      "question": "What claim-level reliability assessment framework is proposed in paper 2608.11994 for efficient factual verification?",
+      "config1_hybrid_faithfulness": 0.9444,
+      "config1_hybrid_answer_relevance": 0.6961,
+      "config2_dense_faithfulness": 0.9697,
+      "config2_dense_answer_relevance": 0.6963,
+      "config3_baseline_answer_relevance": 0.9154
+    },
+    {
+      "sample_id": "qa_020",
+      "question": "How does A-CRC-QA use asymptotic risk calibration to improve selective question answering under non-monotone population risks?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.759,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.788,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_021",
+      "question": "What architectural adaptations allow poly-dialectal neural machine translation systems to handle cross-dialect lexical variation?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8812,
+      "config2_dense_faithfulness": 0.9474,
+      "config2_dense_answer_relevance": 0.8742,
+      "config3_baseline_answer_relevance": 0.9254
+    },
+    {
+      "sample_id": "qa_022",
+      "question": "How does Mechanist utilize AI as a scientific instrument to discover interpretable mechanisms of neural network intelligence?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6439,
+      "config2_dense_faithfulness": 0.9565,
+      "config2_dense_answer_relevance": 0.6903,
+      "config3_baseline_answer_relevance": 0.9368
+    },
+    {
+      "sample_id": "qa_023",
+      "question": "How does Preference Tree Optimization enhance goal-directed multi-step reasoning in language models?",
+      "config1_hybrid_faithfulness": 0.9412,
+      "config1_hybrid_answer_relevance": 0.7546,
+      "config2_dense_faithfulness": 0.1111,
+      "config2_dense_answer_relevance": 0.8732,
+      "config3_baseline_answer_relevance": 0.9416
+    },
+    {
+      "sample_id": "qa_024",
+      "question": "How does RT-SEMamba use progressive knowledge distillation to compress an 8-layer causal teacher into a 1-layer student for real-time speech enhancement?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6442,
+      "config2_dense_faithfulness": 0.7895,
+      "config2_dense_answer_relevance": 0.7364,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_025",
+      "question": "In 'Structuring the Space of Perspectives', what four universal dimensions do the authors use to annotate and structure perspective-related concepts in NLP?",
+      "config1_hybrid_faithfulness": 0.9375,
+      "config1_hybrid_answer_relevance": 0.8784,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.865,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_026",
+      "question": "How does QV-PIC achieve query-aware position-independent caching for visual tokens in multimodal RAG serving?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.5786,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.579,
+      "config3_baseline_answer_relevance": 0.9442
+    },
+    {
+      "sample_id": "qa_027",
+      "question": "What self-identification bias phenomenon is observed when language models evaluate peer reasoning in 'Do LLMs Take Care of Their Own?'",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8175,
+      "config2_dense_faithfulness": 0.75,
+      "config2_dense_answer_relevance": 0.0,
+      "config3_baseline_answer_relevance": 0.9454
+    },
+    {
+      "sample_id": "qa_028",
+      "question": "How does SAG use SQL retrieval and query-time dynamic hyperedges over event-entity indices?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8986,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.7357,
+      "config3_baseline_answer_relevance": 0.9379
+    },
+    {
+      "sample_id": "qa_029",
+      "question": "On the HealthBench benchmark, how does the corpus-specific clinical RAG system match or outperform frontier models like GPT-4o?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6821,
+      "config2_dense_faithfulness": 0.9333,
+      "config2_dense_answer_relevance": 0.7837,
+      "config3_baseline_answer_relevance": 0.9435
+    },
+    {
+      "sample_id": "qa_030",
+      "question": "What causes pre-attention spikes and inter-spike plateaus in hybrid linear attention language models?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.7526,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8925,
+      "config3_baseline_answer_relevance": 0.9415
+    },
+    {
+      "sample_id": "qa_031",
+      "question": "How does test-time compute allocation impact reasoning performance across different model scales in 'Who Thinks Best Depends on How Long You Let Them Think'?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.816,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8053,
+      "config3_baseline_answer_relevance": 0.9077
+    },
+    {
+      "sample_id": "qa_032",
+      "question": "What is the Information Abundance Paradox described in long-context transformer evaluations?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.7198,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.7247,
+      "config3_baseline_answer_relevance": 0.9204
+    },
+    {
+      "sample_id": "qa_033",
+      "question": "What benchmark dataset and evaluation scope does VICBench introduce for code vulnerability detection?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6477,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.5754,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_034",
+      "question": "Why is a single frozen simulator insufficient for robust robot policy evaluation according to paper 2608.12253?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6332,
+      "config2_dense_faithfulness": 0.6,
+      "config2_dense_answer_relevance": 0.6608,
+      "config3_baseline_answer_relevance": 0.9485
+    },
+    {
+      "sample_id": "qa_035",
+      "question": "How does the cascaded NLP pipeline detect accusatory language in public procurement metadata without manual labeling?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.5587,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.7422,
+      "config3_baseline_answer_relevance": 0.9508
+    },
+    {
+      "sample_id": "qa_036",
+      "question": "What concept of 'structural silence' is analyzed regarding AI infrastructure and model explanations?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8421,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8421,
+      "config3_baseline_answer_relevance": 0.9207
+    },
+    {
+      "sample_id": "qa_037",
+      "question": "How does the small-capitalization trading framework decompose stock movements into alpha and beta event legs?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6351,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.5755,
+      "config3_baseline_answer_relevance": 0.0
+    },
+    {
+      "sample_id": "qa_038",
+      "question": "How does strong-to-weak capability transfer via harnesses enhance weaker models at test time in AI4AI?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.6049,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.7989,
+      "config3_baseline_answer_relevance": 0.8237
+    },
+    {
+      "sample_id": "qa_039",
+      "question": "What structured film representation does AVA-Encoder learn for agent-native video understanding?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.7933,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8441,
+      "config3_baseline_answer_relevance": 0.8531
+    },
+    {
+      "sample_id": "qa_040",
+      "question": "Under what compositional constraint conditions do language models experience performance collapse in multi-constraint instruction following?",
+      "config1_hybrid_faithfulness": 1.0,
+      "config1_hybrid_answer_relevance": 0.8974,
+      "config2_dense_faithfulness": 1.0,
+      "config2_dense_answer_relevance": 0.8126,
+      "config3_baseline_answer_relevance": 0.8897
     }
   ],
-  "key_ablation_takeaway": "Adding Sparse BM25 + RRF Fusion + Cross-Encoder Reranking improved Faithfulness by +0.183 and Answer Relevance by +0.064 over Dense Vector Search alone (FR-17)."
+  "baseline_sample_inspection": [
+    {
+      "sample_id": "qa_001",
+      "question": "How is Scaled Dot-Product Attention calculated mathematically in the Transformer, and why is the scaling factor 1/sqrt(d_k) applied?",
+      "baseline_answer": "**Mathematical Calculation of Scaled Dot-Product Attention**\n\nIn the Transformer architecture, Scaled Dot-Product Attention takes three inputs: Queries ($Q$), Keys ($K$), and Values ($V$). Mathematically, it is calculated as:\n\n$$\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{Q K^T}{\\sqrt{d_k}..."
+    },
+    {
+      "sample_id": "qa_002",
+      "question": "How do residual shortcut connections in ResNet handle dimension matching when input and output feature map dimensions increase?",
+      "baseline_answer": "In ResNet architectures, when the input and output feature map dimensions need to increase (typically when the spatial resolution is halved via stride-2 convolutions and the number of channels is increased), the standard identity shortcut cannot be used directly because the shapes do not match. To h..."
+    },
+    {
+      "sample_id": "qa_003",
+      "question": "What is the token replacement strategy used during BERT's Masked Language Model (MLM) pre-training when a token is chosen for masking?",
+      "baseline_answer": "During BERT's Masked Language Model (MLM) pre-training, when a token is chosen for masking, the replacement strategy operates as follows:\n\n* **80%** of the time, the token is replaced with the special **`[MASK]`** token.\n* **10%** of the time, the token is replaced with a **randomly chosen different..."
+    },
+    {
+      "sample_id": "qa_004",
+      "question": "How do RAG-Sequence and RAG-Token models differ in how they marginalize over retrieved documents during answer generation?",
+      "baseline_answer": "RAG-Sequence and RAG-Token models differ in the scope at which they marginalize over retrieved documents (latent variables) during the generation process:\n\n*   **RAG-Sequence Model:** This model marginalizes over the retrieved documents at the **sequence level**. It treats the chosen document as a s..."
+    },
+    {
+      "sample_id": "qa_005",
+      "question": "On the Natural Questions benchmark, by how much does DPR's top-20 passage retrieval accuracy outperform traditional Lucene BM25?",
+      "baseline_answer": "On the Natural Questions benchmark, DPR's top-20 passage retrieval accuracy outperforms traditional Lucene BM25 by a significant margin of approximately 20.9 percentage points (specifically, around 78.4% for DPR compared to about 57.5% for BM25)."
+    }
+  ],
+  "key_ablation_takeaway": "Adding Sparse BM25 + RRF Fusion + Cross-Encoder Reranking improved Faithfulness by +0.047 and Answer Relevance by +-0.004 over Dense Vector Search alone (FR-17)."
 }

@@ -6,6 +6,8 @@ Academic Scientific Instrument Styling (Zero Emojis, Clean Inline SVGs, Native T
 
 import streamlit as st
 from backend import research_engine
+from backend.config import PRIMARY_GENERATOR_MODEL
+from frontend.utils.caching import execute_cached_query, get_cached_orchestrator
 from frontend.components.answer_card import render_answer_card
 from frontend.components.evidence_viewer import render_evidence_viewer
 from frontend.components.icons import svg_icon
@@ -51,20 +53,35 @@ def render_research_page():
         unsafe_allow_html=True
     )
 
-    # Query Input (Native Autocomplete with Type-Ahead & Free-Form Typing) & Mode Controls
+    # Preset quick-selector callback & state preservation
+    if "user_query_input" not in st.session_state:
+        st.session_state["user_query_input"] = ""
+
+    def on_preset_change():
+        chosen = st.session_state.get("preset_selector_key")
+        if chosen and chosen != "(Select a sample research question...)":
+            st.session_state["user_query_input"] = chosen
+
+    col_preset, _ = st.columns([3, 1])
+    with col_preset:
+        st.selectbox(
+            "Sample Preset Questions (optional):",
+            options=["(Select a sample research question...)", *PRESET_RESEARCH_QUESTIONS],
+            index=0,
+            key="preset_selector_key",
+            on_change=on_preset_change,
+            help="Choose a pre-configured landmark question or type your own custom question below."
+        )
+
+    # Query Input & Mode Controls
     col_input, col_mode = st.columns([3, 1])
     
     with col_input:
-        selected_query = st.selectbox(
+        query_text = st.text_input(
             "Enter scientific research question:",
-            options=PRESET_RESEARCH_QUESTIONS,
-            index=None,
-            accept_new_options=True,
-            filter_mode="fuzzy",
-            placeholder="Type to search presets or enter custom question...",
-            key="query_input_selectbox"
-        )
-        query_text = str(selected_query).strip() if selected_query else ""
+            placeholder="e.g. What is Retrieval-Augmented Generation (RAG)? or enter any custom question...",
+            key="user_query_input"
+        ).strip()
 
     with col_mode:
         search_mode = st.selectbox(
@@ -90,8 +107,14 @@ def render_research_page():
             elif search_mode == "Literature Review":
                 mode_key = "literature_review"
 
-            with st.spinner("Executing hybrid retrieval (ChromaDB + BM25s) ➜ bge-reranker-base ➜ Gemini 3.5 Flash Lite..."):
-                result = research_engine.query(query_text, mode=mode_key)
+            orchestrator = get_cached_orchestrator()
+            if not orchestrator:
+                st.error("Fatal Error: Pipeline orchestrator failed to initialize. Cannot verify corpus version.")
+                st.stop()
+            corpus_version = orchestrator.corpus_version
+
+            with st.spinner(f"Executing hybrid retrieval (ChromaDB + BM25s) ➜ bge-reranker-base ➜ {PRIMARY_GENERATOR_MODEL}..."):
+                result = execute_cached_query(query_text, mode=mode_key, corpus_version=corpus_version)
                 st.session_state["active_result"] = result
                 st.session_state["active_query"] = query_text
 

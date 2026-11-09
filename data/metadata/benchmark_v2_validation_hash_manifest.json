@@ -1,0 +1,45 @@
+{
+  "dataset": "benchmark_v2_validation",
+  "protocol": "research_protocol_v1_amendment_v1.1",
+  "split": "validation",
+  "total_families": 24,
+  "total_contexts": 96,
+  "files": {
+    "questions_file": {
+      "path": "data/metadata/benchmark_v2_validation_questions_24families.json",
+      "sha256": "eac77fb24d9a57ec1076fd2a85c50ed40d4b0e38e11dc172fa79a5ef66cf599a"
+    },
+    "contexts_file": {
+      "path": "data/metadata/benchmark_v2_validation_contexts_96.json",
+      "sha256": "832ea363dcb242dc60f5c7bb70f11ecc09d2a41e093c1835e3c8b4af853c6a61"
+    },
+    "annotations_file": {
+      "path": "data/metadata/benchmark_v2_validation_semantic_annotations_96.json",
+      "sha256": "3fcda42b330608661364d4b77f354436caa8d594bfc762369dd5badab5c07a6d"
+    }
+  },
+  "audit_summary": {
+    "audit_status": "PASSED",
+    "judgment_counts": {
+      "sufficient": 47,
+      "insufficient": 49
+    },
+    "judgment_by_condition": {
+      "supported_candidate": {
+        "sufficient": 24
+      },
+      "relevant_replacement": {
+        "insufficient": 24
+      },
+      "duplicate_replacement": {
+        "insufficient": 24
+      },
+      "natural_retrieval": {
+        "sufficient": 23,
+        "insufficient": 1
+      }
+    },
+    "avg_passages_per_context": 4.333333333333333,
+    "avg_tokens_per_context": 1540.0729166666667
+  }
+}

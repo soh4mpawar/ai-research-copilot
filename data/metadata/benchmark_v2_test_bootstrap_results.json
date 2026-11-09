@@ -1,0 +1,578 @@
+{
+  "controlled_contexts": {
+    "num_clusters": 36,
+    "n_bootstrap": 2000,
+    "random_seed": 20261104,
+    "models": {
+      "B0_AlwaysAccept": {
+        "observed_aurc": 0.666667,
+        "bootstrap_mean_aurc": 0.6667,
+        "bootstrap_std_error": 0.0,
+        "aurc_ci_95": [
+          0.6667,
+          0.6667
+        ]
+      },
+      "B1_MaxRelevance": {
+        "observed_aurc": 0.404858,
+        "bootstrap_mean_aurc": 0.4026,
+        "bootstrap_std_error": 0.0321,
+        "aurc_ci_95": [
+          0.3446,
+          0.4685
+        ]
+      },
+      "M1_Relevance_Raw": {
+        "observed_aurc": 0.432944,
+        "bootstrap_mean_aurc": 0.4279,
+        "bootstrap_std_error": 0.0307,
+        "aurc_ci_95": [
+          0.3686,
+          0.487
+        ]
+      },
+      "M2_Relevance_Dedup": {
+        "observed_aurc": 0.437304,
+        "bootstrap_mean_aurc": 0.4331,
+        "bootstrap_std_error": 0.0167,
+        "aurc_ci_95": [
+          0.3957,
+          0.4606
+        ]
+      },
+      "M3_Full_Raw": {
+        "observed_aurc": 0.465833,
+        "bootstrap_mean_aurc": 0.4631,
+        "bootstrap_std_error": 0.0397,
+        "aurc_ci_95": [
+          0.3855,
+          0.5441
+        ]
+      },
+      "M4_Full_Dedup": {
+        "observed_aurc": 0.440033,
+        "bootstrap_mean_aurc": 0.4371,
+        "bootstrap_std_error": 0.0227,
+        "aurc_ci_95": [
+          0.3899,
+          0.479
+        ]
+      },
+      "Shortcut_LengthDiagnostic": {
+        "observed_aurc": 0.679788,
+        "bootstrap_mean_aurc": 0.6781,
+        "bootstrap_std_error": 0.0259,
+        "aurc_ci_95": [
+          0.6236,
+          0.7264
+        ]
+      }
+    },
+    "paired_differences": {
+      "M4_Full_Dedup_minus_M1_Relevance_Raw": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Primary Hypothesis (M4 vs M1)",
+        "observed_delta": 0.0071,
+        "bootstrap_mean_delta": 0.0092,
+        "bootstrap_std_error": 0.0305,
+        "delta_ci_95": [
+          -0.0503,
+          0.0679
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M2_Relevance_Dedup_minus_M1_Relevance_Raw": {
+        "method_A": "M2_Relevance_Dedup",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Factorial Ablation: Dedup in relevance-only",
+        "observed_delta": 0.0044,
+        "bootstrap_mean_delta": 0.0052,
+        "bootstrap_std_error": 0.0283,
+        "delta_ci_95": [
+          -0.052,
+          0.0603
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M3_Full_Raw_minus_M1_Relevance_Raw": {
+        "method_A": "M3_Full_Raw",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Factorial Ablation: Structure on raw passages",
+        "observed_delta": 0.0329,
+        "bootstrap_mean_delta": 0.0352,
+        "bootstrap_std_error": 0.0228,
+        "delta_ci_95": [
+          -0.0058,
+          0.0846
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_M2_Relevance_Dedup": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M2_Relevance_Dedup",
+        "label": "Factorial Ablation: Structure on dedup passages",
+        "observed_delta": 0.0027,
+        "bootstrap_mean_delta": 0.0041,
+        "bootstrap_std_error": 0.0117,
+        "delta_ci_95": [
+          -0.0199,
+          0.027
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_M3_Full_Raw": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M3_Full_Raw",
+        "label": "Factorial Ablation: Dedup with structural features",
+        "observed_delta": -0.0258,
+        "bootstrap_mean_delta": -0.026,
+        "bootstrap_std_error": 0.0334,
+        "delta_ci_95": [
+          -0.0939,
+          0.0363
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "B1_MaxRelevance_minus_M1_Relevance_Raw": {
+        "method_A": "B1_MaxRelevance",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Baseline Comparison: B1 vs M1",
+        "observed_delta": -0.0281,
+        "bootstrap_mean_delta": -0.0253,
+        "bootstrap_std_error": 0.0243,
+        "delta_ci_95": [
+          -0.0668,
+          0.0267
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_B1_MaxRelevance": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "B1_MaxRelevance",
+        "label": "Method Comparison: M4 vs B1",
+        "observed_delta": 0.0352,
+        "bootstrap_mean_delta": 0.0345,
+        "bootstrap_std_error": 0.0318,
+        "delta_ci_95": [
+          -0.0316,
+          0.0949
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "Shortcut_LengthDiagnostic_minus_M4_Full_Dedup": {
+        "method_A": "Shortcut_LengthDiagnostic",
+        "method_B": "M4_Full_Dedup",
+        "label": "Diagnostic Comparison: Length vs M4",
+        "observed_delta": 0.2398,
+        "bootstrap_mean_delta": 0.241,
+        "bootstrap_std_error": 0.035,
+        "delta_ci_95": [
+          0.1722,
+          0.3081
+        ],
+        "favors_method_A": false,
+        "favors_method_B": true,
+        "contains_zero": false
+      }
+    }
+  },
+  "natural_retrieval_contexts": {
+    "num_clusters": 36,
+    "n_bootstrap": 2000,
+    "random_seed": 20261104,
+    "models": {
+      "B0_AlwaysAccept": {
+        "observed_aurc": 0.083333,
+        "bootstrap_mean_aurc": 0.0812,
+        "bootstrap_std_error": 0.047,
+        "aurc_ci_95": [
+          0.0,
+          0.1944
+        ]
+      },
+      "B1_MaxRelevance": {
+        "observed_aurc": 0.070727,
+        "bootstrap_mean_aurc": 0.0704,
+        "bootstrap_std_error": 0.0541,
+        "aurc_ci_95": [
+          0.0,
+          0.203
+        ]
+      },
+      "M1_Relevance_Raw": {
+        "observed_aurc": 0.086054,
+        "bootstrap_mean_aurc": 0.0852,
+        "bootstrap_std_error": 0.0624,
+        "aurc_ci_95": [
+          0.0,
+          0.2316
+        ]
+      },
+      "M2_Relevance_Dedup": {
+        "observed_aurc": 0.103654,
+        "bootstrap_mean_aurc": 0.0995,
+        "bootstrap_std_error": 0.0843,
+        "aurc_ci_95": [
+          0.0,
+          0.2903
+        ]
+      },
+      "M3_Full_Raw": {
+        "observed_aurc": 0.096239,
+        "bootstrap_mean_aurc": 0.0952,
+        "bootstrap_std_error": 0.071,
+        "aurc_ci_95": [
+          0.0,
+          0.2599
+        ]
+      },
+      "M4_Full_Dedup": {
+        "observed_aurc": 0.050128,
+        "bootstrap_mean_aurc": 0.0499,
+        "bootstrap_std_error": 0.0435,
+        "aurc_ci_95": [
+          0.0,
+          0.1546
+        ]
+      },
+      "Shortcut_LengthDiagnostic": {
+        "observed_aurc": 0.064378,
+        "bootstrap_mean_aurc": 0.0637,
+        "bootstrap_std_error": 0.0526,
+        "aurc_ci_95": [
+          0.0,
+          0.1859
+        ]
+      }
+    },
+    "paired_differences": {
+      "M4_Full_Dedup_minus_M1_Relevance_Raw": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Primary Hypothesis (M4 vs M1)",
+        "observed_delta": -0.0359,
+        "bootstrap_mean_delta": -0.0353,
+        "bootstrap_std_error": 0.0364,
+        "delta_ci_95": [
+          -0.1176,
+          0.016
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M2_Relevance_Dedup_minus_M1_Relevance_Raw": {
+        "method_A": "M2_Relevance_Dedup",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Factorial Ablation: Dedup in relevance-only",
+        "observed_delta": 0.0176,
+        "bootstrap_mean_delta": 0.0142,
+        "bootstrap_std_error": 0.0468,
+        "delta_ci_95": [
+          -0.0689,
+          0.117
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M3_Full_Raw_minus_M1_Relevance_Raw": {
+        "method_A": "M3_Full_Raw",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Factorial Ablation: Structure on raw passages",
+        "observed_delta": 0.0102,
+        "bootstrap_mean_delta": 0.01,
+        "bootstrap_std_error": 0.0213,
+        "delta_ci_95": [
+          -0.0227,
+          0.062
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_M2_Relevance_Dedup": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M2_Relevance_Dedup",
+        "label": "Factorial Ablation: Structure on dedup passages",
+        "observed_delta": -0.0535,
+        "bootstrap_mean_delta": -0.0495,
+        "bootstrap_std_error": 0.0451,
+        "delta_ci_95": [
+          -0.154,
+          0.0
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_M3_Full_Raw": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M3_Full_Raw",
+        "label": "Factorial Ablation: Dedup with structural features",
+        "observed_delta": -0.0461,
+        "bootstrap_mean_delta": -0.0453,
+        "bootstrap_std_error": 0.0395,
+        "delta_ci_95": [
+          -0.1425,
+          0.0
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "B1_MaxRelevance_minus_M1_Relevance_Raw": {
+        "method_A": "B1_MaxRelevance",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Baseline Comparison: B1 vs M1",
+        "observed_delta": -0.0153,
+        "bootstrap_mean_delta": -0.0149,
+        "bootstrap_std_error": 0.0324,
+        "delta_ci_95": [
+          -0.0921,
+          0.0369
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_B1_MaxRelevance": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "B1_MaxRelevance",
+        "label": "Method Comparison: M4 vs B1",
+        "observed_delta": -0.0206,
+        "bootstrap_mean_delta": -0.0205,
+        "bootstrap_std_error": 0.0435,
+        "delta_ci_95": [
+          -0.1182,
+          0.0557
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "Shortcut_LengthDiagnostic_minus_M4_Full_Dedup": {
+        "method_A": "Shortcut_LengthDiagnostic",
+        "method_B": "M4_Full_Dedup",
+        "label": "Diagnostic Comparison: Length vs M4",
+        "observed_delta": 0.0143,
+        "bootstrap_mean_delta": 0.0138,
+        "bootstrap_std_error": 0.0518,
+        "delta_ci_95": [
+          -0.0857,
+          0.1237
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      }
+    }
+  },
+  "pooled_mixture": {
+    "num_clusters": 36,
+    "n_bootstrap": 2000,
+    "random_seed": 20261104,
+    "models": {
+      "B0_AlwaysAccept": {
+        "observed_aurc": 0.520833,
+        "bootstrap_mean_aurc": 0.5203,
+        "bootstrap_std_error": 0.0118,
+        "aurc_ci_95": [
+          0.5,
+          0.5486
+        ]
+      },
+      "B1_MaxRelevance": {
+        "observed_aurc": 0.259719,
+        "bootstrap_mean_aurc": 0.2586,
+        "bootstrap_std_error": 0.0326,
+        "aurc_ci_95": [
+          0.1978,
+          0.3276
+        ]
+      },
+      "M1_Relevance_Raw": {
+        "observed_aurc": 0.242924,
+        "bootstrap_mean_aurc": 0.2415,
+        "bootstrap_std_error": 0.0313,
+        "aurc_ci_95": [
+          0.1904,
+          0.3093
+        ]
+      },
+      "M2_Relevance_Dedup": {
+        "observed_aurc": 0.249998,
+        "bootstrap_mean_aurc": 0.2468,
+        "bootstrap_std_error": 0.0355,
+        "aurc_ci_95": [
+          0.1936,
+          0.327
+        ]
+      },
+      "M3_Full_Raw": {
+        "observed_aurc": 0.256796,
+        "bootstrap_mean_aurc": 0.2552,
+        "bootstrap_std_error": 0.0324,
+        "aurc_ci_95": [
+          0.2018,
+          0.3242
+        ]
+      },
+      "M4_Full_Dedup": {
+        "observed_aurc": 0.236965,
+        "bootstrap_mean_aurc": 0.2351,
+        "bootstrap_std_error": 0.0263,
+        "aurc_ci_95": [
+          0.1935,
+          0.2961
+        ]
+      },
+      "Shortcut_LengthDiagnostic": {
+        "observed_aurc": 0.321584,
+        "bootstrap_mean_aurc": 0.3208,
+        "bootstrap_std_error": 0.028,
+        "aurc_ci_95": [
+          0.2754,
+          0.3819
+        ]
+      }
+    },
+    "paired_differences": {
+      "M4_Full_Dedup_minus_M1_Relevance_Raw": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Primary Hypothesis (M4 vs M1)",
+        "observed_delta": -0.006,
+        "bootstrap_mean_delta": -0.0064,
+        "bootstrap_std_error": 0.0136,
+        "delta_ci_95": [
+          -0.0352,
+          0.0178
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M2_Relevance_Dedup_minus_M1_Relevance_Raw": {
+        "method_A": "M2_Relevance_Dedup",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Factorial Ablation: Dedup in relevance-only",
+        "observed_delta": 0.0071,
+        "bootstrap_mean_delta": 0.0053,
+        "bootstrap_std_error": 0.0155,
+        "delta_ci_95": [
+          -0.0243,
+          0.038
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M3_Full_Raw_minus_M1_Relevance_Raw": {
+        "method_A": "M3_Full_Raw",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Factorial Ablation: Structure on raw passages",
+        "observed_delta": 0.0139,
+        "bootstrap_mean_delta": 0.0137,
+        "bootstrap_std_error": 0.008,
+        "delta_ci_95": [
+          -0.0006,
+          0.0316
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_M2_Relevance_Dedup": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M2_Relevance_Dedup",
+        "label": "Factorial Ablation: Structure on dedup passages",
+        "observed_delta": -0.013,
+        "bootstrap_mean_delta": -0.0117,
+        "bootstrap_std_error": 0.0118,
+        "delta_ci_95": [
+          -0.0379,
+          0.0047
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_M3_Full_Raw": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "M3_Full_Raw",
+        "label": "Factorial Ablation: Dedup with structural features",
+        "observed_delta": -0.0198,
+        "bootstrap_mean_delta": -0.0201,
+        "bootstrap_std_error": 0.0124,
+        "delta_ci_95": [
+          -0.0473,
+          0.0008
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "B1_MaxRelevance_minus_M1_Relevance_Raw": {
+        "method_A": "B1_MaxRelevance",
+        "method_B": "M1_Relevance_Raw",
+        "label": "Baseline Comparison: B1 vs M1",
+        "observed_delta": 0.0168,
+        "bootstrap_mean_delta": 0.0171,
+        "bootstrap_std_error": 0.0222,
+        "delta_ci_95": [
+          -0.0218,
+          0.0641
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "M4_Full_Dedup_minus_B1_MaxRelevance": {
+        "method_A": "M4_Full_Dedup",
+        "method_B": "B1_MaxRelevance",
+        "label": "Method Comparison: M4 vs B1",
+        "observed_delta": -0.0228,
+        "bootstrap_mean_delta": -0.0236,
+        "bootstrap_std_error": 0.0249,
+        "delta_ci_95": [
+          -0.078,
+          0.0211
+        ],
+        "favors_method_A": false,
+        "favors_method_B": false,
+        "contains_zero": true
+      },
+      "Shortcut_LengthDiagnostic_minus_M4_Full_Dedup": {
+        "method_A": "Shortcut_LengthDiagnostic",
+        "method_B": "M4_Full_Dedup",
+        "label": "Diagnostic Comparison: Length vs M4",
+        "observed_delta": 0.0846,
+        "bootstrap_mean_delta": 0.0857,
+        "bootstrap_std_error": 0.0191,
+        "delta_ci_95": [
+          0.0477,
+          0.1247
+        ],
+        "favors_method_A": false,
+        "favors_method_B": true,
+        "contains_zero": false
+      }
+    }
+  }
+}

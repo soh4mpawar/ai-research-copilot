@@ -1,0 +1,28 @@
+{
+  "reclassification_date": "2026-11-03T23:28:00Z",
+  "status": "AUTOMATICALLY_CONSTRUCTED_QUESTIONS_AND_EXCERPT_PRESENCE_PROXY_LABELS",
+  "archived_stage": "Stage 4 Controlled Benchmark Pilot Run",
+  "reason_for_reclassification": "Audit revealed that review_train_val.py and review_test_set.py assigned labels via string-matching designated excerpts rather than semantic review of context and question. Furthermore, questions were generated via truncated source sentence prefixes without individual semantic validation.",
+  "algorithmic_reality": {
+    "question_generation": "generate_120_question_specs.py created questions by truncating the first 60-80 characters of source sentences.",
+    "labeling_heuristic": "Labels were assigned as 1 if the designated source excerpt was found as a verbatim substring in the concatenated context passages, and 0 otherwise. This is an excerpt-presence proxy, not a semantic sufficiency evaluation."
+  },
+  "scientific_status": "Proxy-task evaluation only. Results do not measure evidence sufficiency, model readiness, or empirical support for the proposed research direction.",
+  "corrected_interpretations": {
+    "random_ranking_aurc": "Random ranking expected AURC equals the negative label fraction (~0.7361 under the current evaluation convention), not 0.5. B_Diag_Length at 0.5005 does not demonstrate the absence of length shortcuts.",
+    "length_and_construction_shortcuts": "Equal passage counts (4 passages) do not eliminate token-length, lexical, source, or construction shortcuts.",
+    "statistical_testing": "Do not report p < 0.05 or p > 0.05 without appropriate statistical tests. Percentile bootstrap confidence intervals must be reported with full awareness that intervals containing zero do not establish equivalence or zero effect.",
+    "score_comparability": "M4 duplicate-slice mean score (0.0254) is higher than M3 (0.0214). Raw score magnitudes across different logistic gating models are not directly comparable evidence of uniform confidence suppression.",
+    "natural_retrieval_rate": "The 2/36 natural retrieval positive rate reflects only excerpt-presence proxy detection, not true semantic sufficiency under natural retrieval.",
+    "protocol_status": "The protocol is not preregistered. File hashes reflect current artifact states, and subsequent adjustments made during evaluation are explicitly disclosed."
+  },
+  "archived_files": [
+    "full_benchmark_120families_annotated.json",
+    "full_benchmark_120families_unannotated.json",
+    "frozen_models_train_val.json",
+    "full_benchmark_eval_results.json",
+    "risk_coverage_curve_full_benchmark.svg",
+    "risk_coverage_curve_full_benchmark.html",
+    "stage4_full_experiment_findings_proxy.md"
+  ]
+}

@@ -86,25 +86,56 @@ def render_paper_explorer_page():
     elif sort_by == "Title (A-Z)":
         filtered_papers.sort(key=lambda x: x.title.lower())
 
-    # Corpus Summary Analytics as a Compact Horizontal Metadata Strip
-    total_citations = sum(p.citation_count for p in filtered_papers)
-    avg_citations = int(total_citations / len(filtered_papers)) if filtered_papers else 0
+    # Pagination & Display Controls
+    col_stat, col_page_size, col_page_num = st.columns([2, 1, 1])
+    
+    with col_page_size:
+        page_size_options = [15, 25, 50, 100, "All"]
+        selected_page_size = st.selectbox("Papers Per Page:", page_size_options, index=1)
+    
+    total_filtered = len(filtered_papers)
+    if selected_page_size == "All" or total_filtered == 0:
+        page_size = total_filtered if total_filtered > 0 else 1
+        total_pages = 1
+    else:
+        page_size = int(selected_page_size)
+        total_pages = max(1, (total_filtered + page_size - 1) // page_size)
 
-    st.markdown(
-        f"""
-        <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 0.78rem; color: {colors['text_secondary']}; padding-bottom: 8px; border-bottom: 1px solid {colors['border']}; margin-bottom: 16px;">
-            <span>Filtered: <code style="font-size:0.82rem;">{len(filtered_papers)} papers</code></span>
-            <span>·</span>
-            <span>Total Citations: <code style="font-size:0.82rem;">{total_citations:,}</code></span>
-            <span>·</span>
-            <span>Average / Paper: <code style="font-size:0.82rem;">{avg_citations:,} citations</code></span>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    # Maintain current page in session state
+    if "paper_explorer_page" not in st.session_state:
+        st.session_state["paper_explorer_page"] = 1
+    if st.session_state["paper_explorer_page"] > total_pages:
+        st.session_state["paper_explorer_page"] = total_pages
+
+    with col_page_num:
+        current_page = st.number_input(
+            f"Page (of {total_pages}):",
+            min_value=1,
+            max_value=total_pages,
+            value=st.session_state["paper_explorer_page"],
+            step=1,
+            key="paper_page_input"
+        )
+        st.session_state["paper_explorer_page"] = current_page
+
+    start_idx = (current_page - 1) * page_size
+    end_idx = min(start_idx + page_size, total_filtered)
+    page_papers = filtered_papers[start_idx:end_idx]
+
+    with col_stat:
+        st.markdown(
+            f"""
+            <div style="padding-top: 24px; font-size: 0.82rem; color: {colors['text_secondary']};">
+                Showing <b>{start_idx + 1 if total_filtered > 0 else 0}–{end_idx}</b> of <b>{total_filtered} papers</b> (Page {current_page} of {total_pages})
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 10px 0 16px 0;'></div>", unsafe_allow_html=True)
 
     # Display Papers Grid Cards
-    for idx, p in enumerate(filtered_papers[:15], 1):
+    for idx, p in enumerate(page_papers, start_idx + 1):
         authors_str = ", ".join(p.authors[:3]) + (" et al." if len(p.authors) > 3 else "")
         pdf_link = p.pdf_url if p.pdf_url else (f"https://arxiv.org/pdf/{p.arxiv_id}.pdf" if p.arxiv_id else "https://arxiv.org")
         arxiv_link = f"https://arxiv.org/abs/{p.arxiv_id}" if p.arxiv_id else pdf_link
@@ -166,3 +197,25 @@ def render_paper_explorer_page():
             if st.button(f"Set Query on '{p.title[:25]}...'", key=f"btn_query_{p.paper_id}"):
                 st.session_state["query_input"] = f"What are the core methodology contributions of '{p.title}'?"
                 st.info("Query set! Switch to Research QA Engine view to run.")
+
+    # Bottom Pagination Navigation
+    if total_pages > 1:
+        st.markdown(f"<div style='border-top: 1px solid {colors['border']}; margin: 18px 0 12px 0;'></div>", unsafe_allow_html=True)
+        col_b_prev, col_b_info, col_b_next = st.columns([1, 2, 1])
+        
+        with col_b_prev:
+            if current_page > 1:
+                if st.button("← Previous Page", key="btn_prev_page"):
+                    st.session_state["paper_explorer_page"] = current_page - 1
+                    st.rerun()
+        with col_b_info:
+            st.markdown(
+                f"<div style='text-align: center; color: {colors['text_secondary']}; font-size: 0.85rem; padding-top: 6px;'>Page <b>{current_page}</b> of <b>{total_pages}</b> ({total_filtered} total papers)</div>",
+                unsafe_allow_html=True
+            )
+        with col_b_next:
+            if current_page < total_pages:
+                if st.button("Next Page →", key="btn_next_page"):
+                    st.session_state["paper_explorer_page"] = current_page + 1
+                    st.rerun()
+

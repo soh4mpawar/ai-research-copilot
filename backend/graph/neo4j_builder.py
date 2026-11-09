@@ -20,6 +20,15 @@ class CitationGraphEngine:
         corpus_path: str = "data/metadata/papers_corpus.json",
         edges_path: str = "data/metadata/citation_edges.csv"
     ):
+        if not os.path.exists(corpus_path):
+            alt = os.path.join("ai-research-copilot", corpus_path)
+            if os.path.exists(alt):
+                corpus_path = alt
+        if not os.path.exists(edges_path):
+            alt_e = os.path.join("ai-research-copilot", edges_path)
+            if os.path.exists(alt_e):
+                edges_path = alt_e
+
         self.corpus_path = corpus_path
         self.edges_path = edges_path
         self.graph = nx.DiGraph()

@@ -37,10 +37,10 @@ class RetrievedChunk(BaseModel):
 
 
 class PipelineMetrics(BaseModel):
-    retrieval_time_sec: float
-    reranking_time_sec: float
-    generation_time_sec: float
-    total_time_sec: float
+    retrieval_time_sec: Optional[float] = None
+    reranking_time_sec: Optional[float] = None
+    generation_time_sec: Optional[float] = None
+    total_time_sec: Optional[float] = None
     dense_candidates_count: int = 20
     bm25_candidates_count: int = 20
     rrf_candidates_count: int = 25

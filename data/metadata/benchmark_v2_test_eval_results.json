@@ -1,0 +1,3824 @@
+{
+  "metadata": {
+    "evaluation_title": "Benchmark v2 Final Test Evaluation Results",
+    "protocol": "research_protocol_v1_amendment_v1.1",
+    "date": "2026-11-04",
+    "test_contexts_hash": "a6b4cdf4b493d1d930d556238b1c0f273529175f3c1e773ae00f6b94402cd230",
+    "test_annotations_hash": "fcd815fc2f7d9c9bc23a9293462a41527c94a7da7df2dc34e7c58a76f2bf16f4",
+    "fitted_models_hash": "6047be23e2985957f31a596f0a3837c977fc6cd83b812f6d9924fadd98617689",
+    "eval_spec_hash": "71c1ee7e9b732f2f2d978fe771ec3e3bf786d7eb631fbb91fea0c63071b0bf42",
+    "total_test_contexts": 144,
+    "total_test_families": 36,
+    "total_paper_clusters": 36
+  },
+  "subsets": {
+    "controlled_contexts_108": {
+      "subset_name": "controlled_contexts_108",
+      "sample_count": 108,
+      "sufficient_count": 36,
+      "insufficient_count": 72,
+      "insufficient_prevalence": 0.6666666666666666,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.666667,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.6667,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.404858,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.3148,
+              "coverage_deviation": 0.1852,
+              "accepted_count": 34,
+              "evidence_selection_risk": 0.2941,
+              "type_1_error": 0.1389,
+              "type_2_error": 0.3333
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4722,
+              "coverage_deviation": 0.2778,
+              "accepted_count": 51,
+              "evidence_selection_risk": 0.3725,
+              "type_1_error": 0.2639,
+              "type_2_error": 0.1111
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8519,
+              "coverage_deviation": 0.0481,
+              "accepted_count": 92,
+              "evidence_selection_risk": 0.6087,
+              "type_1_error": 0.7778,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3704,
+              "k": 54,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5556,
+              "k": 81,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6289,
+              "k": 97,
+              "achieved_coverage": 0.8981,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 108,
+          "unique_score_levels": 79
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 57,
+            "coverage": 0.5278,
+            "evidence_selection_risk": 0.4035,
+            "type_1_error": 0.3194,
+            "type_2_error": 0.0556
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.432944,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.25,
+              "coverage_deviation": 0.25,
+              "accepted_count": 27,
+              "evidence_selection_risk": 0.2593,
+              "type_1_error": 0.0972,
+              "type_2_error": 0.4444
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4907,
+              "coverage_deviation": 0.2593,
+              "accepted_count": 53,
+              "evidence_selection_risk": 0.3774,
+              "type_1_error": 0.2778,
+              "type_2_error": 0.0833
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8241,
+              "coverage_deviation": 0.0759,
+              "accepted_count": 89,
+              "evidence_selection_risk": 0.5955,
+              "type_1_error": 0.7361,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3704,
+              "k": 54,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5556,
+              "k": 81,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6289,
+              "k": 97,
+              "achieved_coverage": 0.8981,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 108,
+          "unique_score_levels": 106
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.437304,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.2315,
+              "coverage_deviation": 0.2685,
+              "accepted_count": 25,
+              "evidence_selection_risk": 0.52,
+              "type_1_error": 0.1806,
+              "type_2_error": 0.6667
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4815,
+              "coverage_deviation": 0.2685,
+              "accepted_count": 52,
+              "evidence_selection_risk": 0.3846,
+              "type_1_error": 0.2778,
+              "type_2_error": 0.1111
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8241,
+              "coverage_deviation": 0.0759,
+              "accepted_count": 89,
+              "evidence_selection_risk": 0.5955,
+              "type_1_error": 0.7361,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3889,
+              "k": 54,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5556,
+              "k": 81,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6289,
+              "k": 97,
+              "achieved_coverage": 0.8981,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 108,
+          "unique_score_levels": 105
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.465833,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.3519,
+              "coverage_deviation": 0.1481,
+              "accepted_count": 38,
+              "evidence_selection_risk": 0.3947,
+              "type_1_error": 0.2083,
+              "type_2_error": 0.3611
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4907,
+              "coverage_deviation": 0.2593,
+              "accepted_count": 53,
+              "evidence_selection_risk": 0.3774,
+              "type_1_error": 0.2778,
+              "type_2_error": 0.0833
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.9074,
+              "coverage_deviation": 0.0074,
+              "accepted_count": 98,
+              "evidence_selection_risk": 0.6327,
+              "type_1_error": 0.8611,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3889,
+              "k": 54,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5556,
+              "k": 81,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6289,
+              "k": 97,
+              "achieved_coverage": 0.8981,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 108,
+          "unique_score_levels": 108
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.440033,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.2222,
+              "coverage_deviation": 0.2778,
+              "accepted_count": 24,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.1667,
+              "type_2_error": 0.6667
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.5463,
+              "coverage_deviation": 0.2037,
+              "accepted_count": 59,
+              "evidence_selection_risk": 0.4237,
+              "type_1_error": 0.3472,
+              "type_2_error": 0.0556
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7222,
+              "coverage_deviation": 0.1778,
+              "accepted_count": 78,
+              "evidence_selection_risk": 0.5385,
+              "type_1_error": 0.5833,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3889,
+              "k": 54,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5556,
+              "k": 81,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6289,
+              "k": 97,
+              "achieved_coverage": 0.8981,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 108,
+          "unique_score_levels": 107
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.679788,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0556,
+              "coverage_deviation": 0.4444,
+              "accepted_count": 6,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.0417,
+              "type_2_error": 0.9167
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2963,
+              "coverage_deviation": 0.4537,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.6562,
+              "type_1_error": 0.2917,
+              "type_2_error": 0.6944
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7593,
+              "coverage_deviation": 0.1407,
+              "accepted_count": 82,
+              "evidence_selection_risk": 0.6829,
+              "type_1_error": 0.7778,
+              "type_2_error": 0.2778
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.6667,
+              "k": 54,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.679,
+              "k": 81,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6804,
+              "k": 97,
+              "achieved_coverage": 0.8981,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 108,
+          "unique_score_levels": 91
+        }
+      }
+    },
+    "natural_retrieval_contexts_36": {
+      "subset_name": "natural_retrieval_contexts_36",
+      "sample_count": 36,
+      "sufficient_count": 33,
+      "insufficient_count": 3,
+      "insufficient_prevalence": 0.08333333333333333,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.083333,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.0833,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.070727,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.75,
+              "coverage_deviation": 0.25,
+              "accepted_count": 27,
+              "evidence_selection_risk": 0.0741,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.2424
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.9444,
+              "coverage_deviation": 0.1944,
+              "accepted_count": 34,
+              "evidence_selection_risk": 0.0588,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0303
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.1111,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0741,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0625,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 29
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 36,
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.0833,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.086054,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.8889,
+              "coverage_deviation": 0.3889,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.0625,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0909
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8889,
+              "coverage_deviation": 0.1389,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.0625,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0909
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.1111,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0741,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0625,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.103654,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.9722,
+              "coverage_deviation": 0.4722,
+              "accepted_count": 35,
+              "evidence_selection_risk": 0.0571,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.9722,
+              "coverage_deviation": 0.2222,
+              "accepted_count": 35,
+              "evidence_selection_risk": 0.0571,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0556,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0741,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0625,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.096239,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.8889,
+              "coverage_deviation": 0.3889,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.0625,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0909
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.9167,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.0606,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0606
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.1111,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0741,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0625,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.050128,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.9722,
+              "coverage_deviation": 0.4722,
+              "accepted_count": 35,
+              "evidence_selection_risk": 0.0571,
+              "type_1_error": 0.6667,
+              "type_2_error": 0.0
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.25,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0556,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0741,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0625,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.064378,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.5,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.25,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0833,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0556,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0741,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0625,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 35
+        }
+      }
+    },
+    "pooled_test_mixture_144": {
+      "subset_name": "pooled_test_mixture_144",
+      "sample_count": 144,
+      "sufficient_count": 69,
+      "insufficient_count": 75,
+      "insufficient_prevalence": 0.5208333333333334,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.520833,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.5208,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.259719,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.4236,
+              "coverage_deviation": 0.0764,
+              "accepted_count": 61,
+              "evidence_selection_risk": 0.1967,
+              "type_1_error": 0.16,
+              "type_2_error": 0.2899
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.5903,
+              "coverage_deviation": 0.1597,
+              "accepted_count": 85,
+              "evidence_selection_risk": 0.2471,
+              "type_1_error": 0.28,
+              "type_2_error": 0.0725
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8889,
+              "coverage_deviation": 0.0111,
+              "accepted_count": 128,
+              "evidence_selection_risk": 0.4609,
+              "type_1_error": 0.7867,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.2361,
+              "k": 72,
+              "achieved_coverage": 0.5,
+              "is_attainable": false
+            },
+            "0.75": {
+              "expected_risk": 0.3611,
+              "k": 108,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4692,
+              "k": 130,
+              "achieved_coverage": 0.9028,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 144,
+          "unique_score_levels": 86
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 93,
+            "coverage": 0.6458,
+            "evidence_selection_risk": 0.2796,
+            "type_1_error": 0.3467,
+            "type_2_error": 0.029
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.242924,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.4097,
+              "coverage_deviation": 0.0903,
+              "accepted_count": 59,
+              "evidence_selection_risk": 0.1525,
+              "type_1_error": 0.12,
+              "type_2_error": 0.2754
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.5903,
+              "coverage_deviation": 0.1597,
+              "accepted_count": 85,
+              "evidence_selection_risk": 0.2588,
+              "type_1_error": 0.2933,
+              "type_2_error": 0.087
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8681,
+              "coverage_deviation": 0.0319,
+              "accepted_count": 125,
+              "evidence_selection_risk": 0.448,
+              "type_1_error": 0.7467,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.2222,
+              "k": 72,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3611,
+              "k": 108,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4692,
+              "k": 130,
+              "achieved_coverage": 0.9028,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 144,
+          "unique_score_levels": 142
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.249998,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.4167,
+              "coverage_deviation": 0.0833,
+              "accepted_count": 60,
+              "evidence_selection_risk": 0.25,
+              "type_1_error": 0.2,
+              "type_2_error": 0.3478
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.6042,
+              "coverage_deviation": 0.1458,
+              "accepted_count": 87,
+              "evidence_selection_risk": 0.2529,
+              "type_1_error": 0.2933,
+              "type_2_error": 0.058
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8681,
+              "coverage_deviation": 0.0319,
+              "accepted_count": 125,
+              "evidence_selection_risk": 0.448,
+              "type_1_error": 0.7467,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.25,
+              "k": 72,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3611,
+              "k": 108,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4692,
+              "k": 130,
+              "achieved_coverage": 0.9028,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 144,
+          "unique_score_levels": 141
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.256796,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.4861,
+              "coverage_deviation": 0.0139,
+              "accepted_count": 70,
+              "evidence_selection_risk": 0.2429,
+              "type_1_error": 0.2267,
+              "type_2_error": 0.2319
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.5972,
+              "coverage_deviation": 0.1528,
+              "accepted_count": 86,
+              "evidence_selection_risk": 0.2558,
+              "type_1_error": 0.2933,
+              "type_2_error": 0.0725
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.9306,
+              "coverage_deviation": 0.0306,
+              "accepted_count": 134,
+              "evidence_selection_risk": 0.4851,
+              "type_1_error": 0.8667,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.2361,
+              "k": 72,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3611,
+              "k": 108,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4692,
+              "k": 130,
+              "achieved_coverage": 0.9028,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 144,
+          "unique_score_levels": 144
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.236965,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.4097,
+              "coverage_deviation": 0.0903,
+              "accepted_count": 59,
+              "evidence_selection_risk": 0.2373,
+              "type_1_error": 0.1867,
+              "type_2_error": 0.3478
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.6597,
+              "coverage_deviation": 0.0903,
+              "accepted_count": 95,
+              "evidence_selection_risk": 0.2947,
+              "type_1_error": 0.3733,
+              "type_2_error": 0.029
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7917,
+              "coverage_deviation": 0.1083,
+              "accepted_count": 114,
+              "evidence_selection_risk": 0.3947,
+              "type_1_error": 0.6,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.2361,
+              "k": 72,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3611,
+              "k": 108,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4692,
+              "k": 130,
+              "achieved_coverage": 0.9028,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 144,
+          "unique_score_levels": 143
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.321584,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.2917,
+              "coverage_deviation": 0.2083,
+              "accepted_count": 42,
+              "evidence_selection_risk": 0.1429,
+              "type_1_error": 0.08,
+              "type_2_error": 0.4783
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4722,
+              "coverage_deviation": 0.2778,
+              "accepted_count": 68,
+              "evidence_selection_risk": 0.3529,
+              "type_1_error": 0.32,
+              "type_2_error": 0.3623
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8194,
+              "coverage_deviation": 0.0806,
+              "accepted_count": 118,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.7867,
+              "type_2_error": 0.1449
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3889,
+              "k": 72,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5,
+              "k": 108,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.5154,
+              "k": 130,
+              "achieved_coverage": 0.9028,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 144,
+          "unique_score_levels": 126
+        }
+      }
+    },
+    "supported_candidate_36": {
+      "subset_name": "supported_candidate_36",
+      "sample_count": 36,
+      "sufficient_count": 36,
+      "insufficient_count": 0,
+      "insufficient_prevalence": 0.0,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.0,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.0,
+            "type_1_error": null,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.6667,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 24,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.3333
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8889,
+              "coverage_deviation": 0.1389,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.1111
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 31
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 34,
+            "coverage": 0.9444,
+            "evidence_selection_risk": 0.0,
+            "type_1_error": null,
+            "type_2_error": 0.0556
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.5556,
+              "coverage_deviation": 0.0556,
+              "accepted_count": 20,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.4444
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.9167,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0833
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 12,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.6667
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8889,
+              "coverage_deviation": 0.1389,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.1111
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.6389,
+              "coverage_deviation": 0.1389,
+              "accepted_count": 23,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.3611
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.9167,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0833
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 12,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.6667
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.9444,
+              "coverage_deviation": 0.1944,
+              "accepted_count": 34,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0556
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0833,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 3,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.9167
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3056,
+              "coverage_deviation": 0.4444,
+              "accepted_count": 11,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.6944
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7222,
+              "coverage_deviation": 0.1778,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": null,
+              "type_2_error": 0.2778
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": false
+            },
+            "0.9": {
+              "expected_risk": 0.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 33
+        }
+      }
+    },
+    "relevant_replacement_36": {
+      "subset_name": "relevant_replacement_36",
+      "sample_count": 36,
+      "sufficient_count": 0,
+      "insufficient_count": 36,
+      "insufficient_prevalence": 1.0,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 1.0,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 1.0,
+            "type_1_error": 1.0,
+            "type_2_error": null
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1389,
+              "coverage_deviation": 0.3611,
+              "accepted_count": 5,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1389,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3056,
+              "coverage_deviation": 0.4444,
+              "accepted_count": 11,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.3056,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.9722,
+              "coverage_deviation": 0.0722,
+              "accepted_count": 35,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.9722,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 35
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 13,
+            "coverage": 0.3611,
+            "evidence_selection_risk": 1.0,
+            "type_1_error": 0.3611,
+            "type_2_error": null
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1944,
+              "coverage_deviation": 0.3056,
+              "accepted_count": 7,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1944,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 12,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.3333,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.9167,
+              "coverage_deviation": 0.0167,
+              "accepted_count": 33,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.9167,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1389,
+              "coverage_deviation": 0.3611,
+              "accepted_count": 5,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1389,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 12,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.3333,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.9167,
+              "coverage_deviation": 0.0167,
+              "accepted_count": 33,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.9167,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.25,
+              "coverage_deviation": 0.25,
+              "accepted_count": 9,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.25,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 12,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.3333,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 36,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 1.0,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1667,
+              "coverage_deviation": 0.3333,
+              "accepted_count": 6,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1667,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4167,
+              "coverage_deviation": 0.3333,
+              "accepted_count": 15,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.4167,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7778,
+              "coverage_deviation": 0.1222,
+              "accepted_count": 28,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.7778,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0,
+              "coverage_deviation": 0.5,
+              "accepted_count": 0,
+              "evidence_selection_risk": null,
+              "type_1_error": 0.0,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.25,
+              "coverage_deviation": 0.5,
+              "accepted_count": 9,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.25,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8333,
+              "coverage_deviation": 0.0667,
+              "accepted_count": 30,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.8333,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        }
+      }
+    },
+    "duplicate_replacement_36": {
+      "subset_name": "duplicate_replacement_36",
+      "sample_count": 36,
+      "sufficient_count": 0,
+      "insufficient_count": 36,
+      "insufficient_prevalence": 1.0,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 1.0,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 1.0,
+            "type_1_error": 1.0,
+            "type_2_error": null
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1389,
+              "coverage_deviation": 0.3611,
+              "accepted_count": 5,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1389,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2222,
+              "coverage_deviation": 0.5278,
+              "accepted_count": 8,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.2222,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.5833,
+              "coverage_deviation": 0.3167,
+              "accepted_count": 21,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.5833,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": false
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": false
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 30
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 10,
+            "coverage": 0.2778,
+            "evidence_selection_risk": 1.0,
+            "type_1_error": 0.2778,
+            "type_2_error": null
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0,
+              "coverage_deviation": 0.5,
+              "accepted_count": 0,
+              "evidence_selection_risk": null,
+              "type_1_error": 0.0,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2222,
+              "coverage_deviation": 0.5278,
+              "accepted_count": 8,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.2222,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.5556,
+              "coverage_deviation": 0.3444,
+              "accepted_count": 20,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.5556,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 35
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.2222,
+              "coverage_deviation": 0.2778,
+              "accepted_count": 8,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.2222,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2222,
+              "coverage_deviation": 0.5278,
+              "accepted_count": 8,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.2222,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.5556,
+              "coverage_deviation": 0.3444,
+              "accepted_count": 20,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.5556,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": false
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 33
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1667,
+              "coverage_deviation": 0.3333,
+              "accepted_count": 6,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1667,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2222,
+              "coverage_deviation": 0.5278,
+              "accepted_count": 8,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.2222,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7222,
+              "coverage_deviation": 0.1778,
+              "accepted_count": 26,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.7222,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 36
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1667,
+              "coverage_deviation": 0.3333,
+              "accepted_count": 6,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.1667,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2778,
+              "coverage_deviation": 0.4722,
+              "accepted_count": 10,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.2778,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.3889,
+              "coverage_deviation": 0.5111,
+              "accepted_count": 14,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.3889,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 35
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 1.0,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0833,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 3,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.0833,
+              "type_2_error": null
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 12,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.3333,
+              "type_2_error": null
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7222,
+              "coverage_deviation": 0.1778,
+              "accepted_count": 26,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.7222,
+              "type_2_error": null
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 1.0,
+              "k": 18,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 1.0,
+              "k": 27,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 1.0,
+              "k": 32,
+              "achieved_coverage": 0.8889,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 36,
+          "unique_score_levels": 33
+        }
+      }
+    },
+    "single_passage_100": {
+      "subset_name": "single_passage_100",
+      "sample_count": 100,
+      "sufficient_count": 50,
+      "insufficient_count": 50,
+      "insufficient_prevalence": 0.5,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.5,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.5,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.161697,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.35,
+              "coverage_deviation": 0.15,
+              "accepted_count": 35,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": 0.0,
+              "type_2_error": 0.3
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.49,
+              "coverage_deviation": 0.26,
+              "accepted_count": 49,
+              "evidence_selection_risk": 0.0612,
+              "type_1_error": 0.06,
+              "type_2_error": 0.08
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.84,
+              "coverage_deviation": 0.06,
+              "accepted_count": 84,
+              "evidence_selection_risk": 0.4048,
+              "type_1_error": 0.68,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.06,
+              "k": 50,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3333,
+              "k": 75,
+              "achieved_coverage": 0.75,
+              "is_attainable": false
+            },
+            "0.9": {
+              "expected_risk": 0.4444,
+              "k": 90,
+              "achieved_coverage": 0.9,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 100,
+          "unique_score_levels": 71
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 54,
+            "coverage": 0.54,
+            "evidence_selection_risk": 0.0926,
+            "type_1_error": 0.1,
+            "type_2_error": 0.02
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.173946,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.43,
+              "coverage_deviation": 0.07,
+              "accepted_count": 43,
+              "evidence_selection_risk": 0.0465,
+              "type_1_error": 0.04,
+              "type_2_error": 0.18
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.49,
+              "coverage_deviation": 0.26,
+              "accepted_count": 49,
+              "evidence_selection_risk": 0.0816,
+              "type_1_error": 0.08,
+              "type_2_error": 0.1
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.81,
+              "coverage_deviation": 0.09,
+              "accepted_count": 81,
+              "evidence_selection_risk": 0.3827,
+              "type_1_error": 0.62,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.08,
+              "k": 50,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3333,
+              "k": 75,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4444,
+              "k": 90,
+              "achieved_coverage": 0.9,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 100,
+          "unique_score_levels": 98
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.166208,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.28,
+              "coverage_deviation": 0.22,
+              "accepted_count": 28,
+              "evidence_selection_risk": 0.0357,
+              "type_1_error": 0.02,
+              "type_2_error": 0.46
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.51,
+              "coverage_deviation": 0.24,
+              "accepted_count": 51,
+              "evidence_selection_risk": 0.0784,
+              "type_1_error": 0.08,
+              "type_2_error": 0.06
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.81,
+              "coverage_deviation": 0.09,
+              "accepted_count": 81,
+              "evidence_selection_risk": 0.3827,
+              "type_1_error": 0.62,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.06,
+              "k": 50,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3333,
+              "k": 75,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4444,
+              "k": 90,
+              "achieved_coverage": 0.9,
+              "is_attainable": false
+            }
+          },
+          "curve_points_count": 100,
+          "unique_score_levels": 97
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.174346,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.4,
+              "coverage_deviation": 0.1,
+              "accepted_count": 40,
+              "evidence_selection_risk": 0.075,
+              "type_1_error": 0.06,
+              "type_2_error": 0.26
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.5,
+              "coverage_deviation": 0.25,
+              "accepted_count": 50,
+              "evidence_selection_risk": 0.08,
+              "type_1_error": 0.08,
+              "type_2_error": 0.08
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.9,
+              "coverage_deviation": 0.0,
+              "accepted_count": 90,
+              "evidence_selection_risk": 0.4444,
+              "type_1_error": 0.8,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.08,
+              "k": 50,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3333,
+              "k": 75,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4444,
+              "k": 90,
+              "achieved_coverage": 0.9,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 100,
+          "unique_score_levels": 100
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.167056,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.27,
+              "coverage_deviation": 0.23,
+              "accepted_count": 27,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": 0.0,
+              "type_2_error": 0.46
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.56,
+              "coverage_deviation": 0.19,
+              "accepted_count": 56,
+              "evidence_selection_risk": 0.125,
+              "type_1_error": 0.14,
+              "type_2_error": 0.02
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7,
+              "coverage_deviation": 0.2,
+              "accepted_count": 70,
+              "evidence_selection_risk": 0.2857,
+              "type_1_error": 0.4,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.08,
+              "k": 50,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.3333,
+              "k": 75,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4444,
+              "k": 90,
+              "achieved_coverage": 0.9,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 100,
+          "unique_score_levels": 99
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.270832,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.3,
+              "coverage_deviation": 0.2,
+              "accepted_count": 30,
+              "evidence_selection_risk": 0.0667,
+              "type_1_error": 0.04,
+              "type_2_error": 0.44
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.48,
+              "coverage_deviation": 0.27,
+              "accepted_count": 48,
+              "evidence_selection_risk": 0.3125,
+              "type_1_error": 0.3,
+              "type_2_error": 0.34
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.83,
+              "coverage_deviation": 0.07,
+              "accepted_count": 83,
+              "evidence_selection_risk": 0.4699,
+              "type_1_error": 0.78,
+              "type_2_error": 0.12
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.34,
+              "k": 50,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.4533,
+              "k": 75,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.4778,
+              "k": 90,
+              "achieved_coverage": 0.9,
+              "is_attainable": false
+            }
+          },
+          "curve_points_count": 100,
+          "unique_score_levels": 92
+        }
+      }
+    },
+    "multi_passage_44": {
+      "subset_name": "multi_passage_44",
+      "sample_count": 44,
+      "sufficient_count": 19,
+      "insufficient_count": 25,
+      "insufficient_prevalence": 0.5681818181818182,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.568182,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.5682,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.421408,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.5909,
+              "coverage_deviation": 0.0909,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.4615,
+              "type_1_error": 0.48,
+              "type_2_error": 0.2632
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8182,
+              "coverage_deviation": 0.0682,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.72,
+              "type_2_error": 0.0526
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 44,
+              "evidence_selection_risk": 0.5682,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.4848,
+              "k": 22,
+              "achieved_coverage": 0.5,
+              "is_attainable": false
+            },
+            "0.75": {
+              "expected_risk": 0.4848,
+              "k": 33,
+              "achieved_coverage": 0.75,
+              "is_attainable": false
+            },
+            "0.9": {
+              "expected_risk": 0.525,
+              "k": 40,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 44,
+          "unique_score_levels": 17
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 39,
+            "coverage": 0.8864,
+            "evidence_selection_risk": 0.5385,
+            "type_1_error": 0.84,
+            "type_2_error": 0.0526
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.455941,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.3636,
+              "coverage_deviation": 0.1364,
+              "accepted_count": 16,
+              "evidence_selection_risk": 0.4375,
+              "type_1_error": 0.28,
+              "type_2_error": 0.5263
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8182,
+              "coverage_deviation": 0.0682,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.72,
+              "type_2_error": 0.0526
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 44,
+              "evidence_selection_risk": 0.5682,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.4091,
+              "k": 22,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.4848,
+              "k": 33,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.525,
+              "k": 40,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 44,
+          "unique_score_levels": 44
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.334294,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.7273,
+              "coverage_deviation": 0.2273,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.4375,
+              "type_1_error": 0.56,
+              "type_2_error": 0.0526
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8182,
+              "coverage_deviation": 0.0682,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.72,
+              "type_2_error": 0.0526
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 44,
+              "evidence_selection_risk": 0.5682,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.1818,
+              "k": 22,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.4545,
+              "k": 33,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.55,
+              "k": 40,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 44,
+          "unique_score_levels": 44
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.449011,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.6818,
+              "coverage_deviation": 0.1818,
+              "accepted_count": 30,
+              "evidence_selection_risk": 0.4667,
+              "type_1_error": 0.56,
+              "type_2_error": 0.1579
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8182,
+              "coverage_deviation": 0.0682,
+              "accepted_count": 36,
+              "evidence_selection_risk": 0.5,
+              "type_1_error": 0.72,
+              "type_2_error": 0.0526
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 44,
+              "evidence_selection_risk": 0.5682,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.4545,
+              "k": 22,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5152,
+              "k": 33,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.525,
+              "k": 40,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 44,
+          "unique_score_levels": 44
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.298814,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.7273,
+              "coverage_deviation": 0.2273,
+              "accepted_count": 32,
+              "evidence_selection_risk": 0.4375,
+              "type_1_error": 0.56,
+              "type_2_error": 0.0526
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8864,
+              "coverage_deviation": 0.1364,
+              "accepted_count": 39,
+              "evidence_selection_risk": 0.5385,
+              "type_1_error": 0.84,
+              "type_2_error": 0.0526
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 44,
+              "evidence_selection_risk": 0.5682,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.2273,
+              "k": 22,
+              "achieved_coverage": 0.5,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.4545,
+              "k": 33,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.525,
+              "k": 40,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 44,
+          "unique_score_levels": 44
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.449699,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.2727,
+              "coverage_deviation": 0.2273,
+              "accepted_count": 12,
+              "evidence_selection_risk": 0.3333,
+              "type_1_error": 0.16,
+              "type_2_error": 0.5789
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4545,
+              "coverage_deviation": 0.2955,
+              "accepted_count": 20,
+              "evidence_selection_risk": 0.45,
+              "type_1_error": 0.36,
+              "type_2_error": 0.4211
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7955,
+              "coverage_deviation": 0.1045,
+              "accepted_count": 35,
+              "evidence_selection_risk": 0.5714,
+              "type_1_error": 0.8,
+              "type_2_error": 0.2105
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.4773,
+              "k": 22,
+              "achieved_coverage": 0.5,
+              "is_attainable": false
+            },
+            "0.75": {
+              "expected_risk": 0.6061,
+              "k": 33,
+              "achieved_coverage": 0.75,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.55,
+              "k": 40,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 44,
+          "unique_score_levels": 43
+        }
+      }
+    },
+    "controlled_single_passage_75": {
+      "subset_name": "controlled_single_passage_75",
+      "sample_count": 75,
+      "sufficient_count": 25,
+      "insufficient_count": 50,
+      "insufficient_prevalence": 0.6666666666666666,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.666667,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.6667,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.31658,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.2133,
+              "coverage_deviation": 0.2867,
+              "accepted_count": 16,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": 0.0,
+              "type_2_error": 0.36
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3333,
+              "coverage_deviation": 0.4167,
+              "accepted_count": 25,
+              "evidence_selection_risk": 0.12,
+              "type_1_error": 0.06,
+              "type_2_error": 0.12
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7867,
+              "coverage_deviation": 0.1133,
+              "accepted_count": 59,
+              "evidence_selection_risk": 0.5763,
+              "type_1_error": 0.68,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3421,
+              "k": 38,
+              "achieved_coverage": 0.5067,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5536,
+              "k": 56,
+              "achieved_coverage": 0.7467,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6324,
+              "k": 68,
+              "achieved_coverage": 0.9067,
+              "is_attainable": false
+            }
+          },
+          "curve_points_count": 75,
+          "unique_score_levels": 65
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 29,
+            "coverage": 0.3867,
+            "evidence_selection_risk": 0.1724,
+            "type_1_error": 0.1,
+            "type_2_error": 0.04
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.374274,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.28,
+              "coverage_deviation": 0.22,
+              "accepted_count": 21,
+              "evidence_selection_risk": 0.0952,
+              "type_1_error": 0.04,
+              "type_2_error": 0.24
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.36,
+              "coverage_deviation": 0.39,
+              "accepted_count": 27,
+              "evidence_selection_risk": 0.1481,
+              "type_1_error": 0.08,
+              "type_2_error": 0.08
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7467,
+              "coverage_deviation": 0.1533,
+              "accepted_count": 56,
+              "evidence_selection_risk": 0.5536,
+              "type_1_error": 0.62,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3421,
+              "k": 38,
+              "achieved_coverage": 0.5067,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5536,
+              "k": 56,
+              "achieved_coverage": 0.7467,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6324,
+              "k": 68,
+              "achieved_coverage": 0.9067,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 75,
+          "unique_score_levels": 73
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.347161,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.04,
+              "coverage_deviation": 0.46,
+              "accepted_count": 3,
+              "evidence_selection_risk": 0.3333,
+              "type_1_error": 0.02,
+              "type_2_error": 0.92
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3467,
+              "coverage_deviation": 0.4033,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.1538,
+              "type_1_error": 0.08,
+              "type_2_error": 0.12
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7467,
+              "coverage_deviation": 0.1533,
+              "accepted_count": 56,
+              "evidence_selection_risk": 0.5536,
+              "type_1_error": 0.62,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3421,
+              "k": 38,
+              "achieved_coverage": 0.5067,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5536,
+              "k": 56,
+              "achieved_coverage": 0.7467,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6324,
+              "k": 68,
+              "achieved_coverage": 0.9067,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 75,
+          "unique_score_levels": 72
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.364423,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.24,
+              "coverage_deviation": 0.26,
+              "accepted_count": 18,
+              "evidence_selection_risk": 0.1667,
+              "type_1_error": 0.06,
+              "type_2_error": 0.4
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.36,
+              "coverage_deviation": 0.39,
+              "accepted_count": 27,
+              "evidence_selection_risk": 0.1481,
+              "type_1_error": 0.08,
+              "type_2_error": 0.08
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.8667,
+              "coverage_deviation": 0.0333,
+              "accepted_count": 65,
+              "evidence_selection_risk": 0.6154,
+              "type_1_error": 0.8,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3421,
+              "k": 38,
+              "achieved_coverage": 0.5067,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5536,
+              "k": 56,
+              "achieved_coverage": 0.7467,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6324,
+              "k": 68,
+              "achieved_coverage": 0.9067,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 75,
+          "unique_score_levels": 75
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.338761,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0267,
+              "coverage_deviation": 0.4733,
+              "accepted_count": 2,
+              "evidence_selection_risk": 0.0,
+              "type_1_error": 0.0,
+              "type_2_error": 0.92
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.4133,
+              "coverage_deviation": 0.3367,
+              "accepted_count": 31,
+              "evidence_selection_risk": 0.2258,
+              "type_1_error": 0.14,
+              "type_2_error": 0.04
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.6,
+              "coverage_deviation": 0.3,
+              "accepted_count": 45,
+              "evidence_selection_risk": 0.4444,
+              "type_1_error": 0.4,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.3421,
+              "k": 38,
+              "achieved_coverage": 0.5067,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.5536,
+              "k": 56,
+              "achieved_coverage": 0.7467,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6324,
+              "k": 68,
+              "achieved_coverage": 0.9067,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 75,
+          "unique_score_levels": 74
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.64986,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0667,
+              "coverage_deviation": 0.4333,
+              "accepted_count": 5,
+              "evidence_selection_risk": 0.4,
+              "type_1_error": 0.04,
+              "type_2_error": 0.88
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.3067,
+              "coverage_deviation": 0.4433,
+              "accepted_count": 23,
+              "evidence_selection_risk": 0.6522,
+              "type_1_error": 0.3,
+              "type_2_error": 0.68
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7733,
+              "coverage_deviation": 0.1267,
+              "accepted_count": 58,
+              "evidence_selection_risk": 0.6724,
+              "type_1_error": 0.78,
+              "type_2_error": 0.24
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.6842,
+              "k": 38,
+              "achieved_coverage": 0.5067,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.6786,
+              "k": 56,
+              "achieved_coverage": 0.7467,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6618,
+              "k": 68,
+              "achieved_coverage": 0.9067,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 75,
+          "unique_score_levels": 68
+        }
+      }
+    },
+    "controlled_multi_passage_33": {
+      "subset_name": "controlled_multi_passage_33",
+      "sample_count": 33,
+      "sufficient_count": 11,
+      "insufficient_count": 22,
+      "insufficient_prevalence": 0.6666666666666666,
+      "models": {
+        "B0_AlwaysAccept": {
+          "type": "baseline_always_accept",
+          "aurc": 0.666667,
+          "coverage_1_0": {
+            "coverage": 1.0,
+            "evidence_selection_risk": 0.6667,
+            "type_1_error": 1.0,
+            "type_2_error": 0.0
+          }
+        },
+        "B1_MaxRelevance": {
+          "type": "baseline_max_relevance",
+          "aurc": 0.531591,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.9908,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.5455,
+              "coverage_deviation": 0.0455,
+              "accepted_count": 18,
+              "evidence_selection_risk": 0.5556,
+              "type_1_error": 0.4545,
+              "type_2_error": 0.2727
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.9119,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.7879,
+              "coverage_deviation": 0.0379,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.6154,
+              "type_1_error": 0.7273,
+              "type_2_error": 0.0909
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.0016,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.6667,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.5625,
+              "k": 16,
+              "achieved_coverage": 0.4848,
+              "is_attainable": false
+            },
+            "0.75": {
+              "expected_risk": 0.6,
+              "k": 25,
+              "achieved_coverage": 0.7576,
+              "is_attainable": false
+            },
+            "0.9": {
+              "expected_risk": 0.6333,
+              "k": 30,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 33,
+          "unique_score_levels": 16
+        },
+        "B2_HistoricalGate": {
+          "type": "baseline_discrete_heuristic",
+          "discrete_operating_point": {
+            "accepted_count": 28,
+            "coverage": 0.8485,
+            "evidence_selection_risk": 0.6429,
+            "type_1_error": 0.8182,
+            "type_2_error": 0.0909
+          }
+        },
+        "M1_Relevance_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.689411,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.551814,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.1818,
+              "coverage_deviation": 0.3182,
+              "accepted_count": 6,
+              "evidence_selection_risk": 0.8333,
+              "type_1_error": 0.2273,
+              "type_2_error": 0.9091
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.492331,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.7879,
+              "coverage_deviation": 0.0379,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.6154,
+              "type_1_error": 0.7273,
+              "type_2_error": 0.0909
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.041371,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.6667,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.625,
+              "k": 16,
+              "achieved_coverage": 0.4848,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.6,
+              "k": 25,
+              "achieved_coverage": 0.7576,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6333,
+              "k": 30,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 33,
+          "unique_score_levels": 33
+        },
+        "M2_Relevance_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.350805,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.525078,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.6667,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 22,
+              "evidence_selection_risk": 0.5455,
+              "type_1_error": 0.5455,
+              "type_2_error": 0.0909
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.442224,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.7879,
+              "coverage_deviation": 0.0379,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.6154,
+              "type_1_error": 0.7273,
+              "type_2_error": 0.0909
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.044631,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.6667,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.375,
+              "k": 16,
+              "achieved_coverage": 0.4848,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.6,
+              "k": 25,
+              "achieved_coverage": 0.7576,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6333,
+              "k": 30,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 33,
+          "unique_score_levels": 33
+        },
+        "M3_Full_Raw": {
+          "type": "logistic_gating_model",
+          "aurc": 0.690008,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.529341,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.6061,
+              "coverage_deviation": 0.1061,
+              "accepted_count": 20,
+              "evidence_selection_risk": 0.6,
+              "type_1_error": 0.5455,
+              "type_2_error": 0.2727
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.429568,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.7879,
+              "coverage_deviation": 0.0379,
+              "accepted_count": 26,
+              "evidence_selection_risk": 0.6154,
+              "type_1_error": 0.7273,
+              "type_2_error": 0.0909
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.042263,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.6667,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.5625,
+              "k": 16,
+              "achieved_coverage": 0.4848,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.64,
+              "k": 25,
+              "achieved_coverage": 0.7576,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6333,
+              "k": 30,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 33,
+          "unique_score_levels": 33
+        },
+        "M4_Full_Dedup": {
+          "type": "logistic_gating_model",
+          "aurc": 0.38027,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.538068,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.6667,
+              "coverage_deviation": 0.1667,
+              "accepted_count": 22,
+              "evidence_selection_risk": 0.5455,
+              "type_1_error": 0.5455,
+              "type_2_error": 0.0909
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.265749,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.8485,
+              "coverage_deviation": 0.0985,
+              "accepted_count": 28,
+              "evidence_selection_risk": 0.6429,
+              "type_1_error": 0.8182,
+              "type_2_error": 0.0909
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.062131,
+              "target_coverage": 0.9,
+              "achieved_coverage": 1.0,
+              "coverage_deviation": 0.1,
+              "accepted_count": 33,
+              "evidence_selection_risk": 0.6667,
+              "type_1_error": 1.0,
+              "type_2_error": 0.0
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.4375,
+              "k": 16,
+              "achieved_coverage": 0.4848,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.6,
+              "k": 25,
+              "achieved_coverage": 0.7576,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6333,
+              "k": 30,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 33,
+          "unique_score_levels": 33
+        },
+        "Shortcut_LengthDiagnostic": {
+          "type": "diagnostic_shortcut_baseline",
+          "aurc": 0.750132,
+          "frozen_operating_points": {
+            "target_0.50": {
+              "frozen_threshold": 0.415216,
+              "target_coverage": 0.5,
+              "achieved_coverage": 0.0303,
+              "coverage_deviation": 0.4697,
+              "accepted_count": 1,
+              "evidence_selection_risk": 1.0,
+              "type_1_error": 0.0455,
+              "type_2_error": 1.0
+            },
+            "target_0.75": {
+              "frozen_threshold": 0.404055,
+              "target_coverage": 0.75,
+              "achieved_coverage": 0.2727,
+              "coverage_deviation": 0.4773,
+              "accepted_count": 9,
+              "evidence_selection_risk": 0.6667,
+              "type_1_error": 0.2727,
+              "type_2_error": 0.7273
+            },
+            "target_0.90": {
+              "frozen_threshold": 0.395457,
+              "target_coverage": 0.9,
+              "achieved_coverage": 0.7273,
+              "coverage_deviation": 0.1727,
+              "accepted_count": 24,
+              "evidence_selection_risk": 0.7083,
+              "type_1_error": 0.7727,
+              "type_2_error": 0.3636
+            }
+          },
+          "descriptive_matched_coverage": {
+            "0.5": {
+              "expected_risk": 0.6875,
+              "k": 16,
+              "achieved_coverage": 0.4848,
+              "is_attainable": true
+            },
+            "0.75": {
+              "expected_risk": 0.72,
+              "k": 25,
+              "achieved_coverage": 0.7576,
+              "is_attainable": true
+            },
+            "0.9": {
+              "expected_risk": 0.6667,
+              "k": 30,
+              "achieved_coverage": 0.9091,
+              "is_attainable": true
+            }
+          },
+          "curve_points_count": 33,
+          "unique_score_levels": 32
+        }
+      }
+    }
+  },
+  "duplicate_invariance_property_check": {
+    "B1_MaxRelevance": {
+      "mean_abs_score_shift": 0.0,
+      "max_abs_score_shift": 0.0,
+      "std_abs_score_shift": 0.0,
+      "is_strictly_invariant": true
+    },
+    "M1_Relevance_Raw": {
+      "mean_abs_score_shift": 0.318703,
+      "max_abs_score_shift": 0.382319,
+      "std_abs_score_shift": 0.090436,
+      "is_strictly_invariant": false
+    },
+    "M2_Relevance_Dedup": {
+      "mean_abs_score_shift": 0.0,
+      "max_abs_score_shift": 0.0,
+      "std_abs_score_shift": 0.0,
+      "is_strictly_invariant": true
+    },
+    "M3_Full_Raw": {
+      "mean_abs_score_shift": 0.312393,
+      "max_abs_score_shift": 0.387396,
+      "std_abs_score_shift": 0.077637,
+      "is_strictly_invariant": false
+    },
+    "M4_Full_Dedup": {
+      "mean_abs_score_shift": 0.0,
+      "max_abs_score_shift": 0.0,
+      "std_abs_score_shift": 0.0,
+      "is_strictly_invariant": true
+    },
+    "Shortcut_LengthDiagnostic": {
+      "mean_abs_score_shift": 0.473078,
+      "max_abs_score_shift": 0.478142,
+      "std_abs_score_shift": 0.002779,
+      "is_strictly_invariant": false
+    }
+  }
+}

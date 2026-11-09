@@ -1,0 +1,653 @@
+{
+  "provenance_status": "INDIVIDUALLY_AUTHORED_SEMANTIC_ANNOTATIONS",
+  "description": "Validation Batch 01 semantic annotations personally authored by directly reading metadata-concealed question and passages for contexts ctx_val_0001 to ctx_val_0048. Disclosed prior exposure (authored by same assistant). No programmatic regex heuristics, substring matches, or condition-tag lookups were used to assign labels.",
+  "batch": "Val Batch 01 (Families v2_val_001 to v2_val_012)",
+  "context_range": "ctx_val_0001 to ctx_val_0048",
+  "total_records": 48,
+  "counts": {
+    "sufficient": 23,
+    "insufficient": 25,
+    "ambiguous": 0
+  },
+  "annotations": [
+    {
+      "opaque_context_id": "ctx_val_0001",
+      "judgment": "sufficient",
+      "derivable_answer": "In SPARED, a heterogeneous, continuous-pixel-space adversary composed of a PaCo-gated, RL-trained diffusion image editor is paired with the decoupled reasoning-MLLM defender to prevent dataset-bias shortcuts.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "A heterogeneous, continuous-pixel-space adversary (a\nPaCo-gated, RL-trained diffusion image editor) paired\nwith a decoupled reasoning-MLLM defender, extending\nthe anti-collapse mechanisms of prior self-play systems\nto the vision domain."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly specifies the adversary architecture and generator: a heterogeneous, continuous-pixel-space adversary consisting of a PaCo-gated, RL-trained diffusion image editor paired with the decoupled reasoning-MLLM defender.",
+      "payload_hash": "3d73a632d32d1df68141c2854c60d7e4c5510f2d15c005bb91013e32f5b9e62a",
+      "question_hash": "dfe79438a86fb1d682f77938369ef758a09e9671ab7be752c933b7474e7f38c0"
+    },
+    {
+      "opaque_context_id": "ctx_val_0002",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "The context omits the description-based account, the specific presupposition that an antecedent description is instantiated in each world of the context set, and the Plural Intensional Presuppositional predicate calculus (PIP) logic.",
+      "rationale": "Passages 1 and 2 duplicate the introduction discussing value-based limitations, and Passage 3 lists formal syntax rules without the description-based account or PIP logic.",
+      "payload_hash": "8c0e76e975d1324f8090d004cd3763e93aec72933cb712eda95e7d428afc469d",
+      "question_hash": "1ae7a27a3ca3d779078d7e3061b8b1e5db5cd90079c1176a0fffd1f70fc9f793"
+    },
+    {
+      "opaque_context_id": "ctx_val_0003",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces immediate_forced in Passage 3, but omits the remaining four elicitation conditions (grouped_runs, delayed_n_trials, post_streak_contextual, and passive_unprompted).",
+      "rationale": "Passages 1 and 2 describe the local harness setup, while Passage 3 only mentions immediate_forced in passing without defining the other four elicitation conditions.",
+      "payload_hash": "af4efae72377b32f9e1584ba558f5e126d1b91e6bcc8bbdddbe5442d9eb4cf38",
+      "question_hash": "94fc8cf93aca6fe90341a56466ca64815131a20644e44cc9f6f480699d703b36"
+    },
+    {
+      "opaque_context_id": "ctx_val_0004",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context lacks the definition of anchor state (center µl_i and radius rl_i) and how support radius r governs ray-proximity preference in cross-attention.",
+      "rationale": "Passages 1 and 2 duplicate the title and abstract, and Passage 3 introduces general 3D reconstruction challenges without providing the anchor state or cross-attention bias formulation.",
+      "payload_hash": "1a71c20d4699edd93a98c532ccfc0ed987f30d7a4f909f575fab99d2399ad5af",
+      "question_hash": "67f99e92471c5fe2be3153217a888775aaa08e4e292d1c81e6e4d9c33df7d0f8"
+    },
+    {
+      "opaque_context_id": "ctx_val_0005",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses confidence distribution collapse and adaptive floor quantiles, but omits the one-pass gate reliability metric πkept and its strict filtering decision threshold.",
+      "rationale": "Passages 1 and 2 duplicate text discussing confidence dynamic range collapse, and Passage 3 discusses adaptive floor retention without stating the πkept decision rule.",
+      "payload_hash": "336102bae73a952b18e3da714613610d0cd84154d3e1ba69d96fbd4f1c05a449",
+      "question_hash": "11351ded12b78da4f44c4fe7f4d0cfd2f4b1f78cc3f107d1354e65fb32b2d8d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0006",
+      "judgment": "sufficient",
+      "derivable_answer": "In UVIF, the unified encoder is optimized by classification losses in Eq. 8 defined as Lvideo = H(Y, pv) and Limage = H(ys, ps), where pv and ps are predicted probabilities and H is cross-entropy loss. In Eq. 9, two augmented views of each video frame vt are generated as v_weak_t = A_weak(vt) with weak augmentation (resizing, cropping, horizontal flipping) and v_strong_t = A_strong(vt) with strong augmentation (image compression and color perturbation).",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "The classification losses are defined as:\nLvideo =H(Y, pv),L image =H(y s, ps),(8)"
+        },
+        {
+          "passage_index": 3,
+          "quote": "we generate two augmented views\nfor each video frame v t:\nv weak\nt =A weak(vt), v strong\nt =A strong(vt),(9)"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 explicitly defines Eq. 8 for video and image cross-entropy classification losses, while Passage 3 explicitly gives Eq. 9 defining weak and strong augmented views of video frames.",
+      "payload_hash": "48bd8d4d35623aa97a5c9c5ad026b056fc932e5bca97a3214597b9001ccc8e0f",
+      "question_hash": "653e37a5eb0f9cd4be870051cf94cb5118cbef8177f5d8a853a84fd4cbe7d0d9"
+    },
+    {
+      "opaque_context_id": "ctx_val_0007",
+      "judgment": "sufficient",
+      "derivable_answer": "In SPARED, a heterogeneous, continuous-pixel-space adversary composed of a PaCo-gated, RL-trained diffusion image editor is paired with the decoupled reasoning-MLLM defender to prevent dataset-bias shortcuts.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "A heterogeneous, continuous-pixel-space adversary (a\nPaCo-gated, RL-trained diffusion image editor) paired\nwith a decoupled reasoning-MLLM defender, extending\nthe anti-collapse mechanisms of prior self-play systems\nto the vision domain."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the exact specification of the adversary architecture and generator paired with the reasoning-MLLM defender.",
+      "payload_hash": "c221a253a441b7bc78774969884896ea24d50484702b8e1286eeb33ff35f5bad",
+      "question_hash": "dfe79438a86fb1d682f77938369ef758a09e9671ab7be752c933b7474e7f38c0"
+    },
+    {
+      "opaque_context_id": "ctx_val_0008",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces the benchmark setup and open-weight models in Passages 1-3, but omits the five elicitation conditions (immediate_forced, grouped_runs, delayed_n_trials, post_streak_contextual, passive_unprompted).",
+      "rationale": "Passages 1 and 2 are duplicate introductory paragraphs, and Passage 3 lists local model architectures without presenting the five elicitation conditions.",
+      "payload_hash": "620f9bbacd12183b4aef1801e14f3c39694523d47fe852a31ed0fd0ba2c672ba",
+      "question_hash": "94fc8cf93aca6fe90341a56466ca64815131a20644e44cc9f6f480699d703b36"
+    },
+    {
+      "opaque_context_id": "ctx_val_0009",
+      "judgment": "sufficient",
+      "derivable_answer": "In VOS-Agent, the SAM3 Agent is implemented using the official SAM3 model; the Target Perception and Routing Agent and Semantic Agent are instantiated with Qwen3.5-397B-A17B; and the Visual Tracking Agent is instantiated with SUTrack receiving the first-frame mask RGB crop.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The SAM3 Agent is implemented using the official SAM3 model [1]. The Target\nPerception and Routing Agent is instantiated with Qwen3.5-397B-A17B [11]. The Visual Tracking Agent is instantiated with SUTrack [2] and receives the\nRGB crop enclosed by the first-frame mask as its visual exemplar. The Semantic Agent is instantiated with Qwen3.5-397B-A17B [11]"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly provides the complete implementation details naming the specific models and tools for each of the four agents.",
+      "payload_hash": "c587f589dc4fc6fac37a5f715fc62128bdf09fefbbfb0ae2178803d7fef56ee8",
+      "question_hash": "e515172d63abb4e92e66a24ecdbd8f06489a5d168432a610ac9f4084c9aeae59"
+    },
+    {
+      "opaque_context_id": "ctx_val_0010",
+      "judgment": "sufficient",
+      "derivable_answer": "In LOPD, a privileged-margin constraint ensures the teacher maintains a verifiable log-probability advantage over the student. At inference time, only the student is retained, requiring no experience database, retrieval module, composer, or latent context.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "we introduce a privileged-margin constraint that requires the teacher to maintain\na verifiable log-probability advantage over the student."
+        },
+        {
+          "passage_index": 1,
+          "quote": "After training, only the student is retained:\ninference requires no experience database, retrieval module, composer, or latent context."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly presents the privileged-margin constraint and states that only the student is retained at inference time without requiring any experience database, retrieval module, composer, or latent context.",
+      "payload_hash": "91f37c1addc1a3c06f89211bd7d7ef41d9444ff9e242a2fa50411a05716ac617",
+      "question_hash": "74fd8f9fea63f7981bfeec3bcf843ef365274df1b65deda0fbe433f782f944d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0011",
+      "judgment": "sufficient",
+      "derivable_answer": "In CW-BASS v2, the one-pass saturation gate evaluates the reliability of the teacher's confident set on a held-out slice as πkept = Pr[correct | c ≥ τ]; if πkept ≥ τ, it filters strictly, and falls back to a self-adaptive confidence floor otherwise.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "reliability of the teacher’s confident set, πkept= Pr[correct|c≥τ] ,\non a held-out slice, and filter strictly when it meets the confidence\ndemanded ( πkept≥τ), falling back to the adaptive floor otherwise."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 explicitly describes the one-pass saturation gate decision rule and gives the exact formula for πkept and threshold condition.",
+      "payload_hash": "b98e97f70362dbe33a75d5c440b886584a6b5fbd8e6a2743ab6b87a4cfa87df1",
+      "question_hash": "11351ded12b78da4f44c4fe7f4d0cfd2f4b1f78cc3f107d1354e65fb32b2d8d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0012",
+      "judgment": "sufficient",
+      "derivable_answer": "The five elicitation conditions are: (1) immediate_forced (model explains failure immediately after it occurs every time); (2) grouped_runs (model explains once at the end of a batch of trials); (3) delayed_n_trials (explanation elicited a fixed number of trials after failure); (4) post_streak_contextual (explanation elicited referencing the preceding success streak length); and (5) passive_unprompted (model is never asked to explain and any explanatory content is purely volunteered).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "(1) immediate_forced — the model is explicitly prompted to explain the failure immediately\nafter\nit\noccurs,\nevery\ntime. (2) grouped_runs — the model explains once at the end of a batch of trials, covering any\nfailures\nthat\noccurred\nwithin\nthat\nbatch. (3) delayed_n_trials — explanation is elicited a fixed number of trials after the failure, not\nimmediately. (4) post_streak_contextual — explanation is elicited with reference to the length of the\nsuccess\nstreak\nimmediately\npreceding\nthe\nfailure. (5) passive_unprompted — the model is never explicitly asked to explain a failure; any\nexplanatory\ncontent\nis\npurely\nvolunteered."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly lists and defines all five elicitation conditions under Section 3.3.",
+      "payload_hash": "ae7c5a515df8e6b8cf8ed4e5dafc70481ca69b648744d299ef10270d57741e8f",
+      "question_hash": "94fc8cf93aca6fe90341a56466ca64815131a20644e44cc9f6f480699d703b36"
+    },
+    {
+      "opaque_context_id": "ctx_val_0013",
+      "judgment": "sufficient",
+      "derivable_answer": "In DSCC, the perception stream aligns object-level hidden states at an intermediate layer to frozen text anchors through a bidirectional contrastive objective; the cognition stream allows deeper layers to query those anchors via cross-attention at every generation step; and a two-stage curriculum gate couples them during generation.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "a perception stream aligns object-level hidden states at an intermediate layer to frozen text\nanchors by a bidirectional contrastive objective; a cognition stream lets deeper layers query those\nanchors by cross-attention at every generation step; and a two-stage curriculum gate couples them"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly provides the complete functional description of both the perception stream and cognition stream and how they interact with object-level anchors.",
+      "payload_hash": "c6e13aa569c1a758d86dec693bd6e63086ada2805877a3a1f2f073f61f1337e8",
+      "question_hash": "7a8ff899f744da541feaaa50260b103dd8f52f3658202fd7e5a5cef0265fcd80"
+    },
+    {
+      "opaque_context_id": "ctx_val_0014",
+      "judgment": "sufficient",
+      "derivable_answer": "In VOS-Agent, the SAM3 Agent is implemented using the official SAM3 model; the Target Perception and Routing Agent and Semantic Agent are instantiated with Qwen3.5-397B-A17B; and the Visual Tracking Agent is instantiated with SUTrack receiving the first-frame mask RGB crop.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "The SAM3 Agent is implemented using the official SAM3 model [1]. The Target\nPerception and Routing Agent is instantiated with Qwen3.5-397B-A17B [11]. The Visual Tracking Agent is instantiated with SUTrack [2] and receives the\nRGB crop enclosed by the first-frame mask as its visual exemplar. The Semantic Agent is instantiated with Qwen3.5-397B-A17B [11]"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the exact model and tool implementations for all four agents.",
+      "payload_hash": "a06a4f4eb7e7063200458d9fb8b4d843f24482d4e10f6b1997baf4bd23922e5c",
+      "question_hash": "e515172d63abb4e92e66a24ecdbd8f06489a5d168432a610ac9f4084c9aeae59"
+    },
+    {
+      "opaque_context_id": "ctx_val_0015",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces video face forgery background and architecture schematic, but omits the mathematical formulation of classification losses in Eq. 8 and augmented view generation in Eq. 9.",
+      "rationale": "Passages 1-3 cover general problem background and model schematics without defining Eq. 8 or Eq. 9.",
+      "payload_hash": "dc5132fa9988febb7a1550cc2d3cba238739a02582bfbb95b8be2cd38dc480c3",
+      "question_hash": "653e37a5eb0f9cd4be870051cf94cb5118cbef8177f5d8a853a84fd4cbe7d0d9"
+    },
+    {
+      "opaque_context_id": "ctx_val_0016",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context presents 3D Gaussian splatting motivation and token scattering issues, but omits the anchor state tuple definition (µl_i, rl_i) and the support radius ray-proximity preference mechanism.",
+      "rationale": "Passages 1-3 describe general background and limitations of ungrounded tokens, but omit the anchor state definition and cross-attention geometric bias.",
+      "payload_hash": "491819fbd82e32bf989e19622c31edadbd85d123031bf90856f68d5fa8114787",
+      "question_hash": "67f99e92471c5fe2be3153217a888775aaa08e4e292d1c81e6e4d9c33df7d0f8"
+    },
+    {
+      "opaque_context_id": "ctx_val_0017",
+      "judgment": "sufficient",
+      "derivable_answer": "In CW-BASS v2, the one-pass saturation gate measures the reliability of the teacher's confident set on a held-out slice as πkept = Pr[correct | c ≥ τ]. When πkept ≥ τ, it filters strictly; otherwise, it falls back to a self-adaptive confidence floor.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "reliability of the teacher’s confident set, πkept= Pr[correct|c≥τ] ,\non a held-out slice, and filter strictly when it meets the confidence\ndemanded ( πkept≥τ), falling back to the adaptive floor otherwise."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly provides the complete decision rule for the one-pass saturation gate and defines πkept.",
+      "payload_hash": "51a9230bd146a782c8331f3a72d21d2a2dbb971a6f314093092313ae0e7c9dee",
+      "question_hash": "11351ded12b78da4f44c4fe7f4d0cfd2f4b1f78cc3f107d1354e65fb32b2d8d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0018",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces the LSVOS challenge and high-level agent roles in duplicate abstract passages, but omits Section 3.2 implementation details specifying Qwen3.5-397B-A17B and SUTrack.",
+      "rationale": "Passages 1 and 2 duplicate the high-level abstract, and Passage 3 describes challenge background without providing the agent implementation models.",
+      "payload_hash": "a5cdfe6466c151f4e7a8547cb1769306b578ab407fe403c1ad2d519dd24f12f2",
+      "question_hash": "e515172d63abb4e92e66a24ecdbd8f06489a5d168432a610ac9f4084c9aeae59"
+    },
+    {
+      "opaque_context_id": "ctx_val_0019",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces reasoning-based AI-generated image detection, but omits the specification of the adversary architecture (PaCo-gated, RL-trained diffusion image editor).",
+      "rationale": "Passages 1-3 discuss detection motivation and dataset-bias challenges without presenting the adversary architecture.",
+      "payload_hash": "fbb781caedfb71802c929c9b6607ba68cce4d31fa3240242003c3d3ebbdcac95",
+      "question_hash": "dfe79438a86fb1d682f77938369ef758a09e9671ab7be752c933b7474e7f38c0"
+    },
+    {
+      "opaque_context_id": "ctx_val_0020",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context presents the high-level abstract of ERSkill in duplicate passages, but lacks the definition of the three single-primitive seed skills (semantic-clue, entity-focus, surface-fact) and their search primitives.",
+      "rationale": "Passages 1 and 2 duplicate the abstract and Passage 3 reports benchmark metrics, but none contain the seed skill definitions.",
+      "payload_hash": "d14eca0f1ba77029e8ba3713571bddeffa17a5109ffc507d58b602d02d351ecc",
+      "question_hash": "51878e3d8eaac2750594206969400e874203c0aa0248890751d8d0323bd35636"
+    },
+    {
+      "opaque_context_id": "ctx_val_0021",
+      "judgment": "sufficient",
+      "derivable_answer": "In LOPD, a privileged-margin constraint ensures the teacher maintains a verifiable log-probability advantage over the student. At inference time, only the student is retained, requiring no experience database, retrieval module, composer, or latent context.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "we introduce a privileged-margin constraint that requires the teacher to maintain\na verifiable log-probability advantage over the student."
+        },
+        {
+          "passage_index": 2,
+          "quote": "After training, only the student is retained:\ninference requires no experience database, retrieval module, composer, or latent context."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 directly gives both the privileged-margin constraint and the inference-time requirement showing that only the student is retained without external modules or databases.",
+      "payload_hash": "c1a5df3b23cdc97f315b605420ba933a99e0c898c8363728b96bd920beb6949b",
+      "question_hash": "74fd8f9fea63f7981bfeec3bcf843ef365274df1b65deda0fbe433f782f944d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0022",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes the MOSE and MOSEv2 challenge settings, but omits the specific implementation models (Qwen3.5-397B-A17B, SUTrack) instantiating the agents.",
+      "rationale": "Passages 1-3 describe video segmentation challenge history without providing Section 3.2 implementation models.",
+      "payload_hash": "fe241835414d8db9fa08fec653b54f26ff578826ae55aa3bd9a9a3f38a7e8448",
+      "question_hash": "e515172d63abb4e92e66a24ecdbd8f06489a5d168432a610ac9f4084c9aeae59"
+    },
+    {
+      "opaque_context_id": "ctx_val_0023",
+      "judgment": "sufficient",
+      "derivable_answer": "In Keshet and Abney's description-based account, a pronoun presupposes that its corresponding antecedent description is instantiated in each world of the context set. The formal logic used to implement this proposal is the Plural Intensional Presuppositional predicate calculus (PIP).",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "We propose that a pronoun presupposes that its corresponding\nantecedent description is instantiated in each world of the context set."
+        },
+        {
+          "passage_index": 1,
+          "quote": "We implement our proposal via a new logic (building on work\nby Keshet (2018) and Abney & Keshet (2022)) that we name Plural Intensional\nPresuppositional predicate calculus (or PIP)."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly states the antecedent description presupposition and names the formal logic as Plural Intensional Presuppositional predicate calculus (PIP).",
+      "payload_hash": "5ca5dfe01ce8829eae799d71be3c049108f0ff9e01e36cadda78b170685d2d1c",
+      "question_hash": "1ae7a27a3ca3d779078d7e3061b8b1e5db5cd90079c1176a0fffd1f70fc9f793"
+    },
+    {
+      "opaque_context_id": "ctx_val_0024",
+      "judgment": "sufficient",
+      "derivable_answer": "In ERSkill, the three single-primitive seed skills and their primitives that initialize the capability and deploy frontiers are: semantic-clue with dense_search, entity-focus with entity_search, and surface-fact with lexical_search.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Evolution starts from three single-primitive seed skills: semantic-clue with dense_search,\nentity-focus with entity_search, and surface-fact with lexical_search; both frontiers\nare initialized from them, so B0 =C 0."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 directly lists the three seed skills (semantic-clue, entity-focus, surface-fact) and their associated search primitives (dense_search, entity_search, lexical_search) initializing the frontiers.",
+      "payload_hash": "b989fa65643f4ca576912370920b2e2902d06e53cd43870091d350a9f65ef57a",
+      "question_hash": "51878e3d8eaac2750594206969400e874203c0aa0248890751d8d0323bd35636"
+    },
+    {
+      "opaque_context_id": "ctx_val_0025",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces animation character copyright concerns and author affiliations, but lacks Eq. 19 and the continuous fine-grained interpolation formula between anchor and target embeddings.",
+      "rationale": "Passages 1 and 2 duplicate the title and author listing, and Passage 3 gives publication metadata without presenting Eq. 19.",
+      "payload_hash": "148297d25bbac3c42f7e4b0b79f70728f5d7814df2fe4a6bf6a4fb6988f9b0bd",
+      "question_hash": "d4df3b775b9a83f4156cdf65bf9f2ca87d28b50bb29507142fe9b432ea014658"
+    },
+    {
+      "opaque_context_id": "ctx_val_0026",
+      "judgment": "sufficient",
+      "derivable_answer": "In DSCC, the perception stream aligns object-level hidden states at an intermediate layer to frozen text anchors through a bidirectional contrastive objective; the cognition stream allows deeper layers to query those anchors via cross-attention at every generation step; and a two-stage curriculum gate couples them during generation.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "a perception stream aligns object-level hidden states at an intermediate layer to frozen text\nanchors by a bidirectional contrastive objective; a cognition stream lets deeper layers query those\nanchors by cross-attention at every generation step; and a two-stage curriculum gate couples them"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly defines the functional roles of the perception and cognition streams and their interaction with object-level visual anchors.",
+      "payload_hash": "03df46a62ddb0976ebdf7713bfbefad17d181a7dc49ffd74ccf617ec4b5073ef",
+      "question_hash": "7a8ff899f744da541feaaa50260b103dd8f52f3658202fd7e5a5cef0265fcd80"
+    },
+    {
+      "opaque_context_id": "ctx_val_0027",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context describes dynamic threshold collapse and earlier CW-BASS mechanisms, but omits the one-pass saturation gate formula for πkept and its thresholding rule.",
+      "rationale": "Passages 1-3 discuss confidence collapse and adaptive floors without stating the πkept decision rule.",
+      "payload_hash": "fa9d06c739c4a51d566b74a47dd9854a71a8b2e30ed544e55756dd60b95a6f01",
+      "question_hash": "11351ded12b78da4f44c4fe7f4d0cfd2f4b1f78cc3f107d1354e65fb32b2d8d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0028",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces the benchmark repository and high-level parity claim in duplicate passages, but omits the 1,431x cost ratio and the identification of reasoning-intensive retrieval as the category where LLMs lead.",
+      "rationale": "Passages 1 and 2 duplicate the code release URL, and Passage 3 discusses general parity without providing the numerical cost ratio or reasoning-intensive retrieval breakdown.",
+      "payload_hash": "50d9385c7fcaf6aa9668020ea8f1c6730999a132e831e3e62811614910b88c4b",
+      "question_hash": "aae5cd77adfc5731f94fb9c001edc756e1bc102ca6b292711fab2b162f4e1959"
+    },
+    {
+      "opaque_context_id": "ctx_val_0029",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces ERSkill's high-level framework and average score improvements, but lacks the definition of the three single-primitive seed skills and their search primitives.",
+      "rationale": "Passages 1-3 cover the abstract and figure snippet without defining the seed skills.",
+      "payload_hash": "85691756b201f2ec4d93d7bd73365c4af46c808fc98ccec1630c592d59859107",
+      "question_hash": "51878e3d8eaac2750594206969400e874203c0aa0248890751d8d0323bd35636"
+    },
+    {
+      "opaque_context_id": "ctx_val_0030",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context outlines character erasure motivation and copyright background, but omits Eq. 19 and the continuous interpolation formulation between anchor and target embeddings.",
+      "rationale": "Passages 1-3 provide paper title, copyright notice, and abstract fragment without presenting Eq. 19.",
+      "payload_hash": "902369a22a3df277794aebda9fd59e2000f1061206098db1b144e4695c6aa523",
+      "question_hash": "d4df3b775b9a83f4156cdf65bf9f2ca87d28b50bb29507142fe9b432ea014658"
+    },
+    {
+      "opaque_context_id": "ctx_val_0031",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context defines the anchor state tuple (µl_i, rl_i) in Passage 1, but omits the cross-attention formulation explaining how support radius rl_i controls the spatial extent of ray-proximity preference.",
+      "rationale": "Passage 1 provides the anchor state definition (µl_i, rl_i) with center and spatial support radius, but the context does not contain Section 3.2.4 describing the anchor-to-ray cross-attention preference mechanism.",
+      "payload_hash": "5ac0a4eb6cdf40f109494c78003e16cae390e8accc77d01e879ec58f7b747cb0",
+      "question_hash": "67f99e92471c5fe2be3153217a888775aaa08e4e292d1c81e6e4d9c33df7d0f8"
+    },
+    {
+      "opaque_context_id": "ctx_val_0032",
+      "judgment": "sufficient",
+      "derivable_answer": "Gemini 3.1 Pro costs 1,431 times as much as a comparable embedding model ($154 vs $0.11 per benchmark pass). LLMs maintain a distinct lead on reasoning-intensive retrieval, while embedding models remain the efficient default for classification, similarity, and clustering.",
+      "supporting_quotations": [
+        {
+          "passage_index": 3,
+          "quote": "The cost gap is large.Gemini 3.1 Pro costs 1,431 × as much as a comparable\nembedding model, and the gap persists across hardware scenarios."
+        },
+        {
+          "passage_index": 3,
+          "quote": "Embedding pipelines\nremain the efficient default for classification, similarity, and clustering; LLMs are most\nuseful for reasoning-intensive retrieval."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 3 explicitly specifies the 1,431x cost ratio between Gemini 3.1 Pro and a comparable embedding model, and identifies reasoning-intensive retrieval as the task category where LLMs maintain a lead.",
+      "payload_hash": "3d349d62b7baea4359299d7930a8acc278a2373d62dbf5c35d41fb62aafcf82c",
+      "question_hash": "aae5cd77adfc5731f94fb9c001edc756e1bc102ca6b292711fab2b162f4e1959"
+    },
+    {
+      "opaque_context_id": "ctx_val_0033",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context presents the introduction and motivation of video face forgery detection in duplicate passages, but lacks Eq. 8 classification losses and Eq. 9 augmented view generation.",
+      "rationale": "Passages 1 and 2 duplicate the paper header, and Passage 3 describes face forgery motivation without giving Eq. 8 or Eq. 9.",
+      "payload_hash": "c01aafebbfd502c640c4c582268eca4eb35b5a6a3e092332b9af214631ae01be",
+      "question_hash": "653e37a5eb0f9cd4be870051cf94cb5118cbef8177f5d8a853a84fd4cbe7d0d9"
+    },
+    {
+      "opaque_context_id": "ctx_val_0034",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces the LOPD title and high-level abstract in duplicate passages, but omits the privileged-margin constraint and inference-time independence requirements.",
+      "rationale": "Passages 1 and 2 duplicate the title and author listing, and Passage 3 gives an empirical summary without providing the privileged-margin constraint.",
+      "payload_hash": "d8b2533141ca9e709f4ad8481f779e9944c2f6c3f0762383c02d99ff5429b69d",
+      "question_hash": "74fd8f9fea63f7981bfeec3bcf843ef365274df1b65deda0fbe433f782f944d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0035",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context outlines evaluation metrics and API token tracking methodology, but lacks the specific 1,431x cost ratio and the identification of reasoning-intensive retrieval as the category where LLMs lead.",
+      "rationale": "Passages 1-3 describe benchmark setup and code repository without reporting the 1,431x cost ratio or task category breakdown.",
+      "payload_hash": "808a0f28b56a836a056a5852174f18b94ea5fb6ca0feba68db75aff23dee6687",
+      "question_hash": "aae5cd77adfc5731f94fb9c001edc756e1bc102ca6b292711fab2b162f4e1959"
+    },
+    {
+      "opaque_context_id": "ctx_val_0036",
+      "judgment": "sufficient",
+      "derivable_answer": "In ERSkill, the three single-primitive seed skills and their search primitives that initialize the capability and deploy frontiers are: semantic-clue with dense_search, entity-focus with entity_search, and surface-fact with lexical_search.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "Evolution starts from three single-primitive seed skills: semantic-clue with dense_search,\nentity-focus with entity_search, and surface-fact with lexical_search; both frontiers\nare initialized from them, so B0 =C 0."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 explicitly specifies the three single-primitive seed skills and their corresponding search primitives.",
+      "payload_hash": "1556f054df5895137e9231f5f3724b71e84e076904ffb7052b5ffab81505961d",
+      "question_hash": "51878e3d8eaac2750594206969400e874203c0aa0248890751d8d0323bd35636"
+    },
+    {
+      "opaque_context_id": "ctx_val_0037",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces reasoning-based AI-generated image detection in duplicate passages, but lacks the adversary architecture details specifying a PaCo-gated, RL-trained diffusion image editor.",
+      "rationale": "Passages 1 and 2 duplicate the abstract and Passage 3 introduces AIGI detection without giving the adversary generator details.",
+      "payload_hash": "f0f2c75dbdb91c48585e5d316fb78183b1b41685e2d50e2ded62e46b37bbfde8",
+      "question_hash": "dfe79438a86fb1d682f77938369ef758a09e9671ab7be752c933b7474e7f38c0"
+    },
+    {
+      "opaque_context_id": "ctx_val_0038",
+      "judgment": "sufficient",
+      "derivable_answer": "In Keshet and Abney's description-based account, a pronoun presupposes that its corresponding antecedent description is instantiated in each world of the context set. The formal logic used to implement this proposal is the Plural Intensional Presuppositional predicate calculus (PIP).",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "We propose that a pronoun presupposes that its corresponding\nantecedent description is instantiated in each world of the context set."
+        },
+        {
+          "passage_index": 2,
+          "quote": "We implement our proposal via a new logic (building on work\nby Keshet (2018) and Abney & Keshet (2022)) that we name Plural Intensional\nPresuppositional predicate calculus (or PIP)."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 directly provides both the antecedent description presupposition and names the Plural Intensional Presuppositional predicate calculus (PIP) logic.",
+      "payload_hash": "166c87268ea3f3ecfb0c0bfdf759ab10fc0ebeaff51b58ca8256f1d67a7e6475",
+      "question_hash": "1ae7a27a3ca3d779078d7e3061b8b1e5db5cd90079c1176a0fffd1f70fc9f793"
+    },
+    {
+      "opaque_context_id": "ctx_val_0039",
+      "judgment": "sufficient",
+      "derivable_answer": "In LocusGS, each query's anchor state at decoder layer l is defined as a^l_i = (µl_i, r^l_i), where µl_i ∈ R^3 is the 3D center and r^l_i ∈ R+ is its spatial support radius. In cross-attention, image tokens whose camera rays pass closer to the 3D anchor are considered more relevant, with the support radius r^l_i controlling the spatial extent of this preference.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "al\ni = (µl\ni, rl\ni)\nwhere µl\ni ∈R 3 is the center and rl\ni ∈R + is its spatial support radius."
+        },
+        {
+          "passage_index": 3,
+          "quote": "Image tokens whose rays pass closer to the anchor are considered more\nrelevant, while the support radius r l\ni controls the spatial extent of this preference."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the anchor state definition (µl_i, rl_i), and Passage 3 explicates the anchor-to-ray proximity preference in cross-attention governed by support radius r^l_i.",
+      "payload_hash": "9937e5e5f5c92d51290ebf0492fe4b2bbfdb81caef8ad197c6827bb548e6c2a2",
+      "question_hash": "67f99e92471c5fe2be3153217a888775aaa08e4e292d1c81e6e4d9c33df7d0f8"
+    },
+    {
+      "opaque_context_id": "ctx_val_0040",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context presents long-caption hallucination metrics in duplicate passages, but omits the description of how the perception stream and cognition stream interact with visual anchors.",
+      "rationale": "Passages 1 and 2 duplicate the long-caption result snippet, and Passage 3 introduces MLLM background without presenting the DSCC architecture.",
+      "payload_hash": "150fc2037c9b369160c637bf5a726fde5508f8984fdb02c8a85d6b48b4bd7647",
+      "question_hash": "7a8ff899f744da541feaaa50260b103dd8f52f3658202fd7e5a5cef0265fcd80"
+    },
+    {
+      "opaque_context_id": "ctx_val_0041",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces intensional anaphora and formal felicity conditions, but omits the core description-based account, the presupposition of antecedent description instantiation, and the PIP logic.",
+      "rationale": "Passages 1-3 describe value-based limitations and predicate calculus felicity conditions without presenting the description-based account or PIP logic.",
+      "payload_hash": "324fd3d74a91631537b6ebba9408a7ac8acb93a9aeb032b0111fa0cbbf1b319f",
+      "question_hash": "1ae7a27a3ca3d779078d7e3061b8b1e5db5cd90079c1176a0fffd1f70fc9f793"
+    },
+    {
+      "opaque_context_id": "ctx_val_0042",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context discusses general RL and self-distillation motivation, but omits the privileged-margin constraint and inference requirements.",
+      "rationale": "Passages 1-3 outline problem motivation and related work without presenting the privileged-margin constraint.",
+      "payload_hash": "eef03cb6d158e9444085de99fe28e155b021f3438840c2b2760a53d1e60149f0",
+      "question_hash": "74fd8f9fea63f7981bfeec3bcf843ef365274df1b65deda0fbe433f782f944d4"
+    },
+    {
+      "opaque_context_id": "ctx_val_0043",
+      "judgment": "sufficient",
+      "derivable_answer": "Gemini 3.1 Pro costs 1,431 times as much as a comparable embedding model ($154 vs $0.11 per benchmark pass). Embedding pipelines remain the efficient default for classification, similarity, and clustering, while LLMs maintain a distinct lead on reasoning-intensive retrieval.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "The cost gap is large.Gemini 3.1 Pro costs 1,431 × as much as a comparable\nembedding model, and the gap persists across hardware scenarios."
+        },
+        {
+          "passage_index": 1,
+          "quote": "Embedding pipelines\nremain the efficient default for classification, similarity, and clustering; LLMs are most\nuseful for reasoning-intensive retrieval."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly provides the 1,431x cost ratio between Gemini 3.1 Pro and an embedding model and specifies that LLMs are most useful for reasoning-intensive retrieval.",
+      "payload_hash": "7b31a4ebb38bcf1b59091320310de2d60822f507b58a5a66948c282923bcfe30",
+      "question_hash": "aae5cd77adfc5731f94fb9c001edc756e1bc102ca6b292711fab2b162f4e1959"
+    },
+    {
+      "opaque_context_id": "ctx_val_0044",
+      "judgment": "sufficient",
+      "derivable_answer": "In Eq. 19, continuous fine-grained control is achieved through e' = e_anchor + α · (e_target - e_anchor) for α ∈ [0, 1]. It interpolates between anchor embedding e_anchor (representing complete erasure when α = 0) and target embedding e_target (representing no erasure when α = 1), with α governing interpolation strength.",
+      "supporting_quotations": [
+        {
+          "passage_index": 1,
+          "quote": "Continuous fine-grained control is achieved through:\n𝑒\n′\n=𝑒𝑎𝑛𝑐ℎ𝑜𝑟+𝛼·(𝑒 𝑡𝑎𝑟𝑔𝑒𝑡−𝑒𝑎𝑛𝑐ℎ𝑜𝑟), 𝛼∈[0,1](19)"
+        },
+        {
+          "passage_index": 1,
+          "quote": "This formulation interpolates between anchor embedding𝑒𝑎𝑛𝑐ℎ𝑜𝑟\n(complete erasure) and target embedding𝑒𝑡𝑎𝑟𝑔𝑒𝑡 (no erasure), where\n𝛼 governs the interpolation strength."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 1 explicitly presents Eq. 19 and defines what its endpoints (e_anchor for complete erasure and e_target for no erasure) and parameter α represent.",
+      "payload_hash": "178ae9fa3c7713b1f52be48792bdbf055934426e4b7788fe98e3a2e5558986d4",
+      "question_hash": "d4df3b775b9a83f4156cdf65bf9f2ca87d28b50bb29507142fe9b432ea014658"
+    },
+    {
+      "opaque_context_id": "ctx_val_0045",
+      "judgment": "sufficient",
+      "derivable_answer": "Continuous control is achieved by Eq. 19: e' = e_anchor + α · (e_target - e_anchor) with α ∈ [0, 1]. It interpolates between the anchor embedding e_anchor (complete erasure at α = 0) and the target embedding e_target (no erasure at α = 1).",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "Continuous fine-grained control is achieved through:\n𝑒\n′\n=𝑒𝑎𝑛𝑐ℎ𝑜𝑟+𝛼·(𝑒 𝑡𝑎𝑟𝑔𝑒𝑡−𝑒𝑎𝑛𝑐ℎ𝑜𝑟), 𝛼∈[0,1](19)"
+        },
+        {
+          "passage_index": 2,
+          "quote": "This formulation interpolates between anchor embedding𝑒𝑎𝑛𝑐ℎ𝑜𝑟\n(complete erasure) and target embedding𝑒𝑡𝑎𝑟𝑔𝑒𝑡 (no erasure), where\n𝛼 governs the interpolation strength."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 gives the exact mathematical formulation of Eq. 19 and defines the anchor and target endpoints.",
+      "payload_hash": "487d6ad8757e6a38decf0cebd3d7dd3c129cb68ac42c1885d651b41c703a0597",
+      "question_hash": "d4df3b775b9a83f4156cdf65bf9f2ca87d28b50bb29507142fe9b432ea014658"
+    },
+    {
+      "opaque_context_id": "ctx_val_0046",
+      "judgment": "insufficient",
+      "derivable_answer": "",
+      "supporting_quotations": [],
+      "missing_information": "Context introduces object hallucination and co-occurrence bias in long captions, but omits the description of how the perception and cognition streams interact with visual anchors.",
+      "rationale": "Passages 1-3 discuss long-caption hallucination causes without presenting the DSCC perception or cognition streams.",
+      "payload_hash": "ec68fb296b1d6fb3cd5e81ffd20fb48d93cad1a50a2e9986d3d2c7ce57f26e15",
+      "question_hash": "7a8ff899f744da541feaaa50260b103dd8f52f3658202fd7e5a5cef0265fcd80"
+    },
+    {
+      "opaque_context_id": "ctx_val_0047",
+      "judgment": "sufficient",
+      "derivable_answer": "The five elicitation conditions governing when and how a model explains tool failure are: (1) immediate_forced, (2) grouped_runs, (3) delayed_n_trials, (4) post_streak_contextual, and (5) passive_unprompted.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "(1) immediate_forced — the model is explicitly prompted to explain the failure immediately\nafter\nit\noccurs,\nevery\ntime. (2) grouped_runs — the model explains once at the end of a batch of trials, covering any\nfailures\nthat\noccurred\nwithin\nthat\nbatch. (3) delayed_n_trials — explanation is elicited a fixed number of trials after the failure, not\nimmediately. (4) post_streak_contextual — explanation is elicited with reference to the length of the\nsuccess\nstreak\nimmediately\npreceding\nthe\nfailure. (5) passive_unprompted — the model is never explicitly asked to explain a failure; any\nexplanatory\ncontent\nis\npurely\nvolunteered."
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 directly provides all five elicitation conditions and their operational definitions.",
+      "payload_hash": "ff77c6b578074eb1ed629380368351f7b7f8195c2734daa46b92de37139d667a",
+      "question_hash": "94fc8cf93aca6fe90341a56466ca64815131a20644e44cc9f6f480699d703b36"
+    },
+    {
+      "opaque_context_id": "ctx_val_0048",
+      "judgment": "sufficient",
+      "derivable_answer": "In UVIF, the classification losses optimizing the unified encoder in Eq. 8 are Lvideo = H(Y, pv) for video inputs and Limage = H(ys, ps) for image inputs. In Eq. 9, two augmented views of each video frame vt are generated as v_weak_t = A_weak(vt) with weak augmentations and v_strong_t = A_strong(vt) with strong augmentations.",
+      "supporting_quotations": [
+        {
+          "passage_index": 2,
+          "quote": "The classification losses are defined as:\nLvideo =H(Y, pv),L image =H(y s, ps),(8)"
+        },
+        {
+          "passage_index": 1,
+          "quote": "we generate two augmented views\nfor each video frame v t:\nv weak\nt =A weak(vt), v strong\nt =A strong(vt),(9)"
+        }
+      ],
+      "missing_information": "",
+      "rationale": "Passage 2 provides Eq. 8 defining the video and image classification losses, and Passage 1 provides Eq. 9 defining the weak and strong augmented views of video frames.",
+      "payload_hash": "5b284d7c4fc697146adfedd839807ab64a963a23fd2332add91825ad77dd4a56",
+      "question_hash": "653e37a5eb0f9cd4be870051cf94cb5118cbef8177f5d8a853a84fd4cbe7d0d9"
+    }
+  ]
+}

@@ -1,0 +1,720 @@
+{
+  "timestamp": "2026-11-03 19:42:21",
+  "status": "DEVELOPMENT_EXCERPT_PRESENCE_PROXY_LABELS",
+  "provenance_note": "Evaluated on DEVELOPMENT_EXCERPT_PRESENCE_PROXY_LABELS. No context-by-context semantic review was performed. An excerpt's presence does not guarantee sufficiency, and its absence does not establish insufficiency. These reported pilot results measure agreement with an excerpt-presence proxy, not verified evidence sufficiency, and must not be described as supporting the research hypothesis.",
+  "split_metadata": {
+    "num_connected_components": 4,
+    "train_families_count": 2,
+    "val_families_count": 1,
+    "test_families_count": 1,
+    "target_paper_leakage_detected": false,
+    "target_paper_leakage_details": {
+      "train_val": [],
+      "train_test": [],
+      "val_test": []
+    },
+    "contextual_paper_overlap": {
+      "train_val": [],
+      "train_test": [],
+      "val_test": []
+    },
+    "exact_text_overlap_count": {
+      "train_val": 0,
+      "train_test": 0,
+      "val_test": 0
+    },
+    "family_to_component_id": {
+      "synth_fam_0": "comp_000_paper_0",
+      "synth_fam_1": "comp_001_paper_1",
+      "synth_fam_2": "comp_002_paper_2",
+      "synth_fam_3": "comp_003_paper_3"
+    }
+  },
+  "sample_counts": {
+    "total_families": 4,
+    "train_contexts": 4,
+    "val_contexts": 2,
+    "test_contexts": 2
+  },
+  "model_evaluations": {
+    "B0_AlwaysAccept": {
+      "evaluation_type": "full_coverage_risk_baseline",
+      "achieved_coverage": 1.0,
+      "accepted_count": 2,
+      "evidence_selection_risk": 0.5,
+      "type1_error_insufficient_accepted": 1.0,
+      "type2_error_sufficient_rejected": 0.0
+    },
+    "B2_FrozenHistoricalGate": {
+      "evaluation_type": "discrete_binary_decision_baseline",
+      "achieved_coverage": 0.5,
+      "accepted_count": 1,
+      "evidence_selection_risk": 0.0,
+      "type1_error_insufficient_accepted": 0.0,
+      "type2_error_sufficient_rejected": 0.0
+    },
+    "B1_ValidationTunedThreshold": {
+      "evaluation_type": "continuous_ranking_model",
+      "aurc": 0.25,
+      "is_all_tied": false,
+      "matched_coverage_descriptive": {
+        "0.5": {
+          "expected_risk": 0.0,
+          "k": 1,
+          "achieved_coverage": 0.5,
+          "is_attainable": true
+        },
+        "0.75": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        },
+        "0.9": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        }
+      },
+      "deployable_operating_points": {
+        "target_cov_0.50": {
+          "frozen_validation_threshold": 0.88,
+          "achieved_test_coverage": 0.5,
+          "accepted_count": 1,
+          "evidence_selection_risk": 0.0,
+          "type1_error_insufficient_accepted": 0.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.75": {
+          "frozen_validation_threshold": 0.4,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.90": {
+          "frozen_validation_threshold": 0.4,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        }
+      }
+    },
+    "M1_Relevance_Raw": {
+      "evaluation_type": "continuous_ranking_model",
+      "aurc": 0.25,
+      "is_all_tied": false,
+      "matched_coverage_descriptive": {
+        "0.5": {
+          "expected_risk": 0.0,
+          "k": 1,
+          "achieved_coverage": 0.5,
+          "is_attainable": true
+        },
+        "0.75": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        },
+        "0.9": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        }
+      },
+      "deployable_operating_points": {
+        "target_cov_0.50": {
+          "frozen_validation_threshold": 0.9965,
+          "achieved_test_coverage": 0.5,
+          "accepted_count": 1,
+          "evidence_selection_risk": 0.0,
+          "type1_error_insufficient_accepted": 0.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.75": {
+          "frozen_validation_threshold": 0.0035,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.90": {
+          "frozen_validation_threshold": 0.0035,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        }
+      }
+    },
+    "M2_Relevance_Dedup": {
+      "evaluation_type": "continuous_ranking_model",
+      "aurc": 0.25,
+      "is_all_tied": false,
+      "matched_coverage_descriptive": {
+        "0.5": {
+          "expected_risk": 0.0,
+          "k": 1,
+          "achieved_coverage": 0.5,
+          "is_attainable": true
+        },
+        "0.75": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        },
+        "0.9": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        }
+      },
+      "deployable_operating_points": {
+        "target_cov_0.50": {
+          "frozen_validation_threshold": 0.9965,
+          "achieved_test_coverage": 0.5,
+          "accepted_count": 1,
+          "evidence_selection_risk": 0.0,
+          "type1_error_insufficient_accepted": 0.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.75": {
+          "frozen_validation_threshold": 0.0035,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.90": {
+          "frozen_validation_threshold": 0.0035,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        }
+      }
+    },
+    "M3_Full_Raw": {
+      "evaluation_type": "continuous_ranking_model",
+      "aurc": 0.25,
+      "is_all_tied": false,
+      "matched_coverage_descriptive": {
+        "0.5": {
+          "expected_risk": 0.0,
+          "k": 1,
+          "achieved_coverage": 0.5,
+          "is_attainable": true
+        },
+        "0.75": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        },
+        "0.9": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        }
+      },
+      "deployable_operating_points": {
+        "target_cov_0.50": {
+          "frozen_validation_threshold": 0.9975,
+          "achieved_test_coverage": 0.5,
+          "accepted_count": 1,
+          "evidence_selection_risk": 0.0,
+          "type1_error_insufficient_accepted": 0.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.75": {
+          "frozen_validation_threshold": 0.0025,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.90": {
+          "frozen_validation_threshold": 0.0025,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        }
+      }
+    },
+    "M4_Full_Dedup": {
+      "evaluation_type": "continuous_ranking_model",
+      "aurc": 0.25,
+      "is_all_tied": false,
+      "matched_coverage_descriptive": {
+        "0.5": {
+          "expected_risk": 0.0,
+          "k": 1,
+          "achieved_coverage": 0.5,
+          "is_attainable": true
+        },
+        "0.75": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        },
+        "0.9": {
+          "expected_risk": 0.5,
+          "k": 2,
+          "achieved_coverage": 1.0,
+          "is_attainable": true
+        }
+      },
+      "deployable_operating_points": {
+        "target_cov_0.50": {
+          "frozen_validation_threshold": 0.9975,
+          "achieved_test_coverage": 0.5,
+          "accepted_count": 1,
+          "evidence_selection_risk": 0.0,
+          "type1_error_insufficient_accepted": 0.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.75": {
+          "frozen_validation_threshold": 0.0025,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        },
+        "target_cov_0.90": {
+          "frozen_validation_threshold": 0.0025,
+          "achieved_test_coverage": 1.0,
+          "accepted_count": 2,
+          "evidence_selection_risk": 0.5,
+          "type1_error_insufficient_accepted": 1.0,
+          "type2_error_sufficient_rejected": 0.0
+        }
+      }
+    }
+  },
+  "training_class_balance": {
+    "positive_count": 2,
+    "negative_count": 2,
+    "is_binary": true
+  },
+  "cluster_bootstrap": {
+    "num_clusters": 1,
+    "models": {
+      "B0_AlwaysAccept": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "B2_FrozenHistoricalGate": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "B1_ValidationTunedThreshold": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "B1_ValidationTunedThreshold@target_cov_0.50": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "B1_ValidationTunedThreshold@target_cov_0.75": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "B1_ValidationTunedThreshold@target_cov_0.90": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M1_Relevance_Raw": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M1_Relevance_Raw@target_cov_0.50": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M1_Relevance_Raw@target_cov_0.75": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M1_Relevance_Raw@target_cov_0.90": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M2_Relevance_Dedup": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M2_Relevance_Dedup@target_cov_0.50": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M2_Relevance_Dedup@target_cov_0.75": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M2_Relevance_Dedup@target_cov_0.90": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M3_Full_Raw": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M3_Full_Raw@target_cov_0.50": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M3_Full_Raw@target_cov_0.75": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M3_Full_Raw@target_cov_0.90": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M4_Full_Dedup": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M4_Full_Dedup@target_cov_0.50": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M4_Full_Dedup@target_cov_0.75": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      },
+      "M4_Full_Dedup@target_cov_0.90": {
+        "aurc_ci_95": [
+          null,
+          null
+        ],
+        "risk_ci_95": [
+          null,
+          null
+        ],
+        "type1_ci_95": [
+          null,
+          null
+        ],
+        "type2_ci_95": [
+          null,
+          null
+        ]
+      }
+    },
+    "paired_differences": {}
+  },
+  "total_elapsed_sec": 0.045
+}

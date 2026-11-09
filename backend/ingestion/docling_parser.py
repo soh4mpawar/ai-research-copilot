@@ -1,8 +1,8 @@
 """
-Docling & PyPDF Layout Parser Engine (Phase 1 / FR-1, FR-10, PRD §7.1).
-Parses PDF files directly using PyPDF & Docling layout analyzers.
-Extracts 100% real section text (Abstract, Introduction, Methodology, Results, Conclusion, References).
-Applies OCR quality check and excludes unparseable or low-confidence PDFs (<20 words).
+PyPDF-Based PDF Parser Engine (Phase 1 / FR-1, FR-10, PRD §7.1).
+Parses PDF files directly using PyPDF layout extraction.
+Extracts real section text (Abstract, Introduction, Methodology, Results, Conclusion, References).
+Applies quality check and excludes unparseable or low-confidence PDFs (<20 words).
 """
 
 import os
@@ -13,17 +13,18 @@ from backend.ingestion.word_segmenter import ViterbiWordSegmenter
 
 
 class ProductionDoclingParser:
-    """Production PDF parser with PyPDF & Docling layout extraction (FR-1, FR-10)."""
+    """Production PDF parser with PyPDF-based layout extraction (FR-1, FR-10)."""
 
     def __init__(self):
-        self.docling_available = True
+        self.docling_available = False
         self.segmenter = ViterbiWordSegmenter()
 
     def parse_pdf(self, pdf_path: str) -> Tuple[Optional[str], Optional[Dict[str, str]], Dict[str, Any]]:
         """Parse PDF file into Markdown and structured sections."""
         audit = {
             "pdf_path": pdf_path,
-            "docling_used": True,
+            "docling_used": False,
+            # OCR is not implemented in this version; ocr_attempted is intentionally False
             "ocr_attempted": False,
             "ocr_confidence": 1.0,
             "word_count": 0,

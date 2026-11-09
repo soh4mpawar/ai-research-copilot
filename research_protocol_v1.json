@@ -1,0 +1,120 @@
+{
+  "protocol_version": "1.0_frozen",
+  "protocol_name": "Controlled Benchmark Evaluation Protocol for Duplicate-Aware Source Aggregation",
+  "created_at": "2026-11-03T21:30:00Z",
+  "research_direction": "Duplicate-Aware Source Aggregation for Selective Scientific Question Answering",
+  "research_question": "Does aggregating distinct evidence by paper and section improve answer-or-abstain decisions over passage relevance thresholds, at matched answer coverage?",
+  "benchmark_scale": {
+    "total_question_families": 120,
+    "total_contexts": 480,
+    "split_allocation": {
+      "train": {
+        "families": 60,
+        "contexts": 240,
+        "single_passage_families": 30,
+        "multi_passage_families": 30
+      },
+      "val": {
+        "families": 24,
+        "contexts": 96,
+        "single_passage_families": 12,
+        "multi_passage_families": 12
+      },
+      "test": {
+        "families": 36,
+        "contexts": 144,
+        "single_passage_families": 18,
+        "multi_passage_families": 18
+      }
+    },
+    "conditions_per_family": [
+      "supported_candidate",
+      "relevant_replacement",
+      "duplicate_replacement",
+      "natural_retrieval"
+    ]
+  },
+  "experimental_design": {
+    "models": [
+      "B0_AlwaysAccept",
+      "B1_ValidationTunedThreshold",
+      "B2_FrozenHistoricalGate",
+      "B_Diag_Length",
+      "M1_Relevance_Raw",
+      "M2_Relevance_Dedup",
+      "M3_Full_Raw",
+      "M4_Full_Dedup"
+    ],
+    "regularization_grid_C": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "target_operating_coverages": [0.50, 0.75, 0.90],
+    "bootstrap_resamples": 2000,
+    "bootstrap_clustering": "connected_paper_components",
+    "primary_comparisons": [
+      {
+        "name": "structural_benefit_post_dedup",
+        "model_a": "M4_Full_Dedup",
+        "model_b": "M2_Relevance_Dedup"
+      },
+      {
+        "name": "dedup_benefit_with_structure",
+        "model_a": "M4_Full_Dedup",
+        "model_b": "M3_Full_Raw"
+      },
+      {
+        "name": "dedup_benefit_relevance_only",
+        "model_a": "M2_Relevance_Dedup",
+        "model_b": "M1_Relevance_Raw"
+      }
+    ]
+  },
+  "frozen_hashes": {
+    "split_manifest": {
+      "path": "data/metadata/full_benchmark_split_manifest.json",
+      "sha256": "7f7005c89813266a2826cc7a707c3a6101fbcf158a3796ea97578d422f044b2c"
+    },
+    "context_module": {
+      "path": "backend/selective/context.py",
+      "sha256": "f1c7cfa73fbbc0d53dc4991e51f893ef118eb24398020f838d218926b6c6260d"
+    },
+    "dataset_module": {
+      "path": "backend/selective/dataset.py",
+      "sha256": "127813a0ea6ff27b4a7846d38e90b22b398b71021459d1268b8d57a5542de890"
+    },
+    "features_module": {
+      "path": "backend/selective/features.py",
+      "sha256": "3bfe3af7148d875847d5322230c1f6d27fcd739fc622b5122255051d5bb6d422"
+    },
+    "models_module": {
+      "path": "backend/selective/models.py",
+      "sha256": "38cff672b496703723cc97856254819f363cdd41cc8add57d71e7a3ad99ad0d2"
+    },
+    "metrics_module": {
+      "path": "backend/selective/metrics.py",
+      "sha256": "f534778f4a84127600ebe7b9995c0705093dd335ed852f235c2560e965c2de0e"
+    },
+    "autorater_module": {
+      "path": "backend/selective/autorater.py",
+      "sha256": "6d92916b2bbe616d8801d7bbe7fd99fc250e4f70f3ca8969cc1d87a1042cf734"
+    },
+    "eval_runner": {
+      "path": "evaluation/run_selective_eval.py",
+      "sha256": "b690a62349de1688bdd33d2a1f9811ec827b0a5b7966a021bd3c4454a20aa7d8"
+    },
+    "full_benchmark_eval_runner": {
+      "path": "evaluation/run_full_benchmark_eval.py",
+      "sha256": "063cca8bcee9adb8971fa2bf81ab8dc93f34a9551cf4f46089382e9a3b2f9177"
+    },
+    "annotated_dataset": {
+      "path": "data/metadata/full_benchmark_120families_annotated.json",
+      "sha256": "ebe3bc684e2db2b19b87ca06595839fb20747af1fda10019feefe7e967b2049b"
+    },
+    "frozen_models": {
+      "path": "data/metadata/frozen_models_train_val.json",
+      "sha256": "3e977e4cdcb5b7a5d80fc58451356557704ddc6945f72c2eb8657af8dcb9bbbd"
+    },
+    "evaluation_results": {
+      "path": "data/metadata/full_benchmark_eval_results.json",
+      "sha256": "742bb98e97f5559683e7e8704fc8adcdccf71871042ce8822553ccc18443a9c1"
+    }
+  }
+}

@@ -80,8 +80,13 @@ class ResearchPipelineOrchestrator:
                 candidate_pool.extend(graph_candidates)
                 graph_candidate_count = len(graph_candidates)
 
+        t_retrieval_end = time.time()
+        retrieval_elapsed = t_retrieval_end - t0
+
         # 4. Cross-Encoder Reranking
+        t_rerank_start = time.time()
         reranked_candidates = self.reranker.rerank_chunks(query_text, candidate_pool, top_k=12)
+        reranking_elapsed = time.time() - t_rerank_start
 
         # 5. Grounded Answer Generation via Gemini
         result = self.qa_engine.generate_point_qa(
@@ -89,7 +94,9 @@ class ResearchPipelineOrchestrator:
             reranked_chunks=reranked_candidates,
             dense_count=len(dense_candidates),
             sparse_count=len(sparse_candidates),
-            rrf_count=len(fused_candidates)
+            rrf_count=len(fused_candidates),
+            retrieval_time_sec=retrieval_elapsed,
+            reranking_time_sec=reranking_elapsed
         )
 
         return result

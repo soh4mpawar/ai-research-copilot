@@ -1,0 +1,1256 @@
+{
+  "manifest_version": "2.0_corrected",
+  "description": "Full benchmark eligibility manifest and split allocations partitioning 160 eligible papers into train/val/test by paper component. Excludes all 40 historical development papers.",
+  "random_seed": 42,
+  "total_corpus_papers": 200,
+  "excluded_development_papers_count": 40,
+  "excluded_development_papers": [
+    {
+      "paper_id": "1409.1556",
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "category": "cs.CV",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "1512.03385",
+      "title": "Deep Residual Learning for Image Recognition",
+      "category": "cs.CV",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "1703.06870",
+      "title": "Mask R-CNN",
+      "category": "cs.CV",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "1706.03762",
+      "title": "Attention Is All You Need",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "1810.04805",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "1905.11946",
+      "title": "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks",
+      "category": "cs.CV",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2004.04906",
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2005.11401",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2010.11929",
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "category": "cs.CV",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2103.14030",
+      "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+      "category": "cs.CV",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11822",
+      "title": "Located but Not Releasable: Silent Gate Inversion and Bounded Linear Release",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11830",
+      "title": "Quantifying the Relationship Between Clinical Safety and Environmental Impact in Therapeutic LLMs",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11843",
+      "title": "When the Knowledge Base Becomes the Gold Standard: Measuring Resource-Shared Evaluation Loops in Entity-Level Machine Translation",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11878",
+      "title": "ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11879",
+      "title": "Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11924",
+      "title": "Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11947",
+      "title": "Accuracy and Order Sensitivity Diverge Under Label-Free Strategies",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11981",
+      "title": "Benchmarking Trustworthiness of SLMs: Pre-trained vs. Compressed",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.11994",
+      "title": "Claim-Level Reliability Assessment for Efficient Test-Time Reasoning",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12008",
+      "title": "Asymptotic Risk Calibration for Selective Question Answering",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12018",
+      "title": "Poly-Dialectal Neural Machine Translation System for Bangla Regional Dialects",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12036",
+      "title": "Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12062",
+      "title": "Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12099",
+      "title": "RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12113",
+      "title": "Structuring the Space of Perspectives",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12121",
+      "title": "QV-PIC: Query-Aware Visual Position-Independent Caching for Efficient RAG Serving",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12125",
+      "title": "Do LLMs Take Care of Their Own? Similarity Signals Can Induce Cooperation",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12129",
+      "title": "SAG: SQL-Retrieval Augmented Generation with Query-Time Dynamic Hyperedges",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12138",
+      "title": "A corpus-specific clinical RAG system matches or outperforms newer frontier LLMs on HealthBench",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12149",
+      "title": "Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12150",
+      "title": "Who Thinks Best Depends on How Long You Let Them: Budget-Dependent Rankings in LLM Evaluation",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12218",
+      "title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12246",
+      "title": "VICBench: A Multi-Language Benchmark for Code Vulnerability Detection",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12253",
+      "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12269",
+      "title": "A Cascaded Unsupervised-Supervised NLP Pipeline for Detecting Accusatory Language in Public Procurement",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12278",
+      "title": "Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12283",
+      "title": "Large Language Model-Driven Small-Capitalization Trading: Integrating Financial News Sentiment, Macroeconomic Indicators, and Technical Signals",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12307",
+      "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12313",
+      "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    },
+    {
+      "paper_id": "2608.12426",
+      "title": "Large Language Models Can Follow Instructions, But Not Many at Once: Phase Transitions in Compositional Constraint Satisfaction",
+      "category": "cs.CL",
+      "reason": "Used in historical development (40 Ragas dev benchmark samples or genuine development pilot)"
+    }
+  ],
+  "eligible_papers_count": 160,
+  "total_usable_chunks_in_chromadb": 7368,
+  "target_benchmark_scale": "120 question families across 160 eligible source papers",
+  "split_summary": {
+    "train": {
+      "papers_count": 80,
+      "percentage": 50.0,
+      "total_chunks": 3434,
+      "category_breakdown": {
+        "cs.CL": 38,
+        "cs.CV": 42
+      },
+      "citation_edges_to_landmark_dev_corpus": 26
+    },
+    "val": {
+      "papers_count": 32,
+      "percentage": 20.0,
+      "total_chunks": 1409,
+      "category_breakdown": {
+        "cs.CL": 14,
+        "cs.CV": 18
+      },
+      "citation_edges_to_landmark_dev_corpus": 11
+    },
+    "test": {
+      "papers_count": 48,
+      "percentage": 30.0,
+      "total_chunks": 2525,
+      "category_breakdown": {
+        "cs.CL": 23,
+        "cs.CV": 25
+      },
+      "citation_edges_to_landmark_dev_corpus": 22
+    }
+  },
+  "citation_overlap_audit": {
+    "citation_edges_within_eligible_corpus": 0,
+    "descriptive_note": "Citation edges between papers reflect academic literature citations and do not constitute shared-evidence data leakage. Grouping is performed by independent paper components to ensure questions authored from split papers share zero source text."
+  },
+  "paper_allocations": {
+    "train": [
+      {
+        "paper_id": "2608.11829",
+        "title": "Towards Understanding On-Policy Distillation through the Lens of Test-Time Scaling",
+        "category": "cs.CL",
+        "chroma_chunks": 33
+      },
+      {
+        "paper_id": "2608.11889",
+        "title": "DexterSQL: Deep Schema Exploration and Rule-based Correction for Text-to-SQL Generation",
+        "category": "cs.CL",
+        "chroma_chunks": 57
+      },
+      {
+        "paper_id": "2608.11919",
+        "title": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield Optimization in Large Language Model Training",
+        "category": "cs.CL",
+        "chroma_chunks": 43
+      },
+      {
+        "paper_id": "2608.11922",
+        "title": "LODESTAR: Trustworthy Entropy Is Navigated, Not Merely Measured -- Reinforced Polarizer Keeps a Frozen LLM from Being Confidently Misled by the Wrong Evidence",
+        "category": "cs.CL",
+        "chroma_chunks": 78
+      },
+      {
+        "paper_id": "2608.12626",
+        "title": "LLMs Are Not Good Strategists, Yet Memory-Enhanced Agency Boosts Reasoning",
+        "category": "cs.CL",
+        "chroma_chunks": 33
+      },
+      {
+        "paper_id": "2608.12630",
+        "title": "Novels generated by language models show compressed formal variation",
+        "category": "cs.CL",
+        "chroma_chunks": 49
+      },
+      {
+        "paper_id": "2608.12652",
+        "title": "Excess Separability: Nuisance-Controlled Residual-Stream Probing for Benchmark Contamination Detection",
+        "category": "cs.CL",
+        "chroma_chunks": 71
+      },
+      {
+        "paper_id": "2608.12698",
+        "title": "Class Geometry as Supervision for Sample-Efficient Open-World Detection",
+        "category": "cs.CV",
+        "chroma_chunks": 32
+      },
+      {
+        "paper_id": "2608.12713",
+        "title": "Tracing Provenance and Detecting Tampering with Complementary LLM Watermarks",
+        "category": "cs.CL",
+        "chroma_chunks": 42
+      },
+      {
+        "paper_id": "2608.12714",
+        "title": "Towards Sparsely Annotated Open-World Object Detection",
+        "category": "cs.CV",
+        "chroma_chunks": 32
+      },
+      {
+        "paper_id": "2608.12717",
+        "title": "Perturbation-based Regional Interpretability through Subtraction Mapping (PRISM): naming-error dissociations in language models and post-stroke aphasia",
+        "category": "cs.CL",
+        "chroma_chunks": 83
+      },
+      {
+        "paper_id": "2608.12748",
+        "title": "Scaling Representation Diversity: Modulated Attention and Reconstructive Regularization for Visual Grounding",
+        "category": "cs.CV",
+        "chroma_chunks": 51
+      },
+      {
+        "paper_id": "2608.12756",
+        "title": "ReconSpan: Reconstruction-Guided Adaptive Latent Tokenization",
+        "category": "cs.CL",
+        "chroma_chunks": 40
+      },
+      {
+        "paper_id": "2608.12776",
+        "title": "ViTOED: A Dataset for Target-Oriented Emotion Detection on Vietnamese Social Media Texts",
+        "category": "cs.CL",
+        "chroma_chunks": 24
+      },
+      {
+        "paper_id": "2608.12779",
+        "title": "CRAFT: LLM-Based Iterative Refinement for Temporal Reasoning over Clinical Narratives",
+        "category": "cs.CL",
+        "chroma_chunks": 42
+      },
+      {
+        "paper_id": "2608.12780",
+        "title": "SCOPE: Subspace Clustering with Online Per-Head Top-K Estimation for Sparse Video Attention",
+        "category": "cs.CV",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.12814",
+        "title": "FastThaiG2P: Lightning-fast Thai Grapheme-to-phoneme Conversion for Voice Agent Pipelines",
+        "category": "cs.CL",
+        "chroma_chunks": 20
+      },
+      {
+        "paper_id": "2608.12827",
+        "title": "Validation of Smartphone-Based Photogrammetric 3D Body Scanning for Automated Anthropometric Measurements Compared with a Commercial Depth-Sensor-Based Body Scanner",
+        "category": "cs.CV",
+        "chroma_chunks": 36
+      },
+      {
+        "paper_id": "2608.12841",
+        "title": "AQuA: Recursively Self-Improving Quantitative Trading Research Agents",
+        "category": "cs.CL",
+        "chroma_chunks": 43
+      },
+      {
+        "paper_id": "2608.12843",
+        "title": "Heterogeneous Vision-Language Ensemble with Disagreement-Aware Reranking for Text-Based Person Anomaly Retrieval",
+        "category": "cs.CV",
+        "chroma_chunks": 25
+      },
+      {
+        "paper_id": "2608.12847",
+        "title": "Beyond Retrieval: Query-Conditioned Reuse of Long-Horizon Agent Trajectories",
+        "category": "cs.CL",
+        "chroma_chunks": 40
+      },
+      {
+        "paper_id": "2608.12894",
+        "title": "BavGround: A Benchmark for Regional Cultural Grounding and Dialect Competence in Bavarian",
+        "category": "cs.CL",
+        "chroma_chunks": 56
+      },
+      {
+        "paper_id": "2608.12904",
+        "title": "HounsWorld: A Multimodal World Model for Hidden Patient-State Readout, Reconstruction, and Simulation",
+        "category": "cs.CV",
+        "chroma_chunks": 52
+      },
+      {
+        "paper_id": "2608.12905",
+        "title": "Prompts in the Wild: A Large Analyzed Collection of Transactional Prompts in Code",
+        "category": "cs.CL",
+        "chroma_chunks": 109
+      },
+      {
+        "paper_id": "2608.12911",
+        "title": "Beyond Visual Evidence: Revealing and Mitigating Relational Privacy Leakage in Document MLLMs",
+        "category": "cs.CV",
+        "chroma_chunks": 55
+      },
+      {
+        "paper_id": "2608.12913",
+        "title": "Decoupled Contrastive Decoding via Expert-Aligned Drafting",
+        "category": "cs.CL",
+        "chroma_chunks": 59
+      },
+      {
+        "paper_id": "2608.12974",
+        "title": "Comment on \"Modeling rapid language learning by distilling Bayesian priors into artificial neural networks\"",
+        "category": "cs.CL",
+        "chroma_chunks": 19
+      },
+      {
+        "paper_id": "2608.12980",
+        "title": "DiCoR: Decoupled Referent Disambiguation and Contour Recalibration for Efficient Referring Remote Sensing Image Segmentation",
+        "category": "cs.CV",
+        "chroma_chunks": 54
+      },
+      {
+        "paper_id": "2608.12990",
+        "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation",
+        "category": "cs.CL",
+        "chroma_chunks": 71
+      },
+      {
+        "paper_id": "2608.12997",
+        "title": "PixSDS: Why Latent SDS Makes Noisy Pixels",
+        "category": "cs.CV",
+        "chroma_chunks": 32
+      },
+      {
+        "paper_id": "2608.13004",
+        "title": "HybridRAG-BN: A Retrieval-Augmented Framework with Fine-Tuned Verification for Bangla KBQA",
+        "category": "cs.CL",
+        "chroma_chunks": 25
+      },
+      {
+        "paper_id": "2608.13006",
+        "title": "EviReform: Evidence-Guided Query Reformulation for Multi-Hop Graph Retrieval",
+        "category": "cs.CL",
+        "chroma_chunks": 65
+      },
+      {
+        "paper_id": "2608.13007",
+        "title": "Structure-aware Riemannian Growth Fields for 4D Plant Modeling",
+        "category": "cs.CV",
+        "chroma_chunks": 28
+      },
+      {
+        "paper_id": "2608.13014",
+        "title": "EgoPHI: Estimating Contact and Force from Egocentric Vision",
+        "category": "cs.CV",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.13037",
+        "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization",
+        "category": "cs.CV",
+        "chroma_chunks": 38
+      },
+      {
+        "paper_id": "2608.13043",
+        "title": "From Local Mismatch to Global Impact: Optimizing Cache Reuse Policy for Efficient Diffusion",
+        "category": "cs.CV",
+        "chroma_chunks": 66
+      },
+      {
+        "paper_id": "2608.13045",
+        "title": "P2Fusion: Prompt-based Progressive Infrared-Visible Image Fusion via Dual-Prior Distillation",
+        "category": "cs.CV",
+        "chroma_chunks": 36
+      },
+      {
+        "paper_id": "2608.13047",
+        "title": "Topology-Unified 2D Pose Estimation across Intact, Residual and Prosthetic Limbs",
+        "category": "cs.CV",
+        "chroma_chunks": 41
+      },
+      {
+        "paper_id": "2608.13057",
+        "title": "TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes",
+        "category": "cs.CL",
+        "chroma_chunks": 68
+      },
+      {
+        "paper_id": "2608.13101",
+        "title": "CASA: Content-Acoustic Speaking Assessment with Speech Encoder and Large Language Model",
+        "category": "cs.CL",
+        "chroma_chunks": 16
+      },
+      {
+        "paper_id": "2608.13104",
+        "title": "Online Learning of Correspondences between Images",
+        "category": "cs.CV",
+        "chroma_chunks": 50
+      },
+      {
+        "paper_id": "2608.13114",
+        "title": "Fast Iterative Five point Relative Pose Estimation",
+        "category": "cs.CV",
+        "chroma_chunks": 26
+      },
+      {
+        "paper_id": "2608.13119",
+        "title": "QuISE: Defense against Typographic Attacks on VLMs via Query-Irrelevant Semantic Editing",
+        "category": "cs.CV",
+        "chroma_chunks": 27
+      },
+      {
+        "paper_id": "2608.13136",
+        "title": "LigBench: A Unified and Human-Aligned Benchmark for LLM-based Research Idea Generation",
+        "category": "cs.CL",
+        "chroma_chunks": 47
+      },
+      {
+        "paper_id": "2608.13141",
+        "title": "MergeOver: Post-Training Token Merging for Recursive Vision Transformers",
+        "category": "cs.CV",
+        "chroma_chunks": 38
+      },
+      {
+        "paper_id": "2608.13148",
+        "title": "Less Annotation, More Interpretation: Prior-Guided Concept Bottleneck Models for Interpretable Cancer Imaging Diagnosis",
+        "category": "cs.CV",
+        "chroma_chunks": 20
+      },
+      {
+        "paper_id": "2608.13159",
+        "title": "Splat-based Metal Artifact Reduction in Cone-Beam CT via Polychromatic Modeling",
+        "category": "cs.CV",
+        "chroma_chunks": 45
+      },
+      {
+        "paper_id": "2608.13160",
+        "title": "Better Decomposition, Free Aggregation: A Synthesizer-Folding Framework for Multilingual Multi-Hop Question Answering",
+        "category": "cs.CL",
+        "chroma_chunks": 23
+      },
+      {
+        "paper_id": "2608.13167",
+        "title": "TRAPSBench: Vision-Language Models Encode but Fail to Express Epistemic Restraint",
+        "category": "cs.CL",
+        "chroma_chunks": 84
+      },
+      {
+        "paper_id": "2608.13186",
+        "title": "SketchSense: Learning to Interpret Imperfect Sketch Guidance for Image Inpainting",
+        "category": "cs.CV",
+        "chroma_chunks": 28
+      },
+      {
+        "paper_id": "2608.13190",
+        "title": "ProME: Prototype-Margin Environments with Repair-Aware Selection for Group-Robust Learning",
+        "category": "cs.CV",
+        "chroma_chunks": 47
+      },
+      {
+        "paper_id": "2608.13194",
+        "title": "Fidelity-Constrained Anchoring for Black-Box Denoisers",
+        "category": "cs.CV",
+        "chroma_chunks": 17
+      },
+      {
+        "paper_id": "2608.13205",
+        "title": "HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusion Models",
+        "category": "cs.CV",
+        "chroma_chunks": 56
+      },
+      {
+        "paper_id": "2608.13210",
+        "title": "NARU: A Benchmark for NARrative Evolution and Cultural Nuance Understanding in Japanese Extreme Long Video",
+        "category": "cs.CV",
+        "chroma_chunks": 39
+      },
+      {
+        "paper_id": "2608.13244",
+        "title": "Localize, Then Reason: Visual Latent Structural Reasoning for Molecular Properties and Edits",
+        "category": "cs.CL",
+        "chroma_chunks": 27
+      },
+      {
+        "paper_id": "2608.13277",
+        "title": "Mixture of Training: Recombining Small-Scale Scaffolded Pretraining Runs into a Larger Language Model",
+        "category": "cs.CL",
+        "chroma_chunks": 28
+      },
+      {
+        "paper_id": "2608.13309",
+        "title": "How Good are Foundation Models in Longitudinal MRI Disease Progression Reasoning?",
+        "category": "cs.CV",
+        "chroma_chunks": 19
+      },
+      {
+        "paper_id": "2608.13328",
+        "title": "It's How You Ask: Gender-Associated Linguistic Bias in LLMs",
+        "category": "cs.CL",
+        "chroma_chunks": 50
+      },
+      {
+        "paper_id": "2608.13334",
+        "title": "RippleMem: From Isolated Retrieval to Associative Recollection for Long-Term Agent Memory",
+        "category": "cs.CL",
+        "chroma_chunks": 52
+      },
+      {
+        "paper_id": "2608.13368",
+        "title": "Sign Language Video Synthesis via Loss-Guided Multi-Expert GANs",
+        "category": "cs.CV",
+        "chroma_chunks": 30
+      },
+      {
+        "paper_id": "2608.13381",
+        "title": "Reconstructing Historical Manuscripts through MSI: The Potential of Contrast in Assessing Image Quality and Legibility",
+        "category": "cs.CV",
+        "chroma_chunks": 22
+      },
+      {
+        "paper_id": "2608.13416",
+        "title": "StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs",
+        "category": "cs.CV",
+        "chroma_chunks": 42
+      },
+      {
+        "paper_id": "2608.13430",
+        "title": "Are You Sure You're Sure? On the Impact of Instruction Tuning on Confidence and Lexical Diversity",
+        "category": "cs.CL",
+        "chroma_chunks": 29
+      },
+      {
+        "paper_id": "2608.13438",
+        "title": "ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models",
+        "category": "cs.CV",
+        "chroma_chunks": 31
+      },
+      {
+        "paper_id": "2608.13441",
+        "title": "Edit2TikZ: A Comprehensive and Challenging Benchmark for Scientific Figure Editing with TikZ",
+        "category": "cs.CV",
+        "chroma_chunks": 30
+      },
+      {
+        "paper_id": "2608.13453",
+        "title": "UniTexture: Cross-Task Universal Adversarial Textures for Vision-Language-Action Models",
+        "category": "cs.CV",
+        "chroma_chunks": 27
+      },
+      {
+        "paper_id": "2608.13456",
+        "title": "A Unifying Perspective on Causal World Models: From Observations to Representations to Structure",
+        "category": "cs.CV",
+        "chroma_chunks": 20
+      },
+      {
+        "paper_id": "2608.13458",
+        "title": "Fine-Grained Action Recognition with Cross-Attentive Latent Sparse Experts",
+        "category": "cs.CV",
+        "chroma_chunks": 31
+      },
+      {
+        "paper_id": "2608.13463",
+        "title": "MLLM-Routed Heterogeneous Ensembles for Robust Cross-Dataset Image Classification",
+        "category": "cs.CL",
+        "chroma_chunks": 40
+      },
+      {
+        "paper_id": "2608.13478",
+        "title": "MapRoute++: Surrogate-Guided Semantic Routing for Visual Concept Unlearning",
+        "category": "cs.CV",
+        "chroma_chunks": 18
+      },
+      {
+        "paper_id": "2608.13482",
+        "title": "Synthetic Persona Pretraining: Alignment from Token Zero",
+        "category": "cs.CL",
+        "chroma_chunks": 159
+      },
+      {
+        "paper_id": "2608.13484",
+        "title": "Toward a Gricean Retreat: Probing LLMs for Knowledge Boundaries and Referent Specificity",
+        "category": "cs.CL",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.13489",
+        "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+        "category": "cs.CV",
+        "chroma_chunks": 33
+      },
+      {
+        "paper_id": "2608.13495",
+        "title": "TraVEL: Trajectory-Guided Video Embedding Learning for Driving-Video Retrieval",
+        "category": "cs.CV",
+        "chroma_chunks": 29
+      },
+      {
+        "paper_id": "2608.13502",
+        "title": "GS$^{2}$CI: Robust Gaussian Splatting For Snapshot Compressive Imaging via Large Vision Model Priors",
+        "category": "cs.CV",
+        "chroma_chunks": 52
+      },
+      {
+        "paper_id": "2608.13515",
+        "title": "Measuring Task-Agnostic Training Data Influence Across Language Model Pretraining",
+        "category": "cs.CL",
+        "chroma_chunks": 48
+      },
+      {
+        "paper_id": "2608.13538",
+        "title": "SAEVerbalizer: Generating Explanations for Sparse Autoencoder Features via Representation Verbalization",
+        "category": "cs.CL",
+        "chroma_chunks": 46
+      },
+      {
+        "paper_id": "2608.13552",
+        "title": "PlayWorld: Benchmarking World Models with Agent Players over Long-Horizon Objectives",
+        "category": "cs.CV",
+        "chroma_chunks": 46
+      },
+      {
+        "paper_id": "2608.13555",
+        "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+        "category": "cs.CV",
+        "chroma_chunks": 38
+      },
+      {
+        "paper_id": "2608.13560",
+        "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+        "category": "cs.CL",
+        "chroma_chunks": 65
+      }
+    ],
+    "val": [
+      {
+        "paper_id": "2608.12598",
+        "title": "Intensional Anaphora",
+        "category": "cs.CL",
+        "chroma_chunks": 84
+      },
+      {
+        "paper_id": "2608.12720",
+        "title": "ERSkill: Evolving for Skill-Guided Adaptive Memory Retrieval",
+        "category": "cs.CL",
+        "chroma_chunks": 59
+      },
+      {
+        "paper_id": "2608.12721",
+        "title": "VOS-Agent: The 1st Place Solution for the 8th LSVOS Challenge (MOSEv2 Track)",
+        "category": "cs.CV",
+        "chroma_chunks": 17
+      },
+      {
+        "paper_id": "2608.12746",
+        "title": "Dual-Stream Cross-Anchor Correction Grounding Long-Form Captions and the Domain Limits of Object-Level Anchors",
+        "category": "cs.CL",
+        "chroma_chunks": 78
+      },
+      {
+        "paper_id": "2608.12773",
+        "title": "CW-BASS v2: Saturation-Aware Pseudo-Label Selection for Semi-Supervised Segmentation under Foundation-Model Teachers",
+        "category": "cs.CV",
+        "chroma_chunks": 89
+      },
+      {
+        "paper_id": "2608.12806",
+        "title": "Erase but Preserve: Controllable Removal of Copyrighted Animation Characters via Optimized Semantic Anchors",
+        "category": "cs.CV",
+        "chroma_chunks": 33
+      },
+      {
+        "paper_id": "2608.12825",
+        "title": "LocusGS: Spatially Grounded Tokens for Feed-Forward 3D Gaussian Splatting",
+        "category": "cs.CV",
+        "chroma_chunks": 40
+      },
+      {
+        "paper_id": "2608.12875",
+        "title": "The Embedder's Dilemma: LLMs Are Better, but at What Cost?",
+        "category": "cs.CL",
+        "chroma_chunks": 84
+      },
+      {
+        "paper_id": "2608.12876",
+        "title": "SPARED: Reasoning-Based AI-Generated Image Detection via Adversarially Edited Data",
+        "category": "cs.CV",
+        "chroma_chunks": 31
+      },
+      {
+        "paper_id": "2608.13040",
+        "title": "Latent On-Policy Self-Distillation",
+        "category": "cs.CL",
+        "chroma_chunks": 53
+      },
+      {
+        "paper_id": "2608.13063",
+        "title": "Explanatory Engagement Under Rare Anomalous Failure: Asymptotic Rarity in Model Behavior (or: The Asymptotic AI)",
+        "category": "cs.CL",
+        "chroma_chunks": 86
+      },
+      {
+        "paper_id": "2608.13064",
+        "title": "Learning Unified Video and Image Representation for Video Face Forgery Detection",
+        "category": "cs.CV",
+        "chroma_chunks": 39
+      },
+      {
+        "paper_id": "2608.13092",
+        "title": "Paths: Prompt-aware Spatio-temporal Transformer with Hierarchical Multi-modal Fusion for RGB-Event Video Person Re-Identification",
+        "category": "cs.CV",
+        "chroma_chunks": 38
+      },
+      {
+        "paper_id": "2608.13095",
+        "title": "Semantic Radiance Fields as Simulators for Spatial Reasoning in Real-World Scenes",
+        "category": "cs.CV",
+        "chroma_chunks": 12
+      },
+      {
+        "paper_id": "2608.13102",
+        "title": "RbFT-Net: Rectify-Before-Fuse Temporal Radar Anchors for 4D Radar-Camera Depth Completion",
+        "category": "cs.CV",
+        "chroma_chunks": 23
+      },
+      {
+        "paper_id": "2608.13135",
+        "title": "Predicting Signed Distance Functions for Visual Instance Segmentation",
+        "category": "cs.CV",
+        "chroma_chunks": 17
+      },
+      {
+        "paper_id": "2608.13168",
+        "title": "Which LLM Is Your Ideal Companion? Evaluating Emotional Companion Capabilities of LLMs Based on Adult Attachment Theory",
+        "category": "cs.CL",
+        "chroma_chunks": 70
+      },
+      {
+        "paper_id": "2608.13183",
+        "title": "A Controlled Study of Self-Supervised Image and Video Pretraining under Limited Resources",
+        "category": "cs.CV",
+        "chroma_chunks": 35
+      },
+      {
+        "paper_id": "2608.13217",
+        "title": "UniCon-Former: Unified Convolution Transformer is All You Need for Hand Gesture Recognition",
+        "category": "cs.CV",
+        "chroma_chunks": 20
+      },
+      {
+        "paper_id": "2608.13237",
+        "title": "When Should Multi-Round RAG Stop? Structured Stopping Judgments and Retrieval Reduction in Search-R1",
+        "category": "cs.CL",
+        "chroma_chunks": 25
+      },
+      {
+        "paper_id": "2608.13239",
+        "title": "Reasoning for Social Audio-Visual Question Answering: Where Do We Stand?",
+        "category": "cs.CV",
+        "chroma_chunks": 45
+      },
+      {
+        "paper_id": "2608.13255",
+        "title": "GeoCache: Training-Free Acceleration of Multi-View Texture Diffusion via Geometric Delta Transport",
+        "category": "cs.CV",
+        "chroma_chunks": 29
+      },
+      {
+        "paper_id": "2608.13258",
+        "title": "Self-Referential Induction Increases Response Instability Relative to Unresolvable and Verifiable Questions in Large Language Models",
+        "category": "cs.CL",
+        "chroma_chunks": 14
+      },
+      {
+        "paper_id": "2608.13304",
+        "title": "Refusing Intent, Not Form: Wrapper-Based Intent-Group Supervision for LLM Safety",
+        "category": "cs.CL",
+        "chroma_chunks": 57
+      },
+      {
+        "paper_id": "2608.13326",
+        "title": "Beyond Local Accuracy: A Protocol-Level Identifiability Audit for Controlled LLM Reasoning Evaluation",
+        "category": "cs.CL",
+        "chroma_chunks": 35
+      },
+      {
+        "paper_id": "2608.13343",
+        "title": "AmalthAI: An Open-Source Computer Vision Platform for Cultural Heritage",
+        "category": "cs.CV",
+        "chroma_chunks": 40
+      },
+      {
+        "paper_id": "2608.13385",
+        "title": "When Is a Task Vector Enough? An Empirical Theory of Implicit Multimodal ICL",
+        "category": "cs.CV",
+        "chroma_chunks": 31
+      },
+      {
+        "paper_id": "2608.13387",
+        "title": "CROP: Task Relevance via Counterfactuals for Selective On-Policy Distillation",
+        "category": "cs.CL",
+        "chroma_chunks": 55
+      },
+      {
+        "paper_id": "2608.13425",
+        "title": "Motor, Cognitive, or Corpus? What Survives Cross-Lingual Transfer in Speech-Based Parkinsons Disease Detection",
+        "category": "cs.CL",
+        "chroma_chunks": 25
+      },
+      {
+        "paper_id": "2608.13517",
+        "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+        "category": "cs.CL",
+        "chroma_chunks": 26
+      },
+      {
+        "paper_id": "2608.13546",
+        "title": "Alaya-EVOKE: From Linear-Scaling Supervision to Endless World",
+        "category": "cs.CV",
+        "chroma_chunks": 62
+      },
+      {
+        "paper_id": "2608.13556",
+        "title": "V-RAE: Rethinking Video Latent Spaces for Generation",
+        "category": "cs.CV",
+        "chroma_chunks": 57
+      }
+    ],
+    "test": [
+      {
+        "paper_id": "2608.11847",
+        "title": "LookBack: Where and How to Score LVLM Responses via Visual Reference Usage",
+        "category": "cs.CL",
+        "chroma_chunks": 46
+      },
+      {
+        "paper_id": "2608.12447",
+        "title": "Geometric and Behavioral Stratification in Transformer Residual Streams",
+        "category": "cs.CL",
+        "chroma_chunks": 147
+      },
+      {
+        "paper_id": "2608.12486",
+        "title": "DIVE: Unlocking Self-Improvement in Frozen Language Models Through Diversity-Driven Skill Evolution",
+        "category": "cs.CL",
+        "chroma_chunks": 142
+      },
+      {
+        "paper_id": "2608.12511",
+        "title": "SoK: From Generation to Consumption of Privacy Documents in Software Systems",
+        "category": "cs.CL",
+        "chroma_chunks": 78
+      },
+      {
+        "paper_id": "2608.12571",
+        "title": "Is this Citation on Point?",
+        "category": "cs.CL",
+        "chroma_chunks": 68
+      },
+      {
+        "paper_id": "2608.12623",
+        "title": "When Explanations Betray Backdoors: Black-Box Auditing for Language Model Classifiers",
+        "category": "cs.CL",
+        "chroma_chunks": 47
+      },
+      {
+        "paper_id": "2608.12627",
+        "title": "EgoCITE: Context-Augmented Indexing and Time-Aware Retrieval for Long-Horizon Egocentric Memory",
+        "category": "cs.CL",
+        "chroma_chunks": 64
+      },
+      {
+        "paper_id": "2608.12654",
+        "title": "SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries",
+        "category": "cs.CL",
+        "chroma_chunks": 36
+      },
+      {
+        "paper_id": "2608.12725",
+        "title": "A Generative Approach for Improving Multi-Label Defect Classification in Photovoltaic Modules",
+        "category": "cs.CV",
+        "chroma_chunks": 48
+      },
+      {
+        "paper_id": "2608.12737",
+        "title": "Dual-Manifold Geometry Guided Representation Learning: Adaptive Coupling between Kernel and Data Spaces",
+        "category": "cs.CV",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.12750",
+        "title": "PatientAct: Theory-Grounded Mental Health Client Simulation",
+        "category": "cs.CL",
+        "chroma_chunks": 59
+      },
+      {
+        "paper_id": "2608.12766",
+        "title": "PatchGen: Learning Soft Intra-Image Predictive Subsets for Visual Generalization",
+        "category": "cs.CV",
+        "chroma_chunks": 56
+      },
+      {
+        "paper_id": "2608.12781",
+        "title": "Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs",
+        "category": "cs.CV",
+        "chroma_chunks": 59
+      },
+      {
+        "paper_id": "2608.12811",
+        "title": "Structured Local Differential Modeling for AI-Generated Image Detection",
+        "category": "cs.CV",
+        "chroma_chunks": 38
+      },
+      {
+        "paper_id": "2608.12829",
+        "title": "Semantic Steering for Controllable Generation: Tuning-Free Concept Erasure in Multimodal Diffusion Transformers",
+        "category": "cs.CV",
+        "chroma_chunks": 38
+      },
+      {
+        "paper_id": "2608.12836",
+        "title": "From Atomic Evidence to Logical Composition: Structured Compositional Reasoning over Compound Answer Options",
+        "category": "cs.CL",
+        "chroma_chunks": 56
+      },
+      {
+        "paper_id": "2608.12852",
+        "title": "Falsehood and Impossibility Are Different Directions in an AI's Representation of Language",
+        "category": "cs.CL",
+        "chroma_chunks": 22
+      },
+      {
+        "paper_id": "2608.12854",
+        "title": "BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving",
+        "category": "cs.CV",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.12888",
+        "title": "When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory",
+        "category": "cs.CL",
+        "chroma_chunks": 44
+      },
+      {
+        "paper_id": "2608.12898",
+        "title": "NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents",
+        "category": "cs.CV",
+        "chroma_chunks": 56
+      },
+      {
+        "paper_id": "2608.12920",
+        "title": "TennisVAR: A Stroke-Evidence-Grounded Multimodal Large Language Model for Tactical Reasoning in Tennis Videos",
+        "category": "cs.CV",
+        "chroma_chunks": 31
+      },
+      {
+        "paper_id": "2608.12953",
+        "title": "Unifying Depth and Width Pruning for LLMs via Binary Knapsack Optimization",
+        "category": "cs.CL",
+        "chroma_chunks": 73
+      },
+      {
+        "paper_id": "2608.12957",
+        "title": "I-SDPO: Instance-Level Adaptive Self-Distillation Policy Optimization",
+        "category": "cs.CL",
+        "chroma_chunks": 30
+      },
+      {
+        "paper_id": "2608.12960",
+        "title": "A Deep RL based Framework for Targeted White Matter Tractography",
+        "category": "cs.CV",
+        "chroma_chunks": 111
+      },
+      {
+        "paper_id": "2608.12971",
+        "title": "Bias Mitigation in Face Recognition via Demographic-based Supervised Contrastive Learning",
+        "category": "cs.CV",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.12984",
+        "title": "Reconcile Once, Write Anytime: A Trust-Tiered Librarian and a Multi-Agent Writer for Drift-Free, Point-in-Time Research",
+        "category": "cs.CL",
+        "chroma_chunks": 37
+      },
+      {
+        "paper_id": "2608.13010",
+        "title": "RAGSieve: Self-Referenced Local Contrast for Knowledge-Poison Detection in Retrieval-Augmented Generation",
+        "category": "cs.CL",
+        "chroma_chunks": 60
+      },
+      {
+        "paper_id": "2608.13028",
+        "title": "RGB-D Video Generation for Improving Human-to-Robot Object Handover Prediction",
+        "category": "cs.CV",
+        "chroma_chunks": 27
+      },
+      {
+        "paper_id": "2608.13031",
+        "title": "UniTraffic-Agent: Unified Traffic Video Reasoning for AI City Challenge 2026 Track 3 with Two Out-of-Domain Evaluations",
+        "category": "cs.CV",
+        "chroma_chunks": 18
+      },
+      {
+        "paper_id": "2608.13049",
+        "title": "H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models",
+        "category": "cs.CV",
+        "chroma_chunks": 53
+      },
+      {
+        "paper_id": "2608.13112",
+        "title": "Towards Physics-Faithful Generation of Scientific Diagrams",
+        "category": "cs.CV",
+        "chroma_chunks": 96
+      },
+      {
+        "paper_id": "2608.13113",
+        "title": "EgoMonth: A Month-Level Egocentric Video Benchmark for Long-Term Spatiotemporal Memory",
+        "category": "cs.CV",
+        "chroma_chunks": 43
+      },
+      {
+        "paper_id": "2608.13147",
+        "title": "Geometry-Grounded Unified 3D Perception for Autonomous Driving",
+        "category": "cs.CV",
+        "chroma_chunks": 50
+      },
+      {
+        "paper_id": "2608.13200",
+        "title": "GEM: A Generative Embedding Model Bridging Reasoning and Retrieval",
+        "category": "cs.CL",
+        "chroma_chunks": 59
+      },
+      {
+        "paper_id": "2608.13223",
+        "title": "Reliability analysis for BraTS-GoAT segmentation: a controlled robustness study of deep-ensemble uncertainty",
+        "category": "cs.CV",
+        "chroma_chunks": 21
+      },
+      {
+        "paper_id": "2608.13226",
+        "title": "CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport",
+        "category": "cs.CV",
+        "chroma_chunks": 33
+      },
+      {
+        "paper_id": "2608.13267",
+        "title": "How Do VLMs Behave When Blind or Misled? Behavioral Evaluation of VLMs on Scientific Figures",
+        "category": "cs.CL",
+        "chroma_chunks": 61
+      },
+      {
+        "paper_id": "2608.13391",
+        "title": "Context-Matched Distillation: Teacher Causality for Autoregressive Video Distillation",
+        "category": "cs.CV",
+        "chroma_chunks": 43
+      },
+      {
+        "paper_id": "2608.13426",
+        "title": "Reduced Matrix Multiplication: Input-Adaptive Matrix-Product Reduction for LLM Inference",
+        "category": "cs.CL",
+        "chroma_chunks": 64
+      },
+      {
+        "paper_id": "2608.13455",
+        "title": "Evaluation of Clinically Steerable Retinal Image Generation from Foundation Model Latent Spaces",
+        "category": "cs.CV",
+        "chroma_chunks": 17
+      },
+      {
+        "paper_id": "2608.13460",
+        "title": "SNM-VFI: Symmetric Nonlinear Motion-Guided Generative Video Frame Interpolation",
+        "category": "cs.CV",
+        "chroma_chunks": 34
+      },
+      {
+        "paper_id": "2608.13476",
+        "title": "MARC v1: An Open-Source Multi-Agent Framework for Clinical AI Reasoning and Coordination",
+        "category": "cs.CL",
+        "chroma_chunks": 16
+      },
+      {
+        "paper_id": "2608.13505",
+        "title": "Intern-S2-Preview: Scientific Agentic Foundation Model",
+        "category": "cs.CL",
+        "chroma_chunks": 86
+      },
+      {
+        "paper_id": "2608.13513",
+        "title": "TabSOM: A tabular-to-image encoding method based on self-organizing maps",
+        "category": "cs.CV",
+        "chroma_chunks": 33
+      },
+      {
+        "paper_id": "2608.13518",
+        "title": "Intervention-Aware Clinical World Model for Post-Op Outcome Forecasting in Cardiology",
+        "category": "cs.CV",
+        "chroma_chunks": 17
+      },
+      {
+        "paper_id": "2608.13541",
+        "title": "SCULPT: Subtractive Composition for 3D Part Generation",
+        "category": "cs.CV",
+        "chroma_chunks": 45
+      },
+      {
+        "paper_id": "2608.13545",
+        "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+        "category": "cs.CL",
+        "chroma_chunks": 71
+      },
+      {
+        "paper_id": "2608.13558",
+        "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+        "category": "cs.CL",
+        "chroma_chunks": 81
+      }
+    ]
+  }
+}

@@ -1,0 +1,2048 @@
+{
+  "train": [
+    {
+      "family_id": "bench_train_001",
+      "split": "train",
+      "paper_id": "2608.11829",
+      "is_multi_passage": false,
+      "question": "In paper 2608.11829 (Introduction), what does the work report regarding As illustrated in Figure 4, we observe that as OPD training?",
+      "reference_answer": "As illustrated in Figure 4, we observe that as OPD training progresses, pass@K at small K values (e.g., K= 1 or 2) generally improves, while pass@K at large K (e.g., K= 512 or 1024) gradually decreases.",
+      "support_1": {
+        "chunk_id": "2608.11829_sec_012",
+        "section": "Introduction",
+        "excerpt": "in Figure 4, we observe that as OPD training progresses,",
+        "sentence": "As illustrated in Figure 4, we observe that as OPD training progresses, pass@K at small K values (e.g., K= 1 or 2) generally improves, while pass@K at large K (e.g., K= 512 or 1024) gradually decreases."
+      }
+    },
+    {
+      "family_id": "bench_train_002",
+      "split": "train",
+      "paper_id": "2608.11889",
+      "is_multi_passage": true,
+      "question": "In paper 2608.11889, regarding Methodology and Abstract, what are the key findings reported concerning These results show that selectively invoking LLM r and DexterSQLachieves a higher accuracy compared to th?",
+      "reference_answer": "These results show that selectively invoking LLM review when candidate agreement is insufficient improves SQL selection accuracy, with the highest EX achieved at a threshold of 0.6. Additionally, DexterSQLachieves a higher accuracy compared to the state-ofthe-art using both open-source/weight and closed-source/weight models.",
+      "support_1": {
+        "chunk_id": "2608.11889_sec_044",
+        "section": "Methodology",
+        "excerpt": "show that selectively invoking LLM review when candidate agreement is",
+        "sentence": "These results show that selectively invoking LLM review when candidate agreement is insufficient improves SQL selection accuracy, with the highest EX achieved at a threshold of 0.6."
+      },
+      "support_2": {
+        "chunk_id": "2608.11889_sec_001",
+        "section": "Abstract",
+        "excerpt": "higher accuracy compared to the state-ofthe-art using both open-source/weight and",
+        "sentence": "DexterSQLachieves a higher accuracy compared to the state-ofthe-art using both open-source/weight and closed-source/weight models."
+      }
+    },
+    {
+      "family_id": "bench_train_003",
+      "split": "train",
+      "paper_id": "2608.11919",
+      "is_multi_passage": false,
+      "question": "In paper 2608.11919 (Methodology), what does the work report regarding In the primary matched 27B pair, LazyTrain improves sustaine?",
+      "reference_answer": "In the primary matched 27B pair, LazyTrain improves sustained throughput from 176.90 to 219.95 T FLOPS, a 1.24 \u00d7 increase, while using the same model, data split, sequence length, and batch size.",
+      "support_1": {
+        "chunk_id": "2608.11919_sec_017",
+        "section": "Methodology",
+        "excerpt": "primary matched 27B pair, LazyTrain improves sustained throughput from 176.90",
+        "sentence": "In the primary matched 27B pair, LazyTrain improves sustained throughput from 176.90 to 219.95 T FLOPS, a 1.24 \u00d7 increase, while using the same model, data split, sequence length, and batch size."
+      }
+    },
+    {
+      "family_id": "bench_train_004",
+      "split": "train",
+      "paper_id": "2608.11922",
+      "is_multi_passage": true,
+      "question": "In paper 2608.11922, regarding Methodology and Conclusion, what are the key findings reported concerning The LODESTARrow of Table 2, the mean of its three and Of that lead, the ablation removing\u03c8 \u22c6 with the re?",
+      "reference_answer": "The LODESTARrow of Table 2, the mean of its three training seeds, also wins all70method-by-dataset cells onF 1, and takes the highest macro exact match of any ranked row,0.4136against semantic entropy\u2019s0.4039(Table 9). Additionally, Of that lead, the ablation removing\u03c8 \u22c6 with the respondent, pools and selection rule unchanged attributes +0.0191\u00b10.0054F 1 to the string itself, positive on5/5datasets under all three training seeds (Section 6).",
+      "support_1": {
+        "chunk_id": "2608.11922_sec_025",
+        "section": "Methodology",
+        "excerpt": "of Table 2, the mean of its three training seeds,",
+        "sentence": "The LODESTARrow of Table 2, the mean of its three training seeds, also wins all70method-by-dataset cells onF 1, and takes the highest macro exact match of any ranked row,0.4136against semantic entropy\u2019s0.4039(Table 9)."
+      },
+      "support_2": {
+        "chunk_id": "2608.11922_sec_061",
+        "section": "Conclusion",
+        "excerpt": "lead, the ablation removing\u03c8 \u22c6 with the respondent, pools and",
+        "sentence": "Of that lead, the ablation removing\u03c8 \u22c6 with the respondent, pools and selection rule unchanged attributes +0.0191\u00b10.0054F 1 to the string itself, positive on5/5datasets under all three training seeds (Section 6)."
+      }
+    },
+    {
+      "family_id": "bench_train_005",
+      "split": "train",
+      "paper_id": "2608.12626",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12626 (Related Work), what does the work report regarding 5.3 CASE STUDY Besides the quantitative results showing the?",
+      "reference_answer": "5.3 CASE STUDY Besides the quantitative results showing the improved performance of EpicStar compared to the baseline, we conducted a case study on the effect of working memory.",
+      "support_1": {
+        "chunk_id": "2608.12626_sec_017",
+        "section": "Related Work",
+        "excerpt": "STUDY Besides the quantitative results showing the improved performance of",
+        "sentence": "5.3 CASE STUDY Besides the quantitative results showing the improved performance of EpicStar compared to the baseline, we conducted a case study on the effect of working memory."
+      }
+    },
+    {
+      "family_id": "bench_train_006",
+      "split": "train",
+      "paper_id": "2608.12630",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12630, regarding Introduction and Methodology, what are the key findings reported concerning (2025) demonstrate that AI writing recommendations and Document-level dispersion was the primary 5The fal?",
+      "reference_answer": "(2025) demonstrate that AI writing recommendations contribute to stylistic convergence both within and between cultural communities and change culturally determined writing styles towards Western ones. Additionally, Document-level dispersion was the primary 5The false discovery rate (FDR) correction reduces the chance of treating random results as significant when several statistical tests are conducted at the same time.",
+      "support_1": {
+        "chunk_id": "2608.12630_sec_005",
+        "section": "Introduction",
+        "excerpt": "that AI writing recommendations contribute to stylistic convergence both within",
+        "sentence": "(2025) demonstrate that AI writing recommendations contribute to stylistic convergence both within and between cultural communities and change culturally determined writing styles towards Western ones."
+      },
+      "support_2": {
+        "chunk_id": "2608.12630_sec_021",
+        "section": "Methodology",
+        "excerpt": "was the primary 5The false discovery rate (FDR) correction reduces",
+        "sentence": "Document-level dispersion was the primary 5The false discovery rate (FDR) correction reduces the chance of treating random results as significant when several statistical tests are conducted at the same time."
+      }
+    },
+    {
+      "family_id": "bench_train_007",
+      "split": "train",
+      "paper_id": "2608.12652",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12652 (Conclusion), what does the work report regarding [49], where the contaminated and clean item sets come from t?",
+      "reference_answer": "[49], where the contaminated and clean item sets come from the same dataset and the split is not temporal, their probe reaches 54.0 and 51.9 AUC at duplication counts of 1 and 2, against a 50.0 chance baseline.",
+      "support_1": {
+        "chunk_id": "2608.12652_sec_005",
+        "section": "Conclusion",
+        "excerpt": "the contaminated and clean item sets come from the same",
+        "sentence": "[49], where the contaminated and clean item sets come from the same dataset and the split is not temporal, their probe reaches 54.0 and 51.9 AUC at duplication counts of 1 and 2, against a 50.0 chance baseline."
+      }
+    },
+    {
+      "family_id": "bench_train_008",
+      "split": "train",
+      "paper_id": "2608.12698",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12698, regarding Methodology and Introduction, what are the key findings reported concerning Across these settings,wereportrecognitionF1/accura and 2026), where region features are matched to suppor?",
+      "reference_answer": "Across these settings,wereportrecognitionF1/accuracy,detectionmAPand mAR, unknown recall, and seen/novel-class performance. Additionally, 2026), where region features are matched to support-derived class prototypes for few-shot detection, open-set detection, and novel-class insertion.Third,weevaluateCGSonthestandard OWOD/COCO protocol (Gupta et al.",
+      "support_1": {
+        "chunk_id": "2608.12698_sec_017",
+        "section": "Methodology",
+        "excerpt": "settings,wereportrecognitionF1/accuracy,detectionmAPand mAR, unknown recall, and seen/novel-class performance.",
+        "sentence": "Across these settings,wereportrecognitionF1/accuracy,detectionmAPand mAR, unknown recall, and seen/novel-class performance."
+      },
+      "support_2": {
+        "chunk_id": "2608.12698_sec_005",
+        "section": "Introduction",
+        "excerpt": "region features are matched to support-derived class prototypes for few-shot",
+        "sentence": "2026), where region features are matched to support-derived class prototypes for few-shot detection, open-set detection, and novel-class insertion.Third,weevaluateCGSonthestandard OWOD/COCO protocol (Gupta et al."
+      }
+    },
+    {
+      "family_id": "bench_train_009",
+      "split": "train",
+      "paper_id": "2608.12713",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12713 (Abstract), what does the work report regarding \u2022Experiments show that Cocktail leads the strongest single-s?",
+      "reference_answer": "\u2022Experiments show that Cocktail leads the strongest single-signal baseline by over 66 percentage points in tamper evidence without conceding attribution, and ablations trace this margin to each design choice above.",
+      "support_1": {
+        "chunk_id": "2608.12713_sec_005",
+        "section": "Abstract",
+        "excerpt": "that Cocktail leads the strongest single-signal baseline by over 66",
+        "sentence": "\u2022Experiments show that Cocktail leads the strongest single-signal baseline by over 66 percentage points in tamper evidence without conceding attribution, and ablations trace this margin to each design choice above."
+      }
+    },
+    {
+      "family_id": "bench_train_010",
+      "split": "train",
+      "paper_id": "2608.12714",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12714, regarding Introduction and Methodology, what are the key findings reported concerning has been driven by large-scale datasets [3,7,15,40 and To simulate sparse annotation scenarios, we consid?",
+      "reference_answer": "has been driven by large-scale datasets [3,7,15,40,43] and advances in deep neural architectures, these assumptions rarely hold in realistic scenarios. Additionally, To simulate sparse annotation scenarios, we consider five training configurations [18,45] designed to reduce available annotations.",
+      "support_1": {
+        "chunk_id": "2608.12714_sec_002",
+        "section": "Introduction",
+        "excerpt": "driven by large-scale datasets [3,7,15,40,43] and advances in deep neural",
+        "sentence": "has been driven by large-scale datasets [3,7,15,40,43] and advances in deep neural architectures, these assumptions rarely hold in realistic scenarios."
+      },
+      "support_2": {
+        "chunk_id": "2608.12714_sec_016",
+        "section": "Methodology",
+        "excerpt": "sparse annotation scenarios, we consider five training configurations [18,45] designed",
+        "sentence": "To simulate sparse annotation scenarios, we consider five training configurations [18,45] designed to reduce available annotations."
+      }
+    },
+    {
+      "family_id": "bench_train_011",
+      "split": "train",
+      "paper_id": "2608.12717",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12717 (Introduction), what does the work report regarding 3 In the present study, we apply PRISM to the same vision\u2013la?",
+      "reference_answer": "3 In the present study, we apply PRISM to the same vision\u2013language transformer evaluated in BLUM (LLaVA-1.6-Vicuna-13B; 40 transformer layers, 13 billion parameters) and to the Philadelphia Naming Test (Roach et al.",
+      "support_1": {
+        "chunk_id": "2608.12717_sec_008",
+        "section": "Introduction",
+        "excerpt": "the present study, we apply PRISM to the same vision\u2013language",
+        "sentence": "3 In the present study, we apply PRISM to the same vision\u2013language transformer evaluated in BLUM (LLaVA-1.6-Vicuna-13B; 40 transformer layers, 13 billion parameters) and to the Philadelphia Naming Test (Roach et al."
+      }
+    },
+    {
+      "family_id": "bench_train_012",
+      "split": "train",
+      "paper_id": "2608.12748",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12748, regarding Results and Methodology, what are the key findings reported concerning Furthermore, on RefCOCOg, our model achieves85.1/8 and Despite the massive generation scale, random manua?",
+      "reference_answer": "Furthermore, on RefCOCOg, our model achieves85.1/86.0(val/test), outperforming PropVG (83.5/84.4) despite using significantly fewer parameters (75M vs. Additionally, Despite the massive generation scale, random manual verification demonstrates an error rate strictly below 0.1%.",
+      "support_1": {
+        "chunk_id": "2608.12748_sec_040",
+        "section": "Results",
+        "excerpt": "RefCOCOg, our model achieves85.1/86.0(val/test), outperforming PropVG (83.5/84.4) despite using significantly",
+        "sentence": "Furthermore, on RefCOCOg, our model achieves85.1/86.0(val/test), outperforming PropVG (83.5/84.4) despite using significantly fewer parameters (75M vs."
+      },
+      "support_2": {
+        "chunk_id": "2608.12748_sec_012",
+        "section": "Methodology",
+        "excerpt": "massive generation scale, random manual verification demonstrates an error rate",
+        "sentence": "Despite the massive generation scale, random manual verification demonstrates an error rate strictly below 0.1%."
+      }
+    },
+    {
+      "family_id": "bench_train_013",
+      "split": "train",
+      "paper_id": "2608.12756",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12756 (Methodology), what does the work report regarding During generic training, the reader receives a randomly trun?",
+      "reference_answer": "During generic training, the reader receives a randomly truncated latent-token prefix formed with Failure(1); next-token loss is masked on the codes and separator and applied only to the continuation.",
+      "support_1": {
+        "chunk_id": "2608.12756_sec_017",
+        "section": "Methodology",
+        "excerpt": "training, the reader receives a randomly truncated latent-token prefix formed",
+        "sentence": "During generic training, the reader receives a randomly truncated latent-token prefix formed with Failure(1); next-token loss is masked on the codes and separator and applied only to the continuation."
+      }
+    },
+    {
+      "family_id": "bench_train_014",
+      "split": "train",
+      "paper_id": "2608.12776",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12776, regarding Results and Abstract, what are the key findings reported concerning Besides, we construct a baseline model based on th and To address the problem of target-oriented emotion?",
+      "reference_answer": "Besides, we construct a baseline model based on the structured sentiment graph architecture [4] and evaluate various Vietnamese Pre-trained language models on the dataset. Additionally, To address the problem of target-oriented emotion detection in Vietnamese, we proposed the ViTOED dataset, which contains about 10,985 sentences collected from Vietnamese social networking sites.",
+      "support_1": {
+        "chunk_id": "2608.12776_sec_020",
+        "section": "Results",
+        "excerpt": "construct a baseline model based on the structured sentiment graph",
+        "sentence": "Besides, we construct a baseline model based on the structured sentiment graph architecture [4] and evaluate various Vietnamese Pre-trained language models on the dataset."
+      },
+      "support_2": {
+        "chunk_id": "2608.12776_sec_003",
+        "section": "Abstract",
+        "excerpt": "the problem of target-oriented emotion detection in Vietnamese, we proposed",
+        "sentence": "To address the problem of target-oriented emotion detection in Vietnamese, we proposed the ViTOED dataset, which contains about 10,985 sentences collected from Vietnamese social networking sites."
+      }
+    },
+    {
+      "family_id": "bench_train_015",
+      "split": "train",
+      "paper_id": "2608.12779",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12779 (Results), what does the work report regarding 5 Experimental Setup.We organize our evaluation around three?",
+      "reference_answer": "5 Experimental Setup.We organize our evaluation around three research questions: \u2022RQ1 Method effectiveness.Does CRAFT-Full outperform the baselines (PIVOT, GUIDE) across model tiers, and what drives the difference?",
+      "support_1": {
+        "chunk_id": "2608.12779_sec_010",
+        "section": "Results",
+        "excerpt": "Setup.We organize our evaluation around three research questions: \u2022RQ1 Method",
+        "sentence": "5 Experimental Setup.We organize our evaluation around three research questions: \u2022RQ1 Method effectiveness.Does CRAFT-Full outperform the baselines (PIVOT, GUIDE) across model tiers, and what drives the difference?"
+      }
+    },
+    {
+      "family_id": "bench_train_016",
+      "split": "train",
+      "paper_id": "2608.12780",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12780, regarding Introduction and Methodology, what are the key findings reported concerning the best dense-reference fidelity and lowest measu and The proposed 3DRoPE-aligned partition achieves 25.?",
+      "reference_answer": "the best dense-reference fidelity and lowest measured latency among the evaluated training-free baselines, delivering1.67\u00d7\u20131.99\u00d7end-to-end speedups. Additionally, The proposed 3DRoPE-aligned partition achieves 25.90dB, outperforming the random three-way split by 0.29dB at slightly lower latency and the four-way split by 0.18dB while saving 21s.",
+      "support_1": {
+        "chunk_id": "2608.12780_sec_006",
+        "section": "Introduction",
+        "excerpt": "dense-reference fidelity and lowest measured latency among the evaluated training-free",
+        "sentence": "the best dense-reference fidelity and lowest measured latency among the evaluated training-free baselines, delivering1.67\u00d7\u20131.99\u00d7end-to-end speedups."
+      },
+      "support_2": {
+        "chunk_id": "2608.12780_sec_018",
+        "section": "Methodology",
+        "excerpt": "3DRoPE-aligned partition achieves 25.90dB, outperforming the random three-way split by",
+        "sentence": "The proposed 3DRoPE-aligned partition achieves 25.90dB, outperforming the random three-way split by 0.29dB at slightly lower latency and the four-way split by 0.18dB while saving 21s."
+      }
+    },
+    {
+      "family_id": "bench_train_017",
+      "split": "train",
+      "paper_id": "2608.12814",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12814 (Abstract), what does the work report regarding To demonstrate its effectiveness, we used FastThaiG2P to pho?",
+      "reference_answer": "To demonstrate its effectiveness, we used FastThaiG2P to phone mize Som-TTS, an open dataset containing 20 hours of grapheme-and-audio pairs, then trained an 82M-parameter StyleTTS 2 model based on a Kokoro-TTS recipe.",
+      "support_1": {
+        "chunk_id": "2608.12814_sec_001",
+        "section": "Abstract",
+        "excerpt": "its effectiveness, we used FastThaiG2P to phone mize Som-TTS, an",
+        "sentence": "To demonstrate its effectiveness, we used FastThaiG2P to phone mize Som-TTS, an open dataset containing 20 hours of grapheme-and-audio pairs, then trained an 82M-parameter StyleTTS 2 model based on a Kokoro-TTS recipe."
+      }
+    },
+    {
+      "family_id": "bench_train_018",
+      "split": "train",
+      "paper_id": "2608.12827",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12827, regarding Introduction and Abstract, what are the key findings reported concerning evaluated the accuracy of PolyCam (Polycam Inc., S and We evaluated a representative application, PolyCam?",
+      "reference_answer": "evaluated the accuracy of PolyCam (Polycam Inc., San Francisco, CA, USA) running on a LiDAR-equipped smartphone for medico-legal body documentation[24]. Additionally, We evaluated a representative application, PolyCam, against the commercial depth-sensor-based Fit3D ProScanner using 144 pregnant participants scanned longitudinally throughout pregnancy.",
+      "support_1": {
+        "chunk_id": "2608.12827_sec_004",
+        "section": "Introduction",
+        "excerpt": "accuracy of PolyCam (Polycam Inc., San Francisco, CA, USA) running",
+        "sentence": "evaluated the accuracy of PolyCam (Polycam Inc., San Francisco, CA, USA) running on a LiDAR-equipped smartphone for medico-legal body documentation[24]."
+      },
+      "support_2": {
+        "chunk_id": "2608.12827_sec_001",
+        "section": "Abstract",
+        "excerpt": "a representative application, PolyCam, against the commercial depth-sensor-based Fit3D ProScanner",
+        "sentence": "We evaluated a representative application, PolyCam, against the commercial depth-sensor-based Fit3D ProScanner using 144 pregnant participants scanned longitudinally throughout pregnancy."
+      }
+    },
+    {
+      "family_id": "bench_train_019",
+      "split": "train",
+      "paper_id": "2608.12841",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12841 (Results), what does the work report regarding Each iteration begins with a hypothesis written as a single?",
+      "reference_answer": "Each iteration begins with a hypothesis written as a single config diff over the sealed sandbox of Section 3.1: a change to the architecture, the loss, the sampler, or the optimizer.",
+      "support_1": {
+        "chunk_id": "2608.12841_sec_025",
+        "section": "Results",
+        "excerpt": "begins with a hypothesis written as a single config diff",
+        "sentence": "Each iteration begins with a hypothesis written as a single config diff over the sealed sandbox of Section 3.1: a change to the architecture, the loss, the sampler, or the optimizer."
+      }
+    },
+    {
+      "family_id": "bench_train_020",
+      "split": "train",
+      "paper_id": "2608.12843",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12843, regarding Related Work and Methodology, what are the key findings reported concerning More recently, APTM [19] introduced largescale mul and 4 Experiments 4.1 Dataset We evaluate all methods?",
+      "reference_answer": "More recently, APTM [19] introduced largescale multi-attribute pre-training to improve fine-grained cross-modal correspondence, significantly advancing retrieval performance. Additionally, 4 Experiments 4.1 Dataset We evaluate all methods on the official Pedestrian Anomaly Behavior (PAB) benchmark [18], released for AI City Challenge 2026 Track 4.",
+      "support_1": {
+        "chunk_id": "2608.12843_sec_005",
+        "section": "Related Work",
+        "excerpt": "APTM [19] introduced largescale multi-attribute pre-training to improve fine-grained cross-modal",
+        "sentence": "More recently, APTM [19] introduced largescale multi-attribute pre-training to improve fine-grained cross-modal correspondence, significantly advancing retrieval performance."
+      },
+      "support_2": {
+        "chunk_id": "2608.12843_sec_012",
+        "section": "Methodology",
+        "excerpt": "4.1 Dataset We evaluate all methods on the official Pedestrian",
+        "sentence": "4 Experiments 4.1 Dataset We evaluate all methods on the official Pedestrian Anomaly Behavior (PAB) benchmark [18], released for AI City Challenge 2026 Track 4."
+      }
+    },
+    {
+      "family_id": "bench_train_021",
+      "split": "train",
+      "paper_id": "2608.12847",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12847 (Conclusion), what does the work report regarding Given the same selected historical trajectory, QCR raises su?",
+      "reference_answer": "Given the same selected historical trajectory, QCR raises success to 62.3% and reduces online tokens by 48.9% relative to Full Trajectory.",
+      "support_1": {
+        "chunk_id": "2608.12847_sec_009",
+        "section": "Conclusion",
+        "excerpt": "same selected historical trajectory, QCR raises success to 62.3% and",
+        "sentence": "Given the same selected historical trajectory, QCR raises success to 62.3% and reduces online tokens by 48.9% relative to Full Trajectory."
+      }
+    },
+    {
+      "family_id": "bench_train_022",
+      "split": "train",
+      "paper_id": "2608.12894",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12894, regarding Abstract and Related Work, what are the key findings reported concerning Finally, an exploratory analysis of GEN BA-10B che and GRD Why did visitor numbers at Schloss Neuschwanst?",
+      "reference_answer": "Finally, an exploratory analysis of GEN BA-10B checkpoints suggests that continued pretraining improves answer-content likelihood unevenly across domains, while dialect competence remains comparatively weak. Additionally, GRD Why did visitor numbers at Schloss Neuschwanstein not increase dramatically in 2025 despite receiving UNESCO World Heritage status?",
+      "support_1": {
+        "chunk_id": "2608.12894_sec_001",
+        "section": "Abstract",
+        "excerpt": "exploratory analysis of GEN BA-10B checkpoints suggests that continued pretraining",
+        "sentence": "Finally, an exploratory analysis of GEN BA-10B checkpoints suggests that continued pretraining improves answer-content likelihood unevenly across domains, while dialect competence remains comparatively weak."
+      },
+      "support_2": {
+        "chunk_id": "2608.12894_sec_010",
+        "section": "Related Work",
+        "excerpt": "did visitor numbers at Schloss Neuschwanstein not increase dramatically in",
+        "sentence": "GRD Why did visitor numbers at Schloss Neuschwanstein not increase dramatically in 2025 despite receiving UNESCO World Heritage status?"
+      }
+    },
+    {
+      "family_id": "bench_train_023",
+      "split": "train",
+      "paper_id": "2608.12904",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12904 (Related Work), what does the work report regarding CT-specific architectures further reuse 2D backbones or comp?",
+      "reference_answer": "CT-specific architectures further reuse 2D backbones or compose adjacent slices to reduce volumetric cost Chen et al.",
+      "support_1": {
+        "chunk_id": "2608.12904_sec_008",
+        "section": "Related Work",
+        "excerpt": "further reuse 2D backbones or compose adjacent slices to reduce",
+        "sentence": "CT-specific architectures further reuse 2D backbones or compose adjacent slices to reduce volumetric cost Chen et al."
+      }
+    },
+    {
+      "family_id": "bench_train_024",
+      "split": "train",
+      "paper_id": "2608.12905",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12905, regarding Introduction and Conclusion, what are the key findings reported concerning The utility of the proposed ontology is directly d and The error analysis shows generally strong performa?",
+      "reference_answer": "The utility of the proposed ontology is directly demonstrated by its application in the data annotation and the analysis we present (Section 5). Additionally, The error analysis shows generally strong performance across most fields, with many categories exceeding 90% accuracy (e.g., Prompt Language 93.0%, Domain 90.6%, Context Language/Modality 97%, Central vs.",
+      "support_1": {
+        "chunk_id": "2608.12905_sec_008",
+        "section": "Introduction",
+        "excerpt": "of the proposed ontology is directly demonstrated by its application",
+        "sentence": "The utility of the proposed ontology is directly demonstrated by its application in the data annotation and the analysis we present (Section 5)."
+      },
+      "support_2": {
+        "chunk_id": "2608.12905_sec_011",
+        "section": "Conclusion",
+        "excerpt": "analysis shows generally strong performance across most fields, with many",
+        "sentence": "The error analysis shows generally strong performance across most fields, with many categories exceeding 90% accuracy (e.g., Prompt Language 93.0%, Domain 90.6%, Context Language/Modality 97%, Central vs."
+      }
+    },
+    {
+      "family_id": "bench_train_025",
+      "split": "train",
+      "paper_id": "2608.12911",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12911 (Abstract), what does the work report regarding In contrast, DRUF outperforms the strongest baseline by impr?",
+      "reference_answer": "In contrast, DRUF outperforms the strongest baseline by improving leakage suppression by 4.8 percentage points, effectively mitigating privacy risks while maintaining robust document information extraction performance.",
+      "support_1": {
+        "chunk_id": "2608.12911_sec_002",
+        "section": "Abstract",
+        "excerpt": "DRUF outperforms the strongest baseline by improving leakage suppression by",
+        "sentence": "In contrast, DRUF outperforms the strongest baseline by improving leakage suppression by 4.8 percentage points, effectively mitigating privacy risks while maintaining robust document information extraction performance."
+      }
+    },
+    {
+      "family_id": "bench_train_026",
+      "split": "train",
+      "paper_id": "2608.12913",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12913, regarding Abstract and Methodology, what are the key findings reported concerning Across the main 8B settings, EAGLE3-based DCD achi and Training on the contrastive target increases model?",
+      "reference_answer": "Across the main 8B settings, EAGLE3-based DCD achieves average greedy speedups of 1.65 to 1.95\u00d7 over vanilla CD and reduces MMLU proposal-path latency by about 5 to 12\u00d7 relative to amateur-coupled proposal paths. Additionally, Training on the contrastive target increases modeling burden without removing baseline proposal error, and inference-time reconstruction adds another error source.",
+      "support_1": {
+        "chunk_id": "2608.12913_sec_001",
+        "section": "Abstract",
+        "excerpt": "main 8B settings, EAGLE3-based DCD achieves average greedy speedups of",
+        "sentence": "Across the main 8B settings, EAGLE3-based DCD achieves average greedy speedups of 1.65 to 1.95\u00d7 over vanilla CD and reduces MMLU proposal-path latency by about 5 to 12\u00d7 relative to amateur-coupled proposal paths."
+      },
+      "support_2": {
+        "chunk_id": "2608.12913_sec_006",
+        "section": "Methodology",
+        "excerpt": "the contrastive target increases modeling burden without removing baseline proposal",
+        "sentence": "Training on the contrastive target increases modeling burden without removing baseline proposal error, and inference-time reconstruction adds another error source."
+      }
+    },
+    {
+      "family_id": "bench_train_027",
+      "split": "train",
+      "paper_id": "2608.12974",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12974 (Results), what does the work report regarding Similar reasons likely explain why divergence between the tr?",
+      "reference_answer": "Similar reasons likely explain why divergence between the training and test curves is overall greater with 10 training samples compared to 100: the larger the training set, the higher the train-test overlap.",
+      "support_1": {
+        "chunk_id": "2608.12974_sec_007",
+        "section": "Results",
+        "excerpt": "likely explain why divergence between the training and test curves",
+        "sentence": "Similar reasons likely explain why divergence between the training and test curves is overall greater with 10 training samples compared to 100: the larger the training set, the higher the train-test overlap."
+      }
+    },
+    {
+      "family_id": "bench_train_028",
+      "split": "train",
+      "paper_id": "2608.12980",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12980, regarding Abstract and Methodology, what are the key findings reported concerning On RefSegRS, DiCoR outperforms the competitive JFS and Datasets and Metrics Datasets.We evaluate DiCoR on?",
+      "reference_answer": "On RefSegRS, DiCoR outperforms the competitive JFS method by 5.28% and 2.87% in mIoU and gIoU, while running 4.7\u00d7 faster than the representative DPS method, demonstrating a favorable accuracy-efficiency trade-off. Additionally, Datasets and Metrics Datasets.We evaluate DiCoR on three public referring remote sensing image segmentation benchmarks, including RefSegRS [1], RRS IS-D [2], and RISBench [3].",
+      "support_1": {
+        "chunk_id": "2608.12980_sec_002",
+        "section": "Abstract",
+        "excerpt": "DiCoR outperforms the competitive JFS method by 5.28% and 2.87%",
+        "sentence": "On RefSegRS, DiCoR outperforms the competitive JFS method by 5.28% and 2.87% in mIoU and gIoU, while running 4.7\u00d7 faster than the representative DPS method, demonstrating a favorable accuracy-efficiency trade-off."
+      },
+      "support_2": {
+        "chunk_id": "2608.12980_sec_025",
+        "section": "Methodology",
+        "excerpt": "Metrics Datasets.We evaluate DiCoR on three public referring remote sensing",
+        "sentence": "Datasets and Metrics Datasets.We evaluate DiCoR on three public referring remote sensing image segmentation benchmarks, including RefSegRS [1], RRS IS-D [2], and RISBench [3]."
+      }
+    },
+    {
+      "family_id": "bench_train_029",
+      "split": "train",
+      "paper_id": "2608.12990",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12990 (Methodology), what does the work report regarding 82.40 90.49 74.82 75.70 56.25174.7 Overall trade-off.Taken t?",
+      "reference_answer": "82.40 90.49 74.82 75.70 56.25174.7 Overall trade-off.Taken together, LYCHEEMEMORYsimultaneously improves accuracy and reduces both construction and query token consumption relative to A-Mem and TiMem.",
+      "support_1": {
+        "chunk_id": "2608.12990_sec_034",
+        "section": "Methodology",
+        "excerpt": "74.82 75.70 56.25174.7 Overall trade-off.Taken together, LYCHEEMEMORYsimultaneously improves accuracy and",
+        "sentence": "82.40 90.49 74.82 75.70 56.25174.7 Overall trade-off.Taken together, LYCHEEMEMORYsimultaneously improves accuracy and reduces both construction and query token consumption relative to A-Mem and TiMem."
+      }
+    },
+    {
+      "family_id": "bench_train_030",
+      "split": "train",
+      "paper_id": "2608.12997",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12997, regarding Introduction and Conclusion, what are the key findings reported concerning We show that PixSDS reduces structured artifacts i and Experiments in 2D optimization and text-to-3D pipe?",
+      "reference_answer": "We show that PixSDS reduces structured artifacts in controlled 2D SDS optimization and improves visual cleanliness when integrated into existing text-to-3D pipelines. Additionally, Experiments in 2D optimization and text-to-3D pipelines show that PixSDS reduces structured artifacts while preserving semantic guidance, without retraining the diffusion model or changing the renderer.",
+      "support_1": {
+        "chunk_id": "2608.12997_sec_004",
+        "section": "Introduction",
+        "excerpt": "that PixSDS reduces structured artifacts in controlled 2D SDS optimization",
+        "sentence": "We show that PixSDS reduces structured artifacts in controlled 2D SDS optimization and improves visual cleanliness when integrated into existing text-to-3D pipelines."
+      },
+      "support_2": {
+        "chunk_id": "2608.12997_sec_020",
+        "section": "Conclusion",
+        "excerpt": "2D optimization and text-to-3D pipelines show that PixSDS reduces structured",
+        "sentence": "Experiments in 2D optimization and text-to-3D pipelines show that PixSDS reduces structured artifacts while preserving semantic guidance, without retraining the diffusion model or changing the renderer."
+      }
+    },
+    {
+      "family_id": "bench_train_031",
+      "split": "train",
+      "paper_id": "2608.13004",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13004 (Abstract), what does the work report regarding Our system was developed and evaluated on a dataset derived?",
+      "reference_answer": "Our system was developed and evaluated on a dataset derived from the Indic-RAG-Suite [ 1], provided as part of the \u201cAre Y ou Sure LLM Is Enough?",
+      "support_1": {
+        "chunk_id": "2608.13004_sec_002",
+        "section": "Abstract",
+        "excerpt": "was developed and evaluated on a dataset derived from the",
+        "sentence": "Our system was developed and evaluated on a dataset derived from the Indic-RAG-Suite [ 1], provided as part of the \u201cAre Y ou Sure LLM Is Enough?"
+      }
+    },
+    {
+      "family_id": "bench_train_032",
+      "split": "train",
+      "paper_id": "2608.13006",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13006, regarding Results and Methodology, what are the key findings reported concerning EviReform improves over the strongest baseline by and With the shared reader, EviReform improves over th?",
+      "reference_answer": "EviReform improves over the strongest baseline by 4.06, 1.03, and 1.77 F1 points, and by 3.40, 1.00, and 0.90 EM points on 2Wiki, HotpotQA, and MuSiQue. Additionally, With the shared reader, EviReform improves over the strongest QA baseline, GeAR, by 3.91, 2.28, and 4.50 F1 points, and by 3.30, 1.60, and 4.00 EM points.",
+      "support_1": {
+        "chunk_id": "2608.13006_sec_023",
+        "section": "Results",
+        "excerpt": "over the strongest baseline by 4.06, 1.03, and 1.77 F1",
+        "sentence": "EviReform improves over the strongest baseline by 4.06, 1.03, and 1.77 F1 points, and by 3.40, 1.00, and 0.90 EM points on 2Wiki, HotpotQA, and MuSiQue."
+      },
+      "support_2": {
+        "chunk_id": "2608.13006_sec_030",
+        "section": "Methodology",
+        "excerpt": "shared reader, EviReform improves over the strongest QA baseline, GeAR,",
+        "sentence": "With the shared reader, EviReform improves over the strongest QA baseline, GeAR, by 3.91, 2.28, and 4.50 F1 points, and by 3.30, 1.60, and 4.00 EM points."
+      }
+    },
+    {
+      "family_id": "bench_train_033",
+      "split": "train",
+      "paper_id": "2608.13007",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13007 (Related Work), what does the work report regarding Quantitative Evaluation We quantitatively evaluate the model?",
+      "reference_answer": "Quantitative Evaluation We quantitatively evaluate the modeling accuracy and robustness of our method on both Pheno4D tomato specimens [27] and our multi-species dataset.",
+      "support_1": {
+        "chunk_id": "2608.13007_sec_018",
+        "section": "Related Work",
+        "excerpt": "We quantitatively evaluate the modeling accuracy and robustness of our",
+        "sentence": "Quantitative Evaluation We quantitatively evaluate the modeling accuracy and robustness of our method on both Pheno4D tomato specimens [27] and our multi-species dataset."
+      }
+    },
+    {
+      "family_id": "bench_train_034",
+      "split": "train",
+      "paper_id": "2608.13014",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13014, regarding Results and Introduction, what are the key findings reported concerning For contact regions, EgoPHI achieves higher precis and For training EgoPHI, we augment a large dataset of?",
+      "reference_answer": "For contact regions, EgoPHI achieves higher precision with comparable F1 score and IoU, while HACO attains higher hand-contact recall, likely due to its training on a large, diverse set of 14 hand contact datasets. Additionally, For training EgoPHI, we augment a large dataset of hand interactions with articulated rigid objects (ARCTIC [9]) with physically simulated contact forces during the recorded hand-object interactions.",
+      "support_1": {
+        "chunk_id": "2608.13014_sec_022",
+        "section": "Results",
+        "excerpt": "regions, EgoPHI achieves higher precision with comparable F1 score and",
+        "sentence": "For contact regions, EgoPHI achieves higher precision with comparable F1 score and IoU, while HACO attains higher hand-contact recall, likely due to its training on a large, diverse set of 14 hand contact datasets."
+      },
+      "support_2": {
+        "chunk_id": "2608.13014_sec_004",
+        "section": "Introduction",
+        "excerpt": "EgoPHI, we augment a large dataset of hand interactions with",
+        "sentence": "For training EgoPHI, we augment a large dataset of hand interactions with articulated rigid objects (ARCTIC [9]) with physically simulated contact forces during the recorded hand-object interactions."
+      }
+    },
+    {
+      "family_id": "bench_train_035",
+      "split": "train",
+      "paper_id": "2608.13037",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13037 (Introduction), what does the work report regarding These improvements have been driven by advances in Diffusion?",
+      "reference_answer": "These improvements have been driven by advances in Diffusion Transformer (DiT) architectures [30], large-scale video-text training data, and the scaling of generative models to billions of parameters [39,51].",
+      "support_1": {
+        "chunk_id": "2608.13037_sec_002",
+        "section": "Introduction",
+        "excerpt": "have been driven by advances in Diffusion Transformer (DiT) architectures",
+        "sentence": "These improvements have been driven by advances in Diffusion Transformer (DiT) architectures [30], large-scale video-text training data, and the scaling of generative models to billions of parameters [39,51]."
+      }
+    },
+    {
+      "family_id": "bench_train_036",
+      "split": "train",
+      "paper_id": "2608.13043",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13043, regarding Methodology and Abstract, what are the key findings reported concerning Notably, on Wan 2.1, GCache-Slow reduces LP IPS fr and In detail, GCache identifies an optimal reuse poli?",
+      "reference_answer": "Notably, on Wan 2.1, GCache-Slow reduces LP IPS from 0.1095 to 0.0316 under the same 2.17\u00d7 speedup, while GCacheFast further achieves a 3.01\u00d7 speedup and still surpasses ERTACache in generation quality (0.0828 vs. Additionally, In detail, GCache identifies an optimal reuse policy in the inner objective while aligning the error-weighting function with generation quality loss in the outer objective.",
+      "support_1": {
+        "chunk_id": "2608.13043_sec_023",
+        "section": "Methodology",
+        "excerpt": "Wan 2.1, GCache-Slow reduces LP IPS from 0.1095 to 0.0316",
+        "sentence": "Notably, on Wan 2.1, GCache-Slow reduces LP IPS from 0.1095 to 0.0316 under the same 2.17\u00d7 speedup, while GCacheFast further achieves a 3.01\u00d7 speedup and still surpasses ERTACache in generation quality (0.0828 vs."
+      },
+      "support_2": {
+        "chunk_id": "2608.13043_sec_001",
+        "section": "Abstract",
+        "excerpt": "GCache identifies an optimal reuse policy in the inner objective",
+        "sentence": "In detail, GCache identifies an optimal reuse policy in the inner objective while aligning the error-weighting function with generation quality loss in the outer objective."
+      }
+    },
+    {
+      "family_id": "bench_train_037",
+      "split": "train",
+      "paper_id": "2608.13045",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13045 (Results), what does the work report regarding Tables 2 (left) and 3 (left) show that our method achieves t?",
+      "reference_answer": "Tables 2 (left) and 3 (left) show that our method achieves the highest mAP50\u201395, outperforming the previous SOTA by +3.2%on MSRS and+0.5%on M3FD.",
+      "support_1": {
+        "chunk_id": "2608.13045_sec_025",
+        "section": "Results",
+        "excerpt": "(left) and 3 (left) show that our method achieves the",
+        "sentence": "Tables 2 (left) and 3 (left) show that our method achieves the highest mAP50\u201395, outperforming the previous SOTA by +3.2%on MSRS and+0.5%on M3FD."
+      }
+    },
+    {
+      "family_id": "bench_train_038",
+      "split": "train",
+      "paper_id": "2608.13047",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13047, regarding Abstract and Methodology, what are the key findings reported concerning Extensive experiments demonstrate that our approac and This strategy retains peak geometric performance (?",
+      "reference_answer": "Extensive experiments demonstrate that our approach improves the classification accuracy of long-tail prosthetic joints by 2% to 6% without compromising spatial coordinate localization performance. Additionally, This strategy retains peak geometric performance (AP 90.0%) while dramatically boosting Absaccuracy to85.6%and Res-Bioaccuracy to86.9%(a massive +5.8% improvement over the weighted baseline).",
+      "support_1": {
+        "chunk_id": "2608.13047_sec_002",
+        "section": "Abstract",
+        "excerpt": "demonstrate that our approach improves the classification accuracy of long-tail",
+        "sentence": "Extensive experiments demonstrate that our approach improves the classification accuracy of long-tail prosthetic joints by 2% to 6% without compromising spatial coordinate localization performance."
+      },
+      "support_2": {
+        "chunk_id": "2608.13047_sec_029",
+        "section": "Methodology",
+        "excerpt": "retains peak geometric performance (AP 90.0%) while dramatically boosting Absaccuracy",
+        "sentence": "This strategy retains peak geometric performance (AP 90.0%) while dramatically boosting Absaccuracy to85.6%and Res-Bioaccuracy to86.9%(a massive +5.8% improvement over the weighted baseline)."
+      }
+    },
+    {
+      "family_id": "bench_train_039",
+      "split": "train",
+      "paper_id": "2608.13057",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13057 (Introduction), what does the work report regarding The two-piece max-affine model (1) fits with 4\u2013 8% mean erro?",
+      "reference_answer": "The two-piece max-affine model (1) fits with 4\u2013 8% mean error (Table 6); bf16 loop implementations shift the inflection (n\u2217 \u2248331) but keep the shape.",
+      "support_1": {
+        "chunk_id": "2608.13057_sec_010",
+        "section": "Introduction",
+        "excerpt": "max-affine model (1) fits with 4\u2013 8% mean error (Table",
+        "sentence": "The two-piece max-affine model (1) fits with 4\u2013 8% mean error (Table 6); bf16 loop implementations shift the inflection (n\u2217 \u2248331) but keep the shape."
+      }
+    },
+    {
+      "family_id": "bench_train_040",
+      "split": "train",
+      "paper_id": "2608.13101",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13101, regarding Abstract and Introduction, what are the key findings reported concerning On the Speak & Improve Corpus 2025, CASA achieves and Our model achieves an RMSE of 0.358 on the S&I tes?",
+      "reference_answer": "On the Speak & Improve Corpus 2025, CASA achieves a root mean square error (RMSE) of 0.358, improving on the previous best RMSE while using approximately half the estimated inference parameters. Additionally, Our model achieves an RMSE of 0.358 on the S&I test set, slightly outperforming the SOTA result of 0.360 while requiring substantially fewer parameters during inference.",
+      "support_1": {
+        "chunk_id": "2608.13101_sec_001",
+        "section": "Abstract",
+        "excerpt": "Speak & Improve Corpus 2025, CASA achieves a root mean",
+        "sentence": "On the Speak & Improve Corpus 2025, CASA achieves a root mean square error (RMSE) of 0.358, improving on the previous best RMSE while using approximately half the estimated inference parameters."
+      },
+      "support_2": {
+        "chunk_id": "2608.13101_sec_003",
+        "section": "Introduction",
+        "excerpt": "achieves an RMSE of 0.358 on the S&I test set,",
+        "sentence": "Our model achieves an RMSE of 0.358 on the S&I test set, slightly outperforming the SOTA result of 0.360 while requiring substantially fewer parameters during inference."
+      }
+    },
+    {
+      "family_id": "bench_train_041",
+      "split": "train",
+      "paper_id": "2608.13104",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13104 (Results), what does the work report regarding The CMap algorithm is compared to LWPR [35] and ROGER [12] o?",
+      "reference_answer": "The CMap algorithm is compared to LWPR [35] and ROGER [12] on the dataset D1.",
+      "support_1": {
+        "chunk_id": "2608.13104_sec_025",
+        "section": "Results",
+        "excerpt": "algorithm is compared to LWPR [35] and ROGER [12] on",
+        "sentence": "The CMap algorithm is compared to LWPR [35] and ROGER [12] on the dataset D1."
+      }
+    },
+    {
+      "family_id": "bench_train_042",
+      "split": "train",
+      "paper_id": "2608.13114",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13114, regarding Methodology and Introduction, what are the key findings reported concerning The precision is shown as the increase in angular and We show that a non-linear DL solver with \ufb01ve param?",
+      "reference_answer": "The precision is shown as the increase in angular error compared to using a 2-view bundle adjustment approach. Additionally, We show that a non-linear DL solver with \ufb01ve parameters is faster than the currently fastest \ufb01ve point solver [9].",
+      "support_1": {
+        "chunk_id": "2608.13114_sec_016",
+        "section": "Methodology",
+        "excerpt": "is shown as the increase in angular error compared to",
+        "sentence": "The precision is shown as the increase in angular error compared to using a 2-view bundle adjustment approach."
+      },
+      "support_2": {
+        "chunk_id": "2608.13114_sec_002",
+        "section": "Introduction",
+        "excerpt": "that a non-linear DL solver with \ufb01ve parameters is faster",
+        "sentence": "We show that a non-linear DL solver with \ufb01ve parameters is faster than the currently fastest \ufb01ve point solver [9]."
+      }
+    },
+    {
+      "family_id": "bench_train_043",
+      "split": "train",
+      "paper_id": "2608.13119",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13119 (Results), what does the work report regarding Compared with AAP, which is the strongest VLM-based baseline?",
+      "reference_answer": "Compared with AAP, which is the strongest VLM-based baseline, QuISE improves overall defended accuracy by 13.9\u201327.1 percentage points, achieving 67.9\u201375.0% RR with only 0.5\u20131.1% HR.",
+      "support_1": {
+        "chunk_id": "2608.13119_sec_016",
+        "section": "Results",
+        "excerpt": "AAP, which is the strongest VLM-based baseline, QuISE improves overall",
+        "sentence": "Compared with AAP, which is the strongest VLM-based baseline, QuISE improves overall defended accuracy by 13.9\u201327.1 percentage points, achieving 67.9\u201375.0% RR with only 0.5\u20131.1% HR."
+      }
+    },
+    {
+      "family_id": "bench_train_044",
+      "split": "train",
+      "paper_id": "2608.13136",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13136, regarding Methodology and Results, what are the key findings reported concerning Among the off-the-shelf models, GPT-5 substantiall and Notably, SciPIP achieves the highest Soundness sco?",
+      "reference_answer": "Among the off-the-shelf models, GPT-5 substantially outperforms other baselines, achieving accuracies above 0.80 on both rating and soundness, which suggests a high level of agreement with de biased human judgments. Additionally, Notably, SciPIP achieves the highest Soundness score among all evaluated systems, slightly exceeding its underlying model GPT-5.",
+      "support_1": {
+        "chunk_id": "2608.13136_sec_015",
+        "section": "Methodology",
+        "excerpt": "off-the-shelf models, GPT-5 substantially outperforms other baselines, achieving accuracies above",
+        "sentence": "Among the off-the-shelf models, GPT-5 substantially outperforms other baselines, achieving accuracies above 0.80 on both rating and soundness, which suggests a high level of agreement with de biased human judgments."
+      },
+      "support_2": {
+        "chunk_id": "2608.13136_sec_029",
+        "section": "Results",
+        "excerpt": "achieves the highest Soundness score among all evaluated systems, slightly",
+        "sentence": "Notably, SciPIP achieves the highest Soundness score among all evaluated systems, slightly exceeding its underlying model GPT-5."
+      }
+    },
+    {
+      "family_id": "bench_train_045",
+      "split": "train",
+      "paper_id": "2608.13141",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13141 (Conclusion), what does the work report regarding The achieved throughput and PAM improvements for batch size?",
+      "reference_answer": "The achieved throughput and PAM improvements for batch size 16 are 21.7% increase and 38.4% decrease on the GPU platform.",
+      "support_1": {
+        "chunk_id": "2608.13141_sec_031",
+        "section": "Conclusion",
+        "excerpt": "throughput and PAM improvements for batch size 16 are 21.7%",
+        "sentence": "The achieved throughput and PAM improvements for batch size 16 are 21.7% increase and 38.4% decrease on the GPU platform."
+      }
+    },
+    {
+      "family_id": "bench_train_046",
+      "split": "train",
+      "paper_id": "2608.13148",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13148, regarding Methodology and Results, what are the key findings reported concerning 2.1 Overview of Hybrid Concept Bottleneck Model Th and We evaluate two prior sources: (1) Manual clinical?",
+      "reference_answer": "2.1 Overview of Hybrid Concept Bottleneck Model The proposed prior-guided hybrid CBM is constructed based on the standard CBM architecture. Additionally, We evaluate two prior sources: (1) Manual clinical priors encode broad BIR ADS- or radiology-based associations but are not calibrated to the specific dataset population.",
+      "support_1": {
+        "chunk_id": "2608.13148_sec_005",
+        "section": "Methodology",
+        "excerpt": "of Hybrid Concept Bottleneck Model The proposed prior-guided hybrid CBM",
+        "sentence": "2.1 Overview of Hybrid Concept Bottleneck Model The proposed prior-guided hybrid CBM is constructed based on the standard CBM architecture."
+      },
+      "support_2": {
+        "chunk_id": "2608.13148_sec_007",
+        "section": "Results",
+        "excerpt": "two prior sources: (1) Manual clinical priors encode broad BIR",
+        "sentence": "We evaluate two prior sources: (1) Manual clinical priors encode broad BIR ADS- or radiology-based associations but are not calibrated to the specific dataset population."
+      }
+    },
+    {
+      "family_id": "bench_train_047",
+      "split": "train",
+      "paper_id": "2608.13159",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13159 (Related Work), what does the work report regarding We adopt this simple model for two main reasons: (1) it redu?",
+      "reference_answer": "We adopt this simple model for two main reasons: (1) it reduces model complexity and mitigates overfitting, and (2) it decreases the number of estimated parameters, enabling more efficient optimization.",
+      "support_1": {
+        "chunk_id": "2608.13159_sec_014",
+        "section": "Related Work",
+        "excerpt": "this simple model for two main reasons: (1) it reduces",
+        "sentence": "We adopt this simple model for two main reasons: (1) it reduces model complexity and mitigates overfitting, and (2) it decreases the number of estimated parameters, enabling more efficient optimization."
+      }
+    },
+    {
+      "family_id": "bench_train_048",
+      "split": "train",
+      "paper_id": "2608.13160",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13160, regarding Introduction and Methodology, what are the key findings reported concerning On the most challenging benchmark MuSiQue,Syfersti and Empirically,Syferachieves the largest average gain?",
+      "reference_answer": "On the most challenging benchmark MuSiQue,Syferstill improves over the strongest decomposition-based baseline by+8.91F1 (+29.8%relative) averaged over nine languages. Additionally, Empirically,Syferachieves the largest average gain on 2Wiki, improving over the strongest baseline by+17.3F1 and+20.1EM, and remains robust on the harder MuSiQue benchmark with+8.9F1 and+6.2EM over DaPT.",
+      "support_1": {
+        "chunk_id": "2608.13160_sec_005",
+        "section": "Introduction",
+        "excerpt": "most challenging benchmark MuSiQue,Syferstill improves over the strongest decomposition-based baseline",
+        "sentence": "On the most challenging benchmark MuSiQue,Syferstill improves over the strongest decomposition-based baseline by+8.91F1 (+29.8%relative) averaged over nine languages."
+      },
+      "support_2": {
+        "chunk_id": "2608.13160_sec_015",
+        "section": "Methodology",
+        "excerpt": "largest average gain on 2Wiki, improving over the strongest baseline",
+        "sentence": "Empirically,Syferachieves the largest average gain on 2Wiki, improving over the strongest baseline by+17.3F1 and+20.1EM, and remains robust on the harder MuSiQue benchmark with+8.9F1 and+6.2EM over DaPT."
+      }
+    },
+    {
+      "family_id": "bench_train_049",
+      "split": "train",
+      "paper_id": "2608.13167",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13167 (Related Work), what does the work report regarding (2025) constructs answerable/unanswerable pairs via in paint?",
+      "reference_answer": "(2025) constructs answerable/unanswerable pairs via in painting and proposes Confidence-Weighted Accuracy (CWA), which requires logit access.",
+      "support_1": {
+        "chunk_id": "2608.13167_sec_006",
+        "section": "Related Work",
+        "excerpt": "answerable/unanswerable pairs via in painting and proposes Confidence-Weighted Accuracy (CWA),",
+        "sentence": "(2025) constructs answerable/unanswerable pairs via in painting and proposes Confidence-Weighted Accuracy (CWA), which requires logit access."
+      }
+    },
+    {
+      "family_id": "bench_train_050",
+      "split": "train",
+      "paper_id": "2608.13186",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13186, regarding Methodology and Results, what are the key findings reported concerning SketchSense achieves the best SSIM, LP IPS, and Ed and (5), the complete objective is L= \u03bbxLx +\u03bb eLe \u03bbx +?",
+      "reference_answer": "SketchSense achieves the best SSIM, LP IPS, and Edge F1. Additionally, (5), the complete objective is L= \u03bbxLx +\u03bb eLe \u03bbx +\u03bb e +\u03bb phrase Lphrase.(14) Loss weights and sampling ratios are fixed throughout training.",
+      "support_1": {
+        "chunk_id": "2608.13186_sec_019",
+        "section": "Methodology",
+        "excerpt": "the best SSIM, LP IPS, and Edge F1.",
+        "sentence": "SketchSense achieves the best SSIM, LP IPS, and Edge F1."
+      },
+      "support_2": {
+        "chunk_id": "2608.13186_sec_023",
+        "section": "Results",
+        "excerpt": "complete objective is L= \u03bbxLx +\u03bb eLe \u03bbx +\u03bb e",
+        "sentence": "(5), the complete objective is L= \u03bbxLx +\u03bb eLe \u03bbx +\u03bb e +\u03bb phrase Lphrase.(14) Loss weights and sampling ratios are fixed throughout training."
+      }
+    },
+    {
+      "family_id": "bench_train_051",
+      "split": "train",
+      "paper_id": "2608.13190",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13190 (Methodology), what does the work report regarding Subsequent work reduces the annotation requirements of last-?",
+      "reference_answer": "Subsequent work reduces the annotation requirements of last-layer retraining or revisits its implementation choices[16, 41, 42].",
+      "support_1": {
+        "chunk_id": "2608.13190_sec_003",
+        "section": "Methodology",
+        "excerpt": "reduces the annotation requirements of last-layer retraining or revisits its",
+        "sentence": "Subsequent work reduces the annotation requirements of last-layer retraining or revisits its implementation choices[16, 41, 42]."
+      }
+    },
+    {
+      "family_id": "bench_train_052",
+      "split": "train",
+      "paper_id": "2608.13194",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13194, regarding Methodology and Abstract, what are the key findings reported concerning WhenIand Oare identical,SSIM(I, O) = 1; as their d and These metrics can be incorporated into training lo?",
+      "reference_answer": "WhenIand Oare identical,SSIM(I, O) = 1; as their difference increases, SSIM(I, O)decreases toward0. Additionally, These metrics can be incorporated into training losses to improve fidelity.",
+      "support_1": {
+        "chunk_id": "2608.13194_sec_005",
+        "section": "Methodology",
+        "excerpt": "identical,SSIM(I, O) = 1; as their difference increases, SSIM(I, O)decreases",
+        "sentence": "WhenIand Oare identical,SSIM(I, O) = 1; as their difference increases, SSIM(I, O)decreases toward0."
+      },
+      "support_2": {
+        "chunk_id": "2608.13194_sec_002",
+        "section": "Abstract",
+        "excerpt": "can be incorporated into training losses to improve fidelity.",
+        "sentence": "These metrics can be incorporated into training losses to improve fidelity."
+      }
+    },
+    {
+      "family_id": "bench_train_053",
+      "split": "train",
+      "paper_id": "2608.13205",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13205 (Abstract), what does the work report regarding Extensive experiments demonstrate that HPSD significantly im?",
+      "reference_answer": "Extensive experiments demonstrate that HPSD significantly improves T2V performance while also delivering notable TI2V gains, effectively strengthening the model\u2019s base generation ability.",
+      "support_1": {
+        "chunk_id": "2608.13205_sec_003",
+        "section": "Abstract",
+        "excerpt": "demonstrate that HPSD significantly improves T2V performance while also delivering",
+        "sentence": "Extensive experiments demonstrate that HPSD significantly improves T2V performance while also delivering notable TI2V gains, effectively strengthening the model\u2019s base generation ability."
+      }
+    },
+    {
+      "family_id": "bench_train_054",
+      "split": "train",
+      "paper_id": "2608.13210",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13210, regarding Abstract and Results, what are the key findings reported concerning All three Gemini models improve substantially as t and While Gemini models achieve approximately 11 perce?",
+      "reference_answer": "All three Gemini models improve substantially as the frame budget increases: Gemini3-Pro rises from approximately 64% with 8 frames to JOURNAL OF LATEX CLASS FILES, VOL. Additionally, While Gemini models achieve approximately 11 percentage points higher accuracy on narrative tasks than on cultural ones, open-source models show virtually no difference between the two dimensions.",
+      "support_1": {
+        "chunk_id": "2608.13210_sec_004",
+        "section": "Abstract",
+        "excerpt": "Gemini models improve substantially as the frame budget increases: Gemini3-Pro",
+        "sentence": "All three Gemini models improve substantially as the frame budget increases: Gemini3-Pro rises from approximately 64% with 8 frames to JOURNAL OF LATEX CLASS FILES, VOL."
+      },
+      "support_2": {
+        "chunk_id": "2608.13210_sec_033",
+        "section": "Results",
+        "excerpt": "models achieve approximately 11 percentage points higher accuracy on narrative",
+        "sentence": "While Gemini models achieve approximately 11 percentage points higher accuracy on narrative tasks than on cultural ones, open-source models show virtually no difference between the two dimensions."
+      }
+    },
+    {
+      "family_id": "bench_train_055",
+      "split": "train",
+      "paper_id": "2608.13244",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13244 (Methodology), what does the work report regarding Relative to Qwen3.5-4B + MSR-SFT, accuracy rises from 0.767?",
+      "reference_answer": "Relative to Qwen3.5-4B + MSR-SFT, accuracy rises from 0.767 to 0.842, F1 from 0.679 to 0.786, and balanced accuracy from 0.745 to 0.829.",
+      "support_1": {
+        "chunk_id": "2608.13244_sec_017",
+        "section": "Methodology",
+        "excerpt": "Qwen3.5-4B + MSR-SFT, accuracy rises from 0.767 to 0.842, F1",
+        "sentence": "Relative to Qwen3.5-4B + MSR-SFT, accuracy rises from 0.767 to 0.842, F1 from 0.679 to 0.786, and balanced accuracy from 0.745 to 0.829."
+      }
+    },
+    {
+      "family_id": "bench_train_056",
+      "split": "train",
+      "paper_id": "2608.13277",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13277, regarding Introduction and Introduction, what are the key findings reported concerning Mixture of Training Let the target Transformer be and Stage 1trains all scaffolded networks Si in parall?",
+      "reference_answer": "Mixture of Training Let the target Transformer be written as a composition of Kcontiguous layer blocks, F=f K \u25e6f K\u22121 \u25e6 \u00b7 \u00b7 \u00b7 \u25e6f1. Additionally, Stage 1trains all scaffolded networks Si in parallel, updating only the target block in each scaffold.Stage 2discards the aligner, recomposes \u02c6F=f K \u25e6 \u00b7 \u00b7 \u00b7 \u25e6f1, and optionally applies a short end-to-end adaptation pass.",
+      "support_1": {
+        "chunk_id": "2608.13277_sec_004",
+        "section": "Introduction",
+        "excerpt": "Training Let the target Transformer be written as a composition",
+        "sentence": "Mixture of Training Let the target Transformer be written as a composition of Kcontiguous layer blocks, F=f K \u25e6f K\u22121 \u25e6 \u00b7 \u00b7 \u00b7 \u25e6f1."
+      },
+      "support_2": {
+        "chunk_id": "2608.13277_sec_005",
+        "section": "Introduction",
+        "excerpt": "all scaffolded networks Si in parallel, updating only the target",
+        "sentence": "Stage 1trains all scaffolded networks Si in parallel, updating only the target block in each scaffold.Stage 2discards the aligner, recomposes \u02c6F=f K \u25e6 \u00b7 \u00b7 \u00b7 \u25e6f1, and optionally applies a short end-to-end adaptation pass."
+      }
+    },
+    {
+      "family_id": "bench_train_057",
+      "split": "train",
+      "paper_id": "2608.13309",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13309 (Introduction), what does the work report regarding Overall, models achieve moderate TAC (0.57\u20130.80) and chronol?",
+      "reference_answer": "Overall, models achieve moderate TAC (0.57\u20130.80) and chronology scores (0.64\u20131.00) but exhibit weaker Trend-F1 (0.19\u20130.63) and Sign Accuracy (0.42\u20130.74), indicating temporal alignment is more reliable than charac- 8 W.",
+      "support_1": {
+        "chunk_id": "2608.13309_sec_013",
+        "section": "Introduction",
+        "excerpt": "achieve moderate TAC (0.57\u20130.80) and chronology scores (0.64\u20131.00) but exhibit",
+        "sentence": "Overall, models achieve moderate TAC (0.57\u20130.80) and chronology scores (0.64\u20131.00) but exhibit weaker Trend-F1 (0.19\u20130.63) and Sign Accuracy (0.42\u20130.74), indicating temporal alignment is more reliable than charac- 8 W."
+      }
+    },
+    {
+      "family_id": "bench_train_058",
+      "split": "train",
+      "paper_id": "2608.13328",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13328, regarding Introduction and Results, what are the key findings reported concerning Substantial research has demonstrated that LLMs en and Table 1: Percentage of all full-sentence features?",
+      "reference_answer": "Substantial research has demonstrated that LLMs encode social biases (Cheng et al., 2023; Bianchi et al., 2023; Wan et al., 2023; Bai et al., 2025; Wan & Chang, 2025). Additionally, Table 1: Percentage of all full-sentence features in Wildchat and Mila datasets with given features.",
+      "support_1": {
+        "chunk_id": "2608.13328_sec_002",
+        "section": "Introduction",
+        "excerpt": "has demonstrated that LLMs encode social biases (Cheng et al.,",
+        "sentence": "Substantial research has demonstrated that LLMs encode social biases (Cheng et al., 2023; Bianchi et al., 2023; Wan et al., 2023; Bai et al., 2025; Wan & Chang, 2025)."
+      },
+      "support_2": {
+        "chunk_id": "2608.13328_sec_010",
+        "section": "Results",
+        "excerpt": "Percentage of all full-sentence features in Wildchat and Mila datasets",
+        "sentence": "Table 1: Percentage of all full-sentence features in Wildchat and Mila datasets with given features."
+      }
+    },
+    {
+      "family_id": "bench_train_059",
+      "split": "train",
+      "paper_id": "2608.13334",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13334 (Results), what does the work report regarding Against the strongest baseline for each metric, RippleMem re?",
+      "reference_answer": "Against the strongest baseline for each metric, RippleMem relatively improves F1 and BLEU-1 over SimpleMem by 3.98% and 3.62%, respectively, and judge accuracy over RFMem by 3.95%.",
+      "support_1": {
+        "chunk_id": "2608.13334_sec_034",
+        "section": "Results",
+        "excerpt": "strongest baseline for each metric, RippleMem relatively improves F1 and",
+        "sentence": "Against the strongest baseline for each metric, RippleMem relatively improves F1 and BLEU-1 over SimpleMem by 3.98% and 3.62%, respectively, and judge accuracy over RFMem by 3.95%."
+      }
+    },
+    {
+      "family_id": "bench_train_060",
+      "split": "train",
+      "paper_id": "2608.13368",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13368, regarding Methodology and Related Work, what are the key findings reported concerning Ablation Gap:The contribution of United Loss to tr and (Al Jowair et al., 2023) propose the Multi Paralle?",
+      "reference_answer": "Ablation Gap:The contribution of United Loss to training stability and final PSNR has not been isolated on the current v4 architecture. Additionally, (Al Jowair et al., 2023) propose the Multi Parallel U-Net, a novel architecture that enhances the Mixture-of-Experts (MoE) paradigm for computer vision tasks.",
+      "support_1": {
+        "chunk_id": "2608.13368_sec_023",
+        "section": "Methodology",
+        "excerpt": "contribution of United Loss to training stability and final PSNR",
+        "sentence": "Ablation Gap:The contribution of United Loss to training stability and final PSNR has not been isolated on the current v4 architecture."
+      },
+      "support_2": {
+        "chunk_id": "2608.13368_sec_004",
+        "section": "Related Work",
+        "excerpt": "et al., 2023) propose the Multi Parallel U-Net, a novel",
+        "sentence": "(Al Jowair et al., 2023) propose the Multi Parallel U-Net, a novel architecture that enhances the Mixture-of-Experts (MoE) paradigm for computer vision tasks."
+      }
+    }
+  ],
+  "val": [
+    {
+      "family_id": "bench_val_001",
+      "split": "val",
+      "paper_id": "2608.12598",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12598 (Abstract), what does the work report regarding One particularly similar analysis, for instance, is due to v?",
+      "reference_answer": "One particularly similar analysis, for instance, is due to van Rooy (2001), who proposes two types of pronouns, quite similar to our simple and summation types.",
+      "support_1": {
+        "chunk_id": "2608.12598_sec_015",
+        "section": "Abstract",
+        "excerpt": "similar analysis, for instance, is due to van Rooy (2001),",
+        "sentence": "One particularly similar analysis, for instance, is due to van Rooy (2001), who proposes two types of pronouns, quite similar to our simple and summation types."
+      }
+    },
+    {
+      "family_id": "bench_val_002",
+      "split": "val",
+      "paper_id": "2608.12720",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12720, regarding Methodology and Abstract, what are the key findings reported concerning Specifically, ERSkill improves the overall average and Notably, it improves the overall average across F1?",
+      "reference_answer": "Specifically, ERSkill improves the overall average by 31.3% across F1, BLEU-1, and L-J with qwen3-next-80b-a3b-instruct, and by 28.1% with gpt-5.4-nano against the strongest baseline. Additionally, Notably, it improves the overall average across F1, BLEU-1, and LLM-judge scores by 31.3% with Qwen3-Next-80B-A3B-Instruct and by 28.1% with GPT-5.4-nano.",
+      "support_1": {
+        "chunk_id": "2608.12720_sec_017",
+        "section": "Methodology",
+        "excerpt": "improves the overall average by 31.3% across F1, BLEU-1, and",
+        "sentence": "Specifically, ERSkill improves the overall average by 31.3% across F1, BLEU-1, and L-J with qwen3-next-80b-a3b-instruct, and by 28.1% with gpt-5.4-nano against the strongest baseline."
+      },
+      "support_2": {
+        "chunk_id": "2608.12720_sec_002",
+        "section": "Abstract",
+        "excerpt": "improves the overall average across F1, BLEU-1, and LLM-judge scores",
+        "sentence": "Notably, it improves the overall average across F1, BLEU-1, and LLM-judge scores by 31.3% with Qwen3-Next-80B-A3B-Instruct and by 28.1% with GPT-5.4-nano."
+      }
+    },
+    {
+      "family_id": "bench_val_003",
+      "split": "val",
+      "paper_id": "2608.12721",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12721 (Introduction), what does the work report regarding 3 Experiment 3.1 Dataset and Challenge Protocol We evaluate?",
+      "reference_answer": "3 Experiment 3.1 Dataset and Challenge Protocol We evaluate VOS-Agent on the MOSEv2 track of the 8th Large-scale Video Object Segmentation Challenge at ECCV 2026.",
+      "support_1": {
+        "chunk_id": "2608.12721_sec_011",
+        "section": "Introduction",
+        "excerpt": "3.1 Dataset and Challenge Protocol We evaluate VOS-Agent on the",
+        "sentence": "3 Experiment 3.1 Dataset and Challenge Protocol We evaluate VOS-Agent on the MOSEv2 track of the 8th Large-scale Video Object Segmentation Challenge at ECCV 2026."
+      }
+    },
+    {
+      "family_id": "bench_val_004",
+      "split": "val",
+      "paper_id": "2608.12746",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12746, regarding Methodology and Related Work, what are the key findings reported concerning Second, the POPE contribution of DSCC lies in prec and This curriculum is essential for stable bf16 train?",
+      "reference_answer": "Second, the POPE contribution of DSCC lies in precision rather than F1 (Table 4.3), while most literature baselines report only accuracy and F1. Additionally, This curriculum is essential for stable bf16 training and prevents the cognitive cross-attention from destroying the perception anchors before they have converged.",
+      "support_1": {
+        "chunk_id": "2608.12746_sec_032",
+        "section": "Methodology",
+        "excerpt": "POPE contribution of DSCC lies in precision rather than F1",
+        "sentence": "Second, the POPE contribution of DSCC lies in precision rather than F1 (Table 4.3), while most literature baselines report only accuracy and F1."
+      },
+      "support_2": {
+        "chunk_id": "2608.12746_sec_015",
+        "section": "Related Work",
+        "excerpt": "is essential for stable bf16 training and prevents the cognitive",
+        "sentence": "This curriculum is essential for stable bf16 training and prevents the cognitive cross-attention from destroying the perception anchors before they have converged."
+      }
+    },
+    {
+      "family_id": "bench_val_005",
+      "split": "val",
+      "paper_id": "2608.12773",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12773 (Methodology), what does the work report regarding Our treatment of held-out per-class error rates as an unbias?",
+      "reference_answer": "Our treatment of held-out per-class error rates as an unbiased control signal (rather than a bounded guarantee) is in the spirit of the noisy-label and self-training theory of Weiet al.[37].",
+      "support_1": {
+        "chunk_id": "2608.12773_sec_012",
+        "section": "Methodology",
+        "excerpt": "of held-out per-class error rates as an unbiased control signal",
+        "sentence": "Our treatment of held-out per-class error rates as an unbiased control signal (rather than a bounded guarantee) is in the spirit of the noisy-label and self-training theory of Weiet al.[37]."
+      }
+    },
+    {
+      "family_id": "bench_val_006",
+      "split": "val",
+      "paper_id": "2608.12806",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12806, regarding Introduction and Methodology, what are the key findings reported concerning Experiments demonstrate that, compared to adopting and We further evaluate the effectiveness of our optim?",
+      "reference_answer": "Experiments demonstrate that, compared to adopting existing general anchors, leveraging our learned anchors yields higher erasure accuracy and improved image fidelity preservation in animation character erasure. Additionally, We further evaluate the effectiveness of our optimized anchor embeddings by integrating them into four representative model modification baselines: MACE [26], UCE [9], ESD-u [8], and AC [17].",
+      "support_1": {
+        "chunk_id": "2608.12806_sec_008",
+        "section": "Introduction",
+        "excerpt": "that, compared to adopting existing general anchors, leveraging our learned",
+        "sentence": "Experiments demonstrate that, compared to adopting existing general anchors, leveraging our learned anchors yields higher erasure accuracy and improved image fidelity preservation in animation character erasure."
+      },
+      "support_2": {
+        "chunk_id": "2608.12806_sec_023",
+        "section": "Methodology",
+        "excerpt": "evaluate the effectiveness of our optimized anchor embeddings by integrating",
+        "sentence": "We further evaluate the effectiveness of our optimized anchor embeddings by integrating them into four representative model modification baselines: MACE [26], UCE [9], ESD-u [8], and AC [17]."
+      }
+    },
+    {
+      "family_id": "bench_val_007",
+      "split": "val",
+      "paper_id": "2608.12825",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12825 (Methodology), what does the work report regarding Both the 1024-token and 4096-token variants achieve higher P?",
+      "reference_answer": "Both the 1024-token and 4096-token variants achieve higher PSNR and SSIM with lower LP IPS, showing that our design improves reconstruction quality without increasing the number of predicted Gaussians.",
+      "support_1": {
+        "chunk_id": "2608.12825_sec_016",
+        "section": "Methodology",
+        "excerpt": "1024-token and 4096-token variants achieve higher PSNR and SSIM with",
+        "sentence": "Both the 1024-token and 4096-token variants achieve higher PSNR and SSIM with lower LP IPS, showing that our design improves reconstruction quality without increasing the number of predicted Gaussians."
+      }
+    },
+    {
+      "family_id": "bench_val_008",
+      "split": "val",
+      "paper_id": "2608.12875",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12875, regarding Introduction and Related Work, what are the key findings reported concerning Lower reasoning budgets preserve or improve retrie and (2024) show that adaptive test-time compute can ou?",
+      "reference_answer": "Lower reasoning budgets preserve or improve retrieval for most evaluated models (\u00a74.4\u20134.6). Additionally, (2024) show that adaptive test-time compute can outperform a uniform reasoning budget.",
+      "support_1": {
+        "chunk_id": "2608.12875_sec_005",
+        "section": "Introduction",
+        "excerpt": "budgets preserve or improve retrieval for most evaluated models (\u00a74.4\u20134.6).",
+        "sentence": "Lower reasoning budgets preserve or improve retrieval for most evaluated models (\u00a74.4\u20134.6)."
+      },
+      "support_2": {
+        "chunk_id": "2608.12875_sec_007",
+        "section": "Related Work",
+        "excerpt": "that adaptive test-time compute can outperform a uniform reasoning budget.",
+        "sentence": "(2024) show that adaptive test-time compute can outperform a uniform reasoning budget."
+      }
+    },
+    {
+      "family_id": "bench_val_009",
+      "split": "val",
+      "paper_id": "2608.12876",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12876 (Introduction), what does the work report regarding (c) The same 9B backbone, trained in this loop, improves rou?",
+      "reference_answer": "(c) The same 9B backbone, trained in this loop, improves round over round on three external benchmarks; the SFT dip trades accuracy for the reasoning output format, which the adversarial rounds more than recover.",
+      "support_1": {
+        "chunk_id": "2608.12876_sec_002",
+        "section": "Introduction",
+        "excerpt": "same 9B backbone, trained in this loop, improves round over",
+        "sentence": "(c) The same 9B backbone, trained in this loop, improves round over round on three external benchmarks; the SFT dip trades accuracy for the reasoning output format, which the adversarial rounds more than recover."
+      }
+    },
+    {
+      "family_id": "bench_val_010",
+      "split": "val",
+      "paper_id": "2608.13040",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13040, regarding Methodology and Introduction, what are the key findings reported concerning 4.2 MAIN RESULTS We evaluate whether latent privil and \u2022Experimental Validation.LOPD consistently surpass?",
+      "reference_answer": "4.2 MAIN RESULTS We evaluate whether latent privileged context improves self-distillation learning across tool use and code generation domains in Tables 1 and 2. Additionally, \u2022Experimental Validation.LOPD consistently surpasses RLVR and representative OPSD methods over three model backbones and seven benchmarks, and outperforms GRPO and Skill-SD with less than30%of their rollout budget.",
+      "support_1": {
+        "chunk_id": "2608.13040_sec_022",
+        "section": "Methodology",
+        "excerpt": "RESULTS We evaluate whether latent privileged context improves self-distillation learning",
+        "sentence": "4.2 MAIN RESULTS We evaluate whether latent privileged context improves self-distillation learning across tool use and code generation domains in Tables 1 and 2."
+      },
+      "support_2": {
+        "chunk_id": "2608.13040_sec_007",
+        "section": "Introduction",
+        "excerpt": "consistently surpasses RLVR and representative OPSD methods over three model",
+        "sentence": "\u2022Experimental Validation.LOPD consistently surpasses RLVR and representative OPSD methods over three model backbones and seven benchmarks, and outperforms GRPO and Skill-SD with less than30%of their rollout budget."
+      }
+    },
+    {
+      "family_id": "bench_val_011",
+      "split": "val",
+      "paper_id": "2608.13063",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13063 (Results), what does the work report regarding 4.5 Phase A.1 Recovery: Confidence at Baseline vs.?",
+      "reference_answer": "4.5 Phase A.1 Recovery: Confidence at Baseline vs.",
+      "support_1": {
+        "chunk_id": "2608.13063_sec_027",
+        "section": "Results",
+        "excerpt": "A.1 Recovery: Confidence at Baseline vs.",
+        "sentence": "4.5 Phase A.1 Recovery: Confidence at Baseline vs."
+      }
+    },
+    {
+      "family_id": "bench_val_012",
+      "split": "val",
+      "paper_id": "2608.13064",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13064, regarding Methodology and Results, what are the key findings reported concerning The proposed UVIF The best model, UVIF-Swin-S, ach and improves when the training images increase from 0?",
+      "reference_answer": "The proposed UVIF The best model, UVIF-Swin-S, achieves 88.94% accuracy and 95.69% AUC. Additionally, improves when the training images increase from 0 to 100k and reaches saturation at 100k.",
+      "support_1": {
+        "chunk_id": "2608.13064_sec_023",
+        "section": "Methodology",
+        "excerpt": "UVIF The best model, UVIF-Swin-S, achieves 88.94% accuracy and 95.69%",
+        "sentence": "The proposed UVIF The best model, UVIF-Swin-S, achieves 88.94% accuracy and 95.69% AUC."
+      },
+      "support_2": {
+        "chunk_id": "2608.13064_sec_026",
+        "section": "Results",
+        "excerpt": "the training images increase from 0 to 100k and reaches",
+        "sentence": "improves when the training images increase from 0 to 100k and reaches saturation at 100k."
+      }
+    },
+    {
+      "family_id": "bench_val_013",
+      "split": "val",
+      "paper_id": "2608.13092",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13092 (Methodology), what does the work report regarding 2, our proposed framework is jointly optimized with four obj?",
+      "reference_answer": "2, our proposed framework is jointly optimized with four objectives: the cross-entropy loss Lce [41], the triplet loss Ltri [13]\u201e the prototypical contrastive loss Lpcl, and the cross modal alignment loss Lalign.",
+      "support_1": {
+        "chunk_id": "2608.13092_sec_021",
+        "section": "Methodology",
+        "excerpt": "proposed framework is jointly optimized with four objectives: the cross-entropy",
+        "sentence": "2, our proposed framework is jointly optimized with four objectives: the cross-entropy loss Lce [41], the triplet loss Ltri [13]\u201e the prototypical contrastive loss Lpcl, and the cross modal alignment loss Lalign."
+      }
+    },
+    {
+      "family_id": "bench_val_014",
+      "split": "val",
+      "paper_id": "2608.13095",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13095, regarding Introduction and Introduction, what are the key findings reported concerning The total training objective combines this with th and The same lifting procedure applied to 3D Gaussian?",
+      "reference_answer": "The total training objective combines this with the standard photometric loss: L=L photo +\u03bbL sem,L photo = 1 |R| X r\u2208R \u2225C(r)\u2212 \u02c6C(r)\u22252 2. Additionally, The same lifting procedure applied to 3D Gaussian Splatting [Kerblet al., 2023 ] would reduce training time and enable real-time rollouts.",
+      "support_1": {
+        "chunk_id": "2608.13095_sec_005",
+        "section": "Introduction",
+        "excerpt": "training objective combines this with the standard photometric loss: L=L",
+        "sentence": "The total training objective combines this with the standard photometric loss: L=L photo +\u03bbL sem,L photo = 1 |R| X r\u2208R \u2225C(r)\u2212 \u02c6C(r)\u22252 2."
+      },
+      "support_2": {
+        "chunk_id": "2608.13095_sec_008",
+        "section": "Introduction",
+        "excerpt": "lifting procedure applied to 3D Gaussian Splatting [Kerblet al., 2023",
+        "sentence": "The same lifting procedure applied to 3D Gaussian Splatting [Kerblet al., 2023 ] would reduce training time and enable real-time rollouts."
+      }
+    },
+    {
+      "family_id": "bench_val_015",
+      "split": "val",
+      "paper_id": "2608.13102",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13102 (Results), what does the work report regarding With the full target-domain training set, RbFT-Net achieves?",
+      "reference_answer": "With the full target-domain training set, RbFT-Net achieves the strongest overall performance.Forcross-platform evaluation,ZJU-4DRadarCam serves as the source domain and the newly collected dataset as the target domain.",
+      "support_1": {
+        "chunk_id": "2608.13102_sec_017",
+        "section": "Results",
+        "excerpt": "full target-domain training set, RbFT-Net achieves the strongest overall performance.Forcross-platform",
+        "sentence": "With the full target-domain training set, RbFT-Net achieves the strongest overall performance.Forcross-platform evaluation,ZJU-4DRadarCam serves as the source domain and the newly collected dataset as the target domain."
+      }
+    },
+    {
+      "family_id": "bench_val_016",
+      "split": "val",
+      "paper_id": "2608.13135",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13135, regarding Abstract and Methodology, what are the key findings reported concerning Single-stage instance segmentation, like YOL ACT [ and This dataset is divided into 118K training samples?",
+      "reference_answer": "Single-stage instance segmentation, like YOL ACT [1], improve this aspect but yield lower accuracy. Additionally, This dataset is divided into 118K training samples and 5K validation samples.",
+      "support_1": {
+        "chunk_id": "2608.13135_sec_005",
+        "section": "Abstract",
+        "excerpt": "segmentation, like YOL ACT [1], improve this aspect but yield",
+        "sentence": "Single-stage instance segmentation, like YOL ACT [1], improve this aspect but yield lower accuracy."
+      },
+      "support_2": {
+        "chunk_id": "2608.13135_sec_009",
+        "section": "Methodology",
+        "excerpt": "is divided into 118K training samples and 5K validation samples.",
+        "sentence": "This dataset is divided into 118K training samples and 5K validation samples."
+      }
+    },
+    {
+      "family_id": "bench_val_017",
+      "split": "val",
+      "paper_id": "2608.13168",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13168 (Abstract), what does the work report regarding We evaluate the attachment tendencies of 32 LLMs and select?",
+      "reference_answer": "We evaluate the attachment tendencies of 32 LLMs and select representative models to investigate how these tendencies manifest in contextualized multi-turn interactions and whether they can be shaped through prompting.",
+      "support_1": {
+        "chunk_id": "2608.13168_sec_001",
+        "section": "Abstract",
+        "excerpt": "the attachment tendencies of 32 LLMs and select representative models",
+        "sentence": "We evaluate the attachment tendencies of 32 LLMs and select representative models to investigate how these tendencies manifest in contextualized multi-turn interactions and whether they can be shaped through prompting."
+      }
+    },
+    {
+      "family_id": "bench_val_018",
+      "split": "val",
+      "paper_id": "2608.13183",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13183, regarding Methodology and Results, what are the key findings reported concerning 6 also showed that performance on semantic tasks i and For joint training, we focus on DINOv2-anchored co?",
+      "reference_answer": "6 also showed that performance on semantic tasks increased, whereas performance on geometric understanding tasks decreased, compared to the best single-objective training. Additionally, For joint training, we focus on DINOv2-anchored combinations because DINOv2 gives the strongest semantic baseline among the evaluated single-objective methods.",
+      "support_1": {
+        "chunk_id": "2608.13183_sec_019",
+        "section": "Methodology",
+        "excerpt": "showed that performance on semantic tasks increased, whereas performance on",
+        "sentence": "6 also showed that performance on semantic tasks increased, whereas performance on geometric understanding tasks decreased, compared to the best single-objective training."
+      },
+      "support_2": {
+        "chunk_id": "2608.13183_sec_023",
+        "section": "Results",
+        "excerpt": "training, we focus on DINOv2-anchored combinations because DINOv2 gives the",
+        "sentence": "For joint training, we focus on DINOv2-anchored combinations because DINOv2 gives the strongest semantic baseline among the evaluated single-objective methods."
+      }
+    },
+    {
+      "family_id": "bench_val_019",
+      "split": "val",
+      "paper_id": "2608.13217",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13217 (Methodology), what does the work report regarding On further increasing the input modalities, the accuracy inc?",
+      "reference_answer": "On further increasing the input modalities, the accuracy increases to 87.34% with the combined input of color, it, and nor- 8 M.",
+      "support_1": {
+        "chunk_id": "2608.13217_sec_013",
+        "section": "Methodology",
+        "excerpt": "increasing the input modalities, the accuracy increases to 87.34% with",
+        "sentence": "On further increasing the input modalities, the accuracy increases to 87.34% with the combined input of color, it, and nor- 8 M."
+      }
+    },
+    {
+      "family_id": "bench_val_020",
+      "split": "val",
+      "paper_id": "2608.13237",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13237, regarding Abstract and Related Work, what are the key findings reported concerning On the confirmatory test set, the resulting policy and 5.4 Confirmatory Test Set: Limited Accuracy Loss a?",
+      "reference_answer": "On the confirmatory test set, the resulting policy reduces retrieval calls by 77 (3.70%) relative to Native Search-R1, while O\ufb00icial Exact Match decreases by 0.625 percentage points. Additionally, 5.4 Confirmatory Test Set: Limited Accuracy Loss and Fewer Searches Both confirmatory criteria pass.",
+      "support_1": {
+        "chunk_id": "2608.13237_sec_001",
+        "section": "Abstract",
+        "excerpt": "confirmatory test set, the resulting policy reduces retrieval calls by",
+        "sentence": "On the confirmatory test set, the resulting policy reduces retrieval calls by 77 (3.70%) relative to Native Search-R1, while O\ufb00icial Exact Match decreases by 0.625 percentage points."
+      },
+      "support_2": {
+        "chunk_id": "2608.13237_sec_014",
+        "section": "Related Work",
+        "excerpt": "Test Set: Limited Accuracy Loss and Fewer Searches Both confirmatory",
+        "sentence": "5.4 Confirmatory Test Set: Limited Accuracy Loss and Fewer Searches Both confirmatory criteria pass."
+      }
+    },
+    {
+      "family_id": "bench_val_021",
+      "split": "val",
+      "paper_id": "2608.13239",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13239 (Methodology), what does the work report regarding 3 (a) and (b),Vanilla SFT, despite its simple training setup?",
+      "reference_answer": "3 (a) and (b),Vanilla SFT, despite its simple training setup, consistently outperforms both the baseline and HumanOmniV2 numbers.",
+      "support_1": {
+        "chunk_id": "2608.13239_sec_023",
+        "section": "Methodology",
+        "excerpt": "and (b),Vanilla SFT, despite its simple training setup, consistently outperforms",
+        "sentence": "3 (a) and (b),Vanilla SFT, despite its simple training setup, consistently outperforms both the baseline and HumanOmniV2 numbers."
+      }
+    },
+    {
+      "family_id": "bench_val_022",
+      "split": "val",
+      "paper_id": "2608.13255",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13255, regarding Abstract and Methodology, what are the key findings reported concerning Based on this observation, we introduce GeoCache, and Transporting only the anchor\u2019s per-step change inx?",
+      "reference_answer": "Based on this observation, we introduce GeoCache, a training-free plugin that evaluates a rotating subset of anchor views and transports their geometry aligned per-step x 0 updates to the remaining views. Additionally, Transporting only the anchor\u2019s per-step change inx0 and adding it to the target view\u2019sownpreviousstatereducestheerrorto0.025at identical compute (Figure 2c).",
+      "support_1": {
+        "chunk_id": "2608.13255_sec_001",
+        "section": "Abstract",
+        "excerpt": "this observation, we introduce GeoCache, a training-free plugin that evaluates",
+        "sentence": "Based on this observation, we introduce GeoCache, a training-free plugin that evaluates a rotating subset of anchor views and transports their geometry aligned per-step x 0 updates to the remaining views."
+      },
+      "support_2": {
+        "chunk_id": "2608.13255_sec_015",
+        "section": "Methodology",
+        "excerpt": "the anchor\u2019s per-step change inx0 and adding it to the",
+        "sentence": "Transporting only the anchor\u2019s per-step change inx0 and adding it to the target view\u2019sownpreviousstatereducestheerrorto0.025at identical compute (Figure 2c)."
+      }
+    },
+    {
+      "family_id": "bench_val_023",
+      "split": "val",
+      "paper_id": "2608.13258",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13258 (Introduction), what does the work report regarding (2025) show that self-referential prompting reliably induces?",
+      "reference_answer": "(2025) show that self-referential prompting reliably induces large language models to produce first-person reports resembling subjective experience.",
+      "support_1": {
+        "chunk_id": "2608.13258_sec_003",
+        "section": "Introduction",
+        "excerpt": "that self-referential prompting reliably induces large language models to produce",
+        "sentence": "(2025) show that self-referential prompting reliably induces large language models to produce first-person reports resembling subjective experience."
+      }
+    },
+    {
+      "family_id": "bench_val_024",
+      "split": "val",
+      "paper_id": "2608.13304",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13304, regarding Methodology and Related Work, what are the key findings reported concerning Training-time baselines show a similar pattern: Qw and Constitutional training and safety-focused refusal?",
+      "reference_answer": "Training-time baselines show a similar pattern: Qwen RATIONAL reaches 59.0 SB but has 87.9 OR and severe capability loss. Additionally, Constitutional training and safety-focused refusal data provide related routes to harmlessness (Bai et al., 2022b; Dai et al., 2024; Yuan et al., 2025).",
+      "support_1": {
+        "chunk_id": "2608.13304_sec_016",
+        "section": "Methodology",
+        "excerpt": "show a similar pattern: Qwen RATIONAL reaches 59.0 SB but",
+        "sentence": "Training-time baselines show a similar pattern: Qwen RATIONAL reaches 59.0 SB but has 87.9 OR and severe capability loss."
+      },
+      "support_2": {
+        "chunk_id": "2608.13304_sec_005",
+        "section": "Related Work",
+        "excerpt": "and safety-focused refusal data provide related routes to harmlessness (Bai",
+        "sentence": "Constitutional training and safety-focused refusal data provide related routes to harmlessness (Bai et al., 2022b; Dai et al., 2024; Yuan et al., 2025)."
+      }
+    }
+  ],
+  "test": [
+    {
+      "family_id": "bench_test_001",
+      "split": "test",
+      "paper_id": "2608.11847",
+      "is_multi_passage": false,
+      "question": "In paper 2608.11847 (Related Work), what does the work report regarding The hatched bars in Figure 3 show that SC and visual lookbac?",
+      "reference_answer": "The hatched bars in Figure 3 show that SC and visual lookback score rarely select the same top-ranked response, with the lowest agreement ratio reaching 0.01, below the random baseline of 0.04.",
+      "support_1": {
+        "chunk_id": "2608.11847_sec_014",
+        "section": "Related Work",
+        "excerpt": "bars in Figure 3 show that SC and visual lookback",
+        "sentence": "The hatched bars in Figure 3 show that SC and visual lookback score rarely select the same top-ranked response, with the lowest agreement ratio reaching 0.01, below the random baseline of 0.04."
+      }
+    },
+    {
+      "family_id": "bench_test_002",
+      "split": "test",
+      "paper_id": "2608.12447",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12447, regarding Results and Introduction, what are the key findings reported concerning Strict orthogonality and lossless reconstruction a and The full testbed contains eighteen models spanning?",
+      "reference_answer": "Strict orthogonality and lossless reconstruction are guaranteed by construction (validated: max reconstruction error = 0.0 across all models). Additionally, The full testbed contains eighteen models spanning six architecture families (7B\u2013120B parameters), ten instruction-tuned and eight base variants; model details are in Appendix A.1.",
+      "support_1": {
+        "chunk_id": "2608.12447_sec_013",
+        "section": "Results",
+        "excerpt": "and lossless reconstruction are guaranteed by construction (validated: max reconstruction",
+        "sentence": "Strict orthogonality and lossless reconstruction are guaranteed by construction (validated: max reconstruction error = 0.0 across all models)."
+      },
+      "support_2": {
+        "chunk_id": "2608.12447_sec_077",
+        "section": "Introduction",
+        "excerpt": "testbed contains eighteen models spanning six architecture families (7B\u2013120B parameters),",
+        "sentence": "The full testbed contains eighteen models spanning six architecture families (7B\u2013120B parameters), ten instruction-tuned and eight base variants; model details are in Appendix A.1."
+      }
+    },
+    {
+      "family_id": "bench_test_003",
+      "split": "test",
+      "paper_id": "2608.12486",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12486 (Methodology), what does the work report regarding As shown in Table 4, jointly selecting complementary skills?",
+      "reference_answer": "As shown in Table 4, jointly selecting complementary skills achieves the strongest overall performance, outperforming random or individually ranked skill selection.",
+      "support_1": {
+        "chunk_id": "2608.12486_sec_017",
+        "section": "Methodology",
+        "excerpt": "in Table 4, jointly selecting complementary skills achieves the strongest",
+        "sentence": "As shown in Table 4, jointly selecting complementary skills achieves the strongest overall performance, outperforming random or individually ranked skill selection."
+      }
+    },
+    {
+      "family_id": "bench_test_004",
+      "split": "test",
+      "paper_id": "2608.12511",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12511, regarding Methodology and Conclusion, what are the key findings reported concerning Aviv, \u201cHonesty is the best policy: On the accuracy and These labels aim to reduce cognitive load, improve?",
+      "reference_answer": "Aviv, \u201cHonesty is the best policy: On the accuracy of apple privacy labels compared to apps\u2019 privacy policies,\u201darXiv preprint arXiv:2306.17063, 2023. Additionally, These labels aim to reduce cognitive load, improve decision-making, and create industry-level consistency in privacy disclosures [54], which are mentioned in 28 papers, as the second most studied format.",
+      "support_1": {
+        "chunk_id": "2608.12511_sec_046",
+        "section": "Methodology",
+        "excerpt": "is the best policy: On the accuracy of apple privacy",
+        "sentence": "Aviv, \u201cHonesty is the best policy: On the accuracy of apple privacy labels compared to apps\u2019 privacy policies,\u201darXiv preprint arXiv:2306.17063, 2023."
+      },
+      "support_2": {
+        "chunk_id": "2608.12511_sec_061",
+        "section": "Conclusion",
+        "excerpt": "aim to reduce cognitive load, improve decision-making, and create industry-level",
+        "sentence": "These labels aim to reduce cognitive load, improve decision-making, and create industry-level consistency in privacy disclosures [54], which are mentioned in 28 papers, as the second most studied format."
+      }
+    },
+    {
+      "family_id": "bench_test_005",
+      "split": "test",
+      "paper_id": "2608.12571",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12571 (Results), what does the work report regarding Frontier models achieve 4\u201319% accuracy, compared with 70% fo?",
+      "reference_answer": "Frontier models achieve 4\u201319% accuracy, compared with 70% for humans, and the dominant error mode is selecting a topically similar paper rather than the correct one.",
+      "support_1": {
+        "chunk_id": "2608.12571_sec_036",
+        "section": "Results",
+        "excerpt": "achieve 4\u201319% accuracy, compared with 70% for humans, and the",
+        "sentence": "Frontier models achieve 4\u201319% accuracy, compared with 70% for humans, and the dominant error mode is selecting a topically similar paper rather than the correct one."
+      }
+    },
+    {
+      "family_id": "bench_test_006",
+      "split": "test",
+      "paper_id": "2608.12623",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12623, regarding Introduction and Results, what are the key findings reported concerning OpenBackdoor further demonstrates that this threat and Victim validity.Appendix Table 5 verifies usable v?",
+      "reference_answer": "OpenBackdoor further demonstrates that this threat extends across sentiment, topic, toxicity, and spam classification rather than being confined to one benchmark (Cui et al., 2022). Additionally, Victim validity.Appendix Table 5 verifies usable victims and implanted attacks: clean accuracy is 0.840\u20130.968 and pre-filter target ASR is at least 0.987 across the main matrix.",
+      "support_1": {
+        "chunk_id": "2608.12623_sec_002",
+        "section": "Introduction",
+        "excerpt": "demonstrates that this threat extends across sentiment, topic, toxicity, and",
+        "sentence": "OpenBackdoor further demonstrates that this threat extends across sentiment, topic, toxicity, and spam classification rather than being confined to one benchmark (Cui et al., 2022)."
+      },
+      "support_2": {
+        "chunk_id": "2608.12623_sec_019",
+        "section": "Results",
+        "excerpt": "Table 5 verifies usable victims and implanted attacks: clean accuracy",
+        "sentence": "Victim validity.Appendix Table 5 verifies usable victims and implanted attacks: clean accuracy is 0.840\u20130.968 and pre-filter target ASR is at least 0.987 across the main matrix."
+      }
+    },
+    {
+      "family_id": "bench_test_007",
+      "split": "test",
+      "paper_id": "2608.12627",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12627 (Introduction), what does the work report regarding EgoCITE improves accuracy over agent ic memory baselines by?",
+      "reference_answer": "EgoCITE improves accuracy over agent ic memory baselines by at least 4.4\u201314.2% while achieving 36\u00d7 lower cost than long-context LLM agents.",
+      "support_1": {
+        "chunk_id": "2608.12627_sec_005",
+        "section": "Introduction",
+        "excerpt": "accuracy over agent ic memory baselines by at least 4.4\u201314.2%",
+        "sentence": "EgoCITE improves accuracy over agent ic memory baselines by at least 4.4\u201314.2% while achieving 36\u00d7 lower cost than long-context LLM agents."
+      }
+    },
+    {
+      "family_id": "bench_test_008",
+      "split": "test",
+      "paper_id": "2608.12654",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12654, regarding Introduction and Related Work, what are the key findings reported concerning Anthropic uses an action classifier to reduce appr and Agent-safety benchmarks.Agent-SafetyBench [ 13] ev?",
+      "reference_answer": "Anthropic uses an action classifier to reduce approval fatigue while blocking risky tool calls [ 2]. Additionally, Agent-safety benchmarks.Agent-SafetyBench [ 13] evaluates unsafe tool-using agents across 349 environments and 2,000 synthetic and augmented test cases across 8 risk categories.",
+      "support_1": {
+        "chunk_id": "2608.12654_sec_003",
+        "section": "Introduction",
+        "excerpt": "an action classifier to reduce approval fatigue while blocking risky",
+        "sentence": "Anthropic uses an action classifier to reduce approval fatigue while blocking risky tool calls [ 2]."
+      },
+      "support_2": {
+        "chunk_id": "2608.12654_sec_008",
+        "section": "Related Work",
+        "excerpt": "[ 13] evaluates unsafe tool-using agents across 349 environments and",
+        "sentence": "Agent-safety benchmarks.Agent-SafetyBench [ 13] evaluates unsafe tool-using agents across 349 environments and 2,000 synthetic and augmented test cases across 8 risk categories."
+      }
+    },
+    {
+      "family_id": "bench_test_009",
+      "split": "test",
+      "paper_id": "2608.12725",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12725 (Results), what does the work report regarding In the 20% data-scarce regime, every tested architecture fro?",
+      "reference_answer": "In the 20% data-scarce regime, every tested architecture from the lightweight MobileNetV2 to the heavier ResNet-50 achieved higher Accuracy and F1-Scores when trained with GDI compared to their standard baselines.",
+      "support_1": {
+        "chunk_id": "2608.12725_sec_037",
+        "section": "Results",
+        "excerpt": "20% data-scarce regime, every tested architecture from the lightweight MobileNetV2",
+        "sentence": "In the 20% data-scarce regime, every tested architecture from the lightweight MobileNetV2 to the heavier ResNet-50 achieved higher Accuracy and F1-Scores when trained with GDI compared to their standard baselines."
+      }
+    },
+    {
+      "family_id": "bench_test_010",
+      "split": "test",
+      "paper_id": "2608.12737",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12737, regarding Methodology and Introduction, what are the key findings reported concerning KGFT also improves the robustness of training, par and We demonstrate its effectiveness across CNN- and T?",
+      "reference_answer": "KGFT also improves the robustness of training, particularly for ResNet-50, where the standard deviation decreases from 0.31 to 0.16 and the worst-case accuracy increases from 75.06 to 76.42. Additionally, We demonstrate its effectiveness across CNN- and Transformer-based architectures, including multiple ResNet variants, ViT-Tiny, and LLaMA-7B, on image classification and arithmetic reasoning tasks.",
+      "support_1": {
+        "chunk_id": "2608.12737_sec_021",
+        "section": "Methodology",
+        "excerpt": "improves the robustness of training, particularly for ResNet-50, where the",
+        "sentence": "KGFT also improves the robustness of training, particularly for ResNet-50, where the standard deviation decreases from 0.31 to 0.16 and the worst-case accuracy increases from 75.06 to 76.42."
+      },
+      "support_2": {
+        "chunk_id": "2608.12737_sec_006",
+        "section": "Introduction",
+        "excerpt": "its effectiveness across CNN- and Transformer-based architectures, including multiple ResNet",
+        "sentence": "We demonstrate its effectiveness across CNN- and Transformer-based architectures, including multiple ResNet variants, ViT-Tiny, and LLaMA-7B, on image classification and arithmetic reasoning tasks."
+      }
+    },
+    {
+      "family_id": "bench_test_011",
+      "split": "test",
+      "paper_id": "2608.12750",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12750 (Abstract), what does the work report regarding We evaluate our framework on 40 clinical situations and demo?",
+      "reference_answer": "We evaluate our framework on 40 clinical situations and demonstrate that it generates diverse profiles with high clinical plausibility.",
+      "support_1": {
+        "chunk_id": "2608.12750_sec_002",
+        "section": "Abstract",
+        "excerpt": "our framework on 40 clinical situations and demonstrate that it",
+        "sentence": "We evaluate our framework on 40 clinical situations and demonstrate that it generates diverse profiles with high clinical plausibility."
+      }
+    },
+    {
+      "family_id": "bench_test_012",
+      "split": "test",
+      "paper_id": "2608.12766",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12766, regarding Results and Methodology, what are the key findings reported concerning ApplyingLms directly to standard attention does Fi and 5.2 MDGexperimentsforhistopathologicalimages Datas?",
+      "reference_answer": "ApplyingLms directly to standard attention does Figure 10:Ablation results: Average-accuracy trend as components are added, plus per-dataset gains of the full model over the baseline. Additionally, 5.2 MDGexperimentsforhistopathologicalimages Datasets.We evaluate PatchGen on HIS TOP A NTUM (Zamanitajeddin et al.",
+      "support_1": {
+        "chunk_id": "2608.12766_sec_024",
+        "section": "Results",
+        "excerpt": "to standard attention does Figure 10:Ablation results: Average-accuracy trend as",
+        "sentence": "ApplyingLms directly to standard attention does Figure 10:Ablation results: Average-accuracy trend as components are added, plus per-dataset gains of the full model over the baseline."
+      },
+      "support_2": {
+        "chunk_id": "2608.12766_sec_027",
+        "section": "Methodology",
+        "excerpt": "Datasets.We evaluate PatchGen on HIS TOP A NTUM (Zamanitajeddin et",
+        "sentence": "5.2 MDGexperimentsforhistopathologicalimages Datasets.We evaluate PatchGen on HIS TOP A NTUM (Zamanitajeddin et al."
+      }
+    },
+    {
+      "family_id": "bench_test_013",
+      "split": "test",
+      "paper_id": "2608.12781",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12781 (Results), what does the work report regarding Since the operational judge is used for both benchmark evalu?",
+      "reference_answer": "Since the operational judge is used for both benchmark evaluation and training-data filtering, we consider recall alongside precision and F1 to reduce undetected response-pattern failures.",
+      "support_1": {
+        "chunk_id": "2608.12781_sec_016",
+        "section": "Results",
+        "excerpt": "operational judge is used for both benchmark evaluation and training-data",
+        "sentence": "Since the operational judge is used for both benchmark evaluation and training-data filtering, we consider recall alongside precision and F1 to reduce undetected response-pattern failures."
+      }
+    },
+    {
+      "family_id": "bench_test_014",
+      "split": "test",
+      "paper_id": "2608.12811",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12811, regarding Results and Introduction, what are the key findings reported concerning \u2777DeepFaceGenBenchmark(Beietal.2024).Weadoptthe off and 2025) have substantiallyimprovedthephotorealismofs?",
+      "reference_answer": "\u2777DeepFaceGenBenchmark(Beietal.2024).Weadoptthe official data split,partitioning the dataset into training,validation,andtestsetswitharatioof7 : 1 : 2,this benchmark evaluates faces generated by 12 instant-guided methods. Additionally, 2025) have substantiallyimprovedthephotorealismofsyntheticimages, while heightening concerns over content authenticity and makinggeneralizablegeneratedimagedetectionincreasingly important (Xu et al.",
+      "support_1": {
+        "chunk_id": "2608.12811_sec_019",
+        "section": "Results",
+        "excerpt": "data split,partitioning the dataset into training,validation,andtestsetswitharatioof7 : 1 : 2,this",
+        "sentence": "\u2777DeepFaceGenBenchmark(Beietal.2024).Weadoptthe official data split,partitioning the dataset into training,validation,andtestsetswitharatioof7 : 1 : 2,this benchmark evaluates faces generated by 12 instant-guided methods."
+      },
+      "support_2": {
+        "chunk_id": "2608.12811_sec_002",
+        "section": "Introduction",
+        "excerpt": "substantiallyimprovedthephotorealismofsyntheticimages, while heightening concerns over content authenticity and makinggeneralizablegeneratedimagedetectionincreasingly important",
+        "sentence": "2025) have substantiallyimprovedthephotorealismofsyntheticimages, while heightening concerns over content authenticity and makinggeneralizablegeneratedimagedetectionincreasingly important (Xu et al."
+      }
+    },
+    {
+      "family_id": "bench_test_015",
+      "split": "test",
+      "paper_id": "2608.12829",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12829 (Abstract), what does the work report regarding ACM ISBN 979-8-4007-2213-4/2026/11 https://doi.org/10.1145/3?",
+      "reference_answer": "ACM ISBN 979-8-4007-2213-4/2026/11 https://doi.org/10.1145/3767308.3835565 modifying model parameters, which are often architecture-specific and impractical for deployed larger models.",
+      "support_1": {
+        "chunk_id": "2608.12829_sec_002",
+        "section": "Abstract",
+        "excerpt": "979-8-4007-2213-4/2026/11 https://doi.org/10.1145/3767308.3835565 modifying model parameters, which are often architecture-specific and",
+        "sentence": "ACM ISBN 979-8-4007-2213-4/2026/11 https://doi.org/10.1145/3767308.3835565 modifying model parameters, which are often architecture-specific and impractical for deployed larger models."
+      }
+    },
+    {
+      "family_id": "bench_test_016",
+      "split": "test",
+      "paper_id": "2608.12836",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12836, regarding Results and Abstract, what are the key findings reported concerning The same pattern holds for LOGICAL-SATA benchmark, and Our framework improves Macro-F1 from 48.3 to 77.0?",
+      "reference_answer": "The same pattern holds for LOGICAL-SATA benchmark, where paired multiple-choice structured inference obtains 72.2 macro-F1, compared to 47.0 for the strongest direct-prompting baseline. Additionally, Our framework improves Macro-F1 from 48.3 to 77.0 on the human validated LOGICAL -COMMONSENSE QA split and from 47.0 to 75.6 on LOGICAL -SATA, with the largest gains on NEITHER/NOR.",
+      "support_1": {
+        "chunk_id": "2608.12836_sec_015",
+        "section": "Results",
+        "excerpt": "pattern holds for LOGICAL-SATA benchmark, where paired multiple-choice structured inference",
+        "sentence": "The same pattern holds for LOGICAL-SATA benchmark, where paired multiple-choice structured inference obtains 72.2 macro-F1, compared to 47.0 for the strongest direct-prompting baseline."
+      },
+      "support_2": {
+        "chunk_id": "2608.12836_sec_001",
+        "section": "Abstract",
+        "excerpt": "improves Macro-F1 from 48.3 to 77.0 on the human validated",
+        "sentence": "Our framework improves Macro-F1 from 48.3 to 77.0 on the human validated LOGICAL -COMMONSENSE QA split and from 47.0 to 75.6 on LOGICAL -SATA, with the largest gains on NEITHER/NOR."
+      }
+    },
+    {
+      "family_id": "bench_test_017",
+      "split": "test",
+      "paper_id": "2608.12852",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12852 (Abstract), what does the work report regarding An impossibility probe evaluated on held-out topic families?",
+      "reference_answer": "An impossibility probe evaluated on held-out topic families separates necessary from contingent falsehood at AUC 1.00, peaking at layer 15 with balanced accuracy 0.97 (Bonferroni-adjustedP= 0.018).",
+      "support_1": {
+        "chunk_id": "2608.12852_sec_001",
+        "section": "Abstract",
+        "excerpt": "probe evaluated on held-out topic families separates necessary from contingent",
+        "sentence": "An impossibility probe evaluated on held-out topic families separates necessary from contingent falsehood at AUC 1.00, peaking at layer 15 with balanced accuracy 0.97 (Bonferroni-adjustedP= 0.018)."
+      }
+    },
+    {
+      "family_id": "bench_test_018",
+      "split": "test",
+      "paper_id": "2608.12854",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12854, regarding Results and Introduction, what are the key findings reported concerning 4.3 Main Results NA VSIM v1 results.As shown in Ta and \u2022 BrainWAM achieves 89.5 PDMS on NAV SIM v1 and 89?",
+      "reference_answer": "4.3 Main Results NA VSIM v1 results.As shown in Table 1, BrainWAM achieves a PDMS of89.5, outperforming both VLA-based and world-model based baselines. Additionally, \u2022 BrainWAM achieves 89.5 PDMS on NAV SIM v1 and 89.6 EPDM S on NAV SIM v2, outperforming strong end-to-end driving, VLA-based, and world-model-based methods.",
+      "support_1": {
+        "chunk_id": "2608.12854_sec_019",
+        "section": "Results",
+        "excerpt": "Results NA VSIM v1 results.As shown in Table 1, BrainWAM",
+        "sentence": "4.3 Main Results NA VSIM v1 results.As shown in Table 1, BrainWAM achieves a PDMS of89.5, outperforming both VLA-based and world-model based baselines."
+      },
+      "support_2": {
+        "chunk_id": "2608.12854_sec_006",
+        "section": "Introduction",
+        "excerpt": "achieves 89.5 PDMS on NAV SIM v1 and 89.6 EPDM",
+        "sentence": "\u2022 BrainWAM achieves 89.5 PDMS on NAV SIM v1 and 89.6 EPDM S on NAV SIM v2, outperforming strong end-to-end driving, VLA-based, and world-model-based methods."
+      }
+    },
+    {
+      "family_id": "bench_test_019",
+      "split": "test",
+      "paper_id": "2608.12888",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12888 (Methodology), what does the work report regarding Representative baselines reused from STITCH (Yang et al., 20?",
+      "reference_answer": "Representative baselines reused from STITCH (Yang et al., 2026) (full set therein); GAM re-evaluated with our GPT-4.1-mini judge, and all baselines share the GPT-5-mini generator.",
+      "support_1": {
+        "chunk_id": "2608.12888_sec_015",
+        "section": "Methodology",
+        "excerpt": "reused from STITCH (Yang et al., 2026) (full set therein);",
+        "sentence": "Representative baselines reused from STITCH (Yang et al., 2026) (full set therein); GAM re-evaluated with our GPT-4.1-mini judge, and all baselines share the GPT-5-mini generator."
+      }
+    },
+    {
+      "family_id": "bench_test_020",
+      "split": "test",
+      "paper_id": "2608.12898",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12898, regarding Introduction and Results, what are the key findings reported concerning NaviDC-OCR achieves an overall score of 88.53 on W and By introducing deformation-aware perception and mo?",
+      "reference_answer": "NaviDC-OCR achieves an overall score of 88.53 on Wild OmniDocBench v1.5, outperforming most existing end-to-end document parsing methods. Additionally, By introducing deformation-aware perception and modeling mechanisms, NaviDC-OCR achieves state-of-the-art performance on the Degraded track in Table 3, outperforming existing end-to-end document parsing methods.",
+      "support_1": {
+        "chunk_id": "2608.12898_sec_006",
+        "section": "Introduction",
+        "excerpt": "an overall score of 88.53 on Wild OmniDocBench v1.5, outperforming",
+        "sentence": "NaviDC-OCR achieves an overall score of 88.53 on Wild OmniDocBench v1.5, outperforming most existing end-to-end document parsing methods."
+      },
+      "support_2": {
+        "chunk_id": "2608.12898_sec_011",
+        "section": "Results",
+        "excerpt": "deformation-aware perception and modeling mechanisms, NaviDC-OCR achieves state-of-the-art performance on",
+        "sentence": "By introducing deformation-aware perception and modeling mechanisms, NaviDC-OCR achieves state-of-the-art performance on the Degraded track in Table 3, outperforming existing end-to-end document parsing methods."
+      }
+    },
+    {
+      "family_id": "bench_test_021",
+      "split": "test",
+      "paper_id": "2608.12920",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12920 (Results), what does the work report regarding TennisVAR achieves a Hierarchical Tactic F1 of 70.98 and a K?",
+      "reference_answer": "TennisVAR achieves a Hierarchical Tactic F1 of 70.98 and a Key-action Accuracy of 52.27, exceeding the strongest SFT baselines by 6.08 and 5.14 percentage points, respectively.",
+      "support_1": {
+        "chunk_id": "2608.12920_sec_024",
+        "section": "Results",
+        "excerpt": "a Hierarchical Tactic F1 of 70.98 and a Key-action Accuracy",
+        "sentence": "TennisVAR achieves a Hierarchical Tactic F1 of 70.98 and a Key-action Accuracy of 52.27, exceeding the strongest SFT baselines by 6.08 and 5.14 percentage points, respectively."
+      }
+    },
+    {
+      "family_id": "bench_test_022",
+      "split": "test",
+      "paper_id": "2608.12953",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12953, regarding Introduction and Methodology, what are the key findings reported concerning SNIPER achieves near-exact budget adherence with a and Several baselines are re-engineered to support rec?",
+      "reference_answer": "SNIPER achieves near-exact budget adherence with aCRAFT of 0.98, compared to the baseline average of0.78. Additionally, Several baselines are re-engineered to support recent LLM architectures 2.",
+      "support_1": {
+        "chunk_id": "2608.12953_sec_004",
+        "section": "Introduction",
+        "excerpt": "near-exact budget adherence with aCRAFT of 0.98, compared to the",
+        "sentence": "SNIPER achieves near-exact budget adherence with aCRAFT of 0.98, compared to the baseline average of0.78."
+      },
+      "support_2": {
+        "chunk_id": "2608.12953_sec_015",
+        "section": "Methodology",
+        "excerpt": "are re-engineered to support recent LLM architectures 2.",
+        "sentence": "Several baselines are re-engineered to support recent LLM architectures 2."
+      }
+    },
+    {
+      "family_id": "bench_test_023",
+      "split": "test",
+      "paper_id": "2608.12957",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12957 (Methodology), what does the work report regarding This is the feedback predicted by Proposition 2: improved sa?",
+      "reference_answer": "This is the feedback predicted by Proposition 2: improved sampling success directly reduces the effective weight of the biased surrogate rather than relying on elapsed training time.",
+      "support_1": {
+        "chunk_id": "2608.12957_sec_018",
+        "section": "Methodology",
+        "excerpt": "the feedback predicted by Proposition 2: improved sampling success directly",
+        "sentence": "This is the feedback predicted by Proposition 2: improved sampling success directly reduces the effective weight of the biased surrogate rather than relying on elapsed training time."
+      }
+    },
+    {
+      "family_id": "bench_test_024",
+      "split": "test",
+      "paper_id": "2608.12960",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12960, regarding Results and Methodology, what are the key findings reported concerning Reinforcement Learning 25 so as to increase the pr and ProposedTractRLFusionFramework 64 step loss, which?",
+      "reference_answer": "Reinforcement Learning 25 so as to increase the probability of actions that lead to higher returns, and decrease the probability of actions that lead to lower returns. Additionally, ProposedTractRLFusionFramework 64 step loss, which primarily preserves previously learned behaviour, the critic networks can provide richer information about expected return across the state\u2013action space.",
+      "support_1": {
+        "chunk_id": "2608.12960_sec_051",
+        "section": "Results",
+        "excerpt": "25 so as to increase the probability of actions that",
+        "sentence": "Reinforcement Learning 25 so as to increase the probability of actions that lead to higher returns, and decrease the probability of actions that lead to lower returns."
+      },
+      "support_2": {
+        "chunk_id": "2608.12960_sec_096",
+        "section": "Methodology",
+        "excerpt": "step loss, which primarily preserves previously learned behaviour, the critic",
+        "sentence": "ProposedTractRLFusionFramework 64 step loss, which primarily preserves previously learned behaviour, the critic networks can provide richer information about expected return across the state\u2013action space."
+      }
+    },
+    {
+      "family_id": "bench_test_025",
+      "split": "test",
+      "paper_id": "2608.12971",
+      "is_multi_passage": false,
+      "question": "In paper 2608.12971 (Methodology), what does the work report regarding We report accuracy across five benchmark datasets (LFW, CPL?",
+      "reference_answer": "We report accuracy across five benchmark datasets (LFW, CPL FW, CALF W, AgeDB, CFP-FP) and TMR at FMR of10 \u22125 for IJB-C, for baseline, SOTA, and proposed methods using IResNet50 and IResNet100 backbones.",
+      "support_1": {
+        "chunk_id": "2608.12971_sec_034",
+        "section": "Methodology",
+        "excerpt": "accuracy across five benchmark datasets (LFW, CPL FW, CALF W,",
+        "sentence": "We report accuracy across five benchmark datasets (LFW, CPL FW, CALF W, AgeDB, CFP-FP) and TMR at FMR of10 \u22125 for IJB-C, for baseline, SOTA, and proposed methods using IResNet50 and IResNet100 backbones."
+      }
+    },
+    {
+      "family_id": "bench_test_026",
+      "split": "test",
+      "paper_id": "2608.12984",
+      "is_multi_passage": true,
+      "question": "In paper 2608.12984, regarding Abstract and Introduction, what are the key findings reported concerning We evaluate on a self-collected, production-scale and (ii)Provenance loss: numbers appear with no tracea?",
+      "reference_answer": "We evaluate on a self-collected, production-scale public corpus of6,130 sourcesyielding555,926 evidence cards(SEC EDGAR filings across 295 issuers and 11 sectors, U.S. Additionally, (ii)Provenance loss: numbers appear with no traceable source, and the reader can not tell an audited disclosure from a fluent hallucination [13].",
+      "support_1": {
+        "chunk_id": "2608.12984_sec_001",
+        "section": "Abstract",
+        "excerpt": "on a self-collected, production-scale public corpus of6,130 sourcesyielding555,926 evidence cards(SEC",
+        "sentence": "We evaluate on a self-collected, production-scale public corpus of6,130 sourcesyielding555,926 evidence cards(SEC EDGAR filings across 295 issuers and 11 sectors, U.S."
+      },
+      "support_2": {
+        "chunk_id": "2608.12984_sec_003",
+        "section": "Introduction",
+        "excerpt": "numbers appear with no traceable source, and the reader can",
+        "sentence": "(ii)Provenance loss: numbers appear with no traceable source, and the reader can not tell an audited disclosure from a fluent hallucination [13]."
+      }
+    },
+    {
+      "family_id": "bench_test_027",
+      "split": "test",
+      "paper_id": "2608.13010",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13010 (Abstract), what does the work report regarding Across three QA datasets and six poisoning constructions, RS?",
+      "reference_answer": "Across three QA datasets and six poisoning constructions, RSQ achieves 95.2% A UROC and detects 82.2% of poison at 5% clean document removal, versus 81.1%/52.5% for GMTP.",
+      "support_1": {
+        "chunk_id": "2608.13010_sec_001",
+        "section": "Abstract",
+        "excerpt": "QA datasets and six poisoning constructions, RSQ achieves 95.2% A",
+        "sentence": "Across three QA datasets and six poisoning constructions, RSQ achieves 95.2% A UROC and detects 82.2% of poison at 5% clean document removal, versus 81.1%/52.5% for GMTP."
+      }
+    },
+    {
+      "family_id": "bench_test_028",
+      "split": "test",
+      "paper_id": "2608.13028",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13028, regarding Introduction and Related Work, what are the key findings reported concerning Through extensive physical robot trials on a UR5e and [19] propose Animate Anyone 2, which extends chara?",
+      "reference_answer": "Through extensive physical robot trials on a UR5e platform, we demonstrate that training on PassGen-augmented data yields exceptional zero-shot transfer capabilities. Additionally, [19] propose Animate Anyone 2, which extends character animation pipelines to generate highly realistic human videos from reference images, with improvements in pose fidelity and motion consistency.",
+      "support_1": {
+        "chunk_id": "2608.13028_sec_004",
+        "section": "Introduction",
+        "excerpt": "physical robot trials on a UR5e platform, we demonstrate that",
+        "sentence": "Through extensive physical robot trials on a UR5e platform, we demonstrate that training on PassGen-augmented data yields exceptional zero-shot transfer capabilities."
+      },
+      "support_2": {
+        "chunk_id": "2608.13028_sec_005",
+        "section": "Related Work",
+        "excerpt": "Animate Anyone 2, which extends character animation pipelines to generate",
+        "sentence": "[19] propose Animate Anyone 2, which extends character animation pipelines to generate highly realistic human videos from reference images, with improvements in pose fidelity and motion consistency."
+      }
+    },
+    {
+      "family_id": "bench_test_029",
+      "split": "test",
+      "paper_id": "2608.13031",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13031 (Results), what does the work report regarding TAR 16 0.5780 0.6788 FETV 2 0.4884 0.4891 PSI-VQA 4 64.4161?",
+      "reference_answer": "TAR 16 0.5780 0.6788 FETV 2 0.4884 0.4891 PSI-VQA 4 64.4161 70.6397 TAR.For TAR, BCQ and MCQ are evaluated by accuracy, while seven open ended task types are evaluated by BERTScore F1 [34].",
+      "support_1": {
+        "chunk_id": "2608.13031_sec_010",
+        "section": "Results",
+        "excerpt": "0.5780 0.6788 FETV 2 0.4884 0.4891 PSI-VQA 4 64.4161 70.6397",
+        "sentence": "TAR 16 0.5780 0.6788 FETV 2 0.4884 0.4891 PSI-VQA 4 64.4161 70.6397 TAR.For TAR, BCQ and MCQ are evaluated by accuracy, while seven open ended task types are evaluated by BERTScore F1 [34]."
+      }
+    },
+    {
+      "family_id": "bench_test_030",
+      "split": "test",
+      "paper_id": "2608.13049",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13049, regarding Results and Abstract, what are the key findings reported concerning Judge, dataset, and overall aggregation.ForX\u2208 {goa and H2R-Bench evaluates generated videos through five?",
+      "reference_answer": "Judge, dataset, and overall aggregation.ForX\u2208 {goal,action,contact,emb}, we average the three judge scores for each video and then average across the evaluated setD: SX = 1 |D| X c\u2208D 1 |J | X m\u2208J Sm X,c ! Additionally, H2R-Bench evaluates generated videos through five dimensions,including goal-state completion,action-event completion, functional contact transfer, embodiment correctness, and general video quality.",
+      "support_1": {
+        "chunk_id": "2608.13049_sec_028",
+        "section": "Results",
+        "excerpt": "and overall aggregation.ForX\u2208 {goal,action,contact,emb}, we average the three judge scores",
+        "sentence": "Judge, dataset, and overall aggregation.ForX\u2208 {goal,action,contact,emb}, we average the three judge scores for each video and then average across the evaluated setD: SX = 1 |D| X c\u2208D 1 |J | X m\u2208J Sm X,c !"
+      },
+      "support_2": {
+        "chunk_id": "2608.13049_sec_001",
+        "section": "Abstract",
+        "excerpt": "generated videos through five dimensions,including goal-state completion,action-event completion, functional contact",
+        "sentence": "H2R-Bench evaluates generated videos through five dimensions,including goal-state completion,action-event completion, functional contact transfer, embodiment correctness, and general video quality."
+      }
+    },
+    {
+      "family_id": "bench_test_031",
+      "split": "test",
+      "paper_id": "2608.13112",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13112 (Methodology), what does the work report regarding Architecture, training recipe, and the inference pipeline ar?",
+      "reference_answer": "Architecture, training recipe, and the inference pipeline are detailed in Sections S1.3 to S1.5.",
+      "support_1": {
+        "chunk_id": "2608.13112_sec_020",
+        "section": "Methodology",
+        "excerpt": "recipe, and the inference pipeline are detailed in Sections S1.3",
+        "sentence": "Architecture, training recipe, and the inference pipeline are detailed in Sections S1.3 to S1.5."
+      }
+    },
+    {
+      "family_id": "bench_test_032",
+      "split": "test",
+      "paper_id": "2608.13113",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13113, regarding Related Work and Abstract, what are the key findings reported concerning The best-performing model,Gemini 2.5 Pro, achieves and Figure 1:Overview of the EgoMonth dataset.EgoMonth?",
+      "reference_answer": "The best-performing model,Gemini 2.5 Pro, achieves 71.8% macro-average accuracy, still 22.4 percentage points below the human baseline of 94.2%. Additionally, Figure 1:Overview of the EgoMonth dataset.EgoMonth collects month-level egocentric videos from real-world daily life to evaluate long-term spatiotemporal memory.",
+      "support_1": {
+        "chunk_id": "2608.13113_sec_015",
+        "section": "Related Work",
+        "excerpt": "model,Gemini 2.5 Pro, achieves 71.8% macro-average accuracy, still 22.4 percentage",
+        "sentence": "The best-performing model,Gemini 2.5 Pro, achieves 71.8% macro-average accuracy, still 22.4 percentage points below the human baseline of 94.2%."
+      },
+      "support_2": {
+        "chunk_id": "2608.13113_sec_001",
+        "section": "Abstract",
+        "excerpt": "of the EgoMonth dataset.EgoMonth collects month-level egocentric videos from real-world",
+        "sentence": "Figure 1:Overview of the EgoMonth dataset.EgoMonth collects month-level egocentric videos from real-world daily life to evaluate long-term spatiotemporal memory."
+      }
+    },
+    {
+      "family_id": "bench_test_033",
+      "split": "test",
+      "paper_id": "2608.13147",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13147 (Methodology), what does the work report regarding GeoUP achieves 41.5 mIoU and 45.9 RayIoU under single datase?",
+      "reference_answer": "GeoUP achieves 41.5 mIoU and 45.9 RayIoU under single dataset training, outperforming OPUS-V2-L with the same ViT-L scale and OPUS-V2-style decoder.",
+      "support_1": {
+        "chunk_id": "2608.13147_sec_021",
+        "section": "Methodology",
+        "excerpt": "41.5 mIoU and 45.9 RayIoU under single dataset training, outperforming",
+        "sentence": "GeoUP achieves 41.5 mIoU and 45.9 RayIoU under single dataset training, outperforming OPUS-V2-L with the same ViT-L scale and OPUS-V2-style decoder."
+      }
+    },
+    {
+      "family_id": "bench_test_034",
+      "split": "test",
+      "paper_id": "2608.13200",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13200, regarding Results and Related Work, what are the key findings reported concerning For training loss, we empirically set \u03bbgen = 0.1an and (2025a) proposed to evaluate retrievers on queries?",
+      "reference_answer": "For training loss, we empirically set \u03bbgen = 0.1and \u03bbemb = 1.0; a parameter study is provided in Appendix B.2. Additionally, (2025a) proposed to evaluate retrievers on queries with flexible, query-specific instructions that can extend beyond topical relevance.",
+      "support_1": {
+        "chunk_id": "2608.13200_sec_003",
+        "section": "Results",
+        "excerpt": "loss, we empirically set \u03bbgen = 0.1and \u03bbemb = 1.0;",
+        "sentence": "For training loss, we empirically set \u03bbgen = 0.1and \u03bbemb = 1.0; a parameter study is provided in Appendix B.2."
+      },
+      "support_2": {
+        "chunk_id": "2608.13200_sec_032",
+        "section": "Related Work",
+        "excerpt": "to evaluate retrievers on queries with flexible, query-specific instructions that",
+        "sentence": "(2025a) proposed to evaluate retrievers on queries with flexible, query-specific instructions that can extend beyond topical relevance."
+      }
+    },
+    {
+      "family_id": "bench_test_035",
+      "split": "test",
+      "paper_id": "2608.13223",
+      "is_multi_passage": false,
+      "question": "In paper 2608.13223 (Introduction), what does the work report regarding Error detection improves most on TC (+0.009) and least on WT?",
+      "reference_answer": "Error detection improves most on TC (+0.009) and least on WT (+0.004).",
+      "support_1": {
+        "chunk_id": "2608.13223_sec_012",
+        "section": "Introduction",
+        "excerpt": "improves most on TC (+0.009) and least on WT (+0.004).",
+        "sentence": "Error detection improves most on TC (+0.009) and least on WT (+0.004)."
+      }
+    },
+    {
+      "family_id": "bench_test_036",
+      "split": "test",
+      "paper_id": "2608.13226",
+      "is_multi_passage": true,
+      "question": "In paper 2608.13226, regarding Results and Introduction, what are the key findings reported concerning 5.1 Experimental Settings Datasets and Benchmarks. and Driven by this insight, we propose CoverPrune, a t?",
+      "reference_answer": "5.1 Experimental Settings Datasets and Benchmarks.To comprehensively evaluate our training-free CoverPrune and CoverPrune-Lite, we conduct extensive experiments on four mainstream 3D vision-language benchmarks. Additionally, Driven by this insight, we propose CoverPrune, a training-free token pruning method for 3D visual-language models that formulates pruning as a coverage-with-compactness optimization problem.",
+      "support_1": {
+        "chunk_id": "2608.13226_sec_020",
+        "section": "Results",
+        "excerpt": "Settings Datasets and Benchmarks.To comprehensively evaluate our training-free CoverPrune and",
+        "sentence": "5.1 Experimental Settings Datasets and Benchmarks.To comprehensively evaluate our training-free CoverPrune and CoverPrune-Lite, we conduct extensive experiments on four mainstream 3D vision-language benchmarks."
+      },
+      "support_2": {
+        "chunk_id": "2608.13226_sec_004",
+        "section": "Introduction",
+        "excerpt": "this insight, we propose CoverPrune, a training-free token pruning method",
+        "sentence": "Driven by this insight, we propose CoverPrune, a training-free token pruning method for 3D visual-language models that formulates pruning as a coverage-with-compactness optimization problem."
+      }
+    }
+  ]
+}
