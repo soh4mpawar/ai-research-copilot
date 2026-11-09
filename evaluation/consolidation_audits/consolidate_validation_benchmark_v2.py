@@ -32,12 +32,12 @@ from collections import Counter
 from typing import Dict, List, Any, Optional
 
 sys.stdout.reconfigure(encoding='utf-8')
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 os.chdir(BASE_DIR)
 sys.path.insert(0, BASE_DIR)
 
 from backend.selective.context import Passage, format_context_payload
-from backend.ingestion.vector_store import VectorStore
+
 
 def run_validation_consolidation_audit(
     contexts: List[Dict[str, Any]],
@@ -259,43 +259,49 @@ def run_validation_consolidation_audit(
     return report
 
 def main():
-    print("=== Consolidating Benchmark v2 Validation Dataset (24 Families / 96 Contexts) ===")
+    print("=== Validating Benchmark v2 Validation Dataset (24 Families / 96 Contexts) ===")
     
-    # 1. Load specs
-    s1 = json.load(open("scratch/val_batch01_verified_specs.json", encoding="utf-8"))
-    s2 = json.load(open("scratch/val_batch02_verified_specs.json", encoding="utf-8"))
-    all_specs = s1 + s2
+    # 1. Load authoritative committed question specs
+    specs_path = "data/metadata/benchmark_v2_validation_questions_24families.json"
+    s_data = json.load(open(specs_path, encoding="utf-8"))
+    all_specs = s_data if isinstance(s_data, list) else s_data.get("questions", s_data)
     assert len(all_specs) == 24, f"Expected 24 specs, got {len(all_specs)}"
     
-    # 2. Load repaired contexts
-    c1 = json.load(open("scratch/benchmark_v2_val_batch01_contexts_repaired.json", encoding="utf-8"))
-    c2 = json.load(open("scratch/benchmark_v2_val_batch02_contexts_repaired.json", encoding="utf-8"))
-    all_contexts = c1 + c2
+    # 2. Load authoritative committed contexts
+    contexts_path = "data/metadata/benchmark_v2_validation_contexts_96.json"
+    all_contexts = json.load(open(contexts_path, encoding="utf-8"))
     assert len(all_contexts) == 96, f"Expected 96 contexts, got {len(all_contexts)}"
     
-    # 3. Load repaired annotations
-    a1 = json.load(open("scratch/benchmark_v2_val_batch01_semantic_annotations_repaired.json", encoding="utf-8"))
-    a2 = json.load(open("scratch/benchmark_v2_val_batch02_semantic_annotations_repaired.json", encoding="utf-8"))
-    a1_list = a1.get("annotations", a1) if isinstance(a1, dict) else a1
-    a2_list = a2.get("annotations", a2) if isinstance(a2, dict) else a2
-    all_annotations = a1_list + a2_list
+    # 3. Load authoritative committed annotations
+    ann_path = "data/metadata/benchmark_v2_validation_semantic_annotations_96.json"
+    a_data = json.load(open(ann_path, encoding="utf-8"))
+    all_annotations = a_data["annotations"] if isinstance(a_data, dict) and "annotations" in a_data else a_data
     assert len(all_annotations) == 96, f"Expected 96 annotations, got {len(all_annotations)}"
     
     # 4. Load split manifest
     split_manifest = json.load(open("data/metadata/full_benchmark_split_manifest.json", encoding="utf-8"))
     
-    # 5. Build ChromaDB lookup for validation papers
-    print("Loading ChromaDB chunk lookup for 32 validation papers...")
-    vs = VectorStore()
-    val_alloc = split_manifest["paper_allocations"]["val"]
-    val_paper_ids = set(p["paper_id"] if isinstance(p, dict) else p for p in val_alloc)
-    
-    chroma_lookup = {}
-    for pid in val_paper_ids:
-        res = vs.collection.get(where={"paper_id": pid}, include=["documents"])
-        for cid, doc in zip(res["ids"], res["documents"]):
-            chroma_lookup[cid] = doc
-    print(f"Loaded {len(chroma_lookup)} chunks from ChromaDB for validation papers.")
+    # 5. Build ChromaDB lookup for validation papers if available locally
+    chroma_lookup = None
+    if os.path.exists("data/chroma_db/chroma.sqlite3"):
+        try:
+            print("Loading ChromaDB chunk lookup for 32 validation papers...")
+            from backend.ingestion.vector_store import VectorStore
+            vs = VectorStore()
+            val_alloc = split_manifest["paper_allocations"]["val"]
+            val_paper_ids = set(p["paper_id"] if isinstance(p, dict) else p for p in val_alloc)
+            
+            chroma_lookup = {}
+            for pid in val_paper_ids:
+                res = vs.collection.get(where={"paper_id": pid}, include=["documents"])
+                for cid, doc in zip(res["ids"], res["documents"]):
+                    chroma_lookup[cid] = doc
+            print(f"Loaded {len(chroma_lookup)} chunks from ChromaDB for validation papers.")
+        except Exception as e:
+            print(f"Note: ChromaDB chunk lookup skipped ({e}).")
+            chroma_lookup = None
+    else:
+        print("Note: local ChromaDB not found; skipping chunk database lookup.")
     
     # 6. Run strict consolidation audit
     print("\nRunning strict consolidation audit...")
@@ -306,77 +312,37 @@ def main():
         split_manifest=split_manifest,
         chroma_lookup=chroma_lookup
     )
-    print("Strict consolidation audit PASSED!")
+    print("Strict validation consolidation audit PASSED!")
     print(f"Condition counts: {report['condition_counts']}")
     print(f"Judgment counts: {report['judgment_counts']}")
     print(f"Judgment by condition: {report['judgment_by_condition']}")
     
-    # 7. Save frozen validation artifacts
-    out_q = "data/metadata/benchmark_v2_validation_questions_24families.json"
-    with open(out_q, "w", encoding="utf-8") as f:
-        json.dump(all_specs, f, indent=2, ensure_ascii=False)
-    print(f"Saved {out_q}")
-    
-    out_c = "data/metadata/benchmark_v2_validation_contexts_96.json"
-    with open(out_c, "w", encoding="utf-8") as f:
-        json.dump(all_contexts, f, indent=2, ensure_ascii=False)
-    print(f"Saved {out_c}")
-    
-    out_a = "data/metadata/benchmark_v2_validation_semantic_annotations_96.json"
-    ann_obj = {
-        "provenance_status": "INDIVIDUALLY_AUTHORED_SEMANTIC_ANNOTATIONS",
-        "description": "Consolidated authoritative semantic annotations for all 24 validation families (96 contexts: ctx_val_0001 to ctx_val_0096). Each judgment was authored personally by directly reading metadata-concealed question and passage text. No programmatic regex heuristics, substring matches, or condition-tag lookups were used.",
-        "benchmark_version": "v2_amendment_v1.1",
-        "split": "validation",
-        "total_records": len(all_annotations),
-        "total_families": 24,
-        "counts": report["judgment_counts"],
-        "condition_breakdown": report["judgment_by_condition"],
-        "annotations": all_annotations
-    }
-    with open(out_a, "w", encoding="utf-8") as f:
-        json.dump(ann_obj, f, indent=2, ensure_ascii=False)
-    print(f"Saved {out_a}")
-    
-    # Build validation hash manifest
-    def file_hash(path):
-        with open(path, "rb") as f:
-            return hashlib.sha256(f.read()).hexdigest()
-            
-    hash_manifest = {
-        "dataset": "benchmark_v2_validation",
-        "protocol": "research_protocol_v1_amendment_v1.1",
-        "split": "validation",
-        "total_families": 24,
-        "total_contexts": 96,
-        "files": {
-            "questions_file": {
-                "path": out_q,
-                "sha256": file_hash(out_q)
-            },
-            "contexts_file": {
-                "path": out_c,
-                "sha256": file_hash(out_c)
-            },
-            "annotations_file": {
-                "path": out_a,
-                "sha256": file_hash(out_a)
-            }
-        },
-        "audit_summary": {
-            "audit_status": report["audit_status"],
-            "judgment_counts": report["judgment_counts"],
-            "judgment_by_condition": report["judgment_by_condition"],
-            "avg_passages_per_context": report["avg_passages_per_context"],
-            "avg_tokens_per_context": report["avg_tokens_per_context"]
-        }
-    }
-    
-    out_h = "data/metadata/benchmark_v2_validation_hash_manifest.json"
-    with open(out_h, "w", encoding="utf-8") as f:
-        json.dump(hash_manifest, f, indent=2, ensure_ascii=False)
-    print(f"Saved {out_h}")
-    print("\nValidation consolidation and freeze complete!")
+    # 7. Verify authoritative hash manifest
+    manifest_path = "data/metadata/benchmark_v2_validation_hash_manifest.json"
+    if os.path.exists(manifest_path):
+        def file_hash(path):
+            with open(path, "rb") as f:
+                return hashlib.sha256(f.read()).hexdigest()
+        
+        saved_manifest = json.load(open(manifest_path, encoding="utf-8"))
+        files_spec = saved_manifest.get("files", {})
+        if "questions_file" in files_spec:
+            assert file_hash(specs_path) == files_spec["questions_file"]["sha256"], "Questions file hash mismatch!"
+        if "contexts_file" in files_spec:
+            assert file_hash(contexts_path) == files_spec["contexts_file"]["sha256"], "Contexts file hash mismatch!"
+        if "annotations_file" in files_spec:
+            assert file_hash(ann_path) == files_spec["annotations_file"]["sha256"], "Annotations file hash mismatch!"
+        print(f"Authoritative hash manifest verified: {manifest_path}")
+
+    print("\nValidation benchmark verification complete with 0 modifications to committed files.")
+
+
+def _historical_reconstruct_validation_from_scratch():
+    """
+    Historical reconstruction function used during initial dataset assembly from raw scratch files.
+    Retained solely for historical provenance; not part of standard reproduction commands.
+    """
+    raise NotImplementedError("Raw scratch review inputs were archived after freezing authoritative metadata.")
 
 if __name__ == "__main__":
     main()

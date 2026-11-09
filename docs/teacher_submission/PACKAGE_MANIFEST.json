@@ -1,18 +1,9 @@
 {
-  "manifest_version": "1.0",
-  "generated_at": "2026-11-04T23:34:06.663814",
-  "original_untouched_report": {
-    "filename": "AI Research Copilot.docx",
-    "size_bytes": 28970,
-    "sha256": "b4f1b8f5da2dda0ad0597fccd72c088da1fc55518af87ce3c1bb1104f94d8333",
-    "status": "UNTOUCHED_PRESERVED"
-  },
+  "manifest_version": "1.1",
+  "description": "Deliverable artifacts manifest for teacher submission package in docs/teacher_submission",
+  "verified_against": "committed_directory_contents",
+  "total_artifacts": 10,
   "package_artifacts": [
-    {
-      "path": "AI Research Copilot - Teacher Submission.docx",
-      "size_bytes": 173865,
-      "sha256": "bfcf978620e958f02812cd6fcd50dd5977e37027e70b3410290432cc29f4af1b"
-    },
     {
       "path": "AI Research Copilot - Teacher Submission.pdf",
       "size_bytes": 426747,
@@ -40,8 +31,8 @@
     },
     {
       "path": "REPRODUCTION_README.md",
-      "size_bytes": 5622,
-      "sha256": "34d7a3814ddb17254bd5de0808ff4436e00b77e38cb88bccada70d81a19ae88e"
+      "size_bytes": 6136,
+      "sha256": "40cbb7abb648cadb1586ba7c368746c18a62fceb8bc3cf302d9a568aac16be45"
     },
     {
       "path": "VISUAL_QA_RECORD.md",
@@ -62,76 +53,15 @@
       "path": "figures/risk_coverage_curve_v2_test.svg",
       "size_bytes": 13951,
       "sha256": "c651005e27181177fdfc7e99ebf38533d71f61318c504d019f2d76c4dad59c5b"
-    },
-    {
-      "path": "page_images_report/page_01.png",
-      "size_bytes": 120820,
-      "sha256": "21c4737f391fe1bb02b17b963677d34fa0d7b9b3f73d47625dc59fd8e411baa6"
-    },
-    {
-      "path": "page_images_report/page_02.png",
-      "size_bytes": 135370,
-      "sha256": "67a66f4f76c2c8e83195302b407aff51370385c7246259576c2e9638081d6834"
-    },
-    {
-      "path": "page_images_report/page_03.png",
-      "size_bytes": 125742,
-      "sha256": "544eafa5e7890ec02c64c7224d0f1dad4ec09bbbb57be36d6d0328505719c353"
-    },
-    {
-      "path": "page_images_report/page_04.png",
-      "size_bytes": 133665,
-      "sha256": "5c252dfc2883f9b72a923ff17c1a96129068b7f5da6832f8cd744a111a30b2d3"
-    },
-    {
-      "path": "page_images_report/page_05.png",
-      "size_bytes": 132296,
-      "sha256": "47019a814b386803894213b0a50db97d243bfc413d47661430d6b852d61dea9d"
-    },
-    {
-      "path": "page_images_report/page_06.png",
-      "size_bytes": 127838,
-      "sha256": "c5b7a59952323cedbed30d47559648e7b7d1b6c897ccc6d70a085bea0b69e880"
-    },
-    {
-      "path": "page_images_report/page_07.png",
-      "size_bytes": 92401,
-      "sha256": "aa3d84afa4d7d93c3dd120e67d08ca388252d90de15189f98defd0536631b741"
-    },
-    {
-      "path": "page_images_report/page_08.png",
-      "size_bytes": 141188,
-      "sha256": "b3ffc92f8b15f2220053387283089077506e370b2f631ae6591396635e20f125"
-    },
-    {
-      "path": "page_images_report/page_09.png",
-      "size_bytes": 58395,
-      "sha256": "643964613f3cedcb071c6c62dc595af05336dd8f1e05cf9db2db557cf458d02f"
-    },
-    {
-      "path": "page_images_report/page_10.png",
-      "size_bytes": 103523,
-      "sha256": "198770aef89b28fda8222c907f8e177beeccaa37d85d8fb0a5770f5831730739"
-    },
-    {
-      "path": "page_images_report/page_11.png",
-      "size_bytes": 86731,
-      "sha256": "2dbf285b56731b361712e55017170bb2343d823c7a6fce21197011b1f5304010"
-    },
-    {
-      "path": "page_images_report/page_12.png",
-      "size_bytes": 123889,
-      "sha256": "ced36dcc1030f3c3780262131afb81e9b7fb48dfc633a4453a18a362174c629e"
-    },
-    {
-      "path": "page_images_report/page_13.png",
-      "size_bytes": 62046,
-      "sha256": "3668dd800acd3068511b9de93ecfd2abf475fcd7de44f91e39383b993d5bc310"
-    },
-    {
-      "path": "page_images_summary/page_01.png",
-      "size_bytes": 138893,
-      "sha256": "4f8ed2851933ddf7b0dd394fb080d3722ba118fdc68b08e3b7d6b0b2244a90b8"
     }
-  ]
+  ],
+  "external_archival_references": {
+    "original_untouched_draft": {
+      "filename": "AI Research Copilot.docx",
+      "size_bytes": 28970,
+      "sha256": "b4f1b8f5da2dda0ad0597fccd72c088da1fc55518af87ce3c1bb1104f94d8333",
+      "status": "UNTOUCHED_PRESERVED_IN_LOCAL_WORKSPACE",
+      "local_location": "teacher_package/AI Research Copilot.docx"
+    }
+  }
 }

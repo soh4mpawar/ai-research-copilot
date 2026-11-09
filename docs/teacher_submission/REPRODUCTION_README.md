@@ -82,3 +82,9 @@ The test runner generates the following verified machine-readable evaluation out
 | **M4 − M3 (Ablation 4)** | -0.0258 | -0.0260 | 0.0334 | $[-0.0939, +0.0363]$ | Contains 0 |
 | **B1 − M1 (Baseline)** | -0.0281 | -0.0253 | 0.0243 | $[-0.0668, +0.0267]$ | Contains 0 |
 | **Length − M4 (Shortcut)** | +0.2398 | +0.2410 | 0.0350 | $[+0.1722, +0.3081]$ | Favors M4 ($p < 0.001$) |
+
+---
+
+## 5. Data Provenance & Redistribution Disclosure
+
+Evaluation contexts contain short passage excerpts (~150–300 words) from 160 arXiv open-access preprints, included solely for cryptographic verification and deterministic reproducibility of sufficiency judgments under non-commercial fair use. Complete PDFs and full unchunked bodies are excluded. Full bibliographic metadata and instructions for automated direct arXiv acquisition are documented in [data/REDISTRIBUTION_AND_PROVENANCE.md](../../data/REDISTRIBUTION_AND_PROVENANCE.md).

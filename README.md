@@ -221,6 +221,10 @@ All formal academic deliverables for teacher evaluation are synchronized in [`do
 
 ---
 
+## 8. Data Redistribution & Licensing Disclosure
+
+Evaluation benchmark contexts contain short passage excerpts (~150–300 words) extracted from 160 open-access preprints hosted on [arXiv.org](https://arxiv.org/). Full PDFs and complete paper bodies are excluded from Git. For detailed documentation on source paper attribution, fair-use academic benchmarking scope, licensing disclosures, and automated direct arXiv acquisition instructions, see [data/REDISTRIBUTION_AND_PROVENANCE.md](data/REDISTRIBUTION_AND_PROVENANCE.md).
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

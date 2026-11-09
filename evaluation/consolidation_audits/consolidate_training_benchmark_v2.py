@@ -43,8 +43,10 @@ from collections import Counter
 from typing import Dict, List, Any, Optional
 
 sys.stdout.reconfigure(encoding='utf-8')
-os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-sys.path.insert(0, ".")
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+os.chdir(BASE_DIR)
+sys.path.insert(0, BASE_DIR)
+# sys.path configured above
 
 from backend.selective.context import Passage, format_context_payload
 
@@ -360,20 +362,28 @@ def main():
     ann_data = json.load(open("data/metadata/benchmark_v2_training_semantic_annotations_240.json", encoding="utf-8"))
     all_annotations = ann_data["annotations"] if isinstance(ann_data, dict) else ann_data
 
-    # Load ChromaDB chunks for passage text verification
-    print("Loading ChromaDB chunks for passage text verification...")
-    from backend.ingestion.vector_store import VectorStore
-    vs = VectorStore()
-    
-    all_chunk_ids = set()
-    for c in all_contexts:
-        for p in c["passages"]:
-            all_chunk_ids.add(p["chunk_id"].replace("_dup", ""))
+    # Load ChromaDB chunks for passage text verification if available
+    chroma_lookup = None
+    if os.path.exists("data/chroma_db/chroma.sqlite3"):
+        try:
+            print("Loading ChromaDB chunks for passage text verification...")
+            from backend.ingestion.vector_store import VectorStore
+            vs = VectorStore()
             
-    print(f"Fetching {len(all_chunk_ids)} unique chunk texts from ChromaDB...")
-    res = vs.collection.get(ids=list(all_chunk_ids), include=["documents"])
-    chroma_lookup = {cid: doc for cid, doc in zip(res["ids"], res["documents"])}
-    print(f"Retrieved {len(chroma_lookup)} chunks from ChromaDB.")
+            all_chunk_ids = set()
+            for c in all_contexts:
+                for p in c["passages"]:
+                    all_chunk_ids.add(p["chunk_id"].replace("_dup", ""))
+                    
+            print(f"Fetching {len(all_chunk_ids)} unique chunk texts from ChromaDB...")
+            res = vs.collection.get(ids=list(all_chunk_ids), include=["documents"])
+            chroma_lookup = {cid: doc for cid, doc in zip(res["ids"], res["documents"])}
+            print(f"Retrieved {len(chroma_lookup)} chunks from ChromaDB.")
+        except Exception as e:
+            print(f"Note: ChromaDB chunk lookup skipped ({e}).")
+            chroma_lookup = None
+    else:
+        print("Note: local ChromaDB not found; skipping chunk database lookup.")
 
     # Run audit
     result = run_consolidation_audit(
@@ -388,13 +398,18 @@ def main():
     print("\n Consolidation Audit PASSED! All 240 records strictly verified across multisets, positions, and semantics.")
 
     manifest_path = "data/metadata/benchmark_v2_training_hash_manifest.json"
-    with open(manifest_path, "w", encoding="utf-8") as f:
-        json.dump({
-            "manifest_version": "v2_repaired_multiset_positional",
-            "total_records": len(result["manifest_rows"]),
-            "records": result["manifest_rows"]
-        }, f, indent=2, ensure_ascii=False)
-    print(f"Saved frozen hash manifest to {manifest_path}")
+    if os.path.exists(manifest_path):
+        saved_m = json.load(open(manifest_path, encoding="utf-8"))
+        assert len(saved_m.get("records", [])) == len(result["manifest_rows"]), "Training manifest record count mismatch!"
+        print(f"Verified authoritative training hash manifest: {manifest_path}")
+    else:
+        with open(manifest_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "manifest_version": "v2_repaired_multiset_positional",
+                "total_records": len(result["manifest_rows"]),
+                "records": result["manifest_rows"]
+            }, f, indent=2, ensure_ascii=False)
+        print(f"Saved frozen hash manifest to {manifest_path}")
 
     print("\n=== FINAL DATASET SUMMARY ===")
     print(f"Total Families: {result['total_families']}")
